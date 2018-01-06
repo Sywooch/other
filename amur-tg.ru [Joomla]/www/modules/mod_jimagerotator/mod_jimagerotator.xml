@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>jSimpleImageRotator</name>
+	<author>Joomlaites</author>
+	<creationDate>Feb 2015</creationDate>
+	<copyright>Copyright (C) 2015 joomlaites All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>joomlaites@gmail.com</authorEmail>
+	<authorUrl>www.joomlaites.com</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	jImageRotator module is a simple image rotator display images from your folder and. You can manage image height ,width, no. of slides,auto run and many other options available for configuration.
+	</description>
+	<files>
+		<filename module="mod_jimagerotator">mod_jimagerotator.php</filename>
+		<folder>tmpl</folder>
+		<folder>elements</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_jimagerotator.xml</filename>
+       </files>
+	   <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_jimagerotator.ini</language>
+	<language tag="en-GB">en-GB/en-GB.mod_jimagerotator.sys.ini</language>
+	</languages>
+      <config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_jimagerotator/elements">
+				
+				<field
+						name="display_form"
+						type="jslist"
+						size="10"
+						default="folder_image"
+						onchange="if($(this).get('value') == 'folder_image'){js_ShowOptions('thumbnail_mode,use_ratio,image_width,image_height');}"
+						label="Folder Source"
+						description="Folder Source" >
+						<option value="folder_image" sub_fields="path_folder">IMAGE FOLDER</option>
+				</field>
+				
+				<field
+					name="path_folder"
+					type="jimagefolder"
+					directory="images"
+					label="Image Folder Path"
+					description="Image Folder Path" />
+
+			</fieldset>
+			
+			<fieldset name="MOD_JFANCYTESTIMONIAL_GENERAL_SETTINGS" >
+			
+						<field name="autorun" type="list" default="yes" label="Auto Run" description="Auto Run">
+				<option value="yes">Yes</option>
+				<option value="no">No </option>
+			</field>
+			<field name="arrow_button" type="list" default="yes" label="Arrow" description="(arrow show or hide)">
+				<option value="yes">Yes</option>
+				<option value="no">No </option>
+			</field>
+			<field name="camera_pag" type="list" default="yes" label="Camera Pagination" description="(Dot show bottom on the slider)">
+					<option value="yes">Yes</option>
+					<option value="no">No </option>
+				</field>								 
+			<field name="numberboxshow" type="text" default="3" label="Number Box Show"  description="Number Box show" />
+			<field name="maincontainerwidth" type="text" default="100" label="Container Width"  description="Container Width" />
+			<field type="spacer" name="myspacer" label="&lt;h2&gt;Image Container Option&lt;/h2&gt;"/>
+			<field name="bx_image_container_padding" type="text" default="5" label="Image Container Padding"  description="Slider Box Padding" />
+			<field name="bx_image_container_margin" type="text" default="5" label="Image Container Margin"  description="Slider Box Margin" />
+			<field name="bx_image_container_background" type="color" default="" label="Image Container Background Color"  description="Image Container Background Color" />
+			<field name="bx_image_container_shadow_color" type="color" default="" label="Image Container Shadow Color"  description="" />
+			<field name="bx_image_container_shadow_size" type="text" default="" label="Image Container Shadow Size"  description="" />
+			
+			<field type="spacer" name="myspacer1" label="&lt;h2&gt;Image Option&lt;/h2&gt;"/>
+			<field name="sliderboxwidth" type="text" default="200" label="Slider Image Width"  description="Slider Image Width" />
+			<field name="sliderboxheight" type="text" default="200" label="Slider Image Height"  description="Slider Image Height" />
+			<field name="sliderboxpadding" type="text" default="0px 0px 0px 0px" label="Image/Title/Description Padding"  description="Image Padding" />
+			<field name="img_margin" type="text" default="0px 0px 0px 0px" label="Image Margin"  description="image margin" />
+			<field name="img_background" type="color" default="#f2f2f2" label="Image Background Color"  description="background color" />
+			<field name="img_shadow" type="color" default="#000" label="Image Shadow Color"  description="shadow color" />
+			<field name="img_shadow_size" type="text" default="0px 0px 3px" label="Image Shadow Size"  description="image shadow size" />
+	
+			<field type="spacer" name="myspacer2" label="&lt;h2&gt;Image Border Left&lt;/h2&gt;"/>
+			<field name="borderleftstyle" type="list" default="none" label="Your Border Left Style" description="Select Your Border Left Style">
+				<option value="solid">Solid</option>
+				<option value="groove">Groove</option>
+				<option value="double">Double</option>
+				<option value="dotted">Dotted</option>
+				<option value="dashed">Dashed</option>
+				<option value="none">None</option>
+			</field>
+			<field name="borderleftweight" type="text" default=""  label="Border Left Width"  description="Border Left Width" />
+			<field name="borderleftcolor" type="color" default="" label="Border Left Color"  description="Border Left Color" />
+
+			
+					
+			<field type="spacer" name="myspacer3" label="&lt;h2&gt;Image Border Right&lt;/h2&gt;"/>
+			<field name="borderrightstyle" type="list" default="none" label="Your Border Right Style" description="Select Your Border Right Style">
+				<option value="solid">Solid</option>
+				<option value="groove">Groove</option>
+				<option value="double">Double</option>
+				<option value="dotted">Dotted</option>
+				<option value="dashed">Dashed</option>
+				<option value="none">None</option>
+			</field>
+			<field name="borderrightweight" type="text" default=""  label="Border Right Width"  description="Border Right Width" />
+			<field name="borderrightcolor" type="color" default="" label="Border Right Color"  description="Border Right Color" />
+			
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

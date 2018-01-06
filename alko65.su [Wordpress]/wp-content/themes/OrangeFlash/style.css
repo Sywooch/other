@@ -1,0 +1,157 @@
+/*
+Theme Name: Orange Flash
+Theme URI: http://wordpressbling.com/
+Version: 1.0
+Author: Kevin Truong
+Author URI: http://wordpressbling.com/
+Description: Free Premium Wordpress theme by <a href="http://wordpressbling.com//">wordpressbling.Com</a>.
+*/ 
+
+
+
+@import "_assets/css/reset.css";
+
+@import "_assets/css/master.css";
+
+@import "_assets/css/ie.css";
+
+
+
+
+
+.bullet-tick { list-style-image: url(_assets/img/icons/bullet-tick.png); }
+
+.bullet-BW { list-style-image: url(_assets/img/icons/BandW.png); }
+
+.bullet-arrow { list-style-image: url(_assets/img/icons/bullet_arrow.png); }
+
+.bullet-hot { list-style-image: url(_assets/img/icons/bullet_flame.png); }
+
+.bullet-star { list-style-image: url(_assets/img/icons/bullet_star.png); }
+
+.bullet-clip { list-style-image: url(_assets/img/icons/bullet-paper-clip.png); }
+
+.bullet-black { list-style-image: url(_assets/img/icons/bullet_black.png); }
+
+.bullet-blue { list-style-image: url(_assets/img/icons/bullet_blue.png); }
+
+.bullet-green { list-style-image: url(_assets/img/icons/bullet_green.png); }
+
+.bullet-orange { list-style-image: url(_assets/img/icons/bullet_orange.png); }
+
+.bullet-pink { list-style-image: url(_assets/img/icons/bullet_pink.png); }
+
+.bullet-purple{ list-style-image: url(_assets/img/icons/bullet_purple.png); }
+
+.bullet-red{ list-style-image: url(_assets/img/icons/bullet_red.png); }
+
+.bullet-yellow{ list-style-image: url(_assets/img/icons/bullet_yellow.png); }
+
+.bullet-none { list-style:none; }
+
+ul.bullet-tick, ul.bullet-BW , ul.bullet-arrow , ul.bullet-hot , ul.bullet-star , ul.bullet-clip , ul.bullet-black , ul.bullet-blue , ul.bullet-green , ul.bullet-orange , ul.bullet-pink , ul.bullet-purple, ul.bullet-yellow, ul.bullet-red  {
+
+    margin-bottom: 1em;
+
+}
+
+.one_fifth { width: 160px; float: left; margin-right: 30px; }
+
+.last {  margin: 0 !important;  }
+ol.group li { padding-bottom: 15px; }
+#main .next { padding: 10px !important; 
+	background:#17181A;
+
+	border:2px solid #27292b;}
+
+#social {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 76px;
+}
+
+#social #top {
+	height: 30px;
+	background:#364354;
+	text-align: center;
+	line-height: 29px;
+	font-family: Gerogia;
+	font-weight: bold;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+#social ul {
+	list-style: none;
+	display: block;
+	width: 74px;
+	background: #F0F0F0;
+	border: solid 1px #cbcbcb;
+	border-top: 0;
+	padding-top: 15px;
+}
+
+#social ul li {
+	width: 32px;
+	height: 32px;
+	margin: 0 auto 15px auto;
+}
+
+.left {
+	float: left;
+	margin-right: 20px;
+	overflow: hidden;
+}
+
+.wide-post {
+	overflow: hidden;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.right {
+	overflow: hidden;
+	width: auto;
+}
+.tweets-widget ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    line-height: 20px;
+    font-family: Arial, Helvetica, Sans-serif; 
+}
+
+.tweets-widget ul li {
+    list-style-type: none;
+    padding: 0; 
+    margin: 15px 0 0 0; 
+}
+
+.tweets-widget ul li:first-child {
+    margin-top: 5px;
+}
+
+.tweets-widget li.tweets-bird {
+    padding-left: 24px;
+    background: url(images/tweets.png) left 2px no-repeat;
+}
+
+.tweets-widget a {}
+
+.tweets-widget a:hover {}
+
+a.tweets-widget-time {
+    text-decoration: none; 
+}
+
+a.tweets-widget-time:hover {
+    text-decoration: underline; 
+}
+
+a.twitter-user { color: #DB3702 }
+
+.tagcloud { margin-top: -15px; }
+
+#today a {color:#fff;}
