@@ -1,0 +1,32 @@
+/*body.winter { background: url(../../images_inner/fall_bg.jpg); }*/
+body.winter { background: rgb(186,230,239) fixed;
+background: -moz-linear-gradient(top,  rgba(186,230,239,1) 0%, rgba(81,140,164,1) 100%) fixed;
+background: -webkit-linear-gradient(top,  rgba(186,230,239,1) 0%,rgba(81,140,164,1) 100%) fixed;
+background: linear-gradient(to bottom,  rgba(186,230,239,1) 0%,rgba(81,140,164,1) 100%) fixed;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bae6ef', endColorstr='#518ca4',GradientType=0 );
+}
+
+.winter footer h3 { margin-bottom:0; background:url("../../images/winter/footer_object1.png"/*tpa=http://3topolya.ru/media/3topolya/images/winter/footer_object1.png*/) 25% 0 no-repeat; }
+  .winter footer .slider_container .object { position:absolute; }
+  .winter footer .slider_container .object01 { top:12%; left:2%; width:75px; height:75px; background:url("../../images/winter/footer_object2.png"/*tpa=http://3topolya.ru/media/3topolya/images/winter/footer_object2.png*/) 0 0 no-repeat !important; }
+  .winter footer .slider_container .object02 { top:45%; right:8%; width:45px; height:59px; background:url("../../images/winter/footer_object3.png"/*tpa=http://3topolya.ru/media/3topolya/images/winter/footer_object3.png*/) 0 0 no-repeat !important; }
+  .winter footer .slider_container .object03 { bottom:12px; left:58%; width:31px; height:32px; background:url("../../images/winter/footer_object4.png"/*tpa=http://3topolya.ru/media/3topolya/images/winter/footer_object4.png*/) 0 0 no-repeat !important; }
+  
+  
+  .winter .showcases-cloud { position:relative; width:194px; height:168px; margin:0 auto; padding-right:8px; font-size:30px; text-align:center; 
+ /* background:url("../../images/winter/showcases.png") 0 0/contain no-repeat !important;
+  */
+background-image: url("../../images/winter/showcases.png") !important;
+background-repeat:no-repeat !important;
+background-size:173px !important;
+background-position:left center !important;
+  
+   z-index:15; }
+  .winter .showcases-cloud a { display:block; width:100%; height:100%; padding-top:65px; font-family:'VerveineCorp',sans-serif; text-decoration:none; text-shadow:none; color:#f5353d;
+  -webkit-transition: text-shadow 0.1s ease;
+  -moz-transition: text-shadow 0.1s ease;
+  -ms-transition: text-shadow 0.1s ease;
+  -o-transition: text-shadow 0.1s ease;
+  transition: text-shadow 0.1s ease;
+}
+  .winter .showcases-cloud a:hover { text-decoration:none; text-shadow:1px 2px 5px rgba(255, 150, 150, 0.4); } 

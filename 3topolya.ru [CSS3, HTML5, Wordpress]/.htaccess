@@ -1,0 +1,32 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+
+Redirect 301 http://3topolya.ru/page/about-us/ http://3topolya.ru/about-us/
+Redirect 301 http://3topolya.ru/page/portfolio/ http://3topolya.ru/portfolio/
+Redirect 301 http://3topolya.ru/page/project-prices/ http://3topolya.ru/project-prices/
+Redirect 301 http://3topolya.ru/page/greenery/ http://3topolya.ru/greenery/
+Redirect 301 http://3topolya.ru/page/ponds/ http://3topolya.ru/ponds/
+Redirect 301 http://3topolya.ru/page/drainage/ http://3topolya.ru/drainage/
+Redirect 301 http://3topolya.ru/page/lawn/ http://3topolya.ru/lawn/
+Redirect 301 http://3topolya.ru/page/walkways/ http://3topolya.ru/walkways/
+Redirect 301 http://3topolya.ru/page/watering/ http://3topolya.ru/watering/
+Redirect 301 http://3topolya.ru/page/planting/ http://3topolya.ru/planting/
+Redirect 301 http://3topolya.ru/page/care/ http://3topolya.ru/care/
+Redirect 301 http://3topolya.ru/page/parterre/ http://3topolya.ru/parterre/
+Redirect 301 http://3topolya.ru/page/showcases/ http://3topolya.ru/showcases/
+Redirect 301 http://3topolya.ru/page/video/ http://3topolya.ru/video/
+Redirect 301 http://3topolya.ru/page/contact-us/ http://3topolya.ru/contact-us/
+Redirect 301 http://3topolya.ru/page/reviews/ http://3topolya.ru/reviews
+
+

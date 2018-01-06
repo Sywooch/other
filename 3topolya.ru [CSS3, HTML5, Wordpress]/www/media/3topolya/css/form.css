@@ -1,0 +1,40 @@
+.formblock { width:320px; padding:25px 30px 30px 30px; font-family:Verdana,Geneva,sans-serif; text-align:left; background:#fff; border-radius:10px; }
+  .formblock .form_text { margin-bottom:18px; text-align:center; }
+    .formblock .title { margin-bottom:2px; font-size:22px; font-weight:bold; }
+    .formblock .subtitle { font-size:16px; }
+  .formblock label { display:block; font-size:16px; }
+  .formblock label.for-checkbox { font-size:12px; margin-bottom:15px; cursor:pointer; }
+    .formblock input { display:block; width:100%; padding:7px 12px; margin:3px 0 15px; font-size:16px; border:1px solid #777; }
+    .formblock input[type=checkbox] { float:left; margin:7px 8px 7px 0; display:inline-block; width:auto; vertical-align:middle; }
+    
+  .formblock fieldset { }
+  .formblock .btn { margin:5px 0 0; padding:2px 18px; font-family:"VerveineCorp",sans-serif; font-size:26px; font-weight:400; color:#fff; background:#000; border-radius:10px; cursor:pointer; border:0px;
+    -webkit-transition: background-color ease 0.2s;
+    -moz-transition: background-color ease 0.2s;
+    -o-transition: background-color ease 0.2s;
+    transition: background-color ease 0.2s;
+  }
+  .formblock .btn:hover,
+  .formblock .btn:focus { background:#333; }
+  .formblock .btn:active { background:#666; }
+
+/*.callback-form { display: none; padding: 10px; }
+.callback-form fieldset { border: 0; padding: 0; margin: 0; }
+.callback-form input:focus,
+.callback-form input:hover { box-shadow: none; outline: none; }
+.callback-form .text-field { width: 280px; box-sizing: border-box; height: 28px; border: 1px solid #d2d6d9; background: white url(../images/form_background.png) repeat-x top; color: #444343; line-height: 20px; margin: 4px 0 10px 0; vertical-align: middle; padding-left: 4px;}*/
+
+.callback-form,
+.showcases-form { display: none; }
+.callback-form-popup,
+.showcases-form-popup { position: fixed; background: #fff; width: 320px !important; z-index: 1000; border: 2px solid #000; outline: none; font-family: Verdana, Geneva, sans-serif; border-radius:10px; }
+.ui-dialog-title { display:none !important; }
+
+.info { margin-bottom: 10px; padding: 5px; border-radius: 5px; line-height: 20px; font-size: 12px; display: none; }
+  .info.success { background: #f0fcf0; border: 1px solid #00a104; display: block; }
+  .info.errors { background: #fff5f2; border: 1px solid #f30; display: block; }
+  .with-error { border: 1px solid #f30!important; }
+  .ui-widget-overlay { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, .6); z-index: 999; }
+  .ui-dialog-title { display: block; padding: 10px; font-size: 16px; font-weight: bold; }
+  .ui-button { position: absolute; right: -20px; top: -20px; width: 40px; height: 40px; background:url(../images/close.png) 0 0 no-repeat; border: 0; outline: none; text-indent: -9999em; padding: 0; cursor: pointer; }
+  .ui-button-title { text-indent: -9999em; }
