@@ -1,0 +1,14 @@
+/*
+Title:		IE patches and fixes
+Author:		justine@gentlecode.net
+*/
+
+/* self-clear floats */
+
+*:first-child+html .group {	/* IE7 */
+	min-height: 1%;	
+} 
+
+*:first-child+html #main .featured-nav {
+	padding: 2px 0 6px 11px;
+}

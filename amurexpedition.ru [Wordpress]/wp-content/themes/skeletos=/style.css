@@ -1,0 +1,131 @@
+/*
+Theme Name: skeletos
+Theme URI: https://github.com/PeteSchuster/WordPress-Site-Skeleton
+Description: This is a responsive boiler plate theme created by Pete Schuster.
+Author: Pete Schuster
+Author URI: http://peteschuster.com
+Version: 4.0
+License: GNU GENERAL PUBLIC LICENSE
+License URI: license.txt
+Tags: light, responsive-layout, fluid-layout
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.current-menu-item a{
+    background-color:#dc0000;
+}
+
+.current-news-parent a{
+    background-color:#dc0000;
+}
+
+.element-invisible a{
+    display:none !important;
+}
+
+.current-post-ancestor a{
+    background-color:#dc0000;
+}
+
+.views-row-odd.views-row-first.current a{
+    background-color:#dc0000 !important;
+}
+/*
+#fancy_left{
+    background-image:url(/fancybox/fancy_left.png) !important;
+}
+
+#fancy_right{
+    background-image:url(/fancybox/fancy_right.png) !important;
+}
+*/
+
+#topbarmsg-wrapper{
+    z-index: 50 !important;
+}
+
+.gallery-caption{
+    display:none;
+}
+
+.gallery-icon img{
+    width:90%;
+}
+
+.powrMark{
+    display:none !important;
+}
+
+.gallery-video-content .video-element{
+    float:left;
+    width:220px !important;
+    height:auto !important;
+}
+
+
+.gallery-video-content .video-element:nth-child(3n){
+     margin-right:10px;
+ }
+
+.gallery-video-content .video-element:nth-child(3n+1){
+    margin-right:10px;
+}
+
+.video-element_1 .title-block_1{
+    display:block !important;
+    position:static !important;
+    color: #00569e !important;
+    text-decoration: underline !important;
+    font-family: Tahoma,Verdana,"DejaVu Sans",sans-serif !important;
+    font-weight: bold !important;
+    background-color:transparent !important;
+}
+
+.huge_it_videogallery_container .video-element_1 .title-block_1{
+    background-color:transparent !important;
+}
+
+#bbpress-forums div.reply{
+    width:auto !important;
+}
+
+#block-views-menu-top-menu-top-reg{
+    margin-top:108px !important;
+}
+
+.taxonomy-term table{
+    width:100% !important;
+}
+
+.taxonomy-term iframe{
+    width:100% !important;
+}
+
+.nivo-controlNav a{
+    background-color: #acacac;
+    float: left;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+    cursor: pointer;
+    color: transparent;
+}
+
+.nivo-controlNav a.active{
+    background-color: #0061c7;
+}
+
+.metaslider-nivo{
+    border-bottom: 1px solid #ACACAC;
+    padding-bottom:5px;
+}
+
+.views-field.views-field-field-headimage img{
+    width:225px;
+}
+
+.views-row{
+    float:left;
+}
