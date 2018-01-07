@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<extension type="module" version="1.6.0" client="site" method="upgrade">   
+<name>JoomShopping Tags</name> 
+    <creationDate>18.12.2012</creationDate>
+    <author>MAXXmarketing GmbH</author>
+    <authorEmail>marketing@maxx-marketing.net</authorEmail>
+    <authorUrl>http://www.webdesigner-profi.de</authorUrl>
+    <copyright></copyright>
+    <license>Open Source License, GNU GPL</license>
+    <version>3.0.1</version>
+    <description>JoomShopping Tag-cloud.</description>    
+	<files>
+        <filename>tmpl/default.php</filename>
+		<filename module="mod_jshopping_tag">mod_jshopping_tag.php</filename>
+	</files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+		        <field name="count" type="text" default="4" label="Count Of Tag Sizes" description="Count Of Tag Sizes" />
+		        <field name="lim" type="text" default="10" label="Count Of Tags" description="Count Of Tags" />
+                <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+            </fieldset> 
+        </fields>
+    </config>          
+</extension>
