@@ -1,0 +1,36 @@
+tables:
+
+  bottom_menu:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      text: {type: text, notnull: 0, am: {type: text, req: 0, title: Текст}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+      parent: {type: text, notnull: 0, am: {type: text, req: 0, title: Идентификатор родителя}}
+      
+    table:
+      PRIMARY KEY: id
+      
+    actions:
+      list: [id, text, link]
+      modify: [text, link]
+      show: [id, text, link]
+      add: [text, link]
+
+  top_menu:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      text: {type: text, notnull: 0, am: {type: text, req: 0, title: Текст}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+#      parent: {type: text, notnull: 0, am: {type: text, req: 0, title: Идентификатор родителя}}
+      parent: {type: "enum('0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20')", am: {type: select, title: Родитель, values: {0: Корень, 1: Корень, 2: Корень, 3: Корень, 4: Корень, 5: Корень, 6: Корень, 7: Корень, 8: Корень, 9: Корень, 10: Корень, 11: Корень, 12: Корень, 13: Корень, 14: Корень, 15: Корень, 16: Корень, 17: Корень, 18: Корень, 19: Корень, 20: Корень}}}
+      
+    table:
+      PRIMARY KEY: id
+    foreign:
+      parent: {table: top_menu, field: text, am: parent}
+    actions:
+      list: [id, text, link]
+      modify: [text, link, parent]
+      show: [id, text, link, parent]
+      add: [text, link, parent]
+   

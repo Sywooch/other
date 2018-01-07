@@ -1,0 +1,516 @@
+tables:
+  requests:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1, am: {type: integer, title: Номер заявки}}
+      cdate: {type: datetime, notnull: 1, am: {type: datetime, title: Дата создания}}
+      mdate: {type: datetime, notnull: 1, am: {type: datetime, title: Дата обработки}}
+      cid: {type: int, unsigned: 1, am: {type: integer, title: Номер корректировки}}
+      dealer_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer}}
+      legal_entity_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: select, title: Юр. лицо, req: 1}}
+      operator_id: {type: int, length: 10, unsigned: 1, am: {type: integer}}
+      payment_method_id: {type: int, length: 10, unsigned: 1, am: {type: select, null: не выбрано, title: Способ оплаты}}
+      doc_number: {type: tinytext, notnull: 0, am: {type: string, title: Номер документа}}
+      doc_date: {type: date, notnull: 0, am: {type: date, title: Дата документа}}
+      rtype: {type: "enum('reservation','order')", default: 'order', am: {type: select, req: 1, title: Тип, default: order, values: {reservation: Бронь, order: Заказ}}}
+      #status: {type: "enum('new','work','processed','rejected')", default: 'new', am: {type: select, title: Статус, values: {new: Новая, work: В работе, processed: Обработана, rejected: Отклонена}}}
+      #status: {type: "enum('new','reserved','unreserved','expired','partly_pay','paid','shipment_prep','shipment_approved','shipment_decline','partly_shipped', 'processed','declined','work','rejected')", default: 'new', am: {type: select, title: Статус, values: {new: Новая, reserved: Обработана, unreserved: Резерв снят, expired: Истёк срок резерва, partly_pay: Частичная оплата, paid: Оплачен, shipment_prep: Заявка на отгрузку, shipment_approved: Отгрузка подтверждена, shipment_decline: Отгрузка отклонена, partly_shipped: Частичная отгрузка, processed: Выполнен, declined: Отказ от заказа, work: В работе, rejected: Отклонена}}}
+      status: {type: text, am: {type: select, null: 'new', title: Статус}}
+      paid: {type: "enum('no','yes')", default: 'no', am: {type: select, title: Оплачено, values: {no: нет, yes: да}}}
+      comments: {type: text, am: {type: text, title: Комментарий}}
+      comments_operator: {type: text, am: {type: text, title: Комментарий оператора}}
+      account_number: {type: tinytext, notnull: 0, am: {type: string, title: Номер счета}}
+      discount: {type: float, notnull: 1, am: {type: float, title: Скидка}}
+      extra_discount: {type: tinyint, notnull: 1, am: {type: checkbox, title: Дополнительная скидка, unchecked: '0', default: 0, checked: 1, values: {0: 'no', 1: 'yes'}}}
+      goods:
+        virtual: 1
+        ref_to:
+          idFieldName: id
+          assoc: 1
+          virtual: 1
+          table: ?_requests_goods
+          fields: [good_id, good_count]
+          use_ref: requests2goods
+        am: {title: Позиции}
+      bills:
+        virtual: 1
+        ref_to:
+          idFieldName: id
+          assoc: 1
+          virtual: 1
+          table: ?_requests_bills
+          fields: [bill_id]
+          use_ref: requests2bills
+        am: {title: Накладные}
+    foreign:
+      dealer_category_id: {table: dealers, field: category_id, use_ref: requests2dealers_category}
+      dealer_title: {table: dealers, field: title, use_ref: requests2dealers_category, am: {title: Дилер}}
+      operator_name: {table: operators, field: name, use_ref: requests2operators, am: {title: Оператор}}
+      payment_method_title: {table: payment_methods, field: title, use_ref: requests2payment_methods, am: payment_method_id}
+      status_title_dealer: {table: requests_statuses, field: title_dealer, use_ref: requests2statuses, am: status}
+      status_title_operator: {table: requests_statuses, field: title_operator, use_ref: requests2statuses, am: status}
+      goods_count: {table: requests_goods, field: "COUNT(good_id)", asis: 1, use_ref: requests2requests_goods, am: {title: Количество}}
+      goods_sum: {table: goods, field: "SUM(ROUND(ROUND(requests_goods.good_price*(100-requests.discount)/100, 2)*requests_goods.good_count, 2))", asis: 1, via: requests_goods, use_ref: requests_goods2goods, am: {title: Сумма}}
+      goods_weight: {table: goods, field: "SUM(good_count/good_packCntByUnit*requests_goods.good_weight)", asis: 1, via: requests_goods, use_ref: requests_goods2goods, am: {title: Масса}}
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        dealer_id: [dealer_id]
+        operator_id: [operator_id]
+        cid: [cid]
+    actions:
+      list: [id, cdate, dealer_category_id, dealer_title, status, rtype, mdate, goods_count, goods_sum, account_number]
+      show: [id, cdate, dealer_category_id, dealer_title, status, status_title_dealer, rtype, payment_method_title, doc_number, doc_date, mdate, operator_name, goods_count, goods_sum, account_number, comments, comments_operator, account_number, discount]
+      order: [rtype, legal_entity_id, payment_method_id, doc_number, doc_date, comments]
+      edit: [id, cid, rtype, legal_entity_id, payment_method_id, doc_number, doc_date, comments]
+      archives: [cdate, id, cid, comments, status, status_title_dealer, mdate, operator_name, goods_count, goods_sum, goods_weight, account_number, discount, paid]
+      archive: [id, cid, cdate, mdate, status, status_title_dealer, rtype, payment_method_title, doc_number, doc_date, account_number, legal_entity_id, comments, comments_operator, discount]
+      print: [id, cdate, mdate, status, dealer_category_id, dealer_id, legal_entity_id, account_number, comments, comments_operator, discount, extra_discount]
+      processing: [id, cid, cdate, dealer_category_id, dealer_title, status, operator_id, goods_count, goods_sum, goods_weight, discount]
+      process: [id, cid, dealer_category_id, dealer_title, cdate, legal_entity_id, payment_method_id, payment_method_title, doc_number, doc_date, goods_count, goods_sum, goods_weight, status, status_title_operator, rtype, comments, discount]
+      archives_o: [id, cid, comments, cdate, dealer_category_id, dealer_title, status, status_title_operator, mdate, operator_name, goods_count, goods_sum, goods_weight, account_number, discount]
+      archive_o: [id, cid, dealer_category_id, cdate, status, status_title_operator, rtype, payment_method_title, doc_number, doc_date, mdate, dealer_title, goods_count, goods_sum, goods_weight, account_number, comments, comments_operator, discount]
+    paging:
+      npp: 20
+      css_class: 'paging'
+      base_url: ''
+      url_append: ''
+      separator: ' '
+      linkcount: 10
+      first: ''
+      prev: ''
+      next: ''
+      last: ''
+      skip: ' ... '
+
+  requests_goods:
+    fields:
+      request_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer}}
+      good_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer, title: ИД}}
+      good_count: {type: decimal, length: '10,4', unsigned: 1, am: {type: string, title: Количество}}
+      good_count_pack: {type: int, am: {type: string, title: Кол-во упаковок}}
+      good_count_unit: {type: int, am: {type: string, title: Кол-во шт.}}
+      good_art: {type: varchar, length: 16, am: {title: Артикул, type: string}}
+      good_title: {type: tinytext, am: {title: Наименование, type: string}}
+      good_ftitle: {type: tinytext, am: {type: string, title: Товар}}
+      good_price: {type: decimal, length: '15,2', unsigned: 1, am: {title: Цена, type: float}}
+      good_weight: {type: decimal, length: '10,2', unsigned: 1, am: {title: Масса упаковки, type: string}}
+      good_packCntByUnit: {type: decimal, length: '10,4', unsigned: 1, am: {title: 'Кол-во/Кор.', type: float}}
+      good_non_liquid: {type: tinyint, unsigned: 1, default: 0, notnull: 1, am: {type: select, title: Неликвид, default: 0, values: {0: Нет, 1: Да}}}
+      good_not_shipped: {type: decimal, length: '10,4', unsigned: 1, default: 0, am: {type: string, title: НеОтгр}}
+      good_reserved: {type: decimal, length: '10,4', unsigned: 1, default: 0, am: {type: string, title: Бронь}}
+      remains:
+        virtual: 1
+        ref_to:
+          idFieldName: good_id
+          assoc: 1
+          virtual: 1
+          table: ?_requests_goods_remains
+          fields: [store_id, delivery_date, status, stock, reserve]
+          use_ref: requests_goods2goods_remains
+        am: {title: Остатки}
+    foreign:
+      id: {field: good_id}
+      art: {field: good_art}
+      title: {field: good_title}
+      ftitle: {field: good_ftitle}
+      prices: {field: good_price}
+      count: {field: good_count}
+      count_pack: {field: good_count_pack}
+      count_unit: {field: good_count_unit}
+      weight: {field: good_weight}
+      collection_id: {table: goods, field: collection_id, use_ref: requests_goods2goods}
+      good_size: {table: goods, field: size, use_ref: requests_goods2goods}
+      unit_title: {table: units, field: title, use_ref: goods2units, via: goods, am: {type: string, title: Базовая ед}}
+    table:
+      UNIQUE:
+        request_id: [request_id, good_id]
+    actions:
+      edit: [good_id, id, art, title, ftitle, count, count_pack, prices, good_size, unit_title, remains]
+      archive: [good_id, good_art, good_title, good_count, good_count_pack, good_count_unit, good_price, good_weight, collection_id, unit_title, remains, good_not_shipped, good_reserved]
+      print: [good_id, good_art, good_ftitle, good_count, good_count_pack, good_count_unit, good_price, collection_id, unit_title, good_size]
+      process: [good_id, good_art, good_title, good_count, good_count_pack, good_count_unit, good_price, good_weight, good_non_liquid, collection_id, unit_title, remains]
+
+  requests_goods_history:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      req_id: {type: int, length: 10, am: {type: string, title: ID заявки}}
+      pos_id: {type: int, length: 10, am: {type: string, title: ID позиции}}
+      old_count: {type: decimal, length: '10,4', unsigned: 1, am: {type: string, title: Кол-во}}
+      old_price: {type: decimal, length: '15,2', unsigned: 1, am: {title: Цена, type: float}} 
+      old_not_shipped: {type: decimal, length: '10,4', notnull: 0, default: null, unsigned: 1, am: {type: string, title: НеОтгр}}
+      old_reserved: {type: decimal, length: '10,4', notnull: 0, default: null, unsigned: 1, am: {type: string, title: Бронь}}
+      old_weight: {type: decimal, length: '10,2', unsigned: 1, am: {title: Масса упаковки, type: string}}
+      old_cost: {type: decimal, length: '15,2', unsigned: 1, am: {title: Стоимость, type: float}} 
+      old_remains: {type: decimal, length: '10,4', notnull: 0, default: null, unsigned: 1, am: {type: string, title: ТекущОст}}
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        req_id: [req_id]
+        pos_id: [pos_id]
+ 
+  requests_bills:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      req_id: {type: int, length: 10, am: {type: string, title: ID заявки}}
+      bill_id: {type: text, length: 10, am: {type: string, title: Номер накладной}}
+      desc: {type: text, length: 40, am: {type: string, title: Описание}}
+      date: {type: text, length: 15, am: {type: string, title: Дата}}
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        req_id: [req_id]
+    actions:
+      show: [req_id, bill_id]    
+  
+  requests_history:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      req_id: {type: int, length: 10, am: {type: string, title: ID заявки}}
+      old_count_pos: {type: int, length: 10, unsigned: 1, am: {type: string, title: Количество позиций}}
+      old_sum: {type: decimal, length: '15,2', unsigned: 1, am: {title: Сумма, type: float}} 
+      old_sum_weight: {type: decimal, length: '10,2', unsigned: 1, am: {title: Масса, type: string}}
+      #old_status: {type: "enum('new','reserved','unreserved','expired','partly_pay','paid','shipment_prep','shipment_approved','shipment_decline','partly_shipped', 'processed','work','rejected')", default: null, am: {type: select, title: Статус, values: {new: В обработке, reserved: Зарезервировано, unreserved: Резерв снят, expired: Истёк срок резерва, partly_pay: Частичная оплата, paid: Оплачен полностью, shipment_prep: Подготовка к отгрузке, shipment_approved: Отгрузка подтверждена, shipment_decline: Отгрузка отклонена, partly_shipped: Частичная отгрузка, processed: Выполнен, work: В работе, rejected: Отклонена}}}
+      old_status: {type: text, am: {type: select, null: 'new', title: Статус}}
+      mdate: {type: datetime, notnull: 1, am: {type: datetime, title: Дата изменения}}
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        req_id: [req_id]
+    
+  requests_goods_remains:
+    fields:
+      request_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer}}
+      good_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer, title: ИД}}
+      store_id: {type: int, notnull: 1, unsigned: 1, am: {type: integer, title: Код склада}}
+      delivery_date: {type: date, am: {type: date, title: Дата поставки}}
+      status: {type: "enum('main','road','service')", am: {type: select, title: Статус, values: {main: Основной, road: В дороге, service: Служебный}}}
+      stock: {type: float, am: {type: float, title: Свободный остаток}}
+      reserve: {type: float, am: {type: float, title: Резерв на складе}}
+    table:
+      UNIQUE:
+        request_id: [request_id, good_id, store_id]
+        
+  requests_statuses:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      import_id: {type: int, length: 10, am: {type: string, title: ID в импорте}}
+      title: {type: tinytext, notnull: 1, am: {type: string, title: ID в БД}}
+      title_dealer: {type: tinytext, notnull: 1, am: {type: string, title: Название у дилера}}
+      title_operator: {type: tinytext, notnull: 1, am: {type: string, title: Название у оператора}}
+      editable: {type: "enum('no','yes')", default: 'no', am: {type: select, title: Дилер может редактировать, values: {no: нет, yes: да}}}
+      deletable: {type: "enum('no','yes')", default: 'no', am: {type: select, title: Дилер может удалять, values: {no: нет, yes: да}}}
+      show_to_dealers: {type: "enum('no','yes')", default: 'yes', am: {type: select, title: Отображать статус дилеру, values: {no: нет, yes: да}}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      show: [import_id, title, title_dealer, title_operator, editable, deletable, show_to_dealers]
+      list: [id, import_id, title, title_dealer, title_operator, editable, deletable, show_to_dealers]
+      add: [import_id, title, title_dealer, title_operator, editable, deletable, show_to_dealers]
+      modify: [import_id, title, title_dealer, title_operator, editable, deletable, show_to_dealers]
+
+  requests_to_order:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1, am: {type: integer, title: Номер заявки}}
+      cdate: {type: datetime, notnull: 1, am: {type: datetime, title: Дата создания}}
+      mdate: {type: datetime, notnull: 1, am: {type: datetime, title: Дата обработки}}
+      dealer_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer}}
+      cid: {type: int, unsigned: 1, am: {type: integer, title: Номер корректировки}}
+      legal_entity_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: select, title: Юр. лицо, req: 1}}
+      operator_id: {type: int, length: 10, unsigned: 1, am: {type: integer}}
+#      payment_method_id: {type: int, length: 10, unsigned: 1, am: {type: select, null: не выбрано, title: Способ оплаты}}
+#      doc_number: {type: tinytext, notnull: 0, am: {type: string, title: Номер документа}}
+#      doc_date: {type: date, notnull: 0, am: {type: date, title: Дата документа}}
+      rtype: {type: "enum('reservation','order')", default: 'order', am: {type: select, title: Тип, default: order, values: {reservation: Бронь, order: Заказ}}}
+      #status: {type: "enum('new','work','processed','rejected')", default: 'new', am: {type: select, title: Статус, values: {new: Новая, work: В работе, processed: Обработана, rejected: Отклонена}}}
+      #status: {type: "enum('new','reserved','unreserved','expired','partly_pay','paid','shipment_prep','shipment_approved','shipment_decline','partly_shipped', 'processed','declined','work','rejected')", default: 'new', am: {type: select, title: Статус, values: {new: Новая, reserved: Обработана, unreserved: Резерв снят, expired: Истёк срок резерва, partly_pay: Частичная оплата, paid: Оплачен, shipment_prep: Заявка на отгрузку, shipment_approved: Отгрузка подтверждена, shipment_decline: Отгрузка отклонена, partly_shipped: Частичная отгрузка, processed: Выполнен, declined: Отказ от заказа, work: В работе, rejected: Отклонена}}}
+      status: {type: text, am: {type: text, title: Статус}}
+      saved: {type: "enum('no','yes')", default: 'no', am: {type: select, title: Сохранено, values: {no: нет, yes: да}}}
+      comments: {type: text, am: {type: text, title: Комментарий}}
+      comments_operator: {type: text, am: {type: text, title: Комментарий оператора}}
+      comments_all: {type: text, am: {type: text, title: Комментарии по всей заявке}}
+      number_in_bd_artisan: {type: int, unsigned: 1, am: {type: integer, title: Номер заявки в БД Артисан}}
+      account_number: {type: tinytext, notnull: 0, am: {type: string, title: Номер счета}}
+      date_for_payment: {type: datetime, notnull: 1, am: {type: datetime, title: Дата отправки на расчет}}
+      date_of_receipt: {type: datetime, notnull: 1, am: {type: datetime, title: Дата получения ответа по расчету}}
+#      discount: {type: float, notnull: 1, am: {type: float, title: Скидка}}
+#      extra_discount: {type: tinyint, notnull: 1, am: {type: checkbox, title: Дополнительная скидка, unchecked: '0', default: 0, checked: 1, values: {0: 'no', 1: 'yes'}}}
+      goods_to_order:
+        virtual: 1
+        ref_to:
+          idFieldName: id
+          assoc: 1
+          virtual: 1
+          table: ?_requests_goods_to_order
+          fields: [good_id, good_count]
+          use_ref: requests_to_order2goods_to_order
+        am: {title: Позиции}
+
+    foreign:
+      dealer_category_id: {table: dealers, field: category_id, use_ref: requests2dealers_category}
+#      dealer_title: {table: dealers, field: title, use_ref: requests2dealers_category, am: {title: Дилер}}
+#      operator_name: {table: operators, field: name, use_ref: requests2operators, am: {title: Оператор}}
+#      payment_method_title: {table: payment_methods, field: title, use_ref: requests2payment_methods, am: payment_method_id}
+      status_title_dealer: {table: requests_statuses, field: title_dealer, use_ref: requests_to_order2statuses, am: status}
+      status_title_operator: {table: requests_statuses, field: title_operator, use_ref: requests_to_order2statuses, am: status}
+      goods_count: {table: requests_goods_to_order, field: "COUNT(good_id)", asis: 1, use_ref: requests_to_order2requests_goods_to_order, am: {title: Количество}}
+      goods_sum: {table: goods_to_order, field: "SUM(ROUND(requests_goods_to_order.good_price*requests_goods_to_order.good_count, 2))", asis: 1, via: requests_goods_to_order, use_ref: requests_goods_to_order2goods_to_order, am: {title: Сумма}}
+      goods_weight: {table: goods_to_order, field: "SUM(good_count/good_packCntByUnit*requests_goods_to_order.good_weight)", asis: 1, via: requests_goods_to_order, use_ref: requests_goods_to_order2goods_to_order, am: {title: Масса}}
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        cdate: [cdate]
+        mdate: [mdate]
+        dealer_id: [dealer_id]
+#        status: [status]
+        cid: [cid]
+    actions:
+      list: [id, cdate, status, mdate, goods_count, goods_sum]
+      show: [id, cdate, status, goods_count, goods_sum]
+#      order: [rtype, legal_entity_id, payment_method_id, doc_number, doc_date, comments]
+      edit: [id, cid]
+      archives: [cdate, id, cid, status, mdate, goods_count, goods_sum, goods_weight, account_number, number_in_bd_artisan, date_for_payment, date_of_receipt, status_title_dealer]
+      archive: [id, cid, cdate, mdate, status, status_title_dealer, saved]
+#      print: [id, cdate, mdate, status, dealer_category_id, dealer_id]
+    paging:
+      npp: 20
+      css_class: 'paging'
+      base_url: ''
+      url_append: ''
+      separator: ' '
+      linkcount: 10
+      first: ''
+      prev: ''
+      next: ''
+      last: ''
+      skip: ' ... '
+
+  requests_goods_to_order:
+    fields:
+      request_id: {type: int, length: 11, unsigned: 1, notnull: 1, am: {type: integer}}
+      good_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer, title: ИД}}
+      good_count: {type: decimal, length: '10,4', unsigned: 1, am: {type: string, title: Количество}}
+      good_count_new: {type: decimal, length: '10,4', unsigned: 1, am: {type: string, title: Изменённое количество товара}}
+      good_count_pack: {type: int, am: {type: string, title: Кол-во упаковок}}
+      good_count_unit: {type: int, am: {type: string, title: Кол-во шт.}}
+      good_art: {type: varchar, length: 16, am: {title: Артикул, type: string}}
+      good_title: {type: tinytext, am: {title: Наименование, type: string}}
+      good_price: {type: decimal, length: '15,2', unsigned: 1, am: {title: Цена, type: float}}
+      good_total: {type: decimal, length: '15,2', unsigned: 1, am: {title: Стоимость, type: float}}
+      good_weight: {type: decimal, length: '10,2', unsigned: 1, am: {title: Масса упаковки, type: string}}
+      good_packCntByUnit: {type: decimal, length: '10,4', unsigned: 1, am: {title: 'Кол-во/Кор.', type: float}}
+      status: {type: "enum('0','1','2', '3')", default: 0, am: {type: select, title: Статус, values: {0: не известно, 1: есть в наличии, 2: товар в производстве, 3: 0: нет в наличии}}}
+      date_ready: {type: datetime, notnull: 1, am: {type: datetime, title: Дата производства}}
+
+    foreign:
+      id: {field: good_id}
+      art: {field: good_art}
+      title: {field: good_title}
+      prices: {field: good_price}
+      count: {field: good_count}
+      count_pack: {field: good_count_pack}
+      count_unit: {field: good_count_unit}
+      weight: {field: good_weight}
+      collection_id: {table: goods_to_order, field: collection_id, use_ref: requests_goods_to_order2goods_to_order}
+      good_size: {table: goods_to_order, field: size, use_ref: requests_goods_to_order2goods_to_order}
+      unit_title: {table: units, field: title, use_ref: goods_to_order2units, via: goods_to_order, am: {type: string, title: Базовая ед}}
+    table:
+      UNIQUE:
+        request_id: [request_id, good_id]
+    actions:
+      edit: [good_id, id, art, title, count, count_pack, prices, good_size, unit_title, count_unit, status]
+      archive: [good_id, good_art, good_title, good_count, good_count_pack, good_count_unit, good_price, good_weight, collection_id, unit_title, status, good_count_new, date_ready]
+      print: [good_id, good_art, good_count, good_count_pack, good_count_unit, good_price, collection_id, unit_title, good_size, good_title]
+      process: [good_id, good_art, good_count, good_count_pack, good_count_unit, good_price, good_weight, collection_id, unit_title]
+
+  requests_to_order_history:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      req_id: {type: int, length: 10, am: {type: string, title: ID заявки}}
+      old_count_pos: {type: int, length: 10, unsigned: 1, am: {type: string, title: Количество позиций}}
+      old_sum: {type: decimal, length: '15,2', unsigned: 1, am: {title: Сумма, type: float}}
+      old_sum_weight: {type: decimal, length: '10,2', unsigned: 1, am: {title: Масса, type: string}}
+      #old_status: {type: "enum('new','reserved','unreserved','expired','partly_pay','paid','shipment_prep','shipment_approved','shipment_decline','partly_shipped', 'processed','work','rejected')", default: null, am: {type: select, title: Статус, values: {new: В обработке, reserved: Зарезервировано, unreserved: Резерв снят, expired: Истёк срок резерва, partly_pay: Частичная оплата, paid: Оплачен полностью, shipment_prep: Подготовка к отгрузке, shipment_approved: Отгрузка подтверждена, shipment_decline: Отгрузка отклонена, partly_shipped: Частичная отгрузка, processed: Выполнен, work: В работе, rejected: Отклонена}}}
+      old_status: {type: text, am: {type: select, null: 'new', title: Статус}}
+      mdate: {type: datetime, notnull: 1, am: {type: datetime, title: Дата изменения}}
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        req_id: [req_id]
+
+  payment_methods:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1, am: {title: ID}}
+      title: {type: tinytext, am: {title: Название, type: string}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      add: [title]
+      show: [title]
+      modify: [title]
+      list: [id, title]
+
+  goods: # Товары
+    dont_install: 1
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      art: {type: varchar, length: 16, am: {title: Артикул, type: string}}
+      title: {type: tinytext, am: {title: Наименование, type: string}}
+      collection_id: {type: smallint, unsigned: 1, am: {type: string, title: Коллекция}}
+      type: {type: tinytext, am: {title: Тип, type: string}}
+      unit_id: {type: tinyint, unsigned: 1, am: {title: Базовая ед, type: string}}
+      size: {type: tinytext, am: {title: Размер, type: string}}
+      width: {type: decimal, length: '10,2', unsigned: 1, am: {title: Ширина, type: string}}
+      length: {type: decimal, length: '10,2', unsigned: 1, am: {title: Длина, type: string}}
+      weight: {type: decimal, length: '10,2', unsigned: 1, am: {title: Масса упаковки(коробки), type: string}}
+      packCntByUnit: {type: decimal, length: '10,4', unsigned: 1, am: {title: 'Кол-во/Кор.', type: float}}
+      packCntByArea: {type: decimal, length: '10,4', unsigned: 1, am: {title: 'Кол-во кв. м. в коробке', type: float}}
+      packCntByCount: {type: decimal, length: '10,4', unsigned: 1, am: {title: 'Кол-во штук плитки в коробке', type: float}}
+      non_liquid: {type: tinyint, unsigned: 1, default: 0, notnull: 1, am: {type: select, title: Неликвид, default: 0, values: {0: Нет, 1: Да}}}
+    foreign:
+      unit_title: {table: units, field: title, use_ref: goods2units, am: {type: string, title: 'Ед. изм.'}}
+
+  goods_to_order: # Товары на заказ
+    dont_install: 1
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      art: {type: varchar, length: 16, am: {title: Артикул, type: string}}
+      title: {type: tinytext, am: {title: Наименование, type: string}}
+      collection_id: {type: smallint, unsigned: 1, am: {type: string, title: Коллекция}}
+      type: {type: tinytext, am: {title: Тип, type: string}}
+      size: {type: tinytext, am: {title: Размер, type: string}}
+      weight: {type: decimal, length: '10,2', unsigned: 1, am: {title: Масса упаковки(коробки), type: string}}
+      packCntByUnit: {type: decimal, length: '10,4', unsigned: 1, am: {title: 'Кол-во/Кор.', type: float}}
+      packCntByArea: {type: decimal, length: '10,4', unsigned: 1, am: {title: 'Кол-во кв. м. в коробке', type: float}}
+      packCntByCount: {type: decimal, length: '10,4', unsigned: 1, am: {title: 'Кол-во штук плитки в коробке', type: float}}
+      unit_id: {type: tinyint, unsigned: 1, am: {title: Базовая ед, type: string}}
+      colprice2: {type: decimal, length: '15,2', unsigned: 1, am: {title: КолЦена2, type: float}}
+      price1: {type: decimal, length: '15,2', unsigned: 1, am: {title: Цена1, type: float}}
+      price2: {type: decimal, length: '15,2', unsigned: 1, am: {title: Цена2, type: float}}
+      max_sk: {type: tinyint, unsigned: 1, am: {title: MaxSk, type: string}}
+      updated: {type: "enum('yes','no')", default: 'yes', notnull: 1, am: {type: string, title: Обновлено при импорте, otitle: Да, htmltype: checkbox, default: 'no', checked: 'yes'}}
+      hidden: {type: "enum('yes','no')", default: 'no', notnull: 1, am: {type: string, title: Видимость, htmltype: checkbox, default: 'no', checked: 'yes', otitle: 'Скрывать', values: {no: показано, yes: скрыто}}}
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        #collection_id: [collection_id]
+        unit_id: [unit_id]
+        art: [art]
+    foreign:
+      unit_title: {table: units, field: title, use_ref: goods_to_order2units, am: {type: string, title: 'Ед. изм.'}}
+
+
+  units: # Базовые единицы
+    dont_install: 1
+    fields:
+      id: {type: tinyint, notnull: 1, unsigned: 1, auto_increment: 1}
+      title: {type: varchar, length: 32, am: {title: Название, type: string}}
+  
+  dealers:
+    dont_install: 1
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      cdate: {type: datetime, am: {type: datetime, title: Дата создания дилера}}
+      mdate: {type: datetime, am: {type: datetime, title: Дата редактирования дилера}}
+      login: {type: varchar, length: 32, notnull: 1, am: {type: login, req: 1, title: Логин}}
+      pass: {type: varchar, length: 32, notnull: 1, am: {type: pass, req: 1, htmltype: pass, title: Пароль}}
+      blocked: {type: "enum('yes','no')", default: 'no', notnull: 1, am: {type: string, title: Доступ к системе, otitle: Запретить, htmltype: checkbox, default: 'no', checked: 'yes', values: {no: доступ разрешен, yes: доступ запрещен}}}
+      title: {type: tinytext, notnull: 1, am: {type: string, title: Наименование}}
+      description: {type: tinytext, notnull: 0, am: {type: text, title: Описание}}
+      category_id: {type: int, notnull: 1, unsigned: 1, am: {type: select, title: Категория дилера}}
+      supplier_id: {type: int, notnull: 1, unsigned: 1, am: {type: select, title: Поставщик}}
+
+  operators:
+    dont_install: 1
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      cdate: {type: datetime, am: {type: datetime, title: Дата создания оператора}}
+      mdate: {type: datetime, am: {type: datetime, title: Дата редактирования оператора}}
+      login: {type: varchar, length: 32, notnull: 1, am: {type: login, req: 1, title: Логин}}
+      pass: {type: varchar, length: 32, notnull: 1, am: {type: pass, req: 1, htmltype: pass, title: Пароль}}
+      blocked: {type: "enum('yes','no')", default: 'no', notnull: 1, am: {type: string, title: Доступ к системе, otitle: Запретить, htmltype: checkbox, default: 'no', checked: 'yes', values: {no: доступ разрешен, yes: доступ запрещен}}}
+      deleted: {type: "enum('yes','no')", default: 'no', notnull: 1, am: {type: string, title: Удалить, otitle: Удалить, htmltype: checkbox, default: 'no', checked: 'yes', values: {no: доступ разрешен, yes: Удален}}}
+      name: {type: tinytext, notnull: 1, am: {type: string, title: Имя}}
+
+mail:
+  print_form:
+    from: 'info@artisan-project.ru'
+    subject: 'www.artisan-project.ru: Изменение статуса заявки №[order_id]'
+    type: text/plain
+    message: |
+      Информационное сообщение сайта АРТИСАН-ПРОЕКТ
+      ----------------------------------------------
+      
+      Статус заявки №[order_id] от [order_cdate] изменен.
+      
+      Новый статус заявки: [order_status]
+      Посмотреть печатную форму счета вы можете тут:
+      [print_url]
+      
+      АРТИСАН-ПРОЕКТ
+  without_print_form:
+    from: 'info@artisan-project.ru'
+    subject: 'www.artisan-project.ru: Изменение статуса заявки №[order_id]'
+    type: text/plain
+    message: |
+      Информационное сообщение сайта АРТИСАН-ПРОЕКТ
+      ----------------------------------------------
+      
+      Статус заявки №[order_id] от [order_cdate] изменен.
+      
+      Новый статус заявки: [order_status]
+
+      АРТИСАН-ПРОЕКТ
+  repl:
+    site_name: "Artisan.Dealers"
+  date_format: H:i:s d.m.Y
+
+refs:
+  requests_goods2goods: {type: M-1, join: left, tables: {requests_goods: good_id, goods: id}}
+  requests_goods_to_order2goods_to_order: {type: M-1, join: left, tables: {requests_goods_to_order: good_id, goods_to_order: id}}
+  requests2dealers_category: {type: M-1, join: left, tables: {dealers: id, requests: dealer_id}}
+  requests2operators: {type: M-1, join: left, tables: {operators: id, requests: operator_id}}
+  requests2payment_methods: {type: M-1, join: left, tables: {payment_methods: id, requests: payment_method_id}}
+  requests2statuses: {type: M-1, join: left, tables: {requests_statuses: title, requests: status}}
+  requests_to_order2statuses: {type: M-1, join: left, tables: {requests_statuses: title, requests_to_order: status}}
+  requests2requests_goods: {type: M-1, join: left, tables: {requests_goods: request_id, requests: id}}
+  requests_to_order2requests_goods_to_order: {type: M-1, join: left, tables: {requests_goods_to_order: request_id, requests_to_order: id}}
+  goods2units: {type: M-1, join: left, tables: {goods: unit_id, units: id}}
+  goods_to_order2units: {type: M-1, join: left, tables: {goods_to_order: unit_id, units: id}}
+  requests_goods2goods_remains:
+    virtual: 1
+    join: left
+    type: N-M
+    tables:
+      -
+        - {table: requests_goods, field: good_id}
+        - {table: requests_goods_remains, field: good_id, cond: {request_id: requests_goods.request_id}}
+  requests2goods:
+    virtual: 1
+    join: left
+    type: N-M
+    tables:
+      -
+        - {table: requests, field: id}
+        - {table: requests_goods, field: request_id}
+      -
+        - {table: goods, field: id}
+        - {table: requests_goods, field: good_id}
+  requests_to_order2goods_to_order:
+    virtual: 1
+    join: left
+    type: N-M
+    tables:
+      -
+        - {table: requests_to_order, field: id}
+        - {table: requests_goods_to_order, field: request_id}
+      -
+        - {table: goods_to_order, field: id}
+        - {table: requests_goods_to_order, field: good_id}
+  requests2bills:
+    virtual: 1
+    join: left
+    type: N-M
+    tables:
+      -
+        - {table: requests, field: id}
+        - {table: requests_bills, field: req_id}

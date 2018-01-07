@@ -1,0 +1,39 @@
+tables:
+  messages:
+    fields:
+      id: {type: int, length: 10, auto_increment: 1, notnull: 1, am: {type: integer}}
+      name: {type: tinytext, notnull: 1, am: {type: string, title: Контактное лицо}}
+      mail: {type: tinytext, notnull: 1, am: {type: string, htmltype: mail, req: 1, title: Контактный E-mail}}
+      text: {type: tinytext, notnull: 0, am: {type: text, req: 0, title: Текст сообщения}}
+      date: {type: datetime, notnull: 1, am: {type: datetime, title: Дата сообщения}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, name, mail, text, date]
+      show: [id, name, mail, text, date]
+      send: [name, mail, text]
+
+mail:
+  message:    
+    subject: 'Уважаемый(ая) [name]! Ваша сообщение отправлено.'
+    from: 'Artisan-Dealers'
+    type: text/html
+    message: |
+      Ваше сообщение отправлено.
+  messageadmin:    
+    subject: 'Artisan-Dealers'
+    from: 'Artisan-Dealers'
+    type: text/html
+    message: |
+      <p>Имя: [name]</p>
+      <p>E-mail: [mail]</p>
+      <p>Сообщение: [text]</p>
+  contactadmin:    
+    subject: 'Artisan-Dealers'
+    from: 'Artisan-Dealers'
+    type: text/html
+    message: |
+      <p>[text]</p>
+  repl:
+    site_name: "Artisan-Dealers"
+  date_format: Y-m-d H:i:s

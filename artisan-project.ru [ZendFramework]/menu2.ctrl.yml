@@ -1,0 +1,25 @@
+title: Пункты меню
+
+actions:
+# Пункты меню
+  show: [Просмотреть пункт меню, Просмотр пункта меню]
+  list: [Просмотреть пункты меню, Просмотр пунктов меню, [delete]]
+  add: [Добавить пункт меню, Добавление пункта меню, Пункт меню успешно добавлен, Пункт меню добавить не удалось, '[root_url]menu_items2/list/']
+  modify:
+    - Редактировать пункт меню
+    - Редактирование пункта меню
+    - Пункт меню успешно отредактирован
+    - Пункт меню отредактировать не удалось
+    - '[root_url]menu_items2/list/'
+  delete: [Удалить пункт меню, Удаление пункта меню, Пункт меню успешно удален, Пункт меню удалить не удалось, '[root_url]menu_items2/list/', Вы уверены что хотите удалить этот пункт меню?]
+
+list_actions:
+  inline:
+    show: {link: 'menu_items2/show/id/[id]', put: {id: before}, icon: show}
+    modify: {id: modify, link: 'menu_items2/modify/id/[id]', put: {id: before}, icon: edit}
+    delete: {link: 'menu_items2/delete/id/[id]', icon: delete}
+  after:
+    add: 'menu_items2/add/'
+      
+
+noContent: Пунктов меню не найдено

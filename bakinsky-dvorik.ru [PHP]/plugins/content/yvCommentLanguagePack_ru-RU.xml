@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project>
+<!-- $Id: yvCommentLanguagePack_ru-RU.xml 2 2009-08-30 15:10:43Z yvolk $ -->
+<install type="plugin" group="content" version="1.5.0">
+	<name>yvCommentLanguagePack_ru-RU</name>
+	<creationDate>2009-08-30</creationDate>
+	<author>Yuri Volkov</author>
+	<authorEmail>yvolksoft@yurivolkov.com</authorEmail>
+	<authorUrl>http://yurivolkov.com/Joomla/yvComment/index_en.html</authorUrl>
+	<copyright>(c) 2007-2009 yvolk (Yuri Volkov), http://yurivolkov.com. All rights reserved.</copyright>
+	<license>GPL</license>
+	<version>1.24.0</version>
+	<description>
+		This is Russian language pack for yvComment extension.
+		Don't enable this plugin.
+		See yvComment's Homepage [url]http://yurivolkov.com/Joomla/yvComment/index_en.html[/url] for more information.
+	</description>
+
+	<files>
+		<filename plugin="yvCommentLanguagePack_ru-RU">yvCommentLanguagePack_ru-RU.php</filename>
+	</files>
+
+	<languages>
+		<language tag="ru-RU">ru-RU.com_yvcomment.ini</language>
+	</languages>
+</install>

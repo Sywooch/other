@@ -1,0 +1,222 @@
+﻿@charset "utf-8";
+		p.intro { border-bottom: 1px solid #ccc; margin-bottom: 20px; padding: 20px 0 30px 0; text-align: center; width: 100% }
+		
+		p#cross-links { text-align: center }
+		
+		p#cross-links { border-bottom: 1px solid #ccc; margin-bottom: 30px; padding-bottom: 30px }
+		
+		noscript p, noscript ol { color: #a00; font-size: 13px; line-height: 1.4em; text-align: left }
+		noscript a { color: #a00; text-decoration: underline }
+		noscript ol { margin-left: 25px; }
+		
+		
+		.stripViewer .panelContainer .panel ul {
+			text-align: left;
+			margin: 0 15px 0 30px;
+		}
+		
+		.slider-wrap { /* This div isn't entirely necessary but good for getting the side arrows vertically centered */
+			overflow:hidden;
+			position: absolute;
+			top:88px;
+			width: 100%;
+		}
+		
+		.response_text2{
+		position:absolute;
+		width:490px;
+		height:150px;
+		background-color:transparent;
+		top:87px;
+		left:113px;
+		overflow:hidden;
+		}
+		
+		.response_text2 p{
+		
+		 font-size: 14px;
+  font-family: "HelveticaNeueCyrLight", sans-serif;
+  color: rgb( 0, 0, 0 );
+		}
+		
+		.response_text2  .autor_name{
+		font-size: 16px;
+  font-family: "HelveticaNeueCyrLight", sans-serif;
+  color: rgb( 0, 0, 0 );
+  margin-bottom:-4px;
+  padding-bottom:0px;
+		}
+		
+		.response_text2  .autor_status{
+		font-size: 12px;
+  font-family: "HelveticaNeueCyrLight", sans-serif;
+  color: rgb( 0, 0, 0 );
+		}
+		
+		.response_text2 p{
+		padding-top:0px;
+		margin-top:0px;
+		}
+		
+		.name_status{
+		position:absolute;
+		bottom:0px;
+		right:0px;
+		}
+		
+		.wrapper img {
+		width:300px;
+		height:265px;
+		}
+		
+		.wrapper .foto_author{
+		width:300px;
+		height:265px;
+		background-size:cover;
+		position:absolute;
+		left:0px;
+		top:0px;
+		z-index:9;
+		}
+		
+
+		/* These 2 lines specify style applied while slider is loading */
+		.csw {width: 100%; height: 460px; background: #fff; overflow: scroll}
+		.csw .loading {margin: 200px 0 300px 0; text-align: center}
+
+		.stripViewer { /* This is the viewing window */
+			position: relative;
+			overflow: hidden; 
+			/*padding-left:40px;*/
+			margin: auto;
+			width: 100%; /* Also specified in  .stripViewer .panelContainer .panel  below */
+			height: 265px;
+			clear: both;
+		
+			
+		}
+		
+		.stripViewer .panelContainer { /* This is the big long container used to house your end-to-end divs. Width is calculated and specified by the JS  */
+			position: relative;
+			left: 0; top: 0;
+			width: 100%;
+			list-style-type: none;
+			/* -moz-user-select: none; // This breaks CSS validation but stops accidental (and intentional - beware) panel highlighting in Firefox. Some people might find this useful, crazy fools. */
+		}
+		
+		.stripViewer .panelContainer .panel { /* Each panel is arranged end-to-end */
+			float:left;
+			height: 260px;
+			position: relative;
+			width: 840px; /* Also specified in  .stripViewer  above */
+			margin-left:-40px;
+		}
+		
+		.stripViewer .panelContainer .panel .wrapper { /* Wrapper to give some padding in the panels, without messing with existing panel width */
+			height:260px;
+			position:relative;
+		}
+		
+		.stripViewer .panelContainer .panel .wrapper .response_text{
+			width:622px;
+			height:265px;
+			
+			position:absolute;
+			top:0px;
+			right:0px;
+			z-index:99999;
+			background-image:url(/images/response_fon.png);
+			background-position:center center;
+			background-repeat:no-repeat;
+			
+		}
+		
+		.stripNav { /* This is the div to hold your nav (the UL generated at run time) */
+			margin: auto;
+			display:none;
+		}
+		
+		.stripNav ul { /* The auto-generated set of links */
+			list-style: none;
+		}
+		
+		.stripNav ul li {
+			float: left;
+			margin-right: 2px; /* If you change this, be sure to adjust the initial value of navWidth in coda-slider.1.1.1.js */
+		}
+		
+		.stripNav a { /* The nav links */
+			font-size: 10px;
+			font-weight: bold;
+			text-align: center;
+			line-height: 32px;
+			background: #c6e3ff;
+			color: #fff;
+			text-decoration: none;
+			display: block;
+			padding: 0 15px;
+		}
+		
+		.stripNav li.tab1 a { background: #60f }
+		.stripNav li.tab2 a { background: #60f }
+		.stripNav li.tab3 a { background: #60f }
+		.stripNav li.tab4 a { background: #60f }
+		.stripNav li.tab5 a { background: #60f }
+		
+		.stripNav li a:hover {
+			background: #333;
+		}
+		
+		.stripNav li a.current {
+			background: #000;
+			color: #fff;
+		}
+		
+		.stripNavL, .stripNavR { /* The left and right arrows */
+			position: absolute;
+			top: 230px;
+			
+			
+		}
+		
+		.stripNavL{
+			display:none;
+		}
+		
+		.stripNavL a, .stripNavR a {
+			display: block;
+			height: 40px;
+	
+		}
+		
+		.stripNavL {
+			left: 0;
+		}
+		
+		.stripNavR {
+			right: 0;
+		}
+		
+		.stripNavL {
+			background: url("images/arrow-left.gif") no-repeat center;
+		}
+		
+		#stripNavR0 {
+		 position:absolute;
+		 right:15px;
+		 top:113px;
+		 z-index:9999999999999;
+		 
+		 
+		}
+			
+
+.stripNavR a{
+  font-size: 14px;
+  font-family: "HelveticaNeueCyrLight", sans-serif;
+  color: #fff;
+  text-shadow: black 0 0 30px;
+   font-weight: bold;
+  line-height: 1.571;
+  text-decoration:none;
+}

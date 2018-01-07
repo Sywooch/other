@@ -1,0 +1,36 @@
+User-agent: Yandex
+Disallow: /*?_openstat
+Disallow: /*from=adwords
+
+User-agent: Googlebot
+Disallow: /*?_openstat
+Disallow: /*from=adwords
+
+User-agent: *
+Disallow: /administrator/
+Disallow: /cache/
+Disallow: /includes/
+Disallow: /installation/
+Disallow: /language/
+Disallow: /libraries/
+Disallow: /media/
+Disallow: /modules/
+Disallow: /plugins/
+Disallow: /templates/
+Disallow: /tmp/
+Disallow: /xmlrpc/
+Disallow: /redirect/
+Disallow: /meniu/
+Disallow: /otzyvy/
+Disallow: /bas/
+Disallow: /index.php?Itemid=65&option=com_content&view=article&id=169&catid=3
+Disallow: /stati/dostavka-edy-v-svao-g-moskvy-na-dom/
+Disallow: /stati/dostavka-edy-v-tcao-g-moskvy/
+Disallow: /stati/dostavka-shashlyka-v-vao-g-moskvy/
+Disallow: /stati/dostavka-edy-na-dom-v-vao-g-moskvy/
+Disallow: /stati/dostavka-edy-iz-restoranov-na-dom/
+Disallow: /stati/dostavka-shashlyka-po-moskve/
+Disallow: /kavkazskaia-kukhnia-dostavka-na-dom-gotovykh-bliud/
+Disallow: /usloviia-dostavki/
+
+Host: www.bakinsky-dvorik.ru
