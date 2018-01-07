@@ -1,0 +1,148 @@
+.b-search {
+
+  &__form {
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+
+    &-input {
+      float: left;
+      width: 715px;
+
+      @include tablet {
+        width: 70%;
+      }
+
+      @include phone {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+
+    &-btn {
+      width: 220px;
+      float: right;
+
+      @include tablet {
+        width: 25%;
+      }
+      @include phone {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__input {
+    height: 46px;
+    line-height: 46px;
+    box-sizing: border-box;
+    width: 100%;
+    border: solid 2px #000;
+    background: #fff;
+    outline: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 15px;
+
+    &:focus {
+      border: solid 2px #979797;
+    }
+
+    ._is-errors & {
+      border-color: #bb3025;
+    }
+  }
+
+  &__notice {
+    color: #a9a8a8;
+    font-size: 12px;
+    margin-top: 10px;
+
+    span {
+      font-size: 15px;
+      color: #000;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+
+  }
+
+  &__item {
+    border-bottom: solid 1px #f0f0f0;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    .b-main-news__anounce-img {
+      /*от усталости кастыль*/
+      margin-right: 40px;
+
+      @include phone {
+        float: none;
+        margin: auto;
+        margin-bottom: 15px;
+      }
+    }
+
+    &:first-child {
+      padding-top: 0px;
+    }
+    &:after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+
+    &-wrapper {
+      overflow: hidden;
+      padding-top: 15px;
+    }
+
+    &-title {
+      color: #bd8651;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      color: #000000;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    &-meta {
+      &:after {
+        display: block;
+        clear: both;
+        content: "";
+      }
+    }
+
+    &-tags {
+      font-size: 12px;
+      float: left;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-date {
+      float: right;
+      color: #b6b5b5;
+      font-size: 13px;
+    }
+  }
+}

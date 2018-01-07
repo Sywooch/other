@@ -1,0 +1,20 @@
+.link{
+  color:#d3a67a;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+  }
+
+  span{
+    color: #1a1a1a;
+  }
+
+  &._invert{
+    text-decoration: underline;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}

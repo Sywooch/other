@@ -1,0 +1,66 @@
+.b-counter {
+
+  position: relative;
+  width: 145px;
+
+  &._small {
+    width: 116px;
+  }
+
+  &__input {
+    outline: none;
+    background: #fff;
+    border: solid 1px #f2f2f2;
+    height: 36px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    @include box-sizing(border-box);
+    padding: 0 38px;
+    width: 100%;
+
+    ._small & {
+      line-height: 29px;
+      height: 29px;
+      font-size: 15px;
+    }
+  }
+
+  &__minus, &__plus {
+    display: block;
+    color: #4c2722;
+    font-size: 26px;
+    text-align: center;
+    width: 36px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background: #d3a67a;
+    cursor: pointer;
+    transition: all .3s;
+    line-height: 35px;
+
+    ._small & {
+      line-height: 29px;
+      width: 28px;
+    }
+
+    &:hover {
+      background: #b68d65;
+    }
+  }
+
+  &__minus {
+    left: 0;
+    line-height: 31px;
+    ._small & {
+      line-height: 25px;
+    }
+  }
+
+  &__plus {
+    right: 0;
+  }
+}

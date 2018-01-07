@@ -1,0 +1,122 @@
+.b-main-top {
+  padding: 78px 0px;
+  padding-bottom: 45px;
+
+  ._is-main-page &{
+    background: #fff;
+  }
+
+  @include phone {
+    padding: 68px 0 36px;
+  }
+
+  &__pattern {
+    text-align: center;
+    margin-bottom: 13px;
+
+    &:after {
+      display: inline-block;
+      content: "";
+      @include retina-sprite($section-pic-group);
+    }
+  }
+
+  &__sections {
+    text-align: justify;
+    font-size: 13px;
+    margin-top: 31px;
+    padding: 0 21px;
+    margin-bottom: -15px;
+    position: relative;
+    z-index: 3;
+
+    @include phone{
+      text-align: right;
+    }
+
+    &:after {
+      display: inline-block;
+      content: "";
+      width: 100%;
+
+    }
+
+    &-item, li {
+      display: inline-block;
+      text-transform: uppercase;
+      margin-right: 75px;
+      text-align: left;
+      text-overflow: ellipsis;
+
+      @include tablet{
+        text-align: right;
+      }
+
+      @include phone{
+        margin-right: 10px;
+      }
+
+      &:last-child{
+        margin: 0;
+      }
+    }
+
+    .flexMenu-viewMore {
+      position: relative;
+
+      & > a {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        color:#d3a67a;
+        text-decoration: underline;
+
+        span{
+          color: #1a1a1a;
+        }
+      }
+
+      .flexMenu-popup {
+        position: absolute;
+        border: solid 2px #dcb895;
+        background: #fff;
+        padding: 12px;
+        top: -12px;
+        padding-top: 27px;
+        right: -15px;
+       // max-width: 107px;
+        text-align: right;
+
+
+        @include tablet{
+          right: -15px;
+          left: auto;
+          min-width: 100px;
+          max-width: 999px;
+
+        }
+
+        .link {
+          text-decoration: none
+        }
+
+        .b-main-top__sections-item {
+          display: block;
+          padding: 5px 0;
+          border-bottom: solid 1px #f2f2f2;
+          margin-right: 0;
+          text-align: right;
+
+          &:hover{
+            text-decoration: underline;
+          }
+
+          &:last-child{
+            border-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

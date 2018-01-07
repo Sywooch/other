@@ -1,0 +1,62 @@
+.counter_block
+{
+	display: inline-block;
+}
+.cart-notetext
+{
+	margin-top: 30px;
+}
+
+.b-basket-table__btns-left.basket_reload
+{
+	cursor:pointer;
+}
+
+button {
+
+	display: block;
+	margin: 0;
+	padding: 0;
+	background: none;
+	position: relative;
+
+	border: 0px solid #000;
+}
+
+button,
+button:active,
+button:focus {
+	outline: none;
+}
+
+.b-basket-table__btns-left.basket_reload button {
+	font-size: 14px;
+	color: #bd8651;
+	text-transform: uppercase;
+	line-height: 42px;
+	cursor: pointer;
+}
+
+.hidden{
+	display:none;
+}
+
+._current .link._invert{
+	text-decoration: none;
+}
+
+button:hover .btn{
+	background: #d2a67a;
+	text-decoration: none !important;
+}
+
+.b-form-errors{
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #bb3025;
+}
+
+.input-error{
+	border-color: #bb3025 !important;
+}

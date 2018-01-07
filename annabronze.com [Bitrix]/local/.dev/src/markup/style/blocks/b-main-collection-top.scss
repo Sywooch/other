@@ -1,0 +1,175 @@
+.b-main-collection-top {
+
+  position: relative;
+  padding: 38px 0 21px 0;
+
+
+
+  &:after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: -$single-pattern-height/2;
+    left: 50%;
+    margin-left: -$single-pattern-width/2;
+    @include retina-sprite($single-pattern-group);
+
+    @include phone {
+      display: block;
+    }
+  }
+
+  &._inner-collection {
+    padding-top: 35px;
+    padding-bottom: 50px;
+
+    &:before{
+      display: none;
+    }
+
+    @include phone{
+      padding-top: 82px;
+      padding-bottom: 65px;
+    }
+
+    &:after{
+      @include phone {
+        top: 21.5px;
+      }
+    }
+  }
+
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(../img/bg@2x.jpg);
+    background-size: 68px 67px;
+
+    opacity: 0.8;
+    right: 0;
+    z-index: 0;
+
+    ._is-main-page &{
+      background: rgba(255, 255, 255, 0.31);
+    }
+  }
+
+  &__item {
+    border-right: solid 2px #d8d8d8;
+
+    @include phone {
+      border-right: 0;
+      border-bottom: solid 2px #d8d8d8;
+    }
+
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+    &-img {
+      width: 190px;
+      height: 190px;
+      @include border-radius(50%);
+      border: solid 1px #d8d8d8;
+      background-position: center;
+      background-repeat: no-repeat;;
+      background-size: cover;
+      float: left;
+      margin-right: 47px;
+
+      @include phone {
+        float: none;
+        width: 120px;
+        height: 120px;
+        margin: auto;
+
+        ._inner-collection & {
+          display: none;
+        }
+      }
+    }
+
+    &-content {
+      overflow: hidden;
+      position: relative;
+      padding-top: 67px;
+      letter-spacing: 2px;
+
+      @include phone {
+        text-align: center;
+        padding-top: 14px;
+        letter-spacing: 1px;
+        padding-bottom: 22px;
+
+        ._inner-collection & {
+          padding-bottom: 27px;
+        }
+
+      }
+
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        @include retina-sprite($single-pattern-group);
+
+        @include phone {
+          display: none;
+        }
+      }
+    }
+    &-title {
+      color: #1a1a1a;
+      font-weight: 600;
+      font-size: 24px;
+      text-transform: uppercase;
+
+      @include phone {
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 1px;
+
+        ._inner-collection & {
+          letter-spacing: 0;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 8px;
+
+      @include phone {
+        font-size: 16px;
+        margin-bottom: 6px;
+        ._inner-collection & {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-price {
+      color: #bd8651;
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+
+      @include phone {
+        font-size: 18px;
+        ._inner-collection & {
+          margin-bottom: 19px;
+        }
+      }
+    }
+  }
+
+}

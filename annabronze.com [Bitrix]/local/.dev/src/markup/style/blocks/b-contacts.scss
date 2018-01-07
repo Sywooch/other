@@ -1,0 +1,119 @@
+.b-contacts {
+
+  &__map {
+    &-inner {
+      height: 380px;
+
+      @include tablet{
+        height: 320px;
+      }
+
+      @include phone{
+        height: 250px;
+      }
+    }
+  }
+
+  &__info {
+    margin-top: 70px;
+    border-bottom: solid 1px #d6d6d6;
+    padding-bottom: 60px;
+
+    @include tablet{
+      margin-top: 25px;
+    }
+
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+
+    &-text {
+      width: 600px;
+      float: left;
+
+      @include tablet{
+        width: 400px;
+      }
+
+      @include tablet-additional{
+        width:100%;
+        float:none;
+        margin-bottom: 25px;
+      }
+    }
+
+    &-col {
+      width: 270px;
+      float: right;
+
+      @include tablet-additional{
+        width:100%;
+        float:none;
+      }
+    }
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    padding-left: 63px;
+    padding-top: 10px;
+    color: #000;
+    font-size: 15px;
+    margin-bottom: 8px;
+
+    &-title {
+      font-weight: bold;
+    }
+    a {
+      color: #bd8651;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:after {
+      display: block;
+      content: "";
+      width: 10px;
+      border-top: solid 1px #d6d6d6;
+      position: absolute;
+      top: 18px;
+      left: 46px;
+    }
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    }
+    &._phone:before {
+      @include retina-sprite($c-phone-group);
+    }
+    &._vk:before {
+      @include retina-sprite($c-vkontakte-group);
+    }
+    &._fb:before {
+      @include retina-sprite($c-fb-group);
+    }
+    &._in:before {
+      @include retina-sprite($c-in-group);
+    }
+    &._pi:before {
+      @include retina-sprite($c-pi-group);
+    }
+    &._skype:before {
+      @include retina-sprite($c-skype-group);
+    }
+    &._email:before {
+      @include retina-sprite($c-email-group);
+    }
+  }
+}

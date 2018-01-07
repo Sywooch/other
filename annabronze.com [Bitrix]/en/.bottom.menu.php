@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		GetMessage('ABOUT_US'),
+		"/en/company/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		GetMessage('CATALOG'),
+		"/en/catalog/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		GetMessage('INFO'),
+		"/en/info/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		GetMessage('HELP'),
+		"/en/help/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		GetMessage('CONTACTS'),
+		"/en/contacts/",
+		Array(),
+		Array(),
+		""
+	),
+);
+?>

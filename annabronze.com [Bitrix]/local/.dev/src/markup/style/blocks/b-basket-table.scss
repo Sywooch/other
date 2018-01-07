@@ -1,0 +1,208 @@
+.b-basket-table {
+
+  &__stock-message {
+    font-size: 11px;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 12px;
+    text-align: left;
+  }
+
+  &__states {
+    text-align: center;
+    margin-bottom: $margin-m;
+    margin-top: -12px;
+
+    @include phone {
+      margin-bottom: $margin-s;
+      margin-top: 0;
+    }
+
+    &-item {
+      display: inline-block;
+      margin: 0 45px;
+      text-transform: uppercase;
+      color: #333333;
+      font-size: 13px;
+
+      @include phone {
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
+  }
+
+  &__header {
+    background: #f1f1f2;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #646161;
+    padding: 15px 0;
+  }
+
+  &__item {
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 25px 0;
+
+    @include phone {
+      padding: 15px 0;
+    }
+
+    &-row {
+      line-height: 61px;
+
+      @include phone {
+        line-height: normal;
+        padding-top: 15px;
+      }
+    }
+    &-inner {
+      display: inline-block;
+      line-height: normal;
+      vertical-align: middle;
+    }
+
+    &-price {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    &-title {
+      line-height: 61px;
+      letter-spacing: 0;
+      font-size: 0;
+
+      &:after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+        color: #bd8651;
+      }
+    }
+
+    &-img {
+      border: solid 3px #f2f2f2;
+      width: 61px;
+      height: 61px;
+      margin-right: 15px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+      background-position: center;
+    }
+
+    &-text {
+      overflow: hidden;
+      font-size: 15px;
+      display: inline-block;
+      vertical-align: middle;
+      color: #bd8651;
+      line-height: normal;
+      width: calc(100% - 100px);
+    }
+  }
+
+  &__delimiter {
+    &-line {
+      border-bottom: solid 1px #f2f2f2;
+    }
+  }
+
+  &__total {
+    margin-top: 18px;
+    letter-spacing: 1px;
+
+    &-table {
+      font-size: 13px;
+      color: #828282;
+      float: right;
+
+      b {
+        color: #000000;
+        font-weight: bold;
+
+      }
+
+      td {
+        padding-left: 10px;
+      }
+    }
+
+    &-total {
+      text-align: right;
+      font-size: 22px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 30px;
+      float: right;
+
+      b {
+        font-size: 26px;
+        margin-left: 14px;
+      }
+    }
+
+    &-coupon {
+      float: left;
+      width: 310px;
+      margin-top: 25px;
+
+      @include phone {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+
+  &__remove {
+
+    display: inline-block;
+    vertical-align: middle;
+    @include retina-sprite($close-group);
+  }
+
+  &__btns {
+    font-size: 14px;
+    color: #bd8651;
+    text-transform: uppercase;
+    line-height: 42px;
+    margin-top: $margin-m;
+
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+
+    &-left {
+      float: left;
+    }
+
+    &-right {
+      float: right;
+    }
+
+    &-center {
+      float: none;
+      text-align: center;
+    }
+
+  }
+
+}
+
+.link span{
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+.b-top-cart{
+
+  &__link{
+    font-size:13px;
+    font-weight: 300;
+    display: block;
+    position: relative;
+    padding-left: 26px;
+    line-height: $cart-ico-height;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    i{
+      font-style: normal;
+      font-weight: bold;
+    }
+
+
+
+    &:after{
+      display: block;
+      content: "";
+      position: absolute;
+      top:0;
+      left:0;
+      @include retina-sprite($cart-ico-group);
+
+      ._added &{
+        @include retina-sprite($cart-ico-after-group);
+      }
+    }
+  }
+
+}

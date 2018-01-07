@@ -1,0 +1,19 @@
+.btn:hover{
+    color:#000000 !important;
+}
+
+.b-blog-list__counts a, .b-blog-list__counts span{
+    color:#767676 !important;
+}
+
+.b-blog-list__counts-item._likes:before{
+    display:none !important;
+}
+
+.ilike-light{
+    margin: 6px 27px 6px 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: 'Open Sans',sans-serif;
+    display: inline-block;
+}

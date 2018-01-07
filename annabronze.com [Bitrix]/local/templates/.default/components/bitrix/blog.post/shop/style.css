@@ -1,0 +1,14 @@
+/*.body-blog a:link, .body-blog a:visited, .body-blog a:active, .blog-navigation-box li a{
+    color:#bd8651;
+}*/
+.body-blog a:link, .body-blog a:visited, .body-blog a:active, .blog-navigation-box li a {color:#bd8651;}
+.body-blog a:hover {color:#bd8651;}
+
+.body-blog a.b-blog-list__item-title{color:#bd8651;}
+
+.b-comments__form-error{
+    font-size: 11px !important;
+    margin: 14px 0 !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+}

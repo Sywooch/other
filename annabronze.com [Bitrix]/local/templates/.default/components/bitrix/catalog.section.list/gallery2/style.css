@@ -1,0 +1,5 @@
+.shadow-item_info { border: none; }
+.gallerygrid { width: 320px; height: 240px; float: left; margin-right: 15px; margin-left: 15px; margin-bottom: 30px; overflow: hidden; position: relative; }
+.gallerygrid img { width: 100%; position: absolute; top: 50%; transform:translateY(-50%); }
+.gallerygrid .over { line-height: 24px; opacity: 0; color:#FFFFFF; vertical-align: middle; text-decoration: none; font-size: 18px; padding-top: 100px; font-weight: bold; top: 0; background-color: #065e4e; position: absolute; height: 100%; width: 100%; text-align: center; }
+.gallerygrid:hover .over { opacity: 0.8; }

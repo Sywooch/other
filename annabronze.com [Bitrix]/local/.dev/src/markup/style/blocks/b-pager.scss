@@ -1,0 +1,77 @@
+.b-pager {
+  text-align: center;
+  letter-spacing: 0;
+  font-size: 0;
+  margin-top: 45px;
+  margin-bottom: 45px;
+
+  @include phone {
+    padding-bottom: 45px;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    body &{
+      display: inline-block;
+      vertical-align: top;
+      color: #000;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0 15px;
+      position: relative;
+      line-height: 35px;
+    }
+
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    i {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      font-style: normal;
+    }
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include retina-sprite($pager-1-group);
+      margin-top: -$pager-1-height/2;
+      margin-left: -$pager-1-width/2;
+    }
+
+    &:nth-child(2n+2):before {
+      @include retina-sprite($pager-2-group);
+      margin-top: -$pager-2-height/2;
+      margin-left: -$pager-2-width/2;
+    }
+
+    &:nth-child(3n+3):before {
+      @include retina-sprite($pager-3-group);
+      margin-top: -$pager-3-height/2;
+      margin-left: -$pager-3-width/2;
+    }
+
+    &:nth-child(4n+4):before {
+      @include retina-sprite($pager-4-group);
+      margin-top: -$pager-4-height/2;
+      margin-left: -$pager-4-width/2;
+    }
+
+    &._current {
+      &:before {
+        display: none;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+}

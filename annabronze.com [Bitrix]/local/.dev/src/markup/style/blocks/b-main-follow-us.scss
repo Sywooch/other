@@ -1,0 +1,19 @@
+.b-main-follow-us{
+  padding: 40px 0;
+
+  ._is-main-page &{
+    background: #fff;
+  }
+
+  @include phone{
+    padding: 40px 0 56px 0;
+  }
+
+  &__title{
+    margin-bottom: 30px!important;
+  }
+
+  &__links{
+    margin: 1px 0;
+  }
+}

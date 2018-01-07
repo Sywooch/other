@@ -1,0 +1,64 @@
+@import "constants";
+@import "mixins";
+@import "sprite";
+
+// @import "libs/_vendor"; // - подключение всех стилей bower компонентов "как есть". Часто - не требуется
+@import "libs/normalize-css";
+@import "libs/jquery.fancybox";
+@import "libs/jquery.formstyler";
+@import "libs/swiper";
+
+@import "global";
+@import "grid";
+
+//elems
+@import "elements/btn";
+@import "elements/link";
+
+//blocks
+@import "blocks/b-layout";
+@import "blocks/b-header";
+@import "blocks/b-place";
+@import "blocks/b-top-auth";
+@import "blocks/b-top-cart";
+@import "blocks/b-top-menu";
+@import "blocks/b-search-line";
+@import "blocks/b-subscribe";
+@import "blocks/b-footer";
+@import "blocks/b-geo";
+@import "blocks/b-mob-menu";
+@import "blocks/b-main-slider";
+@import "blocks/b-title";
+@import "blocks/b-collections";
+@import "blocks/b-main-about";
+@import "blocks/b-main-follow-us";
+@import "blocks/b-main-news";
+@import "blocks/b-main-collection-top";
+@import "blocks/b-main-top";
+@import "blocks/b-catalog-list";
+@import "blocks/b-breadcrumbs";
+@import "blocks/b-catalog-section";
+@import "blocks/b-colors";
+@import "blocks/b-pager";
+@import "blocks/b-popup";
+@import "blocks/b-popup-card";
+@import "blocks/b-counter";
+@import "blocks/b-card-gallery";
+@import "blocks/b-comments";
+@import "blocks/b-form";
+@import "blocks/b-card-mob-gallery";
+@import "blocks/b-inner-menu";
+@import "blocks/b-news-list";
+@import "blocks/b-product-card";
+@import "blocks/b-news-detail";
+@import "blocks/b-blog-list";
+@import "blocks/b-gallery";
+@import "blocks/b-popup-gallery";
+@import "blocks/b-faq";
+@import "blocks/b-contacts";
+@import "blocks/b-search";
+@import "blocks/b-order";
+@import "blocks/b-basket-table";
+@import "blocks/b-gui";
+
+

@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Profile", 
+		"/en/personal/profile/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Orders", 
+		"/en/personal/order/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	/*Array(
+		"Subscribe", 
+		"/en/personal/subscribe/", 
+		Array(), 
+		Array(), 
+		"" 
+	)*/
+);
+?>

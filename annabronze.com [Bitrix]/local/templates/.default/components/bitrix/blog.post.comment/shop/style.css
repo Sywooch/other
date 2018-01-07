@@ -1,0 +1,124 @@
+div.blog-comment-form{
+    margin:0px !important;
+    width:100% !important;
+}
+
+div.blog-comment-buttons{
+    margin:0px !important;
+    padding:0px !important;
+}
+
+.blog-comment-content{
+    padding:0px !important;
+}
+.blog-comment{
+    padding-top:0px !important;
+}
+
+.b-comments__item:last-child{
+    border-bottom:0px !important;
+}
+
+.bxlhe-editor-toolbar-row{
+    display:none !important;
+}
+
+.lha-textarea{
+    height: 104px !important;
+    border: 2px solid #000 !important;
+    padding: 15px !important;
+    resize: none !important;
+    width: 100% !important;
+    background: #fff !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+    box-sizing: border-box !important;
+    outline: 0 !important;
+}
+
+.lha-source-div{
+    padding:0px !important;
+    height:105px !important;
+}
+
+.lha-textarea:focus{
+    border:2px solid #979797 !important;
+}
+
+._is-errors .lha-textarea{
+    border-color:#bb3025 !important;
+}
+
+.bxlhe-frame{
+    height:110px !important;
+    margin-bottom: 20px !important;
+}
+
+.ilike-light .bx-ilike-right{
+    background-image:none !important;
+    padding:0px !important;
+}
+
+#new_comment_cont_00 .b-comments__list{
+    margin-top: 0px;
+}
+
+.new_comment_cont .grid-row.col-1.col-s-12{
+    display:none !important;
+}
+
+.new_comment_cont .grid-row.col-10.col-s-12{
+    margin-left:0px !important;
+}
+
+.new_comment_cont .b-comments__list{
+    margin-top:0px !important;
+}
+
+.new_comment_cont .b-comments__item{
+    padding-left:0px !important;
+    border-top-width:1px !important;
+    margin-top:25px !important;
+    border-top: solid 1px #f2f2f2 !important;
+}
+
+.body-blog .b-pager a:link{
+    color:#000;
+}
+
+.blog-comment-nav-item-sel:before{
+    background-image:none!important;
+}
+
+.b-comments__form-error{
+
+    color: #bb3025 !important;
+}
+
+.error-input{
+    border-color: #bb3025 !important;
+}
+
+.b-comments__form-notice{
+    margin-top: 20px !important;
+}
+
+.b-comments__item #form_c_del{
+    height:120px !important;
+}
+
+.b-comments__item .blog-comment-form{
+    position:absolute !important;
+    left:0px !important;
+    padding-top:20px !important;
+
+}
+
+.new_comment_cont .grid-container{
+    position: static !important;
+}
+
+.new_comment_cont .b-comments__form .grid-row.col-1.col-s-12{
+    display:block !important;
+}

@@ -1,0 +1,4 @@
+.b-form__input{
+    width:calc(100% - 30px) !important;
+    margin-left:10px !important;
+}

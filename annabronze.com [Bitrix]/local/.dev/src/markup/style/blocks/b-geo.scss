@@ -1,0 +1,47 @@
+.b-geo {
+
+  background: #d3a67a;
+  line-height: 60px;
+  @include box-shadow(0 0 3px rgba(0, 0, 0, 0.6));
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+
+  @include phone{
+    font-size: 14px;
+    line-height: 45px;
+    margin-top:39px;
+    margin-bottom: -39px;
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 15px;
+    border: solid 2px;
+    margin: 0 7px;
+    transition: background .3s;
+
+    &._yes {
+      color: #fff;
+      border-color: #000;
+
+      &:hover{
+        background: #000;
+      }
+    }
+    &._no {
+      color: #000;
+      border-color: #fff;
+      &:hover{
+        background: #fff;
+      }
+    }
+  }
+}

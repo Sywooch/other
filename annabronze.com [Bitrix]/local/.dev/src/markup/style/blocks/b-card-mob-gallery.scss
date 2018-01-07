@@ -1,0 +1,21 @@
+.b-card-mob-gallery {
+  margin: 0 $gutter-width;
+  height: 280px;
+  border: solid 3px #f1f1f1;
+  position: relative;
+  margin-top: 21px;
+  display: none;
+
+  @include phone{
+    display: block;
+  }
+
+  &__item {
+    display: block;
+    height: 280px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+}

@@ -1,0 +1,26 @@
+.jq-selectbox__select-text{
+    line-height: 35px;
+}
+
+.b-layout__info-box .jq-selectbox__dropdown ul{
+    margin-top:0px !important;
+    margin-bottom:0px !important;
+}
+
+.blog-search-form div{
+    padding-bottom:0px !important;
+}
+
+.b-layout__info-box .jq-selectbox__dropdown li:before{
+    display: none !important;
+
+}
+
+.b-layout__info-box .jq-selectbox__dropdown li{
+    padding-left: 15px !important;
+    width:100% !important;
+}
+
+.blog-search-submit{
+    margin-top:15px;
+}

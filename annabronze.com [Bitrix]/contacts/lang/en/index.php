@@ -1,0 +1,8 @@
+<?
+
+$MESS["PHONE_NUMBER"] = "Phone number";
+$MESS["SUBSCRIBE_TO_NEWS"] = "SUBSCRIBE TO NEWS";
+
+
+
+?>

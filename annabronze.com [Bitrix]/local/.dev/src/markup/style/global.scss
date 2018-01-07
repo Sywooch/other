@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic');
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+
+  min-width: 320px;
+  background: url(../img/bg@2x.jpg);
+  background-size: 68px 67px;
+
+}
+
+header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+
+.rsp_wrapper {
+  width: 100%;
+}
+
+.rsp_inner {
+  margin: auto;
+  position: relative;
+  width: 1200px;
+}
+
+.clear {
+  clear: both;
+}
+
+.hidden{
+  display:none;
+}
+
+.hidden-s {
+   @include phone {
+     display: none;
+   }
+ }
+
+.hidden-m {
+  @include tablet {
+    display: none;
+  }
+}
+
+.hidden-xm {
+  @include tablet-additional {
+    display: none;
+  }
+}
+
+.visible-s {
+  @include phone {
+    display: block;
+  }
+}
+
+.visible-m {
+  @include tablet {
+    display: block;
+  }
+}
+
+.visible-xm {
+  @include tablet-additional {
+    display: block;
+  }
+}
+
+.button-s {
+  @include phone {
+    width: 100%!important;
+    /*padding-left: 10px !important;
+    padding-right: 10px !important;*/
+    font-size: 100% !important;
+  }
+}
+
+._is-main-page ._hide-on-main {
+  display: none;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.margin-top-small {
+  margin-top: $margin-s;
+}
+
+.margin-top-medium {
+  margin-top: $margin-m;
+}
+
+.margin-top-big {
+  margin-top: $margin-l;
+}
+
+.is-loading {
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/preloader.gif) no-repeat center rgba(255, 255, 255, 0.51);
+    z-index: 999;
+  }
+}
+
+.float_left {
+  float: left;
+}
+
+select {
+  width: 100%;
+  height: 42px;
+  line-height: 42px;
+  border: 2px solid #000;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0 30px 0 15px;
+  margin-bottom: 20px;
+}
+
+
+.disabled{
+  background-color:#cfcfcf !important;
+  /*cursor:text !important;*/
+  border-color: #cfcfcf !important;
+}
+
+.btn._full.disabled{
+  color: black !important;
+}
+
+.b-form__preload-container{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:10000;
+  display:none;
+}
+
+.bx-core-waitwindow{
+  color:transparent !important;
+  display:none !important;
+}

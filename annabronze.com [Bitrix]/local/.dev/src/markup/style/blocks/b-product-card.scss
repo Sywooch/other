@@ -1,0 +1,287 @@
+.b-product-card {
+
+  &__wrapper {
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+
+  &__left {
+    float: left;
+    width: 570px;
+    margin-left: 27px;
+    padding-top: 98px;
+
+    @include tablet-additional {
+      width: 340px;
+    }
+
+    @include phone {
+      width: auto;
+      float: none;
+      margin-left: $gutter-width;
+      margin-right: $gutter-width;
+      padding-top: 25px;
+    }
+  }
+
+  &__right {
+    overflow: hidden;
+    padding-top: 103px;
+    margin-right: 40px;
+    margin-top: -50px;
+
+    @include tablet-additional {
+      margin-right: 10px;
+    }
+
+    @include phone {
+      margin-top: 0;
+      width: auto;
+      float: none;
+      margin-left: $gutter-width;
+      margin-right: $gutter-width;
+      padding-top: 34px;
+    }
+
+    &-inner {
+      width: 290px;
+      margin: auto;
+      @include phone {
+        width: 100%;
+      }
+
+    }
+  }
+
+  &__mobile {
+    &-title {
+      text-align: center;
+      margin-left: $gutter-width;
+      margin-right: $gutter-width;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+      display: none;
+
+      @include phone{
+        display: block;
+      }
+    }
+
+    &-article {
+      text-align: center;
+      margin-left: $gutter-width;
+      margin-right: $gutter-width;
+      letter-spacing: 1px;
+      font-size: 13px;
+      color: #646464;
+
+      display: none;
+
+      @include phone{
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 11px;
+    padding: 0 15px;
+
+    @include phone {
+      display: none;
+    }
+
+    &:before {
+      display: block;
+      content: "";
+      @include retina-sprite($section-pic-group);
+      position: absolute;
+      top: -83px;
+      left: 50%;
+      margin-left: -$section-pic-width/2;
+    }
+  }
+
+  &__article {
+    color: #646464;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+
+    @include phone {
+      display: none;
+    }
+  }
+
+  &__terms {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 34px;
+
+    a {
+      color: #c3966a;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__prices {
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+
+    &._small-margin {
+      margin-bottom: 5px;
+    }
+
+    &-price {
+      float: left;
+      color: #000000;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 34px;
+      margin-right: 30px;
+
+      &._small {
+        font-size: 20px;
+        line-height: 34px;
+
+        margin-right: 17px;
+      }
+    }
+
+    &-counter {
+      overflow: hidden;
+    }
+
+  }
+
+  &__stock {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #000000;
+    margin-bottom: 37px;
+
+    &._gray {
+      color: #a4a4a4;
+    }
+  }
+
+  &__stock-message {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 37px;
+    font-style: italic;
+    margin-top:10px;
+  }
+
+  &__colors {
+    background: #f6f6f6;
+    padding: 13px 16px;
+    margin-bottom: 42px;
+
+    &._small-margin {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__prices {
+    margin-bottom: 14px;
+    text-align: center;
+
+    &-inner {
+      /*display: inline-block;*/
+      display: inline-flex;
+    }
+  }
+
+  &__params {
+    color: #000000;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 37px;
+    padding: 0 15px;
+  }
+
+  &__preview {
+    color: #000000;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 37px;
+    padding: 0 15px;
+  }
+
+  &__description {
+    margin-top: 35px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    padding-bottom: 45px;
+    border-bottom: solid 1px #f2f2f2;
+    margin-bottom: 45px;
+
+    @include phone {
+      text-align: center;
+    }
+
+  }
+
+  &__share {
+    vertical-align: middle;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 40px;
+
+    &-br{
+      display: none;
+
+      @include phone{
+        display: block;
+        margin-bottom: 13px;
+      }
+    }
+
+    &-title {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    a {
+      vertical-align: middle;
+    }
+  }
+
+  &__recommends {
+    margin-top: 89px;
+
+    @include phone {
+      margin-top: 40px;
+    }
+  }
+}

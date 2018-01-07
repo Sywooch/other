@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Making order", 
+		"/en/help/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Payment", 
+		"/en/help/payment/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Shipping", 
+		"/en/help/delivery/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Warranty", 
+		"/en/help/warranty/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
