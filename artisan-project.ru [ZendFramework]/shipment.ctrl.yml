@@ -1,0 +1,57 @@
+title: Отгрузки
+complex: 1
+
+actions:
+  show: [Просмотреть отгрузки, Просмотр отгрузок]
+  list: [Просмотреть отгрузки, Просмотр отгрузок]
+
+  show_shipment_types: [Просмотреть тип отгрузок, Просмотр типа отгрузок]
+  show_transport_companies: [Просмотреть транспортную компанию, Просмотр транспортной компании]
+  list_shipment_types: [Просмотреть типы отгрузок, Просмотр типов отгрузок, [delete_shipment_types]]
+  list_transport_companies: [Просмотреть транспортные компании, Просмотр транспортных компаний, [delete_transport_companies]]
+  add_shipment_types: [Добавить тип отгрузок, Добавление типа отгрузок, Тип отгрузок успешно добавлен, Тип отгрузок добавить не удалось, '[root_url]shipment/list_shipment_types/']
+  add_shipment_times: [Добавить время, Добавление времени, Время успешно добавлено, Время добавить не удалось, '[root_url]shipment/list_shipment_times/']
+  add_transport_companies: [Добавить транспортную компанию, Добавление транспортной компании, Транспортная компания успешно добавлена, Транспортную компанию добавить не удалось, '[root_url]shipment/list_transport_companies/']
+  modify_shipment_types: [Редактировать тип отгрузок, Редактирование типа отгрузок, Тип отгрузок успешно отредактирован, Тип отгрузок отредактировать не удалось, '[root_url]shipment/list_shipment_types/']
+  modify_shipment_times: [Редактировать время, Редактирование времени, Время успешно отредактировано, Время отредактировать не удалось, '[root_url]shipment/list_shipment_times/']
+  modify_transport_companies: [Редактировать транспортную компанию, Редактирование транспортной компании, Транспортная компания успешно отредактирована, Транспортную компанию отредактировать не удалось, '[root_url]shipment/list_transport_companies/']
+  delete_shipment_types: [Удалить тип отгрузок, Удаление типа отгрузок, Тип отгрузок успешно удален, Тип отгрузок удалить не удалось, '[root_url]shipment/list_shipment_types/', 'Вы уверены, что хотите удалить этот тип отгрузок?']
+  delete_transport_companies: [Удалить транспортную компанию, Удаление транспортной компании, Транспортная компания успешно удалена, Транспортную компанию удалить не удалось, '[root_url]shipment/list_transport_companies/', 'Вы уверены, что хотите удалить эту транспортную компанию?']
+
+  show_shipment_preps: [Просмотреть вид подготовки товара, Просмотр вида подготовки товара]
+  list_shipment_preps: [Просмотреть виды подготовки товара, Просмотр видов подготовки товара, [delete_shipment_preps]]
+  add_shipment_preps: [Добавить вид подготовки товара, Добавление вида подготовки товара, Вид подготовки товара успешно добавлен, Вид подготовки товара добавить не удалось, '[root_url]shipment/list_shipment_preps/']
+  modify_shipment_preps: [Редактировать вид подготовки товара, Редактирование вида подготовки товара, Вид подготовки товара успешно отредактирован, Вид подготовки товара отредактировать не удалось, '[root_url]shipment/list_shipment_preps/']
+  delete_shipment_preps: [Удалить вид подготовки товара, Удаление вида подготовки товара, Вид подготовки товара успешно удален, Вид подготовки товара удалить не удалось, '[root_url]shipment/list_shipment_preps/', 'Вы уверены, что хотите удалить этот вид подготовки товара?']
+
+list_actions:
+  inline:
+    shipment:
+      show: {title: show, link: 'shipment/show/id/[id]', put: {id: before}, icon: show}
+      id: {title: show, link: 'shipment/show/id/[id]'}
+    shipment_types:
+      show_shipment_types: {link: 'shipment/show_shipment_types/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_shipment_types, link: 'shipment/modify_shipment_types/id/[id]'}
+      delete_shipment_types: {title: delete_shipment_types, link: 'shipment/delete_shipment_types/id/[id]', icon: delete}
+    shipment_preps:
+      show_shipment_preps: {link: 'shipment/show_shipment_preps/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_shipment_preps, link: 'shipment/modify_shipment_preps/id/[id]'}
+      delete_shipment_preps: {title: delete_shipment_types, link: 'shipment/delete_shipment_preps/id/[id]', icon: delete}
+    transport_companies:
+      show_transport_companies: {link: 'shipment/show_transport_companies/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_transport_companies, link: 'shipment/modify_transport_companies/id/[id]'}
+      delete_transport_companies: {title: delete_transport_companies, link: 'shipment/delete_transport_companies/id/[id]', icon: delete}
+
+  after:
+    shipment_types:
+      add_shipment_types: 'shipment/add_shipment_types'
+    shipment_preps:
+      add_shipment_preps: 'shipment/add_shipment_preps'
+    transport_companies:
+      add_transport_companies: 'shipment/add_transport_companies'
+
+noContent:
+  shipment: Отгрузок не найдено
+  shipment_types: Типов отгрузок не найдено
+  transport_companies: Транспортных компаний не найдено
+  shipment_preps: Видов подготовки товара не найдено

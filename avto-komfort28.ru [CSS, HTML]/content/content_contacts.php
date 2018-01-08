@@ -1,0 +1,9 @@
+<h1 class="h1_style">КОНТАКТЫ</h1>
+<p class="p_style">Амурская область</p>
+<p class="p_style">г. Благовещенск</p>
+<p class="p_style">2-км Новотроицкое шоссе д. 21.</p>
+<p class="p_style">т.8(4162)-55-18-78</p>
+<p class="p_style">8-962-285-65-51</p>
+<p class="p_style">8-962-285-18-78</p>
+<p class="p_style">e-mail: avtokomfort99@mail.ru</p> 
+<p class="p_style">nikishaev72@mail.ru</p>

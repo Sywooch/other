@@ -1,0 +1,25 @@
+title: Блок сообщений
+
+actions:
+# Блок сообщений
+  show: [Просмотреть блок сообщений, Просмотр блока сообщений]
+  list: [Просмотреть блоки сообщений, Просмотр блоков сообщений, [delete]]
+  add: [Добавить блок сообщений, Добавление блока сообщений, Блок сообщений успешно добавлен, Блок сообщений добавить не удалось, '[root_url]message_block/list/']
+  modify:
+    - Редактировать блок сообщений
+    - Редактирование блока сообщений
+    - Блок сообщений успешно отредактирован
+    - Блок сообщений отредактировать не удалось
+    - '[root_url]message_block/list/'
+  delete: [Удалить блок сообщений, Удаление блока сообщений, Блок сообщений успешно удален, Блок сообщений удалить не удалось, '[root_url]message_block/list/', Вы уверены что хотите удалить этот блок сообщений?]
+
+list_actions:
+  inline:
+    show: {link: 'message_block/show/id/[id]', put: {id: before}, icon: show}
+    modify: {id: modify, link: 'message_block/modify/id/[id]', put: {id: before}, icon: edit}
+    delete: {link: 'message_block/delete/id/[id]', icon: delete}
+  after:
+    add: 'message_block/add/'
+      
+
+noContent: Блоков сообщений не найдено

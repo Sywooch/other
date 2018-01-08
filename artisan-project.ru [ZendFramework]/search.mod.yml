@@ -1,0 +1,19 @@
+engine: like
+like:
+  matchMode: ALL
+  order: {field3: asc}
+  buildExcerpts:
+    before_match: '<b>'
+    after_match: '</b>'
+    chunk_separator: '...'
+    limit: 256
+
+links:
+  1: {url: '/catalog/[id]/', tableName: 'factories', fields: [id, title, descr, "' '", "' '"], where: {hidden: 'no'}}
+  2: {url: '/catalog/[f_id]/[id]/', tableName: 'collections', fields: [id, title, descr, factory_id, "' '"], where: {hidden: 'no'}}
+  3: {url: '/catalog/element/[id]/', tableName: 'goods', fields: [id, title, ftitle, art, collection_id], where: {hidden: 'no'}}
+  4: {url: '/content/id/[id]/', tableName: 'content', fields: [id, title, content, "' '", pos], where: {hidden: 'no'}}
+  5: {url: '/employees/id/[id]/', tableName: 'employees', fields: [id, fio, intro, content, pos], where: {hidden: 'no'}}
+  6: {url: '/news/id/[id]/', tableName: 'news', fields: [id, title, description, content, date], where: {hidden: 'no'}}
+  7: {url: '/promotional/id/[id]/', tableName: 'promotional', fields: [id, file, "' '", "' '", "' '"], where: {hidden: 'no'}}
+#  8: {url: '/news/[id]/', tableName: 'news', fields: [id, title, content, "' '", pos], where: {hidden: 'no'}}

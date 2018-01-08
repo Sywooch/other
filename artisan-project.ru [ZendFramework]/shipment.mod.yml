@@ -1,0 +1,137 @@
+tables:
+  shipment:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1, am: {type: integer, title: Номер заявки на отгрузку}}
+      mdate: {type: datetime, notnull: 1, am: {type: datetime, title: Дата обработки}}
+      type_id: {type: int, length: 10, notnull: 1, unsigned: 1, am: {type: select, req: 1, null: не выбрано, title: Тип отгрузки}}
+      prep_id: {type: int, length: 10, notnull: 1, unsigned: 1, am: {type: select, req: 1, null: не выбрано, title: Вид подготовки товара}}
+      dealer_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer}}
+      adress: {type: text, am: {type: text, title: Адрес доставки}}
+      company: {type: text, am: {type: text, title: Транспортная компания}}
+      comment: {type: text, am: {type: text, title: Комментарий (адрес доставки)}}
+      operator_id: {type: int, length: 10, unsigned: 1, am: {type: integer}}
+      comment_oper: {type: text, am: {type: text, title: Комментарий оператора}}
+      status: {type: "enum('new','accepted','rejected')", default: 'new', am: {type: select, title: Статус, values: {new: Новая, accepted: Принята, rejected: Отклонена}}}
+      sdate:
+        type: date
+        am:
+          type: date
+          req: 1
+          title: Дата отгрузки
+          onUpdate: |
+            function(){ check_ship_time(); }
+      
+    foreign:
+      type: {table: shipment_types, field: title, use_ref: shipment2types, am: type_id}
+      type_exp: {table: shipment_types, field: exp_id, use_ref: shipment2types, am: type_id}
+      prep: {table: shipment_preps, field: title, use_ref: shipment2preps, am: prep_id}
+      prep_exp: {table: shipment_preps, field: exp_id, use_ref: shipment2preps, am: prep_id}
+      dealer_title: {table: dealers, field: title, use_ref: shipment2dealers_category, am: {title: Дилер}}
+      
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        type_id: [type_id]
+        prep_id: [prep_id]
+        
+    actions:
+      add: [sdate, type_id, prep_id, comment]
+      list: [id, sdate, dealer_title, adress, comment, company]
+      o_list: [id, sdate, status, dealer_title, adress, comment, company]
+      show: [id, sdate, type, prep, comment, dealer_title, company]
+      process: [id, sdate, type_exp, prep_exp, comment]
+    paging:
+      npp: 20
+      css_class: 'paging'
+      base_url: ''
+      url_append: ''
+      separator: ' '
+      linkcount: 10
+      first: ''
+      prev: ''
+      next: ''
+      last: ''
+      skip: ' ... '      
+      
+  shipment_types:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      title: {type: varchar, length: 30, am: {type: string, title: Тип отгрузки}}
+      exp_id: {type: int, length: 10, unsigned: 1, am: {type: integer, title: ID}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      add: [title, exp_id]
+      modify: [id, title, exp_id]
+      list: [id, title, exp_id]
+      
+  shipment_preps:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      title: {type: varchar, length: 30, am: {type: string, title: Вид подготовки товара}}
+      exp_id: {type: int, length: 10, unsigned: 1, am: {type: integer, title: ID}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      add: [title, exp_id]
+      modify: [id, title, exp_id]
+      list: [id, title, exp_id]
+
+  transport_companies:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      title: {type: varchar, length: 30, am: {type: string, title: Наименование}}
+      adress: {type: varchar, length: 70, am: {type: string, title: Адрес}}
+      days: {type: varchar, length: 70, am: {type: string, title: Дни бесплатной отгрузки}}
+      #days: {type: enum('1','2','3','4','5','6'), notnull: 1, am: {type: checkboxes, title: Дни бесплатной отгрузки, otitle: Дни бесплатной отгрузки, values: {1: 'Понедельник', 2: 'Вторник', 3: 'Среда', 4: 'Четверг', 5: 'Пятница', 6: 'Суббота'}}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      add: [title, adress, days]
+      modify: [id, title, adress, days]
+      list: [id, title, adress, days]
+
+  shipment_times:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      title: {type: time, am: {type: time, title: Время}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      add: [title]
+      modify: [id, title]
+      list: [id, title]
+
+  shipment_goods:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      ship_id: {type: int, length: 10, am: {type: string, title: ID отгрузки}}
+      req_id: {type: int, length: 10, am: {type: string, title: ID заявки}}
+      good_id: {type: int, length: 10, am: {type: string, title: ID позиции}}
+      is_blocked: {type: 'enum("yes","no")', default: 'no', notnull: 1, am: {type: string, values: {no: нет, yes: да}}}
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        ship_id: [ship_id]
+        req_id: [req_id]
+      
+refs:
+  shipment2types: {type: M-1, join: left, tables: {shipment: type_id, shipment_types: id}}
+  shipment2preps: {type: M-1, join: left, tables: {shipment: prep_id, shipment_preps: id}}
+  shipment2dealers_category: {type: M-1, join: left, tables: {dealers: id, shipment: dealer_id}}
+  
+mail:
+  new_shipment:
+    from: 'info@artisan-project.ru'
+    subject: 'Поступила новая заявка'
+    type: text/html
+    message: |
+      <p>Поступила новая заявка на отгрузку, номер [ship_id]</p>
+      <br>Дилер - [diler_title]
+      <br>Дата отгрузки     [sdate]
+      <br>Тип отгрузки     [type]
+      <br>Вид подготовки товара     [prep]
+      <br>Комментарий     [comment] 
+  repl:
+    site_name: "Artisan.Dealers"
+  date_format: H:i:s d.m.Y
