@@ -1,0 +1,5499 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dc_catalog SYSTEM "http://www.delivery-club.ru/xml/dc.dtd">
+<dc_catalog last_update="2011-07-27 11:11">
+    <delivery_service>
+		<categories>
+			<category id="1">Первые блюда (SOUP)</category>
+			<category id="2">Вторые блюда из Мяса, Птицы и Овощей (Meat courses)</category>
+			<category id="3">Вторые блюда из рыбы (Fish courses)</category>
+			<category id="4">Шашлыки из мяса, птицы и овощей - Meat specialities (charcoal-grill meat)</category>
+<category id="5">Рыбные блюда, приготовленные на открытых углях - Fish specialties (charcoal-grilled fish)</category>
+<category id="6">Гарниры (GARNISHES)</category>
+<category id="7">Горячие закуски (ETREESN)</category>
+<category id="8">Холодные блюда и закуски (cold dishes)</category>
+<category id="17" parentId="8">Холодные закуски и салаты из рыбы - Cold fish appetizers</category>
+<category id="18" parentId="8">Холодные закуски и салаты из птицы -Cold meats</category>
+<category id="19" parentId="8">Мясные холодные закуски и салаты - Cold meats</category>
+<category id="20" parentId="8">Овощные холодные закуски - Cold meats</category>
+<category id="9">Кисломолочные продукты</category>
+<category id="10">Специальные предложения (предварительный заказ)</category>
+<category id="21" parentId="10">Блюда на заказ из дичи и мяса диких животных</category>
+<category id="11">Фирменные блюда (Specialities)</category>
+<category id="12">Постное меню</category>
+<category id="13">Хлеб (Bread)</category>
+<category id="14">Соусы</category>
+<category id="15">Фрукты и десерты</category>
+<category id="16">Безалкогольные напитки (Soft drinks)</category>
+<category id="22" parentId="11">Фирменные первые блюда</category>
+<category id="23" parentId="11">Фирменные вторые блюда</category>
+<category id="24" parentId="11">Фирменные блюда из зелени</category>
+<category id="25" parentId="11">Фирменные блюда из рыбы и морепродуктов</category>
+<category id="26" parentId="11">Фирменные блюда из птицы и дичи</category>
+<category id="27" parentId="11">Фирменные шашлыки</category>
+<category id="28" parentId="11">Фирменные блюда для любителей европейской кухни</category>
+<category id="29" parentId="11">Деликатесы из Израиля</category>
+<category id="30" parentId="12">Холодные закуски</category>
+<category id="31" parentId="12">Горячие закуски и вторые блюда</category>
+<category id="32" parentId="12">Шашлыки</category>
+<category id="33" parentId="12">Супы</category>
+<category id="34" parentId="12">Соусы</category>
+<category id="35" parentId="12">Гарниры</category>
+<category id="36" parentId="15">Фрукты</category>
+<category id="37" parentId="15">Десерты</category>
+<category id="38">Алкогольные напитки</category>
+<category id="39" parentId="38">Водка</category>
+<category id="40" parentId="38">Текила</category>
+<category id="41" parentId="38">Виски</category>
+<category id="42" parentId="38">Мартини</category>
+<category id="43" parentId="38">Ром</category>
+<category id="44" parentId="38">Портвейн</category>
+<category id="45" parentId="38">Белые вина</category>
+<category id="46" parentId="38">Красные и розовые вина</category>
+<category id="47" parentId="38">Коньяк</category>
+<category id="48" parentId="38">Шампанское</category>
+<category id="49" parentId="38">Ликеры</category>
+<category id="50" parentId="38">Пиво</category>
+<category id="51">Коктейли и миксы</category>
+<category id="52">К пиву</category>
+<category id="53">Сигареты</category>
+<category id="54">Сигары</category>
+		</categories>
+		<products>
+			<product id="1">
+				<category_id>1</category_id>
+				<name>Уха по-царски 450гр</name>
+				<description>(Семга, осетрина, судак, королевские креветки, картофель, помидоры) Oukha</description>
+				<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="2">
+				<category_id>1</category_id>
+				<name>Дюшбара 350гр</name>
+				<description>(прозрачный бульон с Азербайджанскими равиолями и мятой) Dyushbara</description>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="3">
+				<category_id>1</category_id>
+				<name>Суп шпинат с мясом 400гр</name>
+<description>Кюрза (Азербайджанские пельмени с куриным или бараньим фаршем в бульоне) Kjurza</description>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="6">
+				<category_id>1</category_id>
+				<name>Суп из перепелов 450гр</name>
+				<description>(перепелка, фаршированная куриным фаршем, с фрикадельками и овощами)</description>
+				<price>270</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="7">
+				<category_id>1</category_id>
+				<name>Суп куриный Chicken soup 450гр</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="8">
+				<category_id>1</category_id>
+				<name>Суп – лапша из курицы Chicken noodle soup 450гр</name>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="9">
+				<category_id>1</category_id>
+				<name>Борщ с мясом и сметаной Borsch with meat 450гр</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="10">
+				<category_id>1</category_id>
+				<name>Суп харчо Kharcho tomato soup 450гр</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="11">
+				<category_id>1</category_id>
+				<name>Суп овощной 450гр</name>
+<description>(цветная капуста, кукуруза, болгарский перец, помидоры, картофель, горошек, лук, морковь)</description>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="12">
+				<category_id>1</category_id>
+				<name>Суп грибной 450гр</name>
+				<description>(с шампиньонами)</description>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="13">
+				<category_id>1</category_id>
+				<name>Солянка сборная рыбная 450гр</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="14">
+				<category_id>1</category_id>
+				<name>Хаш 450гр</name>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="15">
+				<category_id>1</category_id>
+				<name>Солянка сборная мясная Mixed-meat solianka soup 450гр</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="16">
+				<category_id>1</category_id>
+				<name>Суп из чечевицы и лобио Soup of lentils and lobio 450гр</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="17">
+				<category_id>1</category_id>
+				<name>Кюфта-Бозбаш 450гр</name>
+<description>(прозрачный бульон с тефтелями из баранины с алычей) Kyufta-Bozbash</description>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="18">
+				<category_id>1</category_id>
+				<name>Суп пити 450гр</name>
+				<description>(баранина, жир курдючный, горох нут, помидоры, картофель, мята) Peety soup</description>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="19">
+				<category_id>1</category_id>
+				<name>Соютма из ягненка 450гр</name>
+<description>(голень ягненка в бульоне) Mutton soyutma</description>
+				<price>280</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="20">
+				<category_id>1</category_id>
+				<name>Соус по домашнему из гуся 450гр</name>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="21">
+				<category_id>1</category_id>
+				<name>Соус по домашнему из утки 450гр</name>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="22">
+				<category_id>4</category_id>
+				<name>Шашлык из телячьих ребрышек 170гр</name>
+				<price>360</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="23">
+				<category_id>4</category_id>
+				<name>Шашлык из телячьей мякоти 170 гр</name>
+				<price>380</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="24">
+				<category_id>4</category_id>
+				<name>Шашлык из телячьей корейки 170гр</name>
+				<price>380</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="25">
+				<category_id>4</category_id>
+				<name>Шашлык из телячьей вырезки &quot;Бастурма&quot; 170 гр</name>
+<description>(телячья вырезка с пряностями, жаренная на шампуре)</description>
+				<price>470</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="26">
+				<category_id>4</category_id>
+				<name>Шашлык из бараньей корейки 170гр</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="27">
+				<category_id>4</category_id>
+				<name>Шашлык из бараньей мякоти 170 гр</name>
+				<price>290</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="28">
+				<category_id>4</category_id>
+				<name>Шашлык из бараньих ребрышек 170гр</name>
+				<price>290</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="29">
+				<category_id>4</category_id>
+				<name>Шашлык из баранины &quot;Семечки&quot; 170 гр</name>
+				<price>290</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="30">
+				<category_id>4</category_id>
+				<name>Шашлык из телячьей грудинки 170гр</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="31">
+				<category_id>4</category_id>
+				<name>Шашлык из телячьей печени с курдюком 170 гр</name>
+				<price>270</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="32">
+				<category_id>4</category_id>
+				<name>Шашлык из говяжьего сердца 170гр</name>
+				<price>270</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="33">
+				<category_id>4</category_id>
+				<name>Шашлык из 2-3-х месячного молодого ягненка 700 гр</name>
+				<price>1400</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="34">
+				<category_id>4</category_id>
+				<name>Шашлык из бараньей кишки 140гр</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="35">
+				<category_id>4</category_id>
+				<name>Шашлык из бараньих почек 140 гр</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="36">
+				<category_id>4</category_id>
+				<name>Шашлык из бараньего курдюка 120гр</name>
+				<price>290</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="37">
+				<category_id>4</category_id>
+				<name>Шашлык из гусиной печени 100 гр</name>
+				<price>860</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="38">
+				<category_id>4</category_id>
+				<name>Шашлык &quot;Семь Красавиц&quot; 500гр</name>
+<description>( бар. корейка, марин. со спец-ми)</description>
+				<price>1100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="39">
+				<category_id>4</category_id>
+				<name>Шашлык &quot;Каспий&quot; 250 гр</name>
+<description>(жареные баклажаны, жареный бар. фарш)</description>
+				<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="40">
+				<category_id>4</category_id>
+				<name>Шашлык &quot;Азери&quot; 200гр</name>
+<description>(окорочка без костей)</description>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="41">
+				<category_id>4</category_id>
+				<name>Хан-Кебаб по-кавказски 170 гр</name>
+<description>(бараний ливер-печень в кишке, жаренные на шампуре)</description>
+				<price>290</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="42">
+				<category_id>4</category_id>
+				<name>Долма-Кебаб по-кавказски 170гр</name>
+<description>(бараний ливер-сердце, печень, почки- в кишке, на шампуре)</description>
+				<price>280</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="43">
+				<category_id>4</category_id>
+				<name>Шашлык из бараньего языка 150 гр</name>
+				<price>290</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="44">
+				<category_id>4</category_id>
+				<name>Шашлык по-карски 170гр</name>
+<description>(баранина, почки бараньи, сумах)</description>
+				<price>290</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="45">
+				<category_id>4</category_id>
+				<name>Шашлык из индейки 170 гр</name>
+<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="46">
+				<category_id>4</category_id>
+				<name>Шашлык из курицы 180гр</name>
+<price>280</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="47">
+				<category_id>4</category_id>
+				<name>Шашлык &quot;Мехрибан&quot; 250 гр</name>
+<description>(курица в белом соусе с ананасом)</description>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="48">
+				<category_id>4</category_id>
+				<name>Шашлык &quot;Рафаэлло&quot; 180гр</name>
+<description>(фарш из индейки с помидорами)</description>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="49">
+				<category_id>4</category_id>
+				<name>Шашлык из бараньей вырезки на кости 170 гр</name>
+<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="50">
+				<category_id>4</category_id>
+				<name>Шашлык &quot;Три толстяка&quot; 300 гр</name>
+<description>(свиная корейка со специями)</description>
+				<price>470</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="51">
+				<category_id>4</category_id>
+				<name>Шашлык &quot;Великолепная семерка&quot; 1100гр</name>
+<description>(курица, рыба, антрекот баранина, антрекот телятина, бараньи семечки, люля из картофеля)</description>
+				<price>2450</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="52">
+				<category_id>4</category_id>
+				<name>Шашлык ассорти из бараньих внутренностей 170 гр</name>
+<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="53">
+				<category_id>4</category_id>
+				<name>Шашлык &quot;Дадлы&quot; 170гр</name>
+<description>(баранья мякоть, маринованная со спец.)</description>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="54">
+				<category_id>4</category_id>
+				<name>Шашлык из свиной мякоти 170 гр</name>
+<price>290</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="55">
+				<category_id>4</category_id>
+				<name>Шашлык &quot;Миллион лет до нашей эры&quot; 2шт</name>
+<description>(баранья голень)</description>
+				<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="56">
+				<category_id>4</category_id>
+				<name>Стейк говяжий гриль 300 гр</name>
+<price>680</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="57">
+				<category_id>4</category_id>
+				<name>Шашлык из свиной корейки 170гр</name>
+<price>310</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="58">
+				<category_id>4</category_id>
+				<name>Шашлык &quot;Ширван&quot; 250 гр</name>
+<description>(ребрышки телятины, ребрышки баранины, мякоть телятины, курдюк, баклажаны)</description>
+				<price>310</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="59">
+				<category_id>4</category_id>
+				<name>Саж-Кебаб из бараньих внутренностей 1000гр</name>
+<price>1000</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="60">
+				<category_id>4</category_id>
+				<name>Саж-Кебаб из домашней курицы 1000 гр</name>
+<price>980</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="61">
+				<category_id>4</category_id>
+				<name>Саж-Кебаб из телятины 1000гр</name>
+<price>1100</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="62">
+				<category_id>4</category_id>
+				<name>Джуджа-Кебаб 1шт</name>
+<description>(шашлык из цыпленка)</description>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="63">
+				<category_id>4</category_id>
+				<name>Шашлык из куриных крылышек Chicken shashlik 180гр</name>
+<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="64">
+				<category_id>4</category_id>
+				<name>Шашлык из потрохов индейки 170 гр</name>
+<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="65">
+				<category_id>4</category_id>
+				<name>Шашлык из куриных потрохов 170гр</name>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="66">
+				<category_id>4</category_id>
+				<name>Шашлык из перепелов Quails roasted on the spit 2шт</name>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="67">
+				<category_id>4</category_id>
+				<name>Люля-Кебаб из индейки Turkey lulia-kebab 170гр</name>
+<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="68">
+				<category_id>4</category_id>
+				<name>Люля-Кебаб из баранины lulia-kebab mutton 170 гр</name>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="69">
+				<category_id>4</category_id>
+				<name>Шашлык из бараньих семенников 170гр</name>
+<price>270</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="70">
+				<category_id>4</category_id>
+				<name>Шашлык из говяжьего вымени 170 гр</name>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="71">
+				<category_id>4</category_id>
+				<name>Шашлык из вырезки по-турецки 170гр</name>
+<description>(вырезка телячья, специи) Sirloin of beef shashlik with spicery</description>
+				<price>360</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="72">
+				<category_id>4</category_id>
+				<name>Шашлык из индейки по-турецки 170гр</name>
+<description>(филе индейки, специи) Turkey shashlik with spicery</description>
+				<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="73">
+				<category_id>4</category_id>
+				<name>Шашлык из курицы по-турецки 170гр</name>
+<description>(филе куриное, специи) Chicken shashlik with spicery</description>
+				<price>280</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="74">
+				<category_id>4</category_id>
+				<name>Шашлык из свежих помидоров Tomato shashlik 1шт</name>
+<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="75">
+				<category_id>4</category_id>
+				<name>Шашлык из свежих баклажан с курдючным жиром Aubergine shashlik with fat of sheep`s tail 1шт</name>
+<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="76">
+				<category_id>4</category_id>
+				<name>Шашлык из грибов Mushroom shashlik 150гр</name>
+<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="77">
+				<category_id>4</category_id>
+				<name>Шашлык из сладкого перца Pepper shashlik 1шт</name>
+<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="78">
+				<category_id>4</category_id>
+				<name>Шашлык из горького перца Pepper shashlik 2шт</name>
+<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="79">
+				<category_id>4</category_id>
+				<name>Шашлык из репчатого лука Shashlik of onion 100гр</name>
+<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="80">
+				<category_id>4</category_id>
+				<name>Шашлык из картофеля Erly potatoes shashlik 150 гр</name>
+<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="81">
+				<category_id>4</category_id>
+				<name>Люля из грецкого ореха 150гр</name>
+<description>(орех грецкий, орех миндальный, курага, курдюк)</description>
+				<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="82">
+				<category_id>4</category_id>
+				<name>Люля-Кебаб из картофеля Potatoe lulia-kebab 150 гр</name>
+<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="83">
+				<category_id>4</category_id>
+				<name>Дуйма-Кебаб 180гр</name>
+<description>(Люля-Кебаб рубленный)</description>
+				<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="84">
+				<category_id>2</category_id>
+				<name>Цыпленок табака 1шт</name>
+<price>380</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="85">
+				<category_id>2</category_id>
+				<name>“Нежность Востока&quot; 250гр</name>
+<description>(куриное филе с жареными грибами и луком)</description>
+				<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="86">
+				<category_id>2</category_id>
+				<name>Перепела-табака Chicken tabaka 2шт</name>
+<description>(Люля-Кебаб рубленный)</description>
+				<price>280</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="87">
+				<category_id>2</category_id>
+				<name>Перепела, жареные 250гр</name>
+<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="88">
+				<category_id>2</category_id>
+				<name>Котлеты куриные жареные 150гр</name>
+<price>230</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="89">
+				<category_id>2</category_id>
+				<name>Котлеты куриные паровые 150гр</name>
+<price>230</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="90">
+				<category_id>2</category_id>
+				<name>Котлета по-Киевски 170гр</name>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+
+<product id="91">
+				<category_id>2</category_id>
+				<name>Курочка фаршированная 650гр</name>
+<description>(куриное филе, грибы, грецкие орехи, лук)</description>
+<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="92">
+				<category_id>2</category_id>
+				<name>&quot;Пьяная курица&quot; 300гр</name>
+<description>(ципленок, лук репчат., помидоры, вино б.-сух.)</description>
+<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="93">
+				<category_id>2</category_id>
+				<name>Куры по-домашнему 250гр</name>
+<description>(жареные куры, лук, перец болгарский, картофель, помидоры)</description>
+<price>360</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="94">
+				<category_id>2</category_id>
+				<name>Тахта-Ковурма из курицы 300гр</name>
+<description>(куриное филе, алыча, финики, курага, каштаны, лук)</description>
+<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="95">
+				<category_id>2</category_id>
+				<name>Тахта-Ковурма из телятины 300гр</name>
+<description>(телятина, алыча, финики, помидоры, зелень, курага)</description>
+<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="96">
+				<category_id>2</category_id>
+				<name>Тахта-Ковурма из баранины 300гр</name>
+<description>(баранина, алыча, лук, каштан, помидоры, зелень, финики, курага)</description>
+<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="97">
+				<category_id>2</category_id>
+				<name>Казан-Котлеты из телятины по- азербайджански 250гр</name>
+<description>(картофель, лук, алыча, помидоры, зелень)</description>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="98">
+				<category_id>2</category_id>
+				<name>Вырезка по-французски 280гр</name>
+<description>(отбивная говяжья вырезка, запеченая с грибами, сыром, помидорами и майонезом)</description>
+<price>430</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="99">
+				<category_id>2</category_id>
+				<name>Потроха куриные, жаренные по-домашнему 250гр</name>
+<description>(потроха куриные, лук, картофель, перец болгарский)</description>
+<price>270</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="100">
+				<category_id>2</category_id>
+				<name>Вырезка по-царски 250гр</name>
+<description>(говяжья вырезка, запеченая в духовке с грибами, голландским сыром, помидорами и майонезом)</description>
+<price>430</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="101">
+				<category_id>4</category_id>
+				<name>Лангет из говяжьей вырезки 150 гр</name>
+<price>420</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="102">
+				<category_id>4</category_id>
+				<name>Телятина по-строгоновски 200 гр</name>
+<price>420</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="103">
+				<category_id>2</category_id>
+				<name>Телятина по-домашнему 250гр</name>
+<description>(жареная телятина, лук, картофель, помидоры, перец болгарский)</description>
+<price>380</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="104">
+				<category_id>4</category_id>
+				<name>Котлеты из телятины жареные 150 гр</name>
+<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="105">
+				<category_id>4</category_id>
+				<name>Котлеты из телятины паровые 150гр</name>
+<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="106">
+				<category_id>2</category_id>
+				<name>&quot;Царская трапеза&quot; 400гр</name>
+<description>(говяжья вырезка, грибы, сыр, помидоры)</description>
+<price>470</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="107">
+				<category_id>4</category_id>
+				<name>Эскалоп из свинины 180гр</name>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="108">
+				<category_id>2</category_id>
+				<name>Аджаб Сандал 300гр</name>
+<description>(телятина, помидоры, баклажаны, перец болгарский, картофель, зелень)</description>
+<price>420</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="109">
+				<category_id>2</category_id>
+				<name>Саж-Усту 150-100гр</name>
+<description>(куриное филе тушеное с картофелем и овощами)</description>
+<price>330</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="110">
+				<category_id>2</category_id>
+				<name>&quot;Белая Ночь&quot; 250гр</name>
+<description>(говядина, куриное филе, грибы, картофель, помидоры, зелень, майонез, сыр &quot;Голландский&quot;)</description>
+<price>470</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="111">
+				<category_id>2</category_id>
+				<name>&quot;Южная ночь&quot; 200гр</name>
+<description>(говядина, чернослив, грецкий орех, сметана, сыр)</description>
+<price>470</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="112">
+				<category_id>4</category_id>
+				<name>Кюрза жареная 12шт</name>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="113">
+				<category_id>4</category_id>
+				<name>Манты 5шт</name>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="114">
+				<category_id>4</category_id>
+				<name>Хинкали по-грузински 5шт</name>
+<price>280</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="115">
+				<category_id>4</category_id>
+				<name>Хинкали по-азербайджански (с жареным фаршем) 150-50гр</name>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="116">
+				<category_id>4</category_id>
+				<name>Плов Сабза (по азербайджански) 200-150гр</name>
+<price>360</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="117">
+				<category_id>4</category_id>
+				<name>Плов по-узбекски 300гр</name>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="118">
+				<category_id>4</category_id>
+				<name>Плов туршу-коурма (по азербайджански) 200-150гр</name>
+<price>360</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="119">
+				<category_id>4</category_id>
+				<name>Тава-Кебаб 200гр</name>
+<description>(бараньи биточки, запеченные с яйцом, помидорами и зеленью)</description>
+<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="120">
+				<category_id>4</category_id>
+				<name>Сабза коурма из ягненка летняя 250гр</name>
+<price>360</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="121">
+				<category_id>4</category_id>
+				<name>Цыпленок отварной 1шт</name>
+<price>380</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="122">
+				<category_id>2</category_id>
+				<name>Потроха индейки жаренные по-домашнему 250гр</name>
+<description>(потроха, лук, перец болгарский, помидоры, картофель)</description>
+<price>230</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="123">
+				<category_id>2</category_id>
+				<name>Хашлама из ягненка 450гр</name>
+<description>(тушеный ягненок с овощами и зеленью)</description>
+<price>320</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="124">
+				<category_id>2</category_id>
+				<name>Джыз-Быз 300гр</name>
+<description>(жареная печень, почки, сердце, кишки, курдюк с картофелем и луком)</description>
+<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="125">
+				<category_id>2</category_id>
+				<name>Долма с виноградными листьями 250гр</name>
+<description>(фарш из баранины в свежих виноградных листьях, мята)</description>
+<price>310</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="126">
+				<category_id>2</category_id>
+				<name>Долма овощная летняя 250гр</name>
+<description>(перец, баклажаны, помидоры фаршированные мясом)</description>
+<price>310</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="127">
+				<category_id>2</category_id>
+				<name>Жареные грибы с картофелем и луком 170гр</name>
+<price>200</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="128">
+				<category_id>2</category_id>
+				<name>Голубцы по-домашнему 300гр</name>
+<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="129">
+				<category_id>3</category_id>
+				<name>Осетрина жареная
+Friged sturgeon 180гр</name>
+<price>700</price>
+<byWeight>false</byWeight>
+			</product>
+<product id="130">
+				<category_id>3</category_id>
+				<name>Осетрина отварная 180гр</name>
+<price>690</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="131">
+				<category_id>3</category_id>
+				<name>Осетрина по-монастырски 300гр</name>
+<price>630</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="132">
+				<category_id>2</category_id>
+				<name>Семга по-монастырски 300гр</name>
+<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="133">
+				<category_id>3</category_id>
+				<name>Семга жареная Fried salmon 180гр</name>
+<price>450</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="134">
+				<category_id>3</category_id>
+				<name>Семга отварная Fried salmon 180гр</name>
+<price>440</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="135">
+				<category_id>3</category_id>
+				<name>Семга &quot;Леди ин ред&quot; 300гр</name>
+<description>(парная семга, картофельное пюре, соус, икра красная)</description>
+<price>550</price>
+<byWeight>false</byWeight>
+			</product>
+<product id="136">
+				<category_id>3</category_id>
+				<name>Форель жареная (целиком) Fried trout 180гр</name>
+<price>420</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="137">
+				<category_id>3</category_id>
+				<name>Форель отварная Fried trout 180гр</name>
+<price>400</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="138">
+				<category_id>3</category_id>
+				<name>Карп жареный Fried carp 200гр</name>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="139">
+				<category_id>3</category_id>
+				<name>Карп отварной Fried carp 200гр</name>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="140">
+				<category_id>3</category_id>
+				<name>Судак жареный Fried pice-perch 180гр</name>
+<price>230</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="141">
+				<category_id>3</category_id>
+				<name>Судак отварной Fried Pike-perch 180гр</name>
+<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="142">
+				<category_id>3</category_id>
+				<name>Рыба Дорадо жареная (целиком) 1шт</name>
+<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="143">
+				<category_id>3</category_id>
+				<name>Рыба Си-Бас жареная (целиком) 1шт</name>
+<price>430</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="144">
+				<category_id>3</category_id>
+				<name>Рыба Си-Бас отварная 1шт</name>
+<price>420</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="145">
+				<category_id>3</category_id>
+				<name>Палтус жареный 180гр</name>
+<price>270</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="146">
+				<category_id>3</category_id>
+				<name>Кутум жареный 180гр</name>
+<price>270</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="147">
+				<category_id>2</category_id>
+				<name>Корюшка жареная 180гр</name>
+<price>400</price>
+	                        <byWeight>false</byWeight>
+			</product>
+<product id="148">
+				<category_id>3</category_id>
+				<name>Буглама из осетрины по-кавказки 200гр</name>
+<description>(тушеная осетрина с овощами и зеленью) Sturgeon buglama Kavkaz style</description>
+<price>650</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="149">
+				<category_id>3</category_id>
+				<name>Тахта-Ковурма из осетрины 250гр</name>
+<description>(осетрина, лук, алыча, зелень, каштан, финики, курага)</description>
+<price>700</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="150">
+				<category_id>3</category_id>
+				<name>Сабза-Ковурма из осетрины 250гр</name>
+<description>(тушеная осетрина, лук, зелень, специи)</description>
+<price>700</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="151">
+		                <category_id>3</category_id>
+				<name>Искушение востока 200гр</name>
+<description>(рыбный фарш с грибами и креветками)</description>
+<price>380</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="152">
+		                <category_id>3</category_id>
+				<name>&quot;Жемчужина Азербайджана&quot; 300гр</name>
+<description>(запеченные на сковороде   осетрина, грибы, картофель, сыр &quot;Эдам&quot; помидоры, зелень)</description>
+<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="153">
+				<category_id>5</category_id>
+				<name>Люля-кебаб из осетрины Sturgeon lulia-kebab 170гр</name>
+<price>650</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="154">
+				<category_id>5</category_id>
+				<name>Шашлык из осетрины Sturgeon Shashlik 170гр</name>
+<price>700</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="155">
+				<category_id>5</category_id>
+				<name>Шашлык из семги Salmon Shashlik 170гр</name>
+<price>440</price>
+				<byWeight>false</byWeight>
+			</product>
+
+<product id="156">
+				<category_id>5</category_id>
+				<name>Саж-Кебаб из осетрины 800гр</name>
+<price>1500</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="157">
+				<category_id>5</category_id>
+				<name>Шашлык из палтуса 170гр</name>
+<description>(говядина, чернослив, грецкий орех, сметана, сыр)</description>
+<price>260</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="158">
+				<category_id>5</category_id>
+				<name>Шашлык &quot;Огни Баку&quot; 180гр</name>
+<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="159">
+				<category_id>5</category_id>
+				<name>Си-Бас на вертеле 1шт</name>
+<price>430</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="160">
+				<category_id>5</category_id>
+				<name>Дорадо на вертеле 1шт</name>
+<price>520</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="161">
+				<category_id>5</category_id>
+				<name>Кутум на вертеле 170гр</name>
+<description>(говядина, чернослив, грецкий орех, сметана, сыр)</description>
+<price>280</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="162">
+				<category_id>5</category_id>
+				<name>Золотая форель на вертеле (целиком) Trout roasted on the spit 200гр</name>
+<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="163">
+				<category_id>5</category_id>
+				<name>Карп жареный на вертеле Carp roasted on the spit 170гр</name>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+
+<product id="164">
+				<category_id>6</category_id>
+				<name>Картофель жареный Roasted potatoes 200гр</name>
+<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="165">
+				<category_id>6</category_id>
+				<name>Картофель пюре Mashed potatoes 200гр</name>
+<price>100</price>
+			   <byWeight>false</byWeight>
+			</product>
+<product id="166">
+				<category_id>6</category_id>
+				<name>Картофель отварной Boiled potatoes 200гр</name>
+<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="167">
+				<category_id>6</category_id>
+				<name>Картофель фри Potatoe roasted in deep-frying 150гр</name>
+<price>100</price>
+			   <byWeight>false</byWeight>
+			</product>
+<product id="168">
+				<category_id>6</category_id>
+				<name>Картофель запеченный 150гр</name>
+<description>(картофель, чеснок, сливочное масло, укроп)</description>
+<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="169">
+				<category_id>6</category_id>
+				<name>Гречка отварная Boiled buckwheat 150гр</name>
+<price>100</price>
+			   <byWeight>false</byWeight>
+			</product>
+<product id="170">
+				<category_id>6</category_id>
+				<name>Рис отварной Boiled rice 150гр</name>
+<price>100</price>
+			   <byWeight>false</byWeight>
+			</product>
+<product id="171">
+				<category_id>6</category_id>
+				<name>Цветная капуста жареная во фритюре Cauliflower roasted in deep-frying 150гр</name>
+<price>100</price>
+			   <byWeight>false</byWeight>
+			</product>
+<product id="172">
+				<category_id>6</category_id>
+				<name>Жареные овощи по-бакински 250гр</name>
+<price>250</price>
+			   <byWeight>false</byWeight>
+			</product>
+<product id="173">
+				<category_id>7</category_id>
+				<name>Блинчики 70гр</name>
+<price>60</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="174">
+				<category_id>7</category_id>
+				<name>Блинчики с красной икрой Pancakes with salmon caviar 70-20гр</name>
+<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="175">
+				<category_id>7</category_id>
+				<name>Блинчики с семгой и сыром &quot;Моцарелла&quot; 70-50гр</name>
+<price>270</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="176">
+				<category_id>7</category_id>
+				<name>Блинчики с медом 70-20гр</name>
+<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="177">
+				<category_id>7</category_id>
+				<name>Блинчики с мясом Pancakes with beef filling 100гр</name>
+<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="178">
+				<category_id>7</category_id>
+				<name>Блинчики с творогом Pancakes with curd filling 100гр</name>
+<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="179">
+				<category_id>7</category_id>
+				<name>Кутаб с мясом Kutab with meat 40гр</name>
+<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="180">
+				<category_id>7</category_id>
+				<name>Кутаб с зеленью Kutab with greenery 40гр</name>
+<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="181">
+				<category_id>7</category_id>
+				<name>Кутаб с сыром Kutab with cheese 40гр</name>
+<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="182">
+				<category_id>7</category_id>
+				<name>Кутаб с тыквой Kutab with pumpkin 40гр</name>
+<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="183">
+				<category_id>7</category_id>
+				<name>Кутаб с картофелем Kutab with potatoes 40гр</name>
+<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="184">
+				<category_id>7</category_id>
+				<name>Кутаб &quot;Бакинский Дворик&quot; (с бараньими внутренностями) Kutab “Bakinski Dvorik”40гр</name>
+<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="185">
+				<category_id>7</category_id>
+				<name>Кюкю из зелени 150гр</name>
+<description>(лук зеленый, кинза, укроп, шпинат, запеченые с яйцом на сковороде)</description>
+<price>170</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="186">
+				<category_id>7</category_id>
+				<name>Жульен грибной 100гр</name>
+<description>(грибочки запеченные в сливочно-сметанном соусе)</description>
+<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="187">
+				<category_id>7</category_id>
+				<name>Баклажан &quot;Апшерон&quot; 1шт</name>
+<description>(баклажан, грецкий орех, перец болг., лук репчатый, чеснок майонез, сыр)</description>
+<price>190</price>
+				<byWeight>false</byWeight>
+			</product>
+
+<product id="188">
+				<category_id>7</category_id>
+				<name>Яичница 120гр</name>
+<price>130</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="189">
+				<category_id>7</category_id>
+				<name>Яичница с помидорами 150гр</name>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="190">
+				<category_id>7</category_id>
+				<name>Баклажаны жареные с яйцом 150гр</name>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="188">
+				<category_id>7</category_id>
+				<name>Яичница 120гр</name>
+<price>130</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="189">
+				<category_id>7</category_id>
+				<name>Яичница с помидорами 150гр</name>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="190">
+				<category_id>7</category_id>
+				<name>Баклажаны жареные с яйцом 150гр</name>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="191">
+				<category_id>7</category_id>
+				<name>Фасоль свежая, жареная с овощами и яйцом 150гр</name>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="192">
+				<category_id>7</category_id>
+				<name>Хачапури 500гр</name>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="193">
+				<category_id>7</category_id>
+				<name>Хачапури по-аджарски 500гр</name>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="194">
+				<category_id>7</category_id>
+				<name>Пирожок по-домашнему с мясом 1шт</name>
+<price>90</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="195">
+				<category_id>7</category_id>
+				<name>Пирожок по-домашнему с грибами</name>
+<price>90</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="196">
+				<category_id>7</category_id>
+				<name>Пирожок по-домашнему с картофелем</name>
+<price>90</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="197">
+				<category_id>7</category_id>
+				<name>Самса</name>
+<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="198">
+				<category_id>17</category_id>
+				<name>Икра красная лососевая с маслом Salmon red caviar with butter 30-20гр</name>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="199">
+				<category_id>17</category_id>
+				<name>Балык холодного копчения 100гр</name>
+<price>350</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="200">
+				<category_id>17</category_id>
+				<name>Семга слабосоленая
+Lightly-brined salmon 100гр</name>
+<price>340</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="201">
+				<category_id>17</category_id>
+				<name>Осетрина горячего копчения
+Hot-smoked sturgeon 100гр</name>
+<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="202">
+				<category_id>17</category_id>
+				<name>Ассорти рыбное 100-100-100гр</name>
+<description>(осетрина г-к, семга слабосоленая, балык х-к) Assorted cold fish </description>
+<price>1140</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="203">
+				<category_id>17</category_id>
+				<name>Филе сельди с картофелем отварным Herring fillet with boiled potatoes 100-50гр</name>
+<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="204">
+				<category_id>17</category_id>
+				<name>Сельдь под шубой 200гр</name>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="205">
+				<category_id>17</category_id>
+				<name>Сациви из осетрины 250гр</name>
+<description>(осетрина отварная в соусе из грецких орехов)</description>
+<price>460</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="206">
+				<category_id>17</category_id>
+				<name>Салат &quot;Лазурный берег&quot; 180гр</name>
+<description>(стеблевой сельдерей, зеленое яблоко, грецкие о0ехи, тунец, майонез)</description>
+<price>190</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="207">
+				<category_id>17</category_id>
+				<name>Салат &quot;Кальмаровый&quot; 180гр</name>
+<description>(кальмары, яблоко, огурец, яйцо, лук зел., майонез)</description>
+<price>210</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="208">
+				<category_id>17</category_id>
+				<name>Салат &quot;Гюзель&quot; 180гр</name>
+<description>(Авокадо, семга, огурец свежий, сметана, икра красная)</description>
+<price>310</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="209">
+				<category_id>17</category_id>
+				<name>Салат &quot;Нептун&quot; 200гр</name>
+<description>(болгарский перец, огурец, помидор, маслины, креветки, базиликовый соус)</description>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="210">
+				<category_id>17</category_id>
+				<name>Коктейль &quot;Раковые шейки&quot; 200гр</name>
+<description>(икра красн., раковые шейки, яблоки,перец сл.,лимон,зелень,салат Айсберг)</description>
+<price>310</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="211">
+				<category_id>17</category_id>
+				<name>Салат &quot;Мимоза&quot; 180гр</name>
+<description>(лосось, яйцо, лук, сыр, масло сливочное)</description>
+<price>210</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="212">
+				<category_id>17</category_id>
+				<name>Салат &quot;Цезарь&quot; с беби-креветками 200гр</name>
+<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="213">
+				<category_id>17</category_id>
+				<name>Салат &quot;Цезарь&quot; с лососем 200гр</name>
+<price>270</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="214">
+				<category_id>17</category_id>
+				<name>Коктейль &quot;Русалочка&quot; из морепродуктов 200гр</name>
+<description>(морепродукты, салат руккола, олив.масло, помидоры черри, маслины)</description>
+<price>270</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="215">
+				<category_id>19</category_id>
+				<name>Ассорти мясное 100-100-100гр</name>
+<description>(куриный рулет, язык говяжий отварной, ростбиф) Assorted cold meats</description>
+<price>760</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="216">
+				<category_id>19</category_id>
+				<name>Ассорти из колбас 100-100-100гр</name>
+<description>(сервелат, краковская колбаса, охотничья)
+
+Assorted cold meats</description>
+<price>350</price>
+
+				<byWeight>false</byWeight>
+			</product>
+<product id="217">
+				<category_id>19</category_id>
+				<name>Язык бараний отварной Boiled mutton tongue 150гр</name>
+<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="218">
+				<category_id>19</category_id>
+				<name>Язык телячий отварной
+Boiled ox-tongue 100гр</name>
+<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="219">
+				<category_id>19</category_id>
+				<name>Мясное Ассорти &quot;Фантазия&quot; 850гр</name>
+<description>(Ассорти мясное, Ассорти из колбас, язык бараний отварной, бастурма говяжья)</description>
+<price>1600</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="220">
+				<category_id>19</category_id>
+				<name>Ростбиф 100гр</name>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="221">
+				<category_id>19</category_id>
+				<name>Буженина запеченная по-домашнему (свинина) 100гр</name>
+<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="222">
+				<category_id>19</category_id>
+				<name>Холодец 150гр</name>
+<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="223">
+				<category_id>19</category_id>
+				<name>Паштет из говяжьей печени 100гр</name>
+<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="224">
+				<category_id>19</category_id>
+				<name>Бастурма говяжья
+Basturma 100гр</name>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="225">
+				<category_id>19</category_id>
+				<name>Салат &quot;Вкусный&quot; 200гр</name>
+<description>(мясо говядины, грибы, лук, перец болгарский, майонез, сыр)</description>
+<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="226">
+				<category_id>19</category_id>
+				<name>Салат языковый 200гр</name>
+<description>(язык отварной, чеснок, укроп, соленый огурец, орехи, сыр, майонез или сметана)</description>
+<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="227">
+				<category_id>19</category_id>
+				<name>Салат &quot;Фантазия&quot; 180гр</name>
+<description>(говядина, перец сл., помидоры, огурец, базиликовый соус)</description>
+<price>230</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="228">
+				<category_id>19</category_id>
+				<name>Салат &quot;Лейла&quot; 200гр</name>
+<description>(телятина отв., язык телячий, куриное филе, дайкон, кинза, огурец св., майонез)</description>
+<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="229">
+				<category_id>19</category_id>
+				<name>Салат &quot;Вечерний&quot; 200гр</name>
+<description>(телятина отв., яблоко, марин. Грибы, сыр, майонез, зел. лук)</description>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="230">
+				<category_id>18</category_id>
+				<name>Куриный рулет 100гр</name>
+<description>(язык отварной, чеснок, укроп, соленый огурец, орехи, сыр, майонез или сметана)</description>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="231">
+				<category_id>18</category_id>
+				<name>Сациви 250гр</name>
+<description>( куриное филе в соусе из грецких орехов)
+Sacivi</description>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="232">
+				<category_id>18</category_id>
+				<name>Салат &quot;Столичный&quot; 200гр</name>
+<description>(отварное куриное филе, картофель, яйца, маринованные огурцы, зеленый горошек, морковь, майонез)</description>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="233">
+				<category_id>18</category_id>
+				<name>Салат &quot;Английский&quot; 180гр</name>
+<description>(отварное куриное филе, грибы, соленые огурцы, яйца)</description>
+<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="234">
+				<category_id>18</category_id>
+				<name>Салат &quot;Цезарь&quot; 200гр</name>
+<description>(курица копченая, салат &quot;Айсберг&quot;, гренки, чесночный соус, сыр Пармезан)</description>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="235">
+				<category_id>18</category_id>
+				<name>Салат &quot;Наргиз&quot; 200гр</name>
+<description>(ветчина из говядины, куриное филе, грибы, картофель, зелень, помидоры, сметана)</description>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="236">
+				<category_id>18</category_id>
+				<name>Салат &quot;Нежность&quot; 180гр</name>
+<description>(Куриное филе, морковь, картофель, чернослив, грецкие орехи, майонез)</description>
+<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="237">
+				<category_id>18</category_id>
+				<name>Салат &quot;Изысканный&quot; 180гр</name>
+<description>(куриное филе, сельдерей, кедровые орешки, изюм, майонез)</description>
+<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="238">
+				<category_id>18</category_id>
+				<name>Салат &quot;Чикен-блюз&quot; 180гр</name>
+<description>(куриное филе, свеж. помидоры и огурцы, зеленый салат, сыр &quot;Голландский&quot;, майонез)</description>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="239">
+				<category_id>18</category_id>
+				<name>Салат &quot;Гнездо глухаря&quot; 200гр</name>
+<description>(куриное филе, свеж. помидоры и огурцы, зеленый салат, сыр &quot;Голландский&quot;, майонез)</description>
+<price>230</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="240">
+				<category_id>20</category_id>
+				<name>Зелень свежая 100гр</name>
+<description>(кинза, лук зеленый, базилик, редис, укроп) Fresh greenery salad</description>
+<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="241">
+				<category_id>20</category_id>
+				<name>Свежие огурцы (Бакинские)150гр</name>
+<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="242">
+				<category_id>20</category_id>
+				<name>Свежие помидоры и огурцы (Бакинские) 300гр</name>
+<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="243">
+				<category_id>20</category_id>
+				<name>Свежие помидоры (Бакинские) 150гр</name>
+<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="244">
+				<category_id>20</category_id>
+				<name>Помидоры с сыром &quot;Моцарелла&quot; и соусом &quot;Песто&quot; 200гр</name>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="245">
+				<category_id>20</category_id>
+				<name>Помидоры фаршированные сыром 180гр</name>
+<description>(помидоры, сыр, чеснок, зелень, майонез)</description>
+<price>225</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="246">
+				<category_id>20</category_id>
+				<name>Баклажаны жаренные с овощами 200гр</name>
+<price>220</price>
+				<byWeight>false</byWeight> 
+			</product>
+<product id="247">
+				<category_id>20</category_id>
+				<name>Баклажаны с ореховой начинкой 180гр</name>
+<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="248">
+				<category_id>20</category_id>
+				<name>Джанджури (слива с ореховой начинкой) 120гр</name>
+<price>155</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="249">
+				<category_id>20</category_id>
+				<name>Лобио по-грузински 180гр</name>
+<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="250">
+				<category_id>20</category_id>
+				<name>Малосольные огурцы Solted cucumber 150гр</name>
+<price>210</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="251">
+				<category_id>20</category_id>
+				<name>Маринованные Бакинские огурчики с помидорчиками Solted cucumber and tomatoes 200гр</name>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="252">
+				<category_id>20</category_id>
+				<name>Салат из маринадов 250гр</name>
+<description>(марин.перец, чеснок, огурцы, капуста)</description>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="253">
+				<category_id>20</category_id>
+				<name>Маринованные фрукты 250гр</name>
+<description>(айва, виноград, терн, кизил, алыча или слива)</description>
+<price>210</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="254">
+				<category_id>20</category_id>
+				<name>Икра баклажанная 200гр</name>
+<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="255">
+				<category_id>20</category_id>
+				<name>Свежий острый перец 1шт</name>
+<price>65</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="256">
+				<category_id>20</category_id>
+				<name>Грибы маринованные (шампиньоны) 180гр</name>
+<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="257">
+				<category_id>20</category_id>
+				<name>Салат &quot;Ширван&quot; 250гр</name>
+<description>(св.огурцы, помидоры, шампиньоны, яблоко, Бакинский лук, микс салат, лимонная заправка)</description>
+<price>280</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="258">
+				<category_id>20</category_id>
+				<name>Салат по-шопски 180гр</name>
+<description>(св.помидоры и огурцы, огурцы сол., лечо, лук реп, брынза, петрушка, масло раст.)</description>
+<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="259">
+				<category_id>20</category_id>
+				<name>Салат из свежих овощей 250гр</name>
+<description>(огурцы, помидоры, лук) Raw-vegetable salad</description>
+<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="260">
+				<category_id>20</category_id>
+				<name>Салат &quot;Греческий&quot; 250гр</name>
+<description>(огурцы, помидоры, перец сладкий, сыр брынза, маслины, масло оливковое) Salad Greek style</description>
+<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="261">
+				<category_id>20</category_id>
+				<name>Салат &quot;Свекольный&quot; 180гр</name>
+<description>(свекла, грецкие орехи, чеснок, майонез)</description>
+<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="262">
+				<category_id>20</category_id>
+				<name>Салат Винегрет 180гр</name>
+<description>(свекла, картофель, морковь, огурцы маринованные, квашенная капуста, фасоль, растительное масло)</description>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="263">
+				<category_id>20</category_id>
+				<name>Салат грибной 180гр</name>
+<description>(грибы белые,картофель,капуста ваш., лук репчат., масло растит.) </description>
+<price>230</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="264">
+				<category_id>20</category_id>
+				<name>Салат &quot;Навруз&quot; 180гр</name>
+<description>(дайкон, морковь, св. огурцы, зелен. Лук, яйцо, сметана)</description>
+<price>190</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="265">
+				<category_id>20</category_id>
+				<name>Салат из зеленой редьки с растительным маслом и уксусом 180гр</name>
+<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="266">
+				<category_id>20</category_id>
+				<name>Чобан-салат 250гр</name>
+<description>(овощной салат по азербайджански, бакинские помидоры и огурцы, красный лук, редис, кинза, базилик)</description>
+<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="267">
+				<category_id>20</category_id>
+				<name>Маслины и оливки 150гр</name>
+<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="268">
+				<category_id>20</category_id>
+				<name>Лимон  Lemon 60гр</name>
+<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="269">
+				<category_id>20</category_id>
+				<name>Салат &quot;Дачный&quot; 200гр</name>
+<description>(огурец, редис, зел. лук, яйцо, сметана)</description>
+<price>190</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="270">
+				<category_id>20</category_id>
+				<name>Салат &quot;Цезарь Вегитарианский&quot; 200гр</name>
+<description>(микс-салат, помидоры черри, огурец, цв.капуста, сухарики, сыр Пармезан, оливковое масло или соус &quot;Цезарь&quot;)</description>
+<price>210</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="271">
+				<category_id>20</category_id>
+				<name>Салат &quot;Изюминка&quot; 180гр</name>
+<description>(свекла, изюм, яблоко, кедровые орешки, масло растит. Или сметана)</description>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="272">
+				<category_id>20</category_id>
+				<name>Салат &quot;Витаминный&quot; 200гр</name>
+<description>(салат Айсберг, груша, морковь, клюква, оливковое масло, апельсин)</description>
+<price>190</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="273">
+				<category_id>9</category_id>
+				<name>Ассорти сырное 200гр</name>
+<description>(Сулугуни, брынза, косичка, копченый сыр)</description>
+<price>280</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="274">
+				<category_id>9</category_id>
+				<name>Сыр овечий по-кавказски &quot;Мотал&quot; Sheep’s cheese “Motal 130гр</name>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="275">
+				<category_id>9</category_id>
+				<name>Сыр брынза (Brinza cheese) 150гр</name>
+<description>(огурцы, помидоры, перец сладкий, сыр брынза, маслины, масло оливковое) Salad Greek style</description>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="276">
+				<category_id>9</category_id>
+				<name>Сыр Сулугуни 150гр</name>
+<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="277">
+				<category_id>9</category_id>
+				<name>Сыр &quot;Шор по-кавказски с укропом&quot; (сыр овечий) Sheep’s cheese 150гр</name>
+<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="278">
+				<category_id>9</category_id>
+				<name>Сметана ( Sour-cream) 200гр</name>
+<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="279">
+				<category_id>9</category_id>
+				<name>Масло сливочное ( Butter) 100гр</name>
+<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="280">
+				<category_id>9</category_id>
+				<name>Довга (суп на кефире с зеленью) Dovga ( soup made of sour milk with greenery) 200-1000гр</name>
+<price>105-525</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="281">
+				<category_id>9</category_id>
+				<name>Овдух (окрошка на кефире) Ovduh (okroshka) 200-1000гр</name>
+<price>100-500</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="282">
+				<category_id>9</category_id>
+				<name>Айран 200-1000гр</name>
+<price>90-450</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="283">
+				<category_id>9</category_id>
+				<name>Молоко 200гр</name>
+<price>50</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="284">
+				<category_id>9</category_id>
+				<name>Мацони по-домашнему 200гр</name>
+<price>90</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="285">
+	<category_id>10</category_id>
+	<name>Ягненок целиком в тендыре с начинкой</name>
+	<price>5000</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="286">
+	<category_id>10</category_id>
+	<name>Поросенок - табака</name>
+	<price>3100</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="287">
+	<category_id>10</category_id>
+	<name>Поросенок с начинкой</name>
+	<price>3500</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="288">
+	<category_id>10</category_id>
+	<name>Индейка в тендыре с начинкой</name>
+	<price>3000</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="289">
+	<category_id>10</category_id>
+	<name>Гусь в тендыре с начинкой</name>
+	<price>3300</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="290">
+	<category_id>10</category_id>
+	<name>Утка в тендыре с начинкой</name>
+	<price>3200</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="291">
+	<category_id>10</category_id>
+	<name>Ярпаги по-ширвански с айвой и тыквой</name>
+	<price>300</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="292">
+	<category_id>10</category_id>
+	<name>Хоя гушт с каштанами</name>
+	<price>300</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="293">
+	<category_id>10</category_id>
+	<name>Гайло (шпинат, телятина)</name>
+	<price>300</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="294">
+	<category_id>10</category_id>
+	<name>Шах плов с мясом</name>
+	<price>1600</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="295">
+	<category_id>10</category_id>
+	<name>Шах плов с курицей</name>
+	<price>1600</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="296">
+	<category_id>10</category_id>
+	<name>Шах плов с куропаткой</name>
+	<price>2100</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="297">
+	<category_id>10</category_id>
+	<name>Шах плов с фазаном</name>
+	<price>2100</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="298">
+	<category_id>10</category_id>
+	<name>Шах плов с перепелами</name>
+	<price>1600</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="299">
+	<category_id>10</category_id>
+	<name>Шашлык из фазана </name>
+	<price>650</price>
+	<byWeight>false</byWeight>
+</product>			
+<product id="300">
+				<category_id>21</category_id>
+				<name>Фазан табака 1шт</name>
+<price>1600</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="301">
+				<category_id>21</category_id>
+				<name>Куропатка жареная с картофелем, помидорами и баклажаном 200-150гр</name>
+<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="302">
+				<category_id>21</category_id>
+				<name>Куропатка табака 1шт</name>
+<price>800</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="303">
+				<category_id>21</category_id>
+				<name>Фазан жареный по-домашнему (фазан, картофель, лук) 250гр</name>
+<price>650</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="304">
+				<category_id>21</category_id>
+				<name>Кабан жареный с картофелем и луком 250гр</name>
+<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="305">
+				<category_id>21</category_id>
+				<name>Оленина, жаренная с картофелем и луком 250гр</name>
+<price>550</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="306">
+				<category_id>21</category_id>
+				<name>Косуля, жаренная с картофелем и луком 250гр</name>
+<price>800</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="307">
+				<category_id>21</category_id>
+				<name>Котлеты, жаренные из лося 170гр</name>
+<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="308">
+				<category_id>21</category_id>
+				<name>Шашлык из фазана 170гр</name>
+<price>650</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="309">
+				<category_id>21</category_id>
+				<name>Шашлык из куропатки 1шт</name>
+<price>800</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="310">
+				<category_id>21</category_id>
+				<name>Шашлык из кабана 170гр</name>
+<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="311">
+				<category_id>21</category_id>
+				<name>Шашлык из оленины 170гр</name>
+<price>550</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="312">
+				<category_id>21</category_id>
+				<name>Шашлык из косули 170гр</name>
+<price>750</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="313">
+				<category_id>21</category_id>
+				<name>Шашлык из лося 200гр</name>
+<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+<product id="314">
+				<category_id>21</category_id>
+				<name>Люля-Кебаб из кабана 200гр</name>
+<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="315">
+				<category_id>11</category_id>
+				<name>Салат Хазар 200гр</name>
+				<description>(картофель, огурец, зеленый горошек, сметана, яйцо, зелень, семга, осетрина отварная, икра кетовая)</description>
+				<price>380</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="316">
+				<category_id>11</category_id>
+				<name>Салат Бакинский Дворик 180гр</name>
+				<description>(куриное филе, чеснок, гранат, зелень, лук, сметана, орехи)</description>
+				<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="317">
+				<category_id>22</category_id>
+				<name>Суп &quot;Бакинский Дворик&quot; по рецепту шеф-повара 450гр</name>
+				<description>(осетрина, грибы, картофель, оливки, семга, судак)</description>
+				<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="318">
+				<category_id>23</category_id>
+				<name>Буглама по-Кубински 500гр </name>
+				<description>(баранина, албухара, лук репчатый, горох нут)</description>
+				<price>290</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="319">
+				<category_id>23</category_id>
+				<name>Жаркое Бакинский Дворик 200гр </name>
+				<description>(вырезка телячья, курдюк, лук, помидоры, перец болгарский)</description>
+				<price>340</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="320">
+				<category_id>24</category_id>
+				<name>Тара по-Кубински по рецепту шеф-повара 150гр</name>
+				<description>(напиток из зелени - шпинат, кинза, щавель, чеснок, алыча, сельдерей)</description>
+				<price>210</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="321">
+				<category_id>24</category_id>
+				<name>Шпинат с чесноком 150гр</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="322">
+				<category_id>24</category_id>
+				<name>Коурма по-Бакински из зелени 150гр</name>
+				<description>(зелень тушеная с алычей)</description>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="323">
+				<category_id>25</category_id>
+				<name>Бакинский Бульвар из осетрины Sturgeon Bakinski bulvar 300гр</name>
+				<description>(Осетрина жаренная в льезоне: яично-молочной смеси)</description>
+				<price>550</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="324">
+				<category_id>25</category_id>
+				<name>Семга с грибами Бакинский Дворик по рецепту шеф-повара 180гр Salmon with mushrooms</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="325">
+				<category_id>25</category_id>
+				<name>Стерлядь Лявенги Sterlet lyavengy 100гр</name>
+				<description>(Стерлядь, фаршированная орехами)</description>
+				<price>1650</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="326">
+				<category_id>25</category_id>
+				<name>Осетрина духовая Braised sturgeon 100гр</name>
+				<price>1000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="327">
+				<category_id>25</category_id>
+				<name>Кутум Лявенги</name>
+				<description>(рыба Кутум, фаршированная орехами)</description>
+				<price>900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="328">
+				<category_id>25</category_id>
+				<name>Севрюга Лявенги </name>
+				<description>(Севрюга, фаршированная орехами)</description>
+				<price>1700</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="329">
+				<category_id>26</category_id>
+				<name>Лявенги из курицы Chicken lyavengy</name>
+				<description>(курица, фаршированная орехами)</description>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="330">
+				<category_id>26</category_id>
+				<name>Лявенги из перепелки Бакинский Дворик по рецепту шеф-повара Chicken lyavengy 2шт</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="331">
+				<category_id>27</category_id>
+				<name>Осетрина, фаршированная алычей и орехами 200гр</name>
+				<description></description>
+				<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="332">
+				<category_id>27</category_id>
+				<name>Шашлык Бакинский Дворик по-царски Catlike Tsar style 200гр</name>
+				<description>(рулетики из куриного филе с начинкой из индейки, курдюка, лука, жаренные на мангале) </description>
+				<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="333">
+				<category_id>27</category_id>
+				<name>Шашлык &quot;Семь-сорок&quot; Catlike &quot;Sem-Sorok&quot; 200гр</name>
+				<description>(рулетики изтелячьей вырезки с курдюком)</description>
+				<price>430</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="334">
+				<category_id>28</category_id>
+				<name>&quot;Коралловый риф&quot; 150гр</name>
+				<description>(мясо краба в сливочном соусе)</description>
+				<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="335">
+				<category_id>28</category_id>
+				<name>Тигровые креветки с соусом &quot;Пилатти&quot; 200/20</name>
+				<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="336">
+				<category_id>28</category_id>
+				<name>Тигровые креветки в кляре с соусом &quot;Тартар&quot; 180гр</name>
+				<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="337">
+				<category_id>28</category_id>
+				<name>Жульен с языком и грибами 100гр</name>
+				<price>230</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="338">
+				<category_id>28</category_id>
+				<name>Жульен с курицей и грибами 100гр</name>
+				<price>230</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="339">
+				<category_id>28</category_id>
+				<name>Грибы запеченные с начинкой 120гр</name>
+				<description>(шампиньоны, мясо, сыр)</description>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="340">
+				<category_id>28</category_id>
+				<name>Суп-гуляш из барашка 450гр</name>
+				<description>(баранина, баклажаны, перец болгарский, лук репчатый, морковь, помидоры, грецкие орехи, чеснок, кинза, подается в горшочке)</description>
+				<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="341">
+				<category_id>28</category_id>
+				<name>Суп &quot;Сокровища моря&quot; 400гр</name>
+				<description>(семга с соусом и красной икрой)</description>
+				<price>430</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="342">
+				<category_id>28</category_id>
+				<name>Семга &quot;Гольфстрим&quot; 230/50</name>
+				<description>(филе семги, припущенная в белом вине под сливочно-виноградным соусом и красной икрой)</description>
+				<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="343">
+				<category_id>28</category_id>
+				<name>Карп &quot;Пьян&quot; 350-50</name>
+				<description>(филированный карп под шпинатным соусом)</description>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="344">
+				<category_id>28</category_id>
+				<name>Си-бас &quot;Шабли криль&quot; 350-50</name>
+				<description>(филированный, фаршированный креветками, запеченый под сырным соусом)</description>
+				<price>550</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="345">
+				<category_id>28</category_id>
+				<name>Дорадо &quot;Андалусия&quot; 300-50</name>
+				<description>(дорадо фаршированная овощами под соусом из болгарского перца)</description>
+				<price>520</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="346">
+				<category_id>28</category_id>
+				<name>Телятина &quot;Бризоль&quot; 230-60</name>
+				<description>(телячья вырезка, фаршированная грибным соусом, запеченная в сырной корочке)</description>
+				<price>550</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="347">
+				<category_id>28</category_id>
+				<name>Каре ягненка &quot;Каприз&quot; 230-20</name>
+				<description>(каре новозеландского ягненка, жаренного на гриле под соусом из красной смородины и клюквы)</description>
+				<price>750</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="348">
+				<category_id>28</category_id>
+				<name>Каре ягненка запеченное в мятном соусе с рисом 230-50</name>
+				<price>750</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="349">
+				<category_id>28</category_id>
+				<name>Фуагра &quot;Пежон&quot; 230-50</name>
+				<description>(гусиная печень на запеченных яблоках с малиновым соусом)</description>
+				<price>1100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="350">
+				<category_id>28</category_id>
+				<name>Спагетти &quot;Ляморе&quot; 150-100</name>
+				<description>(спагетти с соусом из даров моря с пармезаном)</description>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="351">
+				<category_id>28</category_id>
+				<name>Утиная грудка под бальзамическим соусом и овощами &quot;Ратотуй&quot; 300гр</name>
+				<description>(баклажаны, грибы, перец, помидоры)</description>
+				<price>650</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="352">
+				<category_id>28</category_id>
+				<name>Утиная грудка запеченная с фасолью 350гр</name>
+				<price>650</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="353">
+				<category_id>28</category_id>
+				<name>Утиная грудка &quot;по-тирольски&quot; 150/50/30</name>
+				<description>(жареная грудка на гриле с соусом &quot;Черри&quot;)</description>
+				<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="354">
+				<category_id>28</category_id>
+				<name>Котлета &quot;Виктория&quot; 250гр</name>
+				<description>(куриное филе, сыр &quot;Эддам&quot;, ветчина)</description>
+				<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="355">
+				<category_id>28</category_id>
+				<name>Говядина по-цыгански 200гр</name>
+				<description>(говядина вырезка, перец болг., лук, соленые огурцы с острым томатным соусом)</description>
+				<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="356">
+				<category_id>28</category_id>
+				<name>Говядина &quot;Айрит-стью&quot; 200гр</name>
+				<description>(говядина вырезка, лук, перец болг., помидоры, картофельное пюре, зелень)</description>
+				<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="357">
+				<category_id>28</category_id>
+				<name>Солямис из осетрины 200гр</name>
+				<description>(осетрина, перец болг, лук, помидоры, зелень)</description>
+				<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="358">
+				<category_id>29</category_id>
+				<name>Шашлык из гусиной печени 100-20</name>
+				<price>850</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="359">
+				<category_id>29</category_id>
+				<name>Гусиная печень по-домашнему 100-150</name>
+				<description>(гусиная печень, лук репчатый, овощи)</description>
+				<price>1100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="360">
+				<category_id>30</category_id>
+				<name>Зелень свежая 100гр</name>
+				<description>(кинза, лук зеленый, базилик)</description>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="361">
+				<category_id>30</category_id>
+				<name>Салат грибной 180гр</name>
+				<description>(грибы маслята, перец соленый, соленые огурцы, петрушка, свежий лук)</description>
+				<price>210</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="362">
+				<category_id>30</category_id>
+				<name>Баклажаны жаренные с овощами 200гр</name>
+				<price>185</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="363">
+				<category_id>30</category_id>
+				<name>Баклажаны с ореховой начинкой 150гр</name>
+				<price>195</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="364">
+				<category_id>30</category_id>
+				<name>Лобио по-грузински 180гр</name>
+				<price>170</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="365">
+				<category_id>30</category_id>
+				<name>Малосольные огурцы 150гр</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="366">
+				<category_id>30</category_id>
+				<name>Салат из маринадов 200гр</name>
+				<description>(маринов. перец, чеснок, огурцы, капуста, фрукты)</description>
+				<price>205</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="367">
+				<category_id>30</category_id>
+				<name>Маринованные фрукты 200гр</name>
+				<description>( айва, виноград, терн, кизил, алыча)</description>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="368">
+				<category_id>30</category_id>
+				<name>Икра баклажанная 180гр</name>
+				<price>195</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="369">
+				<category_id>30</category_id>
+				<name>Свежий острый перец</name>
+				<price>65</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="370">
+				<category_id>30</category_id>
+				<name>Грибы маринованные 150гр</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="371">
+				<category_id>30</category_id>
+				<name>Джанджури (слива с орехами) 120гр</name>
+				<price>155</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="372">
+				<category_id>30</category_id>
+				<name>Свежие помидоры и огурцы 300гр</name>
+				<price>360</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="373">
+				<category_id>30</category_id>
+				<name>Свежие помидоры 150гр</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="374">
+				<category_id>30</category_id>
+				<name>Свежие огурцы 150гр</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="375">
+				<category_id>30</category_id>
+				<name>Маслины и оливки 150гр</name>
+				<price>125</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="376">
+				<category_id>30</category_id>
+				<name>Лимон 60гр</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="377">
+				<category_id>30</category_id>
+				<name>Салат из белокочанной капусты 170гр</name>
+				<price>135</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="378">
+				<category_id>30</category_id>
+				<name>Салат из свежих овощей 250гр</name>
+				<description>(огурцы, помидоры, лук)</description>
+				<price>350</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="379">
+				<category_id>30</category_id>
+				<name>Салат свекольный 150гр</name>
+				<description>(свекла, грецкие орехи, чеснок, масло раст.)</description>
+				<price>135</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="380">
+				<category_id>30</category_id>
+				<name>Винегрет 180гр</name>
+				<description>(свекла, картофель, морковь, огурцы маринов., квашеная капуста, фасоль, масло)</description>
+				<price>165</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="381">
+				<category_id>30</category_id>
+				<name>Салат &quot;Новруз&quot; 180гр</name>
+				<description>(дайкон, морковь, свежие огурцы, зелень, масло раст.)</description>
+				<price>175</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="382">
+				<category_id>30</category_id>
+				<name>Салат из зеленой редьки с растительным маслом и уксусом 180гр</name>
+				<price>135</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="383">
+				<category_id>30</category_id>
+				<name>Шпинат с чесноком 100гр</name>
+				<price>170</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="384">
+				<category_id>30</category_id>
+				<name>Салат &quot;Дачный&quot; 200гр</name>
+				<description>(огурец, редис, зеленый лук, масло растит. )</description>
+				<price>190</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="385">
+				<category_id>30</category_id>
+				<name>Салат &quot;Цезарь Постный&quot; 200гр</name>
+				<description>(микс-салат, помидоры черри, огурец, цв.капуста, оливковое масло)</description>
+				<price>190</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="386">
+				<category_id>30</category_id>
+				<name>Салат &quot;Изюминка&quot; 180гр</name>
+				<description>(свекла, изюм, яблоко, кедровые орешки, масло растит)</description>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="387">
+				<category_id>30</category_id>
+				<name>Салат &quot;Витаминный&quot; 200гр</name>
+				<description>(салат Айсберг, груша, морковь, клюква, оливковое масло, апельсин)</description>
+				<price>190</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="388">
+				<category_id>31</category_id>
+				<name>Кутаб с зеленью 40гр</name>
+				<description>(постный)</description>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="389">
+				<category_id>31</category_id>
+				<name>Кутаб с тыквой 40гр</name>
+				<description>(постный)</description>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="390">
+				<category_id>31</category_id>
+				<name>Кутаб с картофелем 40гр</name>
+				<description>(постный)</description>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="391">
+				<category_id>31</category_id>
+				<name>Голубцы с рисом и овощами 170гр</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="392">
+				<category_id>31</category_id>
+				<name>Перец фаршированный 150гр</name>
+				<description>(рис с овощами)</description>
+				<price>170</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="393">
+				<category_id>31</category_id>
+				<name>Котлеты картофельные с грибной начинкой 150гр</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="394">
+				<category_id>31</category_id>
+				<name>Жареные грибы с картофелем и луком 170гр</name>
+				<price>190</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="395">
+				<category_id>31</category_id>
+				<name>Овощное рагу 200гр</name>
+				<price>170</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="396">
+				<category_id>31</category_id>
+				<name>Жаренные овощи по-Бакински 250гр</name>
+				<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="397">
+				<category_id>31</category_id>
+				<name>Капуста тушеная 250гр</name>
+				<price>170</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="398">
+				<category_id>32</category_id>
+				<name>Шашлык из грибов 150гр</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="399">
+				<category_id>32</category_id>
+				<name>Шашлык из помидоров</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="400">
+				<category_id>32</category_id>
+				<name>Шашлык из баклажана</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="401">
+				<category_id>32</category_id>
+				<name>Шашлык из сладкого перца</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="402">
+				<category_id>32</category_id>
+				<name>Шашлык из горького перца</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="403">
+				<category_id>32</category_id>
+				<name>Шашлык из репчатого лука 100гр</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="404">
+				<category_id>32</category_id>
+				<name>Люля-кебаб из картофеля 100гр</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="405">
+				<category_id>33</category_id>
+				<name>Борщ вегетарианский 300гр</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="406">
+				<category_id>33</category_id>
+				<name>Суп овощной 300гр</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="407">
+				<category_id>33</category_id>
+				<name>Суп из чечевицы и лобио 300гр</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="408">
+				<category_id>33</category_id>
+				<name>Суп грибной 300гр</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="409">
+				<category_id>34</category_id>
+				<name>Аджика 100гр</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="410">
+				<category_id>34</category_id>
+				<name>Ткемали 100гр</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="411">
+				<category_id>34</category_id>
+				<name>Соевый соус 100гр</name>
+				<price>65</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="412">
+				<category_id>34</category_id>
+				<name>Соус &quot;Песто&quot; 100гр</name>
+				<description>(базилик, кинза,петрушка,чеснок, кедровые орешки, оливковое масло)</description>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="413">
+				<category_id>35</category_id>
+				<name>Картофель запеченный 150гр</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="414">
+				<category_id>35</category_id>
+				<name>Картофель отварной 150гр</name>
+				<price>90</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="415">
+				<category_id>35</category_id>
+				<name>Картофельные шарики во фритюре 150гр</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="416">
+				<category_id>35</category_id>
+				<name>Драники картофельные 150гр</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="417">
+				<category_id>35</category_id>
+				<name>Гречка отварная 100гр</name>
+				<price>90</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="418">
+				<category_id>35</category_id>
+				<name>Рис отварной 100гр</name>
+				<price>90</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="419">
+				<category_id>35</category_id>
+				<name>Цветная капуста жареная во фритюре 150гр</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="420">
+				<category_id>35</category_id>
+				<name>Цветная капуста отварная 150гр</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="421">
+				<category_id>13</category_id>
+				<name>Лаваш Lavash 60гр</name>
+				<description>(thin flat cake from unsalted when dough)</description>
+				<price>25</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="422">
+				<category_id>13</category_id>
+				<name>Хлеб ржаной 100гр</name>
+				<price>20</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="423">
+				<category_id>13</category_id>
+				<name>Хлеб азербайджанский испеченный в тандыре 240гр</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="424">
+				<category_id>13</category_id>
+				<name>Лепешка пшеничная 120гр</name>
+				<price>35</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="425">
+				<category_id>14</category_id>
+				<name>Аджика 70гр</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="426">
+				<category_id>14</category_id>
+				<name>Ткемали  70гр</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="427">
+				<category_id>13</category_id>
+				<name>Наршараб 70гр</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="428">
+				<category_id>13</category_id>
+				<name>Соус шашлычный (дополнительный) 70гр</name>
+				<price>30</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="429">
+				<category_id>13</category_id>
+				<name>Майонез 100гр</name>
+				<price>50</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="430">
+				<category_id>13</category_id>
+				<name>Соус соевый 100гр</name>
+				<price>65</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="431">
+				<category_id>13</category_id>
+				<name>Соус &quot;Песто&quot; 100гр</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="432">
+				<category_id>13</category_id>
+				<name>Мед 100гр</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="433">
+				<category_id>36</category_id>
+				<name>Кизил свежий 200гр</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="434">
+				<category_id>36</category_id>
+				<name>Алыча 200гр</name>
+				<price>170</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="435">
+				<category_id>36</category_id>
+				<name>Фрукты в ассортименте 1,8кг</name>
+				<description>(виноград, киви, банан, апельсин, яблоко, груша, мандарин, израильский эзгиль)</description>
+				<price>800</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="436">
+				<category_id>36</category_id>
+				<name>Фрукты летние 1кг</name>
+				<description>(черешня, клубника,алыча, абрикос)</description>
+				<price>700</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="437">
+				<category_id>36</category_id>
+				<name>Фруктовый десерт 250гр</name>
+				<description>Fruit dessert (apple, pears, grapes with mouseline cream)</description>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="438">
+				<category_id>36</category_id>
+				<name>Гранат очищенный 100гр</name>
+				<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="439">
+				<category_id>36</category_id>
+				<name>Ананас 1кг</name>
+				<price>520</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="440">
+				<category_id>36</category_id>
+				<name>Экзотические фрукты 800гр</name>
+				<description>( клубника, малина, ежевика, голубика, физалис, кумклад, красная смородина)</description>
+				<price>1800</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="441">
+				<category_id>36</category_id>
+				<name>Дыня 1кг</name>
+				<price>350</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="442">
+				<category_id>36</category_id>
+				<name>Арбуз 1кг</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="443">
+				<category_id>37</category_id>
+				<name>Торт 1кг</name>
+				<price>1000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="444">
+				<category_id>37</category_id>
+				<name>Торт 3кг</name>
+				<price>3000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="445">
+				<category_id>37</category_id>
+				<name>Торт 5кг</name>
+				<price>5000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="446">
+				<category_id>37</category_id>
+				<name>Торт 7кг</name>
+				<price>7000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="447">
+				<category_id>37</category_id>
+				<name>Варенье 150гр</name>
+				<description>(белая черешня,   грецкий орех, кизил, фейхоа )</description>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="448">
+				<category_id>37</category_id>
+				<name>Варенье 150гр</name>
+				<description>(инжир, айва, вишня, малина, клубника, лепестки роз)</description>
+				<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="449">
+				<category_id>37</category_id>
+				<name>Ляб-Ляби 200гр</name>
+				<description>(ассорти из орехов и изюма)</description>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="459">
+				<category_id>37</category_id>
+				<name>Клубника со сливками 150гр</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="460">
+				<category_id>37</category_id>
+				<name>Восточная выпечка в ассортименте </name>
+				<description>(пахлава, шакарбура, бадамбура, мутаки с орехами, мутаки с изюмом, мутаки с черносливом, когал и др.)</description>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="461">
+				<category_id>37</category_id>
+				<name>Пирожное бисквитное в ассортименте 35гр</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="462">
+				<category_id>35</category_id>
+				<name>Восточные сладости 700гр</name>
+				<description>(цукаты ассорти, сухофрукты в ассортименте, Рахат лукум в ассортименте, казинаки в ассортименте (фундук, миндаль, фисташки), халва)</description>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="463">
+				<category_id>37</category_id>
+				<name>Финики крупные 140гр</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="464">
+				<category_id>16</category_id>
+				<name>Кока-Кола 0,25л</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="465">
+				<category_id>16</category_id>
+				<name>&quot;Спрайт&quot; 0,25л</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="466">
+				<category_id>16</category_id>
+				<name>&quot;Фанта&quot; 0,25л</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="467">
+				<category_id>16</category_id>
+				<name>&quot;Тоник&quot; 0,25л</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="468">
+				<category_id>16</category_id>
+				<name>&quot;Тоник&quot; 1л</name>
+				<description></description>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="469">
+				<category_id>16</category_id>
+				<name>&quot;Ред Булл&quot; (энергетический напиток) 0,25л</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="470">
+				<category_id>16</category_id>
+				<name>Питьевая вода &quot;Бисс&quot; (газир., негаз.) (Россия) негаз.) (Россия) 0,42л</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="471">
+				<category_id>16</category_id>
+				<name>Питьевая вода &quot;Бисс-Алоэ&quot; (негаз, сладкая)(Россия) 0,42л</name>
+				<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="472">
+				<category_id>16</category_id>
+				<name>Минеральная вода &quot;Нарзан&quot; (газир.)(Россия) 0,5л</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="473">
+				<category_id>16</category_id>
+				<name>Минеральная вода &quot;Сираб&quot; (газир.)(Азербайджан) 0,5л</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="474">
+				<category_id>16</category_id>
+				<name>Минеральная вода &quot;Рычал-Су&quot; (газир.) (Дагестан) 0,5л</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="475">
+				<category_id>16</category_id>
+				<name>Минеральная вода &quot;Перье&quot; (Perrier) (газир.)(Франция) 0,33л</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="476">
+				<category_id>16</category_id>
+				<name>Минеральная вода &quot;Эвиан&quot; (Evian) (негаз.) (Франция) 0,33л</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="477">
+				<category_id>16</category_id>
+				<name>Минеральная вода &quot;Виттель&quot; (Vittel) (негаз.)(Франция) 0,33л</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="478">
+				<category_id>16</category_id>
+				<name>Сок лимонный свежевыжатый 0,2л</name>
+				<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="479">
+				<category_id>16</category_id>
+				<name>Сок грейпфрутовый свежевыжатый 0,2л</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="480">
+				<category_id>16</category_id>
+				<name>Сок апельсиновый свежевыжатый 0,2л</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="481">
+				<category_id>16</category_id>
+				<name>Сок гранатовый свежевыжатый 0,2л</name>
+				<price>450</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="482">
+				<category_id>16</category_id>
+				<name></name>
+				<price></price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="483">
+				<category_id>16</category_id>
+				<name>Сок яблочно-морковный свежевыжатый 0,2л</name>
+				<price>170</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="484">
+				<category_id>16</category_id>
+				<name>Сок ананасовый свежевыжатый 0,2л</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="485">
+				<category_id>16</category_id>
+				<name>Сок &quot;Свелл&quot; в ассортименте 0,75л</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="486">
+				<category_id>16</category_id>
+				<name>Сок &quot;Свелл&quot; в ассортименте 0,2л</name>
+				<price>48</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="487">
+				<category_id>16</category_id>
+				<name>Компоты в ассортименте (слива, черная смородина, красная алыча, вишня, фейхоа) (Азербайджан) 1л</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="488">
+				<category_id>16</category_id>
+				<name>Лимонад &quot;Тархун&quot; (Азербайджан) 0,5л</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="489">
+				<category_id>16</category_id>
+				<name>Лимонад &quot;Дюшес&quot; (Азербайджан) 0,5л</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="490">
+				<category_id>16</category_id>
+				<name>Лимонад &quot;Роза&quot; (Азербайджан) 0,5л</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="491">
+				<category_id>16</category_id>
+				<name>Морс клюквенный 1л</name>
+				<price>230</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="492">
+				<category_id>16</category_id>
+				<name>Морс клюквенный 0,2л</name>
+				<price>46</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="493">
+				<category_id>16</category_id>
+				<name>Компот по-домашнему из свежих фруктов 1л</name>
+				<price>230</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="494">
+				<category_id>16</category_id>
+				<name>Компот по-домашнему из свежих фруктов 0,2л</name>
+				<price>46</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="495">
+				<category_id>36</category_id>
+				<name>Черешня</name>
+				<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="496">
+				<category_id>39</category_id>
+				<name>Водка &quot;Путинка&quot; 0,5 L</name>
+				<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="497">
+				<category_id>39</category_id>
+				<name>Водка &quot;Путинка&quot; 100 мл</name>
+				<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="498">
+				<category_id>39</category_id>
+				<name>Водка &quot;Путинка&quot; 50 мл</name>
+				<price>60</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="499">
+				<category_id>39</category_id>
+				<name>Водка &quot;Флагман&quot; 0,5 L</name>
+				<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="500">
+				<category_id>39</category_id>
+				<name>Водка &quot;Флагман&quot; 100 мл</name>
+				<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="501">
+				<category_id>39</category_id>
+				<name>Водка &quot;Флагман&quot; 50 мл</name>
+				<price>60</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="502">
+				<category_id>39</category_id>
+				<name>Водка &quot;Русский Стандарт&quot; 0,5 L</name>
+				<price>1000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="503">
+				<category_id>39</category_id>
+				<name>Водка &quot;Русский Стандарт&quot; 100 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="504">
+				<category_id>39</category_id>
+				<name>Водка &quot;Русский Стандарт&quot; 50 мл</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="505">
+				<category_id>39</category_id>
+				<name>Водка айвовая (Азербайджан) 0,5 L</name>
+				<price>1000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="506">
+				<category_id>39</category_id>
+				<name>Водка айвовая (Азербайджан) 100 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="507">
+				<category_id>39</category_id>
+				<name>Водка айвовая (Азербайджан) 50 мл</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="508">
+				<category_id>39</category_id>
+				<name>Водка &quot;Русский Стандарт Платинум&quot; 0,5 L</name>
+				<price>1100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="509">
+				<category_id>39</category_id>
+				<name>Водка &quot;Русский Стандарт Платинум&quot; 100 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="510">
+				<category_id>39</category_id>
+				<name>Водка &quot;Русский Стандарт Платинум&quot; 50 мл</name>
+				<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="511">
+				<category_id>39</category_id>
+				<name>Водка &quot;АСТ&quot; 0,5 L</name>
+				<price>800</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="512">
+				<category_id>39</category_id>
+				<name>Водка &quot;АСТ&quot; 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="513">
+				<category_id>39</category_id>
+				<name>Водка &quot;АСТ&quot; 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="514">
+				<category_id>39</category_id>
+				<name>Водка &quot;Царская золотая&quot; 0,5 L</name>
+				<price>1300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="515">
+				<category_id>39</category_id>
+				<name>Водка &quot;Царская золотая&quot; 100 мл</name>
+				<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="516">
+				<category_id>39</category_id>
+				<name>Водка &quot;Царская золотая&quot; 50 мл</name>
+				<price>130</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="517">
+				<category_id>39</category_id>
+				<name>Водка &quot;Царская оригинальная&quot; 0,5 L</name>
+				<price>1000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="518">
+				<category_id>39</category_id>
+				<name>Водка &quot;Царская оригинальная&quot; 100 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="519">
+				<category_id>39</category_id>
+				<name>Водка &quot;Царская оригинальная&quot; 50 мл</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="520">
+				<category_id>39</category_id>
+				<name>Водка &quot;Белое золото Премиум&quot; 0,5 L</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="521">
+				<category_id>39</category_id>
+				<name>Водка &quot;Белое золото Премиум&quot; 100 мл</name>
+				<price>240</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="522">
+				<category_id>39</category_id>
+				<name>Водка &quot;Белое золото Премиум&quot; 50 мл</name>
+				<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="523">
+				<category_id>39</category_id>
+				<name>Водка &quot;Белое золото Кристалл&quot; 0,5 L</name>
+				<price>1100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="524">
+				<category_id>39</category_id>
+				<name>Водка &quot;Белое золото Кристалл&quot; 100 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="525">
+				<category_id>39</category_id>
+				<name>Водка &quot;Белое золото Кристалл&quot; 50 мл</name>
+				<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="526">
+				<category_id>39</category_id>
+				<name>Водка &quot;Русский Бриллиант Премиум&quot; 0,5 L</name>
+				<price>1100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="527">
+				<category_id>39</category_id>
+				<name>Водка &quot;Русский Бриллиант Премиум&quot; 100 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="528">
+				<category_id>39</category_id>
+				<name>Водка &quot;Русский Бриллиант Премиум&quot; 50 мл</name>
+				<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="529">
+				<category_id>39</category_id>
+				<name>Водка &quot;Белуга&quot; 0,5 L</name>
+				<price>2000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="530">
+				<category_id>39</category_id>
+				<name>Водка &quot;Белуга&quot; 100 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="531">
+				<category_id>39</category_id>
+				<name>Водка &quot;Белуга&quot; 50 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="532">
+				<category_id>39</category_id>
+				<name>Водка &quot;Кауфман&quot; 0,7 L</name>
+				<price>2520</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="533">
+				<category_id>39</category_id>
+				<name>Водка &quot;Кауфман&quot; 100 мл</name>
+				<price>360</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="534">
+				<category_id>39</category_id>
+				<name>Водка &quot;Кауфман&quot; 50 мл</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="535">
+				<category_id>39</category_id>
+				<name>Настойка горькая &quot;Фернет-Бранка&quot; 0,7 L</name>
+				<price>2100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="536">
+				<category_id>39</category_id>
+				<name>Настойка горькая &quot;Фернет-Бранка&quot; 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="537">
+				<category_id>39</category_id>
+				<name>Настойка горькая &quot;Фернет-Бранка&quot; 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="538">
+				<category_id>39</category_id>
+				<name>Настойка горькая &quot;Салерс Биттер&quot; 1 L</name>
+				<price>3000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="539">
+				<category_id>39</category_id>
+				<name>Настойка горькая &quot;Салерс Биттер&quot; 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="540">
+				<category_id>39</category_id>
+				<name>Настойка горькая &quot;Салерс Биттер&quot; 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="541">
+				<category_id>40</category_id>
+				<name>Текила &quot;Ольмека&quot; золотая 1 л</name>
+				<price>3300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="542">
+				<category_id>40</category_id>
+				<name>Текила &quot;Ольмека&quot; золотая 100 мл</name>
+				<price>330</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="543">
+				<category_id>40</category_id>
+				<name>Текила &quot;Ольмека&quot; золотая 50 мл</name>
+				<price>165</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="544">
+				<category_id>40</category_id>
+				<name>Текила &quot;Ольмека&quot; серебренная 1 л</name>
+				<price>3300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="545">
+				<category_id>40</category_id>
+				<name>Текила &quot;Ольмека&quot; серебренная 100 мл</name>
+				<price>330</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="546">
+				<category_id>40</category_id>
+				<name>Текила &quot;Ольмека&quot; серебренная 50 мл</name>
+				<price>165</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="547">
+				<category_id>40</category_id>
+				<name>Текила &quot;XQ&quot; ANEJO (100% de agave) 375 мл</name>
+				<price>2100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="548">
+				<category_id>40</category_id>
+				<name>Текила &quot;XQ&quot; ANEJO (100% de agave) 100 мл</name>
+				<price>560</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="549">
+				<category_id>40</category_id>
+				<name>Текила &quot;XQ&quot; ANEJO (100% de agave) 50 мл</name>
+				<price>280</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="550">
+				<category_id>40</category_id>
+				<name>Текила &quot;Дон Хулио&quot; 0,75 л</name>
+				<price>7200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="551">
+				<category_id>40</category_id>
+				<name>Текила &quot;Дон Хулио&quot; 100 мл</name>
+				<price>960</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="552">
+				<category_id>40</category_id>
+				<name>Текила &quot;Дон Хулио&quot;</name>
+				<price>480</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="553">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джонни Уолкер блэк лейбл&quot; 1 л</name>
+				<price>5500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="554">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джонни Уолкер блэк лейбл&quot; 100 мл</name>
+				<price>550</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="555">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джонни Уолкер блэк лейбл&quot; 50 мл</name>
+				<price>275</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="556">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джонни Уолкер  ред лейбл&quot; 1 л</name>
+				<price>3300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="557">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джонни Уолкер  ред лейбл&quot; 100 мл</name>
+				<price>330</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="558">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джонни Уолкер  ред лейбл&quot; 50 мл</name>
+				<price>165</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="559">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джонни Уолкер  блю лейбл&quot; 0,75 л</name>
+				<price>16500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="560">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джонни Уолкер  блю лейбл&quot; 100 мл</name>
+				<price>2200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="561">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джонни Уолкер  блю лейбл&quot; 50 мл</name>
+				<price>1100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="562">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джек Дениелс&quot; 1 л</name>
+				<price>4300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="563">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джек Дениелс&quot; 100 мл</name>
+				<price>430</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="564">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джек Дениелс&quot; 50 мл</name>
+				<price>215</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="565">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джеймиссон&quot; 1 л</name>
+				<price>3300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="566">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джеймиссон&quot; 100 мл</name>
+				<price>330</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="567">
+				<category_id>41</category_id>
+				<name>Виски &quot;Джеймиссон&quot; 50 мл</name>
+				<price>165</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="568">
+				<category_id>41</category_id>
+				<name>Виски &quot;Маккалан&quot; 12 лет 0,7 л</name>
+				<price>5600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="569">
+				<category_id>41</category_id>
+				<name>Виски &quot;Маккалан&quot; 12 лет 100 мл</name>
+				<price>800</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="570">
+				<category_id>41</category_id>
+				<name>Виски &quot;Маккалан&quot; 12 лет 50 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="571">
+				<category_id>41</category_id>
+				<name>Виски &quot;Маккалан&quot; 12 лет 1 л</name>
+				<price>8000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="572">
+				<category_id>41</category_id>
+				<name>Виски &quot;Маккалан&quot; 15 лет 0,7 л</name>
+				<price>8400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="573">
+				<category_id>41</category_id>
+				<name>Виски &quot;Маккалан&quot; 15 лет 100 мл</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="574">
+				<category_id>41</category_id>
+				<name>Виски &quot;Маккалан&quot; 15 лет 50 мл</name>
+				<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="575">
+				<category_id>41</category_id>
+				<name>Виски &quot;Маккалан&quot; 18 лет 0,7 л</name>
+				<price>11200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="576">
+				<category_id>41</category_id>
+				<name>Виски &quot;Маккалан&quot; 18 лет 100 мл</name>
+				<price>1600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="577">
+				<category_id>41</category_id>
+				<name>Виски &quot;Маккалан&quot; 18 лет 50 мл</name>
+				<price>800</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="578">
+				<category_id>41</category_id>
+				<name>Виски &quot;Чивас Ригал&quot; 12 лет 1 л</name>
+				<price>5000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="579">
+				<category_id>41</category_id>
+				<name>Виски &quot;Чивас Ригал&quot; 12 лет 100 мл</name>
+				<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="580">
+				<category_id>41</category_id>
+				<name>Виски &quot;Чивас Ригал&quot; 12 лет 50 мл</name>
+				<price>2500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="581">
+				<category_id>41</category_id>
+				<name>Виски &quot;Чивас Ригал&quot; 18 лет 0,7 л</name>
+				<price>11200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="582">
+				<category_id>41</category_id>
+				<name>Виски &quot;Чивас Ригал&quot; 18 лет 100 мл</name>
+				<price>1600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="583">
+				<category_id>41</category_id>
+				<name>Виски &quot;Чивас Ригал&quot; 18 лет 50 мл</name>
+				<price>800</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="584">
+				<category_id>41</category_id>
+				<name>Виски &quot;Чивас Ригал&quot; 21 год 0,7 л</name>
+				<price>11900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="585">
+				<category_id>41</category_id>
+				<name>Виски &quot;Чивас Ригал&quot; 21 год 100 мл</name>
+				<price>1700</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="586">
+				<category_id>41</category_id>
+				<name>Виски &quot;Чивас Ригал&quot; 21 год 50 мл</name>
+				<price>850</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="587">
+				<category_id>41</category_id>
+				<name>Виски &quot;Клонтарф&quot; 0,7 л</name>
+				<price>2100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="588">
+				<category_id>41</category_id>
+				<name>Виски &quot;Клонтарф&quot; 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="589">
+				<category_id>41</category_id>
+				<name>Виски &quot;Клонтарф&quot; 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="590">
+				<category_id>41</category_id>
+				<name>Виски &quot;Ника Ол Молт&quot; 0,7 л</name>
+				<price>2100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="591">
+				<category_id>41</category_id>
+				<name>Виски &quot;Ника Ол Молт&quot; 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="592">
+				<category_id>41</category_id>
+				<name>Виски &quot;Ника Ол Молт&quot; 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="593">
+				<category_id>42</category_id>
+				<name>Мартини &quot;Бианко&quot; 1 л</name>
+				<price>2000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="594">
+				<category_id>42</category_id>
+				<name>Мартини &quot;Бианко&quot; 100 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="595">
+				<category_id>42</category_id>
+				<name>Мартини &quot;Бианко&quot; 50 мл</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="596">
+				<category_id>43</category_id>
+				<name>Бакарди Блэк 1 л</name>
+				<price>3000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="597">
+				<category_id>43</category_id>
+				<name>Бакарди Блэк 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="598">
+				<category_id>43</category_id>
+				<name>Бакарди Блэк 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="599">
+				<category_id>43</category_id>
+				<name>Бакарди Карта Бланка 1 л</name>
+				<price>3000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="600">
+				<category_id>43</category_id>
+				<name>Бакарди Карта Бланка 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="601">
+				<category_id>43</category_id>
+				<name>Бакарди Карта Бланка 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="602">
+				<category_id>43</category_id>
+				<name>Бакарди Голд 1 л</name>
+				<price>3000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="603">
+				<category_id>43</category_id>
+				<name>Бакарди Голд 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="604">
+				<category_id>43</category_id>
+				<name>Бакарди Голд 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="605">
+				<category_id>44</category_id>
+				<name>Доус Файн Тони кр. (Португалия) 0,75 л</name>
+				<price>2250</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="606">
+				<category_id>44</category_id>
+				<name>Доус Файн Тони кр. (Португалия) 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="607">
+				<category_id>44</category_id>
+				<name>Доус Файн Тони кр. (Португалия) 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="608">
+				<category_id>45</category_id>
+				<name>&quot;Сага Р Бордо Блан&quot;  сух. (Франция) 0,75 л</name>
+				<price>1650</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="609">
+				<category_id>45</category_id>
+				<name>&quot;Сага Р Бордо Блан&quot;  сух. (Франция) 100 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="610">
+				<category_id>45</category_id>
+				<name>&quot;Сага Р Бордо Блан&quot;  сух. (Франция) 50 мл</name>
+				<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="611">
+				<category_id>45</category_id>
+				<name>&quot;Шабли&quot; сух. (Франция) 0,75 л</name>
+				<price>1650</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="612">
+				<category_id>45</category_id>
+				<name>&quot;Шабли&quot; сух. (Франция) 100 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="613">
+				<category_id>45</category_id>
+				<name>&quot;Шабли&quot; сух. (Франция) 50 мл</name>
+				<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="614">
+				<category_id>45</category_id>
+				<name>&quot;Ивкур Сотерн&quot;  сл. (Франция) 0,75 л</name>
+				<price>2100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="615">
+				<category_id>45</category_id>
+				<name>&quot;Ивкур Сотерн&quot;  сл. (Франция) 100 мл</name>
+				<price>280</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="616">
+				<category_id>45</category_id>
+				<name>&quot;Ивкур Сотерн&quot;  сл. (Франция) 50 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="617">
+				<category_id>45</category_id>
+				<name>&quot;Ивкур Бордо Совиньон&quot;  сух. (Франция) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="618">
+				<category_id>45</category_id>
+				<name>&quot;Ивкур Бордо Совиньон&quot;  сух. (Франция) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="619">
+				<category_id>45</category_id>
+				<name>&quot;Ивкур Бордо Совиньон&quot;  сух. (Франция) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="620">
+				<category_id>45</category_id>
+				<name>&quot;Ивкур Бордо&quot;  п/сл (Франция) 0,75 л</name>
+				<price>1650</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="621">
+				<category_id>45</category_id>
+				<name>&quot;Ивкур Бордо&quot;  п/сл (Франция) 100 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="622">
+				<category_id>45</category_id>
+				<name>&quot;Ивкур Бордо&quot;  п/сл (Франция) 50 мл</name>
+				<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="623">
+				<category_id>45</category_id>
+				<name>&quot;Тайан Блан&quot; п/сл (Франция) 0,75 л</name>
+				<price>900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="624">
+				<category_id>45</category_id>
+				<name>&quot;Тайан Блан&quot; п/сл (Франция) 100 мл</name>
+				<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="625">
+				<category_id>45</category_id>
+				<name>&quot;Тайан Блан&quot; п/сл (Франция) 50 мл</name>
+				<price>60</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="626">
+				<category_id>45</category_id>
+				<name>&quot;Тайан Блан&quot; п/сух (Франция) 0,75 л</name>
+				<price>900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="627">
+				<category_id>45</category_id>
+				<name>&quot;Тайан Блан&quot; п/сух (Франция) 100 мл</name>
+				<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="628">
+				<category_id>45</category_id>
+				<name>&quot;Тайан Блан&quot; п/сух (Франция) 50 мл</name>
+				<price>60</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="629">
+				<category_id>45</category_id>
+				<name>&quot;Коломбар Шардоне&quot; сух (Франция) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="630">
+				<category_id>45</category_id>
+				<name>&quot;Коломбар Шардоне&quot; сух (Франция) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="631">
+				<category_id>45</category_id>
+				<name>&quot;Коломбар Шардоне&quot; сух (Франция) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="632">
+				<category_id>45</category_id>
+				<name>&quot;Кот Дю Рон&quot; сух. (Франция) 0,75 л</name>
+				<price>1500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="633">
+				<category_id>45</category_id>
+				<name>&quot;Кот Дю Рон&quot; сух. (Франция) 100 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="634">
+				<category_id>45</category_id>
+				<name>&quot;Кот Дю Рон&quot; сух. (Франция) 50 мл</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="635">
+				<category_id>45</category_id>
+				<name>&quot;Корво Бьянко&quot; сух. (Италия) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="636">
+				<category_id>45</category_id>
+				<name>&quot;Корво Бьянко&quot; сух. (Италия) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="637">
+				<category_id>45</category_id>
+				<name>&quot;Корво Бьянко&quot; сух. (Италия) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="638">
+				<category_id>45</category_id>
+				<name>&quot;Лас Васкос&quot; сух. (Чили) 0,75 л</name>
+				<price>1650</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="639">
+				<category_id>45</category_id>
+				<name>&quot;Лас Васкос&quot; сух. (Чили) 100 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="640">
+				<category_id>45</category_id>
+				<name>&quot;Лас Васкос&quot; сух. (Чили) 50 мл</name>
+				<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="641">
+				<category_id>45</category_id>
+				<name>&quot;Шардоне&quot; сух. (Чили) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="642">
+				<category_id>45</category_id>
+				<name>&quot;Шардоне&quot; сух. (Чили) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="643">
+				<category_id>45</category_id>
+				<name>&quot;Шардоне&quot; сух. (Чили) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="644">
+				<category_id>45</category_id>
+				<name>&quot;Чойя Ориджинал&quot; (Япония) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="645">
+				<category_id>45</category_id>
+				<name>&quot;Чойя Ориджинал&quot; (Япония) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="646">
+				<category_id>45</category_id>
+				<name>&quot;Чойя Ориджинал&quot; (Япония) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="647">
+				<category_id>45</category_id>
+				<name>&quot;Садыллы&quot; сух. (Азербайджан) 0,75 л</name>
+				<price>1050</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="648">
+				<category_id>45</category_id>
+				<name>&quot;Садыллы&quot; сух. (Азербайджан) 100 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="649">
+				<category_id>45</category_id>
+				<name>&quot;Садыллы&quot; сух. (Азербайджан) 50 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="650">
+				<category_id>45</category_id>
+				<name>&quot;Шах Гюзель&quot; п/сл. (Азербайджан) 0,75 л</name>
+				<price>1500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="651">
+				<category_id>45</category_id>
+				<name>&quot;Шах Гюзель&quot; п/сл. (Азербайджан) 100 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="652">
+				<category_id>45</category_id>
+				<name>&quot;Шах Гюзель&quot; п/сл. (Азербайджан) 50 мл</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="653">
+				<category_id>46</category_id>
+				<name>Сага Бордо  Руж сух. (Франция) 0,75 л</name>
+				<price>1650</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="654">
+				<category_id>46</category_id>
+				<name>Сага Бордо  Руж сух. (Франция) 100 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="655">
+				<category_id>46</category_id>
+				<name>Сага Бордо  Руж сух. (Франция) 50 мл</name>
+				<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="656">
+				<category_id>46</category_id>
+				<name>&quot;Божоле &quot;Ле Кото&quot;  сух. (Франция) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="657">
+				<category_id>46</category_id>
+				<name>&quot;Божоле &quot;Ле Кото&quot;  сух. (Франция) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="658">
+				<category_id>46</category_id>
+				<name>&quot;Божоле &quot;Ле Кото&quot;  сух. (Франция) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="659">
+				<category_id>46</category_id>
+				<name>Ивкур Бордо  сух. (Франция) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="660">
+				<category_id>46</category_id>
+				<name>Ивкур Бордо  сух. (Франция) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="661">
+				<category_id>46</category_id>
+				<name>Ивкур Бордо  сух. (Франция) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="662">
+				<category_id>46</category_id>
+				<name>&quot;Тайан Руж&quot; кр. п/сл (Франция) 0,75 л</name>
+				<price>900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="663">
+				<category_id>46</category_id>
+				<name>&quot;Тайан Руж&quot; кр. п/сл (Франция) 100 мл</name>
+				<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="664">
+				<category_id>46</category_id>
+				<name>&quot;Тайан Руж&quot; кр. п/сл (Франция) 50 мл</name>
+				<price>60</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="665">
+				<category_id>46</category_id>
+				<name>&quot;Тайан Руж&quot; кр. п/сух (Франция) 0,75 л</name>
+				<price>900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="666">
+				<category_id>46</category_id>
+				<name>&quot;Тайан Руж&quot; кр. п/сух (Франция) 100 мл</name>
+				<price>120</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="667">
+				<category_id>46</category_id>
+				<name>&quot;Тайан Руж&quot; кр. п/сух (Франция) 50 мл</name>
+				<price>60</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="668">
+				<category_id>46</category_id>
+				<name>&quot;Розе Д’Анжу роз. п/сух (Франция) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="669">
+				<category_id>46</category_id>
+				<name>&quot;Розе Д’Анжу роз. п/сух (Франция) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="670">
+				<category_id>46</category_id>
+				<name>&quot;Розе Д’Анжу роз. п/сух (Франция) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="671">
+				<category_id>46</category_id>
+				<name>&quot;Кот Дю Рон&quot; кр. сух. (Франция) 0,75 л</name>
+				<price>1500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="672">
+				<category_id>46</category_id>
+				<name>&quot;Кот Дю Рон&quot; кр. сух. (Франция) 100 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="673">
+				<category_id>46</category_id>
+				<name>&quot;Кот Дю Рон&quot; кр. сух. (Франция) 50 мл</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="674">
+				<category_id>46</category_id>
+				<name>&quot;Каберне Совиньон&quot; кр. сух. (Франция) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="675">
+				<category_id>46</category_id>
+				<name>&quot;Каберне Совиньон&quot; кр. сух. (Франция) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="676">
+				<category_id>46</category_id>
+				<name>&quot;Каберне Совиньон&quot; кр. сух. (Франция) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="677">
+				<category_id>46</category_id>
+				<name>&quot;Пляс Руаяль Бордо&quot; кр. сух. (Франция) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="678">
+				<category_id>46</category_id>
+				<name>&quot;Пляс Руаяль Бордо&quot; кр. сух. (Франция) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="679">
+				<category_id>46</category_id>
+				<name>&quot;Пляс Руаяль Бордо&quot; кр. сух. (Франция) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="680">
+				<category_id>46</category_id>
+				<name>&quot;Кьянти Виньяторта&quot; сух. (Италия) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="681">
+				<category_id>46</category_id>
+				<name>&quot;Кьянти Виньяторта&quot; сух. (Италия) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="682">
+				<category_id>46</category_id>
+				<name>&quot;Кьянти Виньяторта&quot; сух. (Италия) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="683">
+				<category_id>46</category_id>
+				<name>&quot;Корво Россо&quot;  кр. Сух. (Италия) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="684">
+				<category_id>46</category_id>
+				<name>&quot;Корво Россо&quot;  кр. Сух. (Италия) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="685">
+				<category_id>46</category_id>
+				<name>&quot;Корво Россо&quot;  кр. Сух. (Италия) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="686">
+				<category_id>46</category_id>
+				<name>&quot;Лас Васкос&quot; кр.сух. (Чили) 0,75 л</name>
+				<price>1650</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="687">
+				<category_id>46</category_id>
+				<name>&quot;Лас Васкос&quot; кр.сух. (Чили) 100 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="688">
+				<category_id>46</category_id>
+				<name>&quot;Лас Васкос&quot; кр.сух. (Чили) 50 мл</name>
+				<price>110</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="689">
+				<category_id>46</category_id>
+				<name>&quot;Мерло&quot; кр. сух. (Чили) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="690">
+				<category_id>46</category_id>
+				<name>&quot;Мерло&quot; кр. сух. (Чили) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="691">
+				<category_id>46</category_id>
+				<name>&quot;Мерло&quot; кр. сух. (Чили) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="692">
+				<category_id>46</category_id>
+				<name>&quot;Акстафа&quot; пол/сл (Азербайджан) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="693">
+				<category_id>46</category_id>
+				<name>&quot;Акстафа&quot; пол/сл (Азербайджан) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="694">
+				<category_id>46</category_id>
+				<name>&quot;Акстафа&quot; пол/сл (Азербайджан) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="695">
+				<category_id>46</category_id>
+				<name>&quot;Мадраса&quot;  (элитное) сух (Азербайджан) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="696">
+				<category_id>46</category_id>
+				<name>&quot;Мадраса&quot;  (элитное) сух (Азербайджан) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="697">
+				<category_id>46</category_id>
+				<name>&quot;Мадраса&quot;  (элитное) сух (Азербайджан) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="698">
+				<category_id>46</category_id>
+				<name>&quot;Мадраса Гол&quot;  (элитное) сух (Азербайджан) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="699">
+				<category_id>46</category_id>
+				<name>&quot;Мадраса Гол&quot;  (элитное) сух (Азербайджан) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="700">
+				<category_id>46</category_id>
+				<name>&quot;Мадраса Гол&quot;  (элитное) сух (Азербайджан) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="701">
+				<category_id>46</category_id>
+				<name>&quot;Шемахинская Лоза&quot;  пол/сл (Азербайджан) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="702">
+				<category_id>46</category_id>
+				<name>&quot;Шемахинская Лоза&quot;  пол/сл (Азербайджан) 100 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="703">
+				<category_id>46</category_id>
+				<name>&quot;Шемахинская Лоза&quot;  пол/сл (Азербайджан) 50 мл</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="704">
+				<category_id>46</category_id>
+				<name>&quot;Шах Шемаха&quot;  пол/сл (Азербайджан) 0,75 л</name>
+				<price>1600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="705">
+				<category_id>46</category_id>
+				<name>&quot;Шах Шемаха&quot;  пол/сл (Азербайджан) 100 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="706">
+				<category_id>46</category_id>
+				<name>&quot;Шах Шемаха&quot;  пол/сл (Азербайджан) 50 мл</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="707">
+				<category_id>46</category_id>
+				<name>&quot;Шах Мадраса&quot; сух (Азербайджан) 0,75 л</name>
+				<price>1200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="708">
+				<category_id>46</category_id>
+				<name>&quot;Шах Мадраса&quot; сух (Азербайджан) 100 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="709">
+				<category_id>46</category_id>
+				<name>&quot;Шах Мадраса&quot; сух (Азербайджан) 50 мл</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="710">
+				<category_id>46</category_id>
+				<name>&quot;Караван-Сарай&quot; сух (Азербайджан) 0,75 л</name>
+				<price>1050</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="711">
+				<category_id>46</category_id>
+				<name>&quot;Караван-Сарай&quot; сух (Азербайджан) 100 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="712">
+				<category_id>46</category_id>
+				<name>&quot;Караван-Сарай&quot; сух (Азербайджан) 50 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="713">
+				<category_id>46</category_id>
+				<name>&quot;Чинар&quot; п/сл. (Азербайджан) 0,75 л</name>
+				<price>1050</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="714">
+				<category_id>46</category_id>
+				<name>&quot;Чинар&quot; п/сл. (Азербайджан) 100 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="715">
+				<category_id>46</category_id>
+				<name>&quot;Чинар&quot; п/сл. (Азербайджан) 50 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="716">
+				<category_id>46</category_id>
+				<name>&quot;Огни Баку&quot; п/сл. (Азербайджан) 0,75 л</name>
+				<price>1050</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="717">
+				<category_id>46</category_id>
+				<name>&quot;Огни Баку&quot; п/сл. (Азербайджан) 100 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="718">
+				<category_id>46</category_id>
+				<name>&quot;Огни Баку&quot; п/сл. (Азербайджан) 50 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="719">
+				<category_id>46</category_id>
+				<name>&quot;Букет Азербайджана&quot; п/сл. (Азербайджан) 0,75 л</name>
+				<price>1050</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="720">
+				<category_id>46</category_id>
+				<name>&quot;Букет Азербайджана&quot; п/сл. (Азербайджан) 100 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="721">
+				<category_id>46</category_id>
+				<name>&quot;Букет Азербайджана&quot; п/сл. (Азербайджан) 50 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="722">
+				<category_id>46</category_id>
+				<name>&quot;Матраса&quot; сух (Азербайджан) 0,75 л</name>
+				<price>1050</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="723">
+				<category_id>46</category_id>
+				<name>&quot;Матраса&quot; сух (Азербайджан) 100 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="724">
+				<category_id>46</category_id>
+				<name>&quot;Матраса&quot; сух (Азербайджан) 50 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="725">
+				<category_id>46</category_id>
+				<name>&quot;Гянджа&quot; п/сл. (Азербайджан) 0,75 л</name>
+				<price>1050</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="726">
+				<category_id>46</category_id>
+				<name>&quot;Гянджа&quot; п/сл. (Азербайджан) 100 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="727">
+				<category_id>46</category_id>
+				<name>&quot;Гянджа&quot; п/сл. (Азербайджан) 50 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="728">
+				<category_id>46</category_id>
+				<name>&quot;Девичья Башня&quot; п/сух. (Азербайджан) 0,75 л</name>
+				<price>1050</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="729">
+				<category_id>46</category_id>
+				<name>&quot;Девичья Башня&quot; п/сух. (Азербайджан) 100 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="730">
+				<category_id>46</category_id>
+				<name>&quot;Девичья Башня&quot; п/сух. (Азербайджан) 50 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="731">
+				<category_id>46</category_id>
+				<name>&quot;Каспийский Берег&quot; п/сл. (Азербайджан) 0,75 л</name>
+				<price>1050</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="732">
+				<category_id>46</category_id>
+				<name>&quot;Каспийский Берег&quot; п/сл. (Азербайджан) 100 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="733">
+				<category_id>46</category_id>
+				<name>&quot;Каспийский Берег&quot; п/сл. (Азербайджан) 50 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="734">
+				<category_id>46</category_id>
+				<name>&quot;Семь Красавиц&quot; п/сл. (Азербайджан) 0,75 л</name>
+				<price>1050</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="735">
+				<category_id>46</category_id>
+				<name>&quot;Семь Красавиц&quot; п/сл. (Азербайджан) 100 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="736">
+				<category_id>46</category_id>
+				<name>&quot;Семь Красавиц&quot; п/сл. (Азербайджан) 50 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="737">
+				<category_id>47</category_id>
+				<name>&quot;Хеннеси Х.О.&quot; (Франция) 0,7 л</name>
+				<price>16240</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="738">
+				<category_id>47</category_id>
+				<name>&quot;Хеннеси Х.О.&quot; (Франция) 100 мл</name>
+				<price>2320</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="739">
+				<category_id>47</category_id>
+				<name>&quot;Хеннеси Х.О.&quot; (Франция) 50 мл</name>
+				<price>1160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="740">
+				<category_id>47</category_id>
+				<name>&quot;Хеннеси V.S.O.P&quot;  (Франция) 1 л</name>
+				<price>8000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="741">
+				<category_id>47</category_id>
+				<name>&quot;Хеннеси V.S.O.P&quot;  (Франция) 100 мл</name>
+				<price>800</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="742">
+				<category_id>47</category_id>
+				<name>&quot;Хеннеси V.S.O.P&quot;  (Франция) 50 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="743">
+				<category_id>47</category_id>
+				<name>&quot;Хеннеси V.S.&quot;(Франция) 1 л</name>
+				<price>5000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="744">
+				<category_id>47</category_id>
+				<name>&quot;Хеннеси V.S.&quot;(Франция) 100 мл</name>
+				<price>500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="745">
+				<category_id>47</category_id>
+				<name>&quot;Хеннеси V.S.&quot;(Франция) 50 мл</name>
+				<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="746">
+				<category_id>47</category_id>
+				<name>&quot;Реми Мартен V.S.O.P&quot; (Франция) 1 л</name>
+				<price>6000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="747">
+				<category_id>47</category_id>
+				<name>&quot;Реми Мартен V.S.O.P&quot; (Франция) 100 мл</name>
+				<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="748">
+				<category_id>47</category_id>
+				<name>&quot;Реми Мартен V.S.O.P&quot; (Франция) 50 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="749">
+				<category_id>47</category_id>
+				<name>&quot;Реми Мартен V.S.&quot;(Франция) 1 л</name>
+				<price>4400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="750">
+				<category_id>47</category_id>
+				<name>&quot;Реми Мартен V.S.&quot;(Франция) 100 мл</name>
+				<price>440</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="751">
+				<category_id>47</category_id>
+				<name>&quot;Реми Мартен V.S.&quot;(Франция) 50 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="752">
+				<category_id>47</category_id>
+				<name>&quot;Курвуазье ХО&quot; (Франция) 0,7 л</name>
+				<price>16240</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="753">
+				<category_id>47</category_id>
+				<name>&quot;Курвуазье ХО&quot;(Франция) 100 мл</name>
+				<price>2320</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="754">
+				<category_id>47</category_id>
+				<name>&quot;Курвуазье ХО&quot;(Франция) 50 мл</name>
+				<price>1160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="755">
+				<category_id>47</category_id>
+				<name>&quot;Курвуазье V.S.O.P&quot;  (Франция) 1 л</name>
+				<price>6000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="756">
+				<category_id>47</category_id>
+				<name>&quot;Курвуазье V.S.O.P&quot;  (Франция) 100 мл</name>
+				<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="757">
+				<category_id>47</category_id>
+				<name>&quot;Курвуазье V.S.O.P&quot;  (Франция) 50 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="758">
+				<category_id>47</category_id>
+				<name>&quot;Курвуазье V.S.&quot;(Франция) 1 л</name>
+				<price>4400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="759">
+				<category_id>47</category_id>
+				<name>&quot;Курвуазье V.S.&quot;(Франция) 100 мл</name>
+				<price>440</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="760">
+				<category_id>47</category_id>
+				<name>&quot;Курвуазье V.S.&quot;(Франция) 50 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="761">
+				<category_id>47</category_id>
+				<name>&quot;Мартель ХО&quot;(Франция) 0,7 л</name>
+				<price>16240</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="762">
+				<category_id>47</category_id>
+				<name>&quot;Мартель ХО&quot;(Франция) 100 мл</name>
+				<price>2320</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="763">
+				<category_id>47</category_id>
+				<name>&quot;Мартель ХО&quot;(Франция) 50 мл</name>
+				<price>1160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="764">
+				<category_id>47</category_id>
+				<name>&quot;Мартель V.S.O.P.&quot;(Франция) 1 л</name>
+				<price>6000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="765">
+				<category_id>47</category_id>
+				<name>&quot;Мартель V.S.O.P.&quot;(Франция) 100 мл</name>
+				<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="766">
+				<category_id>47</category_id>
+				<name>&quot;Мартель V.S.O.P.&quot;(Франция) 50 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="767">
+				<category_id>47</category_id>
+				<name>&quot;Мартель V.S.&quot;(Франция) 1 л</name>
+				<price>4400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="768">
+				<category_id>47</category_id>
+				<name>&quot;Мартель V.S.&quot;(Франция) 100 мл</name>
+				<price>440</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="769">
+				<category_id>47</category_id>
+				<name>&quot;Мартель V.S.&quot;(Франция) 50 мл</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="770">
+				<category_id>47</category_id>
+				<name>&quot;Арманьяк Шабо VSOP&quot; 0,7 л</name>
+				<price>4200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="771">
+				<category_id>47</category_id>
+				<name>&quot;Арманьяк Шабо VSOP&quot; 100 мл</name>
+				<price>600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="772">
+				<category_id>47</category_id>
+				<name>&quot;Арманьяк Шабо VSOP&quot; 50 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="773">
+				<category_id>47</category_id>
+				<name>&quot;Баку&quot;(Азербайджан) 0,5 л</name>
+				<price>1300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="774">
+				<category_id>47</category_id>
+				<name>&quot;Баку&quot;(Азербайджан) 100 мл</name>
+				<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="775">
+				<category_id>47</category_id>
+				<name>&quot;Баку&quot;(Азербайджан) 50 мл</name>
+				<price>130</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="776">
+				<category_id>47</category_id>
+				<name>Апшерон (Азербайджан) 0,5 л</name>
+				<price>1300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="777">
+				<category_id>47</category_id>
+				<name>Апшерон&quot; (Азербайджан) 100 мл</name>
+				<price>260</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="778">
+				<category_id>47</category_id>
+				<name>Апшерон&quot; (Азербайджан) 50 мл</name>
+				<price>130</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="779">
+				<category_id>47</category_id>
+				<name>&quot;Ширван&quot;  (Азербайджан) (15 лет) 0,5 л</name>
+				<price>2000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="780">
+				<category_id>47</category_id>
+				<name>&quot;Ширван&quot;  (Азербайджан) (15 лет) 100 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="781">
+				<category_id>47</category_id>
+				<name>&quot;Ширван&quot;  (Азербайджан) (15 лет) 50 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="782">
+				<category_id>47</category_id>
+				<name>&quot;Бабек&quot; (Азербайджан) (5 лет) 0,5 л</name>
+				<price>1800</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="783">
+				<category_id>47</category_id>
+				<name>&quot;Бабек&quot; (Азербайджан)  (5 лет) 100 мл</name>
+				<price>360</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="784">
+				<category_id>47</category_id>
+				<name>&quot;Бабек&quot; (Азербайджан)  (5 лет) 50 мл</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="785">
+				<category_id>47</category_id>
+				<name>&quot;Бабек&quot; (Азербайджан)  (7 лет) 0,5 л</name>
+				<price>2000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="786">
+				<category_id>47</category_id>
+				<name>&quot;Бабек&quot; (Азербайджан)  (7 лет) 100 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="787">
+				<category_id>47</category_id>
+				<name>&quot;Бабек&quot; (Азербайджан)  (7 лет) 50 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="788">
+				<category_id>47</category_id>
+				<name>&quot;Ани&quot; (Армения) 0,5 л</name>
+				<price>2000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="789">
+				<category_id>47</category_id>
+				<name>&quot;Ани&quot; (Армения) 100 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="790">
+				<category_id>47</category_id>
+				<name>&quot;Ани&quot; (Армения) 50 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="791">
+				<category_id>47</category_id>
+				<name>&quot;Арарат&quot; (Армения) 0,5 л</name>
+				<price>1600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="792">
+				<category_id>47</category_id>
+				<name>&quot;Арарат&quot; (Армения) 100 мл</name>
+				<price>320</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="793">
+				<category_id>47</category_id>
+				<name>&quot;Арарат&quot; (Армения) 50 мл</name>
+				<price>160</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="794">
+				<category_id>48</category_id>
+				<name>Шампанское &quot;Российское&quot;, п/сл. (Россия) 0,75 л</name>
+				<price>700</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="795">
+				<category_id>48</category_id>
+				<name>Шампанское &quot;Российское&quot;, п/сл. (Россия) 100 мл</name>
+				<price>700</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="796">
+				<category_id>48</category_id>
+				<name>Шампанское &quot;Российское&quot;, п/сл. (Россия) 50 мл</name>
+				<price>700</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="797">
+				<category_id>48</category_id>
+				<name>Вино игристое &quot;Кюве Жан Луи&quot;  п/сух. 0,75 л</name>
+				<price>900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="798">
+				<category_id>48</category_id>
+				<name>Вино игристое &quot;Кюве Жан Луи&quot;  п/сух. 100 мл</name>
+				<price>900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="799">
+				<category_id>48</category_id>
+				<name>Вино игристое &quot;Кюве Жан Луи&quot;  п/сух. 50 мл</name>
+				<price>900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="800">
+				<category_id>48</category_id>
+				<name>Мондоро Асти (Италия) 0,75 л</name>
+				<price>1900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="801">
+				<category_id>48</category_id>
+				<name>Мондоро Асти (Италия) 100 мл</name>
+				<price>1900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="802">
+				<category_id>48</category_id>
+				<name>Мондоро Асти (Италия) 50 мл</name>
+				<price>1900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="803">
+				<category_id>48</category_id>
+				<name>Мартини Асти Спуманте (Италия) 0,75 л</name>
+				<price>1900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="804">
+				<category_id>48</category_id>
+				<name>Мартини Асти Спуманте (Италия) 100 мл</name>
+				<price>1900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="805">
+				<category_id>48</category_id>
+				<name>Мартини Асти Спуманте (Италия) 50 мл</name>
+				<price>1900</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="806">
+				<category_id>48</category_id>
+				<name>Моет Шандон брют Империал (Франция) 0,75 л</name>
+				<price>4500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="807">
+				<category_id>48</category_id>
+				<name>Моет Шандон брют Империал (Франция) 100 мл</name>
+				<price>4500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="808">
+				<category_id>48</category_id>
+				<name>Моет Шандон брют Империал (Франция) 50 мл</name>
+				<price>4500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="809">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Куантро&quot; &quot;Cointreau&quot; 1 л</name>
+				<price>3000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="810">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Куантро&quot; &quot;Cointreau&quot; 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="811">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Куантро&quot; &quot;Cointreau&quot; 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="812">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Калуа&quot; &quot;Kahlua&quot; 1 л</name>
+				<price>3000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="813">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Калуа&quot; &quot;Kahlua&quot; 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="814">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Калуа&quot; &quot;Kahlua&quot; 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="815">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Бейлиз Айриш Крим&quot; &quot;Bailey`s Irish Cream&quot; 1 л</name>
+				<price>3000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="816">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Бейлиз Айриш Крим&quot; &quot;Bailey`s Irish Cream&quot; 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="817">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Бейлиз Айриш Крим&quot; &quot;Bailey`s Irish Cream&quot; 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="818">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Лимончелло и Сичильяни&quot; 0,5 л</name>
+				<price>1250</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="819">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Лимончелло и Сичильяни&quot; 100 мл</name>
+				<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="820">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Лимончелло и Сичильяни&quot; 50 мл</name>
+				<price>125</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="821">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Самбука&quot; (Италия) 1 л</name>
+				<price>3000</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="822">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Самбука&quot; (Италия) 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="823">
+				<category_id>49</category_id>
+				<name>Ликер &quot;Самбука&quot; (Италия) 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="824">
+				<category_id>49</category_id>
+				<name>Джин &quot;Бомбей&quot; 0,75 л</name>
+				<price>2250</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="825">
+				<category_id>49</category_id>
+				<name>Джин &quot;Бомбей&quot; 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="826">
+				<category_id>49</category_id>
+				<name>Джин &quot;Бомбей&quot; 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="827">
+				<category_id>49</category_id>
+				<name>Джин &quot;Бифиттер&quot; 0,75 л</name>
+				<price>2250</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="828">
+				<category_id>49</category_id>
+				<name>Джин &quot;Бифиттер&quot; 100 мл</name>
+				<price>300</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="829">
+				<category_id>49</category_id>
+				<name>Джин &quot;Бифиттер&quot; 50 мл</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="830">
+				<category_id>50</category_id>
+				<name>&quot;Жигули Барное&quot; 0,5 л</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="831">
+				<category_id>50</category_id>
+				<name>&quot;Жигули Барное&quot; 0,3 л</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="832">
+				<category_id>50</category_id>
+				<name>&quot;Будвайзер&quot; 0,5 л</name>
+				<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="833">
+				<category_id>50</category_id>
+				<name>&quot;Будвайзер&quot; 0,3 л</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="834">
+				<category_id>50</category_id>
+				<name>&quot;Ойттингер Пилс&quot; 0,5 л</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="835">
+				<category_id>50</category_id>
+				<name>&quot;Ойттингер Пилс&quot; 0,3 л</name>
+				<price>135</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="836">
+				<category_id>50</category_id>
+				<name>&quot;Францисканер Вайс&quot; н/ф 0,5 л</name>
+				<price>330</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="837">
+				<category_id>50</category_id>
+				<name>&quot;Францисканер Вайс&quot; н/ф 0,3 л</name>
+				<price>220</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="838">
+				<category_id>50</category_id>
+				<name>&quot;Будвайзер&quot; темный 0,33 л</name>
+				<price>180</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="839">
+				<category_id>50</category_id>
+				<name>&quot;Миллер&quot; 0,33 л</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="840">
+				<category_id>50</category_id>
+				<name>&quot;Клаустайлер&quot; безалкогольное 0,33 л</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="841">
+				<category_id>51</category_id>
+				<name>&quot;Мохито Классический&quot; (ром, лайм, мята, спрайт, Сироп &quot;Лайм&quot;) 300 мл</name>
+				<price>350</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="842">
+				<category_id>51</category_id>
+				<name>&quot;Мохито безалкогольный&quot; (лайм, мята, спрайт, Сироп &quot;Лайм&quot;) 300 мл</name>
+				<price>250</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="843">
+				<category_id>51</category_id>
+				<name>&quot;Пиноколада&quot; (ром, ликер &quot;Малибу&quot;, сок апельсиновый, сливки) 300 мл</name>
+				<price>350</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="844">
+				<category_id>51</category_id>
+				<name>&quot;Отвертка&quot; (сок апельсиновый, водка) 150 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="845">
+				<category_id>51</category_id>
+				<name>&quot;Мартини Джус&quot; (сок апельсиновый, мартини) 150 мл</name>
+				<price>140</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="846">
+				<category_id>51</category_id>
+				<name>&quot;Кровавая Мэри&quot; (сок томатный, водка) 150 мл</name>
+				<price>70</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="847">
+				<category_id>51</category_id>
+				<name>&quot;Б-52&quot; (ликеры &quot;Калуа&quot;, &quot;Куантро&quot;, &quot;Бейлис&quot;) 50 мл</name>
+				<price>200</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="848">
+				<category_id>51</category_id>
+				<name>&quot;Ширваншах&quot; (лайм, киви, водка, сироп &quot;Кислое яблоко&quot;, вода) 260 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="849">
+				<category_id>51</category_id>
+				<name>&quot;Яблочно карамельный тини&quot; (сироп &quot;Карамель&quot;, водка, сироп &quot;Яблоко&quot;, сок ананасовый, яблоки, сахар) 120 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="850">
+				<category_id>51</category_id>
+				<name>&quot;Клубничный Мохито&quot; (ром, лайм, мята, вода, сироп &quot;Клубника&quot;, Сироп &quot;Лайм&quot;, клубника) 220 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="851">
+				<category_id>51</category_id>
+				<name>&quot;Сказки Востока&quot; (ром, сок ананасовый, сок апельсиновый, сироп &quot;Лайм&quot;, грунадин. Физалис) 280 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="852">
+				<category_id>51</category_id>
+				<name>&quot;Песочные замки&quot; (сок персиковый, молоко, сироп &quot;Шоколадное печенье&quot;, сироп &quot;Ваниль&quot;, печенье, сироп &quot;Шоколад&quot;, взбитые сливки)  228 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="853">
+				<category_id>51</category_id>
+				<name>&quot;Арбузная Колада&quot; (ром, сок ананасовый, сироп &quot;Пина Колада&quot;, сироп &quot;Арбузный&quot;, ананас) 250 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="854">
+				<category_id>51</category_id>
+				<name>&quot;1000 и одна ночь&quot; (сок апельсиновый, сок ананасовый, гренадин, сироп &quot;Мандарин&quot;, апельсин, вишня коктейльная) 240 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="855">
+				<category_id>51</category_id>
+				<name>&quot;Восточный сад&quot; (пюре &quot;Клубника&quot;, сок персиковый, ром, базикик) 165 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="856">
+				<category_id>51</category_id>
+				<name>&quot;Фикус&quot; (мороженое, молоко, сироп &quot;Зеленая мята&quot;, сливки, мята) 204 мл</name>
+				<price>400</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="857">
+				<category_id>52</category_id>
+				<name>Арахис жаренный 50 гр</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="858">
+				<category_id>52</category_id>
+				<name>Фисташки 40 гр</name>
+				<price>80</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="859">
+				<category_id>52</category_id>
+				<name>Сыр Чечил (косичка) 100 гр</name>
+				<price>150</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="860">
+				<category_id>52</category_id>
+				<name>Горох Нут 150 гр</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="861">
+				<category_id>52</category_id>
+				<name>Креветки отварные 200 гр</name>
+				<price>190</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="862">
+				<category_id>53</category_id>
+				<name>Parliament Парламент</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="863">
+				<category_id>53</category_id>
+				<name>Parliament Lights Парламент лайт</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="864">
+				<category_id>53</category_id>
+				<name>Parliament Extra Lights Парламент экстра лайтс</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="865">
+				<category_id>53</category_id>
+				<name>Parliament Super Slims Парламент супер слим</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="866">
+				<category_id>53</category_id>
+				<name>Davidoff Давидофф</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="867">
+				<category_id>53</category_id>
+				<name>Davidoff Light Давидофф лайт</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="868">
+				<category_id>53</category_id>
+				<name>Davidoff Slim Classic Давидофф слим классик</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="869">
+				<category_id>53</category_id>
+				<name>Davidoff Slim Lights Давидофф слим лайт</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="870">
+				<category_id>53</category_id>
+				<name>Marlboro Lights Мальборо лайт</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="871">
+				<category_id>53</category_id>
+				<name>Marlboro Мальборо</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="872">
+				<category_id>53</category_id>
+				<name>Kent №1 Кент №1</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="873">
+				<category_id>53</category_id>
+				<name>Kent №4 Кент №4</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="874">
+				<category_id>53</category_id>
+				<name>Kent №8 Кент №8</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="875">
+				<category_id>53</category_id>
+				<name>Vogue Вог</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="876">
+				<category_id>53</category_id>
+				<name>Vogue Menthol Вог Ментол</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="877">
+				<category_id>53</category_id>
+				<name>ESSE в ассортименте</name>
+				<price>100</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="878">
+				<category_id>54</category_id>
+				<name>&quot;Bosshner&quot; &quot;Бошнер&quot;</name>
+				<price>1500</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="879">
+				<category_id>54</category_id>
+				<name>&quot;Bosshner Ambassador&quot;  &quot;Бошнер Амбассадор&quot;</name>
+				<price>1600</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="880">
+				<category_id>54</category_id>
+				<name>&quot;Bosshner Cherchil&quot;      &quot;Бошнер Черчиль&quot;</name>
+				<price>1800</price>
+				<byWeight>false</byWeight>
+			</product>
+			<product id="881">
+				<category_id>54</category_id>
+				<name>&quot;Cohiba Piramides&quot;  &quot;Кохиба Пирамидес&quot;</name>
+				<price>1100</price>
+				<byWeight>false</byWeight>
+			</product>
+		</products>
+    </delivery_service>
+</dc_catalog>

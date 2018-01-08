@@ -1,0 +1,52 @@
+title: Заявки
+complex: 1
+actions:
+  show: [Просмотреть заявку, Просмотр заявки]
+  show_requests_to_order: [Просмотреть заявку, Просмотр заявки]
+  list: [Просмотреть заявки, Просмотр заявок]
+  list_requests_to_order: [Просмотреть заявки, Просмотр заявок под заказ]
+
+  show_payment_method: [Просмотреть способ оплаты, Просмотр способа оплаты]
+  list_payment_methods: [Просмотреть способы оплаты, Просмотр способов оплаты, [delete_payment_method]]
+  add_payment_method: [Добавить способ оплаты, Добавление способа оплаты, Способ оплаты успешно добавлен, Способ оплаты добавить не удалось, '[root_url]requests/list_payment_methods/']
+  modify_payment_method:
+    - Редактировать способ оплаты
+    - Редактирование способа оплаты
+    - Способ оплаты успешно отредактирован
+    - Способ оплаты отредактировать не удалось
+    - '[root_url]requests/list_payment_methods/'
+  delete_payment_method: [Удалить способ оплаты, Удаление способа оплаты, Способ оплаты успешно удален, Способ оплаты удалить не удалось, '[root_url]requests/list_payment_methods/', 'Вы уверены что хотите удалить этот способ оплаты?']
+
+  show_requests_statuses: [Просмотреть статуы, Просмотр статуса]
+  list_requests_statuses: [Просмотреть статусы, Просмотр статусов, [delete_requests_statuses]]
+  add_requests_statuses: [Добавить статус, Добавление статуса, Статус успешно добавлен, Статус добавить не удалось, '[root_url]requests/list_requests_statuses/']
+  modify_requests_statuses: [Редактировать статус, Редактирование статуса, Статус успешно отредактирован, Статус отредактировать не удалось, '[root_url]requests/list_requests_statuses/']
+  delete_requests_statuses: [Удалить статус, Удаление статуса, Статус успешно удален, Статус удалить не удалось, '[root_url]requests/list_requests_statuses/', 'Вы уверены что хотите удалить статус?']
+  
+list_actions:
+  inline:
+    requests:
+      id: {title: show, link: 'requests/show/id/[id]'}
+      show: {link: 'requests/show/id/[id]', put: {id: before}, icon: show}
+    requests_to_order:
+      id: {title: 'show_requests_to_order', link: 'requests/show_requests_to_order/id/[id]'}
+      show_requests_to_order: {link: 'requests/show_requests_to_order/id/[id]', put: {id: before}, icon: show}
+    payment_methods:
+      show_payment_method: {link: 'requests/show_payment_method/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_payment_method, link: 'requests/modify_payment_method/id/[id]'}
+      delete_payment_method: {link: 'requests/delete_payment_method/id/[id]', icon: delete}
+    requests_statuses:
+      show_requests_statuses: {link: 'requests/show_requests_statuses/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_requests_statuses, link: 'requests/modify_requests_statuses/id/[id]'}
+      delete_requests_statuses: {link: 'requests/delete_requests_statuses/id/[id]', icon: delete}
+  after:
+    payment_methods:
+      add_payment_method: 'requests/add_payment_method'
+    requests_statuses:
+      add_requests_statuses: 'requests/add_requests_statuses'
+
+noContent:
+  payment_methods: Поставщиков не найдено
+  requests: Заявок не найдено
+  requests_to_order: Заявок не найдено
+  requests_statuses: Заявок не найдено

@@ -1,0 +1,35 @@
+tables:
+  employees2:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1, am: {type: integer}}
+      fio: {type: tinytext, notnull: 1, am: {type: string, req: 1, title: ФИО}}
+      image: {type: tinytext, am: {type: image, title: Фотография}}
+      post: {type: tinytext, notnull: 1, am: {type: string, req: 1, title: Должность}}
+      intro: {type: text, notnull: 0, am: {type: shtml, req: 0, title: Краткое описание}}
+      content: {type: text, notnull: 1, am: {type: html, htmltype: html, req: 1, title: Полное описание}}
+      hidden: {type: "enum('yes','no')", default: 'no', notnull: 1, am: {type: string, title: Скрытый, otitle: Скрыть, htmltype: checkbox, default: 'no', checked: 'yes', values: {no: нет, yes: да}}}
+      pos: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer, htmltype: hidden}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, fio, post, hidden, image]
+      show: [id, fio, post, intro, content, hidden, image]
+      modify: [fio, post, intro, content, hidden, image]
+      add: [pos, fio, post, intro, content, hidden, image]
+      employees: [id, fio, post, image, intro, content]
+      employee: [fio, post, image, intro, content]
+    images:
+      image:
+        small: {w: 100, h: 150, ratio: 'x', cut: 1}
+    paging:
+      npp: 20
+      css_class: 'paging'
+      base_url: ''
+      url_append: ''
+      separator: ' '
+      linkcount: 10
+      first: ''
+      prev: ''
+      next: ''
+      last: ''
+      skip: ' ... '

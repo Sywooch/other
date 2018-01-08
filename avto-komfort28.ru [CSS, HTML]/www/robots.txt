@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:/templates/
+Disallow:/search.php
+Host:avto-komfort28.ru
+Sitemap: http://avto-komfort28.ru/sitemap.xml

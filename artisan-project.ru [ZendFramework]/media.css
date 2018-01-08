@@ -1,0 +1,935 @@
+/*************************B**********************1170*/
+@media (max-width: 1170px) {
+    
+}
+
+/***************************B********************970*/
+@media (max-width: 970px) {
+	
+	.novajaZajavka .basement .buttons{
+	padding-left:0px;	
+	}
+	
+	.personal_table{
+	padding-left:20px;	
+	}
+	
+	.otgruzkiPage.otgruzkiSecond .queue .buttons{
+	padding-left:0px;	
+	}
+	
+	.navigation .dropMenu .dropped{
+	padding-left:20px;
+	padding-right:20px;	
+	}
+	
+	.container_feed{
+	width:calc(100% - 40px) !important;
+	padding-left:20px;
+	padding-right:20px;	
+	}
+	
+	.container_feed .feed{
+	width:100% !important;	
+	}
+	
+	.lichnyeDannye .mainPart p{
+	padding-left:20px;
+	padding-right:20px;	
+	}
+	
+	.lichnyeDannye .mainPart form{
+	padding-left:20px;
+	padding-right:20px;	
+	}
+	
+	/*.lichnyeDannye .passwordBlock{
+	padding-left:20px;
+	padding-right:20px;	
+	}*/
+	.lichnyeDannye .togglePassword{
+	margin-left:20px;	
+	}
+	
+	
+	.otgruzkiPage .queue{
+	padding-left:20px;
+	padding-right:20px;	
+	}
+	
+	.otgruzkiPage .shipped{
+	padding-left:20px;
+	padding-right:20px;	
+	}
+
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .jq-selectbox.jqselect {
+        width: 157px;
+    }
+
+    .zajavki .filter .lastButton {
+        margin-top: 20px;
+    }
+    
+    .header.zeroBox {
+        width: auto;
+    }
+    
+    .header {
+        padding: 10px 20px;
+    }
+    
+    .navigation {
+        min-width: inherit;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+    
+    .navigation .zeroBox {
+        width: auto;
+        padding: 0;
+    }
+    
+    .navigation .nav {
+        display: none;
+    }
+    
+    .dropMenu {
+        display: block;
+    }
+    
+    .footer .zeroBox {
+        width: auto;
+        border-top: 1px solid #d6dae1;
+    }
+    
+    .footer p {
+        border: none;
+    }
+    
+    /************************************************lichnyeDannye*/
+    .lichnyeDannye .mainPart.zeroBox {
+        width: auto;
+    }
+    /************************end************************lichnyeDannye*/
+    /*********************************zajavki*/
+    .zajavki .mainPart.zeroBox {
+        width: auto
+    }
+    
+    .zajavki .mainPart h1 {
+        padding-left: 20px;
+    }
+    
+    .zajavki .filter {
+        padding-left: 20px;
+    }
+    
+    .zajavki .claimPopUp h1 {
+        font-size: 24px;
+        padding-left: 0;
+    }
+    
+    .zajavki .claimPopUp .adminComment,
+    .zajavki .claimPopUp .comment {
+        margin-bottom: 15px;
+    }
+    
+    .zajavki .claimPopUp ol li {
+        margin-bottom: 20px;
+    }
+    
+    .zajavki .claimPopUp ol {
+        margin-bottom: 30px;
+    }
+    
+    .zajavki.novajaZajavka .filter li {
+        width: 40%;
+    }
+    
+    .novajaZajavka .basement .itemsBox .filter .f {
+        margin-top: 20px;
+    }
+    
+    .novajaZajavka .basement .itemsBox .filter select {
+        width: 171px;
+    }
+    /**************end*******************zajavki*/
+    /********************main*/
+    .mainPart.zeroBox {
+        width: auto;
+    }
+    
+    .mainPart h1 {
+        padding-left: 16px;
+    }
+    
+    .oneClaim .answer {
+        width: 80%;
+    }
+    
+    .oneClaim .ask {
+        width: 70%;
+    }
+    /*****************end main*/
+    
+    .novajaZajavka .mainPart form .comment {
+        padding-left: 20px;
+    }
+    
+    .novajaZajavka .mainPart form textarea {
+        margin-left: 20px;
+        width: 80%;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .shippingList {
+        padding-left: 20px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:last-child .date {
+        float: none;
+        margin-bottom: 15px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:last-child .date br {
+        display: none;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:first-child {
+        width: auto;
+        margin-right: 30px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .buttons p {
+        float: none;
+        margin-top: 15px;
+        margin-right: 0;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .buttons {
+        padding-left: 0;
+    }
+
+    .zajavki.novajaZajavka .ff input[type="text"] {
+        width: 96.5%;
+    }
+}
+
+@media (max-width: 970px) { 
+    .zajavki .identificator .claimPopUp {
+        width: auto;
+        padding-right: 30px;
+        /*height: 250px;*/
+        top: -369%;
+        padding-top: 25px;
+    }
+
+    .zajavki .identificator .claimPopUp:after {
+        top: 140px;
+    }
+
+    .zajavki .identificator .claimPopUp .box {
+        margin-right: 0;
+    }
+
+    .zajavki .identificator .claimPopUp .closeButton {
+        top: 6px;
+        right: 6px;
+    }
+
+    /*.zajavki .identificator .claimPopUp .wrap {
+        height: 250px;
+    }*/
+
+    .zajavki .identificator .claimPopUp .mCSB_scrollTools .mCSB_draggerContainer {
+        top: 32px;
+    }
+
+    .zajavki .identificator .claimPopUp .name {
+        font-size: 20px;
+    }
+
+    .zajavki.novajaZajavka .ff input[type="text"] {
+        width: 95.5%;
+    }
+}
+
+@media (max-width: 906px) { 
+    .header .box:nth-child(2) {
+        float: right;
+    }
+    
+    .header .box:nth-child(2),
+    .header .box:nth-child(3) {
+        width: 350px;
+    }
+    
+    .header .box:nth-child(2) .block:last-child,
+    .header .box:nth-child(3) .block:last-child {
+        float: right;
+    }
+
+    .zajavki .identificator .claimPopUp .name {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .zajavki.novajaZajavka .ff input[type="text"] {
+        width: 95.5%;
+    }
+}
+
+/***********************************************839*/
+@media (max-width: 839px) {
+    .zajavki.novajaZajavka .item .shippingInfo .box:nth-child(2) {
+        float: none;
+    }
+    
+    .zajavki.novajaZajavka li.js .item .removeFromList  {
+        right: 10px;
+    }
+    
+    .novajaZajavka .adding .item .shippingInfo .formPrice {
+        width: auto;
+    }
+    
+    .novajaZajavka .adding .item .block {
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .novajaZajavka .basement .itemsBox .filter span {
+        margin-right: 0;
+    }
+
+    .novajaZajavka .showHidePicsParent .imit {
+        left: auto;
+        right: 160px;
+    }   
+
+    .zajavki .identificator .claimPopUp .name {
+        font-size: 16px;
+    } 
+
+    .zajavki.novajaZajavka .ff input[type="text"] {
+        width: 95.5%;
+    }
+
+    
+}
+
+@media (max-width: 795px) { 
+
+    .zajavki .identificator .claimPopUp .firstTable td:first-child {
+        width: 144px;
+    }
+
+    .zajavki .identificator .claimPopUp {
+        width: 320px;
+    }
+
+    .zajavki .identificator .claimPopUp .tableWrap {
+        overflow: auto;
+        width: 100%;
+    }
+
+    .zajavki .identificator .claimPopUp table {
+        width: 531px;
+    }
+
+    .zajavki.novajaZajavka .ff input[type="text"] {
+        width: 95.5%;
+    }
+}
+
+/***************************B********************750*/
+@media (max-width: 750px) {
+    /*********************************zajavki*/
+    .zajavki .filter li {
+        width: 40%;
+    }
+
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .jq-selectbox li {
+        width: 80% !important;
+    }
+
+
+    
+    .zajavki .filter li select {
+        width: 100%;
+    }
+    
+    .zajavki .filter li input {
+        width: 95%;
+    }
+
+    .jq-selectbox li {
+        width: 88% !important;
+    }
+
+    .zajavki .filter li:first-child {
+        width: 40%; 
+    }
+
+    .jq-selectbox {
+        width: 100%;
+    }
+
+    .otgruzkiPage.otgruzkiSecond .jq-selectbox {
+        width: 213px;
+    }
+
+    .otgruzkiPage.otgruzkiSecond .jq-selectbox:last-child {
+        margin-bottom: 23px;
+    }
+    
+    .zajavki .filter .f {
+        margin-top: 30px;
+    }
+    
+    .zajavki .filter li:last-child a {
+        text-align: center;
+    }
+    
+    .zajavki.novajaZajavka .filter li {
+        width: 35%;
+    }
+    
+    .novajaZajavka .basement .itemsBox {
+        padding-left: 0;
+    }
+    
+    .novajaZajavka .basement .itemsBox .filter li:nth-child(2) {
+        margin-right: 0;
+    }
+    
+    /**************end*******************zajavki*/
+    /************************main**********/
+    .oneClaim .mainPart form textarea {
+        width: 80%;
+        height: 120px;
+    }
+    /*******end*****************main**********/
+    
+    .otgruzkiPage.otgruzkiSecond .queue .bill .inputs .sum.block {
+        margin-right: 0;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:first-child {
+        float: none;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:first-child span {
+        margin-bottom: 15px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box {
+        float: none;
+        width: auto;
+        padding-bottom: 25px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 span.comment {
+        margin-bottom: 15px;
+        float: none;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 textarea {
+        width: 74%;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .ui-datepicker-inline {
+        width: 308px;
+    }
+}
+
+@media (max-width: 657px) {
+    .zajavki .identificator .claimPopUp .name {
+        font-size: 15px;
+    } 
+
+    .zajavki .identificator .claimPopUp table p {
+        font-size: 14px;
+        padding-bottom: 15px;
+    }
+
+    .zajavki .claimPopUp td {
+        padding-left: 8px;
+    }
+
+    .jq-selectbox li {
+        width: 88% !important;
+    }
+}
+    
+@media (max-width: 608px) {
+    .header .box:first-child {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    
+    .header .box:first-child .imgWrap {
+        width: 171px;
+        margin: 0 auto;
+    }
+    
+    .header .box:nth-child(2),
+    .header .box:nth-child(3) {
+        width: 300px;
+        margin: 5px auto;
+        float: none;
+    }
+    
+    .header .box:nth-child(2) .block:first-child,
+    .header .box:nth-child(3) .block:first-child {
+        margin-right: 20px;
+    }
+    
+    .header .box:nth-child(3) .block:last-child {
+        margin-left: 0;
+    }
+    
+    .header .box:nth-child(3) .block:first-child a {
+        font-size: 15px;
+    }
+
+    .zajavki .identificator .claimPopUp table td:first-child {
+        width: 144px;
+    }
+
+    .zajavki .identificator .claimPopUp .wrap {
+        height: 300px;
+    }
+
+    .zajavki .identificator .claimPopUp.last {
+        top: -440%;
+    }
+
+    .zajavki .identificator .claimPopUp.last:after {
+        top: 164px;
+    }
+
+    .jq-selectbox li {
+        width: 87% !important;
+        min-width: 0 !important;
+    }
+
+}
+
+@media (max-width: 565px) {
+    .zajavki .identificator .claimPopUp {
+        left: auto;
+        right: 0;
+    }
+
+    .zajavki .identificator .claimPopUp:after {
+        display: none;
+    }
+
+    .zajavki.novajaZajavka .jq-selectbox li {
+        width: 80% !important;
+    }
+
+}
+
+
+
+/***************************B********************524*/
+@media (max-width: 524px) {
+    
+    /************************************************lichnyeDannye*/
+
+    .zajavki .filter li:first-child {
+        width: 69%; 
+    }
+
+    
+
+    .lichnyeDannye .mainPart form {
+        text-align: center;
+    }
+    
+    .lichnyeDannye .mainPart table.mainData,
+    .lichnyeDannye .passwordData {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        border-spacing: 5px;
+    }
+    
+    .lichnyeDannye .mainPart form[name="mainData"] input[type="submit"] {
+        margin-left: 0;
+    }
+    
+    .lichnyeDannye table td:last-child input {
+        width: 97%;
+    }
+    
+    .lichnyeDannye table td:first-child {
+        width: auto;
+    }
+    
+    .lichnyeDannye .passwordData td:first-child {
+        width: 164px;
+    }
+    
+    .lichnyeDannye .passwordBlock input[type="submit"] {
+        margin-left: 0;
+    }
+    
+    .lichnyeDannye .passwordBlock {
+        text-align: center;
+    }
+    /************************end************************lichnyeDannye*/
+    /*********************************zajavki*/
+    .zajavki h1 {
+        display: block;
+    }
+    
+    .zajavki .mainPart .buttonOrange {
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+    
+    .zajavki .filter ul li {
+        display: block;
+        width: 70%;
+        min-width: 238px;
+    }
+    
+    #ui-datepicker-div {
+        width: 228px;
+    }
+    
+    .zajavki .identificator .claimPopUp .closeButton {
+        height: 19px;
+        width: 19px;
+        background-size: contain;
+    }
+    
+    .zajavki .identificator .claimPopUp {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .zajavki .claimPopUp h1 {
+        font-size: 18px;
+    }
+
+
+    
+    .mainPart .change {
+        background-size: contain;
+    }
+    
+    .novajaZajavka .adding .types li {
+        padding: 9px;
+    }
+    
+    .novajaZajavka .basement .itemsBox .filter select {
+        width: 141px;
+    }
+    
+    .novajaZajavka .basement .itemsBox .filter input {
+        width: 128px;
+    }
+
+    .zajavki.novajaZajavka .filter li {
+        width: 100%; 
+    }
+
+    .novajaZajavka .jq-selectbox {
+        width: 172px;
+    }
+
+    .zajavki.novajaZajavka .basement .itemsBox .filter input {
+        width: 160px;
+    }
+
+
+    
+    .zajavki.novajaZajavka .filter li {
+        min-width: auto;
+        display: inline-block;
+    }
+    
+    .zajavki.novajaZajavka .filter li p {
+        width: 100%;
+        
+    }
+    
+    /**************end*******************zajavki*/
+    /********************main*/
+    .oneClaim .answer {
+        width: 95%;
+    }
+    
+    .oneClaim .ask {
+        width: 95%;
+    }
+    
+    .oneClaim .message {
+        padding-bottom: 14px;
+    }
+    
+    .claim textarea {
+        width: 84%;
+    }
+    
+    .claim p {
+        width: 80%;
+        margin-right: 0;
+        padding-left: 0;
+    }
+    
+    .claim form {
+        padding-left: 20px;
+    }
+    
+    .mainPart input[type="submit"] {
+        margin-left: 0;
+    }
+    
+    .claim h1 {
+        font-size: 30px;
+    }
+    
+    /*****************end main*/
+    
+    .novajaZajavka .basement .buttons .button {
+        margin-right: 10px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.alert p.warning {
+        width: auto;
+        text-align: left;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .step2 .bill .inputs .block {
+        margin-right: 10px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .step2 .bill .inputs input[type="number"] {
+        width: 50px;
+    }
+    
+    .otgruzkiPage h1 {
+        display: block;
+    }
+    
+    .otgruzkiPage .mainPart .buttonOrange {
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+    
+    .otgruzkiPage .queue,
+    .otgruzkiPage .shipped,
+    .otgruzkiPage .oldestShipped {
+        padding: 20px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .imit {
+        width: 16px;
+        height: 16px;
+    }
+    
+}
+/***************************B********************474*/
+@media (max-width: 474px) {
+    .zajavki.novajaZajavka .filter li {
+        display: block;
+        width: 70%;
+    }
+    
+    .novajaZajavka .basement .itemsBox .filter select {
+        width: 171px;
+    }
+    
+    .novajaZajavka .basement .itemsBox .filter input {
+        width: 160px;
+    }
+
+    .novajaZajavka .jq-selectbox {
+        width: 173px;
+    }
+    
+    .novajaZajavka .basement .buttons {
+        padding-left: 0;
+        text-align: center;
+        line-height: 3em;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .mainPart h1 {
+        font-size: 24px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .mainPart .queue h1 {
+        font-size: 17px;
+        padding-left: 0;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue {
+        padding: 10px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .shippingInfo {
+        margin-left: 24px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .step2 .bill .inputs input[type="number"] {
+        width: 43px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:first-child {
+        margin-right: 0;
+    }
+    
+    
+}
+
+@media (max-width: 460px) {
+
+    .novajaZajavka .adding .item .calculate .block {
+        float: none;
+    }
+
+    .novajaZajavka .adding .js .item .calculate .block {
+        /*width: 100%;*/
+        float: left;
+    }
+
+}
+
+
+@media (max-width: 407px) {
+    .zajavki .identificator .claimPopUp {
+        width: 100%;
+        right: -10px;
+    }
+
+    .novajaZajavka .adding .js .item .calculate .block {
+        /*width: 100%;*/
+        float: none;
+    }
+
+}
+
+@media (max-width: 384px) {
+    .zajavki .identificator .claimPopUp .firstTable td {
+        width: 100%;
+    }
+
+    
+}
+    
+    /***************************B********************369*/
+@media (max-width: 369px) {
+    .otgruzkiPage.otgruzkiSecond .ui-datepicker-inline {
+        width: 250px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:first-child span br {
+        display: none;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:first-child span {
+        display: block;
+        margin: 9px 0;
+        width: auto;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:first-child span:last-child {
+        margin-bottom: 20px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:first-child select.last {
+        margin-top: 9px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 .box:first-child select {
+        width: 256px;
+    }
+    
+    .otgruzkiPage.otgruzkiSecond .queue.step3 textarea {
+        width: 249px;
+    }
+    
+    .zajavki .filter ul li {
+        margin-right: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    
+}
+
+/***************************B********************320*/
+@media (max-width: 318px) {
+
+    body {
+        width: 336px;
+        overflow: visible;
+    }
+    
+}
+
+
+
+.container_feed{
+width:100%;
+height:60px;
+border-top:1px #a9afb2 solid;
+border-bottom:1px #a9afb2 solid;
+box-shadow: 0 0 10px rgba(0, 0, 0, .1) inset; 		
+    background-color: #FF9F00;
+	text-align:center;
+}
+
+.container_feed .feed{
+width: 940px;
+margin-left:auto;
+margin-right:auto;
+height:100%;
+text-align:left;
+	
+}
+
+.container_feed .feed li{
+float:left;
+margin-right:20px;	
+}
+
+
+.container_feed .feed li a{
+font-size: 16px;
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+	display:block;
+	width:100%;
+	margin-top:9px;
+font-weight:bold;
+}
+
+
+.container_feed .feed li span{
+
+color: #fff;
+font-size:12px;
+display:block;
+    line-height: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+title: Сотрудники
+complex: 1
+
+actions:
+  show: [Просмотреть сотрудника, Просмотр сотрудника]
+  list: [Просмотреть сотрудников, Просмотр сотрудников, [delete]]
+  add: [Добавить сотрудника, Добавление сотрудника, Сотрудник успешно добавлен, Сотрудника добавить не удалось]
+  add_otdel: [Добавить отдел, Добавление отдела, Отдел успешно добавлен, Отдел добавить не удалось,'[root_url]employees/list_employees_otdels/']
+  modify: [Редактировать сотрудника, Редактирование сотрудника, Сотрудник успешно отредактирован, Сотрудника отредактировать не удалось]
+  delete: [Удалить сотрудника, Удаление сотрудника, Сотрудник успешно удален, Сотрудника удалить не удалось, '', Вы уверены что хотите удалить сотрудника?]
+  list_employees_contacts: [Просмотреть список сотрудников, Просмотр списка сотрудников]
+  add_contact: [Добавить отдел, Добавление отдела, Отдел успешно добавлен, Отдел добавить не удалось,'[root_url]employees/list_contacts/']
+  add_employees_contact: [Добавить сотрудника, Добавление сотрудника, Сотрудник успешно добавлен, Сотрудника добавить не удалось,'[root_url]employees/list_employees_contacts/']
+  modify_contact: [Редактировать отдел, Редактирование отдела, Отдел успешно отредактирован, Отдел отредактировать не удалось, '[root_url]employees/list_contacts/']
+  modify_employees_contact: [Редактировать сотрудника, Редактирование сотрудника, Сотрудник успешно отредактирован, Сотрудника отредактировать не удалось, '[root_url]employees/list_employees_contacts/']
+  delete_contact: [Удалить отдел, Удаление отдела, Отдел успешно удален, Отдел удалить не удалось, '[root_url]employees/list_contacts/', 'Вы уверены, что хотите удалить этот отдел?']
+  delete_employees_contact: [Удалить сотрудника, Удаление сотрудника, Сотрудник успешно удален, Сотрудника удалить не удалось, '[root_url]employees/list_employees_contacts/', 'Вы уверены, что хотите удалить этого сотрудника?']
+  modify_otdel: [Редактировать отдел, Редактирование отдела, Отдел успешно отредактирован, Отдел отредактировать не удалось, '[root_url]employees/list_employees_otdels/']
+  delete_otdel: [Удалить отдел, Удаление отдела, Отдел успешно удален, Отдел удалить не удалось, '[root_url]employees/list_employees_otdels/', 'Вы уверены, что хотите удалить этот отдел?']
+list_actions:
+  inline:
+    employees:
+      show: {link: 'employees/show/id/[id]', put: {title: before}, icon: show}
+      fio: {title: modify, link: 'employees/modify/id/[id]'}
+      delete: {link: 'employees/delete/id/[id]', icon: delete}
+    employees_otdels:
+      show: {link: 'employees/employees_otdels/show/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify, link: 'employees/modify_otdel/id/[id]'}
+      delete_otdel: {link: 'employees/delete_otdel/id/[id]', icon: delete}	
+    contacts:
+      show: {link: 'employees/list_contacts/show/id/[id]', put: {title: before}, icon: show}
+      modify: {text: modify, link: 'employees/modify_contact/id/[id]', put: {text: before}, icon: edit}
+      delete_contact: {link: 'employees/delete_contact/id/[id]', icon: delete}
+    employees_contacts:
+      show: {link: 'employees/list_employees_contacts/show/id/[id]', put: {title: before}, icon: show}
+      modify: {text: modify, link: 'employees/modify_employees_contact/id/[id]', put: {text: before}, icon: edit}
+      delete_contact: {link: 'employees/delete_employees_contact/id/[id]', icon: delete}
+#  after:
+#    add: 'employees/add'
+  after:
+    employees:
+      add: 'employees/add'
+    employees_otdels:
+      add_otdel: 'employees/add_otdel'
+    contacts:
+      add_contact: 'employees/add_contact'
+    employees_contacts:
+      add_employees_contact: 'employees/add_employees_contact'
+
+noContent:
+  employees: Сотрудников не найдено
+  employees_otdels: Отделов не найдено
+  contacts: Отделов не найдено
+  employees_contacts: Отделов не найдено

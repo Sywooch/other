@@ -1,0 +1,90 @@
+title: Баннеры
+complex: 1
+
+actions:
+  show: [Просмотреть баннер, Просмотр баннера]
+  list: [Просмотреть баннеры, Просмотр баннеров, [delete]]
+  add: [Добавить баннер, Добавление баннера, Баннер успешно добавлен, Баннер добавить не удалось]
+  add_client: [Добавить клиента, Добавление клиента, Клиент успешно добавлен, Клиента добавить не удалось,'[root_url]banners/list_about_clients/']
+  add_about_fotogallery: [Добавить фото, Добавление фото, Фото успешно добавлено, Фото добавить не удалось,'[root_url]banners/list_about_fotogallery/']
+  add_main_slider: [Добавить слайд, Добавление слайда, Слайд успешно добавлен, Слайд добавить не удалось,'[root_url]banners/list_main_slider/']
+  delete_image_client: [Удалить изображение фабрики, Удаление изображения фабрики, Изображение фабрики успешно удалено, Изображение фабрики удалить не удалось, '[root_url]banners/modify_client/id/[id]/', 'Вы уверены что хотите удалить это изображение?']
+  delete_main_slider: [Удалить слайд, Удаление слайда, Слайд успешно удален, Слайд удалить не удалось, '[root_url]banners/modify_main_slider/id/[id]/', 'Вы уверены что хотите удалить этот слайд?']
+  delete_image_about_fotogallery: [Удалить изображение, Удаление изображения, Изображение успешно удалено, Изображение удалить не удалось, '[root_url]banners/modify_about_fotogallery/id/[id]/', 'Вы уверены что хотите удалить это изображение?']
+  add_partner: [Добавить партнёра, Добавление партнёра, Партнёр успешно добавлен, Партнёра добавить не удалось,'[root_url]banners/list_about_partners/']
+  delete_image_partner: [Удалить изображение партнёра, Удаление изображения партнёра, Изображение партнёра успешно удалено, Изображение партнёра удалить не удалось, '[root_url]banners/modify_partner/id/[id]/', 'Вы уверены что хотите удалить это изображение?']  
+  add_sertificate: [Добавить сертификат, Добавление сертификата, Сертификат успешно добавлен, Сертификат добавить не удалось,'[root_url]banners/list_about_sertificates/']
+  delete_image_sertificate: [Удалить изображение сертификата, Удаление изображения сертификата, Изображение сертификата успешно удалено, Изображение сертификата удалить не удалось, '[root_url]banners/modify_sertificate/id/[id]/', 'Вы уверены что хотите удалить это изображение?']
+  delete_image_partner: [Удалить изображение партнёра, Удаление изображения партнёра, Изображение партнёра успешно удалено, Изображение партнёра удалить не удалось, '[root_url]banners/modify_partner/id/[id]/', 'Вы уверены что хотите удалить это изображение?']  
+  add_about_doc: [Добавить документ, Добавление документа, Документ успешно добавлен, Документ добавить не удалось,'[root_url]banners/list_about_docs/']
+  delete_image_about_doc: [Удалить изображение документа, Удаление изображения документа, Изображение документа успешно удалено, Изображение документа удалить не удалось, '[root_url]banners/modify_about_doc/id/[id]/', 'Вы уверены что хотите удалить это изображение?']  
+  modify: [Редактировать баннер, Редактирование баннера, Баннер успешно отредактирован, Баннер отредактировать не удалось, '[root_url]banners/list/']
+  modify_client: [Редактировать клиента, Редактирование клиента, Клиент успешно отредактирован, Клиента отредактировать не удалось, '[root_url]banners/list_about_clients/']
+  modify_partner: [Редактировать партнёра, Редактирование партнёра, Партнёр успешно отредактирован, Партнёра отредактировать не удалось, '[root_url]banners/list_about_partners/']	
+  modify_sertificate: [Редактировать сертификат, Редактирование сертификата, Сертификат успешно отредактирован, Сертификат отредактировать не удалось, '[root_url]banners/list_about_sertificates/']	
+  modify_about_doc: [Редактировать документ, Редактирование документа, Документ успешно отредактирован, Документ отредактировать не удалось, '[root_url]banners/list_about_docs/']	
+  modify_about_fotogallery: [Редактировать изображение, Редактирование изображения, Изображение успешно отредактировано, Изображение отредактировать не удалось, '[root_url]banners/list_about_fotogallery/']	
+  modify_main_slider: [Редактировать слайд, Редактирование слайда, Слайд успешно отредактирован, Слайд отредактировать не удалось, '[root_url]banners/list_main_slider/']	
+  delete: [Удалить баннер, Удаление баннера, Баннер успешно удален, Баннер удалить не удалось, '[root_url]banners/list/', Вы уверены что хотите удалить это баннер?]
+  delete_client: [Удалить клиента, Удаление клиента, Клиент успешно удален, Клиента удалить не удалось, '[root_url]banners/list_about_clients/', Вы уверены что хотите удалить этого клиента?]
+  delete_partner: [Удалить партнёра, Удаление партнёра, Партнёр успешно удален, Партнёра удалить не удалось, '[root_url]banners/list_about_partners/', Вы уверены что хотите удалить этого партнёра?]
+  delete_sertificate: [Удалить сертификат, Удаление сертификата, Сертификат успешно удален, Сертификат удалить не удалось, '[root_url]banners/list_about_sertificates/', Вы уверены что хотите удалить этот сертификат?]
+  delete_about_doc: [Удалить документ, Удаление документа, Документ успешно удален, Документ удалить не удалось, '[root_url]banners/list_about_docs/', Вы уверены что хотите удалить этот документ?]
+  delete_about_fotogallery: [Удалить фото, Удаление фото, Фото успешно удалено, Фото удалить не удалось, '[root_url]banners/list_about_fotogallery/', Вы уверены что хотите удалить это фото?]
+  delete_main_slider: [Удалить слайд, Удаление слайда, Слайд успешно удален, Слайд удалить не удалось, '[root_url]banners/list_main_slider/', Вы уверены что хотите удалить этот слайд?]
+list_actions:
+  inline:
+    banners:
+      show: {link: 'banners/show/id/[id]', put: {id: before}, icon: show}
+      modify: {id: modify, link: 'banners/modify/id/[id]', put: {id: before}, icon: edit}
+      delete: {link: 'banners/delete/id/[id]', icon: delete}
+    about_clients:
+      show: {link: 'banners/list_about_clients/show/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify, link: 'banners/modify_client/id/[id]'}
+      delete_client: {link: 'banners/delete_client/id/[id]', icon: delete}	
+    about_partners:
+      show: {link: 'banners/list_about_partners/show/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify, link: 'banners/modify_partner/id/[id]'}
+      delete_partner: {link: 'banners/delete_partner/id/[id]', icon: delete}	
+    about_sertificates:
+      show: {link: 'banners/list_about_sertificates/show/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify, link: 'banners/modify_sertificate/id/[id]'}
+      delete_sertificate: {link: 'banners/delete_sertificate/id/[id]', icon: delete}	
+    about_docs:
+      show: {link: 'banners/list_about_docs/show/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify, link: 'banners/modify_about_doc/id/[id]'}
+      delete_about_doc: {link: 'banners/delete_about_doc/id/[id]', icon: delete}	
+    about_fotogallery:
+      show: {link: 'banners/list_about_fotogallery/show/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify, link: 'banners/modify_about_fotogallery/id/[id]'}
+      delete_about_fotogallery: {link: 'banners/delete_about_fotogallery/id/[id]', icon: delete}	
+    main_slider:
+      show: {link: 'banners/list_main_slider/show/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify, link: 'banners/modify_main_slider/id/[id]'}
+      delete_main_slider: {link: 'banners/delete_main_slider/id/[id]', icon: delete}	
+#  after:
+#    add: 'employees/add'
+  after:
+    banners:
+      add: 'banners/add'
+    about_clients:
+      add_client: 'banners/add_client'
+    about_partners:
+      add_partner: 'banners/add_partner'
+    about_sertificates:
+      add_sertificate: 'banners/add_sertificate'
+    about_docs:
+      add_about_doc: 'banners/add_about_doc'
+    about_fotogallery:
+      add_about_fotogallery: 'banners/add_about_fotogallery'
+    main_slider:
+      add_main_slider: 'banners/add_main_slider'
+  
+noContent:
+  banners: Баннеров не найдено
+  about_clients: Клиентов не найдено
+  about_partners: Партнёров не найдено
+  about_sertificates: Сертификатов не найдено
+  about_docs: Документов не найдено
+  about_fotogallery: Изображений не найдено  
+  main_slider: Слайдов не найдено  

@@ -1,0 +1,192 @@
+title: Каталог  
+complex: 1
+actions:
+  default: [Стандартное действие, Стандартное действие]
+  list_factories: [Просмотреть фабрики, Просмотр фабрик, [delete_factory]]
+  show_factory: [Просмотреть фабрику, Просмотр фабрики]
+  add_factory: [Добавить фабрику, Добавление фабрики, Фабрика успешно добавлена, Фабрику добавить не удалось, '[root_url]catalog/list_factories/']
+  modify_factory: [Редактировать фабрику, Редактирование фабрики, Фабрика успешно отредактирована, Фабрику отредактировать не удалось, '[root_url]catalog/list_factories/']
+  delete_factory: [Удалить фабрику, Удаление фабрики, Фабрика успешно удалена, Фабрику удалить не удалось, '[root_url]catalog/list_factories/', 'Вы уверены что хотите удалить эту фабрику?']
+  change_factory: [Быстрые изменения фабрик, Быстрые изменения фабрик]
+  delete_image_factory: [Удалить изображение фабрики, Удаление изображения фабрики, Изображение фабрики успешно удалено, Изображение фабрики удалить не удалось, '[root_url]catalog/modify_factory/id/[id]/', 'Вы уверены что хотите удалить это изображение?']
+
+  #list_collections: [Просмотреть коллекции, Просмотр коллекций, [modify_layout, add_images, modify_action_collection, delete_collection]]
+  list_collections: [Просмотреть коллекции, Просмотр коллекций, [modify_layout, add_images, delete_collection]]
+  show_collection: [Просмотреть коллекцию, Просмотр коллекции]
+  modify_layout: [Редактировать расскладку, Редактирование расскладки, Раскладка успешно отредактирована, Раскладку отредактировать не удалось, '[root_url]catalog/modify_layout/id/[id]/']
+  search_good: [Поиск товаров, Поиск товаров]  
+  add_collection: [Добавить коллекцию, Добавление коллекции, Коллекция успешно добавлена, Коллекцию добавить не удалось, '[root_url]catalog/list_collections/']
+  modify_collection: [Редактировать коллекцию, Редактирование коллекции, Коллекция успешно отредактирована, Коллекцию отредактировать не удалось, '[root_url]catalog/list_collections/']
+  delete_collection: [Удалить коллекцию, Удаление коллекции, Коллекция успешно удалена, Коллекцию удалить не удалось, '[root_url]catalog/list_collections/', 'Вы уверены что хотите удалить эту коллекцию?']
+  change_collection: [Быстрые изменения коллекций, Быстрые изменения коллекций]
+  delete_image_collection: [Удалить изображение коллекции, Удаление изображения коллекции, Изображение коллекции успешно удалено, Изображение коллекции удалить не удалось, '[root_url]catalog/modify_collection/id/[id]/', 'Вы уверены что хотите удалить это изображение?']
+  #modify_action_collection: ['Редактировать акции, распродажи, новинки товаров', '(редактирование акций, распродаж, новинок товаров)', 'Акции, распроди, новини товаров успешно отредактированны', 'Акции, распроди, новини товаров отредактировать не удалось', '[root_url]catalog/list_collections']
+
+  list_goods: [Просмотреть товары, Просмотр товаров, [modify_good, delete_good]]
+  show_good: [Просмотреть товар, Просмотр товара]
+  delete_image_good: [Удалить изображение товара, Удаление изображения товара, Изображение товара успешно удалено, Изображение товара удалить не удалось, '[root_url]catalog/modify_good/id/[id]/', 'Вы уверены что хотите удалить это изображение?']
+  modify_good: [Выбрать коллекции, Выбор коллекций, Коллекции успешно выбраны, Коллекции выбрать не удалось, '[root_url]catalog/list_goods']
+
+  list_goods_to_order: [Просмотреть товары на заказ, Просмотр товаров на заказ, [delete_good_to_order]]
+  show_good_to_order: [Просмотреть товар на заказ, Просмотр товара на заказ]
+
+  list_countries: [Просмотреть страны, Просмотр стран, [delete_country]]
+  show_country: [Просмотреть страну, Просмотр страни]
+  add_country: [Добавить страну, Добавление страни, страна успешно добавлена, страну добавить не удалось, '[root_url]catalog/list_countries/']
+  modify_country: [Редактировать страну, Редактирование страни, страна успешно отредактирована, страну отредактировать не удалось, '[root_url]catalog/list_countries/']
+  delete_country: [Удалить страну, Удаление страни, страна успешно удалена, страну удалить не удалось, '[root_url]catalog/list_countries/', 'Вы уверены что хотите удалить эту страну?']
+
+  list_types: [Просмотреть типы, Просмотр типов, [delete_type]]
+  show_type: [Просмотреть тип, Просмотр типа]
+  add_type: [Добавить тип, Добавление типа, Тип успешно добавлен, Тип добавить не удалось, '[root_url]catalog/list_types/']
+  modify_type: [Редактировать тип, Редактирование типа, Тип успешно отредактирован, Тип отредактировать не удалось, '[root_url]catalog/list_types/']
+  delete_type: [Удалить тип, Удаление типа, Тип успешно удален, Тип удалить не удалось, '[root_url]catalog/list_types/', 'Вы уверены что хотите удалить этот тип?']
+
+  list_purposes: [Просмотреть назначения, Просмотр назначений, [delete_purpose]]
+  show_purpose: [Просмотреть назначение, Просмотр назначения]
+  add_purpose: [Добавить назначение, Добавление назначения, Назначение успешно добавлено, Назначение добавить не удалось, '[root_url]catalog/list_purposes/']
+  modify_purpose: [Редактировать назначение, Редактирование назначения, Назначение успешно отредактировано, Назначение отредактировать не удалось, '[root_url]catalog/list_purposes/']
+  delete_purpose: [Удалить назначение, Удаление назначения, Назначение успешно удалено, Назначение удалить не удалось, '[root_url]catalog/list_purposes/', 'Вы уверены что хотите удалить это назначение?']
+  delete_image_purpose: [Удалить изображение назначения, Удаление изображения назначения, Изображение назначения успешно удалено, Изображение назначения удалить не удалось, '[root_url]catalog/modify_purpose/id/[id]/', 'Вы уверены что хотите удалить это изображение?']
+
+  list_surfaces: [Просмотреть поверхности, Просмотр поверхностей, [delete_surface]]
+  show_surface: [Просмотреть поверхность, Просмотр поверхности]
+  add_surface: [Добавить поверхность, Добавление поверхности, Поверхность успешно добавлена, Поверхность добавить не удалось, '[root_url]catalog/list_surfaces/']
+  modify_surface: [Редактировать поверхность, Редактирование поверхности, Поверхность успешно отредактирована, Поверхность отредактировать не удалось, '[root_url]catalog/list_surfaces/']
+  delete_surface: [Удалить поверхность, Удаление поверхности, Поверхность успешно удалена, Поверхность удалить не удалось, '[root_url]catalog/list_surfaces/', 'Вы уверены что хотите удалить эту поверхность?']
+  delete_image_surface: [Удалить изображение поверхности, Удаление изображения поверхности, Изображение поверхности успешно удалено, Изображение поверхности удалить не удалось, '[root_url]catalog/modify_surface/id/[id]/', 'Вы уверены что хотите удалить это изображение?']
+
+  list_styles: [Просмотреть стили, Просмотр стилей, [delete_style]]
+  show_style: [Просмотреть стиль, Просмотр стиля]
+  add_style: [Добавить стиль, Добавление стиля, Стиль успешно добавлен, Стиль добавить не удалось, '[root_url]catalog/list_styles/']
+  modify_style: [Редактировать стиль, Редактирование стиля, Стиль успешно отредактирован, Стиль отредактировать не удалось, '[root_url]catalog/list_styles/']
+  delete_style: [Удалить стиль, Удаление стиля, Стиль успешно удалён, Стиль удалить не удалось, '[root_url]catalog/list_styles/', 'Вы уверены что хотите удалить этот стиль?']
+  delete_image_style: [Удалить изображение стиля, Удаление изображения стиля, Изображение стиля успешно удалено, Изображение стиля удалить не удалось, '[root_url]catalog/modify_style/id/[id]/', 'Вы уверены что хотите удалить это изображение?']
+
+  list_colors: [Просмотреть цвета, Просмотр цветов, [delete_color]]
+  show_color: [Просмотреть цвет, Просмотр цвета]
+  add_color: [Добавить цвет, Добавление цвета, Цвет успешно добавлен, Цвет добавить не удалось, '[root_url]catalog/list_colors/']
+  modify_color: [Редактировать цвет, Редактирование цвета, Цвет успешно отредактирован, Цвет отредактировать не удалось, '[root_url]catalog/list_colors/']
+  delete_color: [Удалить Цвет, Удаление цвета, Цвет успешно удалён, Цвет удалить не удалось, '[root_url]catalog/list_colors/', 'Вы уверены что хотите удалить этот цвет?']
+
+  list_materials: [Просмотреть материалы, Просмотр материалов, [delete_material]]
+  show_material: [Просмотреть материал, Просмотр материала]
+  add_material: [Добавить материал, Добавление материала, Материал успешно добавлен, Материал добавить не удалось, '[root_url]catalog/list_materials/']
+  modify_material: [Редактировать материал, Редактирование материала, Материал успешно отредактирован, Материал отредактировать не удалось, '[root_url]catalog/list_materials/']
+  delete_material: [Удалить материал, Удаление материала, Материал успешно удален, Материал удалить не удалось, '[root_url]catalog/list_materials/', 'Вы уверены что хотите удалить этот материал?']
+  delete_image_material: [Удалить изображение Материала, Удаление изображения материала, Изображение материала успешно удалено, Изображение материала удалить не удалось, '[root_url]catalog/modify_material/id/[id]/', 'Вы уверены что хотите удалить это изображение?']
+  
+  list_typespromotional: [Просмотреть вид РП, Просмотр видов РП, [delete_typespromotional]]
+  show_typespromotional: [Просмотреть вид РП, Просмотр вида РП]
+  add_typespromotional: [Добавить вид РП, Добавление вида РП, Вид РП успешно добавлен, Вид РП добавить не удалось, '[root_url]catalog/list_typespromotional/']
+  modify_typespromotional: [Редактировать вид РП, Редактирование вида РП, Вид РП успешно отредактирован, Вид РП отредактировать не удалось, '[root_url]catalog/list_typespromotional/']
+  delete_typespromotional: [Удалить вид РП, Удаление вида РП, Вид РП успешно удален, Вид РП удалить не удалось, '[root_url]catalog/list_typespromotional/', 'Вы уверены что хотите удалить этот вид РП?']
+  
+  list_promotional: [Просмотреть РП, Просмотр РП, [delete_promotional]]
+  show_promotional: [Просмотреть РП, Просмотр РП]
+  add_promotional: [Добавить РП, Добавление РП, РП успешно добавлена, РП добавить не удалось, '[root_url]catalog/list_promotional/']
+  modify_promotional: [Редактировать РП, Редактирование РП, РП успешно отредактирована, РП отредактировать не удалось, '[root_url]catalog/list_promotional/']
+  delete_promotional: [Удалить РП, Удаление РП, РП успешно удалена, РП удалить не удалось, '[root_url]catalog/list_promotional/', 'Вы уверены что хотите удалить эту РП?']
+  
+  list_import: [Просмотреть историю импорта, Просмотр истории импорта]
+list_actions:
+  inline:
+    factories:
+      show_factory: {link: 'catalog/show_factory/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_factory, link: 'catalog/modify_factory/id/[id]'}
+      hidden: {link: 'catalog/change_factory/field/hidden/id/[id]/ret_action/list_factories', title: {yes: Показать, no: Скрыть}, retLink: 'catalog/list_factories'}
+      delete_factory: {link: 'catalog/delete_factory/id/[id]', icon: delete}
+    collections:
+      show_collection: {link: 'catalog/show_collection/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_collection, link: 'catalog/modify_collection/id/[id]'}
+      hidden: {link: 'catalog/change_collection/field/hidden/id/[id]/ret_action/list_collections', title: {yes: Показать, no: Скрыть}, retLink: 'catalog/list_collections'}
+      delete_collection: {link: 'catalog/delete_collection/id/[id]', icon: delete}
+      add_images: {title: Добавить изображения, link: 'images/list/model/collections/pid/[id]', icon: gallery}
+      modify_layout: {link: 'catalog/modify_layout/id/[id]', icon: edit}
+      #modify_action_collection: {link: 'catalog/modify_action_collection/id/[id]', icon: edit_blue}
+    goods:
+      show_good: {link: 'catalog/show_good/id/[id]', put: {title: before}, icon: show}
+      delete_good: {link: 'catalog/delete_good/id/[id]', icon: delete}
+      modify_good: {link: 'catalog/modify_good/id/[id]', icon: gallery}
+    goods_to_order:
+      show_good_to_order: {link: 'catalog/show_good_to_order/id/[id]', put: {title: before}, icon: show}
+      delete_good_to_order: {link: 'catalog/delete_good_to_order/id/[id]', icon: delete}
+    countries:
+      show_country: {link: 'catalog/show_country/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_country, link: 'catalog/modify_country/id/[id]'}
+      hidden: {link: 'catalog/change_country/field/hidden/id/[id]/ret_action/list_countries', title: {yes: Показать, no: Скрыть}, retLink: 'catalog/list_countries'}
+      delete_country: {link: 'catalog/delete_country/id/[id]', icon: delete}
+    types:
+      show_type: {link: 'catalog/show_type/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_type, link: 'catalog/modify_type/id/[id]'}
+      hidden: {link: 'catalog/change_type/field/hidden/id/[id]/ret_action/list_types', title: {yes: Показать, no: Скрыть}, retLink: 'catalog/list_types'}
+      delete_type: {link: 'catalog/delete_type/id/[id]', icon: delete}
+    purposes:
+      show_purpose: {link: 'catalog/show_purpose/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_purpose, link: 'catalog/modify_purpose/id/[id]'}
+      hidden: {link: 'catalog/change_purpose/field/hidden/id/[id]/ret_action/list_purposes', title: {yes: Показать, no: Скрыть}, retLink: 'catalog/list_purposes'}
+      delete_purpose: {link: 'catalog/delete_purpose/id/[id]', icon: delete}
+    surfaces:
+      show_surface: {link: 'catalog/show_surface/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_surface, link: 'catalog/modify_surface/id/[id]'}
+      hidden: {link: 'catalog/change_surface/field/hidden/id/[id]/ret_action/list_surfaces', title: {yes: Показать, no: Скрыть}, retLink: 'catalog/list_surfaces'}
+      delete_surface: {link: 'catalog/delete_surface/id/[id]', icon: delete}
+    styles:
+      show_style: {link: 'catalog/show_style/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_style, link: 'catalog/modify_style/id/[id]'}
+      hidden: {link: 'catalog/change_style/field/hidden/id/[id]/ret_action/list_styles', title: {yes: Показать, no: Скрыть}, retLink: 'catalog/list_styles'}
+      delete_style: {link: 'catalog/delete_style/id/[id]', icon: delete}
+    colors:
+      show_color: {link: 'catalog/show_color/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_color, link: 'catalog/modify_color/id/[id]'}
+      hidden: {link: 'catalog/change_color/field/hidden/id/[id]/ret_action/list_colors', title: {yes: Показать, no: Скрыть}, retLink: 'catalog/list_colors'}
+      delete_color: {link: 'catalog/delete_color/id/[id]', icon: delete}
+    materials:
+      show_material: {link: 'catalog/show_material/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_material, link: 'catalog/modify_material/id/[id]'}
+      hidden: {link: 'catalog/change_material/field/hidden/id/[id]/ret_action/list_materials', title: {yes: Показать, no: Скрыть}, retLink: 'catalog/list_materials'}
+      delete_material: {link: 'catalog/delete_material/id/[id]', icon: delete}
+    typespromotional:
+      show_typespromotional: {link: 'catalog/show_typespromotional/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify_typespromotional, link: 'catalog/modify_typespromotional/id/[id]'}
+      delete_typespromotional: {link: 'catalog/delete_typespromotional/id/[id]', icon: delete}
+    promotional:
+      show_promotional: {link: 'catalog/show_promotional/id/[id]', put: {factory_id: before}, icon: show}
+      modify_promotional: {title: modify_promotional, link: 'catalog/modify_promotional/id/[id]', put: {factory_id: before}, icon: edit}
+      delete_promotional: {link: 'catalog/delete_promotional/id/[id]', icon: delete}
+  after:
+    factories:
+      add_factory: 'catalog/add_factory'
+    collections:
+      add_collection: 'catalog/add_collection'
+    countries:
+      add_country: 'catalog/add_country'
+    types:
+      add_type: 'catalog/add_type'
+    purposes:
+      add_purpose: 'catalog/add_purpose'
+    surfaces:
+      add_surface: 'catalog/add_surface'
+    styles:
+      add_style: 'catalog/add_style'
+    colors:
+      add_color: 'catalog/add_color'
+    materials:
+      add_material: 'catalog/add_material'
+    typespromotional:
+      add_typespromotional: 'catalog/add_typespromotional'
+    promotional:
+      add_promotional: 'catalog/add_promotional'
+noContent:
+  factories: Фабрик не найдено
+  collections: Коллекций не найдено
+  goods: Товаров не найдено
+  goods_to_order: Товаров на заказ не найдено
+  countries: Стран не найдено
+  types: Типов не найдено
+  purposes: Назначений не найдено
+  surfaces: Поверхностей не найдено
+  materials: Материалов не найдено
+  typespromotional: Видов РП не найдено
+  promotional: РП не найдено
+  import: Историй импорта нет

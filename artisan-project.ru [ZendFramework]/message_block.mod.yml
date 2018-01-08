@@ -1,0 +1,19 @@
+tables:
+	
+		
+  message_block:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      text1: {type: text, notnull: 0, am: {type: text, req: 0, title: Текст1}}
+      text2: {type: text, notnull: 0, am: {type: text, req: 0, title: Текст2}}
+      text3: {type: text, notnull: 0, am: {type: text, req: 0, title: Текст3}}
+      
+    table:
+      PRIMARY KEY: id
+      
+    actions:
+      list: [id, text1, text2]
+      modify: [text1, text2]
+      show: [id, text1, text2]
+      add: [text1, text2]
+   

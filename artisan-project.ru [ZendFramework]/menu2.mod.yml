@@ -1,0 +1,34 @@
+tables:
+
+  bottom_menu2:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      text: {type: text, notnull: 0, am: {type: text, req: 0, title: Текст}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+      parent: {type: text, notnull: 0, am: {type: text, req: 0, title: Идентификатор родителя}}
+      
+    table:
+      PRIMARY KEY: id
+      
+    actions:
+      list: [id, text, link, parent]
+      modify: [text, link, parent]
+      show: [id, text, link, parent]
+      add: [text, link, parent]
+
+  top_menu2:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      text: {type: text, notnull: 0, am: {type: text, req: 0, title: Текст}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+      parent: {type: text, notnull: 0, am: {type: text, req: 0, title: Идентификатор родителя}}
+      
+    table:
+      PRIMARY KEY: id
+      
+    actions:
+      list: [id, text, link, parent]
+      modify: [text, link, parent]
+      show: [id, text, link, parent]
+      add: [text, link, parent]
+   

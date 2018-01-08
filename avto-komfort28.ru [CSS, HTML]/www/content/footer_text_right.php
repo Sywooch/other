@@ -1,0 +1,1 @@
+<p><a href="http://www.retina-studio.ru" alt="" style="cursor:pointer; color:white; text-decoration:none">designed by retina</a></p>

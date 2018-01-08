@@ -1,0 +1,101 @@
+tables:
+  documents:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1, am: {type: integer}}
+      cdate: {type: datetime, notnull: 1, am: {type: datetime, title: Дата создания}}
+      mdate: {type: datetime, notnull: 1, am: {type: datetime, title: Дата последнего редактирования}}
+      title: {type: tinytext, notnull: 1, am: {type: string, req: 1, title: Заголовок}}
+      lk_num: {type: tinytext, notnull: 0, am: {type: string, req: 0, title: Номер в ленте личного кабинета}}
+      lk: {type: "enum('yes','no')", default: 'no', notnull: 1, am: {type: string, title: Отображать в ленте личного кабинета, otitle: Отображать, htmltype: checkbox, default: 'no', checked: 'yes', values: {no: нет, yes: да}}}
+      description: {type: text, notnull: 0, am: {type: shtml, req: 0, title: Описание}}
+      file: {type: tinytext, notnull: 1, am: {type: file, req: 1, title: Файл}}
+      categories:
+        virtual: 1
+        ref_to:
+          idFieldName: id
+          virtual: 1
+          table: ?_dealers_categories
+          fields: [id, title]
+          use_ref: documents2dealers_categories
+        am: {type: checkboxes, br: ' ', del: ' ', key: id, title: Категории дилеров}
+      documents_folders:
+        virtual: 1
+        ref_to:
+          idFieldName: id
+          virtual: 1
+          table: ?_documents_folders
+          fields: [id, title]
+          use_ref: documents2documents_folders
+        am: {type: checkboxes, br: ' ', del: ' ', key: id, title: Папки}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, documents_folders, cdate, title, categories, lk, lk_num]
+      show: [cdate, mdate, title, description, file, categories, lk, documents_folders]
+      modify: [title, description, file, categories, lk, documents_folders, lk_num]
+      add: [title, description, file, categories, lk, documents_folders]
+      listing: [id, title, description, file, categories]
+    paging:
+      npp: 70
+      css_class: 'paging'
+      base_url: ''
+      url_append: ''
+      separator: ' '
+      linkcount: 10
+      first: ''
+      prev: ''
+      next: ''
+      last: ''
+      skip: ' ... '
+  
+  dealers_categories:
+    dont_install: 1
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      title: {type: tinytext, notnull: 1, am: {type: string, title: Наименование}}
+  documents_folders:
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1}
+      title: {type: tinytext, notnull: 1, am: {type: string, title: Наименование}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, title]
+      show: [title]
+      modify: [title]
+      add: [title]
+  documents2dealers_categories:
+    fields:
+      document_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer}}
+      dealer_category_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer}}
+  documents2documents_folders:
+    fields:
+      document_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer}}
+      folder_id: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer}}
+    table:
+      KEYS:
+        document_folder: [document_id, folder_id]
+
+refs:
+  documents2documents_folders:
+    virtual: 1
+    join: left outer
+    type: N-M
+    tables:
+      -
+        - {table: documents, field: id}
+        - {table: documents2documents_folders, field: document_id}
+      - 
+        - {table: documents_folders, field: id}
+        - {table: documents2documents_folders, field: folder_id}
+  documents2dealers_categories:
+    virtual: 1
+    join: left outer
+    type: N-M
+    tables:
+      -
+        - {table: documents, field: id}
+        - {table: documents2dealers_categories, field: document_id}
+      - 
+        - {table: dealers_categories, field: id}
+        - {table: documents2dealers_categories, field: dealer_category_id}
