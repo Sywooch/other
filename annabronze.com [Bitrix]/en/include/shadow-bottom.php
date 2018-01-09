@@ -1,1 +1,0 @@
-<img src="/include/shadow-bottom.png" style="width: 100%; margin-bottom: 5px;" />

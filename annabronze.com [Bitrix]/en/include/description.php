@@ -1,1 +1,0 @@
-Jewelry findings by Anna Chernykh

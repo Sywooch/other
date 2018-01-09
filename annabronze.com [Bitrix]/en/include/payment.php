@@ -1,1 +1,0 @@
-<img src="/include/e.png"  /> <img src="/include/e.png"  /> <img src="/include/mastercard.png" alt="MasterCard" title="MasterCard"  /> <img src="/include/visa.png" alt="visa" title="visa"  /> <img src="/include/paypal.png" alt="paypal" title="paypal"  />

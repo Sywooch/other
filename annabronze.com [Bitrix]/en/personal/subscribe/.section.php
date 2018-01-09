@@ -1,6 +1,0 @@
-<?
-$sSectionName = "Subscribe";
-$arDirProperties = Array(
-
-);
-?>

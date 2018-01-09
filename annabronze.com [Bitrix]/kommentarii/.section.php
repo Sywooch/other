@@ -1,6 +1,0 @@
-<?
-$sSectionName = "Комментарии";
-$arDirProperties = Array(
-
-);
-?>

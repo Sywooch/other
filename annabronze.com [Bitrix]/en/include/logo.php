@@ -1,1 +1,0 @@
-<a href="/en/" > 	<img src="/upload/medialibrary/913/913ed5d83480e5adfa839a3a3e22d660.gif" border="0" alt="billberry.gif" title="<?=$fields['NAME']?>" width="189" height="65"  /> </a>
