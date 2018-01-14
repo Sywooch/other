@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0d7659ec-c5cd-4874-a386-97c3dd4699d8" name="moskowknife.ru" url="http://176.9.7.107">
+        <fileTransfer host="176.9.7.107" port="22" rootFolder="/home/gs/web/gs.knife.dev.digital-spectr.ru/public_html" accessType="SFTP" password="dfcddfd2df92df9bdfecdfdedfffdfdfdfe8dfeb" username="gs">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

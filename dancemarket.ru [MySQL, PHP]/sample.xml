@@ -1,0 +1,42 @@
+<yml_catalog date="2015-09-22 20:22:13">
+<shop id="3">
+<name>danceduet.ru</name> 
+<company>danceduet.ru</company> 
+<url>
+<ref>http://danceduet.ru</ref> 
+<name>danceduet.ru</name> 
+</url>
+<currencies>
+<currency id="RUB" /> 
+</currencies>
+<categories>
+<category id="1" parentId="0">Обувь</category> 
+<category id="2" parentId="1">La женская</category> 
+</categories>
+<offers>
+<offer id="3">
+<url>http://danceduet.ru/index.php/obuv/detskaya/item/katy1410k</url> 
+<currencyId>RUB</currencyId> 
+<categoryId>2</categoryId> 
+<name>Катя 1410К</name>
+<vendor>Танцмастер</vendor>
+<prices>
+<price text="(размеры 17.0 - 22.5)">2100</price>
+<price text="(размеры 23.0 - 24.5)">2200</price>
+</prices>
+<colors>
+<color>золото</color>
+<color>серебро</color>
+</colors>
+<sizes>
+<size>17.0-22.5</size>
+</sizes>
+<images>
+<image title="Блок-каблук">http://danceduet.ru/images/obuv/detskaya/katy100_s.jpg</image> 
+<image>http://danceduet.ru/images/obuv/detskaya/katy100.jpg</image> 
+</images>
+<description></description> 
+</offer>
+</offers>
+</shop>
+</yml_catalog>

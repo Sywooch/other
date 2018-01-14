@@ -1,0 +1,1636 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2015-11-02 10:10:04">
+  <shop id="8">
+    <name>PRECIOSA-SHOP.RU</name> 
+    <company>PRECIOSA-SHOP.RU</company>
+    <url>
+      <ref>https://preciosa-shop.ru</ref>
+      <name>PRECIOSA-SHOP.RU</name>
+    </url>
+    <currencies><currency id="RUB" /></currencies>
+    <categories>
+		
+		<category id="5" parentId="0">Стразы</category>
+		<category id="5511" parentId="5">Клеевые стразы</category>
+		<category id="5512" parentId="5">Пришивные стразы</category>
+		<category id="551" parentId="5511">Клеевые стразы холодной фиксации</category>
+		<category id="894" parentId="5512">Пришивные стразы MC RIVOLI 2H</category>
+		<category id="895" parentId="5512">Пришивные стразы MC OVAL 301 2H</category>
+		<category id="896" parentId="5512">Пришивные стразы MC PEARSHAPE 301 2H</category>
+		<category id="897" parentId="5512">Пришивные стразы MC NAVETTE 301 2H</category>
+		<category id="898" parentId="5512">Пришивные стразы MC RECTANGLE 301 2H</category>
+		<category id="899" parentId="5512">Пришивные стразы MC SQUARE 303 2H</category>
+		<category id="900" parentId="5512">Пришивные стразы MC TRIANGLE 301 3H</category>
+		<category id="1648" parentId="5512">Пришивные стразы MC CHATON ROSE 613 2H</category>
+	</categories>
+    <offers>        <offer id="0">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_chaton_rose_613_2h/?color=Crystal&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>1648</categoryId>
+         <name>Crystal AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="12 мм">2902</price></prices>
+         <colors><color>Crystal AB</color></colors>
+         <sizes><size>12 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal AB фото" title="PRECIOSA Crystal AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="1">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_chaton_rose_613_2h/?color=Crystal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>1648</categoryId>
+         <name>Crystal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="8 мм">3127</price><price text="10 мм">2886</price><price text="12 мм">3422</price></prices>
+         <colors><color>Crystal</color></colors>
+         <sizes><size>8 мм,10 мм,12 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal фото" title="PRECIOSA Crystal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="2">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Crystal AB</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Crystal AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="8 мм">3591</price><price text="10 мм">3360</price><price text="ss 16">2456</price></prices>
+         <colors><color>Crystal AB</color></colors>
+         <sizes><size>8 мм,10 мм,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Crystal AB фото" title="PRECIOSA Crystal AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="3">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Alexandrite</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Alexandrite</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Alexandrite</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Alexandrite фото" title="PRECIOSA Alexandrite"></image></images>
+         <description></description>
+        </offer>
+              <offer id="4">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Alexandrite&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Alexandrite AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Alexandrite AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Alexandrite AB фото" title="PRECIOSA Alexandrite AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="5">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Amethyst</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Amethyst</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Amethyst</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Amethyst фото" title="PRECIOSA Amethyst"></image></images>
+         <description></description>
+        </offer>
+              <offer id="6">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Amethyst&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Amethyst AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2629</price></prices>
+         <colors><color>Amethyst AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Amethyst AB фото" title="PRECIOSA Amethyst AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="7">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Apricot</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Apricot</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2456</price></prices>
+         <colors><color>Apricot</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Apricot фото" title="PRECIOSA Apricot"></image></images>
+         <description></description>
+        </offer>
+              <offer id="8">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Aqua Bohemica</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Aqua Bohemica</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Aqua Bohemica</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Aqua Bohemica фото" title="PRECIOSA Aqua Bohemica"></image></images>
+         <description></description>
+        </offer>
+              <offer id="9">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Aqua Bohemica&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Aqua Bohemica AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Aqua Bohemica AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Aqua Bohemica AB фото" title="PRECIOSA Aqua Bohemica AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="10">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Aquamarine</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Aquamarine</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Aquamarine</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Aquamarine фото" title="PRECIOSA Aquamarine"></image></images>
+         <description></description>
+        </offer>
+              <offer id="11">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Aquamarine&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Aquamarine AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2629</price></prices>
+         <colors><color>Aquamarine AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Aquamarine AB фото" title="PRECIOSA Aquamarine AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="12">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Argent Flare</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Argent Flare</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">4295</price></prices>
+         <colors><color>Argent Flare</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Argent Flare фото" title="PRECIOSA Argent Flare"></image></images>
+         <description></description>
+        </offer>
+              <offer id="13">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Aurum</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Aurum</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">6639</price><price text="ss 16">2629</price></prices>
+         <colors><color>Aurum</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Aurum фото" title="PRECIOSA Aurum"></image></images>
+         <description></description>
+        </offer>
+              <offer id="14">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Bermuda Blue</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Bermuda Blue</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2456</price></prices>
+         <colors><color>Bermuda Blue</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Bermuda Blue фото" title="PRECIOSA Bermuda Blue"></image></images>
+         <description></description>
+        </offer>
+              <offer id="15">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Black Diamond</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Black Diamond</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Black Diamond</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Black Diamond фото" title="PRECIOSA Black Diamond"></image></images>
+         <description></description>
+        </offer>
+              <offer id="16">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Black Diamond&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Black Diamond AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2629</price></prices>
+         <colors><color>Black Diamond AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Black Diamond AB фото" title="PRECIOSA Black Diamond AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="17">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Blonde Flare</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Blonde Flare</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2629</price></prices>
+         <colors><color>Blonde Flare</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Blonde Flare фото" title="PRECIOSA Blonde Flare"></image></images>
+         <description></description>
+        </offer>
+              <offer id="18">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Blue Flare</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Blue Flare</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 20">3494</price></prices>
+         <colors><color>Blue Flare</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Blue Flare фото" title="PRECIOSA Blue Flare"></image></images>
+         <description></description>
+        </offer>
+              <offer id="19">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Blue Zircon</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Blue Zircon</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">2456</price><price text="ss 16">3024</price></prices>
+         <colors><color>Blue Zircon</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Blue Zircon фото" title="PRECIOSA Blue Zircon"></image></images>
+         <description></description>
+        </offer>
+              <offer id="20">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Blue Zircon&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Blue Zircon AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Blue Zircon AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Blue Zircon AB фото" title="PRECIOSA Blue Zircon AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="21">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Burgundy</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Burgundy</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Burgundy</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Burgundy фото" title="PRECIOSA Burgundy"></image></images>
+         <description></description>
+        </offer>
+              <offer id="22">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Burgundy&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Burgundy AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2456</price></prices>
+         <colors><color>Burgundy AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Burgundy AB фото" title="PRECIOSA Burgundy AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="23">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Capri blue</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Capri blue</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Capri blue</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Capri blue фото" title="PRECIOSA Capri blue"></image></images>
+         <description></description>
+        </offer>
+              <offer id="24">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Capri blue&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Capri blue AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2629</price></prices>
+         <colors><color>Capri blue AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Capri blue AB фото" title="PRECIOSA Capri blue AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="25">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Capri Gold</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Capri Gold</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2456</price></prices>
+         <colors><color>Capri Gold</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Capri Gold фото" title="PRECIOSA Capri Gold"></image></images>
+         <description></description>
+        </offer>
+              <offer id="26">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Chrysolite</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Chrysolite</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Chrysolite</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Chrysolite фото" title="PRECIOSA Chrysolite"></image></images>
+         <description></description>
+        </offer>
+              <offer id="27">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Chrysolite&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Chrysolite AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Chrysolite AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Chrysolite AB фото" title="PRECIOSA Chrysolite AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="28">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Citrine</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Citrine</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Citrine</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Citrine фото" title="PRECIOSA Citrine"></image></images>
+         <description></description>
+        </offer>
+              <offer id="29">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Citrine&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Citrine AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 20">3494</price></prices>
+         <colors><color>Citrine AB</color></colors>
+         <sizes><size>ss 16,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Citrine AB фото" title="PRECIOSA Citrine AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="30">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Coral</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Coral</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">2456</price><price text="ss 16">3005</price></prices>
+         <colors><color>Coral</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Coral фото" title="PRECIOSA Coral"></image></images>
+         <description></description>
+        </offer>
+              <offer id="31">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Coral&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Coral AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4489</price><price text="ss 16">2123</price></prices>
+         <colors><color>Coral AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Coral AB фото" title="PRECIOSA Coral AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="32">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Crystal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Crystal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3061</price><price text="ss 16">2629</price></prices>
+         <colors><color>Crystal</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Crystal фото" title="PRECIOSA Crystal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="33">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Crystal AB</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Crystal AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2456</price></prices>
+         <colors><color>Crystal AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Crystal AB фото" title="PRECIOSA Crystal AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="34">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Deep Tanzanite</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Deep Tanzanite</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Deep Tanzanite</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Deep Tanzanite фото" title="PRECIOSA Deep Tanzanite"></image></images>
+         <description></description>
+        </offer>
+              <offer id="35">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Deep Tanzanite&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Deep Tanzanite AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2456</price></prices>
+         <colors><color>Deep Tanzanite AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Deep Tanzanite AB фото" title="PRECIOSA Deep Tanzanite AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="36">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Emerald</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Emerald</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Emerald</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Emerald фото" title="PRECIOSA Emerald"></image></images>
+         <description></description>
+        </offer>
+              <offer id="37">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Emerald&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Emerald AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Emerald AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Emerald AB фото" title="PRECIOSA Emerald AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="38">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Fuchsia</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Fuchsia</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Fuchsia</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Fuchsia фото" title="PRECIOSA Fuchsia"></image></images>
+         <description></description>
+        </offer>
+              <offer id="39">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Fuchsia&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Fuchsia AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Fuchsia AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Fuchsia AB фото" title="PRECIOSA Fuchsia AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="40">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Garnet</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Garnet</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Garnet</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Garnet фото" title="PRECIOSA Garnet"></image></images>
+         <description></description>
+        </offer>
+              <offer id="41">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Garnet&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Garnet AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Garnet AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Garnet AB фото" title="PRECIOSA Garnet AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="42">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Gold Beryl</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Gold Beryl</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Gold Beryl</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Gold Beryl фото" title="PRECIOSA Gold Beryl"></image></images>
+         <description></description>
+        </offer>
+              <offer id="43">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Gold Beryl&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Gold Beryl AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 20">3494</price></prices>
+         <colors><color>Gold Beryl AB</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Gold Beryl AB фото" title="PRECIOSA Gold Beryl AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="44">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Gold Quartz</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Gold Quartz</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">2456</price><price text="ss 16">3024</price></prices>
+         <colors><color>Gold Quartz</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Gold Quartz фото" title="PRECIOSA Gold Quartz"></image></images>
+         <description></description>
+        </offer>
+              <offer id="45">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Gold Quartz&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Gold Quartz AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Gold Quartz AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Gold Quartz AB фото" title="PRECIOSA Gold Quartz AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="46">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Green Turmaline</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Green Turmaline</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Green Turmaline</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Green Turmaline фото" title="PRECIOSA Green Turmaline"></image></images>
+         <description></description>
+        </offer>
+              <offer id="47">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Green Turmaline&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Green Turmaline AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2748</price></prices>
+         <colors><color>Green Turmaline AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Green Turmaline AB фото" title="PRECIOSA Green Turmaline AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="48">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Heliotrope</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Heliotrope</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2629</price></prices>
+         <colors><color>Heliotrope</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Heliotrope фото" title="PRECIOSA Heliotrope"></image></images>
+         <description></description>
+        </offer>
+              <offer id="49">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Honey</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Honey</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2456</price></prices>
+         <colors><color>Honey</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Honey фото" title="PRECIOSA Honey"></image></images>
+         <description></description>
+        </offer>
+              <offer id="50">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Hyacinth</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Hyacinth</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Hyacinth</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Hyacinth фото" title="PRECIOSA Hyacinth"></image></images>
+         <description></description>
+        </offer>
+              <offer id="51">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Hyacinth&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Hyacinth AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Hyacinth AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Hyacinth AB фото" title="PRECIOSA Hyacinth AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="52">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Indian Pink</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Indian Pink</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">1932</price><price text="ss 16">3024</price></prices>
+         <colors><color>Indian Pink</color></colors>
+         <sizes><size>ss 20,ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Indian Pink фото" title="PRECIOSA Indian Pink"></image></images>
+         <description></description>
+        </offer>
+              <offer id="53">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Indian Pink&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Indian Pink AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Indian Pink AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Indian Pink AB фото" title="PRECIOSA Indian Pink AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="54">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Indicolite</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Indicolite</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Indicolite</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Indicolite фото" title="PRECIOSA Indicolite"></image></images>
+         <description></description>
+        </offer>
+              <offer id="55">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Indicolite&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Indicolite AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 20">3494</price></prices>
+         <colors><color>Indicolite AB</color></colors>
+         <sizes><size>ss 16,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Indicolite AB фото" title="PRECIOSA Indicolite AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="56">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Jet</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Jet</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">2456</price><price text="ss 16">3024</price></prices>
+         <colors><color>Jet</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Jet фото" title="PRECIOSA Jet"></image></images>
+         <description></description>
+        </offer>
+              <offer id="57">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Jet&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Jet AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2617</price></prices>
+         <colors><color>Jet AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Jet AB фото" title="PRECIOSA Jet AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="58">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Jet Brown Flare</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Jet Brown Flare</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">2617</price><price text="ss 16">2880</price></prices>
+         <colors><color>Jet Brown Flare</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Jet Brown Flare фото" title="PRECIOSA Jet Brown Flare"></image></images>
+         <description></description>
+        </offer>
+              <offer id="59">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Jet Hematite</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Jet Hematite</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4512</price><price text="ss 16">3024</price></prices>
+         <colors><color>Jet Hematite</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Jet Hematite фото" title="PRECIOSA Jet Hematite"></image></images>
+         <description></description>
+        </offer>
+              <offer id="60">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Jet SiF</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Jet SiF</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">3024</price><price text="ss 16">2456</price></prices>
+         <colors><color>Jet SiF</color></colors>
+         <sizes><size>ss 20,ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Jet SiF фото" title="PRECIOSA Jet SiF"></image></images>
+         <description></description>
+        </offer>
+              <offer id="61">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Jonquil</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Jonquil</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Jonquil</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Jonquil фото" title="PRECIOSA Jonquil"></image></images>
+         <description></description>
+        </offer>
+              <offer id="62">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Jonquil&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Jonquil AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2629</price></prices>
+         <colors><color>Jonquil AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Jonquil AB фото" title="PRECIOSA Jonquil AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="63">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Labrador</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Labrador</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2629</price></prices>
+         <colors><color>Labrador</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Labrador фото" title="PRECIOSA Labrador"></image></images>
+         <description></description>
+        </offer>
+              <offer id="64">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Lagoon</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Lagoon</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2456</price></prices>
+         <colors><color>Lagoon</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Lagoon фото" title="PRECIOSA Lagoon"></image></images>
+         <description></description>
+        </offer>
+              <offer id="65">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light Amethyst</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light Amethyst</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Light Amethyst</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light Amethyst фото" title="PRECIOSA Light Amethyst"></image></images>
+         <description></description>
+        </offer>
+              <offer id="66">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light Amethyst&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light Amethyst AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Light Amethyst AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light Amethyst AB фото" title="PRECIOSA Light Amethyst AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="67">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light Burgundy</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light Burgundy</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Light Burgundy</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light Burgundy фото" title="PRECIOSA Light Burgundy"></image></images>
+         <description></description>
+        </offer>
+              <offer id="68">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light Burgundy&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light Burgundy AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Light Burgundy AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light Burgundy AB фото" title="PRECIOSA Light Burgundy AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="69">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light Colorado Topaz</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light Colorado Topaz</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Light Colorado Topaz</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Light Colorado Topaz фото" title="PRECIOSA Light Colorado Topaz"></image></images>
+         <description></description>
+        </offer>
+              <offer id="70">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light Colorado Topaz&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light Colorado Topaz AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2456</price></prices>
+         <colors><color>Light Colorado Topaz AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light Colorado Topaz AB фото" title="PRECIOSA Light Colorado Topaz AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="71">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light peach</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light peach</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Light peach</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Light peach фото" title="PRECIOSA Light peach"></image></images>
+         <description></description>
+        </offer>
+              <offer id="72">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light peach&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light peach AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2456</price></prices>
+         <colors><color>Light peach AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light peach AB фото" title="PRECIOSA Light peach AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="73">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light Rose</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light Rose</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Light Rose</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Light Rose фото" title="PRECIOSA Light Rose"></image></images>
+         <description></description>
+        </offer>
+              <offer id="74">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light Rose&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light Rose AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2456</price></prices>
+         <colors><color>Light Rose AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light Rose AB фото" title="PRECIOSA Light Rose AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="75">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light sapphire</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light sapphire</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Light sapphire</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light sapphire фото" title="PRECIOSA Light sapphire"></image></images>
+         <description></description>
+        </offer>
+              <offer id="76">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light sapphire&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light sapphire AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Light sapphire AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light sapphire AB фото" title="PRECIOSA Light sapphire AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="77">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light Siam</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light Siam</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Light Siam</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light Siam фото" title="PRECIOSA Light Siam"></image></images>
+         <description></description>
+        </offer>
+              <offer id="78">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Light Siam&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Light Siam AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Light Siam AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Light Siam AB фото" title="PRECIOSA Light Siam AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="79">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Montana</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Montana</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Montana</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Montana фото" title="PRECIOSA Montana"></image></images>
+         <description></description>
+        </offer>
+              <offer id="80">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Montana&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Montana AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2629</price></prices>
+         <colors><color>Montana AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Montana AB фото" title="PRECIOSA Montana AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="81">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Monte Carlo</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Monte Carlo</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2456</price></prices>
+         <colors><color>Monte Carlo</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Monte Carlo фото" title="PRECIOSA Monte Carlo"></image></images>
+         <description></description>
+        </offer>
+              <offer id="82">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Olivine</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Olivine</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Olivine</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Olivine фото" title="PRECIOSA Olivine"></image></images>
+         <description></description>
+        </offer>
+              <offer id="83">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Olivine&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Olivine AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Olivine AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Olivine AB фото" title="PRECIOSA Olivine AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="84">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Peridot</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Peridot</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Peridot</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Peridot фото" title="PRECIOSA Peridot"></image></images>
+         <description></description>
+        </offer>
+              <offer id="85">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Peridot&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Peridot AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Peridot AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Peridot AB фото" title="PRECIOSA Peridot AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="86">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Rose</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Rose</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Rose</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Rose фото" title="PRECIOSA Rose"></image></images>
+         <description></description>
+        </offer>
+              <offer id="87">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Rose&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Rose AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Rose AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Rose AB фото" title="PRECIOSA Rose AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="88">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=RoseOpal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>RoseOpal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>RoseOpal</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA RoseOpal фото" title="PRECIOSA RoseOpal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="89">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=RoseOpal&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>RoseOpal AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>RoseOpal AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA RoseOpal AB фото" title="PRECIOSA RoseOpal AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="90">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Ruby</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Ruby</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Ruby</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Ruby фото" title="PRECIOSA Ruby"></image></images>
+         <description></description>
+        </offer>
+              <offer id="91">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Ruby&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Ruby AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2456</price></prices>
+         <colors><color>Ruby AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Ruby AB фото" title="PRECIOSA Ruby AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="92">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Sapphire</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Sapphire</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Sapphire</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Sapphire фото" title="PRECIOSA Sapphire"></image></images>
+         <description></description>
+        </offer>
+              <offer id="93">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Sapphire&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Sapphire AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Sapphire AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Sapphire AB фото" title="PRECIOSA Sapphire AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="94">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Siam</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Siam</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Siam</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Siam фото" title="PRECIOSA Siam"></image></images>
+         <description></description>
+        </offer>
+              <offer id="95">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Siam&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Siam AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 16">2456</price></prices>
+         <colors><color>Siam AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Siam AB фото" title="PRECIOSA Siam AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="96">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Smoked Topaz</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Smoked Topaz</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Smoked Topaz</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Smoked Topaz фото" title="PRECIOSA Smoked Topaz"></image></images>
+         <description></description>
+        </offer>
+              <offer id="97">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Smoked Topaz&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Smoked Topaz AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2629</price></prices>
+         <colors><color>Smoked Topaz AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Smoked Topaz AB фото" title="PRECIOSA Smoked Topaz AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="98">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=StarlightGold</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>StarlightGold</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2456</price></prices>
+         <colors><color>StarlightGold</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA StarlightGold фото" title="PRECIOSA StarlightGold"></image></images>
+         <description></description>
+        </offer>
+              <offer id="99">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Sun</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Sun</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Sun</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Sun фото" title="PRECIOSA Sun"></image></images>
+         <description></description>
+        </offer>
+              <offer id="100">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Sun&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Sun AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2456</price></prices>
+         <colors><color>Sun AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Sun AB фото" title="PRECIOSA Sun AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="101">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Tanzanite</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Tanzanite</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>Tanzanite</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Tanzanite фото" title="PRECIOSA Tanzanite"></image></images>
+         <description></description>
+        </offer>
+              <offer id="102">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Tanzanite&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Tanzanite AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="ss 20">3494</price></prices>
+         <colors><color>Tanzanite AB</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Tanzanite AB фото" title="PRECIOSA Tanzanite AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="103">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Topaz</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Topaz</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">2456</price><price text="ss 20">4517</price></prices>
+         <colors><color>Topaz</color></colors>
+         <sizes><size>ss 16,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Topaz фото" title="PRECIOSA Topaz"></image></images>
+         <description></description>
+        </offer>
+              <offer id="104">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Topaz&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Topaz AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2460</price></prices>
+         <colors><color>Topaz AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Topaz AB фото" title="PRECIOSA Topaz AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="105">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Turquoise</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Turquoise</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3480</price><price text="ss 16">3024</price></prices>
+         <colors><color>Turquoise</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Turquoise фото" title="PRECIOSA Turquoise"></image></images>
+         <description></description>
+        </offer>
+              <offer id="106">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Turquoise&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Turquoise AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4512</price><price text="ss 16">2629</price></prices>
+         <colors><color>Turquoise AB</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Turquoise AB фото" title="PRECIOSA Turquoise AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="107">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Velvet</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Velvet</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2629</price></prices>
+         <colors><color>Velvet</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Velvet фото" title="PRECIOSA Velvet"></image></images>
+         <description></description>
+        </offer>
+              <offer id="108">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Venus</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Venus</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2456</price></prices>
+         <colors><color>Venus</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Venus фото" title="PRECIOSA Venus"></image></images>
+         <description></description>
+        </offer>
+              <offer id="109">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Violet</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Violet</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 20">4517</price></prices>
+         <colors><color>Violet</color></colors>
+         <sizes><size>ss 20,ss 20</size></sizes>
+         <images><image alt="PRECIOSA Violet фото" title="PRECIOSA Violet"></image></images>
+         <description></description>
+        </offer>
+              <offer id="110">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Violet&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Violet AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 16">3024</price><price text="ss 16">2629</price></prices>
+         <colors><color>Violet AB</color></colors>
+         <sizes><size>ss 16,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Violet AB фото" title="PRECIOSA Violet AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="111">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Vitrail Light</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Vitrail Light</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2629</price></prices>
+         <colors><color>Vitrail Light</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Vitrail Light фото" title="PRECIOSA Vitrail Light"></image></images>
+         <description></description>
+        </offer>
+              <offer id="112">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Vitrail Medium</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Vitrail Medium</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2629</price></prices>
+         <colors><color>Vitrail Medium</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Vitrail Medium фото" title="PRECIOSA Vitrail Medium"></image></images>
+         <description></description>
+        </offer>
+              <offer id="113">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=Volcano</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>Volcano</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3937</price><price text="ss 16">2456</price></prices>
+         <colors><color>Volcano</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA Volcano фото" title="PRECIOSA Volcano"></image></images>
+         <description></description>
+        </offer>
+              <offer id="114">
+         <url>https://preciosa-shop.ru/catalog/strazy/kleevye_strazy_kholodnoy_fiksatsii/?color=White opal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>551</categoryId>
+         <name>White opal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">3494</price><price text="ss 16">3024</price></prices>
+         <colors><color>White opal</color></colors>
+         <sizes><size>ss 20,ss 16</size></sizes>
+         <images><image alt="PRECIOSA White opal фото" title="PRECIOSA White opal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="115">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_rivoli_2h/?color=White opal&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>894</categoryId>
+         <name>White opal AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="ss 20">4517</price><price text="10 мм">1944</price></prices>
+         <colors><color>White opal AB</color></colors>
+         <sizes><size>ss 20,10 мм</size></sizes>
+         <images><image alt="PRECIOSA White opal AB фото" title="PRECIOSA White opal AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="116">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_rivoli_2h/?color=Crystal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>894</categoryId>
+         <name>Crystal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="12 мм">2915</price><price text="14 мм">4909</price><price text="10 мм">2369</price></prices>
+         <colors><color>Crystal</color></colors>
+         <sizes><size>12 мм,14 мм,10 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal фото" title="PRECIOSA Crystal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="117">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_oval_301_2h/?color=Crystal AB&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>895</categoryId>
+         <name>Crystal AB AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="12 мм">3938</price><price text="14 мм">6437</price><price text="10x7 мм">4203</price></prices>
+         <colors><color>Crystal AB AB</color></colors>
+         <sizes><size>12 мм,14 мм,10x7 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal AB AB фото" title="PRECIOSA Crystal AB AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="118">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_oval_301_2h/?color=Crystal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>895</categoryId>
+         <name>Crystal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="24x17 мм">1623</price><price text="16x11 мм">3335</price><price text="10x7 мм">4856</price></prices>
+         <colors><color>Crystal</color></colors>
+         <sizes><size>24x17 мм,16x11 мм,10x7 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal фото" title="PRECIOSA Crystal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="119">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_oval_301_2h/?color=Crystal AB&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>895</categoryId>
+         <name>Crystal AB AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="16x11 мм">4081</price><price text="24x17 мм">1980</price><price text="10x7 мм">4856</price></prices>
+         <colors><color>Crystal AB AB</color></colors>
+         <sizes><size>16x11 мм,24x17 мм,10x7 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal AB AB фото" title="PRECIOSA Crystal AB AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="120">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_pearshape_301_2h/?color=Honey</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>896</categoryId>
+         <name>Honey</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="16x11 мм">4081</price><price text="24x17 мм">1980</price><price text="18x10,5 мм">3708</price></prices>
+         <colors><color>Honey</color></colors>
+         <sizes><size>16x11 мм,24x17 мм,18x10,5 мм</size></sizes>
+         <images><image alt="PRECIOSA Honey фото" title="PRECIOSA Honey"></image></images>
+         <description></description>
+        </offer>
+              <offer id="121">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_pearshape_301_2h/?color=Crystal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>896</categoryId>
+         <name>Crystal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="12x7 мм">2929</price><price text="28x17 мм">1691</price><price text="18x10,5 мм">4446</price></prices>
+         <colors><color>Crystal</color></colors>
+         <sizes><size>12x7 мм,28x17 мм,18x10,5 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal фото" title="PRECIOSA Crystal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="122">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_pearshape_301_2h/?color=Crystal AB&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>896</categoryId>
+         <name>Crystal AB AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="12x7 мм">3490</price><price text="28x17 мм">2030</price><price text="12x7 мм">3490</price></prices>
+         <colors><color>Crystal AB AB</color></colors>
+         <sizes><size>12x7 мм,28x17 мм,12x7 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal AB AB фото" title="PRECIOSA Crystal AB AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="123">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_navette_301_2h/?color=Honey</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>897</categoryId>
+         <name>Honey</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="18x10,5 мм">4446</price><price text="28x17 мм">2030</price><price text="18x9 мм">1764</price></prices>
+         <colors><color>Honey</color></colors>
+         <sizes><size>18x10,5 мм,28x17 мм,18x9 мм</size></sizes>
+         <images><image alt="PRECIOSA Honey фото" title="PRECIOSA Honey"></image></images>
+         <description></description>
+        </offer>
+              <offer id="124">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_navette_301_2h/?color=Crystal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>897</categoryId>
+         <name>Crystal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="12x6 мм">3064</price><price text="18x9 мм">2029</price></prices>
+         <colors><color>Crystal</color></colors>
+         <sizes><size>12x6 мм,18x9 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal фото" title="PRECIOSA Crystal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="125">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_navette_301_2h/?color=Crystal AB&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>897</categoryId>
+         <name>Crystal AB AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="12x6 мм">3522</price><price text="12x6 мм">3522</price></prices>
+         <colors><color>Crystal AB AB</color></colors>
+         <sizes><size>12x6 мм,12x6 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal AB AB фото" title="PRECIOSA Crystal AB AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="126">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_rectangle_301_2h/?color=Honey</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>898</categoryId>
+         <name>Honey</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="18x9 мм">2029</price><price text="18x13 мм">4093</price></prices>
+         <colors><color>Honey</color></colors>
+         <sizes><size>18x9 мм,18x13 мм</size></sizes>
+         <images><image alt="PRECIOSA Honey фото" title="PRECIOSA Honey"></image></images>
+         <description></description>
+        </offer>
+              <offer id="127">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_rectangle_301_2h/?color=Crystal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>898</categoryId>
+         <name>Crystal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="25x18 мм">2128</price><price text="18x13 мм">5093</price></prices>
+         <colors><color>Crystal</color></colors>
+         <sizes><size>25x18 мм,18x13 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal фото" title="PRECIOSA Crystal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="128">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_square_303_2h/?color=Crystal AB&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>899</categoryId>
+         <name>Crystal AB AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="25x18 мм">2639</price><price text="16 мм">3938</price></prices>
+         <colors><color>Crystal AB AB</color></colors>
+         <sizes><size>25x18 мм,16 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal AB AB фото" title="PRECIOSA Crystal AB AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="129">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_square_303_2h/?color=Crystal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>899</categoryId>
+         <name>Crystal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="22 мм">2037</price><price text="16 мм">5043</price></prices>
+         <colors><color>Crystal</color></colors>
+         <sizes><size>22 мм,16 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal фото" title="PRECIOSA Crystal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="130">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_square_303_2h/?color=Crystal AB&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>899</categoryId>
+         <name>Crystal AB AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="22 мм">2607</price><price text="16 мм">5043</price></prices>
+         <colors><color>Crystal AB AB</color></colors>
+         <sizes><size>22 мм,16 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal AB AB фото" title="PRECIOSA Crystal AB AB"></image></images>
+         <description></description>
+        </offer>
+              <offer id="131">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_triangle_301_3h/?color=Honey</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>900</categoryId>
+         <name>Honey</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="22 мм">2607</price><price text="16 мм">3782</price></prices>
+         <colors><color>Honey</color></colors>
+         <sizes><size>22 мм,16 мм</size></sizes>
+         <images><image alt="PRECIOSA Honey фото" title="PRECIOSA Honey"></image></images>
+         <description></description>
+        </offer>
+              <offer id="132">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_triangle_301_3h/?color=Crystal</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>900</categoryId>
+         <name>Crystal</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="22 мм">1940</price><price text="16 мм">4844</price></prices>
+         <colors><color>Crystal</color></colors>
+         <sizes><size>22 мм,16 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal фото" title="PRECIOSA Crystal"></image></images>
+         <description></description>
+        </offer>
+              <offer id="133">
+         <url>https://preciosa-shop.ru/catalog/prishivnye_strazy/prishivnye_strazy_mc_triangle_301_3h/?color=Crystal AB&amp;AB=1</url>
+         <currencyId>RUB</currencyId>
+         <categoryId>900</categoryId>
+         <name>Crystal AB AB</name>
+         <vendor>PRECIOSA</vendor>
+         <prices><price text="22 мм">2483</price><price text="16 мм">4844</price></prices>
+         <colors><color>Crystal AB AB</color></colors>
+         <sizes><size>22 мм,16 мм</size></sizes>
+         <images><image alt="PRECIOSA Crystal AB AB фото" title="PRECIOSA Crystal AB AB"></image></images>
+         <description></description>
+        </offer>
+      </offers>
+  </shop>
+</yml_catalog>

@@ -1,0 +1,240 @@
+﻿body{
+text-align:center;	
+}
+
+input, select {
+    font-size:12pt;
+}
+
+.error {
+    border:2px solid red;
+    color:black;
+    font-weight:bold;
+}
+
+.errortext{
+    color:#ff0000;
+    font-weight:bold;
+    display:none;
+}
+
+.warning {
+    border:2px solid #ffff00;
+    color:$ffff00;
+}
+
+.ok {
+    color:#ffa000;
+}
+
+.visible {
+    display:none;
+}
+
+
+#confirmb {
+    display : none;
+}
+
+
+
+/* STAT BLOCK */
+#infoblock {
+    /*border:1px solid red;*/
+    float:left;
+    width:100%
+}
+
+#infoblock h2 {
+    color: #666666;
+    font-size: 20px;
+    margin:0px;
+    padding:0px;
+    float:left;
+}
+
+#stat {
+    float:left;
+    clear:left;
+}
+
+#tools {
+   float:right;
+}
+
+.daywrapper {
+    float:left;
+}
+
+.daybody {
+    border:1px solid #417690;
+    overflow:auto;
+    border-collapse:collapse;
+}
+
+.otd {
+    float:left;
+    border-collapse:collapse;
+    border-bottom:1px solid #999999;
+}
+
+.otd tr:nth-child(odd) {
+    background:#edf3fe;
+}
+
+.otd td {
+    text-align:center;
+    border-bottom:1px solid #999999;
+    width:50px;
+}
+
+.otd td:first-child {
+    white-space:nowrap;
+    text-align:left;
+}
+
+#refreshstat {
+    float:right
+}
+
+/* REGISTRATION FORM */
+#form {
+    clear:both;
+    margin-top:10px;
+    margin-bottom:10px;
+    float:none;
+    width:1290px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+    /*border:1px solid green;*/
+}
+
+#curgroup {
+    border:1px solid #417690;
+    display:block;
+    font-weight:bolder;
+    color:#0000a0;
+    margin-bottom:5px;
+}
+
+#regform {
+    border:1px solid #417690;
+    width:calc(100% - 2px);
+	text-align:center;
+}
+
+#regform td {
+    vertical-align:top;
+	text-align:center;
+}
+
+#regform table {
+    width:100%;
+    padding:0;
+    margin:0;
+    border-collapse:collapse;
+
+}
+
+#newcuple{
+display:none;	
+}
+
+table#editinfo{
+display:none;	
+}
+
+#number {
+    width:60px;
+    font-size:16pt;
+    text-align:center;
+}
+
+#mfam, #ffam{
+    width:150px;
+}
+
+#mnam, #fnam {
+    width:150px;
+}
+
+#mbir, #fbir {
+    width:200px;
+}
+
+#stk1, #stk2 {
+    width:200px;
+}
+
+#city1, #city2 {
+    width:175px;
+}
+
+#country1, #country2 {
+    width:100px;
+}
+
+#coach1, #coach2, #coach3, #coach4, #coach5, #coach6 {
+    width:200px;
+}
+
+#regform select {
+    border:1px solid #999999;
+    border-radius:5px;
+    width:75px;
+}
+
+button#insert{
+margin-top:20px;
+margin-bottom:5px;
+margin-left:auto;
+margin-right:auto;
+	
+}
+
+.predvar {
+    color: #ff00ff;
+    font-weight:bold;
+}
+
+.editmode {
+    color: #ff00ff;
+    border:1px solid #ff00ff;
+    
+}
+
+
+/* REGLIST */
+#list {
+    clear:both;
+    overflow:auto;
+}
+
+#list table {
+    width:100%;
+    border: 1px solid #417690;
+    border-collapse:collapse;
+}
+
+#list td, #list th {
+    border-bottom:1px solid #999999;
+    vertical-align:top;
+}
+
+.num {
+    font-size:14pt;
+    font-weight:bold;
+}
+
+#list .pred {
+    color: #909090; !important;
+}
+
+#refreshreglist {
+    float:right
+}
+
+.nobr {
+    white-space:nowrap;
+}
