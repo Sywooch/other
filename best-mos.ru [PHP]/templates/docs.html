@@ -1,0 +1,491 @@
+<!-- Шапка сайта -->
+<?include('_top.php')?>
+<script type="text/javascript">
+
+// при готовнсти страницы назначаем обработчики 
+$(document).ready(function(){
+
+	
+	
+	// назначаем на отправку форму новый обработчик - отправка без перезагрузки страницы
+	//$('#cartform').ajaxForm({target:'#basket', success: function(){switchOnOffLoading(0);}});
+	
+ 
+ 	$("#body").mousemove(onBodyMouseOver);
+ 
+});
+
+// включение иконки-загрузки и отправка формы
+function mainFormSend()
+{
+	switchOnOffLoading(1);
+	$('#cartform').submit();
+}
+
+// выключение/выключение картинки загрузки
+function switchOnOffLoading(on)
+{
+	if (on == 1)
+	{
+		$("#loading").css("display", "");
+	}
+	else
+	{
+		$("#loading").css("display", "none");
+	}
+	
+}
+
+
+// перемещение картинки вместе с курсором мыши
+function onBodyMouseOver(obj)
+{							
+		$("#loading").css("top", obj.pageY+"px");
+		x = obj.pageX+20;
+		$("#loading").css("left", x+"px");
+}
+
+
+
+
+// переход к странице заказа
+function onOrder()
+{
+	
+	$('#cartform').attr('action', '/docs/download/');
+	mainFormSend();	
+	window.scroll(0,0);			
+}
+
+
+// при выборе региона - запрос спика районов
+function onChangeRegion()
+{
+	switchOnOffLoading(1);
+	$('#rayon').empty();	
+	$('#gorod').empty();
+	$('#adress').val('');	
+	
+	var region = $('#region').val();
+	$.post('/shop/rayon/ajax/', {
+		region: region
+		},
+		function (data)
+		{
+			$('#rayon').html(data);
+			$('#rayon').val('');
+			switchOnOffLoading(0);
+		} 
+	)
+	$('#rayon').attr("disabled","");
+	$('#gorod').attr("disabled","disabled");
+		
+}
+
+// при выборе района - запрос спика почтовых отделений
+function onChangeRayon()
+{
+	switchOnOffLoading(1);
+	$('#gorod').empty();		
+	var rayon = $('#rayon').val();	
+	var region = $('#region').val();
+	$.post('/shop/gorod/ajax/', {
+		region: region,
+		rayon: rayon
+		},
+		function (data)
+		{
+			$('#gorod').html(data);	
+			$('#adress').val('');
+			switchOnOffLoading(0);		
+		} 
+	)
+	$('#gorod').attr("disabled","");
+}
+
+
+// при выборе почтового отделения - заполнение формы - адрес доставки
+function onChangeGorod()
+{
+	$('#adress').attr('value', $('#gorod').val());
+	$('#adress').focus();
+}
+
+
+// при отправке формы заказа, нужно проверить правильность наполнения формы
+function onFormOrderSubmit()
+{
+	var ok = true;
+	
+	if ($('#first_buy').val() == 'yes')
+	{	
+		$('#span_region').css('color', '');
+		
+		if ($('#region').val() == '')
+		{
+			ok = false;
+			$('#span_region').css('color', 'red');
+		}
+		
+		$('#span_rayon').css('color', '');		
+		if (($('#rayon').val() == '') || ($('#rayon').val() == null))
+		{
+			ok = false;
+			$('#span_rayon').css('color', 'red');
+		}
+		
+		$('#span_gorod').css('color', '');
+		if (($('#gorod').val() == '') || ($('#gorod').val() == null))
+		{
+			ok = false;
+			$('#span_gorod').css('color', 'red');
+		}
+		
+		$('#span_adress').css('color', '');
+		if ($('#adress').val() == '')
+		{
+			ok = false;
+			$('#span_adress').css('color', 'red');
+		}
+		
+		$('#span_adress_deliver').css('color', '');
+		if ($('#adress_deliver').val() == '')
+		{
+			ok = false;
+			$('#span_adress_deliver').css('color', 'red');
+		}
+		
+		$('#span_f').css('color', '');
+		if ($('#f').val() == '')
+		{
+			ok = false;
+			$('#span_f').css('color', 'red');
+		}
+		
+		$('#span_i').css('color', '');
+		if ($('#i').val() == '')
+		{
+			ok = false;
+			$('#span_i').css('color', 'red');
+		}
+		
+		$('#span_o').css('color', '');
+		if ($('#o').val() == '')
+		{
+			ok = false;
+			$('#span_o').css('color', 'red');
+		}
+		
+		
+		$('#span_naznach').css('color', '');
+		if ($('#naznach').val() == '')
+		{
+			ok = false;
+			$('#span_naznach').css('color', 'red');
+		}
+		
+		$('#span_predoplata').css('color', '');
+		if ($('#predoplata').val() == '')
+		{
+			ok = false;
+			$('#span_predoplata').css('color', 'red');
+		}
+	}
+	
+	if ($('#first_buy').val() == 'no')
+	{
+		$('#span_email').css('color', '');
+		if ($('#email').val() == '')
+		{
+			ok = false;
+			$('#span_email').css('color', 'red');
+		}
+		else
+		{				
+			var reg = new RegExp("[\\-0-9a-z_^.]+@[\\-0-9a-z_^.]+\\.[a-z]{2,4}", 'i');
+			if (!reg.test($('#email').val())) 
+			{
+				ok = false;
+				alert('Вы ввели некорректный email');
+			}
+		}
+		
+		$('#span_index').css('color', '');
+		if ($('#index').val() == '')
+		{
+			ok = false;
+			$('#span_index').css('color', 'red');
+		}
+	}
+		
+	if (ok)
+	{
+		$('#cartform').attr('action', '/docs/download/');
+		$('#cartform').submit();
+	}
+}
+
+// если пользователь сам ввёл свой индек, то его нужно проверить
+function onMyIndex()
+{
+	
+	var myindex = String($('#myindex').val());
+	
+	if (myindex.length == 6)
+	{	
+		switchOnOffLoading(1);
+		$.getJSON('/shop/myindex/ajax/'+myindex+'/', 
+			function (data)
+			{
+				if (data.error == '')
+				{
+					$('#region').val(data.oblast);
+					$('#rayon').html(data.rayon);
+					$('#gorod').html(data.gorod);
+					$('#adress').val(data.adress);
+					$('#rayon').attr("disabled","");
+					$('#gorod').attr("disabled","");
+					$('#adress').focus();
+				}
+				else
+				{
+					alert(data.error);
+					$('#myindex').val('')
+				}
+				
+				switchOnOffLoading(0);
+			} 
+		)
+	}
+}
+
+
+</script>
+
+
+
+<!-- Path -->
+<div id="path">
+<?=$path?>
+</div>
+	<!-- Path -->
+	</td>
+	<td></td>
+	</tr>
+	
+	<tr valign="top">
+	<td></td>
+	<td>
+		
+		<!-- Content -->
+		<div id="content">
+		<h1><?=$h1?></h1>
+			<form id="cartform" name="cartform" method="post" action="/shop/calc/ajax/">
+			<div id="basket" style="position:relative;">
+				<?=$body?>
+			</div>
+			</form>
+		</div>
+		<!-- Content -->
+	
+	</table>
+
+</td>
+<td>
+
+	<table width="200" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	<td width="1%" height="11" style="background: url(/i/corner_5_lt.png) no-repeat left bottom;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td width="98%" style="background: url(/i/corner_5_t.png) repeat-x left bottom;"></td>
+	<td width="1%" style="background: url(/i/corner_5_rt.png) no-repeat left bottom;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+	<tr>
+	<td colspan="2" height="1" bgcolor="#FFFFFF"></td>
+	<td style="background: url(/i/corner_4_rt.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>	
+
+	<tr>
+	<td colspan="2" height="11" style="background: #f6f8f4 url(/i/bg_grin5.jpg) repeat-y left;"></td>
+	<td style="background: url(/i/corner_6_rt.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+	<tr valign="top">
+		<td colspan="2"  style="background: #f6f8f4 url(/i/bg_grin5.jpg) repeat-y left; padding-left:12px;">
+				
+		<form method="post">
+		<input type="hidden" name="shop_fast_put">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" id="searchform">
+			
+			<tr><td class="fieldname" colspan="2"><h2>Быстрое</h2>формирование корзины</td></tr>
+			<tr>
+				<td>
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr valign="middle">
+						<td width="99%"><input class="searchformfield" type="text" id="good_code" name="good_code" value="Код товара" OnFocus="if ($('#good_code').val()=='Код товара') $('#good_code').val('');" OnBlur="if ($('#good_code').val()=='') $('#good_code').val('Код товара');" maxlength=140 border="0"></td>
+						<td width="1%"></td>
+						</tr>
+						<tr><td height="12" colspan="2"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td></tr>					
+						<tr valign="middle">
+						<td width="99%"><input class="searchformfield" type="text" id="good_count" name="good_count" value="Количество" OnFocus="if ($('#good_count').val()=='Количество') $('#good_count').val('');" OnBlur="if ($('#good_count').val()=='') $('#good_count').val('Количество');" maxlength=140 border="0"></td>
+						<td width="1%"></td>
+						</tr>					
+					</table>
+				</td>
+				<td width="1%"  style="vertical-align:bottom; padding: 0px 0px 0px 8px;">
+					<input type="image" title="Добавить в корзину" src="/i/basket2.gif" style="cursor: hand; cursor: pointer; padding: 0px; margin: 0px;">
+				</td>
+			</tr>
+			<tr><td class="fieldname" colspan="2"><?=$shop_fastput_error?></td></tr>
+		</table>		
+		</form>		
+		</td>
+		<td style="background: url(/i/corner_5_l.png) repeat-y left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	<tr>
+	<td colspan="2" height="11" style="background: #f6f8f4 url(/i/bg_grin5.jpg) repeat-y left;"></td>
+	<td style="background: url(/i/corner_6_rb.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	<tr>
+	<td colspan="2" height="1" bgcolor="#FFFFFF"></td>
+	<td style="background: url(/i/corner_4_rt.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	<tr>
+	<td width="1%" height="11" style="background: url(/i/corner_5_lb.png) no-repeat left bottom;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td width="98%" style="background: url(/i/corner_5_b.png) repeat-x left bottom;"></td>
+	<td width="1%" style="background: url(/i/corner_5_rb.png) no-repeat left bottom;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+
+<!-- ******************************* -->
+
+	<tr>
+	<td width="1%" height="11" style="background: url(/i/corner_5_lt.png) no-repeat left bottom;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td width="98%" style="background: url(/i/corner_5_t.png) repeat-x left bottom;"></td>
+	<td width="1%" style="background: url(/i/corner_5_rt.png) no-repeat left bottom;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+	<tr>
+	<td colspan="2" height="1" bgcolor="#FFFFFF"></td>
+	<td style="background: url(/i/corner_4_rt.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>	
+
+	<tr>
+	<td colspan="2" height="11" style="background: #f6f8f4 url(/i/bg_grin5.jpg) repeat-y left;"></td>
+	<td style="background: url(/i/corner_6_rt.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+	<tr valign="top">
+		<td colspan="2"  style="background: #f6f8f4 url(/i/bg_grin5.jpg) repeat-y left; padding-left:12px;">
+
+
+		<!-- Форма поиска -->
+		<?=$search_form?>		
+		<!-- Подписка на новости-->
+		<?=$subscribe?>
+		<!-- Подписка на новости-->
+		<div class="bg_line"><table border="0" cellpadding="0" cellspacing="0" height="1"><tr><td></td></tr></table></div>
+		<!-- Форма СКАЧАТЬ ПЛАТЕЖКУ -->
+		<a href="/docs/" class="docs" ><b>Скачать квитанцию</b></a>
+
+		
+		</td>
+		<td style="background: url(/i/corner_5_l.png) repeat-y left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>	
+	
+	
+	<tr>
+	<td colspan="2" height="11" style="background: #f6f8f4 url(/i/bg_grin5.jpg) repeat-y left;"></td>
+	<td style="background: url(/i/corner_6_rb.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	<tr>
+	<td colspan="2" height="1" bgcolor="#FFFFFF"></td>
+	<td style="background: url(/i/corner_4_rt.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	<tr>
+	<td width="1%" height="11" style="background: url(/i/corner_5_lb.png) no-repeat left bottom;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td width="98%" style="background: url(/i/corner_5_b.png) repeat-x left bottom;"></td>
+	<td width="1%" style="background: url(/i/corner_5_rb.png) no-repeat left bottom;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+
+
+<!-- ******************************* 
+
+
+		
+	
+	<tr>
+	<td colspan="3" valign="top" style="padding-right:5px;">
+		<a href="/free/" target="_blank"><img src="/i/bc.gif" alt="Бесплатные каталоги" title="Бесплатные каталоги" class="top-pad"  /></a>
+
+	</td>
+	</tr>
+
+ -->
+	
+	<tr>
+	<td colspan="3" height="12"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>	
+	<tr>
+	<td colspan="2" style="background: url(/i/bg_orange_dot.gif) repeat-x left top;"></td>
+	<td height="12" style="background: url(/i/corner_4_rt.gif) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+	<tr valign="top">
+	
+	<td></td>
+	<td align="center">
+		<!--   -->
+		<a href="/free/" target="_blank"><img src="/i/free_catalod.jpg" alt="Бесплатные каталоги" title="Бесплатные каталоги" class="free_cat"  /></a><br />
+<a href="/free/" class="free">Бесплатные каталоги</a>
+		<!--   -->
+		
+	
+	</td>
+	<td style="background: url(/i/bg_orange_dot.gif) repeat-y 6px top;"></td>
+	</tr>
+	
+	<tr>
+	<td colspan="2" style="background: url(/i/bg_orange_dot.gif) repeat-x left bottom;"></td>
+	<td height="12" style="background: url(/i/corner_4_rb.gif) no-repeat right top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+<!-- ******************************* -->	
+		
+	<tr>
+	<td width="1%" height="20"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td width="98%"></td>
+	<td width="1%"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+	<tr>
+	<td colspan="2" style="background: url(/i/bg_orange_dot.gif) repeat-x left top;"></td>
+	<td height="12" style="background: url(/i/corner_4_rt.gif) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+	<tr valign="top">
+	
+	<td></td>
+	<td>
+		<!--   -->
+<?=$hotcatalog_list?>
+		<!--   -->
+		
+	
+	</td>
+	<td style="background: url(/i/bg_orange_dot.gif) repeat-y 6px top;"></td>
+	</tr>
+	
+	<tr>
+	<td colspan="2" style="background: url(/i/bg_orange_dot.gif) repeat-x left bottom;"></td>
+	<td height="12" style="background: url(/i/corner_4_rb.gif) no-repeat right top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	</table>
+</td>
+<td></td>
+</tr>
+<!-- Верхняя часть сайта -->
+
+
+
+<!-- Нижняя часть сайта -->
+<?include('_bot.php')?>

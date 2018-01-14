@@ -1,0 +1,435 @@
+<!-- Шапка сайта -->
+<?include('_top.php')?>
+
+
+<script type="text/javascript">
+
+// при отправке формы заказа, нужно проверить правильность наполнения формы
+function onEditFormSubmit()
+{
+	var ok = true;
+	
+
+	
+	$('#span_adress_deliver').css('color', '');
+	if ($('#adress_deliver').val() == '')
+	{
+		ok = false;
+		$('#span_adress_deliver').css('color', 'red');
+	}
+	
+	$('#span_f').css('color', '');
+	if ($('#f').val() == '')
+	{
+		ok = false;
+		$('#span_f').css('color', 'red');
+	}
+	
+	$('#span_i').css('color', '');
+	if ($('#i').val() == '')
+	{
+		ok = false;
+		$('#span_i').css('color', 'red');
+	}
+	
+	$('#span_o').css('color', '');
+	if ($('#o').val() == '')
+	{
+		ok = false;
+		$('#span_o').css('color', 'red');
+	}
+	
+	$('#span_email').css('color', '');
+	if ($('#email').val() == '')
+	{
+		ok = false;
+		$('#span_email').css('color', 'red');
+	}
+	else
+	{			
+		
+		var reg = new RegExp("[\\-0-9a-z_^.]+@[\\-0-9a-z_^.]+\\.[a-z]{2,3}", 'i');
+		if (!reg.test($('#email').val())) 
+		{
+			ok = false;
+			alert('Вы ввели некорректный email');
+		}
+	}
+	
+	
+	$('#span_phone').css('color', '');
+	if ($('#phonenum').val() == '')
+	{
+		ok = false;
+		$('#span_phone').css('color', 'red');
+	}
+	
+	if ($('#user_pass').val() != $('#user_pass2').val())
+	{
+		ok = false;
+		$('#span_user_pass').css('color', 'red');
+		$('#span_user_pass2').css('color', 'red');
+		alert('Введённые пароли должны совпадать!');		
+	}
+	
+		
+	if (ok)
+	{
+	
+		$('#profile_edit').attr('action', '/authorization/doedit/');
+		$('#profile_edit').submit();
+	}
+}
+
+
+
+// при регистрации нужно проверить правильность наполнения формы
+function onRegSubmit()
+{
+	var ok = true;
+	
+	$('#span_region').css('color', '');
+		
+		if ($('#region').val() == '')
+		{
+			ok = false;
+			$('#span_region').css('color', 'red');
+		}
+		
+		$('#span_rayon').css('color', '');		
+		if (($('#rayon').val() == '') || ($('#rayon').val() == null))
+		{
+			ok = false;
+			$('#span_rayon').css('color', 'red');
+		}
+		
+		$('#span_gorod').css('color', '');
+		if (($('#gorod').val() == '') || ($('#gorod').val() == null))
+		{
+			ok = false;
+			$('#span_gorod').css('color', 'red');
+		}
+		
+		$('#span_adress').css('color', '');
+		if ($('#adress').val() == '')
+		{
+			ok = false;
+			$('#span_adress').css('color', 'red');
+		}
+		
+		$('#span_adress_deliver').css('color', '');
+		if ($('#adress_deliver').val() == '')
+		{
+			ok = false;
+			$('#span_adress_deliver').css('color', 'red');
+		}
+	
+	$('#span_f').css('color', '');
+	if ($('#f').val() == '')
+	{
+		ok = false;
+		$('#span_f').css('color', 'red');
+	}
+	
+	$('#span_i').css('color', '');
+	if ($('#i').val() == '')
+	{
+		ok = false;
+		$('#span_i').css('color', 'red');
+	}
+	
+	$('#span_o').css('color', '');
+	if ($('#o').val() == '')
+	{
+		ok = false;
+		$('#span_o').css('color', 'red');
+	}
+	
+	$('#span_email').css('color', '');
+	if ($('#email').val() == '')
+	{
+		ok = false;
+		$('#span_email').css('color', 'red');
+	}
+	else
+	{			
+		
+		var reg = new RegExp("[\\-0-9a-z_^.]+@[\\-0-9a-z_^.]+\\.[a-z]{2,3}", 'i');
+		if (!reg.test($('#email').val())) 
+		{
+			ok = false;
+			alert('Вы ввели некорректный email');
+		}
+	}
+	
+	
+	$('#span_phone').css('color', '');
+	if ($('#phonenum').val() == '')
+	{
+		ok = false;
+		$('#span_phone').css('color', 'red');
+	}
+	
+	if ($('#index').val() != $('#index1').val())
+	{
+		ok = false;
+		$('#span_index').css('color', 'red');
+		$('#span_index1').css('color', 'red');
+		alert('Введённые индексы обязательно должны совпадать!');		
+	}
+	
+	
+	$('#span_user_name').css('color', '');
+	if ($('#user_name').val() == '')
+	{
+		ok = false;
+		$('#span_user_name').css('color', 'red');
+	}
+	
+	
+	
+	
+	$('#span_passwd').css('color', '');
+	$('#span_passwd2').css('color', '');
+	if ($('#passwd').val() == '')
+	{		
+		ok = false;	
+		$('#span_passwd').css('color', 'red');		
+	}
+	if ($('#passwd2').val() == '')
+	{		
+		ok = false;	
+		$('#span_passwd2').css('color', 'red');
+	}
+	
+	if ($('#passwd').val() != $('#passwd2').val())
+	{		
+		ok = false;	
+		$('#span_passwd').css('color', 'red');
+		$('#span_passwd2').css('color', 'red');
+		alert('Пароль и повтор пароля - должны быть одинаковыми!');
+	}
+	else
+	{
+		
+	}
+	
+	
+	
+		
+	if (ok)
+	{
+		$('#profile_reg').attr('action', '/authorization/doreg/');
+		$('#profile_reg').submit();
+	}
+}
+
+
+
+
+
+
+
+
+
+// выключение/выключение картинки загрузки
+function switchOnOffLoading(on)
+{
+	if (on == 1)
+	{
+		$("#loading").css("display", "");
+	}
+	else
+	{
+		$("#loading").css("display", "none");
+	}
+	
+}
+
+
+// перемещение картинки вместе с курсором мыши
+function onBodyMouseOver(obj)
+{							
+		$("#loading").css("top", obj.pageY+"px");
+		x = obj.pageX+20;
+		$("#loading").css("left", x+"px");
+}
+
+
+// при выборе региона - запрос спика районов
+function onChangeRegion()
+{
+
+	switchOnOffLoading(1);
+	$('#rayon').empty();	
+	$('#gorod').empty();
+	$('#adress').val('');	
+	
+	var region = $('#region').val();
+	$.post('/shop/rayon/ajax/', {
+		region: region
+		},
+		function (data)
+		{
+			$('#rayon').html(data);
+			$('#rayon').val('');
+			switchOnOffLoading(0);
+		} 
+	)
+	$('#rayon').removeAttr("disabled");
+	$('#gorod').attr("disabled","disabled");
+		
+}
+
+// при выборе района - запрос спика почтовых отделений
+function onChangeRayon()
+{
+	switchOnOffLoading(1);
+	$('#gorod').empty();		
+	var rayon = $('#rayon').val();	
+	var region = $('#region').val();
+	$.post('/shop/gorod/ajax/', {
+		region: region,
+		rayon: rayon
+		},
+		function (data)
+		{
+			$('#gorod').html(data);	
+			$('#adress').val('');
+			switchOnOffLoading(0);		
+		} 
+	)
+	$('#gorod').removeAttr("disabled");
+}
+
+
+// при выборе почтового отделения - заполнение формы - адрес доставки
+function onChangeGorod()
+{
+	$('#adress').attr('value', $('#gorod').val());
+	$('#adress').focus();
+}
+
+
+// если пользователь сам ввёл свой индек, то его нужно проверить
+function onMyIndex()
+{
+	
+	var myindex = String($('#myindex').val());
+	
+	if (myindex.length == 6)
+	{	
+		switchOnOffLoading(1);
+		$.getJSON('/shop/myindex/ajax/'+myindex+'/', 
+			function (data)
+			{
+				if (data.error == '')
+				{
+					$('#region').val(data.oblast);
+					$('#rayon').html(data.rayon);
+					$('#gorod').html(data.gorod);
+					$('#adress').val(data.adress);
+					$('#rayon').removeAttr("disabled");
+					$('#gorod').removeAttr("disabled");
+					$('#adress').focus();
+				}
+				else
+				{
+					alert(data.error);
+					$('#myindex').val('')
+				}
+				
+				switchOnOffLoading(0);
+			} 
+		)
+	}
+}
+
+</script>
+
+
+	<!-- Path -->
+<div id="path">
+<a href="/">Главная</a>&nbsp;<span>&raquo;</span>&nbsp;Личный кабинет</div>
+	<!-- Path -->
+	</td>
+	<td></td>
+	</tr>
+	
+	<tr valign="top">
+	<td></td>
+	<td>
+		
+		<!-- Content -->
+		<div id="content">
+		<h1><?=$h1?></h1>
+
+                <?
+                    if (!$std->member['user_id']) {
+                        echo $auth_panel_guest2;
+                    }
+
+                ?>
+		<form method=post id="profile_edit" action="/authorization/doedit/">
+			<?=$body?>
+		</form>
+		</div>
+		<!-- Content -->
+	
+	</table>
+
+</td>
+<td>
+
+	<table width="200" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	<td width="12" height="11" style="background: url(/i/corner_5_lt.png) no-repeat left bottom;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td  style="background: url(/i/corner_5_t.png) repeat-x left bottom;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td width="12" style="background: url(/i/corner_5_rt.png) no-repeat left bottom;"></td>
+	</tr>
+	
+	<tr>
+	<td colspan="2" height="1" bgcolor="#FFFFFF"></td>
+	<td style="background: url(/i/corner_4_rt.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>	
+
+	<tr>
+	<td colspan="2" height="11" style="background: #f6f8f4 url(/i/bg_grin5.jpg) repeat-y left;"></td>
+	<td style="background: url(/i/corner_6_rt.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+	<tr valign="top">
+		<td colspan="2"  style="background: #f6f8f4 url(/i/bg_grin5.jpg) repeat-y left; padding-left:12px;">
+		<!--   -->
+<?=$hotcatalog_list?>
+		<!--   -->	
+		</td>
+		<td style="background: url(/i/corner_5_l.png) repeat-y left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	<tr>
+	<td colspan="2" height="11" style="background: #f6f8f4 url(/i/bg_grin5.jpg) repeat-y left;"></td>
+	<td style="background: url(/i/corner_6_rb.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	<tr>
+	<td colspan="2" height="1" bgcolor="#FFFFFF"></td>
+	<td style="background: url(/i/corner_4_rt.png) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	<tr>
+	<td width="12" height="11" style="background: url(/i/corner_5_lb.png) no-repeat left bottom;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td style="background: url(/i/corner_5_b.png) repeat-x left bottom;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td width="12" style="background: url(/i/corner_5_rb.png) no-repeat left bottom;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+			
+	
+	</table>
+
+</td>
+<td></td>
+</tr>
+<!-- Верхняя часть сайта -->
+
+
+
+
+<!-- Нижняя часть сайта -->
+<?include('_bot.php')?>

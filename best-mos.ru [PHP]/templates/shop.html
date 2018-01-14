@@ -1,0 +1,665 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<title>История заказов</title>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+<link href="/templates/_se3.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/templates/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="/templates/bootstrap.min.css" />
+<!--<link rel="stylesheet" type="text/css" href="/templates/client_form.css" />-->
+
+<script type="text/javascript" src="/templates/jquery.js"></script>
+<script type="text/javascript" src="/templates/jquery.treeview.js"></script>
+<script type="text/javascript" src="/templates/jquery.form.js"></script>
+<script type="text/javascript" src="/templates/jquery-ui.js"></script>
+<script type="text/javascript">
+
+    // при готовнсти страницы назначаем обработчики 
+    $(document).ready(function () {
+
+        // назначаем обработчик для построения дерева-меню
+        $("#navigation").treeview({ animated: "normal", unique: true });
+        $("#navigation_archive").treeview({ animated: "normal", unique: true });
+
+        // прячем дерево до тех пор, пока оно не будет полностью сформировано
+        document.getElementById("ex2").style.display = '';
+        document.getElementById("ex3").style.display = '';
+
+        // назначаем на отправку форму новый обработчик - отправка без перезагрузки страницы
+        $('#cartform').ajaxForm({ target: '#basket', success: function () { switchOnOffLoading(0); } });
+
+        // подвижное меню
+        //$(window).scroll(function () {
+        //      offset1 = $(document).scrollTop();  
+        //      $('#div_scroll').animate({top:offset1},{duration:500,queue:false});
+        //});
+
+        $("#body").mousemove(onBodyMouseOver);
+
+
+
+    });
+
+    // включение иконки-загрузки и отправка формы
+    function mainFormSend() {
+        switchOnOffLoading(1);
+        $('#cartform').submit();
+    }
+
+    // выключение/выключение картинки загрузки
+    function switchOnOffLoading(on) {
+        if (on == 1) {
+            $("#loading").css("display", "");
+        }
+        else {
+            $("#loading").css("display", "none");
+        }
+
+    }
+
+
+    // перемещение картинки вместе с курсором мыши
+    function onBodyMouseOver(obj) {
+        $("#loading").css("top", obj.pageY + "px");
+        x = obj.pageX + 20;
+        $("#loading").css("left", x + "px");
+    }
+
+
+    // переход к странице заказа
+    function onOrder() {
+        //var attr = $('#card_payment').attr('checked');
+        //if (typeof attr !== undefined && attr != false ) {            
+        //    $('#cartform').attr('action', '/shop/card_payment/ajax/');
+        //}
+        //else {
+        
+        //}
+        $('#cartform').attr('action', '/shop/order/ajax/');
+        mainFormSend();
+        window.scroll(0, 0);
+    }
+
+
+    // при выборе региона - запрос спика районов
+    function onChangeRegion() {
+        switchOnOffLoading(1);
+        $('#rayon').empty();
+        $('#gorod').empty();
+        $('#adress').val('');
+
+        var region = $('#region').val();
+        $.post('/shop/rayon/ajax/', {
+            region: region
+        },
+            function (data) {
+                $('#rayon').html(data);
+                $('#rayon').val('');
+                switchOnOffLoading(0);
+            }
+        )
+        $('#rayon').attr("disabled", "");
+        $('#gorod').attr("disabled", "disabled");
+
+    }
+
+    // при выборе района - запрос спика почтовых отделений
+    function onChangeRayon() {
+        switchOnOffLoading(1);
+        $('#gorod').empty();
+        var rayon = $('#rayon').val();
+        var region = $('#region').val();
+        $.post('/shop/gorod/ajax/', {
+            region: region,
+            rayon: rayon
+        },
+            function (data) {
+                $('#gorod').html(data);
+                $('#adress').val('');
+                switchOnOffLoading(0);
+            }
+        )
+        $('#gorod').attr("disabled", "");
+    }
+
+
+    // при выборе почтового отделения - заполнение формы - адрес доставки
+    function onChangeGorod() {
+        $('#adress').attr('value', $('#gorod').val());
+        $('#adress').focus();
+    }
+
+
+    // при отправке формы заказа, нужно проверить правильность наполнения формы
+    function onFormOrderSubmit() {
+        var ok = true;
+
+        if ($('#first_buy').val() == 'yes') {
+            $('#span_region').css('color', '');
+
+            if ($('#region').val() == '') {
+                ok = false;
+                $('#span_region').css('color', 'red');
+            }
+
+            $('#span_rayon').css('color', '');
+            if (($('#rayon').val() == '') || ($('#rayon').val() == null)) {
+                ok = false;
+                $('#span_rayon').css('color', 'red');
+            }
+
+            $('#span_gorod').css('color', '');
+            if (($('#gorod').val() == '') || ($('#gorod').val() == null)) {
+                ok = false;
+                $('#span_gorod').css('color', 'red');
+            }
+
+            $('#span_adress').css('color', '');
+            if ($('#adress').val() == '') {
+                ok = false;
+                $('#span_adress').css('color', 'red');
+            }
+
+            $('#span_adress_deliver').css('color', '');
+            if ($('#adress_deliver').val() == '') {
+                ok = false;
+                $('#span_adress_deliver').css('color', 'red');
+            }
+
+            $('#span_f').css('color', '');
+            if ($('#f').val() == '') {
+                ok = false;
+                $('#span_f').css('color', 'red');
+            }
+
+            $('#span_i').css('color', '');
+            if ($('#i').val() == '') {
+                ok = false;
+                $('#span_i').css('color', 'red');
+            }
+
+            $('#span_o').css('color', '');
+            if ($('#o').val() == '') {
+                ok = false;
+                $('#span_o').css('color', 'red');
+            }
+
+            $('#span_email').css('color', '');
+            if ($('#email').val() == '') {
+                ok = false;
+                $('#span_email').css('color', 'red');
+            }
+            else {
+
+                var reg = new RegExp("[\\-0-9a-z_^.]+@[\\-0-9a-z_^.]+\\.[a-z]{2,4}", 'i');
+                if (!reg.test($('#email').val())) {
+                    ok = false;
+                    alert('Вы ввели некорректный email');
+                }
+            }
+
+
+            $('#span_phone').css('color', '');
+            if ($('#phonenum').val() == '') {
+                ok = false;
+                $('#span_phone').css('color', 'red');
+            }
+        }
+
+        if ($('#first_buy').val() == 'no') {
+            $('#span_email').css('color', '');
+            if ($('#email').val() == '') {
+                ok = false;
+                $('#span_email').css('color', 'red');
+            }
+            else {
+                //          var reg = new RegExp("[\\-0-9a-z_^.]+@[\\-0-9a-z_^.]+\\.[a-z]{2,4}", 'i');
+                //          if (!reg.test($('#email').val())) 
+                //          {
+                //              ok = false;
+                //              alert('Вы ввели некорректный email');
+                //          }
+            }
+
+            $('#span_index').css('color', '');
+            if ($('#index').val() == '') {
+                ok = false;
+                $('#span_index').css('color', 'red');
+            }
+        }
+
+        if (ok) {
+//            $('#cartform').attr('action', '/shop/orderdo/ajax/');
+            $('#cartform').attr('action', '/shop/comment/ajax/');
+            $('#cartform').submit();
+            window.scroll(0, 0);
+        }
+    }
+
+    // если пользователь сам ввёл свой индек, то его нужно проверить
+    function onMyIndex() {
+
+        var myindex = String($('#myindex').val());
+
+        if (myindex.length == 6) {
+            switchOnOffLoading(1);
+            $.getJSON('/shop/myindex/ajax/' + myindex + '/',
+                function (data) {
+                    if (data.error == '') {
+                        $('#region').val(data.oblast);
+                        $('#rayon').html(data.rayon);
+                        $('#gorod').html(data.gorod);
+                        $('#adress').val(data.adress);
+                        $('#rayon').attr("disabled", "");
+                        $('#gorod').attr("disabled", "");
+                        $('#adress').focus();
+                    }
+                    else {
+                        alert(data.error);
+                        $('#myindex').val('')
+                    }
+
+                    switchOnOffLoading(0);
+                }
+            )
+        }
+    }
+
+
+</script>
+</head>
+
+<body style="background:url(/i/bg_grin2.jpg) repeat-x left; background-position:0 105px;">
+<div style="position:absolute; z-index:20; top:110px; left:3px;"><img src="/i/plet_l.png" /></div>
+
+<table id="body" border="0" cellpadding="0" cellspacing="0" width="100%" height="100%" >
+
+<!-- Разметка сайта -->
+<tr valign="top">
+<td width="5%" height="18"><table width="20" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+<td width="12%"><table width="220" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+<td width="71%"><table width="540" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+<td width="8%"><table width="160" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+<td width="4%"><table width="18" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+</tr>
+<!-- Разметка сайта -->
+
+<!-- Верхняя часть сайта -->
+<tr valign="top" style="background: url(/i/bg_top.gif) repeat-x left bottom;">
+<td height="85"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+<td colspan="2">
+
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr valign="top">
+	<td width="5%">
+		
+		<table border="0" cellpadding="0" cellspacing="0" width="100"><tr><td height="1"></td></tr></table>
+		<!-- Логотип -->
+		<a href="/"><img border="0" src="/i/logo.gif" alt="Логотип компании Бест" style="border: 1px solid orange"></a>
+		<!-- Логотип -->
+	
+	</td>
+	<td width="1%"><table width="10" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td>
+	
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background: url(/i/planka1.gif) repeat-x left top;">
+		<tr valign="top">
+		<td>
+			
+			<!-- Корзина и Форма входа -->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr valign="center">
+			<td width="1%" height="35" style="background: url(/i/planka1_left.gif) no-repeat left top;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+			<td width="28%">
+			
+				<!-- Вход в корзину -->
+				<div class="basket_ico"><?=$shop_vars['cart']?></div>
+				<!-- Вход в корзину -->
+			
+			</td>
+			<td width="2%" height="35" style="background: url(/i/planka1_center.gif) no-repeat center top;"><table width="26" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+			<td width="68%">
+			
+				<!-- Форма входа-->
+<?=$login_panel?>
+				<!-- Форма входа-->
+			
+			</td>
+			<td width="1%" height="35" style="background: url(/i/planka1_right.gif) no-repeat right top;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+			</tr>
+			</table>
+			<!-- Корзина и Форма входа -->
+		
+		</td>
+		</tr>
+		</table>
+	
+		<table border="0" cellpadding="0" cellspacing="0"><tr><td height="21"></td></tr></table>
+	
+		<!-- Главное меню -->
+<?=menu('static')?>
+		<!-- Главное меню -->
+	
+	</td>
+	</tr>
+	</table>
+
+</td>
+<td>
+
+	<!-- icons -->
+	<div id="icons" align="right">
+		<table height="13" width="70%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		<td height="15" width="25%"><table width="32" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+		<td width="50%"><table width="58" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+		<td width="25%"><table width="32" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+		</tr>
+		<tr valign="bottom">
+		<td align="center"><a href="/sitemap/"><img width=18 height=14 border="0" src="/i/imap.gif" alt="Карта сайта"></a></td>
+		<td align="center"><a href="mailto:zakaz@best-mos.ru"><img width=18 height=14 border="0" name="imail" src="/i/imail.gif" alt="Написать письмо"></a></td>
+		<td align="center"><a href="/"><img width=18 height=14 border="0" src="/i/ihome.gif" alt="На главную"></a></td>
+		</tr>
+		</table>
+	</div>
+	<!-- Icons -->
+	
+	<table border="0" cellpadding="0" cellspacing="0"><tr><td height="32"></td></tr></table>
+		
+	<!-- Contacts -->
+	<div id="phone" align="right">
+	<table border=0 cellpadding=0 cellspacing=0>
+	<tr valign="top">
+	<td style="padding: 8px 4px 0px 0px;" align="right"><div class="code">(495)</div></td>
+	<td><div class="number">640-2-641</div></td>
+	</tr>
+	</table>
+	</div>
+	<!-- Contacts -->
+
+</td>
+<td></td>
+</tr>
+
+<tr valign="top">
+<td colspan="5" height="20"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+</tr>
+
+<tr valign="top">
+<td ><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+<td style="background: url(/i/bg_orange_dot.gif) repeat-y right top;">
+
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+	<tr>
+	<td width="1%" height="11"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td width="98%"></td>
+	<td width="1%" style="background: url(/i/corner_1_rt.gif) no-repeat right top;"><table width="12" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+	<tr bgcolor="#FFFFFF">
+	<td height="12" style="background:#FFFFFF url(/i/corner_1_lt.gif) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td colspan="2" style="background:#FFFFFF url(/i/bg_orange_dot.gif) repeat-x left top;"></td>
+	</tr>
+	
+	<tr valign="top" bgcolor="#FFFFFF">
+	<td style="background:#FFFFFF url(/i/bg_orange_dot.gif) repeat-y left top;"></td>
+	<td>
+		<!-- Catalog menu -->
+		<h2>Каталог</h2>
+		<div id="ex2" style="display:none;">
+			<?=$catalog_tree?>
+		</div>
+		<!-- Catalog menu -->
+		<br>
+		<!-- Catalog menu -->
+		<h2>Архив каталогов</h2>
+		<div id="ex3"  style="display:none;">
+			<?=$catalog_tree_archive?>
+		</div>
+		<!-- Catalog menu -->
+	</td>
+	<td></td>
+	</tr>
+	
+	<tr bgcolor="#FFFFFF">
+	<td height="12" style="background:#FFFFFF url(/i/corner_1_lb.gif) no-repeat left top;"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td colspan="2" style="background:#FFFFFF url(/i/bg_orange_dot.gif) repeat-x left bottom;"></td>
+	</tr>
+	</table>
+
+
+	
+
+	
+	<!-- ******************************* -->
+
+		
+	<!-- вершки и корешки-->
+    <div id="verski">
+	<table  border="0" cellpadding="0" cellspacing="0"><tr><td height="20"></td></tr></table>
+	
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-right:#ff8a00 1px solid;">
+	<tr>
+	<td  valign="top"  style="background:url(/i/banner.jpg) left no-repeat;">
+		<a href="http://lllll.ru/"  target="_blank"><img src="/i/pic.gif" width="200" height="103" alt="Вершки и корешки - садово-огородный рай" title="Вершки и корешки - садово-огородный рай"  /></a>
+
+	</td>
+	</tr>
+	</table>
+    </div>
+<!-- ******************************* -->
+
+</td>
+<td colspan=2 style="background:#FFFFFF url(/i/bg_orange_dot.gif) repeat-y right top;">
+
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	<td width="1%" height="11" style="background: url(/i/corner_2_t.gif) no-repeat right top;"><table width="16" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td width="98%" style="background: url(/i/bg_orange_dot.gif) repeat-x left top;"></td>
+	<td width="1%" style="background: url(/i/corner_2_rt.gif) no-repeat right top;"><table width="16" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	
+	<tr valign="top" >
+	<td></td>
+	<td>
+	<!-- Path -->
+<div id="path">
+<a href="/">Главная</a>&nbsp;<span>&raquo;</span>&nbsp;Корзина заказов</div>
+	<!-- Path -->
+	</td>
+	<td></td>
+	</tr>
+	
+	<tr valign="top">
+	<td></td>
+	<td>
+		
+		<!-- Content -->
+		<div id="content">
+		
+		<form id="cartform" name="cartform" method="post" action="/shop/calc/ajax/">
+			<div id="basket" style="position:relative;">
+				<?=$body?>
+			</div>
+		</form>
+		</div>
+		<?=$shop_after_form?>
+		<!-- Content -->
+	
+	</table>
+
+</td>
+
+<td></td>
+</tr>
+<!-- Верхняя часть сайта -->
+
+
+
+<!-- div - для показа процесса загрузки! -->
+<div id="loading" style="background-image: url('/i/loading.gif'); position: absolute; width: 16px; height: 16px; display: none"></div>
+
+
+<!-- Нижняя часть сайта -->
+
+
+<!-- Нижняя часть сайта -->
+<tr valign="bottom">
+<td height="24"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+<td style="background: url(/i/corner_2_lb_.gif) no-repeat right top;"></td>
+<td style="background: url(/i/bg_orange_dot.gif) repeat-x left 5px;" valign="top" colspan="2">
+	
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr valign="top">
+	<td height="6" style="background: url(/i/corner_2_lb.gif) no-repeat left top;"><table width="6" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	<td height="6" style="background: url(/i/corner_2_rb.gif) no-repeat right top;"><table width="6" border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+	</tr>
+	</table>
+
+</td>
+<td></td>
+</tr>
+
+<tr valign="top" style="background: url(/i/bg_bottom.gif) repeat-x left bottom;">
+<td height="72"><table border="0" cellpadding="0" cellspacing="0"><tr><td></td></tr></table></td>
+<td>
+	
+	<!-- Copyright -->
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background: url(/i/corner_5_left.gif) no-repeat right top;">
+	<tr valign="top">
+	<td>
+	<table border="0" cellpadding="0" cellspacing="0"><tr><td height="10"></td></tr></table>
+	<div id="copyright">&copy; <?=$year?> "БЭСТ - Цветы почтой"<br />г. Москва</div>
+	</td>
+	</tr>
+	</table>
+	<!-- Copyright -->
+
+</td>
+<td>
+	
+	<!-- Нижнее меню -->
+<?=menu('bottom')?>
+	<!-- Нижнее меню -->
+
+	<!-- Контакты-->
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" id="cont"  style="margin: 0px 16px 0px 16px;">
+	<tr valign="top">
+	<td width="72">тел./факс:</td>
+	<td ><nobr><b>8 (495) 640-2-641</b></nobr></td>
+	<td rowspan="3">
+	<!-- Yandex.Metrika informer -->
+<a href="http://metrika.yandex.ru/stat/?id=7397239&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/7397239/3_1_FFFFFFFF_EEEEEEFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:7397239,type:0,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+var yaParams = {/*Здесь параметры визита*/};
+</script>
+
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter7397239 = new Ya.Metrika({id:7397239, enableAll: true,params:window.yaParams||{ }});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/7397239" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	</td>
+	</tr>
+	
+	<tr valign="top"><td colspan="2"><table border="0" cellpadding="0" cellspacing="0"><tr><td height="2"></td></tr></table></td></tr>
+	
+	<tr valign="top">
+	<td width="72">e-mail:</td>
+	<td ><nobr><b><a href="mailto:zakaz@best-mos.ru">zakaz@best-mos.ru</a></b></nobr></td>
+	</tr>
+	</table>
+	<!-- Контакты-->
+
+</td>
+<td>
+	
+	<!-- Counters -->
+	
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" style="background: url(/i/corner_5_r.gif) no-repeat left top;">
+	<tr valign="top">
+	<td class="farum">
+	<table border="0" cellpadding="0" cellspacing="0"><tr><td height="10"></td></tr></table>
+	
+	<? 
+	
+	switch ($template)
+	{
+		case 'catalog':
+			echo '<a href="http://www.farum.ru/">дизайн сайта</a><a href="/farumcms/"><img src="/i/hide_.gif"  border=0></a>';
+			break;
+			
+		case 'catalog_item':
+			echo '<a href="http://www.farum.ru/">заказать сайт</a><a href="/farumcms/"><img src="/i/hide_.gif"  border=0></a>';
+			break;
+			
+		case 'static':
+			echo '<a href="http://www.farum.ru/">разработка веб сайта</a><a href="/farumcms/"><img src="/i/hide_.gif"  border=0></a>';
+			break;
+			
+		default:
+			echo '<a href="http://www.farum.ru/">веб дизайн</a><a href="/farumcms/"><img src="/i/hide_.gif"  border=0></a>';
+			break;
+	}
+	
+	
+	?>
+	
+	
+	
+	
+	<noindex>	
+	<!--LiveInternet counter--><script type="text/javascript"><!--
+	document.write("<a href='http://www.liveinternet.ru/click' "+
+	"target=_blank><img src='http://counter.yadro.ru/hit?t44.1;r"+
+	escape(document.referrer)+((typeof(screen)=="undefined")?"":
+	";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+	screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+	";"+Math.random()+
+	"' alt='' title='LiveInternet' "+
+	"border='0' width='0' height='0'><\/a>")
+	//--></script><!--/LiveInternet-->
+	</td>
+	</tr>
+	</table>
+	</noindex>		
+	<!-- Counters -->
+	
+</td>
+<td></td>
+</tr>
+
+</table>
+<!-- Нижняя часть сайта -->
+
+
+
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter1773763 = new Ya.Metrika(1773763);
+yaCounter1773763.clickmap();
+yaCounter1773763.trackLinks({external: true});
+} catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1773763" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+
+
+
+</body>
+</html>
