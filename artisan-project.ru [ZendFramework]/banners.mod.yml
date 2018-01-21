@@ -1,0 +1,181 @@
+tables:
+  banners:
+    fields:
+      id: {type: int, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      image: {type: tinytext, notnull: 0, am: {type: image, req: 1, title: Баннер}}
+      type: {type: "enum('top','spec','through')", am: {type: select, title: Расположение, values: {top: Сверху, spec: Специальные предложеня, through: Сквозной}}}
+      type2: {type: "enum('normal','dealers')", default: 'normal', notnull: 1, am: {type: select, title: Тип, values: {normal: Обычный, dealers: Дилерский}}}
+      url: {type: varchar, length: 64, notnull: 0, am: {type: string, title: URL}}
+      title: {type: tinytext, am: {type: string, title: Заголовок}}
+      descr: {type: tinytext, am: {type: text, title: Описание}}
+      hidden: {type: "enum('yes','no')", default: 'no', notnull: 1, am: {type: string, title: Не отображать на сайте, htmltype: checkbox, default: 'no', checked: 'yes', values: {no: Нет, yes: Да}}}
+      pos: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer, htmltype: hidden}}
+    table:
+      PRIMARY KEY: id
+      KEYS: 
+        pos: [pos]
+    actions:
+      list: [id, type, type2, image, title, url, hidden]
+      modify: [type, type2, image, title, descr, url, hidden]
+      show: [id, type, type2, image, title, descr, url, hidden]
+      add: [pos, type, type2, image, title, descr, url, hidden]
+    images:
+      image:
+        small: {w: 195, h: 93, ratio: 'x', cut: 1}
+        big: {w: 680, h: 264, ratio: 'x', cut: 1}
+		
+  banners2:
+    fields:
+      id: {type: int, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      image: {type: tinytext, notnull: 0, am: {type: image, req: 1, title: Баннер}}
+      type: {type: "enum('top','spec','through')", am: {type: select, title: Расположение, values: {top: Сверху, spec: Специальные предложеня, through: Сквозной}}}
+      type2: {type: "enum('normal','dealers')", default: 'normal', notnull: 1, am: {type: select, title: Тип, values: {normal: Обычный, dealers: Дилерский}}}
+      url: {type: varchar, length: 64, notnull: 0, am: {type: string, title: URL}}
+      title: {type: tinytext, am: {type: string, title: Заголовок}}
+      descr: {type: tinytext, am: {type: text, title: Описание}}
+      hidden: {type: "enum('yes','no')", default: 'no', notnull: 1, am: {type: string, title: Не отображать на сайте, htmltype: checkbox, default: 'no', checked: 'yes', values: {no: Нет, yes: Да}}}
+      pos: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer, htmltype: hidden}}
+    table:
+      PRIMARY KEY: id
+      KEYS: 
+        pos: [pos]
+    actions:
+      list: [id, type, type2, image, title, url, hidden]
+      modify: [type, type2, image, title, descr, url, hidden]
+      show: [id, type, type2, image, title, descr, url, hidden]
+      add: [pos, type, type2, image, title, descr, url, hidden]
+    images:
+      image:
+        small: {w: 195, h: 93, ratio: 'x', cut: 1}
+        big: {w: 680, h: 264, ratio: 'x', cut: 1}		
+		
+		
+		
+		
+		
+		
+  main_slider:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      title: {type: text, notnull: 0, am: {type: string, req: 0, title: Заголовок слайда}}
+      description: {type: text, notnull: 0, am: {type: text, req: 0, title: Описание слайда}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+      image: {type: text, notnull: 0, am: {type: image, req: 0, title: Путь к картинке}}
+      pos: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer, htmltype: hidden}}
+      hidden: {type: "enum('yes','no')", notnull: 1, default: no, am: {type: string, title: Скрытая, htmltype: radio, default: 'no', values: {yes: да, no: нет}}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, title, description, link, image, hidden]
+      modify: [title, description, link, image, hidden]
+      show: [id, title, description, link, image, hidden]
+      add: [title, description, link, image, hidden]
+    images:
+      image:
+        small: {w: 150, h: 150, ratio: 'x', cut: 0}  
+		
+  about_clients:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      title: {type: text, notnull: 0, am: {type: text, req: 0, title: Заголовок клиента}}
+      description: {type: text, notnull: 0, am: {type: text, req: 0, title: Описание клиента}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+      image: {type: text, notnull: 0, am: {type: image, req: 0, title: Путь к картинке}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, title, description, link, image]
+      modify: [title, description, link, image]
+      show: [id, title, description, link, image]
+      add: [title, description, link, image]
+    images:
+      image:
+        small: {w: 150, h: 150, ratio: 'x', cut: 0}  
+		
+  about_partners:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      title: {type: text, notnull: 0, am: {type: text, req: 0, title: Заголовок партнёра}}
+      description: {type: text, notnull: 0, am: {type: text, req: 0, title: Описание партнёра}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+      image: {type: text, notnull: 0, am: {type: image, req: 0, title: Путь к картинке}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, title, description, link, image]
+      modify: [title, description, link, image]
+      show: [id, title, description, link, image]
+      add: [title, description, link, image]
+    images:
+      image:
+        small: {w: 150, h: 150, ratio: 'x', cut: 0}  
+		      
+  about_sertificates:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      title: {type: text, notnull: 0, am: {type: text, req: 0, title: Заголовок сертификата}}
+      description: {type: text, notnull: 0, am: {type: text, req: 0, title: Описание сертификата}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+      image: {type: text, notnull: 0, am: {type: image, req: 0, title: Путь к картинке}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, title, description, link, image]
+      modify: [title, description, link, image]
+      show: [id, title, description, link, image]
+      add: [title, description, link, image]
+    images:
+      image:
+        small: {w: 150, h: 150, ratio: 'x', cut: 0}    
+  
+  about_docs:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      title: {type: text, notnull: 0, am: {type: text, req: 0, title: Заголовок документа}}
+      description: {type: text, notnull: 0, am: {type: text, req: 0, title: Описание документа}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+      image: {type: text, notnull: 0, am: {type: image, req: 0, title: Путь к картинке}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, title, description, link, image]
+      modify: [title, description, link, image]
+      show: [id, title, description, link, image]
+      add: [title, description, link, image]
+    images:
+      image:
+        small: {w: 150, h: 150, ratio: 'x', cut: 0}  
+
+  about_fotogallery:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      title: {type: text, notnull: 0, am: {type: text, req: 0, title: Заголовок документа}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+      image: {type: text, notnull: 0, am: {type: image, req: 0, title: Путь к картинке}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, title, link, image]
+      modify: [title, link, image]
+      show: [id, title, link, image]
+      add: [title, link, image]
+    images:
+      image:
+        small: {w: 150, h: 150, ratio: 'x', cut: 0}  
+
+		
+          
+  merchandising_fabrics:
+    fields:
+      id: {type: bigint, notnull: 1, auto_increment: 1, am: {type: integer, title: ID}}
+      title: {type: text, notnull: 0, am: {type: text, req: 0, title: Заголовок}}
+      link: {type: text, notnull: 0, am: {type: text, req: 0, title: Ссылка}}
+      image: {type: text, notnull: 0, am: {type: text, req: 0, title: Путь к картинке}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, title, link, image]
+      modify: [title, link, image]
+      show: [id, title, link, image]
+      add: [title, link, image]
+          

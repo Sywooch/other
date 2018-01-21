@@ -1,0 +1,176 @@
+tables:
+  employees: # 
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1, am: {type: integer}}
+      fio: {type: tinytext, notnull: 1, am: {type: string, req: 1, title: ФИО}}
+      image: {type: tinytext, am: {type: image, title: Фотография}}
+      post: {type: tinytext, notnull: 1, am: {type: string, req: 1, title: Должность}}
+      intro: {type: text, notnull: 0, am: {type: shtml, req: 0, title: Краткое описание}}
+      content: {type: text, notnull: 1, am: {type: html, htmltype: html, req: 1, title: Контакты}}
+      hidden: {type: "enum('yes','no')", default: 'no', notnull: 1, am: {type: string, title: Скрытый, otitle: Скрыть, htmltype: checkbox, default: 'no', checked: 'yes', values: {no: нет, yes: да}}}
+      pos: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer, htmltype: hidden}}
+      employees_otdels:
+        virtual: 1
+        ref_to:
+          idFieldName: id
+          virtual: 1
+          table: ?_employees_otdels
+          fields: [id, title]
+          use_ref: employees2otdels
+        am: {type: checkboxes, title: Отделы}
+    table:
+      PRIMARY KEY: id
+    images:
+      image:
+        small: {w: 100, h: 150, ratio: 'x', cut: 1}
+    actions:
+      list: [id, fio, post, hidden, image]
+      show: [id, fio, post, intro, content, hidden, image]
+      modify: [fio, post, intro, content, hidden, image, employees_otdels]
+      add: [pos, fio, post, intro, content, hidden, image, employees_otdels]
+      employees: [id, fio, post, image, intro, content]
+      employee: [fio, post, image, intro, content]
+    paging:
+      npp: 20
+      css_class: 'paging'
+      base_url: ''
+      url_append: ''
+      separator: ' '
+      linkcount: 10
+      first: ''
+      prev: ''
+      next: ''
+      last: ''
+      skip: ' ... '
+
+  employees_otdels: # Назначения
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1, am: {type: integer}}
+      title: {type: text, notnull: 1, am: {type: string, req: 1, title: Наименование отдела}}
+      order: {type: text, notnull: 1, am: {type: string, title: Порядок}}
+    table:
+      PRIMARY KEY: id
+    actions:
+      list: [id, title, order]
+      show: [id, title, order]
+      modify: [title, order]
+      add: [title, order]
+      employees: [id, title]
+      employee: [title]
+    images:
+      image:
+        small: {w: 150, h: 150, ratio: 'x', cut: 0}
+
+  employees2otdels:
+    fields:
+      id: {type: int, notnull: 1, auto_increment: 1, am: {type: integer}}
+      id_employee: {type: int, notnull: 1, am: {type: integer}}
+      id_otdel: {type: int, notnull: 1, am: {type: integer}}
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        id_employee: [id_employee]
+        id_otdel: [id_otdel]		
+
+  contacts: # Контакты
+    fields:
+      id: {type: smallint, notnull: 1, unsigned: 1, auto_increment: 1}
+      title: {type: text, am: {title: Название, type: string}}
+      id_otdel: {type: text, am: {type: string, title: Идентификатор отдела}}
+      content: {type: text, am: {type: html, title: Текст}}
+      map: {type: text, am: {type: image, title: Карта}}
+      map_code: {type: text, am: {type: html, title: Код карты}}
+      mail: {type: text, am: {type: string, title: email}}
+      no_emp: {type: "enum('no','yes')", notnull: 1, am: {type: string, title: Без сотрудников, htmltype: checkbox, default: 'no', checked: 'yes', otitle: 'Без сотрудников', values: {no: Нет, yes: Да}}}
+      order: {type: text, notnull: 1, am: {type: string, title: Порядок}}
+    table:
+      PRIMARY KEY: id
+    images:
+      image:
+        small: {w: 87, h: 87, ratio: 'x', cut: 0}
+    actions:
+      list: [id, title, content, map, mail, order]
+      show: [title, id_otdel, content, map, mail]
+      add: [title, content, map, mail, order]
+      modify: [title, content, map, mail, order, map_code, no_emp]
+      selection: [id, title]
+      show_factory: [id, title, content, map, mail]
+      list_factory: [id, title, content, map, mail]
+
+  employees_contacts: # 
+    fields:
+      id: {type: int, notnull: 1, unsigned: 1, auto_increment: 1, am: {type: integer}}
+      fio: {type: text, notnull: 1, am: {type: string, req: 1, title: ФИО}}
+      image: {type: text, am: {type: image, title: Фотография}}
+      post: {type: text, notnull: 1, am: {type: string, req: 1, title: Должность}}
+      intro: {type: text, notnull: 0, am: {type: shtml, req: 0, title: Краткое описание}}
+      content: {type: text, notnull: 1, am: {type: html, htmltype: html, req: 1, title: Контакты}}
+      hidden: {type: "enum('yes','no')", default: 'no', notnull: 1, am: {type: string, title: Скрытый, otitle: Скрыть, htmltype: checkbox, default: 'no', checked: 'yes', values: {no: нет, yes: да}}}
+      pos: {type: int, length: 10, unsigned: 1, notnull: 1, am: {type: integer, htmltype: hidden}}
+      contacts:
+        virtual: 1
+        ref_to:
+          idFieldName: id
+          virtual: 1
+          table: ?_contacts
+          fields: [id, title]
+          use_ref: employees_contacts2contacts
+        am: {type: checkboxes, title: Отделы}
+    table:
+      PRIMARY KEY: id
+    images:
+      image:
+        small: {w: 100, h: 150, ratio: 'x', cut: 1}
+    actions:
+      list: [id, fio, post, hidden, image]
+      show: [id, fio, post, intro, content, hidden, image]
+      modify: [fio, post, intro, content, hidden, image, contacts]
+      add: [pos, fio, post, intro, content, hidden, image, contacts]
+      employees: [id, fio, post, image, intro, content]
+      employee: [fio, post, image, intro, content]
+    paging:
+      npp: 20
+      css_class: 'paging'
+      base_url: ''
+      url_append: ''
+      separator: ' '
+      linkcount: 10
+      first: ''
+      prev: ''
+      next: ''
+      last: ''
+      skip: ' ... '
+
+  employees_contacts2contacts:
+    fields:
+      id: {type: int, notnull: 1, auto_increment: 1, am: {type: integer}}
+      id_employee_contact: {type: int, notnull: 1, am: {type: integer}}
+      id_contact: {type: int, notnull: 1, am: {type: integer}}
+    table:
+      PRIMARY KEY: id
+      KEYS:
+        id_employee_contact: [id_employee_contact]
+        id_contact: [id_contact]		
+refs:
+  employees_contacts2contacts:
+    virtual: 1
+    join: left outer
+    type: N-M
+    tables:
+      - 
+        - {table: employees_contacts, field: id}
+        - {table: employees_contacts2contacts, field: id_employee_contact}
+      -
+        - {table: contacts, field: id}
+        - {table: employees_contacts2contacts, field: id_contact}
+  employees2otdels:
+    virtual: 1
+    join: left outer
+    type: N-M
+    tables:
+      - 
+        - {table: employees, field: id}
+        - {table: employees2otdels, field: id_employee}
+      -
+        - {table: employees_otdels, field: id}
+        - {table: employees2otdels, field: id_otdel}

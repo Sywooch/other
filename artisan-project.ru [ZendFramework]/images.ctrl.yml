@@ -1,0 +1,19 @@
+title: Изображения  
+
+actions:
+  show: [Просмотреть изображение, Просмотр изображения]
+  list: [Просмотреть изображения, Просмотр изображений, [delete]]
+  add: [Добавить изображение, Добавление изображения, Изображение успешно добавлено, Изображение добавить не удалось, '[root_url]images/list/[link]/']
+  modify: [Редактировать изображение, Редактирование изображения, Изображение успешно отредактировано, Изображение отредактировать не удалось, '[root_url]images/list/[link]/']
+  delete: [Удалить изображение, Удаление изображения, Изображение успешно удалено, Изображение удалить не удалось, '', Вы уверены что хотите удалить это изображение?]
+
+list_actions:
+  inline:
+    title: {title: modify, link: 'images/modify/id/[id]/pid/[pid]/model/[model]'}
+    hidden: {link: 'images/change/field/hidden/id/[id]/ret_action/list/pid/[pid]/model/[model]', title: {yes: Сделать видимым, no: Скрыть}, retLink: 'users/list'}
+    delete: {link: 'images/delete/id/[id]/model/[model]/pid/[pid]', icon: delete}
+  
+  after:
+    add: 'images/add/[link]'
+
+noContent: Изображений не найдено

@@ -1,0 +1,22 @@
+title: Операторы
+
+actions:
+  show: [Просмотреть оператора, Просмотр оператора]
+  list: [Просмотреть операторов, Просмотр операторов, [change_pass, delete]]
+  add: [Добавить оператора, Добавление оператора, Оператор успешно добавлен, Оператора добавить не удалось]
+  modify: [Редактировать оператора, Редактирование оператора, Оператор успешно отредактирован, Оператора отредактировать не удалось]
+  delete: [Удалить оператора, Удаление оператора, Оператор успешно удален, Оператора удалить не удалось, '', Вы уверены что хотите удалить оператора?]
+  change_pass: [Изменить пароль оператора, Изменение пароля оператора, Пароль оператора успешно изменен, Пароль оператора изменить не удалось, '[root_url]operators/']
+
+list_actions:
+  inline:
+    show: {link: 'operators/show/id/[id]', put: {name: before}, icon: show}
+    name: {title: show, link: 'operators/show/id/[id]'}
+    login: {title: modify, link: 'operators/modify/id/[id]'}
+    delete: {link: 'operators/delete/id/[id]', icon: delete}
+    blocked: {link: 'operators/change/field/blocked/id/[id]/ret_action/list/', title: {yes: Разблокировать оператора, no: Заблокировать оператора}, retLink: 'operators/list/'}
+    change_pass: {link: 'operators/change_pass/id/[id]', icon: pass}
+  after:
+    add: 'operators/add'
+
+noContent: Операторов не найдено

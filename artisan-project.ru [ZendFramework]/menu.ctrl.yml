@@ -1,0 +1,47 @@
+title: Пункты меню
+
+actions:
+# Пункты меню
+  show: [Просмотреть пункт меню, Просмотр пункта меню]
+  show_bottom_menu: [Просмотреть пункт меню, Просмотр пункта меню]
+  show_top_menu: [Просмотреть пункт меню, Просмотр пункта меню]
+  list: [Просмотреть пункты меню, Просмотр пунктов меню, [delete]]
+  list_bottom_menu: [Просмотреть пункты меню, Просмотр пунктов меню, [delete]]
+  list_top_menu: [Просмотреть пункты меню, Просмотр пунктов меню, [delete]]
+  #add: [Добавить пункт меню, Добавление пункта меню, Пункт меню успешно добавлен, Пункт меню добавить не удалось, '[root_url]menu_items/list/']
+  add_bottom_menu: [Добавить пункт меню, Добавление пункта меню, Пункт меню успешно добавлен, Пункт меню добавить не удалось, '[root_url]menu/list_bottom_menu/']
+  add_top_menu: [Добавить пункт меню, Добавление пункта меню, Пункт меню успешно добавлен, Пункт меню добавить не удалось, '[root_url]menu/list_top_menu/']
+  modify:
+    - Редактировать пункт меню
+    - Редактирование пункта меню
+    - Пункт меню успешно отредактирован
+    - Пункт меню отредактировать не удалось
+    - '[root_url]menu_items/list/'
+  modify_bottom_menu: [Редактировать пункт меню, Редактирование пункта меню, Пункт меню успешно отредактирован, Пункт меню отредактировать не удалось, '[root_url]menu/list_bottom_menu/']
+  modify_top_menu: [Редактировать пункт меню, Редактирование пункта меню, Пункт меню успешно отредактирован, Пункт меню отредактировать не удалось, '[root_url]menu/list_top_menu/']
+  delete: [Удалить пункт меню, Удаление пункта меню, Пункт меню успешно удален, Пункт меню удалить не удалось, '[root_url]menu_items/list/', Вы уверены что хотите удалить этот пункт меню?]
+  delete_bottom_menu: [Удалить пункт меню, Удаление пункта меню, Пункт меню успешно удален, Пункт меню удалить не удалось, '[root_url]menu/list_bottom_menu/', Вы уверены что хотите удалить этот пункт меню?]
+  delete_top_menu: [Удалить пункт меню, Удаление пункта меню, Пункт меню успешно удален, Пункт меню удалить не удалось, '[root_url]menu/list_top_menu/', Вы уверены что хотите удалить этот пункт меню?]
+
+list_actions:
+  inline:
+    show: {link: 'menu_items/show/id/[id]', put: {id: before}, icon: show}
+    modify: {id: modify, link: 'menu_items/modify/id/[id]', put: {id: before}, icon: edit}
+    #delete: {link: 'menu_items/delete/id/[id]', icon: delete}
+    bottom_menu:
+      show: {link: 'menu/list_bottom_menu/show/id/[id]', put: {title: before}, icon: show}
+      modify: {text: modify, link: 'menu/modify_bottom_menu/id/[id]', put: {text: before}, icon: edit}
+      delete_bottom_menu: {link: 'menu/delete_bottom_menu/id/[id]', icon: delete}
+    top_menu:
+      show: {link: 'menu/list_top_menu/show/id/[id]', put: {title: before}, icon: show}
+      modify: {text: modify, link: 'menu/modify_top_menu/id/[id]', put: {text: before}, icon: edit}
+      delete_top_menu: {link: 'menu/delete_top_menu/id/[id]', icon: delete}
+  after:
+    #add: 'menu_items/add/'
+    bottom_menu:
+      add_bottom_menu: 'menu/add_bottom_menu'
+    top_menu:
+      add_top_menu: 'menu/add_top_menu'
+      
+
+noContent: Пунктов меню не найдено

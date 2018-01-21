@@ -1,0 +1,33 @@
+title: Документы
+
+actions:
+  show: [Просмотреть документ, Просмотр документа]
+  show_documents_folder: [Просмотреть папку, Просмотр папки]
+  list: [Просмотреть документы, Просмотр документов, [delete]]
+  list_documents_folders: [Просмотреть папки, Просмотр папок, [delete]]
+  add: [Добавить документ, Добавление документа, Документ успешно добавлен, Документ добавить не удалось]
+  add_documents_folder: [Добавить папку, Добавление папки, Папка успешно добавлена, Папку добавить не удалось]
+  modify: [Редактировать документ, Редактирование документа, Документ успешно отредактирован, Документ отредактировать не удалось]
+  modify_documents_folder: [Редактировать папку, Редактирование папки, Папка успешно отредактирована, Папку отредактировать не удалось]
+  delete: [Удалить документ, Удаление документа, Документ успешно удален, Документ удалить не удалось, '', Вы уверены что хотите удалить документ?]
+  delete_documents_folder: [Удалить папку, Удаление папки, Папка успешно удалена, Папку удалить не удалось, '', Вы уверены что хотите удалить папку?]
+
+list_actions:
+  inline:
+    documents:
+      show: {link: 'documents/show/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify, link: 'documents/modify/id/[id]'}
+      delete: {link: 'documents/delete/id/[id]', icon: delete}
+    documents_folders:
+      show: {link: 'documents/show_documents_folder/id/[id]', put: {title: before}, icon: show}
+      title: {title: modify, link: 'documents/modify_documents_folder/id/[id]'}
+      delete: {link: 'documents/delete_documents_folder/id/[id]', icon: delete}	
+  after:
+    documents:
+      add: 'documents/add'
+    documents_folders:
+      add_otdel: 'documents/add_documents_folder'
+
+noContent:
+  documents: Документов не найдено
+  documents_folders: Папок не найдено
