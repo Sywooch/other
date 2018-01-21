@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Автокомфорт</title>
+
+<link rel="stylesheet" href="css/style.css" />
+<map name="ImageMap">
+<area href="index.htm" shape="rect" alt="not image" coords="99, 0, 203, 106"/>
+<area href="index.htm" shape="rect" alt="not image" coords="221, 17, 697, 63"/>
+</map>
+<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="js/jquery.highlight.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+     function DisBlock2_2(){
+   $('div#rightcol2').fadeIn(1500);
+   					}
+  function close_block_2(){
+   $('div#rightcol2').fadeOut(1500);
+  	}
+
+  function DisBlock2_3(){
+   $('div#rightcol3').fadeIn(1500);
+   					}
+  function close_block_3(){
+   $('div#rightcol3').fadeOut(1500);
+  	}
+
+  function DisBlock2_4(){
+   $('div#rightcol4').fadeIn(1500);
+   					}
+  function close_block_4(){
+   $('div#rightcol4').fadeOut(1500);
+  	}
+
+  function DisBlock2_5(){
+   $('div#rightcol5').fadeIn(1500);
+   					}
+  function close_block_5(){
+   $('div#rightcol5').fadeOut(1500);
+  	}	
+	
+</script>
+<style type="text/css"> 
+   .rightcol_style {
+    position: fixed;
+    left: 0%; /* Сдвиг слоя влево */
+    top: 0%; /* Смещение слоя вниз */
+    width: 100%; /* Ширина слоя */
+    background: #C0C0C0; /* Цвет фона */
+    float:none;
+    display:none;
+	z-index:9999999;
+   }
+</style>
+<script language="javascript" type="text/javascript">
+function doMenu(){
+
+if(chapter.style.display=='none'){
+chapter.style.display='block';}
+
+}
+
+function doMenu2(){
+if(chapter.style.display=='block'){
+chapter.style.display='none';}
+
+}
+
+function doMenu3(){
+if(chapter.style.display=='block'){
+setTimeout(func, 3000);
+}
+function func() {
+  chapter.style.display='none';
+}
+
+
+}
+</script>
+<script type="text/javascript">
+
+function tmp(form){
+if(form.vote_check[0].checked){ 
+ search_submit(form);
+ }
+if(form.vote_check[1].checked){
+
+  var searchTerm=$('#inputtext_id').val();
+  $('table').removeHighlight();
+  if(searchTerm){
+  $('table').highlight(searchTerm);
+  }
+         
+	
+  
+  
+}//form.vote_check[1].checked
+
+
+
+}
+
+function search_submit(form){
+var text=form.inputtext_id.value;
+var method=form.search_method.value;
+document.location.href='search.php?text='+text+'&method='+method;
+}
+
+function click_radio(){
+//document.getElementById('search_method').style.display='none';
+$('select#search_method').fadeOut(1500);
+}
+
+function click_radio2(){
+//document.getElementById('search_method').style.display='inline';
+$('select#search_method').fadeIn(1500);
+}
+
+
+
+
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+<!--
+<script type="text/javascript">
+//раскрывающийся список. При наведении на пункт меню он меняет цвет фона. для IE
+jsHover=function(){
+var hEls=document.getElementById("nav").getElementByTagName("LI");
+for(var i=0,len=hEls.length;i<len;i++){
+hEls[i].onmouseover=function(){
+this.className+="jshover";}
+hEls[i].onmouseout=function(){
+this.className=this.className.replace("jshover","");}
+}
+}
+if(window.attachEvent && navigator.userAgent.indexOf("Opera")==-1)
+window.attachEvent("onload",jsHover);
+
+</script>-->
+
+</head>
+
+<body class="body_style">
+<div align="center" style="width:100%">
+<div class="div1_style"><!--общий блок-->
+<div class="header_style"><!--шапка-->
+<div align="left" class="header_up_style"><!--верхняя половина шапки-->
+<div class="div2_style">
+<img style="margin-left:60px" src="images/logo.png" alt="" usemap="#ImageMap"  border="0"/>
+</div>
+</div><!--верхняя половина шапки-->
+<div align="left" class="header_center_style"><!--центральная половина шапки-->
+<div align="center" class="div3_style">
+
+</div>
+
+
+
+
+
+</div><!--центральная половина шапки-->
+
+<div align="center" class="header_down_style"><!--нижняя половина шапки-->
+<div class="menu_style"><!--меню-->
+<?php
+include("templates/menu_index.php");
+?>
+
+</div><!--меню-->
+
+</div><!--нижняя половина шапки-->
+
+</div><!--шапка-->
+<!--===============================================================================================================-->
+<div align="center" class="content_style"><!--контент-->
+<table style="margin-top:20px" width="910px" align="justify" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td  align="justify" class="td_style">
+<!--[if IE]><td align="left" class="td_style"><![endif]-->
+<?php
+
+echo'<p class="p_style">Результаты поиска:</p>';
+
+
+$text=$_GET['text'];
+$method=$_GET['method'];
+
+//убрать лишние пробелы из начала и конца строки.
+$text=trim($text); 
+
+
+//echo"".$text."</br>";
+//echo"".$method."</br>";
+
+
+//проход по заданным страницам, и, если найдено совпадение, то вывести ссылку на страницу
+$file[0]='content/about_content.php';
+$file[1]='content/building_content.php';
+$file[2]='content/certificates_content.php';
+$file[3]='content/contacts_content.php';
+$file[4]='content/department_content.php';
+$file[5]='content/design_content.php';
+$file[6]='content/documentation_content.php';
+$file[7]='content/furniture_content.php';
+$file[8]='content/index_content.php';
+$file[9]='content/news_content.php';
+$file[10]='content/partners_content.php';
+$file[11]='content/price_list_content.php';
+$file[12]='content/purchase_content.php';
+$file[13]='content/repair_content.php';
+$file[14]='content/responses_content.php';
+$file[15]='content/restoration_content.php';
+
+//ассоциативный массив, задающий соответстие между именами файлов страниц и заголовками страниц.
+$name_ass['about.php']='О компании';
+$name_ass['building.php']='Реконструкция/Строительство';
+$name_ass['certificates.php']='Сертификаты';
+$name_ass['contacts.php']='Контакты';
+$name_ass['department.php']='Ведение бухучёта';
+$name_ass['design.php']='Дизайн';
+$name_ass['documentation.php']='Документация';
+$name_ass['furniture.php']='Мебель';
+$name_ass['index.php']='Спецстрой';
+$name_ass['news.php']='Новости';
+$name_ass['partners.php']='Партнёры';
+$name_ass['price_list.php']='Прайс-лист';
+$name_ass['purchase.php']='Закупка товаров КНР/Москва';
+$name_ass['repair.php']='Ремонт/Отделка';
+$name_ass['responses.php']='Отзывы';
+$name_ass['restoration.php']='Реставрация памятников';
+
+
+
+
+if($text!=""){
+///////////////////////////////////////////////////////////////////////
+
+$global_count=0;
+
+if($method==0){//фраза полностью
+$c=0;
+
+
+while($c<count($file)){//проход по файлам
+$file_array=file($file[$c]);
+$file_str=implode($file_array);
+
+//удаление подстрок: <h1 class="myriad_pro12"> </h1>... и т.д.
+$file_str=str_replace("<h1 class=\"myriad_pro12\">","",$file_str);
+$file_str=str_replace("<p class=\"myriad_pro12\">","",$file_str);
+$file_str=str_replace("<h1 class=\"myriad_pro14\">","",$file_str);
+$file_str=str_replace("</h1>","",$file_str);
+$file_str=str_replace("</p>","",$file_str);
+
+
+$pos=stripos($file_str,$text);
+
+if ($pos === false) {
+   
+} else {
+
+//if(!isset($_SESSION['word'])){
+$_SESSION['word']=$text;//};
+//echo"".$_SESSION['word']."</br>";
+
+//убрать подстроку _content.
+$result_file_string=str_replace("_content","",$file[$c]);
+$result_file_string=str_replace("content/","",$result_file_string);
+
+
+ echo"<a class=\"myriad_pro12\" style=\"color:black; text-decoration:none\" href=".$result_file_string."><span class=\"myriad_pro12_underline\" >".$name_ass[$result_file_string]."</span></a></br>";  
+ $global_count++;
+}
+$c++;
+}//проход по файлам
+}//фраза полностью
+//////////////////////////////////////////////////////////////////////
+elseif($method==1){//вхождение всех слов
+
+$c=0;
+while($c<count($file)){//проход по файлам
+$file_array=file($file[$c]);
+$file_str=implode($file_array);
+
+//удаление подстрок: <h1 class="myriad_pro12"> </h1>... и т.д.
+$file_str=str_replace("<h1 class=\"myriad_pro12\">","",$file_str);
+$file_str=str_replace("<p class=\"myriad_pro12\">","",$file_str);
+$file_str=str_replace("<h1 class=\"myriad_pro14\">","",$file_str);
+$file_str=str_replace("</h1>","",$file_str);
+$file_str=str_replace("</p>","",$file_str);
+
+
+
+//разложение строки на подстроки
+$mas_str=NULL;
+$mas_str=explode(" ",$text);
+$log=0;
+$i=0;
+
+
+
+while($i<count($mas_str)){
+
+//удаление пробелов из подстрок
+$mas_str[$i]=trim($mas_str[$i]);
+
+$pos=stripos($file_str,$mas_str[$i]);
+
+
+if ($pos === false) {
+$log=1;  break;
+} else {
+ 
+}
+$i++;
+}
+if($log==0){  
+
+//if(!isset($_SESSION['word'])){
+
+
+
+$_SESSION['word']=$text;//};
+
+//echo"".$_SESSION['word']."</br>";
+
+//убрать подстроку _content.
+$result_file_string=str_replace("_content","",$file[$c]);
+$result_file_string=str_replace("content/","",$result_file_string);
+
+ echo"<a class=\"myriad_pro12\" style=\"color:black; text-decoration:none\" href=".$result_file_string."><span class=\"myriad_pro12_underline\" >".$name_ass[$result_file_string]."</span></a></br>";
+ $global_count++;
+
+
+
+}
+$c++;
+}//проход по файлам
+
+
+
+}//вхождение всех слов
+////////////////////////////////////////////////////////////////////////
+elseif($method==2){//наличие хотя бы одного слова
+$c=0;
+while($c<count($file)){//проход по файлам
+$file_array=NULL;
+$file_array=file($file[$c]);
+$file_str="";
+$file_str=implode($file_array);
+
+//удаление подстрок: <h1 class="myriad_pro12"> </h1>... и т.д.
+$file_str=str_replace("<h1 class=\"myriad_pro12\">","",$file_str);
+$file_str=str_replace("<p class=\"myriad_pro12\">","",$file_str);
+$file_str=str_replace("<h1 class=\"myriad_pro14\">","",$file_str);
+$file_str=str_replace("</h1>","",$file_str);
+$file_str=str_replace("</p>","",$file_str);
+
+
+//разложение строки на подстроки
+$mas_str=NULL;
+$mas_str=explode(" ",$text);
+$log=0;
+$i=0;
+while($i<count($mas_str)){
+
+$mas_str[$i]=trim($mas_str[$i]);
+$pos=stripos($file_str,$mas_str[$i]);
+if ($pos === false) {
+ 
+} else {
+ $log=1; 
+}
+$i++;
+}
+if($log==1){  
+
+//if(!isset($_SESSION['word'])){
+
+
+$_SESSION['word']=$text;//};
+//echo"".$_SESSION['word']."</br>";
+
+//убрать подстроку _content.
+$result_file_string=str_replace("_content","",$file[$c]);
+$result_file_string=str_replace("content/","",$result_file_string);
+
+ echo"<a class=\"myriad_pro12\" style=\"color:black; text-decoration:none\" href=".$result_file_string."><span class=\"myriad_pro12_underline\" >".$name_ass[$result_file_string]."</span></a></br>";
+ $global_count++;
+}
+$c++;
+}//проход по файлам
+
+}//наличие хотя бы одного слова
+
+if($global_count==0){
+echo'<h1 class="myriad_pro14">К сожалению по Вашему запросу ничего не найдено.</h1>';
+};
+//////////////////////////////////////////////////////////////////////////
+
+}//if($text!="")
+
+
+
+?>
+
+<div style="width:910px; height:125px; margin-top:40px; margin-bottom:10px"><!--изображения снизу-->
+<img src="images/down.jpg" alt=""/>
+<!--<div style="width:182px; height:141px; margin-left:25px; float:left"><img src="images/detail_down1.jpg" alt=""/> </div>
+<div style="width:178px; height:138px; margin-left:70px; margin-top:4px; float:left"><img src="images/detail_down2.jpg" alt=""/> </div>
+<div style="width:169px; height:135px; margin-left:70px; margin-top:6px; float:left"><img src="images/detail_down3.jpg" alt=""/> </div>
+<div style="width:183px; height:128px; margin-left:70px; margin-top:6px; float:left"><img src="images/detail_down4.jpg" alt=""/> </div>
+-->
+
+
+</div><!--изображения снизу-->
+
+
+</td>
+</tr>
+
+</table>
+
+</div><!--контент-->
+<!--=======================================================-->
+<div align="center" class="footer_style"><!--подвал-->
+
+
+</div><!--подвал-->
+
+
+
+
+
+</div><!--общий блок-->
+
+
+
+
+</div>
+
+<div class="rightcol_style" id="rightcol" name="rightcol" onclick="close_block()" style="width:100%;height:100%">
+<div style="top:50%;left:50%; position:absolute;margin:-100px 0 0 -225px;"><img src="images/webasto2_big.jpg"/></div>
+</div>
+
+
+
+</body>
+
+</html>
