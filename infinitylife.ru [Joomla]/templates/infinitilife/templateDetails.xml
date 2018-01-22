@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>infinitilife</name>
+	<version>1.0</version>
+	<creationDate>18.04.2015</creationDate>
+	<author>Fursov Vladislav</author>
+	<authorEmail>ghostrussian@gmail.com</authorEmail>
+	<authorUrl>http://ghost-russia.ru</authorUrl>
+	<copyright>Copyright (C) 2007 - 2015 Ghost_Russia. All rights reserved.</copyright>
+	<description>TPL_INFINITILIFE_XML_DESCRIPTION</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+	</files>
+	<positions>
+		<position>HeaderOther</position>
+        <position>HeaderNoresize</position>
+        <position>leftmenu</position>
+        <position>rightmenu</position>
+        <position>content-topleft</position>
+        <position>content-topright</position>
+        <position>content-center</position>
+        <position>content-bottom</position>
+		<position>slider-photo</position>
+		<position>afisha-slider-left</position>
+		<position>afisha-slider-right</position>
+		<position>afisha-calendar</position>
+		<position>afisha-posters</position>
+		<position>reg_modal</position>
+		<position>reg_modal2</position>
+		<position>auth_modal</position>
+		<position>footer-menu</position>
+		<position>footer-form1</position>
+		<position>footer-form2</position>
+		<position>footer-form3</position>
+		
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_infinitilife.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_infinitilife.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_infinitilife.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.tpl_infinitilife.sys.ini</language>
+	</languages>
+</extension>

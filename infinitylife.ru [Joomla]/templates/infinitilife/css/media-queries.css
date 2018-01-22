@@ -1,0 +1,331 @@
+@media (min-width: 1150px) and (min-height: 605px) {
+	.header .social{
+		width: 210px;
+	}
+	.header .social a{
+		margin-right: 10px;
+	}
+
+	.header .noresize .search.opened, .header .search form{
+		width: 230px;
+	}
+
+
+	.header .search input[type="text"]{
+		width: 202px;
+	}
+
+	.center>.content>div.content-top,
+	.center>.content>div.content-bottom{
+		font-size: 1.5vmax;
+	}
+
+	.center>.content>div.content-top>div>div:not(.ads)>div:nth-child(2),
+	.center>.content>div.content-bottom>div:not(.ads)>div:nth-child(2){
+		font-size: 1.7vmin;
+	}
+}
+
+@media (min-width: 1400px) {
+	.header .map{
+		font-size: 1vmax;
+	}
+
+	.header .social{
+		width: 245px;
+	}
+
+	.header .social a{
+		margin-top: 22px;
+		width: 25px;
+		height: 25px;
+	}
+
+	.header .social a.instagram{
+		background-position: -32px 0;
+	}
+
+	.header .social a.vk{
+		background-position: -65px 0;
+	}
+
+	.header .social a.fb{
+		background-position: -98px 0;
+	}
+
+	.header .social a.twitter{
+		background-position: -129px 0;
+	}
+
+	.header .social a.youtube{
+		background-position: -160px 0;
+	}
+
+	.header .social a.google{
+		background-position: -192px 0;
+	}
+
+
+	.header .noresize .search{
+		width: 25px;
+	}
+
+	.header .noresize .search.opened{
+		width: 270px;
+	}
+
+	.header .search form{
+		margin-top: 22px;
+		width: 270px;
+	}
+
+	.header .search input[type="text"]{
+		height: 21px;
+		width: 236px;
+	}
+
+	.header .search input[type="submit"] {
+		width: 25px;
+		height: 25px;
+	}
+
+	.header>.other{
+	/*	padding-left: 20px;*/
+	}
+	
+	.header{
+padding-left: calc( ((100% - 1350px) / 2) );
+  padding-right: calc( ((100% - 1350px) / 2) );
+	}
+
+	.header>.other .radio{
+		float: left;
+	/*	margin-left: 30px;*/
+	}
+
+    .center>.content>div.content-top>div>div:not(.ads)>div:nth-child(2)>div>.img,
+    .center>.content>div.content-bottom>div:not(.ads)>div:nth-child(2)>div>.img{
+        width: 25%!important;
+    }
+}
+
+
+
+@media (max-width: 1228px){
+    .header{ min-width:100% !important; max-width:100% !important; padding-left:0px !important; padding-right:0px !important; }
+    .header > .logo{width:20% !important; background-size:cover !important;  }
+    .header > .logo{   background: url('../images/logo.png') no-repeat center center !important;
+  padding: 10px !important;
+  background-size: 80% !important; }
+    .header > .logo a{    background-size: 80% !important; width: 100% !important;
+  height: 100% !important; background: url('../images/logo-hover.png') no-repeat center center !important;  }
+    .header .map{
+       width:calc(100% / 8) !important;
+       min-width:calc(100% / 8) !important;
+       
+       
+       
+    }
+    
+    
+    
+    
+    
+    #nextend-smart-slider-1 .smart-slider-border1 img{
+        height:100% !important;
+        width:auto !important;
+    }
+    
+    
+    div#nextend-smart-slider-1 .smart-slider-canvas{
+        height:100% !important;
+        
+    }
+    
+   .smart-slider-canvas.smart-slider-bg-colored .layer1{
+       width:100% !important;
+   }
+   
+   
+   .smart-slider-canvas.smart-slider-bg-colored .layer3{
+       width:100% !important;
+   } 
+    
+    
+    
+    
+    
+    
+    .header .map span{
+        font-size:10px !important;
+        padding-right:10px !important;
+    }
+    
+    
+    .header .other .datetime{
+        
+        
+       width:calc(100% / 8) !important;
+       min-width:calc(100% / 8) !important;
+       padding-right:10px !important;
+    }
+    
+    .header .noresize .search{
+        margin-right:0px !important;
+    }
+    
+    .header > .other .datetime .time{
+        font-size:150% !important;
+    }
+    
+    .header > .other .datetime .date{
+        font-size:70% !important;
+    }
+    
+    .header > .other .weather{
+    /* width:calc(100% / 8) !important;
+       min-width:calc(100% / 8) !important;  */ 
+    }
+    
+    .header > .other .weather > div.clicked{
+        padding-right:0px !important;
+    }
+    
+    
+    .header > .other .currency{
+        width:calc(100% / 8) !important;
+       min-width:calc(100% / 8) !important; 
+    }
+    
+    .header > .other .currency span > div{
+        font-size:10px !important;
+    }
+    
+    .header > .other .mypage{
+         width:calc(100% / 7) !important;
+       min-width:calc(100% / 7) !important; 
+    }
+    
+    .popup_auth{
+        font-size:10px !important;
+    }
+    
+    #btl .btl-panel{
+        font-size:10px !important;
+    }
+    
+    .header > .other .radio{
+          width:calc(100% / 8) !important;
+       min-width:calc(100% / 8) !important;
+    }
+    
+    .header > .other{
+        width:50% !important;
+        max-width:50% !important;
+    }
+    
+    .header > .noresize{
+        width:30% !important;
+    }
+    
+    #btl .btl-panel > span{
+        padding:0px !important;
+        padding-left:6px !important;
+    }
+    
+    .popup_auth{
+        padding:0px !important;
+        height:10px !important;
+        line-height:10px !important;
+        margin-top:18px !important; 
+    }
+    .radio .text{
+        font-size:10px !important;
+        height:10px !important;
+        line-height:10px !important;
+    }
+    .header > .other .mypage #btl{
+        top:30px !important;
+    }
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+@media (max-width: 1073px){
+    .header > .other .currency span > div{
+        font-size:9px !important;
+    }
+    
+}
+
+@media (max-width: 940px){
+
+.header > .other .weather{
+    width:130px !important;
+}
+
+.header > .other .currency span > div{
+    font-size:8px !important;
+}
+
+
+}
+
+
+@media (max-width: 917px){
+    
+    .header .social{
+        display:none !important;
+    }
+    
+    .header .noresize .search{
+        display:none !important;
+    }
+    
+    .header > .noresize{
+        width:10% !important;
+    }
+    
+    .header > .other{
+        width:69% !important;
+        max-width:69% !important;
+    }
+    
+    
+}
+
+
+
+
+@media (max-width: 1147px){
+ .date.datepick3{
+     
+     display:inline-block !important;
+ }
+ 
+ .photo_sub_cats > a{
+     display:none !important;
+ }
+ 
+ .cat_name{
+       display:none !important; 
+ }
+ 
+
+    
+    
+}
+
+
+
+

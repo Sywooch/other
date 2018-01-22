@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><!-- версия xml и кодировка в которой устанавливаем-->
+<!--Для какой версии joomla устанавливаем-->
+<extension type="component" version="3.0" method="upgrade">
+<!-- Название компонента -->
+<name>self</name> 
+<!-- Элементы ниже необязательны и их значения могут быть введены в произвольном формате -->
+<creationDate>28.12.2013</creationDate> <!-- Дата создания -->
+<author>Ghost_Russia</author> <!-- Автор -->
+<authorEmail>ghostrussian@gmail.com</authorEmail> <!-- Почта -->
+<authorUrl>http://ghost-russia.ru</authorUrl> <!-- Сайт разработчика -->
+<copyright></copyright> <!-- Копирайт -->
+<license></license> <!-- Лицензия -->
+<version>1.2</version>
+<description>
+Пустая страница
+</description>
+
+<files folder="site">
+<filename>index.html</filename>
+<filename>self.php</filename>
+<filename>controller.php</filename>
+<folder>views</folder>
+<folder>models</folder>
+</files>
+
+<administration>
+
+</administration>
+</extension>
