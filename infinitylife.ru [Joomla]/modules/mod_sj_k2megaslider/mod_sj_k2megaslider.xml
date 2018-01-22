@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.0" client="site" method="upgrade">
+	<name>Sj K2 Mega Slider</name>
+	<creationDate>September 2011</creationDate>
+	<author>YouTech Company</author>
+	<copyright>Copyright (C) 2009 - 2011 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>contact@ytcvn.com</authorEmail>
+    <authorUrl>http://www.smartaddons.com</authorUrl>
+    <version>1.1</version>
+    <description>YT_EXTENSIONS_DESC</description>
+    <files>
+         <filename module="mod_sj_k2megaslider">mod_sj_k2megaslider.php</filename>
+         <filename module="mod_sj_k2megaslider">mod_sj_k2megaslider.xml</filename>
+         <filename module="mod_sj_k2megaslider">helper.php</filename>
+		<filename module="mod_sj_k2megaslider">index.html</filename>  		 
+         <folder module="mod_sj_k2megaslider">assets</folder>
+         <folder module="mod_sj_k2megaslider">tmpl</folder>
+         <folder module="mod_sj_k2megaslider">elements</folder>
+    </files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.mod_sj_k2megaslider.ini</language>
+		<language tag="en-GB">en-GB.mod_sj_k2megaslider.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="General Settings" label="General Settings"
+				addfieldpath="/modules/mod_sj_k2megaslider/elements">
+				<field name="moduleclass_sfx" type="text" default=""
+					label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+
+				<field name="category" type="k2category" default="0"
+					label="Select Categories" description="Please categories for your module" />
+				<field name="featured" type="list" default="2" label="Featured Items"
+					description="For Featured Items">
+					<option value="0">Hide featured items</option>
+					<option value="1">Show featured items only</option>
+					<option value="2">Include featured items</option>
+				</field>
+				<field name="sort_order_field" type="list" default="created"
+					label="Sort Order By" description="SORT ORDER BY FIELD">
+					<option value="created">Recently Added First</option>
+					<option value="modified">Recently Modified First</option>
+					<option value="title">Title</option>
+					<option value="hits_dsc">Most Popular</option>
+					<option value="hits_asc">Least Popular</option>
+					<option value="order">Ordering</option>
+					<option value="random">Random</option>
+				</field>
+				<field name="width_module_mega" type="text" default="800"
+					label="Module Width" description="Set width for module. Unit is 'px'" />
+				<field name="total" type="text" default="15" label="Item Count"
+					description="Total items which you want to show in the module" />
+				<field name="num_item_per_page" type="text" default="4"
+					label="Item Number Per Page"
+					description="Number Item Per Page which you want to show in the once page" />
+
+				<field name="position_image_display" type="radio" default="left"
+					label="Position Display Image" description="Position Display Image">
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>
+				<field name="nav_style_mega" type="list" default="nav_style03"
+					label="Style Navigation" description="Style Navigation">
+					<option value="nav_style01">Style 01</option>
+					<option value="nav_style02">Style 02</option>
+					<option value="nav_style03">Style 03</option>
+				</field>
+				<field name="width_opacity" type="text" default="250"
+					label="Width For Opacity" description="Width For Opacity. Only Use For Theme 2" />
+				<field name="showhidenavigation" type="radio" default="1"
+					label="Navigation Show" description="Show/Hide Navigation">
+					<option value="1">Show</option>
+					<option value="0">Hide</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="Content Settings" label="Content Settings">
+				<field name="limit_normal_title" type="text" default="25"
+					label="Max Length of Normal Title" description="Max length of Normal title" />
+				<field name="limit_main_title" type="text" default="250"
+					label="Max Length of Main Title" description="Max length of Main title" />
+				<field name="target" type="list" default="_self" label="Open Link"
+					description="The Type shows when you click on the link">
+					<option value="_blank">New Window</option>
+					<option value="_self">Same Window</option>
+					<option value="pop-up">Pop-Up</option>
+				</field>
+				<field name="showmaincontent" type="radio" default="1"
+					label="Show Main Spotlight" description="Show Main Content Spotlight: Only Use for Theme 2">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="showmaindesc" type="radio" default="1"
+					label="Show Main Description" description="Show Caption">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
+
+				<field name="shownormaldesc" type="radio" default="1"
+					label="Show Normal Description" description="Show Normal Description">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="showmaintitle" type="radio" default="1"
+					label="Show Main Title" description="Show Normal Title">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="shownormaltitle" type="radio" default="1"
+					label="Show Normal Title" description="Show Normal Title">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="showreadmore" type="radio" default="1"
+					label="Show Read More" description="Show Read More Text">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_buttons_mega" type="list" default="display"
+					label="Show Buttons" description="Show Buttons">
+					<option value="display">Display</option>
+					<option value="hover">Hover</option>
+					<option value="hide">Hide</option>
+				</field>
+				<field name="stylereadmore" type="list" default="style1"
+					label="Read more Style" description="Only Use for Theme 1 and Theme 4">
+					<option value="style1">Style 1</option>
+					<option value="style2">Style 2</option>
+					<option value="style3">Style 3</option>
+					<option value="style4">Style 4</option>
+				</field>
+				<field name="readmore_mega_text" type="text" default="Readmore"
+					label="Read More Text" description="Read More Text" />
+				<field name="limit_normal_description" type="text" default="120"
+					label="Normal Description Max" description="Max length of Nomal Description" />
+				<field name="limit_main_description" type="text" default="250"
+					label="Main Description Max" description="Max length of Main Description" />
+				<field name="cutStr_style" type="list" default="removing"
+					label="Cutting Description" description="Style Cut String: Only use for Main Description">
+					<option value="removing">Removing HTML code</option>
+					<option value="keeping">Keeping HTML code</option>
+				</field>
+				<field name="maintitlecolor" type="text" default="#545454"
+					label="Main Title Color" description="Please enter a color for the Main Title . Example: #545454" />
+				<field name="maindesccolor" type="text" default="#000000"
+					label="Main Description Color" description="Please enter a color for the description. Example: #FFFFFF" />
+				<field name="bgmainitem" type="text" default="#E5F3FB"
+					label="Main Item Background"
+					description="Main Background Item. Only Use for Theme 2. Example: #E5F3FB" />
+				<field name="bg_navication" type="text" default="#E4E4E4"
+					label="Navigation Background" description="Navigation Background. Example: #E4E4E4" />
+				<field name="bg_item_nav" type="text" default="#FF8880"
+					label="Actived Navigation Background" description="Navigation Item Actived Background. Example: #FF8880" />
+				<field name="coloritemnav" type="text" default="#000000"
+					label="Navigation Title Color" description="Navigation Title Color. Example: #000000" />
+				<field name="colorcontentnav" type="text" default="#000000"
+					label="Navigation Content Color" description="Navigation Content Color. Example: #FFFFFF" />
+
+				<field name="customUrl" type="textarea" cols="35" rows="5"
+					default="" label="Custom URL"
+					description="Custom url of items. This only supports  Item Ids Type. Syntax: &lt;br/&gt; id1:url1 &lt;br/&gt; id2:url2 &lt;br/&gt; ..." />
+				<field name="show_intro" type="radio" label="Show introtext"
+					description="Show introtext" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="show_footer" type="radio" label="Show Footertext"
+					description="Show footer text" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="intro_text" type="textarea" cols="35" rows="5"
+					default="" label="Intro Text" description="Intro Text" filter="safehtml" />
+				<field name="footer_text" type="textarea" cols="35" rows="5"
+					default="" label="Footer Text" description="Footer Text" filter="safehtml" />
+			</fieldset>
+
+			<fieldset name="Image Settings" label="Image Settings">
+
+				<field name="shownormalimage" type="radio" default="1"
+					label="Show Normal Image"
+					description="Show Normal Image: Only use for theme have Style Navigation = Style 02">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="link_image" type="radio" default="1" label="Link for image"
+					description="Link for image">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="thumb_width" type="text" default="400"
+					label="Large Thumbnail Width"
+					description="The width of thumbnail image. The module will auto resize your image to your width" />
+				<field name="thumb_height" type="text" default="300"
+					label="Large Thumbnail Height"
+					description="The height of thumbnail image. The module will auto resize your image to your height" />
+				<field name="small_thumb_width" type="text" default="172"
+					label="Small Thumbnail Width"
+					description="The width of thumbnail image. The module will auto resize your image to your width" />
+				<field name="small_thumb_height" type="text" default="60"
+					label="Small Thumbnail Height"
+					description="The height of thumbnail image. The module will auto resize your image to your height" />
+
+
+				<field name="imagesource" type="radio" default="0"
+					label="Using Image Source" description="Using Image Source">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="cropresizeimage" type="radio" default="0"
+					label="Thumbnail Mode Type" description="Thumbnail Mode Type">
+					<option value="0">Using Resize</option>
+					<option value="1">Using Crop</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="Theme and Effect Settings" label="Theme and Effect Settings">
+				<field name="theme" type="list" default="theme1" label="Select a theme"
+					description="Please select a theme for the module">
+					<option value="theme1">Theme 1</option>
+					<option value="theme2">Theme 2</option>
+					<option value="theme3">Theme 3</option>
+					<option value="theme4">Theme 4</option>
+				</field>
+				<field name="auto_play" type="radio" default="1" label="Auto play"
+					description="Set for slideshow auto play or not.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="play" type="radio" default="1" label="Stop when hover"
+					description="Stop when hover">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
+				<field name="shownumbutton" type="radio" default="show"
+					label="Hide/Show Button Number" description="Hide/Show Button Number: only Use for Theme 3">
+					<option value="show">Show</option>
+					<option value="hide">Hide</option>
+				</field>
+				<field name="effect" type="list" default="all" label="Select an Effect"
+					description="Please select an Effect for the module">
+					<option value="fade">Fade</option>
+					<option value="fadeZoom">Fade Zoom</option>
+					<option value="zoom">Zoom</option>
+					<option value="shuffle">Shuffle</option>
+					<option value="toss">Toss</option>
+					<option value="wipe">Wipe</option>
+					<option value="cover">Cover</option>
+					<option value="uncover">Uncover</option>
+					<option value="blindX">Blind X</option>
+					<option value="blindY">Blind Y</option>
+					<option value="blindZ">Blind Z</option>
+					<option value="growY">Grow Y</option>
+					<option value="curtainX">Curtain X</option>
+					<option value="curtainY">Curtain Y</option>
+					<option value="slideX">Slide X</option>
+					<option value="slideY">Slide Y</option>
+					<option value="turnUp">Turn Up</option>
+					<option value="turnDown">Turn Down</option>
+					<option value="turnLeft">Turn Left</option>
+					<option value="turnRight">Turn Right</option>
+					<option value="scrollRight">Scroll Right</option>
+					<option value="scrollLeft">Scroll Left</option>
+					<option value="scrollUp">Scroll Up</option>
+					<option value="scrollDown">Scroll Down</option>
+					<option value="all">Random</option>
+				</field>
+				<field name="slideshow_speed" type="text" default="800"
+					label="Animation Duration" description="Speed of slideshow. Larger = Slower" />
+				<field name="timer_speed" type="text" default="4000" label="Interval"
+					description="Speed of Timer. Larger = Slower" />
+
+			</fieldset>
+
+			<fieldset name="advance" label="Advance">
+				<field name="jquery" type="radio" default="1"
+					label="Include jQuery Library" description="Include jQuery Library">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="cache" type="list" default="0" label="Caching"
+					description="Caching">
+					<option value="1">Use Cache</option>
+					<option value="0">Do not use Cache</option>
+				</field>
+				<field name="cache_time" type="text" default="300" label="Cache time"
+					description="Cache time" />
+				<field name="note" type="textarea" cols="50" rows="10"
+					default="" label="Note" description="" aria-invalid="true" />
+
+			</fieldset>
+
+		</fields>
+
+	</config>
+
+</extension>

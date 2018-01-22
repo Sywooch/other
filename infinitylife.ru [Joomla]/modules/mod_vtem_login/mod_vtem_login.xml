@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>VTEM Login</name>
+	<author>Nguyen Van Tuyen</author>
+	<creationDate>01/06/2011</creationDate>
+	<copyright>(C) 2011 VTEM.NET - All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>tuyen0110@gmail.com</authorEmail>
+	<authorUrl>www.vtem.net</authorUrl>
+	<version>1.0</version>
+	<description>Модуль авторизации - VTEM Login для CMS Joomla 2.5/3.0</description>
+	<files>
+		<filename module="mod_vtem_login">mod_vtem_login.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_vtem_login.xml</filename>
+		<folder>tmpl/</folder>
+		<folder>js/</folder>
+		<folder>images/</folder>
+		<folder>css/</folder>
+	</files>
+	<config>
+	 <fields name="params">
+	  <fieldset name="basic">
+	  <field name="slideID" type="text" default="loginshow1" label="Уникальный идентификатор модуля" description="Если Вы имеете два или больше модулей на одной странице, то Вам необходима для каждого из модулей прописать свой идентификатор. Пример:(loginshow1 loginshow2), или можете придумать свои названия."/>
+	  <field name="width" type="text" default="220" label="Ширина модуля" description="Укажите какой должна быть ширина модуля в px" />
+	  <field name="height" type="text" default="260" label="Высота модуля" description="Укажите какой должна быть высота модуля в px" />
+	  <field name="position" type="list" default="top" label="Позиция" description="Укажите в каком месте будет находится Ваш модуль.">
+			<option value="top">Верх</option>
+			<option value="bottom">Низ</option>
+			<option value="left">Лево</option>
+			<option value="right">Право</option>
+	  </field>
+	  <field name="tabtype" type="radio" default="1" label="Тип клапана" description="Установите, как должен выглядеть выглядывающий клапан модуля.">
+			<option value="0">Изображение</option>
+			<option value="1">Текст</option>
+	  </field>
+	  <field name="tabimage" type="text" default="modules/mod_vtem_login/images/user.png" label="Изображение на клапане" description="Введите путь до изображения, которое будет отображаться на клапане." size="50"/>
+	  <field name="tabtext" type="text" default="Login form" label="Текст на клапане" description="Введите текст, который будет отображаться на клапане." />
+	  <field name="delay" type="text" default="500" label="Задержка" description="Установите скорость, с которой будет открываться и закрываться модуль." />
+	  <field name="offset" type="text" default="100px" label="Расстояние" description="Укажите в пикселях, на каком расстояние должен находиться модуль от края окна браузера." />
+	  <field name="autoClose" type="radio" default="1" label="Сворачивание" description="Установите, будет ли модуль закрываться автоматически при клике пользователем в любом месте окна браузера.">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+	  </field>	
+	  <field name="background" type="text" default="#333333" label="Фон модуля" description="Введите цвет желаемого фона в HTML формате." />
+	  <field name="color" type="text" default="#CCCCCC" label="Цвет модуля" description="Введите желаемый цвет модуля в формат HTML" />
+	  <field name="spacer1" type="spacer" hr="true"/>
+	  <field name="pretext" type="textarea" filter="safehtml" cols="30" rows="5" label="Верхний текст" description="Введите простой текст или текст в HTML формате, который будет показывается выше формы логина." />
+	  <field name="posttext" type="textarea" filter="safehtml" cols="30" rows="5" label="Нижний текст" description="Введите простой текст или текст в HTML формате, который будет показывается ниже формы логина." />
+	  <field name="login" type="menuitem" disable="separator" label="Авторизация" description="Выберите страницу, на которую пользователь будет переадресован после успешного входа." >
+			<option value="">JDEFAULT</option>
+	  </field>
+	  <field name="logout" type="menuitem" disable="separator" label="Выход из авторизации" description="Выберите страницу, на которую пользователь будет переадресован после выхода из авторизации." >
+			<option value="">JDEFAULT</option>
+	  </field>
+	  <field name="greeting" type="radio" default="1" label="Приветствие" description="Показать или скрыть текст приветствия.">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+	  </field>
+	  <field name="name" type="list" default="0" label="Имя пользователя" description="Укажите, как будет отображаться имя пользователя.">
+			<option value="0">Имя</option>
+			<option value="1">Логин</option>
+	  </field>
+	  <field name="usesecure" type="radio" default="0" label="Кодировка Формы логина" description="Представьте зашифрованные данные(требуется SSL) логина.  Не разрешайте этот выбор, если Joomla не доступна, используйте приставку https:// .">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+	  </field>
+	</fieldset>
+	<fieldset name="advanced">
+		<field name="script" type="radio" default="0" label="Библиотека JQuery" description="Ds,tрите, будет ли загружаться библиотека JQuery">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+		</field>
+		<field name="option_css" type="textarea" default="" label="CSS" description="Можете добавить свой css стиль" cols="35" rows="6" />     
+		<field name="cache" type="list" default="0" label="Кэширование" description="Выберите, будет ли производится кэширование модуля.">
+			<option value="1">Глобальное кэширование</option>
+			<option value="0">Без кэширования</option>
+		</field>
+		<field name="cache_time" type="text" default="900" label="Время Тайника" description="Время перед модулем повторно спрятано про запас" />
+		<field name="moduleclass_sfx" type="text" default="" label="Классовый Суффикс Module" description="PARAMMODULECLASSSUFFIX" />
+	  </fieldset>
+	</fields>
+  </config>
+</extension>

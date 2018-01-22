@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <extension version="2.5" type="file" method="upgrade">
+      <name>ru-RU.mod_slideshowck</name>
+      <version>1.0.0</version>
+      <creationDate>04.2013</creationDate>
+      <author>Pavel Rosenstein</author>
+      <authorEmail>human386@gmail.com</authorEmail>
+      <authorUrl></authorUrl>
+      <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+      <license>GNU/GPL http://www.gnu.org/licenses/gpl-2.0.html</license>
+      <description>Slideshow CK ru-RU language file</description>
+      <fileset>
+        <!-- Lang pack languages -->
+        <files target="language/ru-RU">
+          <filename>ru-RU.mod_slideshowck.ini</filename>
+		  <filename>ru-RU.mod_slideshowck.sys.ini</filename>
+        </files>
+      </fileset>
+    </extension>

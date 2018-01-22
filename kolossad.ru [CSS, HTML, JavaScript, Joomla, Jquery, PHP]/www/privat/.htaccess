@@ -1,0 +1,6 @@
+AuthName "Retina's Private Zone"
+AuthType Basic
+AuthUserFile /var/www/rpp28/data/etc/11345928.passwd
+<Limit GET POST>
+	require valid-user
+</Limit>
