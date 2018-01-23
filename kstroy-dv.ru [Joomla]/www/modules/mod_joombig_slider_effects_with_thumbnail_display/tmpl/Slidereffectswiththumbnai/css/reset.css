@@ -1,0 +1,4 @@
+
+legend{display:none}.section:after,.featureCont:after,#features ul:after,#page-info:after,#plans .details .dItem:after{
+display:block;content:' ';clear:both;height:0;font-size:0;overflow:hidden;width:100%;zoom:1}
+

@@ -1,0 +1,1 @@
+var $jnc=jQuery.noConflict();

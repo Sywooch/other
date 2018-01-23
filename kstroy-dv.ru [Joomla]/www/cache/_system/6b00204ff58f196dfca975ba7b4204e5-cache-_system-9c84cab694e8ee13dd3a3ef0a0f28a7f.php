@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"output";s:0:"";s:6:"result";O:8:"stdClass":4:{s:2:"id";s:5:"10204";s:6:"option";s:17:"com_customfilters";s:6:"params";s:41:"{"used_cf":["S","I","B","D","T","V","E"]}";s:7:"enabled";s:1:"1";}}
