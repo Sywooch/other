@@ -1,0 +1,108 @@
+#smfaq {margin-top:10px;}
+.smfaq-copy {text-align:center;font-size:smaller;}
+#smfaq .question {line-height: 20px;
+overflow: hidden;
+color: #000;
+background: #fff;
+padding: 7px 15px;
+border-radius: 7px;
+font-size: 14px;
+border: 1px solid #333!important;}
+div#smfaq div.ui-accordion-header-active {font-weight: bold;}
+div#smfaq span.ui-accordion-header-icon {display: none;}
+#smfaq .active {color:#cf7207;background:url(../../../media/com_smfaq/images/smfaq-arrow-open.gif) left no-repeat; }
+#smfaq-unpub.active {color:black;background:none; }
+#smfaq .question:hover {cursor:pointer;}
+#smfaq .answer_content {padding: 7px 15px;}
+#smfaq .answer {overflow: hidden;
+border: 0;
+padding-left: 0;
+background: #fddecc;
+font-size: 15px;
+border-radius: 7px;
+	border: 1px solid #333;
+padding: 0;}
+#smfaq .loader {background: url(../../../media/com_smfaq/images/ajax-loader.gif) no-repeat left;height:16px;display:block;}
+#smfaq .button {display: inline-block;
+margin-bottom: 10px;
+margin-left: 25px;}
+#smfaq .button:hover {cursor:pointer; border-color:black}
+#smfaq a.button, #smfaq a.button:hover {text-decoration:none;}
+#smfaq .err-msg {padding:4px 10px 4px 30px;margin:2px 0 2px 0;background:#FFD7D7 url(../../../media/com_smfaq/images/error_icon.png) no-repeat 5px 50%; font-weight:bold;}
+#smfaq .vote div.err-msg {padding:0;background:none;color:red;display:inline-block;}
+#smfaq .ok-msg {padding:4px 10px 4px 30px;background:#A7E29A url(../../../media/com_smfaq/images/good_icon.png) no-repeat 5px 50%;}
+#smfaq .vote {background: #DFDFDF;font-weight:bold; margin:10px 0 0 0;border:1px solid #936;padding:10px 10px;}
+#smfaq .vote textarea {width:60%;height:80px;}
+#smfaq .info {clear:both;background:#DEE9F4;line-height:20px;font-weight:bold;margin:10px 0 0 0;border:1px solid #BFBAB1;padding:10px}
+#smfaq .author {text-align:left;}
+#smfaq .ans-date, #smfaq .date {float:right;}
+#smfaq .clr {clear:both;height:0px;}
+#smfaq p {margin:0;}
+#smfaq .back-link {margin:20px;text-align:center;}
+#smfaq .single_question {font-weight:bold;margin:5px 0 5px 0;}
+#smfaq .question-link {margin:5px 0 5px 0;}
+div.captcha {margin-left: 100px;}
+#smfaq  input.button_bot {background: #742004;
+color: #fff;
+font-weight: bold;
+width: auto;
+padding: 7px 50px;
+border: 1px solid #333;
+margin-right: 20px;
+border-radius: 8px;
+cursor: pointer;}
+#smfaq div.captcha .button {background: #fff;
+padding: 2px 4px;
+border-radius: 7px;
+border: 1px solid #333;}
+div.ch_email {margin-left: 100px;}
+/*question form */
+#smfaq-form {width: 735px;
+padding: 10px;
+margin-bottom: 40px;}
+#smfaq-form .titleform {font-family: Arial,sans-serif;
+font-size: 16px;}
+#smfaq-form label {float: left;
+margin: 15px 0 0 0;
+width: 100px;
+clear: both;
+font-size: 16px;}
+#smfaq-form input {float: left;
+margin: 15px 0 0 0;
+width: 280px;
+clear: right;
+border: 1px solid #999;
+font-size: 16px;
+padding: 4px;}
+div.question_one {background: #e5e5e5;
+border: 1px solid #ccc;
+padding: 10px;
+margin-bottom: 10px;
+border-radius: 10px;}
+#smfaq-form textarea {float: left;
+margin: 10px 2px 10px 0px;
+width: 590px;
+box-shadow: 0px 0px 10px #777 inset;
+border-radius: 5px;
+padding: 6px;
+font-size: 16px;
+resize: none;
+border: 1px solid #333;}
+#smfaq-form input:focus, #smfaq-form textarea:focus  {border-color:#000;}
+#smfaq-form .required {font-weight:bold;}
+#smfaq-form .error {border-color:#D62950;}
+#smfaq-form .count {clear:both;height:30px;}
+#smfaq-form .lastcount {color:red;}
+#smfaq-form img {float:left;}
+#smfaq-form .captcha input {width:50px;margin:10px 0 0 0;clear:both;}
+#smfaq-form .ch_email input {width:15px;height:15px;clear:both;}
+#smfaq-form .ch_email label, #smfaq-form .captcha label {width:400px;clear:none;margin:14px 0 0 10px;}
+
+.smfaq-print {text-align:right;margin:10px 15px 0 0;}
+//div.smfaq-print:after  { clear:both; }
+/* ie7 fix */
+#smfaq span.author, #smfaq span.ans-author {*display:block;*float:left;*width:50%;}
+#smfaq .ans-date, #smfaq .date {*display:block;*width:50%;*text-align:right;}
+#smfaq .info {*padding-bottom:30px;}
+#smfaq .vote {*display:inline-block;}
+#smfaq .vote div.err-msg{*display:inline;zoom:1;}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="TEMPLATE_CATEGORY" option="COM_FAQL_CATEGORY_VIEW_DEFAULT_TITLE">
+		<message>
+			<![CDATA[QUESTION_LAYOUT_CATEGORY]]>
+		</message>
+	</layout>
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request">
+			<field name="id" type="category"
+				description="JGLOBAL_CHOOSE_CATEGORY_DESC"
+				extension="com_faql"
+				label="JGLOBAL_CHOOSE_CATEGORY_LABEL"
+				required="true"
+			/>
+		</fieldset>
+	</fields>
+	
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="num_questions" type="radio" default="1" label="NUM_QUESTIONS" description="SHOW_HIDE_NUM_QUESTIONS">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="display_num" type="text" default="10" size="3" label="NUM_LINKS" description="DESCNUMLINKS" />
+			<field name="autopublication" type="radio" default="0" label="THE_AUTOPUBLICATION" description="">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_pagination_limit" type="radio" default="0" label="DISPLAY_SELECT" description="SHOW_HIDE_THE_DISPLAY_SELECT_DROPDOWN">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="order_question" type="list" default="nt" label="SORT" description="ORDER">
+				<option value="ot">ORDER_TOP</option>
+				<option value="od">ORDER_DOWN</option>
+				<option value="nt">NUMBER_TOP</option>
+				<option value="nd">NUMBER_DOWN</option>
+				<option value="dqt">QUEST_TOP</option>
+				<option value="dqd">QUEST_DOWN</option>
+				<option value="dat">ANSWER_TOP</option>
+				<option value="dad">ANSWER_DOWN</option>
+			</field>
+			<field name="show_desc" type="radio" default="0" label="SECTION_DESCRIPTION" description="SHOW_HIDE_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="show_transp" type="radio" default="1" label="SHOW_TRANSPARENCY" description="PARAMTRANC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_author" type="radio" default="1" label="SHOW_AUTHOR" description="SHOW_HIDE_AUTHOR_QUESTION">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_autansw" type="radio" default="1" label="SHOW_AUTHOR_ANSWER" description="SHOW_HIDE_AUTHOR_ANSWER">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="show_numbs" type="radio" default="1" label="TO_SHOW_NUMBERING" description="TO_SHOW_HIDE_NUMBERING_OF_QUESTIONS">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="all_is_opened" type="radio" default="0" label="ALL_IS_OPENED" description="TO_OPEN_ALL_QUESTIONS">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="show_first_ans" type="radio" default="-1" label="SHOW_FIRST_ANSWER" description="SHOW_HIDE_FIRST_ANSWER">
+				<option value="0">JYES</option>
+				<option value="-1">JNO</option>
+			</field>
+			<field name="add_question" type="list" default="0" label="ADD_QUESTION" description="DESCADDQUESTION">
+				<option value="0">JALL</option>
+				<option value="1">REGISTERED</option>
+			</field>
+			<field name="show_captcha" type="list" default="0" label="CAPTCHA" description="DESCCAPTCHA">
+				<option value="0">DISABLE</option>
+				<option value="1">NOT_REGISTERED</option>
+				<option value="2">JALL</option>
+			</field>
+			<field name="count" type="text" size="4" default="1000" label="COUNT" description="DESCOUNT" />
+			<field name="prot_time" type="text" size="4" default="0" label="PROT_TIME" description="DESCPROTTIME" />
+			<field name="act_color" type="text" size="8" default="#135CAE" label="ACTIVE_COLOR" description="" />
+			<field name="back_color" type="text" size="8" default="#000000" label="BACK_COLOR" description="" />
+			<field name="background_color" type="text" size="8" default="#dddddd" label="BACKGROUND_COLOR" description="" />
+			<field type="hidden" name="faqlcheck" value="1" />			
+		
+		</fieldset>
+	</fields>
+</metadata>

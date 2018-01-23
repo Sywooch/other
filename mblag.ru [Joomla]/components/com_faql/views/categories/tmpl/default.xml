@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="TEMPLATE_CATEGORIES" option="COM_FAQL_CATEGORIES_VIEW_DEFAULT_TITLE">
+		<message>
+			<![CDATA[QUESTION_LAYOUT_CATEGORIES]]>
+		</message>
+	</layout>
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="image" type="imagelist" directory="/media/com_faql/images" hide_default="1" default="" label="IMAGE" description="PARAMIMAGE" />
+			<field name="image_align" type="radio" default="left" label="IMAGE_ALIGN" description="ALIGNMENT_OF_THE_IMAGE">
+				<option value="left">LEFT</option>
+				<option value="right">RIGHT</option>
+			</field>
+			<field name="show_comp_description" type="radio" default="0" label="COMP_DESCRIPTION" description="SHOW_HIDE_COMP_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="comp_description" type="textarea" default="" rows="3" cols="50" label="COMP_DESCRIPTION" description="" />
+			<field name="total_qa" type="radio" default="1" label="QUANTITY_OF_QUESTIONS_IN_A_DB" description="SHOW_HIDE_QUANTITY_OF_QUESTIONS_IN_A_DB">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="num_questions" type="radio" default="1" label="NUM_QUESTIONS" description="SHOW_HIDE_NUM_QUESTIONS">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			<field name="cat_desc" type="radio" default="0" label="CATEGORY_DESCRIPTION" description="SHOW_HIDE_CAT_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+		</fieldset>
+	</fields>
+</metadata>

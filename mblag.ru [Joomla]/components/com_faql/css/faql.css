@@ -1,0 +1,289 @@
+h2 { margin:0 0 8px 0; }
+.answer	{  
+	padding:0 5px 20px 10px; 
+}
+
+.answer img	{ 
+	margin: 0 5px 0 5px; 
+}
+
+.question {
+	font-weight:bold; 
+	cursor:pointer;
+	padding:4px 30px; 
+	background:url(../../../media/com_faql/images/site/help_yes.png) 5px 2px no-repeat;
+	border-bottom:solid #ffffff;
+}
+
+.noanswer {
+	background:url(../../../media/com_faql/images/site/help_no.png) 5px 2px no-repeat;
+}
+
+.diranswer {
+	background:url(../../../media/com_faql/images/site/help_da.png) 5px 2px no-repeat;
+}
+
+.noanswnopubl {
+	background:url(../../../media/com_faql/images/site/help_np.png) 5px 2px no-repeat;
+}
+
+.yesanswnopubl {
+	background:url(../../../media/com_faql/images/site/help_ynp.png) 5px 2px no-repeat;
+}
+
+.question:hover	{ 
+	background-color:lightblue; 
+}
+
+form#QuestionForm { 
+	margin:5px;
+	padding:5px;
+}
+ 
+.ajax-loading {
+	padding: 17px 0;
+	background: url(../../../media/com_faql/images/site/ajax-loader.gif) no-repeat center;
+}
+ 
+.error {
+   border: 2px solid #ff0000;
+ }
+
+
+ #log {
+   padding: 5px;
+   overflow: auto;
+   margin-bottom: 5px;
+   width: 452px;
+ }
+
+
+ #log.loaded {
+  background-color: #ffc0c0;
+ }
+
+
+ #log.loaded-success {
+   background-color: #FFC ;
+ }
+
+
+#box.ajax-loading {
+	padding: 17px 0;
+	background: url(../../../media/com_faql/images/site/ajax-loader.gif) no-repeat center;
+}
+#box div {
+display: none;
+}
+div.errmsg {
+margin-bottom:3px;
+width: auto;
+padding: 5px 5px 5px 30px;
+font-weight:bold;
+background:#FFC url(../../../media/com_faql/images/site/delete.png) left center no-repeat;
+}
+div.okmsg {
+margin-bottom:3px;
+width: auto;
+padding: 5px 5px 5px 30px;
+font-weight:bold;
+background: #C8E3AE url(../../../media/com_faql/images/site/tick.png) left center no-repeat;
+}
+.alertmsg {
+margin-bottom:3px;
+width: auto;
+padding: 5px 5px 5px 30px;
+font-weight:bold;
+background:#FFC url(../../../media/com_faql/images/site/alert.gif) left center no-repeat;
+}
+
+#noanswer {
+	margin-left:20px;
+}
+table.smnopublish {
+	margin-top:10px;
+}
+
+.divauthor {
+	font-size:10px;
+	margin-left:50px;
+}
+
+.clr {
+  float:none;
+  clear: both;
+}
+
+/* question */
+.created_name, .created_name_email {
+	float:left;
+	width: 50px;
+}
+
+.created_name {
+	padding-top:5px;
+}
+
+.send_email {
+	margin-left: 50px;
+	padding-top: 5px;
+}
+
+.send_email input {
+	margin-right: 7px;
+}
+
+#created_email {
+	padding-top:5px;
+}
+
+.quest {
+	width: 65%;
+	float:left;
+}
+
+.quest #question {
+	width: 95%;
+}
+
+.quest_adm {
+
+}
+
+#updatecaptcha {
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+#updatecaptcha img {
+	padding-top: 10px;
+}
+
+.multi {
+	font-size:9px;
+}
+
+.total {
+
+}
+
+.total p {
+	font-weight:bold;
+}
+
+.total span {
+	font-weight:normal;
+}
+
+.faql_small {
+	font-weight:bold;
+	font-size:9px;
+}
+
+.faql_legenda {
+	float:right;
+}
+
+.faql_legenda tr, .faql_legenda td {
+	border: 0px !important;
+}
+
+.linkadd {
+	padding-bottom: 25px;
+}
+
+.addquestion span {
+	font-size:14px; 
+	font-weight:bold;
+	margin-bottom: 15px;
+}
+
+.listcatdescr .contentpane {
+	margin-bottom: 20px;
+}
+
+.listcatdescr img{
+	margin: 0 15px;
+}
+
+.listcatdescr tr, .listcatdescr td {
+	border-width: 0px !important;
+}
+
+.catimg img, .componentheading img {
+	margin: 0 10px;
+}
+
+.catimg ul li {
+	list-style-type: none;
+	border-bottom: 2px solid #cccccc;
+	margin-bottom: 20px;
+}
+
+.catimg ul li br {
+	display: none;
+}
+
+/* pagination */
+#main .pagination ul {
+	text-align:center  !important;
+}
+
+#main .pagination li {
+	margin: 0 !important;
+}
+
+/* edit form */
+.editform  .key, .editform  .key2  {
+	display: block;
+	float: left;
+}
+
+.editform  .key {
+	width: 130px;
+	padding-right: 10px;
+	text-align: right;
+}
+
+.editform  .key3 input {
+	margin: 2px 5px 0 20px;
+}
+
+.fl_email input {
+	margin-top: 2px;
+	margin-right: 10px;
+}
+
+.fl_publ input {
+	margin-top: 2px;
+}
+
+.QuestForm {
+	padding: 5px 5px 40px 4px;
+	border: 1px dashed #888888;
+}
+
+.FutForm {
+	margin-bottom: 10px;
+	padding-top: 5px;
+}
+
+/* sort filter */
+.sort_filter {
+	width: 300px;
+	float: left;
+	line-height: 1.5em;
+}
+
+.quest_sort {
+	float: left;
+}
+
+.order {
+	float: left;
+}
+
+.order span {
+	margin: 0 10px 0 0;
+	font-weight: bold;
+}
