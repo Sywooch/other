@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Conv_Dynar_Medium';
+	src: url('../fonts/Dynar_Medium.eot');
+	src: local('Dynar'), 
+            url('../fonts/Dynar_Medium.woff') format('woff'), 
+            url('../fonts/Dynar_Medium.ttf') format('truetype'), 
+            url('../fonts/Dynar_Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}  

@@ -1,0 +1,241 @@
+/**
+ * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+body {
+	background: #444;
+	border-top: 50px solid #333;
+	margin: 0; padding: 0;
+	font-family: Conv_Dynar_Medium, Helvetica, Sans Serif; font-size: 78%;
+	color: #565656;
+	text-align: center;
+	letter-spacing: 0px;
+}
+
+img  {
+	border: 0 none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* -- id styles ------------------------------------- */
+
+#frame.outline h1 {
+	padding: 15px 18px; 
+	margin: 30px 5px 15px 5px; 
+	color: #eee;  
+	font-size: 165%; 
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px; 
+	background: rgb(51,51,51); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(51,51,51,1) 0%, rgba(32,32,32,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,1)), color-stop(100%,rgba(32,32,32,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(32,32,32,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(32,32,32,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(32,32,32,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(32,32,32,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#202020',GradientType=0 ); /* IE6-9 */
+}
+
+#frame {
+	background: #fafafa;
+	overflow: hidden;
+	margin: 80px auto;
+	width: 400px;
+	padding: 30px;
+	border: 9px solid #555;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	border-radius: 14px; 
+}
+
+#frame form {
+	text-align: left;
+}
+
+input, textarea {
+	color: #999;
+    padding: 9px;  
+    border: solid 1px #E5E5E5;  
+    outline: 0;  
+    width: 200px; 
+	background:#fff;
+	background-image: linear-gradient(bottom, #FFFFFF 5%, #F0F0F0 97%, #FFFFFF 76%);
+	background-image: -o-linear-gradient(bottom, #FFFFFF 5%, #F0F0F0 97%, #FFFFFF 76%);
+	background-image: -moz-linear-gradient(bottom, #FFFFFF 5%, #F0F0F0 97%, #FFFFFF 76%);
+	background-image: -webkit-linear-gradient(bottom, #FFFFFF 5%, #F0F0F0 97%, #FFFFFF 76%);
+	background-image: -ms-linear-gradient(bottom, #FFFFFF 5%, #F0F0F0 97%, #FFFFFF 76%);
+	background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.05, #FFFFFF), color-stop(0.97, #F0F0F0), color-stop(0.76, #FFFFFF));
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 3px;  
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 3px;  
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 3px;  
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+input:hover, textarea:hover{ 
+	color:#222;
+    border-color: #92bedd;  
+    -webkit-box-shadow: rgba(77, 156, 236, 0.15) 0px 0px 8px; 
+} 
+  
+input:focus, textarea:focus {  
+	color:#222;
+    border-color: #ccc;  
+    -webkit-box-shadow: rgba(77, 156, 236, 0.15) 0px 0px 8px;  
+	background: #fff;
+} 
+
+form#form-login fieldset.input input.button{  
+	font-family: Conv_Dynar_Medium, Helvetica, Sans Serif;
+	margin: auto;
+	height: 32px;
+	line-height: 30px;
+	font-size: 10px;
+	font-weight: bold;
+	text-transform:uppercase;
+	padding:0px 30px;
+    border: 1px solid #3690f0;   
+    color: #FFFFFF;  
+	text-shadow: #003FBF 1px 1px 2px; 
+	background: #3690f0;
+	
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px; 
+}  
+
+form#form-login fieldset.input input.button:hover {
+	text-shadow: #6d0019 1px 1px 2px;
+	background: #000;
+	border: 1px solid #000;   
+}
+
+form#form-login fieldset.input input.button:focus {
+	border:1px solid #000;
+}
+ 
+/* -- class styles ---------------------------------- */
+
+.outline {
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  padding: 2px;
+}
+
+.inputbox {
+	padding: 9px; 
+	width: 320px; 
+	border: 1px solid #e5e5e5;
+}
+p#form-login-remember {
+	margin: 12px auto; 
+	font-size: 11px; 
+	color: #888; 
+	border-top: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0; 
+	padding: 9px;
+}
+
+p#form-login-remember label {
+	width: auto; 
+	display: inline;
+}
+
+p#form-login-remember input#remember.inputbox {
+	width: 20px; 
+	display: inline; 
+	margin:6px;
+}
+
+/* -- form styles ----------------------------------- */
+form    { 
+	margin: auto; 
+}
+
+form p  { 
+	margin: 1px auto; 
+	padding: 0; 
+}
+
+form fieldset { 
+	border: 0 none; 
+	margin: 0em; 
+	padding: 0.2em;
+}
+
+label  { 
+	display: block; 
+	float: left; 
+}
+
+input  { 
+	padding: 1px; 
+}
+
+input.button  { 
+	width: auto; 
+	height: 1.8em; 
+	cursor: pointer; 
+}
+
+label   { 
+	margin: 5px 0px 2px 0px; 
+	width: 10em;
+}
+
+form p  { 
+	padding: 0.2em 0 0.2em 0; 
+}
+
+form br  { 
+	display: none; 
+}
+
+input    { 
+	border: 1px solid #0E67A1; 
+}
+
+input.button { 
+	background-color: white; 
+}
+
+input.button:hover { 
+	border-color:  #FC902E; 
+}
+
+#form-login	{ 
+	margin: 5px 10px; 
+}
+
+.offline-message-text { 
+	font-size: 14px;
+	color: #565656;
+	padding: 24px 10px;
+	border-top: 1px solid #f0f0f0; 
+	border-bottom: 1px solid #f0f0f0; 
+	margin-bottom:0px;
+}
+
+p#form-login-username {margin-bottom: 2px;}
+p#form-login-password {margin-bottom: 20px;}
+
+p#form-login-password label,
+p#form-login-username label {font-weight: bold; padding:5px 0; display: block; color: #222;}
+
+#system-message {background: #b81615; padding:12px;}
+#system-message dt.error {font-size: 18px; color: #fff; font-weight: bold; text-transform: uppercase; text-shadow: #b73636 1px 1px 2px;}
+#system-message dd.error.message {margin:0;}
+#system-message dd ul {list-style-type: none; padding:0;}
+#system-message dd ul li {color: #fff; padding: 6px 0; margin:0; font-weight: bold; text-shadow: #b73636 1px 1px 2px;}
+
+
