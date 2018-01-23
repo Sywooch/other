@@ -1,0 +1,18 @@
+/**
+ * @version   3.2
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2011 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+.rt-block, .rt-pagination {zoom:1;}
+
+/* Typography */
+.rt-pagination .tab {display: inline;}
+.rt-pagination .page-block {display: inline;}
+
+
+#mod-search-searchword.inputbox {float:none;}
+.search input.button {float:none;}
+.search input.button {font-size: 0;line-height: 0;}
+
+.component-content #member-registration fieldset dl {width:300px;}

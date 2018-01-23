@@ -1,0 +1,663 @@
+AWSTATS DATA FILE 7.1 (build 1.980)
+# If you remove this file, all statistics for date 201412 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.metallmaster-dv.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1998                
+POS_TIME 2673                
+POS_VISITOR 16514               
+POS_DAY 19891               
+POS_DOMAIN 3579                
+POS_LOGIN 3999                
+POS_ROBOT 4154                
+POS_WORMS 4974                
+POS_EMAILSENDER 5105                
+POS_EMAILRECEIVER 5248                
+POS_SESSION 20301               
+POS_SIDER 20496               
+POS_FILETYPES 5383                
+POS_DOWNLOADS 5617                
+POS_OS 5665                
+POS_BROWSER 5821                
+POS_SCREENSIZE 6888                
+POS_UNKNOWNREFERER 6962                
+POS_UNKNOWNREFERERBROWSER 7224                
+POS_ORIGIN 7350                
+POS_SEREFERRALS 7494                
+POS_PAGEREFS 7662                
+POS_SEARCHWORDS 8021                
+POS_KEYWORDS 9017                
+POS_MISC 2336                
+POS_ERRORS 9951                
+POS_CLUSTER 3855                
+POS_SIDER_404 10098               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20141214001123 7016 2085648 23543017443816
+FirstTime 0
+LastTime 20141213235829
+LastUpdate 20141214001952 7016 0 7016 0 0
+TotalVisits 155                 
+TotalUnique 78                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 83                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 45 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 12 110 1753114 50 56 1432982
+1 16 118 5578753 61 165 5117637
+2 26 574 19258896 78 127 3489418
+3 6 51 5568514 53 71 2318222
+4 6 288 10482181 56 68 2303709
+5 14 503 13845203 63 146 4236753
+6 6 6 198374 47 61 1936181
+7 15 419 16066493 116 132 6126350
+8 12 621 11530537 51 62 2429077
+9 15 207 13109675 74 89 3300471
+10 6 125 2139536 73 112 4043410
+11 8 173 7910140 68 132 5468670
+12 26 1312 13465768 57 88 2280441
+13 47 1877 12080725 100 130 2893537
+14 34 979 6988221 112 134 5168347
+15 8 340 9356802 59 72 2134592
+16 10 297 9542209 947 960 21238640
+17 12 273 1006991 67 154 4700093
+18 46 3687 34848117 133 207 7463473
+19 15 574 17129609 93 251 6105024
+20 13 309 5716660 57 78 2127665
+21 5 65 4196124 121 126 5602876
+22 15 153 3366434 75 87 2976578
+23 19 291 3571971 80 88 3080766
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 14
+ru 319 13018 208878198
+ua 42 141 4249610
+pt 8 8 550548
+us 5 71 6839607
+de 4 69 6772814
+by 3 3 198086
+cn 2 33 727357
+mx 2 2 12194
+fr 2 2 171122
+kr 1 1 66025
+cz 1 1 66026
+lv 1 1 47409
+nl 1 1 66034
+sg 1 1 66017
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 18
+yandex 921 47902848 20141214000114 33
+no_user_agent 271 17760964 20141212165713 0
+googlebot 161 7949646 20141214001123 20
+bingbot 91 5081619 20141213210206 19
+rambler 88 1118482 20141210194120 0
+mj12bot 70 3863153 20141212142233 14
+robot 67 4959538 20141213202603 5
+mail\.ru 61 2547823 20141209090344 25
+[\s_+:,\.\;\/\\-]bot 58 4084340 20141210210647 3
+bingpreview 55 875112 20141207110234 0
+commons\-httpclient 6 2928883 20141213183743 0
+spider 9 336508 20141211051428 4
+unknown 4 6396 20141212015757 4
+surveybot 2 67657 20141210201624 1
+favicon 1 66026 20141203022157 0
+bot[\s_+:,\.\;\/\\-] 26 2244720 20141213114113 4
+netcraft 1 66058 20141210173536 0
+crawl 4 202903 20141211073852 1
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 8
+css 1259 11653031 0 0
+png 2235 119565711 0 0
+ttf 56 1366860 0 0
+php 231 12345424 0 0
+jpg 7892 30987452 0 0
+js 1491 34571550 0 0
+Unknown 105 18164539 0 0
+gif 83 56480 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 10
+linuxandroid 1030
+winlong 4
+winxp 644
+winnt 26
+linuxubuntu 13
+winvista 743
+linux 244
+win7 10636
+macosx9 8
+Unknown 4
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 60
+chrome37.0.2062.124 106
+msie6.0 6
+firefox13.4.4 1
+chrome12.0.703.0 2
+android 1
+firefox13.3.2 1
+chrome36.0.1944.0 8
+firefox13.0.4 2
+firefox13.1.2 1
+chrome28.0.1500.95 237
+firefox18.0 44
+chrome39.0.2171.95 6006
+chrome31.0.1650.57 164
+chrome38.0.2125.111 220
+chrome31.0.1650.63 81
+firefox34.0 791
+opera9.80 540
+firefox31.0 3
+chrome24.0.1312.71 61
+msie8.0 154
+chrome39.0.2171.65 101
+firefox16.0 198
+firefox23.0 2
+firefox13.2.4 1
+firefox13.2.2 1
+msie10.6 1
+msie9.0 1
+firefox13.4.2 2
+Unknown 2
+chrome39.0.2171.71 2720
+firefox3.0.16 2
+firefox13.4.3 1
+firefox13.2.0 2
+chrome37.0.2062.102 2
+lg\- 321
+firefox13.4.1 1
+chrome12.0.704.0 1
+firefox13.3.0 3
+chrome39.0.2171.59 275
+firefox13.1.0 3
+firefox13.0.3 2
+firefox13.1.3 1
+firefox33.0 110
+chrome36.0.1985.143 10
+firefox25.0 1
+mozilla 415
+chrome35.0.1916.153 1
+firefox13.0.0 1
+chrome38.0.2125.114 433
+firefox22.0 1
+safari5.1.2 69
+msie10.0 31
+chrome25.0.1364.172 60
+firefox13.4.0 1
+firefox3.6.3 1
+firefox13.1.1 1
+chrome23.0.1271.97 11
+firefox13.3.4 1
+safari 132
+firefox3.6.13 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 4
+mrPC 20141207214830
+Mozilla/4.0_(compatible;_Synapse) 20141210115917
+WebIndex 20141201192555
+Mozilla/5.0_(compatible;_Netology/1.0.0;__http://netology.noip.me) 20141213235829
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+mrPC 20141207214830
+WebIndex 20141201192555
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 168 169
+From1 0 0
+From2 22 22
+From3 11 11
+From4 191 13150
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+google 1 1
+yandex 21 21
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 4
+http://koopilka.com/otdyh/sporttovary/fitnes-trenazhery/halahup.html 4 4
+http://student-dv.ru 4 4
+http://forum.amit.ru/index.php/topic,138643.105.html 2 2
+http://forum.amit.ru/index.php/topic,138643.35.html 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 7
+metallmaster-dv.ru 3
+%d0%b3%d0%b0%d1%80%d0%b0%d0%b6%d0%bd%d1%8b%d0%b5+%d0%bc%d0%b0%d1%81%d1%82%d0%b5%d1%80%d0%b0 2
+%d1%83%d0%b7%d0%be%d1%80+%d0%b4%d0%bb%d1%8f+%d0%bc%d0%b5%d1%82%d0%b0%d0%bb%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%be%d0%b3%d0%be+%d0%bf%d0%b5%d1%80%d0%b8%d0%bb%d1%83 2
+www.metallmaster-dv.ru 2
+%d0%b2%d0%b8%d0%b0%d0%b3%d1%80%d0%b0+%d0%bf%d0%be%d0%b4+%d0%b7%d0%b0%d0%ba%d0%b0%d0%b7 1
+%d0%ba%d0%be%d0%b2%d0%b0%d0%bd%d1%8b%d0%b5%d0%bd%d0%b5+%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b8%d1%80%d0%bd%d1%8b%d0%b5+%d0%b4%d0%b2%d0%b5%d1%80%d0%b8 1
+%d0%ba%d0%b0%d0%ba+%d0%be%d0%b1%d1%88%d0%b8%d1%82%d1%8c+%d0%ba%d1%80%d1%8b%d0%bb%d1%8c%d1%86%d0%be+%d1%87%d0%b0%d1%81%d1%82%d0%bd%d0%be%d0%b3%d0%be+%d0%b4%d0%be%d0%bc%d0%b0+%d0%bf%d0%be%d0%bb%d0%b8%d0%ba%d0%b0%d1%80%d0%b1%d0%be%d0%bd%d0%b0%d1%82%d0%be%d0%bc+%d0%bf%d0%be+%d0%b1%d0%be%d0%ba%d0%b0%d0%bc 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 22
+metallmaster-dv.ru 3
+%d0%bc%d0%b0%d1%81%d1%82%d0%b5%d1%80%d0%b0 2
+%d1%83%d0%b7%d0%be%d1%80 2
+%d0%b4%d0%bb%d1%8f 2
+%d0%b3%d0%b0%d1%80%d0%b0%d0%b6%d0%bd%d1%8b%d0%b5 2
+%d0%bc%d0%b5%d1%82%d0%b0%d0%bb%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%be%d0%b3%d0%be 2
+%d0%bf%d0%b5%d1%80%d0%b8%d0%bb%d1%83 2
+www.metallmaster-dv.ru 2
+%d0%be%d0%b1%d1%88%d0%b8%d1%82%d1%8c 1
+%d0%ba%d0%b2%d0%b0%d1%80%d1%82%d0%b8%d1%80%d0%bd%d1%8b%d0%b5 1
+%d1%87%d0%b0%d1%81%d1%82%d0%bd%d0%be%d0%b3%d0%be 1
+%d0%bf%d0%be%d0%bb%d0%b8%d0%ba%d0%b0%d1%80%d0%b1%d0%be%d0%bd%d0%b0%d1%82%d0%be%d0%bc 1
+%d0%bf%d0%be%d0%b4 1
+%d0%b1%d0%be%d0%ba%d0%b0%d0%bc 1
+%d0%b4%d0%be%d0%bc%d0%b0 1
+%d0%ba%d1%80%d1%8b%d0%bb%d1%8c%d1%86%d0%be 1
+%d0%b4%d0%b2%d0%b5%d1%80%d0%b8 1
+%d0%bf%d0%be 1
+%d0%ba%d0%be%d0%b2%d0%b0%d0%bd%d1%8b%d0%b5%d0%bd%d0%b5 1
+%d0%b2%d0%b8%d0%b0%d0%b3%d1%80%d0%b0 1
+%d0%ba%d0%b0%d0%ba 1
+%d0%b7%d0%b0%d0%ba%d0%b0%d0%b7 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 6
+302 733 4859355
+206 1 7132
+303 382 0
+500 3 0
+301 10 4222
+404 519 990927
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 158
+/phpMyAdmin/index.php 1 -
+/phpmanager/index.php 1 -
+/phpMyAdmin-2.6.0/index.php 1 -
+/tr//index.php 1 -
+/index.php/productsandservices/fancybox/fancy_shadow_sw.png 1 -
+/fancybox/fancy_shadow_sw.png 1 -
+/phpMyAdmin-2.5.5-rc2/index.php 1 -
+/phpMyAdmin-2.6.4-pl3/index.php 1 -
+/blank.gif 35 http://metallmaster-dv.ru/
+/admin.php 5 -
+/modules/addwp.php 1 -
+/websql/index.php 1 -
+/modules/mod_xsystem/mod_xsystem.php 2 -
+/phpMyAdmin-2.6.0-rc1/index.php 1 -
+/tr//components/com_creativecontactform/assets/js/creative-mousewheel.js 1 -
+/phpMyAdmin-2.5.1/index.php 1 -
+/engine/inc/include/init.php 1 -
+/web/phpMyAdmin/index.php 1 -
+/phpMyAdmin-2.6.2-pl1/index.php 1 -
+/index.php/productsandservices/fancybox/fancy_shadow_w.png 1 -
+/phpMyAdmi/index.php 1 -
+/phpMyAdmin-2.6.0-beta2/index.php 1 -
+/phpMyAdmin-2.6.0-pl3/index.php 1 -
+/phpMyAds/index.php 1 -
+/index.php/productsandservices/fancybox/fancy_shadow_ne.png 1 -
+/phpMyAdmin-2.7.0-pl1/index.php 1 -
+/phpMyAdmin-2.6.0-pl1/index.php 1 -
+/templates/blackstudios16/fonts/Dynar_Medium.eot 3 http://metallmaster-dv.ru/index.php/productsandservices/perila
+//index.php 1 -
+/phpMyAdmin-2.5.7-pl1/index.php 1 -
+/phpMyAdmin-2.8.0.1/index.php 1 -
+/modules/mod_shoutbox/mod_shoutbox.xml 1 -
+//components/com_creativecontactform/assets/js/creative-mousewheel.js 1 -
+/sqlweb/index.php 1 -
+//wp-login.php 1 -
+/save_.php 1 -
+/phpMyAdmin-2.5.5-rc1/index.php 1 -
+/fancybox/fancy_shadow_se.png 1 -
+/tr/components/com_sexycontactform/assets/js/sexy-mousewheel.js 1 -
+/phpMyAdmin-2.6.4/index.php 1 -
+/phpMyAdmin-2.6.1-rc2/index.php 1 -
+/phpMyAdmin-2.8.1/index.php 1 -
+/components/com_hdflvplayer/hdflvplayer/download.php 1 -
+/phpMyAdmin-2.8.0.3/index.php 1 -
+/components/com_sexycontactform/assets/js/sexy-mousewheel.js 1 -
+/PMA/index.php 1 -
+/templates/blackstudios16/fonts/Dynar_Medium.woff 125 http://metallmaster-dv.ru/templates/blackstudios16/css/fonts.css
+/phpMyAdmin-2.6.0-alpha2/index.php 1 -
+/phpMyAdmin-2.6.4-pl2/index.php 1 -
+/phpMyAdmin-2.2.6/index.php 1 -
+/index.php/productsandservices/gate/fancybox/fancy_shadow_ne.png 1 -
+/wp-login.php 19 -
+/index.php/productsandservices/gate/fancybox/fancy_shadow_n.png 1 -
+/dbadmin/index.php 1 -
+/phpMyAdmin-2.5.5/index.php 1 -
+/phpMyAdmin-2.8.0-rc2/index.php 1 -
+/index.php/productsandservices/gate/fancybox/fancy_shadow_sw.png 1 -
+/admin/mysql/index.php 1 -
+/phpMyAdmin-2.6.3-pl1/index.php 1 -
+/components/com_community/index.html 1 -
+//components/com_jdownloads/jdownloads.js 1 -
+/templates/blackstudios16/images/loader.gif 1 http://metallmaster-dv.ru/
+/phpMyAdmin-2.5.6/index.php 1 -
+/p/m/a/index.php 1 -
+/phpMyAdmin-2.6.4-rc1/index.php 1 -
+/modules/mod_hdflvplayer/mod_hdflvplayer.xml 2 -
+/phpMyAdmin-2.6.2/index.php 1 -
+/phpMyAdmin-2.6.1-pl2/index.php 1 -
+/phpMyAdmin-2.6.1/index.php 1 -
+/phpMyAdmin-2.7.0-rc1/index.php 1 -
+/components/com_sexycontactform/fileupload/index.php 1 -
+/phpMyAdmin1/index.php 1 -
+/webadmin/index.php 1 -
+/phpm/index.php 1 -
+/components/com_creativecontactform/fileupload/index.php 1 -
+/sqlmanager/index.php 1 -
+/fancybox/fancy_shadow_ne.png 1 -
+/index.php/productsandservices/gate/fancybox/fancy_shadow_se.png 1 -
+/index.php/productsandservices/gate/fancybox/fancy_shadow_e.png 1 -
+/admin/phpmyadmin/index.php 1 -
+/php-my-admin/index.php 1 -
+/mysqlmanager/index.php 1 -
+/fancybox/fancy_shadow_s.png 1 -
+/phpMyAdmin-2.5.6-rc2/index.php 1 -
+/phpMyAdmin-2.5.6-rc1/index.php 1 -
+/phpMyAdmin-2.7.0-pl2/index.php 1 -
+/mysqladmin/index.php 2 -
+/index.php/productsandservices/fancybox/fancy_shadow_nw.png 1 -
+/phpMyAdmin-2.8.1-rc1/index.php 1 -
+/phpMyAdmin-2.6.1-pl1/index.php 1 -
+/phpMyAdmin-2/index.php 1 -
+/phpMyAdmin-2.8.0-rc1/index.php 1 -
+/phpMyAdmin-2.8.2/index.php 1 -
+/phpMyAdmin-2.5.7/index.php 1 -
+/phpMyAdmin-2.6.0-rc2/index.php 1 -
+/phpMyAdmin-2.6.2-beta1/index.php 1 -
+/phpMyAdmin-2.2.3/index.php 1 -
+/phpMyAdmin-2.8.0/index.php 1 -
+/phpMyAdmin-2.8.0.4/index.php 1 -
+/tr/components/com_community/index.html 1 -
+/phpMyAdmin-2.7.0-beta1/index.php 1 -
+/themes/engines/phptemplate/phptemplate.engine 1 -
+/admin/login.php 1 -
+/fancybox/fancy_shadow_n.png 1 -
+/PMA2005/index.php 1 -
+/phpMyAdmin-2.6.0-rc3/index.php 1 -
+/phpMyAdmin-2.6.3-rc1/index.php 1 -
+/admin/index.php 1 -
+/components/com_youtubegallery/views/youtubegallery/tmpl/default.xml 1 -
+/index.php/productsandservices/fancybox/fancy_shadow_s.png 1 -
+/myadmin/index.php 1 -
+/phpMyAdmin-2.6.1-pl3/index.php 1 -
+/mysql-admin/index.php 2 -
+/phpMyAdmin-2.5.5-pl1/index.php 1 -
+/php-myadmin/index.php 1 -
+/phpMyAdmin2/index.php 1 -
+/bitrix/admin/index.php 1 -
+/index.php/productsandservices/fancybox/fancy_shadow_e.png 1 -
+/webdb/index.php 1 -
+/pma/index.php 1 -
+/phpMyAdmin-2.6.1-rc1/index.php 1 -
+/phpmy/index.php 1 -
+/index.php/productsandservices/gate/fancybox/fancy_shadow_w.png 1 -
+/admin/ 1 -
+/phpmyadmin2/index.php 1 -
+/pma2005/index.php 1 -
+/phpMyAdmin-2.8.0.2/index.php 1 -
+/tr//components/com_jdownloads/jdownloads.js 1 -
+/phpmyad/index.php 1 -
+/fancybox/fancy_shadow_nw.png 1 -
+/index.php/productsandservices/fancybox/fancy_shadow_se.png 1 -
+/phpMyAdmin-2.8.0-beta1/index.php 1 -
+/phpMyAdmin-2.6.2-rc1/index.php 2 -
+/phpMyAdmin-2.6.0-beta1/index.php 1 -
+/phpMyAdmin-2.6.3/index.php 2 -
+/phpMyAdmin-2.6.4-pl1/index.php 1 -
+/index.php/productsandservices/fancybox/fancy_shadow_n.png 1 -
+/templates/blackstudios16/images/header/header_main.jpg 121 http://metallmaster-dv.ru/templates/blackstudios16/css/template.css
+/phpmyad-sys/index.php 1 -
+/fancybox/fancy_shadow_w.png 1 -
+/phpMyAdmin-2.6.4-pl4/index.php 1 -
+/user/ 1 -
+/db/index.php 1 -
+/phpMyAdmin-2.7.0/index.php 1 -
+/images/beautilidse.php 1 -
+/fancybox/fancy_shadow_e.png 1 -
+/phpMyAdmin-2.5.4/index.php 1 -
+/index.php/productsandservices/gate/fancybox/fancy_shadow_nw.png 1 -
+/mysql/index.php 1 -
+/index.php/productsandservices/gate/fancybox/fancy_shadow_s.png 1 -
+/templates/blackstudios16/fonts/Dynar_Medium.svg 49 http://metallmaster-dv.ru/templates/blackstudios16/css/fonts.css
+/phpMyAdmin-2.6.0-pl2/index.php 1 -
+/index.php 6 -
+/admin/pma/index.php 1 -
+/phpmy-admin/index.php 1 -
+/phpMyAdmin-2.6.0-alpha/index.php 1 -
+/phpmyadmin/index.php 1 -
+/phpMyA/index.php 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 83
+176.123.196.164 141 7991 73160556 20141213191741
+62.76.186.54 43 43 4128 20141213224912
+82.118.19.118 26 26 1716634 20141212020639
+176.123.207.220 14 540 12713629 20141210024658
+109.234.156.66 11 11 726304 20141212084433
+159.255.12.11 8 720 5036286 20141210051153
+82.114.111.18 8 199 8826590 20141210052635
+176.102.37.90 8 8 528232 20141203133551
+82.102.24.33 8 8 550548 20141213234428
+31.207.158.27 7 139 7931040 20141202120301
+46.159.250.191 1 10 116121 20141208004324
+95.28.20.27 1 64 943439 20141206205516
+95.220.125.114 1 103 1133439 20141211162407
+94.100.191.27 0 1 922852 
+176.193.184.230 1 103 1098821 20141211162407
+178.154.182.96 0 74 1219070 
+213.136.64.63 1 66 6593268 20141207081231
+91.207.106.252 2 2 124136 20141202221812
+217.69.133.169 1 1 66034 20141208094438
+148.204.86.3 2 2 12194 20141204221610
+213.87.143.239 2 268 2626632 20141212084505
+93.170.186.71 1 1 66026 20141205020428
+178.93.240.201 2 101 1175384 20141204145138
+122.248.192.16 1 1 66017 20141212032027
+208.110.85.242 2 2 112954 20141207142416
+178.154.182.93 0 37 609535 
+109.173.83.225 1 81 6623827 20141202194658
+109.188.122.35 3 106 1321141 20141207204920
+37.78.162.150 1 1 89016 20141201121043
+88.200.179.67 7 7 493312 20141205075723
+79.105.97.40 2 66 6634393 20141201024752
+106.120.161.72 1 1 66017 20141210093249
+5.44.169.179 4 4 113298 20141210000520
+174.129.82.180 1 1 66026 20141209170107
+93.170.147.174 1 1 66022 20141210115917
+95.84.129.55 1 45 687487 20141205105548
+82.193.109.52 1 1 371409 20141212224156
+37.78.251.34 3 4 267018 20141202175350
+62.76.12.124 2 2 139421 20141206162223
+78.47.165.50 1 1 66034 20141201190906
+92.38.30.11 1 1 65955 20141213235829
+182.118.53.148 1 32 661340 20141208095555
+37.78.30.7 4 5 356000 20141203204556
+130.219.8.11 0 1 1443 
+94.23.11.5 1 1 105088 20141208160943
+148.251.178.227 1 1 66026 20141209170746
+90.157.19.175 2 2 17 20141205174138
+2.92.136.67 1 32 661342 20141205105556
+62.210.129.169 1 1 66034 20141201033804
+95.79.110.26 2 85 1078789 20141201192557
+2.93.248.13 1 45 694877 20141205105556
+88.81.55.11 1 61 2112736 20141206205517
+213.125.101.59 1 1 66034 20141201200039
+178.137.135.112 1 1 201771 20141208082010
+85.26.241.5 4 275 8126347 20141202051555
+199.30.228.135 0 9 2157151 
+178.122.58.251 1 1 66026 20141211222432
+91.229.116.85 1 37 4098811 20141202091013
+178.122.152.28 1 1 66034 20141201082909
+93.80.12.69 3 89 3793379 20141209220209
+85.26.241.95 3 109 7052063 20141204073813
+89.21.79.104 1 1 66022 20141203131723
+92.242.35.54 1 1 74071 20141201192555
+185.58.205.113 1 1 0 20141204190722
+178.122.75.71 1 1 66026 20141204093525
+199.30.228.133 1 57 4436078 20141209112037
+89.163.8.65 2 102 1243967 20141208110133
+110.45.192.45 1 1 66025 20141207180907
+80.83.239.67 5 307 8065851 20141207183654
+85.26.241.90 1 46 5436175 20141205034028
+130.211.85.67 1 1 65955 20141213203945
+46.183.218.214 1 1 47409 20141213223816
+46.73.156.61 1 70 940163 20141206205516
+176.195.57.161 1 61 883043 20141211162407
+213.137.244.63 4 194 6030413 20141213015111
+5.45.192.75 1 34 689056 20141203080012
+94.190.62.177 1 72 1079063 20141203080015
+37.78.79.18 1 1 89012 20141205004701
+5.61.35.10 1 1 47486 20141201015913
+89.169.123.246 2 2 89492 20141210153426
+91.229.117.217 3 293 8456794 20141213150730
+46.39.37.68 3 275 2702396 20141211230910
+62.33.105.28 6 198 11554997 20141208050454
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 13
+20141201 15 162 8452029 13
+20141202 23 586 28259355 12
+20141203 13 373 2657478 9
+20141204 10 215 8371689 6
+20141205 17 181 8222601 11
+20141206 5 197 4135759 4
+20141207 14 485 17192864 7
+20141208 26 698 23374804 12
+20141209 8 159 10613011 6
+20141210 96 2741 32325213 18
+20141211 30 566 6677089 17
+20141212 30 296 4121396 16
+20141213 105 6693 74307759 24
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 6
+1h+ 6
+5mn-15mn 4
+30s-2mn 3
+2mn-5mn 1
+0s-30s 137
+30mn-1h 4
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 29
+/ 120 7830906 68 55
+/administrator/ 64 4503516 3 4
+/templates/blackstudios16/fonts/Dynar_Medium.ttf 56 1366860 1 9
+/index.php/price-list 45 14011732 7 9
+/plugins/search/contacts/ 43 4128 43 43
+/index.php/productsandservices/lestnitsy 13 1157082 9 8
+/index.php/contacts 12 488325 3 6
+/index.php/productsandservices/gate/garazhnye 6 444515 5 3
+/index.php/productsandservices/dvery-vhodnye 4 309203 0 0
+/index.php/productsandservices/kozyrki-i-navesy 3 279208 2 2
+/index.php/productsandservices/reshetchatye-dveri 1 57103 1 0
+/index.php/productsandservices/izdeliya-pod-zakaz 1 91400 1 1
+/index.php/productsandservices/reshetki-okonnye/kovanye 1 65483 0 0
+/administrator/components/com_joomlaupdate/restore.php 2 0 2 2
+/index.php/productsandservices/reshetki-na-konditsionery 1 58115 0 1
+/administrator/components/com_joomlaupdate/restoration.php 1 17 1 1
+/tr/ 1 6857 0 1
+/index.php/productsandservices/kozyrki-i-navesy/s-polikarbonatom 1 73395 0 1
+/index.php/productsandservices 1 48313 0 0
+/index.php/productsandservices/gate 1 105088 1 1
+/index.php/productsandservices/reshetki-okonnye 1 73060 1 0
+/index.php/partners 2 89492 2 2
+/index.php/productsandservices/perila 2 163012 2 2
+/index.php/productsandservices/dvery-vhodnye/kvartirnye 2 134248 1 1
+/index.php/productsandservices/gruzovoe-taksi 1 51960 0 1
+/index.php/productsandservices/zabory 1 59749 0 0
+/index.php/productsandservices/svarochnye-i-montazhnye-raboty 2 140118 0 2
+/index.php/productsandservices/reshetki-okonnye/svarnye 1 60461 0 0
+/index.php/productsandservices/gate/otkatnye 3 203477 2 0
+END_SIDER

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<extension type="component" version="1.6.0" method="upgrade">
+  <name>COM_WEBFONTS</name>
+  <creationDate>August 2011</creationDate>
+  <author>Blue Bridge Development</author>
+  <authorEmail>info@bluebridgedev.com</authorEmail>
+  <authorUrl>http://www.bluebridgedev.com</authorUrl>
+  <copyright>Copyright Monotype Imaging</copyright>
+  <license>GPL Version 3 or Newer</license>
+  <version>%%version%%</version>
+  <description><![CDATA[WEBFONTS_INSTALL]]></description>
+  <menu>COM_WEBFONTS</menu>
+  <files>
+    <filename>index.html</filename>
+    <filename>webfonts.php</filename>
+    <filename>gpl-3.0.txt</filename>
+  </files>
+  <media destination="com_webfonts" folder="media">  
+    <folder>css</folder>  
+    <folder>images</folder>  
+    <folder>js</folder>  
+    <file>index.html</file>  
+  </media>
+  <scriptfile>update.script.php</scriptfile>  
+  <install>
+    <sql>
+      <file charset="utf8" driver="mysql">sql/install.sql</file>
+    </sql>    
+  </install>
+  <uninstall>
+    <sql>
+      <file charset="utf8" driver="mysql">sql/uninstall.sql</file>
+    </sql>
+  </uninstall>
+  <update>
+    <schemas>
+      <schemapath type="mysql">sql/updates</schemapath>
+    </schemas>
+  </update>
+  <administration>
+    <menu view="cpanel" img="../media/com_webfonts/images/icon-16-webfonts.png">COM_WEBFONTS</menu>
+    <files folder="admin">
+      <filename>index.html</filename>
+      <filename>webfonts.php</filename>
+      <filename>controller.php</filename>
+      <folder>sql</folder>
+      <folder>controllers</folder>
+      <folder>views</folder>
+      <folder>models</folder>
+      <folder>helpers</folder>
+      <folder>tables</folder>
+    </files>
+    <languages folder="admin/language">
+      <language tag="en-GB">en-GB/en-GB.com_webfonts.sys.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_webfonts.ini</language>
+    </languages>
+  </administration>
+</extension>

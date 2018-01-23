@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	
+	<name>TCVN Highslide Module</name>
+	<author>Thecoders.vn</author>
+	<creationDate>September 3, 2012</creationDate>
+	<copyright>Copyright (C) 2011 - 2012 Thecoders.vn. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>mr_hiennc@yahoo.com</authorEmail>
+	<authorUrl>http://Thecoders.vn</authorUrl>
+	<version>1.0</version>
+	
+	<description>
+		<![CDATA[ <div style="font-size:10px;">
+		<a target="_blank" href="http://Thecoders.vn"><b>TCVN Highslide Module</b></a><br><br>
+		<i>The TCVN HighSlide Module is a module to use for making mini gallary block which you would like to show your nice pictures from your articles, videos from Flickr, Youtube or folders on the hosting, the module based on the highslide modal box allow viewers taking a quick and elegant looking. Lots of configuration options and scalability without compromizing on simplicity.</i><br><br>
+		<a target="_blank" href="http://Thecoders.vn"><i>Thecoders.vn - Free Joomla 2.5 Extensions, Joomla Modules, Joomla Plugins.</i></a>
+		</div>]]>
+	</description>
+	
+    <files>
+		<filename module="mod_tcvn_highslide">mod_tcvn_highslide.php</filename>
+		<filename module="mod_tcvn_highslide">helper.php</filename>
+		<filename module="mod_tcvn_highslide">index.html</filename>
+		<folder module="mod_tcvn_highslide">libs</folder>
+		<folder module="mod_tcvn_highslide">assets</folder>
+		<folder module="mod_tcvn_highslide">tmpl</folder>
+    </files>
+	
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_tcvn_highslide.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params" addfieldpath="modules/mod_tcvn_highslide/libs/elements">
+			<!-- Basic group -->
+			<fieldset name="basic">
+				<field type="xspacer" />
+				<field 
+					name="theme" 
+					type="folderlist" 
+					hide_none="true"
+					hide_default="true"
+					label="TCVN_HIGHSLIDE_SELECT_THEME" 
+					default="default" 
+					directory="modules/mod_tcvn_highslide/tmpl/" 
+					filter="" 
+					exclude="_item" 
+					stripext="" /> 	
+				<field 
+					name="module_height" 
+					type="text" 
+					default="auto" 
+					label="TCVN_HIGHSLIDE_MODULE_HEIGHT" 
+					description="TCVN_HIGHSLIDE_MODULE_HEIGHT_DESC" />
+				<field 
+					name="module_width" 
+					type="text" 
+					default="auto" 
+					label="TCVN_HIGHSLIDE_MODULE_WIDTH" 
+					description="TCVN_HIGHSLIDE_MODULE_WIDTH_DESC" />
+				<field 
+					name="outline_type" 
+					type="list" 
+					default="rounded-white" 
+					label="Outline Type" 
+					description="Choose the Outline Type">
+						<option value="rounded-black">Rounded-black</option>
+						<option value="glossy-dark">Glossy-dark</option>
+						<option value="beveled">Beveled</option>
+						<option value="drop-shadow">Drop-shadow</option>
+						<option value="rounded-white">Rounded-white</option>
+						<option value="outer-glow">Outer-glow</option>
+						<option value="">No Border</option>
+				</field>
+				<field 
+					name="item_layout" 
+					type="list" 
+					default="slideshow-caption" 
+					label="TCVN_HIGHSLIDE_ITEM_LAYOUT" 
+					description="TCVN_HIGHSLIDE_ITEM_LAYOUT_DESC">
+						<option value="slideshow-caption">Slideshow-caption</option>
+						<option value="gallery">Gallery</option>
+				</field>
+				<field 
+					name="control_type" 
+					type="list" 
+					default="text" 
+					label="Control type" 
+					description="Control is text or icon">
+						<option value="text">Text</option>
+						<option value="icon">Icon</option>
+				</field>
+				<field 
+					name="showMove" 
+					type="radio" 
+					default="1" 
+					label="Show Move button" 
+					description="Show Move button in pop-up window or not">
+						<option value="1">Show</option>
+						<option value="0">Hide</option>
+				</field>
+				<field 
+					name="showClose" 
+					type="radio" 
+					default="1" 
+					label="Show Close button" 
+					description="Show Close button in pop-up window or not">
+						<option value="1">Show</option>
+						<option value="0">Hide</option>
+				</field>
+				<field 
+					name="popup_position" 
+					type="list" 
+					default="center" 
+					label="Pop-up Position" 
+					description="Choose Pop-up position">
+						<option value="auto">Auto</option>
+						<option value="center">Center</option>
+				</field>
+				<field 
+					name="dimming_opacity" 
+					type="text" 
+					size="10" 
+					default="0.5" 
+					label="Dimming Opacity" 
+					description="Dimming opacity for non-popup area." />
+			</fieldset>
+			<!-- Datasource -->
+			<fieldset name="DATA_SOURCE">
+				<field 
+					name="data_source" 
+					type="list" 
+					default="image" 
+					label="TCVN_HIGHSLIDE_SOURCE_FROM" 
+					description="TCVN_HIGHSLIDE_HIGHSLIDE_TYPE_DESC">
+						<option value="filetype">File Type</option>
+						<option value="content">Joomla Content</option>
+						<option value="flickr">From Flickr</option>
+						<option value="image">Image Folder</option>
+				</field>
+			</fieldset>
+				
+			<fieldset name="FLICKRSETTING">
+				<field 
+					name="flickr_api" 
+					type="text" 
+					size="45" 
+					default="46dea5f6abb12aed7a823adb7ecf5816" 
+					label="TCVN_HIGHSLIDE_FLICKR_API" 
+					description="TCVN_HIGHSLIDE_FLICKR_API_DESC" />
+				<field 
+					name="search_type" 
+					type="list" 
+					default="tag" 
+					label="TCVN_HIGHSLIDE_SEARCH_TYPE" 
+					description="TCVN_HIGHSLIDE_SEARCH_TYPE_DESC">
+						<option value="username">Username</option>
+						<option value="tag">Tags</option>
+				</field>
+				<field 
+					name="flickr_username" 
+					type="text" 
+					size="45" 
+					default="" 
+					label="TCVN_HIGHSLIDE_FLICKR_USERNAME" 
+					description="TCVN_HIGHSLIDE_FLICKR_USERNAME_DESC" />
+				<field 
+					name="flickr_tags" 
+					type="text" 
+					size="45" 
+					default="joomla" 
+					label="TCVN_HIGHSLIDE_FLICKR_TAGS" 
+					description="TCVN_HIGHSLIDE_FLICKR_TAGS_DESC" />
+				<field 
+					name="main_size" 
+					type="list" 
+					default="medium" 
+					label="TCVN_HIGHSLIDE_MAIN_SIZE" 
+					description="TCVN_HIGHSLIDE_MAIN_SIZE_DESC">
+						<option value="square">Square</option>
+						<option value="thumbnail">Thumbnail</option>
+						<option value="small">Small</option>
+						<option value="medium">Medium</option>
+						<option value="medium_640">Medium_640</option>
+						<option value="large">Large</option>
+				</field>
+				<field 
+					name="thumbnail_size" 
+					type="list" 
+					default="square" 
+					label="TCVN_HIGHSLIDE_THUMBNAIL_SIZE" 
+					description="TCVN_HIGHSLIDE_THUMBNAIL_SIZE_DESC">
+						<option value="square">Square</option>
+						<option value="thumbnail">Thumbnail</option>
+						<option value="small">Small</option>
+						<option value="medium">Medium</option>
+						<option value="medium_640">Medium_640</option>
+						<option value="large">Large</option>
+				</field>
+				<field 
+					name="flickr_limit" 
+					type="text" 
+					size="20" 
+					default="10" 
+					label="TCVN_HIGHSLIDE_ITEMS_LIMIT" 
+					description="TCVN_HIGHSLIDE_ITEMS_LIMIT_DESC" />
+				<field 
+					name="enable_fcache" 
+					type="radio" 
+					default="1" 
+					label="TCVN_HIGHSLIDE_ENABLE_FILCKR_CACHE" 
+					description="TCVN_HIGHSLIDE_ENABLE_FILCKR_CACHE_DESC">
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+				</field>
+			</fieldset>
+			
+			<!-- Image Setting -->
+			<fieldset name="IMAGESETTING">	
+				<field name="image_folder" type="text" default="images/sevices/" size="40" label="TCVN_HIGHSLIDE_IMAGE_FOLDER_PATH" description="TCVN_HIGHSLIDE_IMAGE_FOLDER_PATH_DESC" />
+			</fieldset>	
+			
+			<!-- File Type Setting -->
+			<fieldset name="FILETYPESETTING">
+				<field name="folder_path" 
+					type="text" 
+					size="45" 
+					default="" 
+					label="Folder_Path" 
+					description="Folder_Path_DESC" />
+				<field 
+					name="file1" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_1" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file2" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_2" 
+					description="TCVN_HIGHSLIDE_FILE_DESC"/>
+				<field 
+					name="file3" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_3" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file4" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_4" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file5" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_5" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file6" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_6" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file7" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_7" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file8" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_8" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file9" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_9" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file10" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_10" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file11" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_11" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file12" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_12" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file13" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_13" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file14" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_14" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file15" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_15" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file16" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_16" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file17" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_17" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file18" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_18" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file19" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_19" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+				<field 
+					name="file20" 
+					type="xeffect" 
+					default="450" 
+					label="TCVN_HIGHSLIDE_FILE_20" 
+					description="TCVN_HIGHSLIDE_FILE_DESC" />
+			</fieldset>
+			
+			<!-- Content Setting -->
+			<fieldset name="CONTENTSETTING">
+				<field 
+					name="source" 
+					type="list" 
+					default="category" 
+					label="TCVN_HIGHSLIDE_SOURCE_FROM"  
+					description="TCVN_HIGHSLIDE_SOURCE_FROM_DESC" >
+						<option value="category">CATEGORY</option>
+						<option value="article_ids">ARTICLES_IDS</option>
+				</field>
+				<field 
+					name="article_ids" 
+					type="text" 
+					default="" 
+					label="TCVN_HIGHSLIDE_ARTICLES_IDS" 
+					description="TCVN_HIGHSLIDE_ARTICLES_IDS_DESC" 
+					size="40" />
+				<field 
+					name="category" 
+					type="category" 
+					extension="com_content"
+					multiple="true"
+					size="10"
+					label="TCVN_HIGHSLIDE_JCATEGORY"
+					description="TCVN_HIGHSLIDE_MOD_ARTICLES_NEWS_FIELD_CATEGORY_DESC" show_root="true" />	
+				<field
+					name="user_id"
+					type="list"
+					default="0"
+					label="TCVN_HIGHSLIDE_MOD_LATEST_NEWS_FIELD_USER_LABEL"
+					description="TCVN_HIGHSLIDE_MOD_LATEST_NEWS_FIELD_USER_DESC">
+						<option	value="0">MOD_LATEST_NEWS_VALUE_ANYONE</option>
+						<option	value="by_me">MOD_LATEST_NEWS_VALUE_ADDED_BY_ME</option>
+						<option	value="not_me">MOD_LATEST_NEWS_VALUE_NOTADDED_BY_ME</option>
+				</field>
+				<field
+					name="show_featured"
+					type="list"
+					default=""
+					label="TCVN_HIGHSLIDE_MOD_LATEST_NEWS_FIELD_FEATURED_LABEL"
+					description="TCVN_HIGHSLIDE_MOD_LATEST_NEWS_FIELD_FEATURED_DESC">
+						<option value="">JSHOW</option>
+						<option	value="0">JHIDE</option>
+						<option	value="1">MOD_LATEST_NEWS_VALUE_ONLY_SHOW_FEATURED</option>
+				</field>
+				<field 
+					name="ordering" 
+					type="list" 
+					default="created-asc" 
+					label="TCVN_HIGHSLIDE_ARTCILES_SORTED_BY" 
+					description="TCVN_HIGHSLIDE_ARTCILES_SORTED_BY_DESC">
+						<option value="id-asc">ID_ASCENDING</option>
+						<option value="id-desc">ID_DESCENDING</option>
+						<option value="ordering-asc">ORDERING_ASCENDING</option>
+						<option value="ordering-desc">ORDERING_DESCENDING</option>
+						<option value="hits-asc">HIT_ASCENDING</option>
+						<option value="hits-desc">HIT_DESCENDING</option>
+						<option value="created-desc">DATE_ASCENDING</option>
+						<option value="created_asc">DATE_DESCENDING</option>
+						<option value="publish_up-asc">PUBLISHED_DATE_ASCENDING</option>
+						<option value="publish_up-desc">PUBLISHED_DATE_DESCENDING</option>
+						<option value="rand-">RANDOM</option>
+				</field>
+				<field 
+					name="limit" 
+					type="text" 
+					default="10" 
+					label="TCVN_HIGHSLIDE_ITEMS_LIMIT" 
+					description="TCVN_HIGHSLIDE_ITEMS_LIMIT_DESC"/>
+				<field 
+					name="item_showlink" 
+					type="radio" 
+					default="1" 
+					label="TCVN_HIGHSLIDE_SHOW_LINK_TITLE" 
+					description="TCVN_HIGHSLIDE_SHOW_LINK_TITLE_DESC">
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+				</field>
+				<field 
+					name="item_showthumb" 
+					type="radio" 
+					default="1" 
+					label="TCVN_HIGHSLIDE_SHOW_ITEM_THUMB" 
+					description="TCVN_HIGHSLIDE_SHOW_ITEM_THUMB_DESC">
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+				</field>
+			</fieldset>
+			
+			<!-- Effect -->
+			<fieldset name="effect">
+				<field 
+					name="interval" 
+					type="list" 
+					default="3000" 
+					label="Gallery interval" 
+					description="Time delay for each image in gallery playing.">
+						<option value="1000">1 sec </option>
+						<option value="2000">2 secs </option>
+						<option value="3000">3 secs </option>
+						<option value="4000">4 secs </option>
+						<option value="5000">5 secs </option>
+				</field>
+				<field 
+					name="easing" 
+					type="list" 
+					default="easeInQuad" 
+					label="TCVN_HIGHSLIDE_EASING" 
+					description="TCVN_HIGHSLIDE_EASING_DESC">
+						<option value="easeInQuad">easeInQuad</option>
+						<option value="linearTween">linearTween</option>
+						<option value="easeInCirc">easeInCirc</option>
+						<option value="easeInQuad_fadeInOut">easeInQuad fadeInOut</option>
+						<option value="easeInBack">easeInBack</option>
+						<option value="easeInQuad_easeOutQuad">easeInOutQuad</option>
+						<option value="easeOutBack_easeInBack">easeOutInBack</option>
+				</field>
+				<field 
+					name="repeat" 
+					type="radio" 
+					default="1" 
+					label="Repeat gallery playing" 
+					description="Repeat gallery playing or not">
+						<option value="1">Repeat</option>
+						<option value="0">No-repeat</option>
+				</field>
+			</fieldset>
+			
+			<!-- Advanced -->
+			<fieldset name="advanced">
+				<field 
+					name="class" 
+					type="text" 
+					default="" 
+					label="Class" 
+					description="TCVN_HIGHSLIDE_HIGHSLIDE_CLASS_DESC" />
+				<field 
+					name="popup_height" 
+					type="text" 
+					default="340" 
+					label="TCVN_HIGHSLIDE_POPUP_HEIGHT" 
+					description="TCVN_HIGHSLIDE_POPUP_HEIGHT_DESC" />
+				<field 
+					name="popup_width" 
+					type="text" 
+					default="400" 
+					label="TCVN_HIGHSLIDE_POPUP_WIDTH" 
+					description="TCVN_HIGHSLIDE_POPUP_WIDTH_DESC" />
+				<field 
+					name="thumbnail_height" 
+					type="text" 
+					default="105" 
+					label="TCVN_HIGHSLIDE_THUMBNAIL_HEIGHT" 
+					description="TCVN_HIGHSLIDE_THUMBNAIL_HEIGHT_DESC" />
+         		<field 
+					name="thumbnail_width" 
+					type="text" 
+					default="180" 
+					label="TCVN_HIGHSLIDE_THUMBNAIL_WIDTH" 
+					description="TCVN_HIGHSLIDE_THUMBNAIL_WIDTH_DESC" />
+				<field 
+					name="auto_renderthumb" 
+					type="radio" 
+					default="1" 
+					label="TCVN_HIGHSLIDE_AUTO_RENDERTHUMBNAIL" 
+					description="TCVN_HIGHSLIDE_AUTO_RENDERTHUMBNAIL_DESC">
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>	
+	</config>
+</extension>

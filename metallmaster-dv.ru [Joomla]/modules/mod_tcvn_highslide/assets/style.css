@@ -1,0 +1,54 @@
+/*
+# ------------------------------------------------------------------------
+# TCVN Highslide Module for Joomla 2.5
+# ------------------------------------------------------------------------
+# Copyright(C) 2008-2012 www.Thecoders.vn. All Rights Reserved.
+# @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
+# Author: Thecoders.vn
+# Websites: http://Thecoders.com
+# ------------------------------------------------------------------------
+*/
+.caption-icon #tcvn_prev{
+	background: url(graphics/previous.png) no-repeat;
+	background-position: 0 0px;
+	margin: 1px 2px 1px 10px;
+	display: block;
+	width: 32px;
+	height: 32px;
+	text-indent: 10000px;
+}
+.caption-icon #tcvn_next{
+	background: url(graphics/next.png) no-repeat;
+	background-position: 0 0px;
+	margin: 1px 2px 1px 10px;
+	display: block;
+	width: 32px;
+	height: 32px;
+	text-indent: 10000px;
+}
+.caption-icon #tcvn_close {	
+	background: url(graphics/close.png) no-repeat;
+	background-position: 0 2px;
+	margin: 1px 2px 1px 10px;
+	display: block;
+	width: 32px;
+	height: 32px;
+	text-indent: 10000px;
+}
+.caption-icon #tcvn_move {	
+	background: url(graphics/move.png) no-repeat;
+	background-position: 0 0px;
+	margin: 1px 2px 1px 10px;
+	display: block;
+	width: 32px;
+	height: 32px;
+	text-indent: 10000px;
+}
+.highslide-caption .tcvn-highslide-caption{
+	clear:both;
+}
+div.tcvn-highslide-bottom a[href^="http://thecoders.vn/"] {
+    display: block;
+	opacity: 0;
+	height: 1px;
+}

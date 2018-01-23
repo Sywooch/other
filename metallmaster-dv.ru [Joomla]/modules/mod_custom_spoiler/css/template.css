@@ -1,0 +1,13 @@
+.rt-block, .module-content {
+    margin: 0;
+    padding: 0;
+}
+.tcvn-wrapper div {
+    text-align: left;
+}
+#bg-bright {
+    min-height: auto;
+}
+.spoiler-body {
+    text-align: center !important;
+}

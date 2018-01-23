@@ -1,0 +1,70 @@
+<?php
+class JConfig {
+	public $offline = '0';
+	public $offline_message = 'Сайт закрыт на техническое обслуживание.<br /> Пожалуйста, зайдите позже.';
+	public $display_offline_message = '1';
+	public $offline_image = '';
+	public $sitename = 'ООО "Металл-Мастер"';
+	public $editor = 'jce';
+	public $captcha = 'recaptcha';
+	public $list_limit = '20';
+	public $access = '1';
+	public $debug = '0';
+	public $debug_lang = '0';
+	public $dbtype = 'mysqli';
+	public $host = 'localhost';
+	public $user = 'metallmaru';
+	public $password = 'metall';
+	public $db = 'metallmaru';
+	public $dbprefix = 'mm_';
+	public $live_site = '';
+	public $secret = 'JGcCtCIKHZ9WwEzN';
+	public $gzip = '0';
+	public $error_reporting = 'default';
+	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
+	public $ftp_host = '127.0.0.1';
+	public $ftp_port = '21';
+	public $ftp_user = '';
+	public $ftp_pass = '';
+	public $ftp_root = '';
+	public $ftp_enable = '0';
+	public $offset = 'Asia/Yakutsk';
+	public $offset_user = 'UTC';
+	public $mailer = 'mail';
+	public $mailfrom = 'ask@metallmaster-dv.ru';
+	public $fromname = 'ООО "Металл-Мастер"';
+	public $sendmail = '/usr/sbin/sendmail';
+	public $smtpauth = '1';
+	public $smtpuser = 'metallmaster-dv.ru+ask';
+	public $smtppass = 'metallmaster2789';
+	public $smtphost = 'smtp.spaceweb.ru';
+	public $smtpsecure = 'none';
+	public $smtpport = '25';
+	public $caching = '1';
+	public $cache_handler = 'file';
+	public $cachetime = '150';
+	public $MetaDesc = 'ООО "Металл-мастер" г. Благовещенск: сварочные работы, изделия из металла, грузчики, цены в Благовещенск';
+	public $MetaKeys = 'сварка, сварка в благовещенске, сварка на выезде, сварочные работы на выезде, сварочные работы, сварочные работы в благовещенске, металлоконструкции, металлоконструкции в благовещенске, ворота, ворота распашные, откатные, гаражные, двери, двери входные, квартирные, двустворчатые, решетки, решетки оконные, решетки кованные, решетки на кондиционеры, лестницы , лестницы металлические, козырьки, навесы, перила, оградки, леерные ограждения, заборы, металлические заборы, кованная мебель, Грузоперевозки до 1500 кг, по городу и области.
+-кузов 3,1х1,6м. 
+-без выходных
+-грузчики';
+	public $MetaTitle = '1';
+	public $MetaAuthor = '1';
+	public $robots = '';
+	public $sef = '1';
+	public $sef_rewrite = '0';
+	public $sef_suffix = '0';
+	public $unicodeslugs = '0';
+	public $feed_limit = '10';
+	public $log_path = 'public_html/logs';
+	public $tmp_path = 'public_html/tmp';
+	public $lifetime = '150';
+	public $session_handler = 'database';
+	public $MetaRights = 'ООО "Металл-мастер"';
+	public $MetaVersion = '0';
+	public $sitename_pagetitles = '1';
+	public $force_ssl = '0';
+	public $feed_email = 'author';
+	public $cookie_domain = '';
+	public $cookie_path = '';
+}

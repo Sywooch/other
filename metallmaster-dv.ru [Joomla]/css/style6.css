@@ -1,0 +1,26 @@
+/**
+ * @project   BlackStudios Joomla! 1.6 Template
+ * @version   1.0 March 22, 2011
+ * @author    7Studio http://www.7studio.eu/
+ * @copyright Copyright (C) 2007 - 2011 7Studio http://www.7studio.eu/
+ */
+
+/* Slider */
+#rt-slider {background: #222222 url('../images/style6/slider_bg.png') repeat-x top;}
+.slide-desc-text .slide-title a {color: #415907!important;font-size: 30px;}
+
+/* Title span */
+h2.title {color: #90d33b;}
+.component-content h1.title a:hover,
+.component-content h2.title a:hover { color:#c1e98c;}
+
+/* Baner - subpages */
+#rt-banner { background: #222222 url('../images/style6/banner_bg.png') repeat-x top;}
+#rt-banner h1 {color: #334e03;}
+
+/* Modules */
+.menu2 .menu a {color:#c1e98c;}
+.dark .nspArt h4.nspHeader a:hover { color: #c1e98c; }
+#rt-bottom .nspArt.readon_inline a:hover,
+#rt-bottom a:hover { text-decoration: underline; color: #c1e98c; }
+.testimonials .nspArt h4.nspHeader a { color: #90d33b!important; font-size: 14px; }

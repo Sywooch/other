@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<photos>
+	<config 
+		show_tooltip="true"
+		follow_mouse="false"
+		folder="components/com_wst_carousel_thumbnails/photos/"
+		css_file="administrator/components/com_wst_carousel_thumbnails/css/flashmo_210_style.css"
+		tween_duration="0.5"
+		rotation_speed="4"
+		radius_x="300"
+		radius_y="60"
+		tn_border_size="5"
+		tn_border_color="0xFFFFFF"
+		photo_border_size="10"
+		photo_border_color="0xFFFFFF"
+		bar_status="1"
+		dragger_x="0"
+		dragger_y="220">
+	</config>
+	<photo>
+		<thumbnail>s_photo_001.jpg</thumbnail>
+		<filename>photo_001.jpg</filename>
+		<tooltip>Photo Title 01</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_002.jpg</thumbnail>
+		<filename>photo_002.jpg</filename>
+		<tooltip>Photo Title 02</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_003.jpg</thumbnail>
+		<filename>photo_003.jpg</filename>
+		<tooltip>Photo Title 03</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_004.jpg</thumbnail>
+		<filename>photo_004.jpg</filename>
+		<tooltip>Photo Title 04</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_005.jpg</thumbnail>
+		<filename>photo_005.jpg</filename>
+		<tooltip>Photo Title 05</tooltip>
+		<description></description>
+	</photo>
+
+	<photo>
+		<thumbnail>s_photo_006.jpg</thumbnail>
+		<filename>photo_006.jpg</filename>
+		<tooltip>Photo Title 06</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_007.jpg</thumbnail>
+		<filename>photo_007.jpg</filename>
+		<tooltip>Photo Title 07</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_008.jpg</thumbnail>
+		<filename>photo_008.jpg</filename>
+		<tooltip>Photo Title 08</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_009.jpg</thumbnail>
+		<filename>photo_009.jpg</filename>
+		<tooltip>Photo Title 09</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_010.jpg</thumbnail>
+		<filename>photo_010.jpg</filename>
+		<tooltip>Photo Title 10</tooltip>
+		<description></description>
+	</photo>
+
+	<photo>
+		<thumbnail>s_photo_011.jpg</thumbnail>
+		<filename>photo_011.jpg</filename>
+		<tooltip>Photo Title 11</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_012.jpg</thumbnail>
+		<filename>photo_012.jpg</filename>
+		<tooltip>Photo Title 12</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_013.jpg</thumbnail>
+		<filename>photo_013.jpg</filename>
+		<tooltip>Photo Title 13</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_014.jpg</thumbnail>
+		<filename>photo_014.jpg</filename>
+		<tooltip>Photo Title 14</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_015.jpg</thumbnail>
+		<filename>photo_015.jpg</filename>
+		<tooltip>Photo Title 15</tooltip>
+		<description></description>
+	</photo>
+
+	<photo>
+		<thumbnail>s_photo_016.jpg</thumbnail>
+		<filename>photo_016.jpg</filename>
+		<tooltip>Photo Title 16</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_017.jpg</thumbnail>
+		<filename>photo_017.jpg</filename>
+		<tooltip>Photo Title 17</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_018.jpg</thumbnail>
+		<filename>photo_018.jpg</filename>
+		<tooltip>Photo Title 18</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_019.jpg</thumbnail>
+		<filename>photo_019.jpg</filename>
+		<tooltip>Photo Title 19</tooltip>
+		<description></description>
+	</photo>
+	
+	<photo>
+		<thumbnail>s_photo_020.jpg</thumbnail>
+		<filename>photo_020.jpg</filename>
+		<tooltip>Photo Title 20</tooltip>
+		<description></description>
+	</photo>
+	
+</photos>
