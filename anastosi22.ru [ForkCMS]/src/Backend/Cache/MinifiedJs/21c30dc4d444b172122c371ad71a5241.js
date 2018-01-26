@@ -1,0 +1,381 @@
+
+jsBackend.mailmotor=
+{
+init:function()
+{
+jsBackend.mailmotor.charts.init();
+jsBackend.mailmotor.chartPieChart.init();
+jsBackend.mailmotor.changeGroup.init();
+jsBackend.mailmotor.linkAccount.init();
+jsBackend.mailmotor.resizing.init();
+jsBackend.mailmotor.step3.init();
+jsBackend.mailmotor.step4.init();
+jsBackend.mailmotor.templateSelection.init();
+		if($('form#add #email').length>0)
+{
+$('form#add #email').multipleTextbox(
+{
+emptyMessage:'',
+addLabel:utils.string.ucfirst(jsBackend.locale.lbl('Add')),
+removeLabel:utils.string.ucfirst(jsBackend.locale.lbl('Delete')),
+canAddNew:true
+})}
+}
+}
+jsBackend.mailmotor.charts=
+{
+init:function()
+{
+if($('#chartPieChart').length>0||$('#chartDoubleMetricPerDay').length>0||$('#chartSingleMetricPerDay').length>0||$('#chartWidget').length>0)
+{
+Highcharts.setOptions(
+{
+colors:['#058DC7','#50b432','#ED561B','#EDEF00','#24CBE5','#64E572','#FF9655'],
+title:{text:''},
+legend:
+{
+layout:'vertical',
+backgroundColor:'#FFF',
+borderWidth:0,
+shadow:false,
+symbolPadding:12,
+symbolWidth:10,
+itemStyle:{cursor:'pointer',color:'#000',lineHeight:'18px'},
+itemHoverStyle:{color:'#666'}
+}
+})}
+}
+}
+jsBackend.mailmotor.chartPieChart=
+{
+init:function()
+{
+if($('#chartPieChart').length>0)jsBackend.mailmotor.chartPieChart.create()},
+	create:function()
+{
+var pieChartValues=$('#dataChartPieChart ul.data li');
+var pieChartData=[];
+pieChartValues.each(function()
+{
+pieChartData.push(
+{
+'name':$(this).children('span.label').html(),
+'y':parseInt($(this).children('span.value').html()),
+'percentage':parseInt($(this).children('span.percentage').html())
+})});
+var chart=new Highcharts.Chart(
+{
+chart:{renderTo:'chartPieChart',height:200,margin:[0,160,0,0]},
+credits:{enabled:false},
+plotArea:{shadow:null,borderWidth:null,backgroundColor:null},
+tooltip:
+{
+formatter:function()
+{
+var percentage=String(this.point.percentage);
+return '<b>'+this.point.name+'</b>: '+this.y+' ('+percentage.substring(0,percentage.indexOf('.')+4)+'%)'},
+borderWidth:2,
+shadow:false
+},
+plotOptions:
+{
+pie:
+{
+allowPointSelect:true,
+dataLabels:
+{
+enabled:false
+}
+}
+},
+legend:{enabled:false},
+series:[{type:'pie',data:pieChartData}]
+})}
+}
+jsBackend.mailmotor.changeGroup=
+{
+init:function()
+{
+		$dropdown=$('#subscriptions');
+		$dropdown.on('change',function()
+{
+			window.location=document.location.pathname+'?token=true&email='+variables['email']+'&group_id='+$(this).val()})}
+}
+jsBackend.mailmotor.linkAccount=
+{
+init:function()
+{
+		$confirm=$('#linkAccount');
+$url=$('#url');
+$username=$('#username');
+$password=$('#password');
+		$('#accountBox input').on('keypress',function(e)
+{
+if(e.keyCode==13)
+{
+				e.preventDefault();
+				if($url.val()!=''&&$username.val()!=''&&$password.val()!='')
+{
+					jsBackend.mailmotor.linkAccount.doCall()}
+}
+});
+		$(document).on('click','#linkAccount',function(e)
+{
+			e.preventDefault();
+			jsBackend.mailmotor.linkAccount.doCall()});
+		$('#clientId').on('change',function(e)
+{
+var clientId=$(this).val();
+$companyName=$('#companyName');
+$contactName=$('#contactName');
+$contactEmail=$('#contactEmail');
+			if(clientId=='0')
+{
+$companyName.val('');
+$contactName.val('');
+$contactEmail.val('')}
+			else
+{
+$.ajax(
+{
+data:
+{
+fork:{action:'LoadClientInfo'},
+client_id:clientId
+},
+success:function(data,textStatus)
+{
+$.each($('#countries').find('option'),function(index,item)
+{
+if($(this).text()==data.data.country)
+{
+$(this).prop('selected',true)}
+});
+$.each($('#timezones').find('option'),function(index,item)
+{
+if($(this).text()==data.data.timezone)
+{
+$(this).prop('selected',true)}
+});
+$companyName.val(data.data.company);
+$contactName.val(data.data.contact_name);
+$contactEmail.val(data.data.email)}
+})}
+})},
+doCall:function()
+{
+$url=$('#url');
+$username=$('#username');
+$password=$('#password');
+		$.ajax(
+{
+data:
+{
+fork:{action:'LinkAccount'},
+url:$url.val(),
+username:$username.val(),
+password:$password.val()
+},
+success:function(data,textStatus)
+{
+				$('.formError').remove();
+				if(data.code==200)
+{
+					window.location=window.location.pathname+'?token=true&report='+data.data.message+'#tabSettingsClient'}
+else
+{
+					if(data.data.field)
+{
+						$('#'+data.data.field).after('<span class="formError">'+data.message+'</span>')}
+}
+}
+})}
+}
+jsBackend.mailmotor.resizing=
+{
+init:function()
+{
+$iframe=$('#contentBox');
+$iframeBox=$('#iframeBox');
+		$('#contentPlain').resizable({handles:'s'});
+		$iframeBox.resizable(
+{
+handles:'s',
+
+start:function()
+{
+				var overlay=$('<div></div>');
+				$iframeBox.append(overlay);
+overlay[0].id='iframeOverlay';
+				overlay.css(
+{
+left:0,
+position:'absolute',
+top:$iframe.position().top
+});
+				overlay.height($iframe.height());
+overlay.width('100%')},
+stop:function()
+{
+				$('#iframeOverlay').remove()}
+})}
+}
+jsBackend.mailmotor.step3=
+{
+init:function()
+{
+		var $iframe=$('#contentBox');
+var $iframeBox=$('#iframeBox');
+var $form=$('#step3');
+		$iframe.load(function()
+{
+			var body=$iframe.contents().find('body');
+			$iframeBox.height(body.height());
+$form.on('submit',function(e)
+{
+				e.preventDefault();
+				var subject=$('#subject').val();
+var plainText=($('#contentPlain').length>0)?$('#contentPlain').val():'';
+var textareaValue=$iframe[0].contentWindow.getEditorContent();
+				$.ajax(
+{
+data:
+{
+fork:{action:'SaveContent'},
+mailing_id:variables.mailingId,
+subject:subject,
+content_plain:plainText,
+content_html:textareaValue
+},
+success:function(data,textStatus)
+{
+if(data.code==200)
+{
+							window.location=document.location.pathname+'?token=true&id='+variables.mailingId+'&step=4'}
+}
+})})})}
+}
+jsBackend.mailmotor.step4=
+{
+init:function()
+{
+		$form=$('#step4');
+$confirmBox=$('#sendMailingConfirmationModal');
+$sendMailing=$('#sendMailing');
+oSendDate=$('#sendOnDate');
+oSendTime=$('#sendOnTime');
+		var sendDate=oSendDate.val();
+var sendTime=oSendTime.val();
+		$confirmBox.dialog(
+{
+autoOpen:false,
+draggable:false,
+width:500,
+modal:true,
+resizable:false,
+buttons:
+[
+{
+text:utils.string.ucfirst(jsBackend.locale.lbl('SendMailing')),
+click:function()
+{
+						jsBackend.mailmotor.step4.sendMail()}
+},
+{
+text:utils.string.ucfirst(jsBackend.locale.lbl('Cancel')),
+click:function()
+{
+						$(this).dialog('close')}
+}
+]
+});
+		$(oSendDate.selector+', '+oSendTime.selector).on('change',function(e)
+{
+			if(oSendDate.val()=='')oSendDate.val(sendDate);
+if(oSendTime.val()=='')oSendTime.val(sendTime);
+			jsBackend.mailmotor.step4.saveSendDate()});
+		$(oSendDate.selector+', '+oSendTime.selector).on('keypress',function(e)
+{
+if(e.keyCode==13)
+{
+				if(oSendDate.val()=='')oSendDate.val(sendDate);
+if(oSendTime.val()=='')oSendTime.val(sendTime);
+				jsBackend.mailmotor.step4.saveSendDate();
+				$(this).blur();
+				e.preventDefault()}
+});
+		$sendMailing.on('click',function(e)
+{
+			e.preventDefault();
+			$confirmBox.dialog('open')})},
+saveSendDate:function()
+{
+		var sendOnDate=$('#sendOnDate').val();
+var sendOnTime=$('#sendOnTime').val();
+		$.ajax(
+{
+data:
+{
+fork:{action:'SaveSendDate'},
+mailing_id:variables.mailingId,
+send_on_date:sendOnDate,
+send_on_time:sendOnTime
+},
+success:function(data,textStatus)
+{
+if(data.code!=200)
+{
+					buttonPane.removeClass('loading');
+					$confirmBox.dialog('close');
+					jsBackend.messages.add('error',data.message)}
+else
+{
+					var modalSendInfo=$('#sendOn');
+var now=new Date();
+var sendDate=new Date(data.data.timestamp * 1000);
+					if(sendDate<=now)modalSendInfo.hide();
+					else
+{
+						modalSendInfo.show();
+						modalSendInfo.text(jsBackend.locale.msg('SendOn').replace('%1$s',sendOnDate).replace('%2$s',sendOnTime))}
+}
+}
+})},
+sendMail:function()
+{
+		jsBackend.mailmotor.step4.saveSendDate();
+		var confirmBox=$('#sendMailingConfirmationModal');
+var buttonPane=$('.ui-dialog-buttonpane');
+		buttonPane.addClass('loading');
+		$.ajax(
+{
+data:
+{
+fork:{action:'SendMailing'},
+id:variables.mailingId
+},
+success:function(data,textStatus)
+{
+if(data.code==200)
+{
+					window.location='/private/'+jsBackend.current.language+'/'+jsBackend.current.module+'/index?report=mailing-sent'}
+}
+})}
+}
+jsBackend.mailmotor.templateSelection=
+{
+init:function()
+{
+		$listItems=$('#templateSelection li');
+		$listItems.on('click',function(e)
+{
+			e.preventDefault();
+			var radiobutton=$(this).find('input:radio:first');
+			radiobutton.prop('checked',true);
+			if(radiobutton.is(':checked'))
+{
+				$listItems.removeClass('selected');
+				radiobutton.parent('li').addClass('selected')}
+})}
+}
+$(jsBackend.mailmotor.init);
