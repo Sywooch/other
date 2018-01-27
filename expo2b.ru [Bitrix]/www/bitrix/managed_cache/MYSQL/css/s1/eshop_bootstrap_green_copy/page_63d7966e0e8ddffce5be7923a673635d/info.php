@@ -1,1 +1,0 @@
-<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/eshop_bootstrap_green_copy/components/bitrix/main.map/.default/style.css" => "14636389631187",), 'CUR_SEL_CNT' => '13', 'CUR_IE_CNT' => '0'); ?>
