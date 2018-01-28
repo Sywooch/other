@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("J:/home/zs/www/bitrix/js/fancybox/jquery.fancybox-1.2.1.pack.js" => "13970498518303","/var/www/amurcar/data/www/amurcar.ru/bitrix/js/fancybox/jquery.fancybox-1.2.1.pack.js" => "13970498508303",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<title>Image Manager</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/images.css" />
+	<link href="../../../../css/fileuploader.css" rel="stylesheet" type="text/css">	
+	
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+    <script type="text/javascript" src="http://yandex.st/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-colors.js"></script>
+    <script type="text/javascript" src="http://yandex.st/jquery/form/2.83/jquery.form.min.js"></script>
+	<script type="text/javascript" src="js/jquery.MultiFile.js"></script>
+	<script type="text/javascript" src="../../../../../js/fileuploader.js"></script>
+	<script type="text/javascript" src="js/images.js"></script>
+</head>
+<body>
+
+
+
+<div id="upload">
+ <div id="shadowBack"></div>
+ <div id="uploadWindow"><div id="uploadWindow1">
+ 
+  <div id="uploadClose"></div>
+  <div id="uploadMenu">
+   <a href="#" class="act" id="uploadAreaNormalControl">Обычная загрузка</a>
+   <a href="#" id="uploadAreaMultiControl">Мультизагрузка</a>
+  </div>
+  
+  <!-- Нормальная загрузка -->
+  <div id="uploadAreaNormal">
+  <form action="connector/php/" enctype="multipart/form-data" method="post" id="filesForm"><fieldset>
+   <input type="hidden" name="action" value="uploadfile" />
+   <input type="hidden" name="path" id="normalPathVal" value="" />
+   <input type="hidden" name="pathtype" id="normalPathtypeVal" value="" />
+   <div>Выберите файл:</div>
+   <div id="filesHolder">
+    <input type="file" id="fileOpen" class="fileOpen" />
+   </div>
+   <div id="fileNormalSubmit">
+    <img src="img/ajax-loader-files.gif" width="43" height="11" alt="Загрузка" id="normalLoader" />
+    <span id="normalResult">Файлы загружены</span>
+    <input type="submit" id="normalSubmit" value="Загрузить" />
+   </div>
+  </fieldset></form>
+  </div>
+  
+ <!-- Мультизагрузка -->
+  <div id="uploadAreaMulti">
+	<div id="file-uploader">		
+		<noscript>			
+			<p>Please enable JavaScript to use file uploader.</p>
+			<!-- or put a simple form for upload here -->
+		</noscript>         
+	</div>
+  </div>
+  
+  <div id="uploadTarget"></div>
+  
+ </div></div>
+</div>
+
+
+
+<div id="insertImage" title="Вставить изображение"><img src="img/icon.gif" width="20" height="20" alt="Вставить изображение" /></div>
+
+<div id="addrBar"><div class="addrBar1"><div class="addrBar2" id="addr">
+
+</div></div></div>
+
+<div style="clear:both;"></div>
+
+
+<div id="toolBar"><div class="toolBar1"><div class="toolBar2">
+	<div class="toolItem" id="menuCreateFolder">
+		<img src="img/folder_plus.png" width="16" height="16" alt="Создать папку" />
+		<span>Создать папку</span>
+	</div>
+	<div class="toolItem" id="menuDelFolder">
+		<img src="img/folder_minus.png" width="16" height="16" alt="Удалить папку" />
+		<span>Удалить папку</span>
+	</div>
+	<div class="toolItem" id="menuCancelFolder">
+		<img src="img/cross_circle_frame.png" width="16" height="16" alt="Отменить создание папки" />
+		<span>Отменить создание</span>
+	</div>
+	<div class="toolItem" id="menuSaveFolder">
+		<img src="img/tick_circle_frame.png" width="16" height="16" alt="Подтвердить создание папки" />
+		<span>Создать</span>
+	</div>
+	<div class="toolItem" id="menuUploadFiles">
+		<img src="img/images_plus.png" width="16" height="16" alt="Загрузить файлы" />
+		<span>Загрузить файлы</span>
+	</div>
+	<div class="toolItem" id="menuDelFiles">
+		<img src="img/images_minus.png" width="16" height="16" alt="Удалить файлы" />
+		<span>Удалить файлы</span>
+	</div>
+	
+	<div id="loader">
+		<img src="img/ajax-loader.gif" width="16" height="16" alt="Загрузка" />
+	</div>
+</div></div></div>
+
+<div style="clear:both;"></div>
+
+
+<table id="mainField" cellpadding="0" cellspacing="0"><tr>
+ <td valign="top" id="mainTree"><div id="mainTreeHolder">
+  <div id="tree">
+
+
+  </div>
+ </div></td>
+ <td valign="top" id="mainFiles">
+  <div id="files">
+   
+
+   
+   <div style="clear:both;"></div>
+  </div>
+ </td>
+</tr></table>
+
+
+<div id="foot">
+ <table cellpadding="0" cellspacing="0" id="footTable">
+  <tr>
+   <td width="35%">
+    <table id="footTableName">
+     <tr>
+      <td id="fileName">Дарк</td>
+      <td><img src="img/pencil_small.png" width="16" height="16" alt="Редактировать" id="fileNameEdit" /><img src="img/tick_small.png" width="16" height="16" alt="Сохранить" id="fileNameSave" /></td>
+     </tr>
+    </table>
+   </td>
+   <td width="20%" class="footLabel" id="footDateLabel">Дата загрузки:</td>
+   <td width="20%" id="footDate">28.11.2008 10:11</td>
+   <td class="footLabel" id="footDimLabel">Размеры:</td>
+   <td id="footDim">1600x1200</td>
+  </tr>
+  <tr>
+   <td id="footExt">Всего файлов:</td>
+   <td class="footLabel" id="footLinkLabel">Ссылка на файл:</td>
+   <td id="footLink"><img src="img/chain.png" width="16" height="16" alt="Ссылка" style="vertical-align:sub" /> <a href="#" target="_blank">IMG_0954</a></td>
+   <td class="footLabel">Размер:</td>
+   <td id="footSize">0</td>
+  </tr>
+ </table>
+</div>
+
+
+</body>
+</html>

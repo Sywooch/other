@@ -1,0 +1,107 @@
+.comment-block{
+    width: 808px;
+    height: 383px;
+    display: none;
+}
+
+.fancybox-close {
+    right: 0px !important;
+    top: 0px !important;
+    background: url(../img/close.png) left bottom no-repeat !important;
+    height: 28px !important;
+    width: 28px !important;
+}
+
+.fancybox-skin { 
+    border-radius: 10px !important;
+    background: #f6f6f6 !important;
+}
+
+
+
+.comment-block input[type='text']{
+    padding: 5px 10px;
+    margin: 3px 0;
+    width: 200px;
+}
+
+.comment-block input[type='submit']{
+    background: #2487d7;
+    margin: 3px 0;
+    padding: 0 25px;
+    border: none;
+    height: 35px;
+    line-height: 35px;
+    cursor: pointer;
+    color: #fff;
+    font: 14px/18px "noto", sans-serif;
+}
+
+.comment-block h2{
+    text-align: center;
+    color: #418dbe;
+    margin: 25px 0 18px;
+}
+
+.comment-block, .comment-block a{
+    color: #418dbe;
+}
+
+.comment-block a{
+    font-size: 12px;
+}
+
+.comment-block label{
+    margin-right: 10px;
+    width: 95px;
+    text-align: right;
+    display: inline-block;
+}
+.comment-title {
+    color: #418DBE;
+    font-size: 16px;
+    padding-top: 30px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+.rating-title {
+    color: #418DBE;
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 50px;
+}
+.set-rate-star {
+    padding-left: 6px;
+    display: inline-block;
+}
+.leave-review-title {
+    color: #418DBE;
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    padding-top: 40px;
+    padding-left: 112px;
+    padding-right: 10px;
+}
+#description-comment {
+    border: 1px solid #52A9EB;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #69B9EB;
+    height: 156px;
+    margin-bottom: 22px;
+    margin-top: 20px;
+    resize: none;
+    padding: 10px;
+    width: 524px;
+}
+.send-comment {
+    background: #2487d7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    height: 37px;
+    margin: 0 auto;
+    width: 156px;
+}

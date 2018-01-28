@@ -1,0 +1,272 @@
+html, body { margin: 0px; padding: 0px;	background-color: #151515; font: normal 14px Verdana, Helvetica, sans-serif; color: #FFFFFF; word-wrap: break-word; }
+p { margin: 0; padding: 0;  }
+input, select, textarea, button, a { outline: none; }
+hr { border: 0 none; border-top: 1px dotted #3F3F3F; height: 1px; }
+
+.trs-up span { display: inline-block; _overflow:hidden; *zoom:1; *display:inline; *margin-bottom:-3px; *margin-right:-3px; }
+.t-top span { vertical-align:top; }
+.t-mid span { vertical-align:middle; }
+.t-980 { width:70%; min-width:980px; *width:expression(document.body.clientWidth > 1280 ? "70%" : "980px"); }
+.t-clr { clear:both; }
+
+.t-bg1 { background: #E6E6E6 url(../images/a0-bg.gif) repeat-x 0% 0%; height:54px; color:#A8A8A8; }
+.t-bg2 { background: #000000; border-top:1px solid #404040; }
+
+/* ==================== доп меню */
+
+.lm1 { font: normal 14px Verdana, Helvetica, sans-serif; margin-bottom:12px; }
+.lm1 a { color:#A8A8A8; display:block; background: transparent url(../images/c3-1.gif) no-repeat 0% 50%; padding:8px 0 7px 22px; text-decoration:none; }
+.lm1 a:hover { color:#FFFFFF; background-image: url(../images/c3-2.gif); text-decoration:underline; }
+#lm1x { color:#FFFFFF; text-decoration:none; background-image: url(../images/c3-2.gif); }
+
+.lm2 { font: normal 14px Verdana, Helvetica, sans-serif; margin-bottom:12px; }
+.lm2 a { color:#A8A8A8; display:block; background: transparent url(../images/c4-1.gif) no-repeat 0% 50%; padding:8px 0 7px 22px; text-decoration:none; }
+.lm2 a:hover { color:#FFFFFF; background-image: url(../images/c4-2.gif); text-decoration:underline; }
+
+/* ==================== прочие стили шаблона */
+
+.leftb { font: normal 13px Verdana, Helvetica, sans-serif; text-decoration: none; }
+.leftb a { color: #A8A8A8; text-decoration: underline; }
+.leftb a:hover { color: #FFFFFF; text-decoration: underline; }
+
+.leftb-h { font: normal 20px "Palatino Linotype", Georgia, Times, serif; color: #A8A8A8; text-decoration: none; padding:12px 0 4px 0; }
+.leftb-h a:active, .leftb-h a:visited, .leftb-h a:link { color: #A8A8A8; text-decoration: none; }
+.leftb-h a:hover { text-decoration: underline; }
+
+/* ==================== основной вывод информации */
+
+.b-top0 { background:#000000 url(../images/c0.gif) repeat-x 0% 0%; *overflow:hidden; *zoom:1; }
+.b-top1 { background:transparent url(../images/c1-1.gif) no-repeat 0% 0%; *overflow:hidden; *zoom:1; }
+.b-top2 { background:transparent url(../images/c1-2.gif) no-repeat 100% 0%; height:7px; *overflow:hidden; *zoom:1; }
+
+.b-bot0 { background:#000000 url(../images/c0.gif) repeat-x 0% 100%; margin-bottom:15px; *overflow:hidden; *zoom:1; }
+.b-bot1 { background:transparent url(../images/c1-3.gif) no-repeat 0% 100%; *overflow:hidden; *zoom:1; }
+.b-bot2 { background:transparent url(../images/c1-4.gif) no-repeat 100% 0%; height:7px; *overflow:hidden; *zoom:1; }
+
+.b-mid1 { background:#000000 url(../images/c0.gif) repeat-y 0% 0%; *overflow:hidden; *zoom:1; }
+.b-mid2 { background:transparent url(../images/c0.gif) repeat-y 100% 0%; *overflow:hidden; *zoom:1; }
+
+.atitle { font: normal 22px "Palatino Linotype", Georgia, Times, serif; color:#A8A8A8; padding:1px 0 6px 0; margin-bottom:10px; text-transform:uppercase; background:transparent url(../images/c0-1.gif) repeat-x 0% 100%; }
+.atitle h1 { padding:0; margin:0; font: normal 24px "Palatino Linotype", Georgia, Times, serif; color:#A8A8A8; }
+.atitle a, .atitle h1 a { color: #A8A8A8; text-decoration: none; }
+.atitle a:hover, .atitle h1 a:hover { text-decoration: underline; }
+
+.atitle-x { font: normal 22px "Palatino Linotype", Georgia, Times, serif; color:#874747; padding:1px 0 6px 0; margin-bottom:10px; text-transform:uppercase; background:transparent url(../images/c0-2.gif) repeat-x 0% 100%; }
+.atitle-x h1 { padding:0; margin:0; font: normal 24px "Palatino Linotype", Georgia, Times, serif; color:#874747; }
+.atitle-x a, .atitle-x h1 a { color: #874747; text-decoration: none; }
+.atitle-x a:hover, .atitle-x h1 a:hover { text-decoration: underline; }
+
+.pre-at { padding:2px 15px 8px 15px; }
+.pre-at2 { padding:4px 12px 4px 12px; }
+
+.atext { font: normal 14px Verdana, Helvetica, sans-serif; color: #A8A8A8; }
+.atext a { color: #FFFFFF; text-decoration: underline; }
+.atext a:hover { color: #AD5F5F; }
+.atext img { margin: 7px; border: 1px solid #404040; padding: 6px; background-color:#151515; }
+
+.atext-x { font: normal 14px Verdana, Helvetica, sans-serif; color: #AD5F5F; }
+.atext-x a { color: #CA9999; text-decoration: underline; }
+.atext-x a:hover { color: #AD5F5F; }
+.atext-x img { margin: 7px; border: 1px solid #404040; padding: 6px; background-color:#151515; }
+
+.atext2 { font: normal 14px Verdana, Helvetica, sans-serif; color: #A8A8A8; }
+.atext2 a { color: #FFFFFF; text-decoration: underline; }
+.atext2 a:hover { color: #AD5F5F; }
+.atext2 img { margin: 0px; border: 0px; padding: 0px; }
+
+.at-but { background-color:#282828; color:#8B8B8B; font-size:11px;  }
+.at-but2 a { margin:12px 6px 0 0; display:inline-block; }
+.at-but img, .at-but2 a img { margin: 0; border: 0; padding: 0; background-color:#282828; color:#8B8B8B; font-size:11px; }
+
+/* ==================== Цитата и скрытый текст */
+.scriptcode, .title_quote,
+.quote, .title_spoiler, .text_spoiler { padding: 5px; background: #404040; border: 1px dotted #A4A4A4; color:#E6E6E6; }
+.title_quote, .title_spoiler { background: #404040; }
+
+.userq { color: #A8A8A8; background-color: #151515; border: 1px dotted #404040;	text-align: justify; padding: 10px; }
+
+.title_quote { border-bottom: 0; font-weight: bold; }
+.scriptcode { color: #8B8B8B; text-align: left; font-family: "Courier New"; }
+.title_spoiler { font-weight: bold; }
+.text_spoiler { border-top: 0; text-align: justify; }
+
+.hide { background-color: #282828; padding: 5px; color: #A8A8A8; margin: 0 0 1em; }
+.hide a { text-decoration: underline; } .hide a:hover { text-decoration: none }
+.inhide { border: 1px solid #282828; padding: 5px; background-color: #fff; margin-bottom: 5px; }
+
+/* ==================== показ оригинальной картинки загруженной на сайт из уменьшенной копии */
+.highslide-active-anchor img { visibility: hidden; }
+.highslide-dimming { background-color: black; }
+.highslide-image-blur {}
+.highslide-html { background-color: white; }
+.highslide-html-content { display: none; }
+.highslide-loading {
+    display: block;
+	color: #fff;
+	font-size: 9px;
+	font-weight: bold;
+    text-decoration: none;
+	padding: 3px;
+	border: 1px solid #fff;
+    background-color: black;
+}
+a.highslide-full-expand {
+	background: url("../../templates/Default/dleimages/fullexpand.gif") no-repeat;
+	display: block;
+	margin: 0 10px 10px 0;
+	width: 34px; height: 34px;
+}
+.highslide-footer { height: 11px; }
+.highslide-footer .highslide-resize {
+	float: right;
+	height: 12px; width: 11px;
+	background: url("../../templates/Default/dleimages/resize.gif");
+}
+.highslide-resize { cursor: nw-resize; }
+.highslide-display-block { display: block;}
+.highslide-display-none { display: none;}
+.highslide-caption { display: none; padding: 5px; background: white; }
+.highslide-controls {
+    width: 195px;
+    height: 40px;
+    background: url(../../engine/classes/highslide/graphics/controlbar-black-border.gif) 0 -90px no-repeat;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.highslide-controls ul {
+	position: relative;
+	left: 15px;
+    height: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: url(../../engine/classes/highslide/graphics/controlbar-black-border.gif) right -90px no-repeat;
+}
+.highslide-controls li { float: left; padding: 5px 0; }
+.highslide-controls a {
+    background: url(../../engine/classes/highslide/graphics/controlbar-black-border.gif);
+    display: block;
+    float: left;
+    height: 30px;
+    width: 30px;
+    outline: none;
+}
+.highslide-controls a.disabled { cursor: default; }
+.highslide-controls a span { display: none; }
+ 
+/* The CSS sprites for the controlbar */
+.highslide-controls .highslide-previous a { background-position: 0 0; }
+.highslide-controls .highslide-previous a:hover { background-position: 0 -30px; }
+.highslide-controls .highslide-previous a.disabled { background-position: 0 -60px !important; }
+.highslide-controls .highslide-play a { background-position: -30px 0; }
+.highslide-controls .highslide-play a:hover { background-position: -30px -30px; }
+.highslide-controls .highslide-play a.disabled { background-position: -30px -60px !important; }
+.highslide-controls .highslide-pause a { background-position: -60px 0; }
+.highslide-controls .highslide-pause a:hover { background-position: -60px -30px; }
+.highslide-controls .highslide-next a { background-position: -90px 0; }
+.highslide-controls .highslide-next a:hover { background-position: -90px -30px; }
+.highslide-controls .highslide-next a.disabled { background-position: -90px -60px !important; }
+.highslide-controls .highslide-move a { background-position: -120px 0; }
+.highslide-controls .highslide-move a:hover { background-position: -120px -30px; }
+.highslide-controls .highslide-full-expand a { background-position: -150px 0; }
+.highslide-controls .highslide-full-expand a:hover { background-position: -150px -30px; }
+.highslide-controls .highslide-full-expand a.disabled { background-position: -150px -60px !important; }
+.highslide-controls .highslide-close a { background-position: -180px 0; }
+.highslide-controls .highslide-close a:hover { background-position: -180px -30px; }
+
+/*---подсветка текста в теге [code]---*/
+
+pre code {
+  display: block; padding: 0.5em;
+  background: #f9fafa; 
+  border: 1px solid #dce7e7;
+  overflow:auto;
+  white-space: pre;
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .doctype,
+pre .lisp .string,
+pre .javadoc {
+  color: #93a1a1;
+  font-style: italic;
+}
+
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .method,
+pre .addition,
+pre .css .tag,
+pre .lisp .title {
+  color: #859900;
+}
+
+pre .number,
+pre .command,
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula,
+pre .regexp,
+pre .hexcolor {
+  color: #2aa198;
+}
+
+pre .title,
+pre .localvars,
+pre .function .title,
+pre .chunk,
+pre .decorator,
+pre .builtin,
+pre .built_in,
+pre .lisp .title,
+pre .identifier,
+pre .title .keymethods,
+pre .id {
+  color: #268bd2;
+}
+
+pre .tag .title,
+pre .rules .property,
+pre .django .tag .keyword {
+  font-weight: bold;
+}
+
+pre .attribute,
+pre .variable,
+pre .instancevar,
+pre .lisp .body,
+pre .smalltalk .number,
+pre .constant,
+pre .class .title,
+pre .parent,
+pre .haskell .label {
+  color: #b58900;
+}
+
+pre .preprocessor,
+pre .pi,
+pre .shebang,
+pre .symbol,
+pre .diff .change,
+pre .special,
+pre .keymethods,
+pre .attr_selector,
+pre .important,
+pre .subst,
+pre .cdata {
+  color: #cb4b16;
+}
+
+pre .deletion {
+  color: #dc322f;
+}
+
+pre .tex .formula {
+  background: #eee8d5;
+}

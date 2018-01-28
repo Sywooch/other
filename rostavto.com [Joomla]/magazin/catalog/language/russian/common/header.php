@@ -1,0 +1,11 @@
+<?php
+// Text
+$_['text_home']           = 'Главная';
+$_['text_wishlist']       = 'Закладки (%s)';
+$_['text_shopping_cart']  = 'Ваши заказы';
+$_['text_search']         = 'Поиск по сайту';
+$_['text_welcome']        = '<a href="%s">Войти</a>&nbsp;&nbsp;<a href="%s">Регистрация</a>';
+$_['text_logged']         = 'Вы вошли как <a href="%s">%s</a> <b>(</b> <a href="%s">Выйти</a> <b>)</b>';
+$_['text_account']        = 'Постоянный покупатель';
+$_['text_checkout']       = 'Оплата и доставка';
+?>

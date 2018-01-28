@@ -1,0 +1,9 @@
+.box-brand-model .brand,
+.box-brand-model .model {
+    margin-bottom: 10px;
+}
+
+.box-brand-model .brand select,
+.box-brand-model .model select {
+    width: 97%;
+}

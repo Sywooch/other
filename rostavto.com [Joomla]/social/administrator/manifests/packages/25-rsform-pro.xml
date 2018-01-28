@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5">
+<name>RSForm!Pro Russian language pack</name>
+<packagename>RSForm!Pro Russian language pack</packagename>
+<version></version>
+<creationDate></creationDate>
+<packager>rsjoomla.com</packager>
+<packagerEmail></packagerEmail>
+<packagerurl>http://aleksius.com</packagerurl>
+<tag>ru-RU</tag>
+<author></author>
+<authorEmail></authorEmail>
+<authorUrl></authorUrl>
+
+<description></description>
+<files>
+    <file type="language" client="site" id="ru-RU">site25</file>
+    <file type="language" client="administrator" id="ru-RU">admin25</file>
+</files>
+</extension>

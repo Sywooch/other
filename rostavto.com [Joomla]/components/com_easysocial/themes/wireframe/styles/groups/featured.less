@@ -1,0 +1,71 @@
+/**
+* @package 		EasySocial
+* @copyright	Copyright (C) 2010 - 2013 Stack Ideas Sdn Bhd. All rights reserved.
+* @license 		Proprietary Use License http://stackideas.com/licensing.html
+* @author 		Stack Ideas Sdn Bhd
+**/
+/*------------------------------------*\
+	group-featured.less
+\*------------------------------------*/
+.group-featured {
+	background: #f5f5f5;
+	padding: 10px;
+	position: relative;
+	top: 10px;
+	margin-bottom: 15px;
+
+	.group-avatar {
+		width: 98px;
+		height: 98px;
+		background: white;
+		border: 1px solid #CCCCCC;
+		padding: 3px;
+		border-radius: 2px;
+		img {
+			width: 90px;
+			height: 90px;
+		}
+	}
+	.es-title {
+		font-size: 18px;
+		line-height: 18px;
+		height: 18px;
+		margin-bottom: 6px;
+		.text-overflow();
+	}
+	.es-desp {
+		margin-top: 5px;
+	}
+}
+.group-featured-label {
+	background: #F4C64B;
+	color: #545655;
+	position: absolute;
+	padding: 2px 4px;
+	height: 24px;
+	left: 0;
+	top: -10px;
+	font-weight: bold;
+	line-height: 20px;
+	border-radius: 2px 0 0 2px;
+
+	span:after {
+	  content: "";
+	  position: absolute;
+	  top: 0;
+	  right: -12px;
+	  width: 0;
+	  height: 0;
+	  border-color: transparent transparent transparent #F4C64B;
+	  border-style: solid;
+	  border-width: 12px 0 12px 12px;  
+	}
+
+	span:hover {
+	  // background: #555;
+	}
+
+	span:hover:after {
+	  // border-color: transparent transparent transparent #555;
+	}
+}

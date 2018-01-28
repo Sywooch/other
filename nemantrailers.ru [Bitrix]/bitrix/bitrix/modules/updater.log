@@ -1,0 +1,197 @@
+2016-01-26 20:11:18 -  - exec CUpdateClient::GetUpdatesList
+2016-01-26 20:11:18 -  - exec CUpdateClient::CollectRequestData
+2016-01-26 20:11:19 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=D&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=15.5.1&bitm_compression=14.0.0&bitm_fileman=15.5.2&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=15.5.1&bitm_search=15.5.1&bitm_seo=15.5.5&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-26 20:11:19 -  - exec CUpdateClient::GetHTTPPage
+2016-01-26 20:11:19 -  - TIME GetUpdatesList(request) 0.578 sec
+2016-01-26 20:11:19 -  - exec CUpdateClient::ParseServerData
+2016-01-26 20:12:29 -  - exec CUpdateClient::GetUpdatesList
+2016-01-26 20:12:29 -  - exec CUpdateClient::CollectRequestData
+2016-01-26 20:12:29 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=D&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=15.5.1&bitm_compression=14.0.0&bitm_fileman=15.5.2&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=15.5.1&bitm_search=15.5.1&bitm_seo=15.5.5&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-26 20:12:29 -  - exec CUpdateClient::GetHTTPPage
+2016-01-26 20:12:30 -  - TIME GetUpdatesList(request) 0.369 sec
+2016-01-26 20:12:30 -  - exec CUpdateClient::ParseServerData
+2016-01-26 20:13:06 -  - exec CUpdateClient::GetUpdatesList
+2016-01-26 20:13:06 -  - exec CUpdateClient::CollectRequestData
+2016-01-26 20:13:06 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=D&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=15.5.1&bitm_compression=14.0.0&bitm_fileman=15.5.2&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=15.5.1&bitm_search=15.5.1&bitm_seo=15.5.5&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-26 20:13:06 -  - exec CUpdateClient::GetHTTPPage
+2016-01-26 20:13:06 -  - TIME GetUpdatesList(request) 0.333 sec
+2016-01-26 20:13:06 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:20 -  - exec CUpdateClient::GetUpdatesList
+2016-01-27 13:07:20 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:20 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=D&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=15.5.1&bitm_compression=14.0.0&bitm_fileman=15.5.2&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=15.5.1&bitm_search=15.5.1&bitm_seo=15.5.5&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:20 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:20 -  - TIME GetUpdatesList(request) 0.508 sec
+2016-01-27 13:07:20 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:30 -  - exec CUpdateClient::RegisterVersion
+2016-01-27 13:07:30 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:30 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=D&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=15.5.1&bitm_compression=14.0.0&bitm_fileman=15.5.2&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=15.5.1&bitm_search=15.5.1&bitm_seo=15.5.5&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y&query_type=register
+2016-01-27 13:07:30 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:30 -  - TIME RegisterVersion(request) 0.265 sec
+2016-01-27 13:07:30 -  - exec CUpdateClient::UnGzipArchive
+2016-01-27 13:07:30 -  - TIME UnGzipArchive 0.002 sec
+2016-01-27 13:07:30 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:30 - CURV - Product registered successfully!
+2016-01-27 13:07:30 - UPD_SUCCESS - Registered
+2016-01-27 13:07:32 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:32 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:32 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=15.5.1&bitm_compression=14.0.0&bitm_fileman=15.5.2&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=15.5.1&bitm_search=15.5.1&bitm_seo=15.5.5&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:32 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:32 -  - TIME LoadModulesUpdates(request) 0.285 sec
+2016-01-27 13:07:32 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:32 - LMU01 - LoadModulesUpdates-Step
+2016-01-27 13:07:33 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:33 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:33 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:33 - DOWNLOAD - Time - 0.25708198547363 sec
+2016-01-27 13:07:33 -  - exec CUpdateClient::UnGzipArchive
+2016-01-27 13:07:33 -  - TIME UnGzipArchive 0.003 sec
+2016-01-27 13:07:33 -  - TIME UpdateStepModules 0.003 sec
+2016-01-27 13:07:33 - UPD_SUCCESS - Updated: compression (16.0.0)<br><li>Улучшена совместимость с php 5.6. 
+2016-01-27 13:07:33 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:33 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:33 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=15.5.1&bitm_compression=16.0.0&bitm_fileman=15.5.2&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=15.5.1&bitm_search=15.5.1&bitm_seo=15.5.5&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:33 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:34 -  - TIME LoadModulesUpdates(request) 0.354 sec
+2016-01-27 13:07:34 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:34 - LMU01 - LoadModulesUpdates-Step
+2016-01-27 13:07:34 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:34 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:34 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:35 - DOWNLOAD - Time - 0.76278805732727 sec
+2016-01-27 13:07:35 -  - exec CUpdateClient::UnGzipArchive
+2016-01-27 13:07:35 -  - TIME UnGzipArchive 0.027 sec
+2016-01-27 13:07:35 - CSURUS1 - Run updater '/bitrix/updates/update_m1453889255/fileman/updater16.0.0.php'
+2016-01-27 13:07:35 - CRUPDCF1 - Run updater '/bitrix/updates/update_m1453889255/fileman/updater16.0.0.php': CopyFiles(install/js, js)
+2016-01-27 13:07:35 -  - TIME UpdateStepModules 0.073 sec
+2016-01-27 13:07:35 - UPD_SUCCESS - Updated: fileman (16.0.0)<br><li>Исправление ошибок в интерфейсах модуля. 
+2016-01-27 13:07:35 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:35 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:35 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=15.5.1&bitm_compression=16.0.0&bitm_fileman=16.0.0&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=15.5.1&bitm_search=15.5.1&bitm_seo=15.5.5&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:35 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:36 -  - TIME LoadModulesUpdates(request) 0.34 sec
+2016-01-27 13:07:36 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:36 - LMU01 - LoadModulesUpdates-Step
+2016-01-27 13:07:36 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:36 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:36 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:37 - DOWNLOAD - Time - 0.6054379940033 sec
+2016-01-27 13:07:37 -  - exec CUpdateClient::UnGzipArchive
+2016-01-27 13:07:37 -  - TIME UnGzipArchive 0.006 sec
+2016-01-27 13:07:37 -  - TIME UpdateStepModules 0.007 sec
+2016-01-27 13:07:37 - UPD_SUCCESS - Updated: perfmon (16.0.0)<br><li>Исправлена ошибка при добавлении записи в таблицу. <li>Улучшена диагностика opcache. <li>Исправлено тестирование конфигурации PHP. 
+2016-01-27 13:07:37 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:37 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:37 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=15.5.1&bitm_compression=16.0.0&bitm_fileman=16.0.0&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=16.0.0&bitm_search=15.5.1&bitm_seo=15.5.5&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:37 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:37 -  - TIME LoadModulesUpdates(request) 0.29 sec
+2016-01-27 13:07:37 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:37 - LMU01 - LoadModulesUpdates-Step
+2016-01-27 13:07:38 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:38 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:38 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:38 - DOWNLOAD - Time - 0.38160300254822 sec
+2016-01-27 13:07:38 -  - exec CUpdateClient::UnGzipArchive
+2016-01-27 13:07:38 -  - TIME UnGzipArchive 0.006 sec
+2016-01-27 13:07:38 - CSURUS1 - Run updater '/bitrix/updates/update_m1453889258/seo/updater15.5.6.php'
+2016-01-27 13:07:38 - CRUPDCDF2 - Run updater '/bitrix/updates/update_m1453889258/seo/updater15.5.6.php': Query(UPDATE b_seo_search_engine SET CLIENT_ID='868942902147-qrrd6ce1ajfkpse8ieq4gkpdeanvtnno.apps.googleusercontent.com', CLIENT_SECRET='EItMlJpZLC2WRPKB6QsA5bV9' WHERE CODE='google', )
+2016-01-27 13:07:38 -  - TIME UpdateStepModules 0.026 sec
+2016-01-27 13:07:38 - UPD_SUCCESS - Updated: seo (15.5.6)<br><li>Переход на новую версию Google Site Verification API и Google Search Console API. <li>Исправлена ошибка автообновления карты сайта при деактивации элементов. 
+2016-01-27 13:07:38 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:38 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:39 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=15.5.1&bitm_compression=16.0.0&bitm_fileman=16.0.0&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=16.0.0&bitm_search=15.5.1&bitm_seo=15.5.6&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:39 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:39 -  - TIME LoadModulesUpdates(request) 0.378 sec
+2016-01-27 13:07:39 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:39 - LMU01 - LoadModulesUpdates-Step
+2016-01-27 13:07:39 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:39 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:39 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:40 - DOWNLOAD - Time - 0.35146713256836 sec
+2016-01-27 13:07:40 -  - exec CUpdateClient::UnGzipArchive
+2016-01-27 13:07:40 -  - TIME UnGzipArchive 0.003 sec
+2016-01-27 13:07:40 -  - TIME UpdateStepModules 0.003 sec
+2016-01-27 13:07:40 - UPD_SUCCESS - Updated: clouds (16.0.0)<br><li>Фильтр по расширениям теперь учитывает не только физические расширения файлов, но и расширение оригинального имени. 
+2016-01-27 13:07:40 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:40 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:40 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=15.5.0&bitm_clouds=16.0.0&bitm_compression=16.0.0&bitm_fileman=16.0.0&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=16.0.0&bitm_search=15.5.1&bitm_seo=15.5.6&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:40 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:41 -  - TIME LoadModulesUpdates(request) 0.369 sec
+2016-01-27 13:07:41 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:41 - LMU01 - LoadModulesUpdates-Step
+2016-01-27 13:07:41 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:41 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:41 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:41 - DOWNLOAD - Time - 0.40094995498657 sec
+2016-01-27 13:07:41 -  - exec CUpdateClient::UnGzipArchive
+2016-01-27 13:07:41 -  - TIME UnGzipArchive 0.012 sec
+2016-01-27 13:07:41 - CSURUS1 - Run updater '/bitrix/updates/update_m1453889261/bitrixcloud/updater16.0.0.php'
+2016-01-27 13:07:41 - CRUPDCF1 - Run updater '/bitrix/updates/update_m1453889261/bitrixcloud/updater16.0.0.php': CopyFiles(install/components, components)
+2016-01-27 13:07:41 -  - TIME UpdateStepModules 0.016 sec
+2016-01-27 13:07:41 - UPD_SUCCESS - Updated: bitrixcloud (16.0.0)<br><li>Исправлена ошибка подмены ссылок на страницах просмотра исходного кода. 
+2016-01-27 13:07:42 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:42 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:42 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=16.0.0&bitm_clouds=16.0.0&bitm_compression=16.0.0&bitm_fileman=16.0.0&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=16.0.0&bitm_search=15.5.1&bitm_seo=15.5.6&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:42 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:42 -  - TIME LoadModulesUpdates(request) 0.306 sec
+2016-01-27 13:07:42 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:42 - LMU01 - LoadModulesUpdates-Step
+2016-01-27 13:07:42 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:42 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:42 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:43 - DOWNLOAD - Time - 0.47313189506531 sec
+2016-01-27 13:07:43 -  - exec CUpdateClient::UnGzipArchive
+2016-01-27 13:07:43 -  - TIME UnGzipArchive 0.065 sec
+2016-01-27 13:07:43 -  - TIME UpdateStepModules 0.034 sec
+2016-01-27 13:07:43 - UPD_SUCCESS - Updated: scale ()
+2016-01-27 13:07:43 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:43 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:43 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=16.0.0&bitm_clouds=16.0.0&bitm_compression=16.0.0&bitm_fileman=16.0.0&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=16.0.0&bitm_search=15.5.1&bitm_seo=15.5.6&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitm_scale=14.5.0&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:43 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:44 -  - TIME LoadModulesUpdates(request) 0.449 sec
+2016-01-27 13:07:44 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:44 - LMU01 - LoadModulesUpdates-Step
+2016-01-27 13:07:44 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:44 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:44 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:45 - DOWNLOAD - Time - 0.50070691108704 sec
+2016-01-27 13:07:45 -  - exec CUpdateClient::UnGzipArchive
+2016-01-27 13:07:45 -  - TIME UnGzipArchive 0.032 sec
+2016-01-27 13:07:45 - CSURUS1 - Run updater '/bitrix/updates/update_m1453889265/scale/updater14.5.1.php'
+2016-01-27 13:07:45 -  - TIME UpdateStepModules 0.026 sec
+2016-01-27 13:07:45 - UPD_SUCCESS - Updated: scale (14.5.1)<br><li>Добавлена проверка типа базы. <li>Добавлена возможность выводить время до окончания действия. <li>Добавлена роль Apache. <li>Добавлена возможность двухшаговой генерации действий. <li>Добавлена возможность модифицировать действия, запрашивать параметры у пользователя в случае необходимости. <li>Добавлено окно подтверждения при действиях с БД, если есть базы, кроме базы текущего сайта. <li>Добавлена роль Sphinx. <li>Добавлено предупреждение, если в данный момент уже есть запущеное действие. <li>Исправлены незначительные ошибки. 
+2016-01-27 13:07:45 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:45 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:45 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=16.0.0&bitm_clouds=16.0.0&bitm_compression=16.0.0&bitm_fileman=16.0.0&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=16.0.0&bitm_search=15.5.1&bitm_seo=15.5.6&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitm_scale=14.5.1&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:45 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:45 -  - TIME LoadModulesUpdates(request) 0.267 sec
+2016-01-27 13:07:45 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:45 - LMU01 - LoadModulesUpdates-Step
+2016-01-27 13:07:46 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:46 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:46 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:46 - DOWNLOAD - Time - 0.33770489692688 sec
+2016-01-27 13:07:46 -  - exec CUpdateClient::UnGzipArchive
+2016-01-27 13:07:46 -  - TIME UnGzipArchive 0.04 sec
+2016-01-27 13:07:46 - CSURUS1 - Run updater '/bitrix/updates/update_m1453889266/scale/updater14.5.2.php'
+2016-01-27 13:07:46 -  - TIME UpdateStepModules 0.033 sec
+2016-01-27 13:07:46 - UPD_SUCCESS - Updated: scale (14.5.2)<br><li>Добавлена возможность работы с провайдерами VPS. <li>Добавлены графики, градусники для ролей memcached, sphinx. <li>Исправлены незначительные ошибки.
+2016-01-27 13:07:47 -  - exec CUpdateClient::LoadModulesUpdates
+2016-01-27 13:07:47 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:47 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=16.0.0&bitm_clouds=16.0.0&bitm_compression=16.0.0&bitm_fileman=16.0.0&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=16.0.0&bitm_search=15.5.1&bitm_seo=15.5.6&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitm_scale=14.5.2&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:47 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:47 -  - TIME LoadModulesUpdates(request) 0.553 sec
+2016-01-27 13:07:47 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:07:47 - STEP - Finish - NOUPDATES
+2016-01-27 13:07:47 - STEP - Finish - NOUPDATES
+2016-01-27 13:07:53 -  - exec CUpdateClient::GetUpdatesList
+2016-01-27 13:07:53 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:07:53 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=16.0.0&bitm_clouds=16.0.0&bitm_compression=16.0.0&bitm_fileman=16.0.0&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=16.0.0&bitm_search=15.5.1&bitm_seo=15.5.6&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitm_scale=14.5.2&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:07:53 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:07:53 -  - TIME GetUpdatesList(request) 0.283 sec
+2016-01-27 13:07:53 -  - exec CUpdateClient::ParseServerData
+2016-01-27 13:08:33 -  - exec CUpdateClient::GetUpdatesList
+2016-01-27 13:08:33 -  - exec CUpdateClient::CollectRequestData
+2016-01-27 13:08:33 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=15.5.1&VERSION=15.5.10&TYPENC=E&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&CHHB=nemantrailers.ru&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.4.44-1%2Bmh1&stable=Y&rerere=Y&bitm_main=15.5.10&bitm_bitrixcloud=16.0.0&bitm_clouds=16.0.0&bitm_compression=16.0.0&bitm_fileman=16.0.0&bitm_highloadblock=15.5.0&bitm_iblock=15.5.11&bitm_perfmon=16.0.0&bitm_search=15.5.1&bitm_seo=15.5.6&bitm_socialservices=15.5.3&bitm_translate=14.0.0&bitm_scale=14.5.2&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&SALE_15=Y
+2016-01-27 13:08:33 -  - exec CUpdateClient::GetHTTPPage
+2016-01-27 13:08:33 -  - TIME GetUpdatesList(request) 0.251 sec
+2016-01-27 13:08:33 -  - exec CUpdateClient::ParseServerData

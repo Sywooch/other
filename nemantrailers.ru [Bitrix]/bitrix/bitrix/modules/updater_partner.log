@@ -1,0 +1,6 @@
+2016-02-02 05:42:43 -  - exec CUpdateClientPartner::GetUpdatesList
+2016-02-02 05:42:43 -  - exec CUpdateClientPartner::__CollectRequestData
+2016-02-02 05:42:43 -  - utf=N&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=nemantrailers.ru&LICENSE_KEY=X&SUPD_STS=2&SUPD_URS=0&SUPD_URSA=1&TYPENC=E&CLIENT_PHPVER=5.4.44-1%2Bmh1&dbv=5.5.44&instm=main%2C15.5.10%2CN%3Bbitrix.sitecorporate%2C15.0.0%2CN%3Bbitrixcloud%2C16.0.0%2CN%3Bclouds%2C16.0.0%2CN%3Bcompression%2C16.0.0%2CN%3Bfileman%2C16.0.0%2CN%3Bhighloadblock%2C15.5.0%2CN%3Biblock%2C15.5.11%2CN%3Bperfmon%2C16.0.0%2CN%3Bsearch%2C15.5.1%2CN%3Bseo%2C15.5.6%2CN%3Bsocialservices%2C15.5.3%2CN%3Btranslate%2C14.0.0%2CN%3Bscale%2C14.5.2%2CN&reqm=bitrix.sitecorporate&fullmoduleinfo=Y&SUPD_SRS=RU&SUPD_CMP=N
+2016-02-02 05:42:43 -  - exec CUpdateClientPartner::GetHTTPPage
+2016-02-02 05:42:44 -  - TIME GetUpdatesList(request) 0.424 sec
+2016-02-02 05:42:44 -  - exec CUpdateClientPartner::ParseServerData

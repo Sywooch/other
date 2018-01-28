@@ -1,0 +1,27 @@
+<?php
+// HTTP
+define('HTTP_SERVER', 'http://localhost/');
+
+// HTTPS
+define('HTTPS_SERVER', 'http://localhost/');
+
+// DIR
+define('DIR_APPLICATION', 'C:\localhost\www/catalog/');
+define('DIR_SYSTEM', 'C:\localhost\www/system/');
+define('DIR_DATABASE', 'C:\localhost\www/system/database/');
+define('DIR_LANGUAGE', 'C:\localhost\www/catalog/language/');
+define('DIR_TEMPLATE', 'C:\localhost\www/catalog/view/theme/');
+define('DIR_CONFIG', 'C:\localhost\www/system/config/');
+define('DIR_IMAGE', 'C:\localhost\www/image/');
+define('DIR_CACHE', 'C:\localhost\www/system/cache/');
+define('DIR_DOWNLOAD', 'C:\localhost\www/download/');
+define('DIR_LOGS', 'C:\localhost\www/system/logs/');
+
+// DB
+define('DB_DRIVER', 'mysql');
+define('DB_HOSTNAME', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', 'vertrigo');
+define('DB_DATABASE', 'rost');
+define('DB_PREFIX', '');
+?>

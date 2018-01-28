@@ -1,0 +1,14 @@
+<modification>
+    <id><![CDATA[Filter Brand-Model]]></id>
+    <version><![CDATA[0.1]]></version>
+    <vqmver><![CDATA[]]></vqmver>
+    <author><![CDATA[Dmitry Zolotarev]]></author>
+    <file path="catalog/model/catalog/" name="product.php">
+        <operation>
+            <search position="after" offset="2" error="log"><![CDATA[$sql .= " AND p.manufacturer_id = '" . (int)$data['filter_manufacturer_id'] . "'";]]></search>
+            <add><![CDATA[if (!empty($data['filter_model'])) {
+                $sql .= " AND p.model = '" . $this->db->escape($data['filter_model']) . "'";
+            }]]></add>
+        </operation>
+    </file>
+</modification>

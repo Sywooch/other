@@ -1,0 +1,19 @@
+<?PHP
+
+define ("DBHOST", "p98624.mysql.ihc.ru"); 
+
+define ("DBNAME", "p98624_md");
+
+define ("DBUSER", "p98624_md");
+
+define ("DBPASS", "5g8V4Nk46a");  
+
+define ("PREFIX", "dle"); 
+
+define ("COLLATE", "cp1251"); 
+
+define ("USERPREFIX", "dle"); 
+
+$db = new db;
+ 
+?>

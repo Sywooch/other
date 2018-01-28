@@ -1,0 +1,76 @@
+body div#fd.es.mod-es-search .es-navbar-search {
+  position: relative;
+}
+body div#fd.es.mod-es-search .dropdown-menu {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  z-index: 200;
+  display: none;
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,0.2);
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-empty {
+  padding: 20px;
+  text-align: center;
+  color: #888;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-blk .search-blk-hd {
+  font-weight: bold;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ebebeb;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-blk .search-blk-bd .es-avatar {
+  margin: 0 5px 0 0;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  float: left;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-blk .search-blk-bd .es-avatar img {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-blk .search-result-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-blk .search-result-list a {
+  padding: 6px 15px 6px 20px;
+  display: block;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-blk .search-result-list a:before,
+body div#fd.es.mod-es-search .dropdown-menu .search-blk .search-result-list a:after {
+  content: " ";
+  display: table;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-blk .search-result-list a:after {
+  clear: both;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-blk .search-result-list li + li {
+  border-top: 1px solid #ebebeb;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-blk + .search-blk {
+  border-top: 1px solid #ebebeb;
+}
+body div#fd.es.mod-es-search .dropdown-menu .search-footer {
+  border-top: 1px solid #ebebeb;
+  padding: 14px 10px;
+  background: #f7f7f7;
+}

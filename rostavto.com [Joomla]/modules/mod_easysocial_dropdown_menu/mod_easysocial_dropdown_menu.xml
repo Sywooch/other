@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="module" client="site" method="upgrade">
+	<name>EasySocial Dropdown Menu</name>
+	<author>Stack Ideas Sdn Bhd</author>
+	<creationDate>03/08/2013</creationDate>
+	<copyright>Copyright (C) 2009 - 2013 Stack Ideas Sdn Bhd. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>http://stackideas.com</authorUrl>
+	<version>1.0</version>
+	<description>
+		<![CDATA[MOD_EASYSOCIAL_DROPDOWN_MENU_DESC]]>
+	</description>
+	<files>
+		<folder>styles</folder>
+		<folder>tmpl</folder>
+		<filename module="mod_easysocial_dropdown_menu">mod_easysocial_dropdown_menu.php</filename>
+		<filename>mod_easysocial_dropdown_menu.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_easysocial_dropdown_menu.ini</language>
+		<language tag="en-GB">en-GB.mod_easysocial_dropdown_menu.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="show_my_profile" type="radio" class="btn-group" default="1" label="MOD_EASYSOCIAL_DROPDOWN_MENU_SHOW_MY_PROFILE" description="MOD_EASYSOCIAL_DROPDOWN_MENU_SHOW_MY_PROFILE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_account_settings" type="radio" class="btn-group" default="1" label="MOD_EASYSOCIAL_DROPDOWN_MENU_SHOW_ACCOUNT_SETTINGS" description="MOD_EASYSOCIAL_DROPDOWN_MENU_SHOW_ACCOUNT_SETTINGS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_sign_out" type="radio" class="btn-group" default="1" label="MOD_EASYSOCIAL_DROPDOWN_MENU_SHOW_SIGN_OUT" description="MOD_EASYSOCIAL_DROPDOWN_MENU_SHOW_SIGN_OUT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="render_menus" type="radio" class="btn-group" default="1" label="MOD_EASYSOCIAL_DROPDOWN_MENU_LOAD_MENUS" description="MOD_EASYSOCIAL_DROPDOWN_MENU_LOAD_MENUS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="menu_type" type="menu" default="" label="MOD_EASYSOCIAL_DROPDOWN_MENU_SELECT_MENU" description="MOD_EASYSOCIAL_DROPDOWN_MENU_SELECT_MENU_DESC"></field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

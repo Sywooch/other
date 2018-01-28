@@ -1,0 +1,7 @@
+.carrier-center .label_check { line-height: 22px; }
+.carrier-center input[type="checkbox"] {
+    display: none;
+}
+.carrier-center h1 {
+    padding: 43px 0 25px 0;
+}

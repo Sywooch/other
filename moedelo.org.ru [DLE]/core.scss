@@ -1,0 +1,1434 @@
+@charset "UTF-8";
+@import "inc/css3-mixins";
+@import "fonts/buroicons";
+@import "fonts/opensans";
+
+$blueColor: #1f85c5;
+$greenColor: #00953a;
+$textColor: #444444;
+$lightTextColor: #777777;
+$darkTextColor: #424242;
+$whiteColor: #ffffff;
+$blackColor: #000000;
+$redColor: #ee3126;
+$mainNavColor: #b2b2b2;
+$mainNavBorderColor: #dbdbdb;
+$grayBackgroundColor: #fcfcfc;
+$seperatorColor: #ebebeb;
+
+$screen-lg-min: 1200px;
+$screen-lg-max: 1240px;
+$screen-md-min: 940px;
+$screen-md-max: 970px;
+$screen-sm-min: 750px;
+$screen-sm-max: 780px;
+$screen-xs-max: auto;
+$padding: 15px;
+
+@mixin font-size($size: 16px, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin content() {
+  margin: 0 auto;
+  //  @media (max-width: $screen-xs-max) {
+  //    width: $screen-sm-max;
+  //    > img, > svg {
+  //      width: 100%;
+  //      height: auto;
+  //    }
+  //  }
+  //  @media (min-width: $screen-sm-min) {
+  //    width: $screen-sm-max;
+  //    > img, > svg {
+  //      width: 100%;
+  //      height: auto;
+  //    }
+  //  }
+  @media only screen and (min-width: $screen-md-max) {
+    width: $screen-md-min;
+    > img, > svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media only screen and (min-width: $screen-lg-max) {
+    width: $screen-lg-min;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  zoom: 1;
+  font: 400 100% 'Open Sans', sans-serif;
+  color: $textColor;
+  @include box-sizing(border-box);
+  &::selection {
+    background: $greenColor;
+    color: $whiteColor;
+  }
+  &:before, &:after {
+    @include box-sizing(border-box)
+  }
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+main,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+html {
+  position: relative;
+  height: 100%;
+  body {
+    height: 100%;
+  }
+}
+
+a {
+  color: $blueColor;
+  text-decoration: none;
+  @include transition(color .3s ease-in-out);
+  &:hover {
+    color: $blueColor;
+  }
+}
+
+figure#progress {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  > div {
+    width: 0;
+    height: 4px;
+    background: $greenColor;
+    @include transition(width .5s ease-in-out);
+  }
+}
+
+body {
+  > header, footer, section {
+    background-color: $grayBackgroundColor;
+    width: 100%;
+    > div {
+      @include content;
+    }
+  }
+
+  > hr {
+    height: 2px;
+    background: $seperatorColor;
+  }
+
+  > section {
+    padding: 0 0 30px;
+    > div {
+      padding: 0 $padding;
+      padding-bottom: 30px;
+      text-align: center;
+      @include clear-after;
+      > h2 {
+        padding: 80px 0 60px;
+        text-align: center;
+        > * {
+          color: $greenColor;
+          vertical-align: middle;
+          @include font-size(30px, 300);
+        }
+        > i {
+          font-size: 40px;
+          top: 2px;
+          position: relative;
+        }
+        > span {
+          position: relative;
+          top: -2px;
+        }
+      }
+      > article {
+        text-align: center;
+        > span {
+          line-height: 30px;
+          display: block;
+          @include font-size(16px, 400);
+        }
+      }
+      > img {
+        display: block;
+        margin: 0 auto;
+        //        width: 1070px;
+        //        height: auto;
+      }
+    }
+    > figure {
+      background: $whiteColor;
+      margin: 30px 0 60px;
+      > div {
+        height: 130px;
+        line-height: 130px;
+        @include content;
+        > * {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        > figure {
+          width: 270px;
+          height: 130px;
+          text-align: center;
+          @media only screen and (min-width: $screen-md-max) {
+            width: 203px;
+          }
+          @media only screen and (min-width: $screen-lg-max) {
+            width: 270px;
+          }
+
+          > i {
+            color: $greenColor;
+            line-height: 150px;
+            @include font-size(100px)
+          }
+        }
+        > div {
+          > h3 {
+            display: block;
+            @include font-size(16px, 600)
+          }
+          > article {
+            > span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html {
+  &.home {
+    header {
+      figure#headerBackground {
+        background: url("img/bg/header-home-bg.jpg") no-repeat top center;
+      }
+    }
+  }
+  &.prices {
+    header {
+      figure#headerBackground {
+        background: url("img/bg/header-prices-bg.jpg") no-repeat top center;
+      }
+    }
+  }
+}
+
+header {
+  position: relative;
+  background: transparent !important;
+  min-height: 540px;
+  > figure#headerBackground {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include background-size(cover);
+    @include css3-prefix(filter, blur(5px));
+  }
+  > div {
+    @include clear-after;
+    > div#fixedMenuRow1 {
+      position: fixed;
+      z-index: 999;
+      min-height: 52px;
+      @include content;
+      &:before {
+        display: block;
+        width: 500vw;
+        height: 100%;
+        position: absolute;
+        left: -100%;
+        z-index: -1;
+        background: transparent;
+        @include transition(
+                background .3s ease-in-out
+        )
+      }
+      &.fixed {
+        position: fixed;
+        background: $whiteColor;
+        top: 0;
+        > a#logo {
+          top: 0;
+          width: 239px;
+          height: 32px;
+          margin-left: -120px;
+          > img {
+            width: 239px;
+            height: 32px ;
+          }
+        }
+        &:before {
+          content: '';
+          background: $whiteColor;
+          @include box-shadow(0, 20px, 20px, rgba(0, 0, 0, .1));
+        }
+      }
+    }
+    > div {
+      position: relative;
+      @include clear-after;
+      > nav {
+        &.left {
+          float: left;
+        }
+        &.right {
+          float: right;
+        }
+        > ul {
+          > li {
+            float: left;
+            padding: 14px $padding;
+            > a {
+              display: inline-block;
+              color: $textColor;
+              &:after {
+                display: block;
+                content: '';
+                position: relative;
+                left: 50%;
+                top: 2px;
+                width: 0%;
+                height: 2px;
+                background: $greenColor;
+                @include transition(
+                        width .3s ease-in-out,
+                        left .3s ease-in-out
+                )
+              }
+              &:hover {
+                color: $greenColor;
+                &:after {
+                  left: 0;
+                  width: 100%;
+                }
+              }
+            }
+          }
+          @include clear-after;
+        }
+      }
+      > a#logo {
+        display: block;
+        text-align: center;
+        position: absolute;
+        clear: both;
+        left: 50%;
+        top: 60px;
+        margin: 10px;
+        margin-left: -280px;
+        width: 560px;
+        height: 74px;
+        @include transition(
+                top .3s ease-in-out,
+                background .3s ease-in-out,
+                width .3s ease-in-out,
+                height .3s ease-in-out,
+                left .3s ease-in-out,
+                margin .3s ease-in-out,
+                margin-left .3s ease-in-out
+        );
+        > img {
+          @include transition(
+                  width .3s ease-in-out,
+                  height .3s ease-in-out
+          )
+        }
+      }
+    }
+    > h1 {
+      text-align: center;
+      padding: 162px 0 30px;
+      > span {
+        display: block;
+        line-height: 80px;
+        @include font-size(37px, 300);
+      }
+    }
+    > figure {
+      position: relative;
+      background: $whiteColor;
+      width: 560px;
+      margin: 10px auto;
+      background: rgba($whiteColor, .76);
+      &:after {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: rgba($whiteColor, .76);
+        border-width: 20px;
+        margin-left: -20px;
+      }
+      > ul {
+        padding: 20px 20px 20px 100px;
+        > li {
+          color: $lightTextColor;
+          > a {
+            @include font-size(14px);
+            color: $textColor;
+          }
+        }
+      }
+    }
+    > nav {
+      background: transparent;
+      margin-top: $padding * 2;
+      z-index: 999;
+      @include transition(
+              top .3s ease-in-out,
+              background .3s ease-in-out
+      );
+      > ul {
+        font-size: 0;
+        @include clear-after;
+        > li {
+          float: left;
+          width: 195px;
+          height: 100px;
+          margin-left: 6px;
+          cursor: pointer;
+          text-align: center;
+          padding-top: 18px;
+          background: rgba($mainNavColor, .7);
+          border-right: 1px solid transparent;
+          @include transition(background .6s ease-in-out);
+          @media only screen and (min-width: $screen-md-max) {
+            margin-left: 3px;
+            width: 153px;
+          }
+          @media only screen and (min-width: $screen-lg-max) {
+            width: 195px;
+            margin-left: 6px;
+          }
+          &:first-child {
+            margin-left: 0;
+            border-left: 1px solid transparent;
+          }
+          &:hover, &.active {
+            background: rgba($redColor, .8);
+          }
+          > a {
+            display: block;
+            > * {
+              color: $whiteColor;
+            }
+            > i {
+              font-size: 40px;
+              line-height: 40px;
+              @include transition(
+                      font-size .3s ease-in-out
+              )
+            }
+            > span {
+              display: block;
+              @include font-size(14px);
+              @include transition(
+                      color .3s ease-in-out
+              )
+            }
+          }
+        }
+      }
+      &:before {
+        display: block;
+        width: 500vw;
+        height: 52px;
+        position: absolute;
+        left: -100%;
+        z-index: -1;
+        background: transparent;
+        border-top: 1px solid transparent;
+        @include transition(
+                background .3s ease-in-out
+        )
+      }
+      &.fixed {
+        position: fixed;
+        background: $whiteColor;
+        top: 51px;
+        margin: 0;
+        &:before {
+          content: '';
+          background: $whiteColor;
+          border-top-color: $mainNavBorderColor;
+          @include box-shadow(0, 20px, 20px, rgba(0, 0, 0, .1));
+        }
+        > ul {
+          > li {
+            position: relative;
+            background: transparent;
+            border-right-color: $mainNavBorderColor;
+            border-left-color: $mainNavBorderColor;
+            padding: 0;
+            height: 52px;
+            > a {
+              > i {
+                position: absolute;
+                font-size: 0
+              }
+              > span {
+                color: $textColor;
+                line-height: 52px;
+              }
+              &.active {
+                > span {
+                  color: $redColor;
+                }
+              }
+            }
+            &:after {
+              display: block;
+              content: '';
+              position: absolute;
+              width: 0;
+              height: 2px;
+              left: calc(50% - 6px);
+              bottom: 0;
+              background: $redColor;
+              @media only screen and (min-width: $screen-md-max) {
+                left: calc(50% - 3px);
+              }
+              @media only screen and (min-width: $screen-lg-max) {
+                left: calc(50% - 6px);
+              }
+              @include transition(
+                      width .3s ease-in-out,
+                      left .3s ease-in-out
+              );
+            }
+            &:first-child {
+              &:after {
+                left: 50%;
+              }
+            }
+            &:hover, &.active {
+              > a {
+                > span {
+                  color: $redColor;
+                }
+              }
+            }
+            &.active {
+              &:first-child {
+                &:after {
+                  left: 0;
+                  width: 100%;
+                }
+              }
+              &:after {
+                left: -6px;
+                width: calc(100% + 6px);
+                @media only screen and (min-width: $screen-md-max) {
+                  left: -3px;
+                  width: calc(100% + 3px);
+                }
+                @media only screen and (min-width: $screen-lg-max) {
+                  left: -3px;
+                  width: calc(100% + 3px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: $whiteColor !important;
+  @include box-shadow(0, -20px, 20px, rgba(0, 0, 0, .1));
+  > div {
+    > div {
+      border-top: 1px solid $mainNavColor;
+      padding-top: 40px;
+      margin-top: 20px;
+      @include clear-after;
+      &:first-child {
+        border-top: 0;
+        margin-top: 20px;
+      }
+      &:last-child {
+        padding-top: 20px;
+        > dl {
+          width: 358px;
+        }
+      }
+      > span {
+        display: inline-block;
+        vertical-align: middle;
+        color: $lightTextColor;
+        @include font-size(20px, 400);
+      }
+      > img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 12px;
+      }
+      > ul {
+        display: block;
+        list-style: none;
+        float: right;
+        @include clear-after;
+        > li {
+          width: 45px;
+          height: 35px;
+          float: left;
+          margin: 0 6px;
+          > a {
+            > img {
+              position: relative;
+              left: 0;
+              top: 0;
+              width: 45px;
+              height: 35px;
+              @include transition(
+                      width .1s ease-in-out,
+                      height .1s ease-in-out,
+                      left .1s ease-in-out,
+                      top .1s ease-in-out
+              );
+            }
+          }
+          &:hover {
+            > a {
+              > img {
+                left: -6px;
+                top: -4px;
+                width: 57px;
+                height: 44px;
+              }
+            }
+          }
+        }
+      }
+      > address, > dl > dd {
+        color: $mainNavColor;
+        @include font-size(14px, 400);
+        > span {
+          display: block;
+          color: $mainNavColor;
+          @include font-size(14px, 400);
+        }
+      }
+      > address {
+        position: relative;
+        float: left;
+        width: 358px;
+        &:before {
+          display: block;
+          content: 'ÐÐ´Ñ€ÐµÑ:';
+          position: absolute;
+          top: -20px;
+          left: 0;
+        }
+        > span {
+          color: $lightTextColor;
+        }
+      }
+      > dl {
+        float: left;
+        width: 328px;
+        @media only screen and (min-width: $screen-md-max) {
+          width: 290px;
+        }
+        @media only screen and (min-width: $screen-lg-max) {
+          width: 328px;
+        }
+        > dd {
+          margin-bottom: 20px;
+          > a {
+            display: inline-block;
+            //color: $mainNavColor;
+            color: $lightTextColor;
+            text-decoration: none;
+          }
+          > span {
+            > a {
+              display: inline-block;
+              color: $lightTextColor;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.registration {
+  display: inline-block;
+  padding: 0 30px;
+  height: 54px;
+  line-height: 54px;
+  background: $redColor;
+  color: $whiteColor;
+  margin: 60px auto 0;
+  text-align: center;
+  @include font-size(24px, 300);
+  @include border-radius(4px);
+  @include transition(background .3s ease-in-out);
+  @include user-select(none);
+  &:hover {
+    color: $whiteColor;
+    background: rgba($redColor, .5);
+  }
+  &:active {
+    color: #f6d3d1;
+    @include box-shadow(0px, 4px, 0px, #ba5552, inset)
+  }
+}
+
+section#documents {
+  > div {
+    > form {
+      display: block;
+      width: 1070px;
+      margin: 60px auto 0;
+      text-align: left;
+      @media only screen and (min-width: $screen-md-max) {
+        width: 880px;
+      }
+      @media only screen and (min-width: $screen-lg-max) {
+        width: 1070px;
+      }
+      > label {
+        color: $mainNavColor;
+        @include font-size(18px, 400)
+      }
+      > div {
+        overflow: hidden;
+        position: relative;
+        margin-top: 4px;
+        > input {
+          display: block;
+          width: 100%;
+          height: 54px;
+          line-height: 54px;
+          padding: 0 20px;
+          border: 1px solid $mainNavColor;
+          border-right: 0;
+          background: $whiteColor;
+          @include border-radius(4px);
+        }
+        > button {
+          background: $greenColor;
+          height: 54px;
+          line-height: 54px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding: 0 30px;
+          color: $whiteColor;
+          cursor: pointer;
+          @include font-size(24px, 300);
+          @include border-radius(4px);
+        }
+        > i {
+          position: absolute;
+          right: 160px;
+          top: 18px;
+          color: $mainNavColor;
+          cursor: pointer;
+          @include transition(color .3s ease-in-out);
+          &:hover {
+            color: $textColor;
+          }
+        }
+      }
+    }
+
+    > dl {
+      > dd {
+        position: relative;
+        display: inline-block;
+        font-size: 0;
+        width: 520px;
+        height: 385px;
+        margin: $padding;
+        background: $whiteColor;
+        padding: $padding;
+        border: 1px solid $seperatorColor;
+        vertical-align: top;
+        @media only screen and (min-width: $screen-md-max) {
+          width: 422px;
+        }
+        @media only screen and (min-width: $screen-lg-max) {
+          width: 520px;
+        }
+        > h4 {
+          text-align: left;
+          > * {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 90px;
+          }
+          > i {
+            font-size: 40px;
+            color: $mainNavColor;
+          }
+          > span {
+            padding-left: $padding;
+            text-transform: uppercase;
+            @include font-size(16px, 600);
+          }
+        }
+        > ul {
+          list-style: none;
+          text-align: left;
+          > li {
+            > a {
+              line-height: 30px;
+              @include font-size(14px, 400);
+            }
+          }
+        }
+        > div {
+          position: absolute;
+          left: $padding;
+          bottom: 0;
+          width: 520px - ($padding*2);
+          padding: $padding 0;
+          text-align: right;
+          border-top: 1px solid $textColor;
+          @include font-size(14px, 600);
+          @media only screen and (min-width: $screen-md-max) {
+            width: 422px - ($padding*2);
+          }
+          @media only screen and (min-width: $screen-lg-max) {
+            width: 520px - ($padding*2);
+          }
+          > a {
+
+          }
+        }
+      }
+    }
+  }
+}
+
+section#consulting {
+  padding-bottom: 0;
+  > div {
+    > article {
+      margin-bottom: 60px;
+    }
+  }
+  > figure {
+    margin-bottom: 0;
+    > div {
+      line-height: 130px;
+      text-align: center;
+      > form {
+        display: inline-block;
+        vertical-align: middle;
+        width: 1070px;
+        margin: 0;
+        text-align: left;
+        @media only screen and (min-width: $screen-md-max) {
+          width: 880px;
+        }
+        @media only screen and (min-width: $screen-lg-max) {
+          width: 1070px;
+        }
+        > label {
+          color: $mainNavColor;
+          @include font-size(18px, 400)
+        }
+        > div {
+          position: relative;
+          margin-top: 4px;
+          overflow: hidden;
+          > input {
+            display: block;
+            width: 100%;
+            height: 54px;
+            line-height: 54px;
+            padding: 0 20px;
+            border: 1px solid $mainNavColor;
+            border-right: 0;
+            background: $whiteColor;
+            @include border-radius(4px);
+          }
+          > button {
+            background: $greenColor;
+            height: 54px;
+            line-height: 54px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 0 30px;
+            color: $whiteColor;
+            cursor: pointer;
+            @include font-size(24px, 300);
+            @include border-radius(4px);
+          }
+          > i {
+            position: absolute;
+            right: 160px;
+            top: 18px;
+            color: $mainNavColor;
+            cursor: pointer;
+            @include transition(color .3s ease-in-out);
+            &:hover {
+              color: $textColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section#calculators {
+  > div {
+    > dl {
+      font-size: 0;
+      margin-top: 60px;
+      > dd {
+        display: inline-block;
+        width: 334px;
+        height: 150px;
+        margin: $padding/3;
+        @media only screen and (min-width: $screen-md-max) {
+          width: 293px;
+        }
+        @media only screen and (min-width: $screen-lg-max) {
+          width: 334px;
+        }
+        > h4 {
+          border: 1px solid $greenColor;
+          border-bottom: 0;
+          line-height: 58px;
+          > i {
+            position: relative;
+            top: 2px;
+            font-size: 20px;
+            vertical-align: middle;
+            margin-left: 20px;
+            color: $greenColor;
+          }
+          > span {
+            color: $greenColor;
+            line-height: 58px;
+            vertical-align: middle;
+            @include font-size(16px, 400);
+          }
+        }
+        > ul {
+          background: $greenColor;
+          height: 193px;
+          text-align: left;
+          padding: $padding;
+          @media only screen and (min-width: $screen-md-max) {
+            height: 220px;
+          }
+          @media only screen and (min-width: $screen-lg-max) {
+            height: 193px;
+          }
+          > li {
+            > a {
+              display: inline-block;
+              color: $whiteColor;
+              line-height: 24px;
+              padding: 4px 10px;
+              @include font-size(16px, 400);
+              @include transition(
+                      color .3s ease-in-out,
+                      background .3s ease-in-out
+              );
+              &:hover, &.active {
+                background: $whiteColor;
+                color: $greenColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+section#reports {
+  > div {
+    > article {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+section#webinars {
+  > div {
+    @include clear-after;
+    .mainBlock {
+      float: left;
+      position: relative;
+      width: 380px;
+      height: 270px;
+      overflow: hidden;
+      @include border-radius(4px);
+      > h4 {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: $padding $padding*2;
+        text-align: left;
+        color: $whiteColor;
+        background: rgba($mainNavColor, .8);
+        @include font-size(15px, 300);
+        > i {
+          color: $whiteColor;
+          float: right;
+          font-size: 10px;
+          position: relative;
+          top: 5px;
+        }
+      }
+      > a {
+        display: block;
+        width: 63px;
+        height: 38px;
+        background: url("img/play.svg");
+        position: absolute;
+        left: $padding;
+        bottom: $padding;
+      }
+    }
+    .news {
+      margin: 0 40px;
+      width: 250px;
+      float: left;
+      text-align: left;
+      @media only screen and (min-width: $screen-md-max) {
+        margin: 0 20px;
+        width: 230px;
+      }
+      @media only screen and (min-width: $screen-lg-max) {
+        margin: 0 40px;
+        width: 250px;
+      }
+      > h4 {
+        color: $darkTextColor;
+        @include font-size(24px, 400);
+      }
+      > article {
+        margin-top: $padding;
+        color: $darkTextColor;
+        @include font-size(15px, 300);
+      }
+    }
+    > ul {
+      display: block;
+      width: 260px;
+      float: right;
+      list-style: none;
+      > li {
+        padding: 6px 0;
+        text-align: left;
+        > a {
+          color: $darkTextColor;
+          line-height: 20px;
+          @include font-size(15px, 300);
+        }
+        > i {
+          float: right;
+          font-size: 10px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+  > figure.videos {
+    > dl {
+      font-size: 0;
+      text-align: center;
+      > dd {
+        display: inline-block;
+        vertical-align: top;
+        width: 130px;
+        margin: $padding;
+        text-align: left;
+        > a {
+          > span {
+            text-align: left;
+            color: $blueColor;
+            @include font-size(14px, 400);
+          }
+        }
+      }
+    }
+  }
+
+  > figure.webinars {
+    > div {
+      margin: 0 auto;
+      padding: 20px 0;
+      height: auto;
+      > dl {
+        display: block;
+        font-size: 0;
+        text-align: center;
+        > dd {
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          vertical-align: top;
+          width: 240px;
+          height: 185px;
+          margin: $padding;
+          text-align: left;
+          @include border-radius(4px);
+          &.left {
+            float: left;
+          }
+          &.right {
+            float: right;
+          }
+          > h4 {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding: $padding/2 $padding;
+            text-align: left;
+            color: $whiteColor;
+            background: rgba($mainNavColor, .8);
+            @include font-size(15px, 300);
+            > i {
+              color: $whiteColor;
+              float: right;
+              font-size: 10px;
+              position: relative;
+              top: 5px;
+            }
+          }
+          > a {
+            display: block;
+            width: 63px;
+            height: 38px;
+            background: url("img/play.svg");
+            position: absolute;
+            left: $padding;
+            bottom: $padding;
+          }
+        }
+      }
+    }
+  }
+}
+
+section#prices {
+  > div {
+    padding: 20px 0;
+    > table {
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: separate;
+      border-right: 1px solid $mainNavColor;
+      border-bottom: 1px solid $mainNavColor;
+      td, th {
+        border-left: 1px solid $mainNavColor;
+        border-top: 1px solid $mainNavColor;
+      }
+      > thead, > tfoot {
+        > tr {
+          th {
+            width: 254px;
+            height: 70px;
+            line-height: 70px;
+            color: $whiteColor;
+            vertical-align: middle;
+            @include font-size(24px, 400);
+            &:first-child {
+              width: auto;
+            }
+            > a {
+              display: block;
+              color: $whiteColor;
+              border: 1px solid $whiteColor;
+              @include border-radius(4px);
+              @include font-size(18px, 600);
+              @include transition(background .3s ease-in-out);
+            }
+          }
+          th {
+            &.red {
+              > a:hover {
+                background: $redColor;
+              }
+            }
+            &.green {
+              > a:hover {
+                background: $greenColor;
+              }
+            }
+          }
+          &.row1 {
+            th:first-child {
+              border: 0;
+            }
+            th.red {
+              background: $redColor;
+            }
+            th.green {
+              background: $greenColor;
+            }
+          }
+          &.row2 {
+            th {
+              padding: 20px 24px;
+            }
+            th.red {
+              background: rgba($redColor, .7);
+            }
+            th.green {
+              background: rgba($greenColor, .7);
+            }
+          }
+        }
+      }
+      > tbody {
+        > tr {
+          > td {
+            padding: 24px 30px;
+            text-align: right;
+            vertical-align: middle;
+            @include font-size(18px, 400);
+            * {
+              @include font-size(18px, 400);
+            }
+            &:first-child {
+              text-align: left;
+            }
+            > ul {
+              list-style: none;
+              > li {
+                position: relative;
+                padding-left: 28px;
+                line-height: 30px;
+                &:before {
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  top: 8px;
+                  vertical-align: middle;
+                  margin-right: 10px;
+                  color: $greenColor;
+                  @extend .i-47;
+                  @include buroicons;
+                }
+                > span {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main#registration,
+main#authorization {
+  position: relative;
+
+  > div.background {
+    position: fixed;
+    left: -10%;
+    top: -10%;
+    width: 120%;
+    height: 120%;
+    background: url("img/registration-bg.jpg") no-repeat center center;
+    @include css3-prefix(filter, blur(10px));
+    @include background-size(cover);
+  }
+
+  $regBoxWidth: 616px;
+  $regBoxHeight: 650px;
+
+  > figure {
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    margin-left: $regBoxWidth/2*-1;
+    width: $regBoxWidth;
+    //height: $regBoxHeight;
+    background: $whiteColor;
+    > a {
+      > img {
+        display: block;
+        margin: 40px auto;
+      }
+    }
+    > h2 {
+      display: block;
+      text-align: center;
+      margin-bottom: 40px;
+      color: $lightTextColor;
+      @include font-size(24px, 300);
+    }
+    > form {
+      display: block;
+      width: 422px;
+      margin: 0 auto 40px;
+      border-top: 1px solid $mainNavColor;
+      > div {
+        position: relative;
+        > input {
+          display: block;
+          width: 100%;
+          height: 56px;
+          border-bottom: 1px solid $mainNavColor;
+          padding: 0 20px;
+          @include font-size(24px, 300);
+          @include transition(
+                  background .2s ease-in-out,
+                  color .2s ease-in-out
+          );
+          &.error {
+            background: rgba($redColor, .4);
+            color: $whiteColor;
+          }
+        }
+        > div.error {
+          display: none;
+          position: absolute;
+          top: 58px;
+          left: -16px;
+          width: 424px;
+          background: $whiteColor;
+          border: 1px solid $mainNavColor;
+          z-index: 100;
+          padding: 14px;
+          @include font-size(14px, 300);
+          @include box-shadow(0, 0, 5px, rgba($blackColor, .23));
+          &:after, &:before {
+            bottom: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+          }
+
+          &:after {
+            border-color: rgba(255, 255, 255, 0);
+            border-bottom-color: #ffffff;
+            border-width: 6px;
+            margin-left: -6px;
+          }
+          &:before {
+            border-color: rgba(178, 178, 178, 0);
+            border-bottom-color: #b2b2b2;
+            border-width: 7px;
+            margin-left: -7px;
+          }
+        }
+      }
+      > div.tel {
+        position: relative;
+        &:before {
+          position: absolute;
+          left: 20px;
+          top: 0;
+          display: block;
+          content: '+7';
+          line-height: 56px;
+          @include font-size(24px, 300);
+        }
+        > input {
+          display: block;
+          width: 100%;
+          height: 56px;
+          border-bottom: 1px solid $mainNavColor;
+          padding: 0 20px 0 48px;
+          @include font-size(24px, 300);
+        }
+      }
+      > button {
+        display: block;
+        background: $redColor;
+        color: $whiteColor;
+        width: 100%;
+        height: 54px;
+        margin-top: 40px;
+        line-height: 54px;
+        text-align: center;
+        cursor: pointer;
+        @include font-size(24px, 300);
+        @include border-radius(4px);
+        @include transition(
+                background .3s ease-in-out
+        );
+        &:hover, &:disabled {
+          background: rgba($redColor, .5);
+        }
+      }
+    }
+    > div {
+      width: 422px;
+      margin: 40px auto;
+      text-align: center;
+      > a {
+        color: $textColor;
+        text-decoration: underline;
+      }
+    }
+    > figure {
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      color: $whiteColor;
+      width: $regBoxWidth;
+      text-align: center;
+      @include font-size(20px, 300);
+      > a {
+        color: $whiteColor;
+        border-bottom: 1px solid $whiteColor;
+        @include font-size(20px, 300);
+      }
+    }
+  }
+}

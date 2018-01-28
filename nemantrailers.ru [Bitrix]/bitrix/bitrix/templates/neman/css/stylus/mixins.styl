@@ -1,0 +1,126 @@
+grad(light=#fff,dark=#000, bgl=1, percent=0)
+    if (bgl==1)
+        background: light; /* Old browsers */
+    else
+        background: dark; /* Old browsers */
+    if percent
+        background: linear-gradient(to bottom,  light 50%,dark 50%); /* W3C */
+    else
+        background: linear-gradient(to bottom,  light 0%,dark 100%); /* W3C */
+
+a(color2 = @color)
+    if light(darken(@color,10%))
+        border-bottom: 1px solid darken(@color,49%)
+    else
+        border-bottom: 1px solid lighten(@color,59%)
+    border-bottom: 1px solid rgba(@color, 0.3)
+    padding-bottom: 0px
+    //transition: color 0.3s, border 0.3s
+    &:hover
+        if (color2 == @color)
+            border: none !important
+            padding-bottom: 1px
+            //transition: border 0.3s
+        else
+            color: color2
+            //transition: color 0.3s, border 0.3s
+            if light(darken(@color,10%))
+                border-bottom-color: darken(@color,49%) !important
+            else
+                border-bottom-color: lighten(@color,59%) !important
+            border-bottom-color: rgba(@color, 0.3) !important
+after(bg,w=7,h=4,t=5, r=-10)
+    position: relative
+    &:after
+        position: absolute
+        content: ' '
+        width: w px
+        height: h px
+        background: url('../img/'+bg+'.png') 0 0 no-repeat
+        display: block
+        top: t px
+        right: r px
+afters(pos = 0 0 ,w=7,h=4,t=5, r=-10)
+    position: relative
+    &:after
+        position: absolute
+        content: ' '
+        width: w px
+        height: h px
+        z-index: 10
+        display: block
+        top: t px
+        right: r px
+txt-bi = {
+    font-size: 1.375em
+    font-weight: 300
+}
+txt-bb = {
+    font-size: 1.375em
+    font-weight: 400
+}
+txt-no = {
+    font-size: 21.7px
+    font-weight: normal
+}
+txt-nb = {
+    font-size: 21.7px
+    font-weight: bold
+}
+txt-nm = {
+    font-size: 21.7px
+    font-weight: 500
+}
+txt-nl = {
+    font-size: 21.7px
+    font-weight: 300
+}
+txt-so = {
+    font-size: 20px
+    font-weight: normal
+}
+txt-sb = {
+    font-size: 20px
+    font-weight: bold
+}
+txt-sm = {
+    font-size: 20px
+    font-weight: 500
+}
+txt-sl = {
+    font-size: 20px
+    font-weight: 300
+}
+txt-si = {
+    font-size: 0.9em
+    font-weight: 300
+}
+txt-sb = {
+    font-size: 0.9em
+    font-weight: 400
+}
+txt-mi = {
+    font-size: 14px
+    font-weight: 300
+}
+txt-mb = {
+    font-size: 14px
+    font-weight: 400
+}
+txt-ei = {
+    font-size: 18px
+    font-weight: 300
+}
+txt-eb = {
+    font-size: 18px
+    font-weight: 400
+}
+uln = {
+    margin : 0
+    padding: 0
+    li: {
+        list-style:none
+    }
+}
+fz(size=14)
+    font-size: size px

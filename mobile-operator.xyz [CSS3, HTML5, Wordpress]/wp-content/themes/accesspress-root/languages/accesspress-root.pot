@@ -1,0 +1,781 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AccessPress Root 1.04\n"
+"POT-Creation-Date: 2015-03-14 13:04+0545\n"
+"PO-Revision-Date: 2015-03-14 13:04+0545\n"
+"Last-Translator: \n"
+"Language-Team: Prabin Dangol <info@accesspressthemes.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:23
+msgid "Oops!!"
+msgstr ""
+
+#: ../404.php:25
+msgid "404"
+msgstr ""
+
+#: ../404.php:26
+msgid "Page Not Found"
+msgstr ""
+
+#: ../comments.php:37 ../comments.php:54
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:38 ../comments.php:55
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:39 ../comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:74
+msgid "Name *"
+msgstr ""
+
+#: ../comments.php:78
+msgid "Email Address *"
+msgstr ""
+
+#: ../comments.php:83
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:89
+msgid "Comment *"
+msgstr ""
+
+#: ../content-blog.php:57
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../content-blog.php:65 ../content-page.php:15 ../content-single.php:18
+#: ../content.php:29
+msgid "Pages:"
+msgstr ""
+
+#: ../content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: ../content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../content-page.php:22 ../inc/template-tags.php:124
+msgid "Edit"
+msgstr ""
+
+#: ../content.php:22
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../footer.php:54
+msgid "WordPress Theme by"
+msgstr ""
+
+#: ../functions.php:64
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:65
+msgid "Footer Menu"
+msgstr ""
+
+#: ../functions.php:100
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../functions.php:110
+msgid "Right Sidebar"
+msgstr ""
+
+#: ../functions.php:120
+msgid "Footer 1"
+msgstr ""
+
+#: ../functions.php:130
+msgid "Footer 2"
+msgstr ""
+
+#: ../functions.php:140
+msgid "Footer 3"
+msgstr ""
+
+#: ../functions.php:150
+msgid "Footer 4"
+msgstr ""
+
+#: ../header.php:43
+msgid "Menu"
+msgstr ""
+
+#: ../search.php:12
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../searchform.php:9
+msgid "Type something and hit Enter to begin your search..."
+msgstr ""
+
+#: ../inc/accesspress-functions.php:52
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../inc/accesspress-functions.php:290
+msgid "Home"
+msgstr ""
+
+#: ../inc/accesspress-functions.php:310
+msgid "Archive by category"
+msgstr ""
+
+#: ../inc/accesspress-functions.php:312
+msgid "Search results for"
+msgstr ""
+
+#: ../inc/accesspress-functions.php:370
+msgid "Posts tagged"
+msgstr ""
+
+#: ../inc/accesspress-functions.php:374
+msgid "Articles posted by "
+msgstr ""
+
+#: ../inc/accesspress-functions.php:382
+msgid "Page"
+msgstr ""
+
+#: ../inc/accesspress-options.php:13
+msgid "Full Width"
+msgstr ""
+
+#: ../inc/accesspress-options.php:14
+msgid "Boxed"
+msgstr ""
+
+#: ../inc/accesspress-options.php:19
+msgid "Fade"
+msgstr ""
+
+#: ../inc/accesspress-options.php:20
+msgid "Slide Horizontal"
+msgstr ""
+
+#: ../inc/accesspress-options.php:21
+msgid "Slide Vertical"
+msgstr ""
+
+#: ../inc/accesspress-options.php:26
+msgid "-- None --"
+msgstr ""
+
+#: ../inc/accesspress-options.php:27 ../inc/accesspress-options.php:52
+msgid "Image"
+msgstr ""
+
+#: ../inc/accesspress-options.php:28
+msgid "Color"
+msgstr ""
+
+#: ../inc/accesspress-options.php:29
+msgid "Pattern"
+msgstr ""
+
+#: ../inc/accesspress-options.php:53
+msgid "Text"
+msgstr ""
+
+#: ../inc/accesspress-options.php:54
+msgid "Image & Text"
+msgstr ""
+
+#: ../inc/accesspress-options.php:59
+msgid "Blog Image Large"
+msgstr ""
+
+#: ../inc/accesspress-options.php:60
+msgid "Blog Image Medium"
+msgstr ""
+
+#: ../inc/accesspress-options.php:61
+msgid "Blog Image Alternate Medium"
+msgstr ""
+
+#: ../inc/accesspress-options.php:62
+msgid "Blog Full Content"
+msgstr ""
+
+#: ../inc/accesspress-options.php:120
+msgid ""
+"AccessPress Themes is an online WordPress themes store, that provides "
+"beautiful and useful themes. All of our themes are crafted with our years of "
+"experience. Our theme don't lack the basics and don't have a lot of non-"
+"sense features which you might never use. <br /><br /> AccessPress Themes "
+"has beautiful and elegant, fully responsive, multipurpose themes to meet "
+"your need for free and premium basis. Our themes have bunch of easily "
+"customizable options and features, someone with no programming knowledge can "
+"use our easy theme options panel and configure/setup the theme as needed. "
+"Our support is 24/7, even for the free themes! Turn around times are as less "
+"as 1 hour!"
+msgstr ""
+
+#: ../inc/accesspress-options.php:127
+msgid "General Settings"
+msgstr ""
+
+#: ../inc/accesspress-options.php:132
+msgid "Website Layout"
+msgstr ""
+
+#: ../inc/accesspress-options.php:140
+msgid "Responsive"
+msgstr ""
+
+#: ../inc/accesspress-options.php:142
+msgid "Enable"
+msgstr ""
+
+#: ../inc/accesspress-options.php:143
+msgid "Disable"
+msgstr ""
+
+#: ../inc/accesspress-options.php:148
+msgid "Background"
+msgstr ""
+
+#: ../inc/accesspress-options.php:149
+msgid "Image/Color/Pattern"
+msgstr ""
+
+#: ../inc/accesspress-options.php:156
+msgid "Background Image"
+msgstr ""
+
+#: ../inc/accesspress-options.php:157
+msgid "page_background_image"
+msgstr ""
+
+#: ../inc/accesspress-options.php:169
+msgid "Background Color"
+msgstr ""
+
+#: ../inc/accesspress-options.php:170
+msgid "Color for the Background"
+msgstr ""
+
+#: ../inc/accesspress-options.php:176
+msgid "Background Patterns"
+msgstr ""
+
+#: ../inc/accesspress-options.php:184
+msgid "Logo Settings"
+msgstr ""
+
+#: ../inc/accesspress-options.php:191
+msgid "Upload Logo"
+msgstr ""
+
+#: ../inc/accesspress-options.php:193
+msgid "Standard size of the logo is 280X80px"
+msgstr ""
+
+#: ../inc/accesspress-options.php:198
+msgid "Upload Fav Icon"
+msgstr ""
+
+#: ../inc/accesspress-options.php:204
+msgid "Single Post Layout"
+msgstr ""
+
+#: ../inc/accesspress-options.php:212
+msgid "Single Page Layout"
+msgstr ""
+
+#: ../inc/accesspress-options.php:220
+msgid "Archive Page Layout"
+msgstr ""
+
+#: ../inc/accesspress-options.php:228
+msgid "Blog Post Layout"
+msgstr ""
+
+#: ../inc/accesspress-options.php:235
+msgid "Exclude From Blog"
+msgstr ""
+
+#: ../inc/accesspress-options.php:236
+msgid "Check the categories to exclude from blog page."
+msgstr ""
+
+#: ../inc/accesspress-options.php:243
+msgid "Home Page Settings"
+msgstr ""
+
+#: ../inc/accesspress-options.php:263
+msgid "Text Slider"
+msgstr ""
+
+#: ../inc/accesspress-options.php:271 ../inc/accesspress-options.php:459
+#: ../inc/accesspress-options.php:494
+msgid "Select a Category"
+msgstr ""
+
+#: ../inc/accesspress-options.php:272
+msgid "Select the category for text slider"
+msgstr ""
+
+#: ../inc/accesspress-options.php:284
+msgid "Service Block"
+msgstr ""
+
+#: ../inc/accesspress-options.php:291
+msgid "Service Section Title"
+msgstr ""
+
+#: ../inc/accesspress-options.php:298
+msgid "Service Section Desc"
+msgstr ""
+
+#: ../inc/accesspress-options.php:307
+msgid "Service "
+msgstr ""
+
+#: ../inc/accesspress-options.php:320
+msgid "Call To Action"
+msgstr ""
+
+#: ../inc/accesspress-options.php:327 ../inc/accesspress-options.php:409
+#: ../inc/accesspress-options.php:479
+msgid "Title"
+msgstr ""
+
+#: ../inc/accesspress-options.php:334 ../inc/accesspress-options.php:416
+#: ../inc/accesspress-options.php:486
+msgid "Desc"
+msgstr ""
+
+#: ../inc/accesspress-options.php:341
+msgid "Button Text"
+msgstr ""
+
+#: ../inc/accesspress-options.php:348
+msgid "Button Link"
+msgstr ""
+
+#: ../inc/accesspress-options.php:359
+msgid "Feature Block"
+msgstr ""
+
+#: ../inc/accesspress-options.php:366
+msgid "Feature Section Title"
+msgstr ""
+
+#: ../inc/accesspress-options.php:368
+msgid "Our Features"
+msgstr ""
+
+#: ../inc/accesspress-options.php:373
+msgid "Feature Section Desc"
+msgstr ""
+
+#: ../inc/accesspress-options.php:382
+msgid "Feature "
+msgstr ""
+
+#: ../inc/accesspress-options.php:391
+msgid "Read More Text"
+msgstr ""
+
+#: ../inc/accesspress-options.php:393 ../inc/accesspress-options.php:453
+#: ../inc/accesspress-options.php:544
+msgid "Read More"
+msgstr ""
+
+#: ../inc/accesspress-options.php:402
+msgid "Latest Post Block"
+msgstr ""
+
+#: ../inc/accesspress-options.php:411
+msgid "AccessPress Root"
+msgstr ""
+
+#: ../inc/accesspress-options.php:423
+msgid "No of Post"
+msgstr ""
+
+#: ../inc/accesspress-options.php:435
+msgid "Project Block"
+msgstr ""
+
+#: ../inc/accesspress-options.php:443
+msgid "Project "
+msgstr ""
+
+#: ../inc/accesspress-options.php:451
+msgid "Project Read More"
+msgstr ""
+
+#: ../inc/accesspress-options.php:460
+msgid "Select the category for project."
+msgstr ""
+
+#: ../inc/accesspress-options.php:472
+msgid "Testimonial Slider"
+msgstr ""
+
+#: ../inc/accesspress-options.php:481
+msgid "What Our Client Say"
+msgstr ""
+
+#: ../inc/accesspress-options.php:495
+msgid "Select the category for testimonial slider."
+msgstr ""
+
+#: ../inc/accesspress-options.php:511
+msgid "Slider Images"
+msgstr ""
+
+#: ../inc/accesspress-options.php:517
+msgid "Slider "
+msgstr ""
+
+#: ../inc/accesspress-options.php:523
+msgid "Slider Image"
+msgstr ""
+
+#: ../inc/accesspress-options.php:529
+msgid "Slider Title"
+msgstr ""
+
+#: ../inc/accesspress-options.php:535
+msgid "Slider Description"
+msgstr ""
+
+#: ../inc/accesspress-options.php:542
+msgid "Slider Button Text"
+msgstr ""
+
+#: ../inc/accesspress-options.php:549
+msgid "Slider Button Link"
+msgstr ""
+
+#: ../inc/accesspress-options.php:558
+msgid "Slider Settings"
+msgstr ""
+
+#: ../inc/accesspress-options.php:562
+msgid "Show Slider"
+msgstr ""
+
+#: ../inc/accesspress-options.php:564 ../inc/accesspress-options.php:572
+#: ../inc/accesspress-options.php:580 ../inc/accesspress-options.php:588
+#: ../inc/accesspress-options.php:621
+msgid "Yes"
+msgstr ""
+
+#: ../inc/accesspress-options.php:565 ../inc/accesspress-options.php:573
+#: ../inc/accesspress-options.php:581 ../inc/accesspress-options.php:589
+#: ../inc/accesspress-options.php:622
+msgid "No"
+msgstr ""
+
+#: ../inc/accesspress-options.php:570
+msgid "Show Pager"
+msgstr ""
+
+#: ../inc/accesspress-options.php:578
+msgid "Show Controls"
+msgstr ""
+
+#: ../inc/accesspress-options.php:586
+msgid "Auto Transition"
+msgstr ""
+
+#: ../inc/accesspress-options.php:594
+msgid "Slider Transition"
+msgstr ""
+
+#: ../inc/accesspress-options.php:601
+msgid "Slider Transition Speed"
+msgstr ""
+
+#: ../inc/accesspress-options.php:610
+msgid "Slider Pause Duration"
+msgstr ""
+
+#: ../inc/accesspress-options.php:619
+msgid "Show Caption"
+msgstr ""
+
+#: ../inc/accesspress-options.php:628
+msgid "Social Links"
+msgstr ""
+
+#: ../inc/accesspress-options.php:632
+msgid "Facebook"
+msgstr ""
+
+#: ../inc/accesspress-options.php:637
+msgid "Twitter"
+msgstr ""
+
+#: ../inc/accesspress-options.php:642
+msgid "Google Plus"
+msgstr ""
+
+#: ../inc/accesspress-options.php:647
+msgid "Youtube"
+msgstr ""
+
+#: ../inc/accesspress-options.php:652
+msgid "Pinterest"
+msgstr ""
+
+#: ../inc/accesspress-options.php:657
+msgid "Linkedin"
+msgstr ""
+
+#: ../inc/accesspress-options.php:662
+msgid "Instagram"
+msgstr ""
+
+#: ../inc/accesspress-options.php:667
+msgid "StumbleUpon"
+msgstr ""
+
+#: ../inc/accesspress-options.php:672
+msgid "Skype"
+msgstr ""
+
+#: ../inc/accesspress-options.php:679
+msgid "About"
+msgstr ""
+
+#: ../inc/accesspress-options.php:683
+msgid "About AccessPress Themes"
+msgstr ""
+
+#: ../inc/template-tags.php:26
+msgid "Older posts"
+msgstr ""
+
+#: ../inc/template-tags.php:30
+msgid "Newer posts"
+msgstr ""
+
+#: ../inc/template-tags.php:97
+msgid "Comment"
+msgstr ""
+
+#: ../inc/template-tags.php:97
+msgid "1 Comment"
+msgstr ""
+
+#: ../inc/template-tags.php:97
+msgid "% Comments"
+msgstr ""
+
+#: ../inc/template-tags.php:112 ../inc/template-tags.php:118
+msgid ", "
+msgstr ""
+
+#: ../inc/template-tags.php:114 ../inc/template-tags.php:120
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: ../inc/template-tags.php:141
+#, php-format
+msgid "Category: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:143
+#, php-format
+msgid "Tag: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:145
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:147
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:149
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:151
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:173
+#, php-format
+msgid "Archives: %s"
+msgstr ""
+
+#: ../inc/template-tags.php:177
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: ../inc/template-tags.php:179
+msgid "Archives"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-framework-admin.php:87
+#: ../inc/panel/includes/class-options-framework-admin.php:88
+msgid "Theme Options"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-framework-admin.php:188
+msgid "Follow us for new updates"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-framework-admin.php:208
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-framework-admin.php:238
+msgid "Default options restored."
+msgstr ""
+
+#: ../inc/panel/includes/class-options-framework-admin.php:296
+msgid "Options saved."
+msgstr ""
+
+#: ../inc/panel/includes/class-options-media-uploader.php:58
+msgid "No file chosen"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-media-uploader.php:61
+#: ../inc/panel/includes/class-options-media-uploader.php:113
+msgid "Upload"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-media-uploader.php:63
+#: ../inc/panel/includes/class-options-media-uploader.php:114
+msgid "Remove"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-media-uploader.php:66
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: ../inc/panel/includes/class-options-media-uploader.php:90
+msgid "View File"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:367
+msgid "No Repeat"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:368
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:369
+msgid "Repeat Vertically"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:370
+msgid "Repeat All"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:382
+msgid "Top Left"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:383
+msgid "Top Center"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:384
+msgid "Top Right"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:385
+msgid "Middle Left"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:386
+msgid "Middle Center"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:387
+msgid "Middle Right"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:388
+msgid "Bottom Left"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:389
+msgid "Bottom Center"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:390
+msgid "Bottom Right"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:402
+msgid "Scroll Normally"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:403
+msgid "Fixed in Place"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:475
+msgid "Normal"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:476
+msgid "Italic"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:477
+msgid "Bold"
+msgstr ""
+
+#: ../inc/panel/includes/class-options-sanitization.php:478
+msgid "Bold Italic"
+msgstr ""

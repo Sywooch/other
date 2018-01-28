@@ -1,0 +1,191 @@
+
+
+/* Start:/bitrix/components/salavey/salavey.configurator_website/templates/.default/style.css?14413944656455*/
+.licenses_block .tit { font-size:20px; color:#663300; padding-bottom:20px; }
+
+.licenses_block .item { width:385px; float:left; border-bottom:1px solid #cbbead; padding-bottom:20px; margin-bottom:20px; background:url(/img/im_block_shadow.png) 0 100% no-repeat; }
+.licenses_block .item.itemFirst { margin-right:15px; }
+
+.licenses_block .item .il { width:180px; padding:10px 0 8px 0; border:1px dotted #6b553d; background-color:#FFF; float:left; margin-right:10px; position:relative; }
+.licenses_block .item .il a { display:block; text-align:center; text-decoration:none; color:#333333; font-size:14px; font-weight:bold; text-transform:uppercase; }
+.licenses_block .item .il a:hover { text-decoration:underline; }
+.licenses_block .item .il a img { display:block; margin:0 auto 5px auto; }
+.licenses_block .item .il .price { font-size:18px; font-weight:bold; color:#cc0033; text-align:center; padding:8px 0; }
+.licenses_block .item .il input[type=submit] { width:105px; height:28px; line-height:28px; text-align:center; color:#FFF; font-size:13px; font-weight:bold; text-transform:uppercase; background:url(/img/im_buy.png) 0 0 no-repeat; border:none; cursor:pointer; margin:0 auto; display:block; }
+.licenses_block .item .il input[type=submit]:hover { background-position:0 -28px; }
+
+.licenses_block .item .il .spec { position:absolute; top:5px; right:5px; width:46px; height:47px; background:url(/img/im_spec.png) 0 0 no-repeat; }
+.licenses_block .item .il .discount { position:absolute; top:11px; right:10px; width:76px; height:59px; padding-top:15px; background:url(/img/im_discount.png) 0 0 no-repeat; font-weight:bold; color:#663300; text-align:center; text-transform:uppercase; }
+.licenses_block .item .il .discount span { font-size:20px; }
+
+.licenses_block .item .ir { width:190px; float:left; text-align:left; }
+.licenses_block .item .ir .tit { font-size:18px; padding-bottom:7px; }
+.licenses_block .item .ir .tit a { color:#333333; text-decoration:none; }
+.licenses_block .item .ir .tit a:hover { text-decoration:underline; }
+
+.licenses_block .item .ir .more { margin-top:-5px; font-size:11px; text-align:right; }
+
+.licenses_block .item .ir .mark { font-weight:bold; }
+.licenses_block .item .ir .mark img { margin:15px 10px 0 0; }
+.licenses_block .item .ir .mark span { display:block; color:#cc0033; padding-top:5px; }
+
+
+/*.sect {	width: 600px;	background: #EFEFEF;	margin: 0 0 30px;}*/
+.sect {
+margin-bottom: 15px;
+}
+
+/*
+.conf-container  .tbs li { z-index:1000; background:url('/bitrix/components/salavey/salavey.configurator_website/templates/.default/images/tab-button-2.png')no-repeat; float:left; display:inline-block; margin-left:-63px; width:210px; height:46px; line-height:48px !important; text-decoration:underline; color:#0143a0; position:relative; cursor:pointer; }
+.conf-container  .tbs li:nth-child(odd) {margin: 0 1px -1px -23px;z-index:100;}
+.conf-container  .tbs .current {background:url('/bitrix/components/salavey/salavey.configurator_website/templates/.default/images/tab-active2-otrezok.png')no-repeat;color:#fff;text-decoration:none;z-index:3000!important; }
+.conf-container  .tbs li:first-child {background:url('/bitrix/components/salavey/salavey.configurator_website/templates/.default/images/tab-button-first.png')no-repeat;width:178px;margin:0 0;z-index:2000;}
+.conf-container .tbs li:hover {text-decoration:none;}
+*/
+.bx {	display: none; border-width: 0 1px 1px;	background: #FFF;}
+.bx.visible {	display: block;}
+.sect.vertical {	width: 440px;	border-left: 160px solid #FFF;}
+.vertical .tbs {	width: 160px;	float: left;	display: inline;	margin: 0 0 0 -160px;}
+.vertical .tbs li {	padding: 0 13px;	margin: 0 0 1px;	border: 1px solid #E4E4E4;	border-right: 1px solid #F9F9F9;	width: 132px;	height: 25px;}
+.vertical .tbs li:hover {	width: 131px;}
+.vertical .tbs li.current {	width: 133px;	color: #444;	background: #EFEFEF;	border: 1px solid #D4D4D4;  border-right: 1px solid #EFEFEF;  margin-right: -1px;}
+.vertical .bx {  border-width: 1px;}
+
+.click_toggle {
+/*padding-bottom:0!important;
+margin-top:14px;
+display:block;
+height:30px;
+line-height:30px!important;
+background:linear-gradient(to top, #b3c4ce , #e2e8ec);
+border-radius:5px;
+width:272px;
+padding-left:35px;
+cursor: pointer!important;
+z-index:900;*/
+
+
+}
+.click_toggle span{
+background:url('/bitrix/components/salavey/salavey.configurator_website/templates/.default/images/plus-list-off.png') right 40% no-repeat;
+width:260px!important;
+display:block;
+}
+.click_toggle_active {
+	background-color: #000 !important;
+	color: #fff !important;
+}
+
+.click_toggle{
+	cursor:pointer;
+}
+
+.li_sect_active span {
+background:url('/bitrix/components/salavey/salavey.configurator_website/templates/.default/images/plus-list-active.png') 100% 40% no-repeat;
+}
+.toggle {
+	/*width:257px;
+	background:#eff3f5;
+	margin-top:-5px!important;
+	padding:15px 10px 0 15px;
+	border-bottom:3px solid #930e24;
+	box-shadow:0 2px 0 0 #c01c45;
+	border-radius: 0 0 5px 5px;
+	font-size:14px;
+	text-align:left;*/
+}
+
+
+.toggle>li {
+	background-color:white;
+	padding: 10px 0 0 15px!important;
+	text-align:left!important;
+
+}
+.toggle li {
+	background-image:none!important;
+	list-style-type: none;
+}
+.toggle li:first-child {//margin-top:10px;}
+
+.sect13123 {
+	background:#fff;
+	padding-left:0!important;
+	width:99%;
+
+}
+
+.toggle>li{
+	font-size: 13px;
+	line-height: 22px;
+}
+
+.container_calc{
+	margin-bottom:40px;
+}
+
+.sect13123 li {
+padding-left:15px;
+padding-right:10px;
+}
+
+
+/* .right-conf {
+position: fixed;
+right: 0;
+top: 0;
+} */
+.container_calc .content {
+float:none!important;
+}
+
+.container_calc .content ul.tbs li {
+
+	display:inline-block;
+	text-align: center;
+
+}
+
+.container_calc .content ul li.current{
+
+}
+
+.container_calc .content ul li.current .pricing-title h3 {
+	color: #fff;
+	font-size: 23px;
+	font-weight: 600;
+}
+
+.container_calc .content ul li.current .pricing-title{
+	background: #000;
+}
+
+
+
+.pricing-title{
+	padding-left:50px !important;
+	padding-right:50px !important;
+	cursor:pointer;
+}
+
+
+.bx{
+	width: 50%;
+	float: left;
+}
+
+.right-conf{
+	float: right;
+	width: 50%;
+}
+
+.summary {
+	overflow:visible!important;
+	height:auto!important;
+}
+.right-conf .order {
+margin-bottom:30px!important;
+}
+
+/* End */
+/* /bitrix/components/salavey/salavey.configurator_website/templates/.default/style.css?14413944656455 */

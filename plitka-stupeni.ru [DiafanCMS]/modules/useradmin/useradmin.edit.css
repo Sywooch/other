@@ -1,0 +1,100 @@
+body
+{
+	margin: 0px;
+	font-family: Verdana, sans-serif;
+	background-color: #fff;
+	font-size: 11px;
+	padding: 15px;
+}
+
+img
+{
+	border: 0px;
+}
+
+table
+{
+	clear: right;
+	border: 0px;
+	border-collapse: collapse;
+}
+
+table td
+{
+	padding: 0px;
+}
+
+
+div, td, font, table
+{
+	font-size: 1em;
+}
+
+a:link, a:visited
+{
+	COLOR: #019cd4;
+}
+a:hover
+{
+	COLOR: #ff0000;
+}
+
+h1
+{
+	color: #686d67;
+	font-size: 16px;
+	font-weight: none;
+	padding: 5px 0px 5px 0px;
+}
+
+h2
+{
+	color: #686d67;
+	font-size: 12px;
+	font-weight: none;
+	padding: 5px 0px 5px 0px;
+}
+
+h1 img
+{
+	margin:-10px 0px -10px 0px;
+}
+
+hr
+{
+	color: #f0efea;
+	background-color:#f0efea; 
+	border:0px none;
+	height:1px; 
+	clear:both;
+}
+
+/*.useradmin_button
+{
+	display: block;
+	border: 0px;
+	background: transparent url('../../adm/img/button.gif');
+	color: #686d67;
+	width: 165px;
+	height: 31px;
+	font-size: 90%;
+	cursor: 'hand';
+	margin-top: 15px;
+}*/
+
+.useradmin_button {
+    background: url(../../adm/img/button_x.gif) repeat-x 0 0;
+    height: 24px;
+    border: 0;
+    color: #fdfdfd;
+    font-size: 11px;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 0px 10px 0 10px;
+    margin-top: 15px;
+}
+
+.errors
+{
+	color: red;
+}

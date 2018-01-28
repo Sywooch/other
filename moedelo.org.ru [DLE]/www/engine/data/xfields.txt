@@ -1,0 +1,19 @@
+flink|ссылка на продолжение|2|text||1|0
+f-ooo|Для ООО|10,11|textarea||0|0
+ib-nk|Налоговый календарь|24|textarea||1|0
+ib-book|Книга учета доходов и расходов|24|textarea||1|0
+ib-dgvr|Договоры|24|textarea||1|0
+ib-bill|Счета|24|textarea||1|0
+ib-cdocs|Закрывающие документы|24|textarea||1|0
+ib-ca|Контрагенты|24|textarea||1|0
+ib-zarp|Зарплата|24|textarea||1|0
+ib-report|Отчетность через интернет|24|textarea||1|0
+ib-msg|Письмо в гос. орган|24|textarea||1|0
+ib-sverka|Сверка с ФНС|24|textarea||1|0
+ib-gr|Выписки из гос. реестра|24|textarea||1|0
+ib-bc|Бухгалтерские консультации|24|textarea||1|0
+ib-support|Техническая поддержка|24|textarea||1|0
+ib-viz|Визитка|24|textarea||1|0
+after|После регистрации|25|textarea||1|0
+blank|в новом окне? (поставить 1, если да)|2|text||1|0
+ib-fdocs|Формирование первичных документов|24|textarea||1|0

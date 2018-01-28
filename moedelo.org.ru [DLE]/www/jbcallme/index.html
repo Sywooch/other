@@ -1,0 +1,218 @@
+﻿
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>jbCallMe</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.jbcallme.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.jbcallme.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div class="wrapper">
+      <a class="logo" href="http://jetbit.ru/market/jbcallme">Страница плагина на JetBit.ru</a>
+    </div>
+  </div>
+  <div id="container">
+<div id="article" class="wrapper market_page">
+
+		<h1 class="nocapital">Обратный звонок на сайт (jbCallMe)</h1>
+		<div class="about"><p>jQuery плагин для создания форм заказа обратного звонка, форм заявок и других форм для работы с посетителями сайта.</p><p></p></div>
+		<div class="clear"></div>
+		<h3>Установка</h3>
+<p>Вставьте в блок <code>&lt;head&gt;</code> страниц, на которых вы хотите появление формы, ссылки на подключаемые файлы плагина и стиля</p>
+<pre class="prettyprint prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"/путь_к/jquery.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"/путь_к/jquery.jbcallme.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"/путь_к/jquery.jbcallme.css"</span><span class="tag">&gt;</span></pre>
+<p>В корень сайта поместите файл <code>postmaster.php</code> из архива. По умолчанию он является обработчиком запросов и выполняет функцию отправки вам сообщений. Откройте его и укажите почтовые ящики с которыми будете работать.</p>
+<h3>Простой вызов</h3>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    $</span><span class="pun">(</span><span class="str">'.callme_button'</span><span class="pun">).</span><span class="pln">jbcallme</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">});</span></pre>
+<p>Такая конструкция будет работать в режиме по-умолчанию, но будет лучше настроить подключаемый плагин.</p>
+<script type="text/javascript">
+$(function() {
+    $('.demo1_callme_button').jbcallme();
+});
+</script>	
+<a class="bblue_btn demo1_callme_button">Демонстрация</a>
+<h3>Добавление полей</h3>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    $</span><span class="pun">(</span><span class="str">'.callme_order_btn'</span><span class="pun">).</span><span class="pln">jbcallme</span><span class="pun">({</span><span class="pln">
+        postfix</span><span class="pun">:</span><span class="pln"> </span><span class="str">"callme_order"</span><span class="pun">,</span><span class="pln"> 
+        fields</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            time</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                label</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Удобное для звонка время"</span><span class="pun">,</span><span class="pln">
+                placeholder</span><span class="pun">:</span><span class="pln"> </span><span class="str">"17:30 - 20:00"</span><span class="pun">,</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            descr</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                label</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Примечание"</span><span class="pun">,</span><span class="pln">
+                type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"textarea"</span><span class="pun">,</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            action</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"hidden"</span><span class="pun">,</span><span class="pln">
+                value</span><span class="pun">:</span><span class="pln"> </span><span class="str">"callme_order"</span><span class="pun">,</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">});</span></pre>
+<script type="text/javascript">
+$(function() {
+    $('.demo2_callme_button').jbcallme({
+        postfix: "callme_order", 
+        fields: {
+            time: {
+                label: "Удобное для звонка время",
+                placeholder: "17:30 - 20:00",
+            },
+            descr: {
+                label: "Примечание",
+                type: "textarea",
+            },
+            action: {
+                type: "hidden",
+                value: "callme_order",
+            },
+        },
+    });
+});
+</script>	
+<a class="bblue_btn demo2_callme_button" >Демонстрация</a>
+
+<h3>Расширенная настройка</h3>
+<pre class="prettyprint prettyprinted"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo3_order_button"</span><span class="pln"> </span><span class="atn">data-artist</span><span class="pun">=</span><span class="atv">"Джастин Бибер"</span><span class="tag">&gt;</span><span class="pln">Джастин Бибер</span><span class="tag">&lt;/a&gt;</span><span class="pln"> 
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo3_order_button"</span><span class="pln"> </span><span class="atn">data-artist</span><span class="pun">=</span><span class="atv">"Вера Брежнева"</span><span class="tag">&gt;</span><span class="pln">Вера Брежнева</span><span class="tag">&lt;/a&gt;</span><span class="pln"> 
+</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo3_order_button"</span><span class="pln"> </span><span class="atn">data-artist</span><span class="pun">=</span><span class="atv">"Семён Слепаков"</span><span class="tag">&gt;</span><span class="pln">Семён Слепаков</span><span class="tag">&lt;/a&gt;</span><span class="pln"> </span></pre>
+
+
+<pre class="prettyprint prettyprinted"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    $</span><span class="pun">(</span><span class="str">'.demo3_order_button'</span><span class="pun">).</span><span class="pln">jbcallme</span><span class="pun">({</span><span class="pln">
+        postfix</span><span class="pun">:</span><span class="pln"> </span><span class="str">'service_order'</span><span class="pun">,</span><span class="pln"> </span><span class="com">// идентификатор окна</span><span class="pln">
+        </span><span class="com">// поля tel и name установлены по-умолчанию. Отключаются добавлением no_tel:true и no_name:true</span><span class="pln">
+        </span><span class="com">//no_tel: true, // не выводить стандартное поле телефона</span><span class="pln">
+        no_name</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+        no_submit</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="com">// не выводить стандартную кнопку</span><span class="pln">
+        title</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Исполнитель на корпоратив"</span><span class="pun">,</span><span class="pln"> </span><span class="com">// заголовок окна</span><span class="pln">
+        action_url</span><span class="pun">:</span><span class="pln"> </span><span class="str">"/postmaster.php"</span><span class="pun">,</span><span class="pln"> </span><span class="com">// путь к обработчику запрсов</span><span class="pln">
+        success</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Заказ принят и будет рассмотрен в ближайшее время"</span><span class="pun">,</span><span class="pln"> 
+        fail</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Сообщение не доставлено. Извините за неудобство!"</span><span class="pun">,</span><span class="pln"> 
+        fields</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="com">// добавление полей	</span><span class="pln">
+            company</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                required</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="com">// обязательное ли</span><span class="pln">
+                placeholder</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Ваша Компания"</span><span class="pun">,</span><span class="pln"> 
+                type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"text"</span><span class="pun">,</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            email</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                required</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="com">// обязательное ли</span><span class="pln">
+                placeholder</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Ваш e-mail"</span><span class="pun">,</span><span class="pln"> 
+                type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"email"</span><span class="pun">,</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            list</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                placeholder</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Количество человек"</span><span class="pun">,</span><span class="pln">
+                type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"select"</span><span class="pun">,</span><span class="pln">
+                options</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+                    </span><span class="str">"До 10 человек"</span><span class="pun">,</span><span class="pln">
+                    </span><span class="str">"До 30 человек"</span><span class="pun">,</span><span class="pln">
+                    </span><span class="str">"До 50 человек"</span><span class="pun">,</span><span class="pln">
+                    </span><span class="str">"До 100 человек"</span><span class="pun">,</span><span class="pln">
+                    </span><span class="str">"От 100 человек"</span><span class="pln">
+                </span><span class="pun">]</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            artist</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                label</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Исполнитель"</span><span class="pun">,</span><span class="pln">
+                type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"text"</span><span class="pun">,</span><span class="pln"> </span><span class="com">// или "hidden", чтобы не выводилось в форме</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            intro</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                label</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Дополнительно"</span><span class="pun">,</span><span class="pln">
+                type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"textarea"</span><span class="pun">,</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            action</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="com">// невидимое поле, передющее тип формы</span><span class="pln">
+                type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"hidden"</span><span class="pun">,</span><span class="pln">
+                value</span><span class="pun">:</span><span class="pln"> </span><span class="str">"service_order"</span><span class="pun">,</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+            send</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                type</span><span class="pun">:</span><span class="pln"> </span><span class="str">"submit"</span><span class="pun">,</span><span class="pln">
+                value</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Заказать"</span><span class="pun">,</span><span class="pln">
+            </span><span class="pun">},</span><span class="pln">
+        </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln"> 
+</span><span class="pun">});</span></pre>
+<script type="text/javascript">
+$(function() {
+    $('.demo3_order_button').jbcallme({
+        postfix: 'service_order', // идентификатор окна
+		// поля tel и name установлены по-умолчанию. Отключаются добавлением no_tel:true и no_name:true
+		//no_tel: true, // не выводить стандартное поле телефона
+		no_name: true,
+        no_submit: true, // не выводить стандартную кнопку
+        title: "Исполнитель на корпоратив", // заголовок окна
+        action_url: "/postmaster.php", // путь к обработчику запрсов
+        success: "Заказ принят и будет рассмотрен в ближайшее время", 
+        fail: "Сообщение не доставлено. Извините за неудобство!", 
+        fields: { // добавление полей	
+            company: {
+                required: true, // обязательное ли
+                placeholder: "Ваша Компания", 
+                type: "text",
+            },
+            email: {
+                required: true,
+                placeholder: "Ваш e-mail", 
+                type: "email",
+            },
+            list: {
+                placeholder: "Количество человек",
+                type: "select",
+                options: [
+                    "До 10 человек",
+                    "До 30 человек",
+                    "До 50 человек",
+                    "До 100 человек",
+                    "От 100 человек"
+                ]
+            },
+            artist: {
+                label: "Исполнитель",
+				type: "text", // или "hidden", чтобы не выводилось в форме
+            },
+            intro: {
+                label: "Дополнительно",
+                type: "textarea",
+            },
+            action: { // невидимое поле, передющее тип формы
+                type: "hidden",
+                value: "service_order",
+            },
+            send: {
+                type: "submit",
+                value: "Заказать",
+            },
+        },
+    }); 
+});
+</script>	
+	<a class="bblue_btn demo3_order_button" data-artist="Джастин Бибер">Джастин Бибер</a> 
+	<a class="bblue_btn demo3_order_button"  data-artist="Вера Брежнева">Вера Брежнева</a> 
+	<a class="bblue_btn demo3_order_button"  data-artist="Семён Слепаков">Семён Слепаков</a>
+
+    </div> 
+  </div>
+
+
+  <div id="footer_menu" class="wrapper">
+    <ul class="menu">
+      <li><a href="http://jetbit.ru/market/">Market</a></li>
+      <li><a href="http://jetbit.ru/portfolio/">Портфолио</a></li>
+      <li><a href="http://jetbit.ru/services">Услуги</a></li>
+      <li><a href="http://jetbit.ru/events/">События</a></li>
+      <li><a href="http://jetbit.ru/about">О нас</a></li>
+    </ul>
+    <div class="copy">
+      &copy; 2013 JetBit.ru
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+﻿:focus {
+outline: none;
+}
+input[type="submit"] {
+    width: 20px; /* Ширина кнопки */
+    height: 20px; /* Высота кнопки */
+    border: none; 
+   background:url('images/submit_fon.png') no-repeat 50% 50%; /* Параметры фона */
+  
+  }
+
+.body_style{
+	margin:0;
+	padding:0; 
+	
+/*	background-image:url('../images/header_fon.jpg');*/
+background-image:url('../images/header_fon2.jpg');
+background-position: center top;
+background-repeat:no-repeat;
+ background-color:#dbd3be;
+}
+.body_style_2{
+	margin:0;
+	padding:0; 
+	background-color:#dbd3be;
+/*	background-image:url('../images/header_fon.jpg');*/
+background-image:url('../images/header_fon.jpg');
+ background-position: center top;
+
+
+}
+
+.main_block{
+	width:100%; 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-left:0px; 
+	margin:0;
+	padding:0; 
+	/*background-image:url('../images/fon.jpg');*/
+}
+.main_block_header{
+	width:100%; 
+	margin-top:0px; 
+	margin-left:0px; 
+	border:0px; 
+	float:left;
+	height:640px;
+    /*background-image:url('../images/header_fon.jpg');*/
+}
+.header{
+	width:1166px; 
+	height:640px; 
+	border:0px; 
+	
+	}
+.shtori{
+/*	background-image:url('../images/shtori_in.png');*/
+	height:19px;
+	width:100%;
+	background-repeat:repeat-x;
+    background-position:center;
+}
+
+.shtori_in{
+	
+	height:19px;
+	width:1166px;
+/*	background-image:url('../images/shtori_in.jpg');*/
+	background-repeat:no-repeat;
+}
+.new_logo{
+	height:125px; 
+	width:1066px;
+	padding-top:2px;
+}
+.new_div{
+	height:30px; 
+	width:1066px; 
+	margin-top:10px;
+}
+.new_slider{
+	height:400px; 
+	width:800px; 
+	margin-top:0px;
+
+	
+}
+.new_slider_2{
+	height:400px; 
+	width:800px; 
+	margin-left:84px;
+}
+.new_kontent{
+	width:100%; 
+	min-height:430px; 
+	/*background-image:url('../images/kontekst_fon.jpg'); */
+	float:left; 
+	background-color:#dbd3be;
+}

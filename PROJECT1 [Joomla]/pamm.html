@@ -1,0 +1,80 @@
+<html>
+<head>
+<title></title>
+<html dir="ltr" lang="ru-RU">
+<meta charset="UTF-8" />
+<script type="text/javascript" src="/путь/к/jquery-latest.js"></script> 
+<script type="text/javascript" src="/путь/к/jquery.tablesorter.js"></script> 
+</head>
+<body>
+<table cellspacing="1" class="tablesorter">              
+    <thead>>  
+        <tr> 
+             <th>фио</th> 
+             <th>специализация</th> 
+             <th>пол</th> 
+             <th>английский</th> 
+             <th>японский</th> 
+             <th>арифметика</th> 
+             <th>итоговая оценка</th> 
+         </tr>  
+    </thead>  
+    <tbody>  
+        <tr> 
+             <td>студент 1</td> 
+             <td>языки</td> 
+             <td>муж</td> 
+             <td>80</td> 
+             <td>70</td> 
+             <td>75</td> 
+             <td>неуд</td> 
+         </tr>  
+        <tr> 
+             <td>студент 2</td> 
+             <td>математика</td> 
+             <td>муж</td> 
+             <td>90</td> 
+             <td>88</td> 
+             <td>100</td> 
+             <td>хорошо</td> 
+         </tr>  
+        <tr> 
+             <td>студент 3</td> 
+             <td>языки</td> 
+             <td>жен</td> 
+             <td>85</td> 
+             <td>95</td> 
+             <td>80</td> 
+             <td>отлично</td> 
+         </tr>  
+    </tbody>  
+</table> 
+
+<script>
+ $.tablesorter.addParser({ 
+        // set a unique id 
+        id: 'grades', 
+        is: function(s) { 
+            // return false so this parser is not auto detected 
+            return false; 
+        }, 
+        format: function(s) { 
+            // format your data for normalization 
+            return s.toLowerCase().replace(/отлично/,2).replace(/хорошо/,1).replace(/неуд/,0); 
+        }, 
+        // set type, either numeric or text 
+        type: 'numeric' 
+    }); 
+     
+    $(function() { 
+        $("table").tablesorter({ 
+            headers: { 
+                6: { 
+                    sorter:'grades' 
+                } 
+            } 
+        }); 
+    });          
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?
+$PERM["readme.html"]["2"]="D";
+$PERM["readme.html"]["3"]="D";
+$PERM["readme.html"]["4"]="D";
+$PERM["readme.html"]["5"]="D";
+$PERM["readme.html"]["*"]="D";
+$PERM["/"]["5"]="W";
+$PERM["/"]["*"]="R";
+?>

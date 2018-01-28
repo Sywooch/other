@@ -1,0 +1,49 @@
+<html>
+  <head>
+  <style>
+
+  </style>
+  </head>
+  <body>
+  
+  <script type="text/javascript"
+          src="https://www.google.com/jsapi?autoload={
+            'modules':[{
+              'name':'visualization',
+              'version':'1',
+              'packages':['corechart']
+            }]
+          }"></script>
+
+    <script type="text/javascript">
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Месяц', 'Заработано', 'Пополнено'],
+          ['Июнь 2014',  144.31 ,      400],
+          ['Июль 2014',  295.15,      520],
+          ['Август 2014',  770.22,       1120],
+          ['Сентябрь 2014',  1418.96,      2870],
+          ['Октябрь 2014',  2791.60,       3120],
+          ['Ноябрь 2014',  4584.34,       5421],
+          ['Декабрь 2014',  9826.89,       5200]
+         
+         
+        ]);
+
+        var options = {
+          title: ' ',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  
+    <div id="curve_chart" style="width: 100%; height: 400px"></div>
+  </body>
+</html>

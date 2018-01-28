@@ -1,0 +1,124 @@
+/**
+* @package 		EasySocial
+* @copyright	Copyright (C) 2010 - 2013 Stack Ideas Sdn Bhd. All rights reserved.
+* @license 		Proprietary Use License http://stackideas.com/licensing.html
+* @author 		Stack Ideas Sdn Bhd
+**/
+.es-story {
+	.es-story-attachments {
+		padding: 5px;
+		.clearfix();
+	}
+
+	.es-story-attachment-buttons {
+		margin: 0;
+		list-style: none;
+
+		li {
+			float: left;
+			width: 50%; // by default, we use two
+			padding: 10px;
+			cursor: pointer;
+			overflow: hidden;
+			white-space: nowrap;
+			.transition(width .5s ease);
+
+			&:hover {
+				background: @esStoryAttachmentButtonHoverColor;
+			}
+
+			&.for-text {
+				display: none;
+			}
+		}
+
+		// TODO: Use iterator to generate this;
+		&.col-1 { li { width: percentage((100 / 1)) * 0.01} }
+		&.col-3 { li { width: percentage((100 / 3)) * 0.01} }
+		&.col-2 { li { width: percentage((100 / 2)) * 0.01} }
+		&.col-4 { li { width: percentage((100 / 4)) * 0.01} }
+		&.col-5 { li { width: percentage((100 / 5)) * 0.01} }
+		&.col-6 { li { width: percentage((100 / 6)) * 0.01} }
+	}
+
+	.es-story-panel-button.for-attachments {
+
+		i[data-story-attachment-clear-button] {
+			display: none;
+		}
+	}
+
+	&[class^="attaching-"],
+	&[class*=" attaching-"] {
+
+		// .es-story-attachment-buttons {
+
+		// 	li {
+		// 		display: none;
+
+		// 		&.for-text {
+		// 			display: block;
+		// 			width: 100%;
+		// 		}
+		// 	}
+		// }
+
+		.es-story-panel-button.for-attachments {
+
+			&:hover {
+
+				i[data-story-attachment-panel-icon] {
+					display: none;
+				}
+
+				i[data-story-attachment-clear-button] {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.es-story-attachment-items {
+		position: relative;
+		z-index: 1;
+	}
+
+	.es-story-attachment-item {
+		.transition(all .5s ease);
+		position: absolute;
+		margin-top: -300px;
+		opacity: 0;
+		z-index: 1;
+
+		&.active {
+			position: relative;
+			margin-top: 0px;
+			opacity: 1;
+			z-index: 2;
+
+		}
+
+		.media {
+			margin: 0;
+		}
+		.media-object {
+			img {
+				width: 120px;
+				height: 100px;
+			}
+		}
+	}
+
+	.es-story-attachment-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.es-story-attachment-item.for-photos {
+		.alert {
+			margin-bottom: 0px;
+		}
+	}
+	
+}
+

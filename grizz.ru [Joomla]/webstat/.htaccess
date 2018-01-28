@@ -1,7 +1,0 @@
-AuthType Basic
-AuthName "/www/grizz.ru/webstat"
-AuthUserFile /var/www/serj/data/etc/254466.passwd
-DirectoryIndex index.html
-<Limit GET POST>
-	require valid-user
-</Limit>

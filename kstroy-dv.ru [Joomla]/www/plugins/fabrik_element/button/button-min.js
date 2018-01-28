@@ -1,1 +1,0 @@
-var FbButton=new Class({Extends:FbElement,initialize:function(b,a){this.plugin="fabrikButton";this.parent(b,a)}});

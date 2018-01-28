@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/web20/components/bitrix/menu/tabs1/script.js" => "1406036667430","/bitrix/js/fileman/sticker.js" => "140602328076622",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>

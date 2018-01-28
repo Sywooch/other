@@ -1,0 +1,288 @@
+/**
+* @package 		EasySocial
+* @copyright	Copyright (C) 2010 - 2013 Stack Ideas Sdn Bhd. All rights reserved.
+* @license 		Proprietary Use License http://stackideas.com/licensing.html
+* @author 		Stack Ideas Sdn Bhd
+**/
+
+.es-groups
+{
+	&.is-loading
+	{
+		.groups-content-wrapper
+		{
+			background: url("@{media_uri}/images/loading.gif") center center no-repeat;
+		}
+	}
+	.btn-create
+	{
+		padding: 6px 10px;
+	}
+
+	.group-category
+	{
+		padding: 12px;
+
+		h3
+		{
+			margin: 5px 0 0 5px;
+		}
+
+		.media
+		{
+			margin-bottom: 10px;
+		}
+	}
+
+	.group-name
+	{
+		font-size: 18px;
+		line-height: 18px;
+		margin-bottom: 10px;
+	}
+
+	.group-description
+	{
+		margin-top: 10px;
+		font-size: 11px;
+	}
+
+	.group-actions
+	{
+		margin-top: 25px;
+		text-align: right;
+	}
+
+	.category-meta
+	{
+		.category-stats
+		{
+			margin: 5px 0 0 0;
+			list-style: none;
+			color: #666;
+			font-size: 11px;
+
+			li {
+				>[class^="ies-"]:before,
+				>[class*="ies-"]:before{
+					top: 0;
+				}
+				float: left;
+				list-style: none;
+				height: 18px;
+				line-height: 18px;
+			}
+
+			li+li{
+				margin-left: 8px;
+				padding-left: 8px;
+				border-left: 1px dotted #ccc;
+			}
+		}
+	}
+
+	.group-meta
+	{
+		.clearfix();
+		margin: 5px 0 0 0;
+		list-style: none;
+		color: #666;
+		font-size: 11px;
+
+		li
+		{
+			>[class^="ies-"]:before,
+			>[class*="ies-"]:before
+			{
+				top: 0;
+			}
+			float: left;
+			list-style: none;
+			height: 18px;
+			line-height: 18px;
+		}
+
+		li+li{
+			margin-left: 8px;
+			padding-left: 8px;
+			border-left: 1px dotted #ccc;
+		}
+	}
+
+	.featured-groups
+	{
+		&.is-empty
+		{
+			.empty
+			{
+				display: block;
+			}
+			.featured-groups-list
+			{
+				display: none;
+			}
+		}
+	}
+	.groups-listing
+	{
+		&.is-empty
+		{
+			.empty
+			{
+				display: block;
+			}
+			.es-group-list
+			{
+				display: none;
+			}
+		}
+	}
+	.empty
+	{
+		display: none;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 700;
+		padding: 60px 180px;
+		margin: 20px;
+		background: #f4f4f4;
+		color: #666;
+		border: 1px solid #d7d7d7;
+	}
+}
+
+
+.es-header
+{
+	&.es-group-header-mini
+	{
+		.es-header-info
+		{
+			h2
+			{
+				&.h4
+				{
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+
+			.info-actions
+			{
+				font-size: 11px;
+				margin-top: 5px;
+			}
+		}
+
+		.es-header-footer
+		{
+			padding: 10px 0 5px 0;
+			.group-stats
+			{
+				li
+				{
+					margin-right: 8px;
+					color: #666;
+					a
+					{
+						i
+						{
+							margin-right: 3px;
+						}
+					}
+					+li
+					{
+						border-left: 1px dotted #d7d7d7;
+						padding-left: 8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.es-group-nav {
+	> li {
+		a {
+			
+			border-radius: 10px;
+			padding: 3px 8px;
+			&.active {
+				border: 1px solid #ddd;
+			}
+		}
+		+ li {
+			border-left: 1px dotted #ddd;
+			padding-left: 4px;
+		}
+	}
+}
+//wrap single group
+.es-group {
+	display: inline-block;
+	width: 100%;
+	padding: 20px 10px;
+	border-radius: 3px;
+	&.es-app-width {
+		width: 220px;
+	}
+}
+
+//listing
+.es-group-list {
+	.clearfix();
+	> li {
+		.clearfix();
+		margin-bottom: 10px;
+	}
+}
+
+.es-group-list {
+	line-height: normal;
+	>li + li{
+		border-top: 1px solid @esBorder;
+	}
+	> li {
+		position: relative;
+		margin-right: 1%;
+	}
+
+
+	.media-object {
+		width: 80px;
+		text-align: center;
+	}
+	
+
+
+	.group-used {
+		margin-top: 3px;
+		font-size: 11px;
+	}
+
+	.group-image {
+		width: 50px;
+	}
+}
+
+// Responsie
+&.w480 {
+	.es-group-list {
+		.media-object {
+			float: none !important;
+		}
+		.group-name {
+			.label {
+				font-size: 60%;
+			}
+		}
+	}
+	.es-groups {
+		.group-actions {
+			text-align: left;
+			.btn + .btn {
+				margin-top: 15px;
+			}
+		}
+	}
+}

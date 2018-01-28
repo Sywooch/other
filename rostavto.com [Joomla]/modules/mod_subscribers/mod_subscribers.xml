@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" method="upgrade">
+	<name>EasyBlog Subscribers</name>
+	<author>StackIdeas</author>
+	<creationDate>May 2010</creationDate>
+	<copyright>Copyright 2009 - 2010 Stack Ideas. All rights reserved.</copyright>
+	<license>GPL License</license>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>http://www.stackideas.com</authorUrl>
+	<version>3.9.1</version>
+	<description>Displays subscribers for the current blog entry that is being viewed in EasyBlog</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_subscribers.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_subscribers">mod_subscribers.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<params addpath="/administrator/components/com_easyblog/elements">
+		<param name="routingtype" type="list" default="default" label="Routing Type" description="Choose the routing type when generate blogger link">
+			<option value="default">Use default behaviour</option>
+			<option value="menuitem">Use menu item</option>
+		</param>
+		<param name="menuitemid" type="easyblogmenuitem" default="" label="Use Menu Item" description="Select menu item if you have choose to use 'menu item' as routing type" state="1" />
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_easyblog/elements/fields">
+				<field name="routingtype" type="list" default="default" label="Routing Type" description="Choose the routing type when generate blogger link">
+					<option value="default">Use default behaviour</option>
+					<option value="menuitem">Use menu item</option>
+				</field>
+				<field name="menuitemid" type="modal_easyblogmenuitem" default="" label="Use Menu Item" description="Select menu item if you have choose to use 'menu item' as routing type" state="1" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" >
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+					</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+
+</install>

@@ -1,0 +1,148 @@
+2014-Apr-11 18:58:20 Наличие необходимых модулей php (check_php_modules): Ok
+Все необходимые модули установлены
+2014-Apr-11 18:58:21 Обязательные параметры PHP (check_php_settings): Ok
+Настройки правильные
+2014-Apr-11 18:58:21 Модули веб сервера (check_security): Ok
+Конфликтов не выявлено
+2014-Apr-11 18:58:22 Значения переменных сервера (check_server_vars): Ok
+Корректные
+2014-Apr-11 18:58:22 Сохранение сессии (check_session): Ok
+50% done
+2014-Apr-11 18:58:23 Сохранение сессии (check_session): Ok
+Успешно
+2014-Apr-11 18:58:23 Параметры настройки UTF (mbstring и константа BX_UTF) (check_mbstring): Ok
+Правильные. Сайт работает в UTF кодировке
+2014-Apr-11 18:58:38 Работа с сокетами (check_socket): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:58:40 Лишний вывод в файлах конфигурации (check_dbconn): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:58:42 Выполнение агентов на cron (check_bx_crontab): Ok
+Успешно
+2014-Apr-11 18:58:44 Сохранение сессии без UserAgent (check_session_ua): Ok
+50% done
+Connection to amurcar.ru:80	Success
+
+2014-Apr-11 18:58:46 Сохранение сессии без UserAgent (check_session_ua): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:58:48 Настройки сайтов (check_sites): Ok
+Правильные
+2014-Apr-11 18:58:50 Служебные скрипты в корне сайта (check_install_scripts): Ok
+Отсутствуют
+2014-Apr-11 18:58:51 Передача объектов по ссылке (check_clone): Ok
+Успешно
+2014-Apr-11 18:58:53 Размер стека и pcre.recursion_limit (check_pcre_recursion): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:58:55 Вызов method_exists на строке (check_method_exists): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:58:57 Загрузка файла (check_upload): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:58:59 Загрузка файла больше 4Мб (check_upload_big): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:59:00 Загрузка файла через php://input (check_upload_raw): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:59:02 Передача POST запроса с большим числом параметров (check_post): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:59:03 Отправка почты (check_mail): Ok
+Успешно
+2014-Apr-11 18:59:03 Отправка почтового сообщения больше 64Кб (check_mail_big): Ok
+Успешно
+2014-Apr-11 18:59:04 Проверка на наличие неотправленных сообщений (check_mail_b_event): Ok
+Успешно
+2014-Apr-11 18:59:04 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
+50% done
+Connection to amurcar.ru:80	Success
+
+2014-Apr-11 18:59:05 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:59:05 Фактическое ограничение памяти (check_memory_limit): Ok
+20% done
+Connection to amurcar.ru:80	Success
+
+2014-Apr-11 18:59:05 Фактическое ограничение памяти (check_memory_limit): Ok
+40% done
+Connection to amurcar.ru:80	Success
+
+2014-Apr-11 18:59:06 Фактическое ограничение памяти (check_memory_limit): Ok
+60% done
+Connection to amurcar.ru:80	Success
+
+2014-Apr-11 18:59:06 Фактическое ограничение памяти (check_memory_limit): Ok
+80% done
+Connection to amurcar.ru:80	Success
+
+2014-Apr-11 18:59:07 Фактическое ограничение памяти (check_memory_limit): Ok
+Connection to amurcar.ru:80	Success
+
+Не менее 256 М
+2014-Apr-11 18:59:07 Работа с файлами кеша (check_cache): Ok
+Успешно
+2014-Apr-11 18:59:08 Доступ к серверу обновлений (check_update): Ok
+Успешно
+2014-Apr-11 18:59:08 HTTP авторизация (check_http_auth): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:59:08 Создание и запуск файла (check_exec): Ok
+Connection to amurcar.ru:80	Success
+
+Успешно
+2014-Apr-11 18:59:09 Функция getimagesize для swf (check_getimagesize): Ok
+Успешно
+2014-Apr-11 18:59:09 Версия MySQL сервера (check_mysql_bug_version): Ok
+Успешно
+2014-Apr-11 18:59:10 Время на БД и веб сервере (check_mysql_time): Ok
+Успешно
+2014-Apr-11 18:59:10 Режим работы MySQL (check_mysql_mode): Ok
+Успешно
+2014-Apr-11 18:59:11 Кодировка соединения (check_mysql_connection_charset): Ok
+character_set_connection=utf8, collation_connection=utf8_unicode_ci, character_set_results=utf8
+Успешно
+2014-Apr-11 18:59:11 Кодировка базы данных (check_mysql_db_charset): Ok
+CHARSET=utf8, COLLATION=utf8_unicode_ci
+Успешно
+2014-Apr-11 18:59:11 Кодировки таблиц в БД (check_mysql_table_charset): Ok
+Успешно
+2014-Apr-11 18:59:13 Структура базы данных (check_mysql_table_structure): Ok
+0% done
+2014-Apr-11 18:59:13 Структура базы данных (check_mysql_table_structure): Ok
+9% done
+2014-Apr-11 18:59:14 Структура базы данных (check_mysql_table_structure): Ok
+18% done
+2014-Apr-11 18:59:14 Структура базы данных (check_mysql_table_structure): Ok
+27% done
+2014-Apr-11 18:59:17 Структура базы данных (check_mysql_table_structure): Ok
+36% done
+2014-Apr-11 18:59:18 Структура базы данных (check_mysql_table_structure): Ok
+45% done
+2014-Apr-11 18:59:19 Структура базы данных (check_mysql_table_structure): Ok
+54% done
+2014-Apr-11 18:59:19 Структура базы данных (check_mysql_table_structure): Ok
+63% done
+2014-Apr-11 18:59:20 Структура базы данных (check_mysql_table_structure): Ok
+72% done
+2014-Apr-11 18:59:21 Структура базы данных (check_mysql_table_structure): Ok
+81% done
+2014-Apr-11 18:59:22 Структура базы данных (check_mysql_table_structure): Ok
+90% done
+2014-Apr-11 18:59:22 Структура базы данных (check_mysql_table_structure): Ok
+Успешно

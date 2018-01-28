@@ -1,0 +1,31 @@
+.diafan_errors {
+    border: 1px solid #c05f5f;
+    padding: 7px 7px 7px 30px;
+    color: #c05f5f;
+    background: url(../img/error.gif) no-repeat 8px 10px #f7eded;
+    margin: 0 8% 10px;
+    width: 80%;
+}
+
+.diafan_errors td.calls {
+    cursor: pointer;
+}
+
+.diafan_errors td.calls div {
+    padding:10px 15px;
+    display: none;
+}
+
+.diafan_errors td.file {
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.diafan_errors table
+{
+    width:100%;
+}
+
+.diafan_errors table tr:hover {
+    background-color: #f0e6e6;
+}

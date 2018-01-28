@@ -1,0 +1,35 @@
+
+
+
+/* Start:/bitrix/components/bitrix/system.show_message/templates/.default/style.css*/
+font.errortext
+{
+	color:red;
+}
+
+font.notetext
+{
+	color:green;
+}
+/* End */
+
+
+
+/* Start:/bitrix/components/bitrix/photo/templates/.default/bitrix/photo.sections.top/.default/style.css*/
+div.photo-sections-top table.data-table tr.head-row td {
+	padding:10px 5px;
+	border-bottom:none;
+}
+div.photo-sections-top table.data-table tr.data-row {
+	border-top:none;
+	border-bottom:none;
+}
+div.photo-sections-top table.data-table th.data-cell {
+	border-top:none;
+	border-bottom:none;
+	padding:2px 2px;
+}
+
+/* End */
+/* /bitrix/components/bitrix/system.show_message/templates/.default/style.css */
+/* /bitrix/components/bitrix/photo/templates/.default/bitrix/photo.sections.top/.default/style.css */

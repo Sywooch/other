@@ -1,0 +1,9 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("keywords", "Главная");
+$APPLICATION->SetPageProperty("description", "Главная");
+$APPLICATION->SetTitle("Главная");
+?>
+Главная
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

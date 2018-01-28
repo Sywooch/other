@@ -1,0 +1,1 @@
+<?php// Heading$_['heading_title']       = '<b>Filter by brand and model</b>';?>

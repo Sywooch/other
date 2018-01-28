@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="file" method="upgrade">
+	<name>Com Translations for ru_RU</name>
+	<author>http://stackideas.com</author>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>http://stackideas.com</authorUrl>
+	<creationDate>2014-01-30 19:13:46</creationDate>
+	<copyright>Copyright 2009 - 2011 StackIdeas. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>3.0</version>
+	<description>This translation is for ru_RU</description>
+	<fileset>
+		<files folder="admin" target="administrator/language/ru-RU">
+			<filename>ru-RU.com_easyblog.ini</filename>
+			<filename>ru-RU.com_easyblog.sys.ini</filename>
+		</files>
+		<files folder="site" target="language/ru-RU">
+			<filename>ru-RU.com_easyblog.ini</filename>
+		</files>
+	</fileset>
+</extension>

@@ -1,0 +1,4188 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1400px) {
+    .header {
+        font-size: 20px;
+        font-weight: 500;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .header .B_logo img{
+        width: 200px;
+    }  
+    .header .contacts .phone{
+        font-size: 2em;       
+    }
+    .header .contacts {
+        font-size: 0.6em;
+        letter-spacing: 0px;
+        line-height: normal;
+        margin-top: 8px;
+    }    
+    .header .BTN_sm {
+        font-size: 11px;
+        padding: 4px 11px;
+
+    }   
+    aside.column.as-col {
+        margin-right: -20px;
+ 
+        
+    }    
+   body .section{
+        height: 100%!important;
+    }
+    aside.column nav {
+        left: 15px;
+        top: 50%;
+        margin-top: -295px;
+        width: 130px;
+        line-height: 600px;
+    }   
+      .column ul#menu ul a {
+        font-size: 15px;
+        font-weight: 500;
+        font-style: normal;
+         
+    }  
+    .column ul#menu li{
+        margin-bottom: 14px;
+    }
+    .column ul#menu ul li{
+        margin-bottom: 10px;
+    }
+    .wrap {
+        max-width: 950px;
+        padding: 0 10px;
+    }    
+    .mCSB_scrollTools {
+        right: -135px !important;
+        opacity: 0!important;
+        
+    }    
+    .footer .wrap .TL {
+        margin-bottom: 5px;
+        margin-right: 15px;
+    }
+    .footer .wrap {
+        padding: 8px 15px 4px;
+    }
+    .TL {
+        display: block;
+        font-size: 1em;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+        line-height: 1.5em;
+    }   
+    footer  input[type="text"] {
+        font-size: 15px;
+        height: 36px;
+        padding: 0 10px 0 10px;
+        width: 140px;
+        line-height: 33px;
+    }    
+    footer  input[type="text"]:focus {
+      height: 31px;
+      padding: 0 7px 0 7px;
+      width: 140px;
+      line-height: 35px;
+    }    
+    .form .error {
+        height: 31px;
+        padding: 0 7px 0 7px;
+        width: 140px;
+        line-height: 35px;
+    }    
+    footer  .form .BTN {
+        height: 36px;
+    }   
+    .column .contacts {
+        font-size: 0.74em;
+        letter-spacing: -0.1px;
+    }    
+    aside .B_logo img{
+        width: 130px;
+    }
+    aside .BTN_xs {
+        min-width: 0;
+        border-radius: 2px;
+        font-size: 15px;
+        line-height: 1.3em;
+    }    
+    #idCompany h1,
+    #idCompany h2{
+            font-size: 1.60em;
+    }
+    #idCompany p{
+        font-size: 15.5px;
+    }
+    .info-comp{
+        padding: 15px;
+    }
+    #idCompany .BG_wide-1{
+        margin-top: 20px;
+    }
+    #idCompany  ol.marker.BG li{
+        font-size: 17px;
+        min-height: 50px;
+    }
+    #idCompany  ol{
+        margin-bottom: 50px;
+    }
+    ol.marker.BG .-hide:hover{
+        font-size: 17px;
+    }
+    ol.marker li:before{
+        font-size: 1.30em;
+    }
+    #idProducts h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    #idProducts .BG_wide{
+        height: 50px;
+    }   
+    #idProducts .TL{
+        font-size: 30px;
+        font-weight: 300; 
+        line-height: 50px;   
+    }
+    #idProducts header {
+        height: 50px;
+    }    
+    #idProducts header img{
+       width:  24px;
+        top: 5px;
+    }
+    #idProducts header.active  img{
+        top: 10px;
+    }
+    #idProducts .wrap {
+        padding-top: 0px;
+    }
+    #idProducts h1 .B_hide{
+        max-width: 330px;
+    }   
+    #idProducts .B_hide .text p:first-child{
+        font-size: 17px;
+        line-height: 19px;
+        margin: 0 15px 8px;
+    }
+    #idProducts .B_hide .text p{
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0px;
+         margin:0 15px;
+    }  
+    #idProducts h2 {
+        font-size: 30px;
+        height: 45px;
+        line-height: 40px;
+    } 
+    #idProducts  .intro .BG:first-child{
+        margin-top: 30px;
+    }
+    #idProducts .B_hide .text a{
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 400;
+        margin-top: 20px;
+        padding-right: 45px;
+        height: 34px;
+    }
+    #idProducts .B_hide .text a img{
+        top: -10px;
+        right: 25px;
+        width: 38px;
+    }
+    .fp-controlArrow.fp-next {
+        right: 150px!important;
+        border-width: 26.5px 0 26px 26px!important;
+    }    
+    .fp-controlArrow.fp-prev {
+        border-width: 26px 26px 26px 0!important;
+    }    
+    .wrap-list-product {
+        height: 120px;
+        z-index: 20;
+    }    
+    .product_item .product_pic,
+    .product_item .product_pic_2,
+    .product_item .product_pic_3{
+        max-width: 100%;
+        height: auto;
+    }   
+    .list-product-min{
+         width: 950px;
+        left: 0;
+    }    
+    .slide-klientfirst,
+    .slide-klientsecond{
+        max-width: 650px;
+        margin: 20px auto 25px;
+
+    }   
+    .slide-klientfirst .slick-slide{
+        text-align: center;
+    }
+    .slide-klientfirst .slick-slide a,
+    .slide-klientsecond .slick-slide a{
+        width: 80%;
+    }
+    .slide-klientfirst .slick-slide a img,
+    .slide-klientsecond .slick-slide a img{
+        width: 100%;
+    }
+    .slide-klientsecond .slick-slide a {
+        width: 75%;
+    }
+    .controllers span img{
+        height: 40px;
+    }
+    #idClients .BG_wide-3{
+        margin-top: 25px;
+    }
+    #idClients h1,
+     #idClients h2{
+        font-size: 1.55em;
+         line-height: 1.4em;
+    }
+    .wrapper-slider {
+        max-width: 100%;
+    }
+    .wrapper-slider .controllers .prev,
+    .wrapper-slider-next .controllers .prev{
+        left: 10%;
+    }
+    .wrapper-slider .controllers .next,
+    .wrapper-slider-next .controllers .next{
+        right: 10%;
+    }    
+    .wrapper-slider-next {
+        max-width: 100%;
+    }
+    .slide-klientsecond .title-slide {
+        font-size: 20px;
+        line-height: 27px;
+    }    
+  
+    .BG_wide-6{
+        margin-top: 25px!important;
+    }
+    .BG_wide-6  h1.TL{
+        font-size: 1.45em;
+    }
+    #idContacts .W_map{
+        padding-top: 15px;
+    }
+    .B_map{
+        float: left;
+        max-width: 520px;
+        position: relative;
+        left: -30px;  
+    }
+    .B_map img{
+        width: 100%;
+    }
+    .B.kaliningrad{
+        max-width: 300px;
+        left: 0px;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .kaliningrad .BTN{
+        margin:-18px auto;
+        font-size: 20px;
+        line-height: 32px;
+        padding: 0 12px;   
+    }
+    .kaliningrad .BG_dark{
+        margin-top: -0px;
+        padding: 22px 0px 10px;
+        font-size: 16px;
+    }
+    .kaliningrad  .ICN{
+        margin: 10px 0px 0;
+        font-size: 16px;
+    }
+    .kaliningrad  a img{
+        height: 22px; 
+    }
+    .kaliningrad p{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    #idContacts .W_accordion{
+        max-width: 90%;
+        margin:20px auto 100px;
+    }
+ 
+    header.header-acord{
+        padding: 0 10px 8px;
+    }
+    header.header-acord strong{
+        line-height: 35px;
+        font-size: 22px;
+        padding-top: 2px; 
+        border-width: 2px;
+    }
+    .header-acord .contacts{
+        top: 7px;
+        right: 8px;
+    }
+    .header-acord  .contacts p{
+        font-size: 15px;
+    }
+    .header-acord  .contacts .phone{
+        font-size: 23px;
+    }
+    .W_accordion .B{
+        margin-bottom: 10px;
+        padding: 0 50px 0 10px;
+        font-size: 16px;
+    }
+    .W_accordion .B .text {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    .W_accordion .B .text a{
+        text-decoration: underline;
+        line-height: normal;
+        font-size: 14px;
+        top: -1px;
+        position: relative;
+    }
+    .W_accordion .B .text a img{
+      height: 20px;
+    }
+    .W_accordion .B .text a:nth-child(1){
+        margin-right: 15px;
+    }
+    .W_accordion .B .arrow-flag{
+        height: 23px;
+        left: 110%;
+        top: 2px;
+        width: 16px;
+        background-size: 100%;
+
+    }
+    .acord-item .BTN{
+        font-size: 20px;
+        line-height: 30px;
+        margin-left: -20px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        letter-spacing: 0;
+        margin-right: 10px;
+        display: inline-block;
+        padding: 0 8px;
+    }
+
+    .acord-item ._right{
+        line-height:26px;
+        padding-top: 0px;
+        font-size: 16px;
+    }
+    .acord-item .adrres{
+        top: -4px;
+    } 
+    .B_map span.dots{
+        width: 7px;
+        height: 7px;
+        border: 2px solid #fff;
+    }
+ 
+    .B_map .dots.moskva{
+        top: 55.5%;
+        left: 21.8%;
+    }
+    .B_map .dots.peterburg{
+        top: 44.5%;
+        left: 20.8%;
+    }
+    .B_map .dots.chelab{
+        top: 74.2%;
+        left: 34%;
+    }
+    .B_map .dots.krasnodar{
+        top: 76.3%;
+        left: 14%;
+    }    
+    .column .M li a:after {
+        right: -27px;
+        border: 3px solid #fff;
+        width: 10px;
+        height: 10px;
+    } 
+    .column .M {
+        font-size: 0.6em;
+    }    
+
+}
+
+
+@media only screen and (max-width : 1200px) {
+    .header {
+        font-size: 20px;
+        font-weight: 500;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .header .B_logo img{
+        width: 180px;
+    }  
+    .header .contacts .phone{
+        font-size: 1.8em;       
+    }
+    .header .contacts {
+        font-size: 0.55em;
+        margin-top: 6px;
+    }    
+    .header .BTN_sm {
+        font-size: 10px;
+        padding: 4px 11px;
+    }   
+    .header .BTN_sm img{
+        width: 30px;
+    }    
+    aside.column.as-col {
+        margin-right: -30px;
+        width: 155px;
+ 
+        
+    }    
+   body .section{
+        height: 100%!important;
+    }
+    aside.column nav {
+        left: 18px;
+        top: 50%;
+        margin-top: -295px;
+        width: 135px;
+        line-height: 600px;
+    }   
+      .column ul#menu ul a {
+        font-size: 13px;
+        font-weight: 500;
+         
+    }  
+    .column ul#menu li{
+        margin-bottom: 10px;
+    }
+    .column ul#menu ul li{
+        margin-bottom: 8px;
+    }
+    .wrap {
+        max-width: 900px;
+        padding: 0 10px;
+        position: relative;
+        left: -40px;
+    }    
+    .mCSB_scrollTools {
+        right: 120px !important;
+    }    
+    .footer .wrap .TL {
+        margin-bottom: 5px;
+        margin-right: 10px;
+        font-size: 21px;
+    }
+    .footer .wrap .form .R .B + .B {
+        margin-left: 14px;
+    }    
+    .footer .wrap {
+        padding: 8px 25px 4px 0;
+        
+    }
+    .footer .TL {
+        font-size: 1.05em;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+        line-height: 1.5em;
+    }   
+    footer  input[type="text"] {
+        font-size: 15px;
+        height: 34px;
+        padding: 0 10px 0 10px;
+        width: 140px;
+        line-height: 30px;
+    }    
+    footer  input[type="text"]:focus {
+      height: 30px;
+      padding: 0 7px 0 7px;
+      width: 140px;
+      line-height: 31px;
+    }    
+    .form .error {
+        height: 30px;
+        padding: 0 7px 0 7px;
+        width: 140px;
+        line-height: 32px;
+    }    
+    footer  .form .BTN {
+        height: 34px;
+    }   
+    .column .contacts {
+        font-size: 0.65em;
+        letter-spacing: 0px;
+        line-height: 22px;
+    }    
+    aside .B_logo img{
+        width: 110px;
+    }
+    aside .BTN_xs {
+        min-width: 0;
+        border-radius: 2px;
+        font-size: 14px;
+        line-height: 22px;
+        height: 22px;
+    }    
+    #idCompany h1,
+    #idCompany h2{
+            font-size: 1.50em;
+        line-height: 1.5em;
+    }
+    #idCompany p{
+        font-size: 17.5px;
+        line-height: 24px;
+    }
+    .info-comp {
+        padding: 15px 20px;
+    }
+    ol.marker.BG .-hide:hover{
+        font-size: 18px;
+    }
+    ol.marker li:before{
+        font-size: 1.30em;
+    }
+    ol.marker.BG li {
+        min-height: 52px;
+        padding: 5px 10px;
+        width: 370px;
+    }    
+    #idMain .intro .list{
+        right: 30px;
+    }    
+    #idMain  .list span {
+        font-size: 1.10em;
+    }    
+    #idMain .list img{
+        width: 90px;
+    }    
+    #idProducts h1{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    #idProducts .BG_wide{
+        height: 45px;
+    }   
+    #idProducts .TL{
+        font-size: 28px;
+        font-weight: 300; 
+        line-height: 44px;   
+    }
+    #idProducts header {
+        height: 45px;
+    }    
+    #idProducts header img{
+       width:  23px;
+        top: 5px;
+    }
+    #idProducts header.active  img{
+        top: 10px;
+    }
+    #idProducts .wrap {
+        padding-top: 0px;
+    }
+    #idProducts h1 .B_hide{
+        max-width: 310px;
+    }   
+    #idProducts .B_hide .text p:first-child{
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 12px 8px;
+    }
+    #idProducts .B_hide .text p{
+        font-size: 13px;
+        line-height: 17px;
+        letter-spacing: 0px;
+         margin:0 12px;
+    }  
+    #idProducts h2 {
+        font-size: 28px;
+        height: 45px;
+        line-height: 40px;
+    } 
+    #idProducts h2 strong{
+        line-height: 40px;
+    }
+    #idProducts  .intro .BG:first-child{
+        margin-top: 30px;
+    }
+    #idProducts .B_hide .text a{
+        font-size: 20px;
+        line-height: 29px;
+        font-weight: 400;
+        margin-top: 20px;
+        padding-right: 45px;
+        height: 35px;
+    }
+    #idProducts .B_hide .text a img{
+        top: -10px;
+        right: 20px;
+        width: 38px;
+    }
+    .fp-controlArrow.fp-next {
+        right: 135px!important;
+        border-width: 26.5px 0 23px 25px!important;
+    }    
+    .fp-controlArrow.fp-prev {
+            border-width: 23px 23px 25px 0!important;
+    }    
+    .wrap-list-product {
+        height: 138px;
+        z-index: 20;
+       
+    }    
+    .product_item .product_pic,
+    .product_item .product_pic_2,
+    .product_item .product_pic_3{
+        max-width: 100%;
+        height: auto;
+    }   
+    .wrap-list-product .wplist .prev{
+        left: -22px;
+        top: 0px;
+    }
+    .wrap-list-product .wplist .next{
+        right: -2px;
+        top: 0px;
+    }
+    .wrap-list-product .wplist{
+        
+    }
+    .wrap-list-product .wplist .controllers{
+        top: 18px;
+    }
+    .wrap-list-product .wplist .controllers span img{
+        height: 26px;
+        width: 14px;
+    }    
+    .list-product-min{
+         width: 740px;
+        left: 0;
+    }    
+    .slide-klientfirst,
+    .slide-klientsecond{
+        max-width: 600px;
+        margin: 30px auto 35px;
+
+    }   
+    .slide-klientfirst .slick-slide{
+        text-align: center;
+    }
+    .slide-klientfirst .slick-slide a,
+    .slide-klientsecond .slick-slide a{
+        width: 80%;
+    }
+    .slide-klientfirst .slick-slide a img,
+    .slide-klientsecond .slick-slide a img{
+        width: 100%;
+    }
+    #idClients h1,
+     #idClients h2{
+        font-size: 1.50em;
+    }
+  
+    .slide-klientsecond .title-slide {
+        font-size: 19px;
+        line-height: 30px;
+    }    
+    .intro .BG.BG_wide-5{
+        margin-top: 30px;
+    }
+    #idServices ol.marker.BG li {
+        min-height: 60px;
+        margin-left: -205px;
+        padding: 5px 10px;
+        width: 410px;
+    }    
+    #idServices  ol.marker li .TL{
+        font-size: 18px;
+    }
+    .W_map .B_map{
+        max-width: 520px;
+        left: -30px;
+    }   
+    .BG_wide-6{
+        margin-top: 25px!important;
+    }
+    .BG_wide-6  h1.TL{
+        font-size: 1.25em;
+    }
+    #idContacts .W_map{
+        padding-top: 10px;
+    }
+ 
+    .B_map img{
+        width: 100%;
+    }
+    .B.kaliningrad{
+        max-width: 300px;
+        left: 0px;
+        padding: 10px;
+        margin-top: 30px;
+    }
+    .kaliningrad .BTN{
+        margin:-16px auto;
+        font-size: 20px;
+        line-height: 32px;
+        padding: 0 12px;   
+    }
+    .kaliningrad .BG_dark{
+        margin-top: -0px;
+        padding: 22px 0px 10px;
+        font-size: 16px;
+    }
+    .kaliningrad  .ICN{
+        margin: 10px 5px 0;
+        font-size: 15px;
+    }
+    .kaliningrad  a img{
+        height: 23px; 
+    }
+    .kaliningrad p{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    #idContacts .W_accordion{
+        max-width: 89%;
+        margin:20px auto 100px;
+    }
+ 
+    header.header-acord{
+        padding: 0 10px 8px;
+    }
+    header.header-acord strong{
+        line-height: 40px;
+        font-size: 23px;
+        padding-top: 2px; 
+        border-width: 2px;
+    }
+    .header-acord .contacts{
+        top: 10px;
+        right: 8px;
+    }
+    .header-acord  .contacts p{
+        font-size: 15px;
+    }
+    .header-acord  .contacts .phone{
+        font-size: 23px;
+    }
+    .W_accordion .B{
+        margin-bottom: 12px;
+        padding: 0 50px 0 10px;
+        font-size: 15px;
+    }
+    .W_accordion .B .text {
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+    .W_accordion .B .text a{
+        font-size: 14px;
+    }
+    .W_accordion .B .text a img{
+      height: 21px;
+    }
+    .W_accordion .B .text a:nth-child(1){
+        margin-right: 15px;
+    }
+    .W_accordion .B .arrow-flag{
+        height: 24px;
+        left: 110%;
+        top: 1px;
+        width: 17px;
+    }
+    .acord-item .BTN{
+        font-size: 21px;
+        line-height: 30px;
+        margin-left: -20px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        letter-spacing: 0;
+        margin-right: 10px;
+        padding: 0 8px;
+    }
+
+    .acord-item ._right{
+        line-height:24px;
+        padding-top: 0px;
+        font-size: 16px;
+    }
+    .acord-item .adrres{
+        top: -3px;
+    } 
+    .B_map span.dots{
+        width: 7px;
+        height: 7px;
+        border: 2px solid #fff;
+    }
+ 
+    .B_map .dots.moskva{
+        top: 55.5%;
+        left: 21.8%;
+    }
+    .B_map .dots.peterburg{
+        top: 44.5%;
+        left: 20.8%;
+    }
+    .B_map .dots.chelab{
+        top: 74.2%;
+        left: 34%;
+    }
+    .B_map .dots.krasnodar{
+        top: 76.3%;
+        left: 14%;
+    }    
+    .column .M li a:after {
+        right: -27px;
+        border: 3px solid #fff;
+        width: 10px;
+        height: 10px;
+    } 
+    .column .M {
+        font-size: 0.6em;
+    }    
+
+}
+
+
+@media only screen and (max-width : 1050px) {
+    .header {
+        font-size: 16px;
+        font-weight: 500;
+        padding-top: 8px;
+        padding-bottom: 10px;
+    }
+    .header .B_logo img{
+        width: 150px;
+    }  
+    .header .contacts .phone{
+        font-size: 1.7em;       
+    }
+    .header .contacts {
+        font-size: 0.55em;
+        margin-top: 6px;
+    }    
+    .header .BTN_sm {
+        font-size: 10px;
+        padding: 4px 11px;
+        top: 3px;
+    }   
+    .header .BTN_sm img{
+        width: 28px;
+    }    
+    aside.column.as-col {
+        margin-right: -30px;
+        width: 150px;
+ 
+        
+    }    
+   body .section{
+        height: 100%!important;
+    }
+    aside.column nav {
+        left: 12px;
+        top: 34%;
+        margin-top: -295px;
+        width: 135px;
+        line-height: 600px;
+    }   
+      .column ul#menu ul a {
+        font-size: 13px;
+        font-weight: 500;
+         
+    }  
+    .column ul#menu li{
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    .column ul#menu ul li{
+        margin-bottom: 8px;
+    }
+    .wrap {
+        max-width: 800px;
+        padding: 0 10px;
+        left: -40px;
+         
+    }    
+    .mCSB_scrollTools {
+        right: 115px !important;
+    }    
+    .footer .wrap .TL {
+        margin-bottom: 5px;
+        margin-right: 10px;
+        font-size: 19px;
+    }
+    .footer .wrap .form .R .B + .B {
+        margin-left: 14px;
+    }    
+    .footer .wrap {
+        padding: 8px 15px 4px 0;
+        
+    }
+    .footer .TL {
+        font-size: 1em;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+        line-height: 1.5em;
+        margin-left: 5px;
+    }   
+    footer  input[type="text"] {
+        font-size: 15px;
+        height: 34px;
+        padding: 0 10px 0 10px;
+        width: 120px;
+        line-height: 30px;
+    }    
+    footer  input[type="text"]:focus {
+      height: 30px;
+      padding: 0 7px 0 7px;
+      width: 120px;
+      line-height: 31px;
+    }    
+    .form .error {
+        height: 30px;
+        padding: 0 7px 0 7px;
+        width: 120px;
+        line-height: 32px;
+    }   
+    .footer{
+        bottom: 0;
+    }
+    footer  .form .BTN {
+        height: 34px;
+        font-size: 12px;
+        min-width: 108px;
+        padding: 0;
+    }   
+    .column .contacts {
+        font-size: 0.65em;
+        letter-spacing: 0px;
+        line-height: 22px;
+    }    
+    aside .B_logo img{
+        width: 110px;
+    }
+    aside .BTN_xs {
+        min-width: 0;
+        border-radius: 2px;
+        font-size: 14px;
+        line-height: 22px;
+        height: 22px;
+        padding: 0 10px;
+    }    
+    #idCompany .BG_wide-1{
+        margin-top: 20px;
+    }
+    #idCompany h1,
+    #idCompany h2{
+            font-size: 1.30em;
+        line-height: 1.4em;
+    }
+    #idCompany p{
+        font-size: 14.5px;
+        line-height: 20px;
+    }
+    .info-comp {
+        padding: 10px 14px;
+    }
+  
+    ol.marker.BG .-hide:hover{
+        font-size: 16px;
+    }
+    #idCompany  ol.marker.BG .-hide:hover:before {
+      width: 8%;
+    }
+   #idCompany   ol.marker.BG .-hide:hover:after {
+      left: 8%;
+    }   
+    ol.marker li:before{
+        font-size: 1.20em;
+    }
+    ol.marker.BG li {
+        min-height: 45px;
+        padding: 4px 8px;
+        width: 350px;
+    }    
+    #idMain .intro .list{
+        right: 20px;
+        bottom: -15px;
+    }    
+    #idMain  .list span {
+        font-size: 0.7em;
+    }    
+    #idMain .list img{
+        width: 70px;
+    }    
+    #idProducts h1{
+        font-size: 23px;
+        line-height: 30px;
+    }
+    #idProducts .BG_wide{
+        height: 40px;
+        margin-top: 20px!important;
+    }   
+    #idProducts .TL{
+        font-size: 22px;
+        font-weight: 300; 
+        line-height: 35px;   
+    }
+    #idProducts header {
+        height: 40px;
+    }    
+    #idProducts header img{
+       width:  18px;
+        top: 5px;
+    }
+    #idProducts header.active  img{
+        top: 8px;
+    }
+    #idProducts .wrap {
+        padding-top: 0px;
+    }
+    #idProducts h1 .B_hide{
+        max-width: 300px;
+    }   
+    #idProducts .B_hide .text p:first-child{
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 10px 8px;
+    }
+    #idProducts .B_hide .text p{
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0px;
+         margin:0 10px;
+    }  
+    #idProducts h2 {
+        font-size: 23px;
+        height: 40px;
+        line-height: 35px;
+    } 
+    #idProducts h2 strong{
+        line-height:35px;
+    }
+ 
+    #idProducts .B_hide .text a{
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        margin-top: 20px;
+        padding-right: 45px;
+        height: 32px;
+    }
+    #idProducts .B_hide .text a img{
+        top: -10px;
+        right: 20px;
+        width: 32px;
+    }
+    .fp-controlArrow.fp-next {
+        right: 125px!important;
+        border-width: 20px 0 20px 20px!important;
+    }    
+    .fp-controlArrow.fp-prev {
+            border-width: 20px 20px 20px 0!important;
+    }    
+    .wrap-list-product {
+        height: 126px;
+        z-index: 20;
+    }    
+    .product_item .product_pic,
+    .product_item .product_pic_2,
+    .product_item .product_pic_3{
+        max-width: 100%;
+        height: auto;
+    }   
+    .list-product-min{
+         width: 830px;
+         left: -25px;
+    }  
+    .slide-klientfirst,
+    .slide-klientsecond{
+        margin: 15px auto 15px;
+
+    }     
+    .controllers span img{
+         
+        height: 34px;
+    }
+    .controllers span.prev{
+        left: 40px;
+    }
+    .controllers span.next{
+        right: 40px;
+    }
+    .slide-klientfirst,
+    .slide-klientsecond{
+        max-width: 520px;
+       
+
+    }   
+    .slide-klientfirst .slick-slide{
+        text-align: center;
+    }
+    .slide-klientfirst .slick-slide a,
+    .slide-klientsecond .slick-slide a{
+        width: 80%;
+    }
+    .slide-klientfirst .slick-slide a img,
+    .slide-klientsecond .slick-slide a img{
+        width: 100%;
+    }
+    #idClients h1,
+     #idClients h2{
+        font-size: 1.20em;
+    }
+    .wrapper-slider {
+        max-width: 100%!important;
+    }
+    .wrapper-slider-next {
+        max-width: 100%!important;
+    }
+    .slide-klientsecond .title-slide {
+        font-size: 16px;
+        line-height: 22px;
+    }    
+    .intro .BG.BG_wide-5,
+    .intro .BG.BG_wide-3{
+        margin-top: 30px;
+    }
+    #idServices ol.marker.BG li {
+        min-height: 45px;
+        margin-left: -205px;
+        padding: 5px 10px;
+        width: 400px;
+    }   
+    ol.marker.BG .-hide:hover{
+        font-size: 15px;
+    }    
+    #idServices  ol.marker li .TL{
+        font-size: 15px;
+    }
+    #idServices ol.marker li:after {
+        left: 15%;
+    }   
+    #idServices ol.marker li:before {
+        width: 17%;
+    }    
+    .W_map .B_map{
+        max-width: 440px;
+        left: -30px;
+    }   
+    .BG_wide-6{
+        margin-top: 15px!important;
+    }
+    .BG_wide-6  h1.TL{
+        font-size: 1.10em;
+    }
+ 
+    .B.kaliningrad{
+        max-width: 270px;
+        left: 0px;
+        padding: 10px;
+        margin-top: 30px;
+    }
+    .kaliningrad .BTN{
+        margin:-16px auto;
+        font-size: 16px;
+        line-height: 30px;
+        padding: 0 10px;   
+    }
+    .kaliningrad .BG_dark{
+        margin-top: -0px;
+        padding: 16px 0px 8px;
+        font-size: 15px;
+    }
+    .kaliningrad  .ICN{
+        margin: 6px 3px 0;
+        font-size: 12px;
+    }
+    .kaliningrad  a img{
+        height: 20px; 
+    }
+    .kaliningrad p{
+        font-size: 14px;
+        margin-top: 2px;
+    }
+    #idContacts .W_accordion{
+        max-width: 89%;
+        margin:20px auto 60px;
+    }
+ 
+    header.header-acord{
+        padding: 0 10px 8px;
+    }
+    header.header-acord strong{
+        line-height: 35px;
+        font-size: 18px;
+        padding-top: 2px; 
+        border-width: 1px;
+    }
+    .header-acord .contacts{
+        top: 8px;
+        right: 8px;
+    }
+    .header-acord  .contacts p{
+        font-size: 12px;
+    }
+    .header-acord  .contacts .phone{
+        font-size: 18px;
+    }
+    .W_accordion .B{
+        margin-bottom: 10px;
+        padding: 0 50px 0 10px;
+        font-size: 12px;
+    }
+    .W_accordion .B .text {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+    .W_accordion .B .text a{
+        font-size: 13px;
+    }
+    .W_accordion .B .text a img{
+      height: 18px;
+    }
+    .W_accordion .B .text a:nth-child(1){
+        margin-right: 15px;
+    }
+    .W_accordion .B .arrow-flag{
+        height: 22px;
+        left: 110%;
+        top: 1px;
+        width: 15px;
+    }
+    .acord-item .BTN{
+        font-size: 17px;
+        line-height: 30px;
+        margin-left: -20px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        letter-spacing: 0;
+        margin-right: 10px;
+        padding: 0 8px;
+        min-width: 100px;
+    }
+
+    .acord-item ._right{
+        line-height:20px;
+        padding-top: 2px;
+        font-size: 14px;
+    }
+    .acord-item .adrres{
+        top: -3px;
+    } 
+    .B_map span.dots{
+        width: 7px;
+        height: 7px;
+        border: 2px solid #fff;
+    }
+ 
+    .B_map .dots.moskva{
+        top: 55.5%;
+        left: 21.8%;
+    }
+    .B_map .dots.peterburg{
+        top: 44.5%;
+        left: 20.8%;
+    }
+    .B_map .dots.chelab{
+        top: 74.2%;
+        left: 34%;
+    }
+    .B_map .dots.krasnodar{
+        top: 76.3%;
+        left: 14%;
+    }    
+    .column .M li a:after {
+        right: -27px;
+        border: 3px solid #fff;
+        width: 10px;
+        height: 10px;
+    } 
+    .column .M {
+        font-size: 0.6em;
+    }    
+
+}
+
+@media only screen and (max-width : 860px) {
+ 
+.zayavka-prinata .form-z{
+    border: 2px solid #aaabab;
+    height: 55px;
+    line-height: 45px;
+    
+}
+.zayavka-prinata .left {
+    width: 50px;
+    line-height: 50px;
+    position: absolute;
+    right: 70px;
+    top: -30px; 
+}
+.zayavka-prinata .left img{
+    width: 90%;
+ 
+}
+.zayavka-prinata h5{
+    line-height: 50px;
+    font-size: 17px;
+    width: 250px;
+
+    
+}
+.zayavka-prinata p{
+    bottom: 2px;
+    font-size: 11px;
+    right: 8px;
+    letter-spacing: 0;
+}
+.zayavka-prinata .right .close{
+    top: 1px;
+    right:0px;
+}
+
+
+.zayavka-prinata .wrapper-z {
+    top: 50%;
+    left: 43%;
+    width: 1px;
+}    
+    
+    
+    .header {
+        font-size: 14px;
+        padding-top: 2px;
+        padding-bottom: 10px;
+    }
+    .header .B_logo img{
+        width: 120px;
+    } 
+    .header .B_logo{
+      
+        text-align: center;
+    
+    }
+    .header .slogan{
+        line-height: normal;
+        padding-bottom: 0;
+        top: 5px;
+        position: relative;
+    }
+ 
+    .header .contacts .phone{
+        font-size: 1.7em;       
+    }
+    .header .contacts {
+        font-size: 0.65em;
+        margin-top: 6px;
+    }    
+    .header .BTN_sm {
+        font-size: 9px;
+        padding: 4px 8px;
+        top: 3px;
+    }   
+    .header .BTN_sm img{
+        width: 27px;
+    }    
+    aside.column.as-col {
+        margin-right: -30px;
+        width: 130px;
+ 
+        
+    }    
+   body .section{
+        height: 100%!important;
+    }
+    aside.column nav {
+        left: 18px;
+        top: 29%;
+        margin-top: -230px;
+        width: 135px;
+        line-height: 600px;
+    }   
+      .column ul#menu ul a {
+        font-size: 10px;
+        font-weight: 500;
+         
+    }  
+    .column ul#menu li{
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .column ul#menu ul li{
+        margin-bottom: 8px;
+    }
+    .wrap {
+        max-width: 630px;
+        padding: 0 10px;
+        left: -40px;
+    }    
+    .mCSB_scrollTools {
+        right: 95px !important;
+    }    
+    .footer .wrap .TL {
+        margin-bottom: 5px;
+        margin-right: 5px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .footer .wrap .form .R .B + .B {
+        margin-left: 6px;
+    }    
+    .footer .wrap {
+        padding: 8px 10px 4px 0;
+        
+    }
+    .footer .TL {
+        font-size: 0.7em;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+        line-height: 1.5em;
+        margin-left: 5px;
+    }   
+    footer  input[type="text"] {
+        font-size: 15px;
+        height: 34px;
+        padding: 0 10px 0 10px;
+        width: 100px;
+        line-height: 30px;
+    }    
+    footer  input[type="text"]:focus {
+      height: 30px;
+      padding: 0 7px 0 7px;
+      width: 100px;
+      line-height: 31px;
+    }    
+    .form .error {
+        height: 30px;
+        padding: 0 7px 0 7px;
+        width: 100px;
+        line-height: 32px;
+    }    
+    footer  .form .BTN {
+        height: 34px;
+        font-size: 12px;
+        min-width: 95px;
+        padding: 0;
+    }   
+    .column .contacts {
+        font-size: 0.55em;
+        letter-spacing: 0px;
+  
+        line-height: 22px;
+    }    
+    aside .B_logo img{
+        width: 90px;
+      ;        
+    }
+    aside .BTN_xs {
+        min-width: 0;
+        border-radius: 2px;
+        font-size: 12px;
+        line-height: 22px;
+        height: 22px;
+        padding: 0 6px;
+    }    
+    #idCompany .BG_wide-1{
+        margin-top: 20px;
+    }
+    #idCompany h1,
+    #idCompany h2{
+            font-size: 1.15em;
+        line-height: 1.4em;
+    }
+    #idCompany p{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .info-comp {
+        padding: 10px 10px;
+    }
+    ol.marker.BG .-hide:hover{
+        font-size: 13px!important;
+        line-height: 18px;
+    }
+    ol.marker li:before{
+        font-size: 1.20em;
+    }
+    ol.marker li .TL{
+        padding-left: 10px;
+    }
+    #idCompany ol.marker.BG .-hide:hover {
+        width: 450px;
+        margin-left: -255px;
+    
+    }    
+    #idCompany  ol.marker.BG .-hide .text{
+        padding-left: 10px;
+    }
+    #idCompany ol.marker.BG .-hide:hover strong{
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+    ol.marker.BG li {
+        min-height: 40px!important;
+        padding: 5px 10px;
+        width: 340px;
+    }    
+    #idMain .intro .list{
+        right: 20px;
+    }    
+    #idMain  .list span {
+        font-size: 0.7em;
+    }    
+    #idMain .list img{
+        width: 60px;
+    }    
+    #idProducts h1{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    #idProducts .BG_wide{
+        height: 34px;
+        margin-top: 15px!important;
+    }   
+    #idProducts .TL{
+        font-size: 20px;
+        font-weight: 300; 
+        line-height: 32px;   
+    }
+    #idProducts header {
+        height: 35px;
+    }    
+    #idProducts header img{
+       width:  16px;
+        top: 4px;
+    }
+    #idProducts header.active  img{
+        top: 6px;
+    }
+    #idProducts .wrap {
+        padding-top: 0px;
+    }
+    #idProducts h1 .B_hide{
+        max-width: 250px;
+        left: 96%;
+    }   
+    #idProducts .B_hide .text p:first-child{
+        font-size: 13px;
+        line-height: 20px;
+        margin: 0 5px 6px;
+    }
+    #idProducts .B_hide .text p{
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0px;
+         margin:0 7px;
+    }  
+    #idProducts h2 {
+        font-size: 20px;
+        height: 35px;
+        line-height: 32px;
+    } 
+    #idProducts h2 strong{
+        line-height:35px;
+    }
+ 
+    #idProducts .B_hide .text a{
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 400;
+        margin-top: 20px;
+        padding-right: 40px;
+        height: 25px;
+    }
+    #idProducts .B_hide .text a img{
+        top: -6px;
+        right: 20px;
+        width: 30px;
+    }
+    .fp-controlArrow.fp-next {
+        right: 100px!important;
+        border-width: 20px 0 20px 20px!important;
+    }    
+    .fp-controlArrow.fp-prev {
+            border-width: 20px 20px 20px 0!important;
+    }    
+    .wrap-list-product {
+        height: 120px;
+        z-index: 20;
+    }    
+    .product_item .product_pic,
+    .product_item .product_pic_2,
+    .product_item .product_pic_3{
+        max-width: 100%;
+        height: auto;
+    }
+ 
+    .list-product-min{
+         width: 550px;
+        left: -40px;
+    }    
+    .controllers span img{
+        width: 20px;
+    }
+    .controllers span.prev{
+        left: 40px;
+    }
+    .controllers span.next{
+        right: 40px;
+    }
+    .slide-klientfirst,
+    .slide-klientsecond{
+        max-width: 430px;
+        margin: 10px auto 15px;
+
+    }   
+ 
+    #idClients h1,
+     #idClients h2{
+        font-size: 1.10em;
+    }
+ 
+    .slide-klientsecond .title-slide {
+        font-size: 14px;
+        line-height: 20px;
+    }    
+    .intro .BG.BG_wide-5,
+    .intro .BG.BG_wide-3{
+        margin-top: 20px;
+    }
+    #idServices ol.marker.BG li {
+        min-height: 60px;
+        margin-left: -205px;
+        padding: 5px 10px;
+        width: 350px;
+    }    
+    #idServices  ol.marker li .TL{
+        font-size: 14px;
+    }
+    #idServices h1{
+        font-size: 30px;
+    }
+      ol.marker li:after {
+        left: 15%;
+    }  
+      ol.marker li:hover:after {
+        left: 13%!important;
+    }   
+     ol.marker li:hover:before {
+        width: 15%!important;
+    }      
+     ol.marker li:before {
+        width: 15%;
+    }    
+    .W_map .B_map{
+        max-width: 380px;
+        left: -10px;
+    }   
+    .BG_wide-6{
+        margin-top: 15px!important;
+    }
+    .BG_wide-6  h1.TL{
+        font-size: 1em;
+    }
+ 
+    .B.kaliningrad{
+        max-width: 220px;
+        left: 0px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .kaliningrad .BTN{
+        margin:-16px auto;
+        font-size: 15px;
+        line-height: 25px;
+        padding: 0 8px;   
+    }
+    .kaliningrad .BG_dark{
+        margin-top: -0px;
+        padding: 16px 0px 5px;
+        font-size: 13px;
+    }
+    .kaliningrad  .ICN{
+        margin: 4px 3px 0;
+        font-size: 12px;
+    }
+    .kaliningrad  a img{
+        height: 16px; 
+    }
+    .kaliningrad p{
+        font-size: 12px;
+        margin-top: 0px;
+        line-height: 22px;
+    }
+    #idContacts .W_accordion{
+        max-width: 98%;
+        margin:20px auto 50px;
+        left: 10px;
+    }
+ 
+    header.header-acord{
+        padding: 0 10px 8px;
+    }
+    header.header-acord strong{
+        line-height: 30px;
+        font-size: 15px;
+        padding-top: 2px; 
+        border-width: 1px;
+    }
+    .header-acord .contacts{
+        top: 5px;
+        right: 8px;
+    }
+    .header-acord  .contacts p{
+        font-size: 12px;
+    }
+    .header-acord  .contacts .phone{
+        font-size: 16px;
+    }
+    .W_accordion .B{
+        margin-bottom: 8px;
+        padding: 0 40px 0 10px;
+        font-size: 12px;
+    }
+    .W_accordion .B .text {
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+    .W_accordion .B .text a{
+        font-size: 11px;
+    }
+    .W_accordion .B .text a img{
+      height: 15px;
+    }
+    .W_accordion .B .text a:nth-child(1){
+        margin-right: 15px;
+    }
+    .W_accordion .B .arrow-flag{
+        height: 18px;
+        left: 110%;
+        top: 1px;
+        width: 15px;
+    }
+    .acord-item .BTN{
+        font-size: 14px;
+        line-height: 25px;
+        margin-left: -20px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        letter-spacing: 0;
+        margin-right: 10px;
+        padding: 0 8px;
+        min-width: 80px;
+    }
+
+    .acord-item ._right{
+        line-height:20px;
+        padding-top: 0px;
+        font-size: 13px;
+    }
+    .acord-item .adrres{
+        top: -3px;
+    } 
+    .B_map span.dots{
+        width: 6px;
+        height: 6px;
+        border: 2px solid #fff;
+    }
+ 
+    .B_map .dots.moskva{
+        top: 55.5%;
+        left: 21.8%;
+    }
+    .B_map .dots.peterburg{
+        top: 44.5%;
+        left: 20.8%;
+    }
+    .B_map .dots.chelab{
+        top: 74.2%;
+        left: 34%;
+    }
+    .B_map .dots.krasnodar{
+        top: 76.3%;
+        left: 14%;
+    }    
+    .column .M li a:after {
+        right: -27px;
+        border: 3px solid #fff;
+        width: 10px;
+        height: 10px;
+    } 
+    .column .M {
+        font-size: 0.6em;
+    }    
+
+}
+
+
+ 
+ 
+ 
+@media only screen and (max-width : 620px) {
+ .header {
+        font-size: 13px;
+        padding-top: 2px;
+        padding-bottom: 5px;
+    }
+    .header .B_logo img{
+        width: 120px;
+    } 
+    .header .B_logo{
+       margin-bottom: 4PX;
+        text-align: center;
+    }
+    .header .slogan{
+        line-height: normal;
+        padding-bottom: 0;
+        top: 5px;
+        position: relative;
+    }
+ 
+    .header .contacts .phone{
+        font-size: 1.7em;       
+    }
+    .header .B{
+        width: 100%;
+        text-align: center;
+    }
+    .header .contacts {
+        font-size: 0.65em;
+        margin-top: 6px;
+    }    
+    .header .BTN_sm {
+        font-size: 9px;
+        padding: 4px 8px;
+        top: 3px;
+    }   
+    .header .BTN_sm img{
+        width: 27px;
+    }    
+    aside.column.as-col {
+        margin-right: -30px;
+        width: 130px;
+ 
+        
+    }    
+   body .section{
+        height: 100%!important;
+       width: 100%;
+       box-sizing: border-box;
+    }
+ 
+    body aside.column header{
+        top: 40px;
+    }
+    body aside.column.active{
+        right: 0;
+    }
+    aside.column nav {
+        left: 18px;
+        top: 36%;
+        margin-top: -230px;
+        width: 135px;
+        line-height: 600px;
+    }   
+      .column ul#menu ul a {
+        font-size: 10px;
+        font-weight: 500;
+         
+    }  
+    .column ul#menu li{
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .column ul#menu ul li{
+        margin-bottom: 8px;
+    }
+    .wrap {
+        max-width: 500px;
+        padding: 0 10px;
+        left: -50px;
+        width: 100%;
+        box-sizing: border-box;
+        
+    }    
+    .mCSB_scrollTools {
+        right: -95px !important;
+      
+    }    
+    .mCSB_inside>.mCSB_container {
+        margin-right: 0px;
+    }    
+    .footer .wrap .TL {
+        margin-bottom: 5px;
+        margin-right: 5px;
+        font-size: 14px;
+        line-height: 20px;
+        width: 100%
+    }
+    .footer form .B:nth-child(1){
+        width: 100%;
+        text-align: center;
+        line-height: normal;
+    }
+    .footer form .R{
+        text-align: center;
+    }
+    .footer form .B{
+        display: inline-block;
+        float: none;
+    }
+    .footer form .B:last-child{
+        margin-top: 5px;
+    }
+    .footer .wrap .form .R .B + .B {
+        margin-left: 6px;
+    }    
+    .footer .wrap {
+        padding: 4px 10px 4px 0;
+        
+    }
+    .footer .TL {
+        font-size: 0.7em;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+        line-height: 1.5em;
+        margin-left: 5px;
+    }   
+    footer  input[type="text"] {
+        font-size: 15px;
+        height: 34px;
+        padding: 0 10px 0 10px;
+        width: 100px;
+        line-height: 30px;
+    }    
+    footer  input[type="text"]:focus {
+      height: 30px;
+      padding: 0 7px 0 7px;
+      width: 100px;
+      line-height: 31px;
+    }    
+    .form .error {
+        height: 30px;
+        padding: 0 7px 0 7px;
+        width: 100px;
+        line-height: 32px;
+    }    
+    footer  .form .BTN {
+        height: 30px;
+        font-size: 12px;
+        min-width: 95px;
+        padding: 0;
+    }   
+    .column .contacts {
+        font-size: 0.55em;
+        letter-spacing: 0px;
+  
+        line-height: 22px;
+    }    
+    aside .B_logo img{
+        width: 90px;
+            
+    }
+    aside .BTN_xs {
+        min-width: 0;
+        border-radius: 2px;
+        font-size: 12px;
+        line-height: 22px;
+        height: 22px;
+        padding: 0 6px;
+    }    
+    #idCompany .BG_wide-1{
+        margin-top: 0px;
+    }
+    #idCompany h1,
+    #idCompany h2{
+            font-size: 1em;
+        line-height: 1.2em;
+    }
+    #idCompany p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .info-comp {
+        padding: 8px 20px 8px ;
+    }
+    ol.marker.BG .-hide:hover{
+        font-size: 12px!important;
+        line-height: 18px;
+    }
+    ol.marker li:before{
+        font-size: 1em;
+    }
+    ol.marker li .TL{
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    #idCompany ol.marker.BG .-hide:hover {
+        width: 400px;
+        margin-left: -225px;
+    
+    }    
+    #idCompany  ol.marker.BG .-hide .text{
+        padding-left: 10px;
+    }
+    #idCompany ol.marker.BG .-hide:hover strong{
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+    ol.marker.BG li {
+        min-height: 30px!important;
+        padding: 3px 10px;
+        width: 300px;
+        left: 250px;
+        
+    }  
+    .footer {
+
+     z-index: 555;
+      background: #1a4068; /* Old browsers */
+      background: linear-gradient(to bottom, #1a4068 0%, #1a2b3c 100%); /* W3C */
+    }
+    
+    #idCompany ol{
+        padding-top: 10px;
+        padding-top: 10px;
+    }
+    #idMain .intro .list{
+        right: 20px;
+        bottom: 40px;
+    }    
+    #idMain  .list span {
+        font-size: 0.6em;
+    }    
+    #idMain .list img{
+        width: 60px;
+    }    
+    #idProducts h1{
+        font-size: 20px;
+        line-height: 25px;
+        padding-left: 5px;
+    }
+    #idProducts .BG_wide{
+        height: 34px;
+        margin-top: 0px!important;
+      
+    }   
+     #idProducts .B_hide{
+         top: 70px!important;
+         z-index: 99999!important;
+         position: absolute;
+        left: 30px!important;
+         right: auto;
+    }
+    #idProducts .TL{
+        font-size: 18px;
+        font-weight: 300; 
+        line-height: 30px;   
+    }
+    #idProducts header {
+        height: 30px;
+    }    
+    #idProducts header img{
+       width:  14px;
+        top: 4px;
+    }
+    #idProducts header.active  img{
+        top: 6px;
+    }
+    #idProducts .wrap {
+        padding-top: 0px;
+    }
+    #idProducts h1 .B_hide{
+        max-width: 280px;
+        
+    }   
+    #idProducts .B_hide .text p:first-child{
+        font-size: 13px;
+        line-height: 18px;
+        margin: 0 10px 2px;
+    }
+    #idProducts .B_hide .text p{
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 0px;
+         margin:0 10px;
+    }  
+    #idProducts h2 {
+        font-size: 20px;
+        height: 30px;
+        line-height: 28px;
+        position: relative;
+        z-index: 1;
+        margin-top: 5px;
+        width: 280px;
+        left: 30px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        text-align: center;
+    } 
+    #idProducts h2 strong{
+        line-height:30px;
+    }
+ 
+    #idProducts .B_hide .text a{
+        font-size: 15px;
+        line-height: 29px;
+        font-weight: 400;
+        margin-top: 20px;
+        padding-right: 40px;
+        height: 31px;
+    }
+    #idProducts .B_hide .text a img{
+        top: -6px;
+        right: 20px;
+        width: 30px;
+    }
+    .fp-controlArrow.fp-next {
+        right: 5px!important;
+        border-width: 15px 0 15px 15px!important;
+    }    
+    .fp-controlArrow.fp-prev {
+            border-width: 15px 15px 15px 0!important;
+        left: 0!important;
+    }    
+    .wrap-list-product {
+        height: 180px;
+        z-index: 20;
+    }    
+    .product_item .product_pic,
+    .product_item .product_pic_2,
+    .product_item .product_pic_3{
+        max-width: 100%;
+        height: auto;
+    }
+ 
+    .list-product-min{
+         width: 400px!important;
+        left: 0px;
+    }    
+    .controllers span img{
+        width: 15px;
+        height: 32px;
+    }
+    .controllers span.prev{
+        left: 10px;
+    }
+    .controllers span.next{
+        right: 10px;
+    }
+    .slide-klientfirst,
+    .slide-klientsecond{
+        max-width: 380px;
+        margin: 10px auto 15px;
+        padding: 0 15px;
+
+    }   
+ 
+    #idClients h1,
+     #idClients h2{
+        font-size: 1em;
+    }
+    .wrapper-slider {
+        max-width: 430px;
+    }
+    .wrapper-slider-next {
+        max-width: 430px;
+    }
+    .slide-klientsecond .title-slide {
+        font-size: 14px;
+        line-height: 20px;
+    }    
+    .intro .BG.BG_wide-5,
+    .intro .BG.BG_wide-3{
+        margin-top: 20px;
+    }
+    #idServices ol.marker.BG li {
+        min-height: 60px;
+        margin-left: -205px;
+        padding: 5px 10px;
+        width: 350px;
+    }    
+    #idServices  ol.marker li .TL{
+        font-size: 14px;
+    }
+    #idServices h1{
+        font-size: 30px;
+    }
+      ol.marker li:after {
+        left: 13%!important;
+    }  
+      ol.marker li:hover:after {
+        left: 12%!important;
+    }   
+     ol.marker li:hover:before {
+        width: 15%!important;
+    }      
+     ol.marker li:before {
+        width: 13%!important;
+         font-size: 15px;
+    }    
+    .W_map .B_map{
+        max-width: 470px!important;
+        left: 0px;
+        box-sizing: border-box;
+        float: none;
+       
+    }   
+    .W_map .B_map img{
+       width: 100%!important; 
+    }
+    .BG_wide-6{
+        margin-top: 0px!important;
+    }
+    .BG_wide-6  h1.TL{
+        font-size: 0.9em;
+    }
+ 
+    .B.kaliningrad{
+        max-width: 290px;
+        left: 0px;
+        padding: 10px;
+        margin-top: 10px;
+        margin: 10px auto 0;
+        position: relative;
+        float: none;
+        top: auto;
+    }
+    .kaliningrad .BTN{
+        margin:-16px auto;
+        font-size: 15px;
+        line-height: 25px;
+        padding: 0 8px;   
+    }
+    .kaliningrad .BG_dark{
+        margin-top: -0px;
+        padding: 16px 0px 5px;
+        font-size: 13px;
+    }
+    .kaliningrad  .ICN{
+        margin: 4px 3px 0;
+        font-size: 12px;
+    }
+    .kaliningrad  a img{
+        height: 16px; 
+    }
+    .kaliningrad p{
+        font-size: 12px;
+        margin-top: 0px;
+        line-height: 22px;
+    }
+    #idContacts .W_accordion{
+        max-width: 97%;
+        margin:20px auto 120px;
+        left: -5px;
+    }
+ 
+    header.header-acord{
+        padding: 0 5px 7px;
+    }
+    header.header-acord strong{
+        line-height: 30px;
+        font-size: 14px;
+        padding-top: 2px; 
+        border-width: 1px;
+    }
+    .header-acord .contacts{
+        top: 4px;
+        right: 8px;
+    }
+    .header-acord  .contacts p{
+        font-size: 11px;
+    }
+    .header-acord  .contacts .phone{
+        font-size: 14px;
+    }
+    .W_accordion .B{
+        margin-bottom: 8px;
+        padding: 0 30px 0 10px;
+        font-size: 11px;
+    }
+    .W_accordion .B .text {
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+    .W_accordion .B .text a{
+        font-size: 11px;
+    }
+    .W_accordion .B .text a img{
+      height: 15px;
+    }
+    .W_accordion .B .text a:nth-child(1){
+        margin-right: 15px;
+    }
+    .W_accordion .B .arrow-flag{
+        height: 18px;
+        left: 105%;
+        top: 1px;
+        width: 15px;
+    }
+    .acord-item .BTN{
+        font-size: 13px;
+        line-height: 24px;
+        margin-left: -20px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        letter-spacing: 0;
+        margin-right: 6px;
+        padding: 0 8px;
+        min-width: 70px;
+    }
+
+    .acord-item ._right{
+        line-height:20px;
+        padding-top: 0px;
+        font-size: 12px;
+    }
+    .acord-item .adrres{
+        top: -3px;
+    } 
+    .B_map span.dots{
+        width: 6px;
+        height: 6px;
+        border: 2px solid #fff;
+    }
+ 
+    .B_map .dots.moskva{
+        top: 55.5%;
+        left: 21.8%;
+    }
+    .B_map .dots.peterburg{
+        top: 44.5%;
+        left: 20.8%;
+    }
+    .B_map .dots.chelab{
+        top: 74.2%;
+        left: 34%;
+    }
+    .B_map .dots.krasnodar{
+        top: 76.3%;
+        left: 14%;
+    }    
+    .column .M li a:after {
+        right: -27px;
+        border: 3px solid #fff;
+        width: 10px;
+        height: 10px;
+    } 
+    .column .M {
+        font-size: 0.6em;
+    }        
+}
+
+
+
+
+@media only screen and (max-width : 485px) {
+ .header {
+        font-size: 13px;
+        padding-top: 2px;
+        padding-bottom: 5px;
+    }
+    .header .B_logo img{
+        width: 120px;
+    } 
+    .header .B_logo{
+       margin-bottom: 4PX;
+        text-align: center;
+    }
+    .header .slogan{
+        line-height: normal;
+        padding-bottom: 0;
+        top: 5px;
+        position: relative;
+    }
+ 
+    .header .contacts .phone{
+        font-size: 1.7em;       
+    }
+    .header .B{
+        width: 100%;
+        text-align: center;
+    }
+    .header .contacts {
+        font-size: 0.65em;
+        margin-top: 6px;
+    }    
+    .header .BTN_sm {
+        font-size: 9px;
+        padding: 4px 8px;
+        top: 3px;
+    }   
+    .header .BTN_sm img{
+        width: 27px;
+    }    
+    aside.column.as-col {
+        margin-right: -30px;
+        width: 130px;
+ 
+        
+    }    
+   body .section{
+        height: 100%!important;
+       width: 100%;
+       box-sizing: border-box;
+    }
+   body aside.column{
+       right: -250px;  
+       left: auto;
+       transition: all 0.4s ease;
+       -webkit-transition: all 0.4s ease;
+       -moz-transition: all 0.4s ease;
+       
+    }
+    body aside.column header{
+        top: 40px;
+    }
+    body aside.column.active{
+        right: 0;
+    }
+    aside.column nav {
+        left: 18px;
+        top: 36%;
+        margin-top: -230px;
+        width: 135px;
+        line-height: 600px;
+    }   
+      .column ul#menu ul a {
+        font-size: 10px;
+        font-weight: 500;
+         
+    }  
+    .column ul#menu li{
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .column ul#menu ul li{
+        margin-bottom: 8px;
+    }
+    .wrap {
+        max-width: 600px;
+        padding: 0 10px;
+        left: 0px;
+        width: 100%;
+        box-sizing: border-box;
+        min-width: 320px;
+    }    
+    .mCSB_scrollTools {
+        right: -95px !important;
+      
+    }    
+    .mCSB_inside>.mCSB_container {
+        margin-right: 0px;
+    }    
+    .footer .wrap .TL {
+        margin-bottom: 5px;
+        margin-right: 5px;
+        font-size: 14px;
+        line-height: 20px;
+        width: 100%
+    }
+    .footer form .B:nth-child(1){
+        width: 100%;
+        text-align: center;
+        line-height: normal;
+    }
+    .footer form .R{
+        text-align: center;
+    }
+    .footer form .B{
+        display: inline-block;
+        float: none;
+    }
+    .footer form .B:last-child{
+        margin-top: 5px;
+    }
+    .footer .wrap .form .R .B + .B {
+        margin-left: 6px;
+    }    
+    .footer .wrap {
+        padding: 4px 10px 4px 0;
+        
+    }
+    .footer .TL {
+        font-size: 0.7em;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+        line-height: 1.5em;
+        margin-left: 5px;
+    }   
+    footer  input[type="text"] {
+        font-size: 15px;
+        height: 34px;
+        padding: 0 10px 0 10px;
+        width: 100px;
+        line-height: 30px;
+    }    
+    footer  input[type="text"]:focus {
+      height: 30px;
+      padding: 0 7px 0 7px;
+      width: 100px;
+      line-height: 31px;
+    }    
+    .form .error {
+        height: 30px;
+        padding: 0 7px 0 7px;
+        width: 100px;
+        line-height: 32px;
+    }    
+    footer  .form .BTN {
+        height: 30px;
+        font-size: 12px;
+        min-width: 95px;
+        padding: 0;
+    }   
+    .column .contacts {
+        font-size: 0.55em;
+        letter-spacing: 0px;
+  
+        line-height: 22px;
+    }    
+    aside .B_logo img{
+        width: 90px;
+            
+    }
+    aside .BTN_xs {
+        min-width: 0;
+        border-radius: 2px;
+        font-size: 12px;
+        line-height: 22px;
+        height: 22px;
+        padding: 0 6px;
+    }    
+    #idCompany .BG_wide-1{
+        margin-top: 0px;
+    }
+    #idCompany h1,
+    #idCompany h2{
+            font-size: 1em;
+        line-height: 1.2em;
+    }
+    #idCompany p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .info-comp {
+        padding: 8px 20px 8px ;
+    }
+    ol.marker.BG .-hide:hover{
+        font-size: 12px!important;
+        line-height: 18px;
+    }
+    ol.marker li:before{
+        font-size: 1em;
+    }
+    ol.marker li .TL{
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    #idCompany ol.marker.BG .-hide:hover {
+        width: 400px;
+        margin-left: -225px;
+    
+    }    
+    #idCompany  ol.marker.BG .-hide .text{
+        padding-left: 10px;
+    }
+    #idCompany ol.marker.BG .-hide:hover strong{
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+    ol.marker.BG li {
+        min-height: 30px!important;
+        padding: 3px 10px;
+        width: 300px;
+        left: 250px;
+        
+    }  
+    #idCompany ol{
+        padding-top: 10px;
+        padding-top: 10px;
+    }
+    #idMain .intro .list{
+        right: 20px;
+        bottom: 40px;
+    }    
+    #idMain  .list span {
+        font-size: 0.6em;
+    }    
+    #idMain .list img{
+        width: 60px;
+    }    
+    #idProducts h1{
+        font-size: 20px;
+        line-height: 25px;
+        padding-left: 5px;
+    }
+    #idProducts .BG_wide{
+        height: 34px;
+        margin-top: 0px!important;
+      
+    }   
+     #idProducts .B_hide{
+         top: 70px!important;
+         z-index: 99999!important;
+         position: absolute;
+        left: 30px!important;
+         right: auto;
+    }
+    #idProducts .TL{
+        font-size: 18px;
+        font-weight: 300; 
+        line-height: 30px;   
+    }
+    #idProducts header {
+        height: 30px;
+    }    
+    #idProducts header img{
+       width:  14px;
+        top: 4px;
+    }
+    #idProducts header.active  img{
+        top: 6px;
+    }
+    #idProducts .wrap {
+        padding-top: 0px;
+    }
+    #idProducts h1 .B_hide{
+        max-width: 280px;
+        
+    }   
+    #idProducts .B_hide .text p:first-child{
+        font-size: 13px;
+        line-height: 18px;
+        margin: 0 10px 2px;
+    }
+    #idProducts .B_hide .text p{
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 0px;
+         margin:0 10px;
+    }  
+    #idProducts h2 {
+        font-size: 20px;
+        height: 30px;
+        line-height: 28px;
+        position: relative;
+        z-index: 1;
+        margin-top: 5px;
+        width: 280px;
+        left: 30px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        text-align: center;
+    } 
+    #idProducts h2 strong{
+        line-height:30px;
+    }
+ 
+    #idProducts .B_hide .text a{
+        font-size: 15px;
+        line-height: 29px;
+        font-weight: 400;
+        margin-top: 20px;
+        padding-right: 40px;
+        height: 31px;
+    }
+    #idProducts .B_hide .text a img{
+        top: -6px;
+        right: 20px;
+        width: 30px;
+    }
+    .fp-controlArrow.fp-next {
+        right: 5px!important;
+        border-width: 15px 0 15px 15px!important;
+    }    
+    .fp-controlArrow.fp-prev {
+            border-width: 15px 15px 15px 0!important;
+        left: 0!important;
+    }    
+    .wrap-list-product {
+        height: 180px;
+        z-index: 20;
+    }    
+    .product_item .product_pic,
+    .product_item .product_pic_2,
+    .product_item .product_pic_3{
+        max-width: 100%;
+        height: auto;
+    }
+ 
+    .list-product-min{
+         width: 400px!important;
+        left: 0px;
+    }    
+    .controllers span img{
+        width: 15px;
+        height: 32px;
+    }
+    .controllers span.prev{
+        left: 10px;
+    }
+    .controllers span.next{
+        right: 10px;
+    }
+    .slide-klientfirst,
+    .slide-klientsecond{
+        max-width: 380px;
+        margin: 10px auto 15px;
+        padding: 0 15px;
+
+    }   
+ 
+    #idClients h1,
+     #idClients h2{
+        font-size: 1em;
+    }
+    .wrapper-slider {
+        max-width: 430px;
+    }
+    .wrapper-slider-next {
+        max-width: 430px;
+    }
+    .slide-klientsecond .title-slide {
+        font-size: 14px;
+        line-height: 20px;
+    }    
+    .intro .BG.BG_wide-5,
+    .intro .BG.BG_wide-3{
+        margin-top: 20px;
+    }
+    #idServices ol.marker.BG li {
+        min-height: 60px;
+        margin-left: -205px;
+        padding: 5px 10px;
+        width: 350px;
+    }    
+    #idServices  ol.marker li .TL{
+        font-size: 14px;
+    }
+    #idServices h1{
+        font-size: 30px;
+    }
+      ol.marker li:after {
+        left: 13%!important;
+    }  
+      ol.marker li:hover:after {
+        left: 12%!important;
+    }   
+     ol.marker li:hover:before {
+        width: 15%!important;
+    }      
+     ol.marker li:before {
+        width: 13%!important;
+         font-size: 15px;
+    }    
+    .W_map .B_map{
+        max-width: 470px!important;
+        left: 0px;
+        box-sizing: border-box;
+        float: none;
+       
+    }   
+    .W_map .B_map img{
+       width: 100%!important; 
+    }
+    .BG_wide-6{
+        margin-top: 0px!important;
+    }
+    .BG_wide-6  h1.TL{
+        font-size: 0.9em;
+    }
+ 
+    .B.kaliningrad{
+        max-width: 290px;
+        left: 0px;
+        padding: 10px;
+        margin-top: 10px;
+        margin: 10px auto 0;
+        position: relative;
+        float: none;
+        top: auto;
+    }
+    .kaliningrad .BTN{
+        margin:-16px auto;
+        font-size: 15px;
+        line-height: 25px;
+        padding: 0 8px;   
+    }
+    .kaliningrad .BG_dark{
+        margin-top: -0px;
+        padding: 16px 0px 5px;
+        font-size: 13px;
+    }
+    .kaliningrad  .ICN{
+        margin: 4px 3px 0;
+        font-size: 12px;
+    }
+    .kaliningrad  a img{
+        height: 16px; 
+    }
+    .kaliningrad p{
+        font-size: 12px;
+        margin-top: 0px;
+        line-height: 22px;
+    }
+    #idContacts .W_accordion{
+        max-width: 97%;
+        margin:20px auto 120px;
+        left: -5px;
+    }
+ 
+    header.header-acord{
+        padding: 0 5px 7px;
+    }
+    header.header-acord strong{
+        line-height: 30px;
+        font-size: 14px;
+        padding-top: 2px; 
+        border-width: 1px;
+    }
+    .header-acord .contacts{
+        top: 4px;
+        right: 8px;
+    }
+    .header-acord  .contacts p{
+        font-size: 11px;
+    }
+    .header-acord  .contacts .phone{
+        font-size: 14px;
+    }
+    .W_accordion .B{
+        margin-bottom: 8px;
+        padding: 0 30px 0 10px;
+        font-size: 11px;
+    }
+    .W_accordion .B .text {
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+    .W_accordion .B .text a{
+        font-size: 11px;
+    }
+    .W_accordion .B .text a img{
+      height: 15px;
+    }
+    .W_accordion .B .text a:nth-child(1){
+        margin-right: 15px;
+    }
+    .W_accordion .B .arrow-flag{
+        height: 18px;
+        left: 105%;
+        top: 1px;
+        width: 15px;
+    }
+    .acord-item .BTN{
+        font-size: 13px;
+        line-height: 24px;
+        margin-left: -20px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        letter-spacing: 0;
+        margin-right: 6px;
+        padding: 0 8px;
+        min-width: 70px;
+    }
+
+    .acord-item ._right{
+        line-height:20px;
+        padding-top: 0px;
+        font-size: 12px;
+    }
+    .acord-item .adrres{
+        top: -3px;
+    } 
+    .B_map span.dots{
+        width: 6px;
+        height: 6px;
+        border: 2px solid #fff;
+    }
+ 
+    .B_map .dots.moskva{
+        top: 55.5%;
+        left: 21.8%;
+    }
+    .B_map .dots.peterburg{
+        top: 44.5%;
+        left: 20.8%;
+    }
+    .B_map .dots.chelab{
+        top: 74.2%;
+        left: 34%;
+    }
+    .B_map .dots.krasnodar{
+        top: 76.3%;
+        left: 14%;
+    }    
+    .column .M li a:after {
+        right: -27px;
+        border: 3px solid #fff;
+        width: 10px;
+        height: 10px;
+    } 
+    .column .M {
+        font-size: 0.6em;
+    }        
+}
+
+
+
+
+@media only screen and (max-width : 395px) {
+
+ .header {
+        font-size: 13px;
+        padding-top: 2px;
+        padding-bottom: 5px;
+     width: 375px;
+    
+    }
+    .header .B_logo img{
+        width: 100px;
+    } 
+    .header .B_logo{
+       margin-bottom: 4PX;
+        text-align: center;
+    }
+    .header .slogan{
+        line-height: normal;
+        padding-bottom: 0;
+        top: 5px;
+        position: relative;
+    }
+ 
+    .header .contacts .phone{
+        font-size: 1.7em;       
+    }
+    .header .B{
+        width: 100%;
+        text-align: center;
+    }
+    .header .contacts {
+        font-size: 0.65em;
+        margin-top: 6px;
+    }    
+    .header .BTN_sm {
+        font-size: 9px;
+        padding: 4px 8px;
+        top: 4px;
+    }   
+    .header .BTN_sm img{
+        width: 25px;
+    }    
+    aside.column.as-col {
+        margin-right: -30px;
+        width: 130px;
+ 
+        
+    }    
+   body .section{
+        height: 100%!important;
+       width: 100%!important;
+       box-sizing: border-box;
+       max-width: 375px;
+    }
+   body aside.column{
+       right: -250px;  
+       left: auto;
+       transition: all 0.4s ease;
+       -webkit-transition: all 0.4s ease;
+       -moz-transition: all 0.4s ease;
+       
+    }    
+  
+    aside.column nav {
+        left: 18px;
+        top: 37%;
+        margin-top: -230px;
+        width: 135px;
+        line-height: 600px;
+    }   
+      .column ul#menu ul a {
+        font-size: 10px;
+        font-weight: 500;
+         
+    }  
+    .column ul#menu li{
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .column ul#menu ul li{
+        margin-bottom: 8px;
+    }
+   body .wrap {
+        max-width: 375px;
+        padding: 0 10px;
+        left: 0px;
+        width: 375px;
+        box-sizing: border-box;
+    }    
+    .mCSB_scrollTools {
+        right: -95px !important;
+      
+    }    
+    .mCSB_inside>.mCSB_container {
+        margin-right: 0px;
+    }    
+    .footer .wrap .TL {
+        margin-bottom: 5px;
+        margin-right: 5px;
+        font-size: 14px;
+        line-height: 20px;
+        width: 100%
+    }
+    .footer{
+        width: 375px;
+       
+    }
+    .footer form .B:nth-child(1){
+        width: 100%;
+        text-align: center;
+        line-height: normal;
+    }
+    .footer form .R{
+        text-align: center;
+    }
+    .footer form .B{
+        display: inline-block;
+        float: none;
+    }
+    .footer form .B:last-child{
+        margin-top: 5px;
+    }
+    .footer .wrap .form .R .B + .B {
+        margin-left: 6px;
+    }    
+    .footer .wrap {
+        padding: 4px 0px 4px 0;
+        
+    }
+    .footer .TL {
+        font-size: 0.8em;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+        line-height: 1.0em;
+        margin-left: 5px;
+    }   
+    footer  input[type="text"] {
+        font-size: 13px;
+        height: 30px;
+        padding: 0 5px 0 5px;
+        width: 98px;
+        line-height: 30px;
+    }    
+    footer  input[type="text"]:focus {
+        font-size: 13px;
+        height: 26px;
+        padding: 0 3px 0 3px;
+        width: 98px;
+        line-height: 30px;
+    }    
+    .form .error {
+        font-size: 13px;
+        height: 26px;
+        padding: 0 3px 0 3px;
+        width: 98px;
+        line-height: 30px;
+    }    
+    footer  .form .BTN {
+        height: 30px;
+        font-size: 12px;
+        min-width: 108px;
+        padding: 0;
+    }   
+    .column .contacts {
+        font-size: 0.55em;
+        letter-spacing: 0px;
+  
+        line-height: 22px;
+    }    
+    aside .B_logo img{
+        width: 90px;
+            
+    }
+    aside .BTN_xs {
+        min-width: 0;
+        border-radius: 2px;
+        font-size: 12px;
+        line-height: 22px;
+        height: 22px;
+        padding: 0 6px;
+    }    
+    #idCompany .BG_wide-1{
+        margin-top: 0px;
+    }
+    #idCompany h1,
+    #idCompany h2{
+            font-size: 1em;
+        line-height: 1em;
+    }
+    #idCompany p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .info-comp {
+        padding: 8px 10px 8px ;
+    }
+    ol.marker.BG .-hide:hover{
+        font-size: 12px!important;
+        line-height: 18px;
+    }
+    ol.marker li:before{
+        font-size: 1em;
+    }
+    ol.marker li .TL{
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    #idCompany ol.marker.BG .-hide:hover {
+        width: 300px;
+        margin-left: -205px;
+    
+    }    
+    #idCompany  ol.marker li:before{
+        left: 0%;
+    }
+    #idCompany  ol.marker li:after{
+        width: 0%;
+        left: -10%!imporatant;
+    }
+    #idCompany  ol.marker.BG .-hide .text{
+        padding-left: 10px;
+    }
+    #idCompany ol.marker.BG .-hide:hover strong{
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+    ol.marker.BG li {
+        min-height: 30px!important;
+        padding: 3px 10px;
+        width: 300px;
+        left: 180px;
+        
+    }  
+    #idCompany ol{
+        padding-top: 10px;
+        padding-top: 10px;
+    }
+    #idMain .intro .list{
+        right: 20px;
+        bottom: 40px;
+    }    
+    #idMain  .list span {
+        font-size: 0.6em;
+    }    
+    #idMain .list img{
+        width: 60px;
+    }    
+    #idProducts h1{
+        font-size: 18px;
+        line-height: 25px;
+        padding-left: 5px;
+        width: 100%;
+    }
+    #idProducts .BG_wide{
+        height: auto;
+        margin-top: 0px!important;
+        width: 100%;
+        max-width: 100%;
+      
+    }   
+     #idProducts .B_hide{
+         top: 70px!important;
+         z-index: 99999!important;
+         position: absolute;
+        left: 20px!important;
+         right: auto;
+    }
+    #idProducts .TL{
+        font-size: 20px;
+        font-weight: 300; 
+        line-height: 26px;   
+    }
+    #idProducts header {
+        height: 30px;
+    }    
+    #idProducts header img{
+       width:  14px;
+        top: 4px;
+    }
+    #idProducts header.active  img{
+        top: 6px;
+    }
+    #idProducts .wrap {
+        padding-top: 0px;
+    }
+    #idProducts h1 .B_hide{
+        max-width: 280px;
+        
+    }   
+    #idProducts .B_hide .text p:first-child{
+        font-size: 12px;
+        line-height: 20px;
+        margin: 0 6px 3px;
+    }
+    #idProducts .B_hide .text p{
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0px;
+         margin:0 6px;
+    }  
+    #idProducts h2 {
+        font-size: 20px;
+        height: 30px;
+        line-height: 28px;
+        position: relative;
+        z-index: 1;
+        margin-top: 1px;
+        width: 280px;
+        left: 20px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        text-align: center;
+    } 
+    #idProducts h2 strong{
+        line-height:30px;
+    }
+ 
+    #idProducts .B_hide .text a{
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 400;
+        margin-top: 20px;
+        padding-right: 40px;
+        height: 26px;
+    }
+    #idProducts .B_hide .text a img{
+        top: -6px;
+        right: 20px;
+        width: 25px;
+    }
+    .fp-controlArrow.fp-next {
+        right: 5px!important;
+        border-width: 12px 0 12px 12px!important;
+    }    
+    .fp-controlArrow.fp-prev {
+            border-width: 12px 12px 12px 0!important;
+        left: 0!important;
+    }    
+    .wrap-list-product {
+        height: 160px;
+        z-index: 20;
+    }    
+    .product_item .product_pic,
+    .product_item .product_pic_2,
+    .product_item .product_pic_3{
+        max-width: 100%;
+        height: auto;
+    }
+ 
+    .list-product-min{
+         width: 330px!important;
+        left: 0px;
+    }    
+    .controllers span img{
+        width: 15px;
+        height: 28px;
+    }
+    .controllers span.prev{
+        left: 10px;
+    }
+    .controllers span.next{
+        right: 10px;
+    }
+    .slide-klientfirst,
+    .slide-klientsecond{
+        max-width: 300px!important;
+        margin: 10px auto 15px;
+        padding: 0 15px;
+         width: 240px;
+
+    }   
+ 
+    #idClients h1,
+     #idClients h2{
+        font-size: 0.95em;
+         width: 100%;
+    }
+   body .wrapper-slider {
+        max-width: 370px!important;
+       
+    }
+    .wrapper-slider-next {
+        max-width: 370px!important;
+    }
+    .slide-klientsecond .title-slide {
+        font-size: 14px;
+        line-height: 20px;
+    }    
+    .intro .BG.BG_wide-5,
+    .intro .BG.BG_wide-3{
+        margin-top: 0px!important;
+        width: 100%;
+        left: 0;
+    }
+    #idServices ol.marker.BG li {
+        min-height: 60px;
+        margin-left: -205px;
+        padding: 5px 10px;
+        width: 300px;
+        font-size: 13px!important;
+    }    
+    #idServices  ol.marker li .TL{
+        font-size: 13px;
+        padding-left: 30px;
+    }
+    #idServices h1{
+        font-size: 30px;
+    }
+      ol.marker li:after {
+        left: 11%!important;
+    }  
+    body  ol.marker li:hover:after {
+        left: 11%!important;
+    }   
+     ol.marker li:hover:before {
+        width: 12%!important;
+    }      
+    body  ol.marker li:before {
+        width: 10%!important;
+         font-size: 12px;
+    }    
+    #idServices .text{
+        padding-left: 20px;
+    }
+    .W_map .B_map{
+        max-width: 470px!important;
+        left: 0px;
+        box-sizing: border-box;
+        float: none;
+       
+    }   
+    .W_map .B_map img{
+       width: 100%!important; 
+    }
+    .BG_wide-6{
+        margin-top: 0px!important;
+    }
+    .BG_wide-6  h1.TL{
+        font-size: 0.9em;
+    }
+ 
+    .B.kaliningrad{
+        max-width: 290px;
+        left: 0px;
+        padding: 10px;
+        margin-top: 10px;
+        margin: 10px auto 0;
+        position: relative;
+        float: none;
+        top: auto;
+    }
+    .kaliningrad .BTN{
+        margin:-16px auto;
+        font-size: 15px;
+        line-height: 25px;
+        padding: 0 8px;   
+    }
+    .kaliningrad .BG_dark{
+        margin-top: -0px;
+        padding: 16px 0px 5px;
+        font-size: 13px;
+    }
+    .kaliningrad  .ICN{
+        margin: 4px 3px 0;
+        font-size: 12px;
+    }
+    .kaliningrad  a img{
+        height: 16px; 
+    }
+    .kaliningrad p{
+        font-size: 12px;
+        margin-top: 0px;
+        line-height: 22px;
+    }
+    #idContacts .W_accordion{
+        max-width: 97%;
+        margin:20px auto 120px;
+        left: -5px;
+    }
+ 
+    header.header-acord{
+        padding: 0 5px 7px;
+    }
+    header.header-acord strong{
+        line-height: 30px;
+        font-size: 14px;
+        padding-top: 2px; 
+        border-width: 1px;
+        padding-bottom: 20px;
+    }
+    .header-acord .contacts{
+        top: 24px;
+        right: 8px;
+        left: 5px;
+    }
+    .header-acord  .contacts p{
+        font-size: 11px;
+        padding-bottom: 
+    }
+    .header-acord  .contacts .phone{
+        font-size: 14px;
+        right: 0;
+        left: auto;
+        position: absolute;
+    }
+    .W_accordion .B{
+        margin-bottom: 8px;
+        padding: 0 30px 0 10px;
+        font-size: 11px;
+    }
+    .W_accordion .B .text {
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+    .W_accordion .B .text a{
+        font-size: 11px;
+    }
+    .W_accordion .B .text a img{
+      height: 15px;
+    }
+    .W_accordion .B .text a:nth-child(1){
+        margin-right: 15px;
+    }
+    .W_accordion .B .arrow-flag{
+        height: 18px;
+        left: 105%;
+        top: 1px;
+        width: 15px;
+    }
+    .acord-item .BTN{
+        font-size: 13px;
+        line-height: 24px;
+        margin-left: -20px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        letter-spacing: 0;
+        margin-right: 6px;
+        padding: 0 8px;
+        min-width: 70px;
+    }
+
+    .acord-item ._right{
+        line-height:20px;
+        padding-top: 0px;
+        font-size: 11px;
+    }
+    .accordeon-item .text ._right{
+        display: block;
+        width: 100%;
+        margin-bottom: 2px;
+    }
+    .acord-item .adrres{
+        top: -0px;
+        display: block;
+        padding-bottom: 3px;
+    } 
+    .B_map span.dots{
+        width: 6px;
+        height: 6px;
+        border: 2px solid #fff;
+    }
+ 
+    .B_map .dots.moskva{
+        top: 55.5%;
+        left: 21.8%;
+    }
+    .B_map .dots.peterburg{
+        top: 44.5%;
+        left: 20.8%;
+    }
+    .B_map .dots.chelab{
+        top: 74.2%;
+        left: 34%;
+    }
+    .B_map .dots.krasnodar{
+        top: 76.3%;
+        left: 14%;
+    }    
+    .column .M li a:after {
+        right: -27px;
+        border: 3px solid #fff;
+        width: 10px;
+        height: 10px;
+    } 
+    .column .M {
+        font-size: 0.6em;
+    }          
+}
+
+ 
+@media only screen and (max-width : 340px) {
+
+ .header {
+        font-size: 13px;
+        padding-top: 2px;
+        padding-bottom: 5px;
+        width: 320px;
+        min-width: 320px;
+     
+    }
+    .header .B_logo img{
+        width: 100px;
+    } 
+    .header .B_logo{
+       margin-bottom: 4PX;
+        text-align: center;
+    }
+    .header .slogan{
+        line-height: normal;
+        padding-bottom: 0;
+        top: 5px;
+        position: relative;
+    }
+ 
+    .header .contacts .phone{
+        font-size: 1.7em;       
+    }
+    .header .B{
+        width: 100%;
+        text-align: center;
+    }
+    .header .contacts {
+        font-size: 0.65em;
+        margin-top: 6px;
+    }    
+    .header .BTN_sm {
+        font-size: 9px;
+        padding: 4px 8px;
+        top: 4px;
+    }   
+    .header .BTN_sm img{
+        width: 25px;
+    }    
+    aside.column.as-col {
+        margin-right: -30px;
+        width: 130px;
+         right: -200px;
+        
+    }    
+   body .section,
+    body{
+ 
+       max-width: 320px;
+        width: 320px;
+    }
+      body aside.column{
+          left: auto;
+ 
+       
+    }
+    aside.column nav {
+        left: 0px;
+        top: 30%;
+        margin-top: -270px;
+        width: 135px;
+        line-height: 600px;
+        position: relative;
+    }   
+      .column ul#menu ul a {
+        font-size: 10px;
+        font-weight: 500;
+         
+    }  
+    .column ul#menu li{
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    .column ul#menu ul li{
+        margin-bottom: 8px;
+    }
+   body .wrap {
+        max-width: 320px!important;
+        padding: 0 10px;
+        left: 0px;
+        width: 320px!important;
+        box-sizing: border-box;
+    }    
+    .mCSB_scrollTools {
+        right: -95px !important;
+      
+    }    
+    .mCSB_inside>.mCSB_container {
+        margin-right: 0px;
+    }    
+    .footer .wrap .TL {
+        margin-bottom: 2px;
+        margin-right: 5px;
+        font-size: 14px;
+        line-height: 16px;
+        width: 100%
+    }
+    .footer{
+        width: 320px;
+        min-width: 320px;
+        padding-top: 0;
+    }
+    .footer form .B:nth-child(1){
+        width: 100%;
+        text-align: center;
+        line-height: normal;
+    }
+    .footer form .R{
+        text-align: center;
+    }
+    .footer form .B{
+        display: inline-block;
+        float: none;
+    }
+    .footer form .B:last-child{
+        margin-top: 5px;
+    }
+    .footer .wrap .form .R .B + .B {
+        margin-left: 6px;
+    }    
+    .footer .wrap {
+        padding: 4px 0px 4px 0;
+        
+    }
+    .footer .TL {
+        font-size: 0.7em;
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+        line-height: 1.0em;
+        margin-left: 5px;
+    }   
+    footer  input[type="text"] {
+        font-size: 13px;
+        height: 30px;
+        padding: 0 5px 0 5px;
+        width: 85px;
+        line-height: 30px;
+    }    
+    footer  input[type="text"]:focus {
+        font-size: 13px;
+        height: 26px;
+        padding: 0 3px 0 3px;
+        width: 85px;
+        line-height: 30px;
+    }    
+    .form .error {
+        font-size: 13px;
+        height: 26px;
+        padding: 0 3px 0 3px;
+        width: 85px;
+        line-height: 30px;
+    }    
+    footer  .form .BTN {
+        height: 30px;
+        font-size: 12px;
+        min-width: 95px;
+        padding: 0;
+    }   
+    .column .contacts {
+        font-size: 0.55em;
+        letter-spacing: 0px;
+  
+        line-height: 22px;
+    }    
+    .footer .wrap .form .R{
+        padding: 0;
+    }
+    .footer .wrap{
+        padding: 0;
+        position: relative;
+        padding-bottom: 3px;
+    }
+    .footer .wrap .form {
+        margin: 0;
+    }
+    aside .B_logo img{
+        width: 90px;
+            
+    }
+    aside .BTN_xs {
+        min-width: 0;
+        border-radius: 2px;
+        font-size: 12px;
+        line-height: 22px;
+        height: 22px;
+        padding: 0 6px;
+    }    
+    #idCompany .BG_wide-1{
+        margin-top: 0px;
+    }
+    #idCompany h1,
+    #idCompany h2{
+            font-size: 1em;
+        line-height: 1em;
+    }
+    #idCompany p{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .info-comp {
+        padding: 8px 10px 8px ;
+    }
+    ol.marker.BG .-hide:hover{
+        font-size: 12px!important;
+        line-height: 18px;
+    }
+    ol.marker li:before{
+        font-size: 1em;
+    }
+    ol.marker li .TL{
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    #idCompany ol.marker.BG .-hide:hover {
+        width: 300px;
+        margin-left: -205px;
+    
+    }    
+    #idCompany  ol.marker li:before{
+        left: 0%;
+    }
+    #idCompany  ol.marker li:after{
+        width: 0%;
+        left: -10%!imporatant;
+    }
+    #idCompany  ol.marker.BG .-hide .text{
+        padding-left: 10px;
+    }
+    #idCompany ol.marker.BG .-hide:hover strong{
+        padding-left: 10px;
+        box-sizing: border-box;
+    }
+    ol.marker.BG li {
+        min-height: 30px!important;
+        padding: 3px 10px;
+        width: 300px;
+        left: 180px;
+        
+    }  
+    #idCompany ol{
+        padding-top: 10px;
+        padding-top: 10px;
+    }
+    #idMain .intro .list{
+        right: 20px;
+        bottom: 40px;
+    }    
+    #idMain  .list span {
+        font-size: 0.6em;
+    }    
+    #idMain .list img{
+        width: 60px;
+    }    
+    #idProducts h1{
+        font-size: 18px;
+        line-height: 25px;
+        padding-left: 5px;
+        width: 100%;
+    }
+    #idProducts .BG_wide{
+        height: auto;
+        margin-top: 0px!important;
+        width: 100%;
+        max-width: 100%;
+      
+    }   
+     #idProducts .B_hide{
+         top: 90px!important;
+         z-index: 99999!important;
+         position: absolute;
+        left: 20px!important;
+         right: auto;
+    }
+    #idProducts .TL{
+        font-size: 20px;
+        font-weight: 300; 
+        line-height: 26px;   
+    }
+    #idProducts header {
+        height: 30px;
+    }    
+    #idProducts header img{
+       width:  14px;
+        top: 4px;
+    }
+    #idProducts header.active  img{
+        top: 6px;
+    }
+    #idProducts .wrap {
+        padding-top: 0px;
+    }
+    #idProducts h1 .B_hide{
+        max-width: 280px;
+        
+    }   
+    #idProducts .B_hide .text p:first-child{
+        font-size: 12px;
+        line-height: 20px;
+        margin: 0 6px 3px;
+    }
+    #idProducts .B_hide .text p{
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0px;
+         margin:0 6px;
+    }  
+    #idProducts h2 {
+        font-size: 20px;
+        height: 30px;
+        line-height: 28px;
+        position: relative;
+        z-index: 1;
+        margin-top: 1px;
+        width: 280px;
+        left: 20px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        text-align: center;
+    } 
+    #idProducts h2 strong{
+        line-height:30px;
+    }
+ 
+    #idProducts .B_hide .text a{
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 400;
+        margin-top: 20px;
+        padding-right: 40px;
+        height: 26px;
+    }
+    #idProducts .B_hide .text a img{
+        top: -6px;
+        right: 20px;
+        width: 25px;
+    }
+    .fp-controlArrow.fp-next {
+        right: 5px!important;
+        border-width: 12px 0 12px 12px!important;
+    }    
+    .fp-controlArrow.fp-prev {
+            border-width: 12px 12px 12px 0!important;
+        left: 0!important;
+    }    
+    .wrap-list-product {
+        height: 153px;
+        z-index: 20;
+    }    
+    .product_item .product_pic,
+    .product_item .product_pic_2,
+    .product_item .product_pic_3{
+        max-width: 100%;
+        height: auto;
+    }
+ 
+    .list-product-min{
+         width: 230px!important;
+        left: 0px;
+    }    
+    .controllers span img{
+        width: 15px;
+        height: 28px;
+    }
+    .controllers span.prev{
+        left: 10px;
+    }
+    .controllers span.next{
+        right: 10px;
+    }
+    .slide-klientfirst,
+    .slide-klientsecond{
+        max-width: 300px!important;
+        margin: 10px auto 15px;
+        padding: 0 15px;
+         width: 240px;
+
+    }   
+ 
+    #idClients h1,
+     #idClients h2{
+        font-size: 0.95em;
+         width: 100%;
+    }
+   body .wrapper-slider {
+        max-width: 300px!important;
+       
+    }
+    .wrapper-slider-next {
+        max-width: 300px!important;
+    }
+    .slide-klientsecond .title-slide {
+        font-size: 14px;
+        line-height: 20px;
+    }    
+    .intro .BG.BG_wide-5,
+    .intro .BG.BG_wide-3{
+        margin-top: 0px!important;
+        width: 100%;
+        left: 0;
+    }
+    #idServices ol.marker.BG li {
+        min-height: 60px;
+        margin-left: -205px;
+        padding: 5px 10px;
+        width: 300px;
+        font-size: 13px!important;
+    }    
+    #idServices  ol.marker li .TL{
+        font-size: 13px;
+        padding-left: 30px;
+    }
+    #idServices h1{
+        font-size: 30px;
+    }
+      ol.marker li:after {
+        left: 10%!important;
+    }  
+    body  ol.marker li:hover:after {
+        left: 10%!important;
+    }   
+     ol.marker li:hover:before {
+        width: 12%!important;
+    }      
+    body  ol.marker li:before {
+        width: 10%!important;
+         font-size: 12px;
+    }    
+    #idServices .text{
+        padding-left: 20px;
+    }
+    .W_map .B_map{
+        max-width: 470px!important;
+        left: 0px;
+        box-sizing: border-box;
+        float: none;
+       
+    }   
+    .W_map .B_map img{
+       width: 100%!important; 
+    }
+    .BG_wide-6{
+        margin-top: 0px!important;
+    }
+    .BG_wide-6  h1.TL{
+        font-size: 0.9em;
+    }
+ 
+    .B.kaliningrad{
+        max-width: 290px;
+        left: 0px;
+        padding: 10px;
+        margin-top: 10px;
+        margin: 10px auto 0;
+        position: relative;
+        float: none;
+        top: auto;
+    }
+    .kaliningrad .BTN{
+        margin:-16px auto;
+        font-size: 15px;
+        line-height: 25px;
+        padding: 0 8px;   
+    }
+    .kaliningrad .BG_dark{
+        margin-top: -0px;
+        padding: 16px 0px 5px;
+        font-size: 13px;
+    }
+    .kaliningrad  .ICN{
+        margin: 4px 3px 0;
+        font-size: 12px;
+    }
+    .kaliningrad  a img{
+        height: 16px; 
+    }
+    .kaliningrad p{
+        font-size: 12px;
+        margin-top: 0px;
+        line-height: 22px;
+    }
+    #idContacts .W_accordion{
+        max-width: 97%;
+        margin:20px auto 120px;
+        left: -5px;
+    }
+ 
+    header.header-acord{
+        padding: 0 5px 7px;
+    }
+    header.header-acord strong{
+        line-height: 30px;
+        font-size: 14px;
+        padding-top: 2px; 
+        border-width: 1px;
+        padding-bottom: 20px;
+    }
+    .header-acord .contacts{
+        top: 24px;
+        right: 8px;
+        left: 5px;
+    }
+    .header-acord  .contacts p{
+        font-size: 11px;
+        padding-bottom: 
+    }
+    .header-acord  .contacts .phone{
+        font-size: 14px;
+        right: 0;
+        left: auto;
+        position: absolute;
+    }
+    .W_accordion .B{
+        margin-bottom: 8px;
+        padding: 0 30px 0 10px;
+        font-size: 11px;
+    }
+    .W_accordion .B .text {
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+    .W_accordion .B .text a{
+        font-size: 11px;
+    }
+    .W_accordion .B .text a img{
+      height: 15px;
+    }
+    .W_accordion .B .text a:nth-child(1){
+        margin-right: 15px;
+    }
+    .W_accordion .B .arrow-flag{
+        height: 18px;
+        left: 105%;
+        top: 1px;
+        width: 15px;
+    }
+    .acord-item .BTN{
+        font-size: 13px;
+        line-height: 24px;
+        margin-left: -20px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        letter-spacing: 0;
+        margin-right: 6px;
+        padding: 0 8px;
+        min-width: 70px;
+    }
+
+    .acord-item ._right{
+        line-height:20px;
+        padding-top: 0px;
+        font-size: 11px;
+    }
+    .accordeon-item .text ._right{
+        display: block;
+        width: 100%;
+        margin-bottom: 2px;
+    }
+    .acord-item .adrres{
+        top: -0px;
+        display: block;
+        padding-bottom: 3px;
+    } 
+    .B_map span.dots{
+        width: 6px;
+        height: 6px;
+        border: 2px solid #fff;
+    }
+ 
+    .B_map .dots.moskva{
+        top: 55.5%;
+        left: 21.8%;
+    }
+    .B_map .dots.peterburg{
+        top: 44.5%;
+        left: 20.8%;
+    }
+    .B_map .dots.chelab{
+        top: 74.2%;
+        left: 34%;
+    }
+    .B_map .dots.krasnodar{
+        top: 76.3%;
+        left: 14%;
+    }    
+    .column .M li a:after {
+        right: -27px;
+        border: 3px solid #fff;
+        width: 10px;
+        height: 10px;
+    } 
+    .column .M {
+        font-size: 0.6em;
+    }       
+    
+    
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 485px) {
+    .button-aside{
+        display: none;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 769px) {
+    .menu i{
+        display: none;
+    }  
+    header .menu ul li,
+     header .menu ul{
+        display: block!important;
+    }
+}
+@media only screen and (min-width : 992px) {
+  
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+   
+
+}
+
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  
+}
+
+@media only screen and (min-width : 1500px) {
+    .top_menu .menu li:nth-child(3){
+        width: 245px;
+    }
+    .top_menu .menu li{
+        width: 180px;
+    }
+    .top_menu .menu li a{
+        font-size: 15px;
+        padding: 10px 0;
+    }
+    
+}
+

@@ -1,0 +1,35 @@
+<?if (($APPLICATION->GetCurPage(true) == SITE_DIR."index.php")||($APPLICATION->GetCurPage(true) == SITE_DIR."index_en.php")){?> 
+<!--menu-->
+ <?$APPLICATION->IncludeComponent(
+	"bitrix:menu",
+	"left",
+	Array(
+		"ROOT_MENU_TYPE" => "left2",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "Y",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+false,
+Array(
+	'ACTIVE_COMPONENT' => 'Y'
+)
+);?> 
+<!--menu-->
+
+<div align="right" style="width: 100%; height: 47px; float: left; background-color: transparent;"> 
+<!--stoimost lechenia-->
+ 
+   <div style="width: 190px; height: 47px;"> <a  href="http://z203712.infobox.ru/content/1/price.pdf"  id="bxid_588185" > 
+      <div style="width: 190px; height: 47px; background-color: transparent;" class="stoimost"> </div>
+     </a> </div>
+ 
+<!--stoimost lechenia-->
+ </div>
+<?}?>
+

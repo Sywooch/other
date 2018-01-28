@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="76943591-4c72-450d-aeaf-59caa2fbf1fd" name="personal.resident234.xyz" url="http://gsu123ln.beget.tech">
+        <fileTransfer host="gsu123ln.beget.tech" port="21" rootFolder="/portfolio.resident234.xyz/public_html" username="u563763035" password="dfd8dfcfdfd9dfc3dfcedfcfdfc4dfdedf98df99df9e">
+          <advancedOptions>
+            <advancedOptions controlEncoding="utf-8" dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

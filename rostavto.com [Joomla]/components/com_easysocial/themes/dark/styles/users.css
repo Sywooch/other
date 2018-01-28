@@ -1,0 +1,10 @@
+body div#fd.es.view-users .es-content {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+body div#fd.es.view-users .es-item {
+  height: 180px;
+}
+body div#fd.es.w480.view-users .es-content {
+  padding-left: 0;
+}

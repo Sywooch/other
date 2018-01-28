@@ -1,0 +1,293 @@
+
+table.user-details {
+    width: auto;
+}
+input#register, #STsameAsBT, div.output-billto, div.output-shipto, .vm2-billto-icon, .vm2-shipto-icon   {
+    float:left; display:block;
+}
+input#register, #STsameAsBT {
+ max-width: 20px;
+}
+#coupon_code{
+border: 1px solid #dcdcdc; padding-top:6px;  margin:3px;
+}
+span.cart-images img {
+    padding-right: 5px;
+}
+.cart-view input.details-button {
+margin-top: 3px;
+padding: 2px 8px 1px;
+}
+#remember, #com-form-login-remember label, #com-form-login-remember input {
+    display: inline-block;
+}
+#preloader {
+background: url("/plugins/system/onepage/images/bg_loader_white.png") repeat scroll 0 0 transparent;
+height: 100%;
+margin: 0 auto;
+overflow: hidden;
+padding-top: 150px;
+position: absolute;
+text-align: center;
+top: 0;
+width: 100%;
+z-index: 1000;
+}
+#preloader img {
+z-index: 100000;
+}
+tr.sectiontableentry0 td, tr.sectiontableentry1 td, tr.sectiontableentry2 td, td.sectiontableentry0, td.sectiontableentry1, td.sectiontableentry2 {
+    min-height: 40px;
+}
+#preloader td {height: 100%; position: fixed; top: 50%; visibility: visible; width: 100%;}
+ .billto-shipto label{
+    float:left;
+}
+.clearfix:after {
+    clear: both;
+}
+.clr {
+    clear: both;
+    font-size: 0;
+}
+ul.checkoutfr {
+margin:0 !important;
+padding: 0 !important;
+}
+.clearfix:before, .clearfix:after{
+    content: "";
+    display: table;
+}
+.columns-2 li.col2 {
+    background: none repeat scroll 0 0 transparent !important;
+    border-bottom: medium none;
+    float: left;
+    list-style: none outside none !important;
+    margin: 0 3.5% 0 0;
+    padding: 0;
+    width: 48.2%;
+}
+.columns-2 li.col2:nth-child(2n) {
+    margin: 0;
+    padding: 0;
+}
+.flol {
+    float: left;
+}
+.flor {
+    float: right;
+}
+.pul-input {
+    width: 48% !important;
+}
+.billto-shipto input, .billto-shipto select {
+    width: 96% !important
+}
+textarea.onepage {
+    width: 70%;
+}
+.radio-check {
+    margin: 0 0 5px !important;
+}
+.checkpage table {
+    margin: 0 0 30px;
+}
+table.onepage {
+    border-spacing: 0;
+}
+.checkpage table th {
+    font-weight: bold;
+    padding: 15px 10px;
+}
+.checkpage table td {
+    padding: 10px;
+}
+.output-billto, .output-shipto {
+    min-height: 55px;
+}
+.form-sec {
+    float: right;
+    margin: 0 0 40px;
+    width: 40%;
+}
+.check-title {
+   margin-top: 5px;
+    padding-right: 10px;
+}
+table.user-details {
+    margin: 0px !important;
+}
+.billto-shipto input[type="text"], .billto-shipto input[type="password"], .billto-shipto select, textarea.checkout {
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+}
+.checkoutfr li.col2 {
+    display: block;
+}
+
+/* One Page Responsive layout */
+@media only screen and (max-width: 1000px) {
+.billto-shipto input[type="text"], .billto-shipto input[type="password"], .billto-shipto select, .billto-shipto label{
+    width: 47% !important;
+}
+}
+@media only screen and (max-width: 767px) {
+	.checkoutfr li.col2 {
+		width: 100%;
+		display: block;
+		float: none;
+	}
+.billto-shipto input[type="text"], .billto-shipto input[type="password"], .billto-shipto select, .billto-shipto label {
+    width: 47% !important;
+}                            
+}
+@media only screen and (max-width: 667px) {
+	.checkpage table,
+	.checkpage thead,
+	.checkpage tbody,
+	.checkpage th,
+	.checkpage td,
+	.checkpage tr {
+		display: block;
+	}
+	.checkpage thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	.checkpage td {
+		border: none;
+		position: relative;
+		padding-left: 5% !important;
+		white-space: normal;
+		text-align:left;
+	}
+	
+	.billing-box .billto-shipto{
+		margin-bottom:20px !important;	
+	}
+	
+	table.cart-summary tr.sectiontableentry1 td:first-child{
+		border-left-width:0px !important;
+		border-top: 1px solid #d2d1d1 !important;
+	}
+	
+	.cart-summary input{
+		float: none !important;
+	}
+	table.cart-summary tr.sectiontableentry1 td:first-child{
+		font-size:20px !important; 	
+	}
+	
+	.checkpage td:before {
+		position: absolute;
+		left: 10px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+	.checkpage td:before {
+		content: attr(data-title);
+		padding: 5px;
+		
+	}
+	
+	table.cart-summary tr:nth-child(6) td:before{
+		/*display:none !important;	*/
+		display:none !important; 
+	}
+	
+	table.cart-summary tr:nth-child(6) td:nth-child(2){
+		display:none !important;	
+	}
+	
+	table.cart-summary tr:nth-child(6) td:nth-child(3){
+		display:none !important;	
+	}
+	
+	table.cart-summary tr:nth-child(7) td:nth-child(1) label{
+		
+	}
+	
+	table.cart-summary tr:nth-child(7) td:nth-child(1) input{
+		float:left !important;
+	}
+	
+	table.cart-summary tr:nth-child(7) td:nth-child(2){
+		display:none !important;
+	}
+	
+	table.cart-summary tr:nth-child(7) td:nth-child(3){
+		display:none !important;
+	}
+	
+	table.cart-summary tr:nth-child(8) td:nth-child(1){
+		border-left-width:0px !important;
+		
+	}
+	
+	textarea.customer-comment{
+		width:calc(100% - 12px) !important;	
+	}
+	
+	
+	.checkpage table td, .checkpage table th {
+		text-align: right !important;
+	}
+	.form-sec {
+		float: none;
+		width: 100%;
+	}	
+.billto-shipto input {
+ width: 98.8% !important;
+float:left;
+}
+ .billto-shipto label{
+    float:left;
+}              
+}
+@media only screen and (max-width: 320px) {
+ 
+.billto-shipto input {
+ width: 98.8% !important;
+float:left;
+}
+ .billto-shipto label{
+   float:left;
+}   
+}
+.required {
+  width: 200px;
+  height: 24px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.required:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.required::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.required:-ms-input-placeholder {
+  color: #999999;
+}
+.required::-webkit-input-placeholder {
+  color: #999999;
+}
+
+

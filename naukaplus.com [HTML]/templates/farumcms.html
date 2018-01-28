@@ -1,0 +1,79 @@
+<? include '_top.php'; ?>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr height="160">
+				<td><a href="/"><img border="0" src="/style/top-left.jpg" width="325" height="160"></a></td>
+				<td width="100%" id="white-bg"></td>
+				<td><img border="0" src="/style/top-right-contacts.jpg" width="450" height="160"></td>
+			</tr>
+		</table>
+		<div class="marquee str_wrap"><?=$marquee_str?></div>
+		<?=menu('static')?>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" id="menu-shadow">
+			<tr height="18">
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td width="250"><table border="0" cellpadding="0" cellspacing="0" width="250"><tr><td></td></tr></table></td>
+				<td width="530"><table border="0" cellpadding="0" cellspacing="0" width="530"><tr><td></td></tr></table></td>
+			</tr>
+			<tr valign="top">
+				<td>
+					<?
+					if (($std->alias[0] == 'catalog') || (count($std->alias) == 0))
+					{
+						?>
+						<div id="ex2" style="display:none;">
+							<?=$catalog_menu;?>
+						</div>
+						<?
+					}
+					else
+					{
+						$childs = menuchild('static');
+						$adjacent = menuadjacent('static');
+						
+						if ($childs == '')
+						{
+							echo $adjacent;
+						}
+						else
+						{
+							echo $childs;
+						}
+					}
+					?>
+				</td>
+				<td>
+					<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td width="10"><table border="0" cellpadding="0" cellspacing="0" width="10"><tr><td></td></tr></table></td>
+							<td id="title"><h1><?=$h1?></h1></td>
+							<td width="10"><table border="0" cellpadding="0" cellspacing="0" width="10"><tr><td></td></tr></table></td>
+						</tr>
+						<tr>
+							<td><table border="0" cellpadding="0" cellspacing="0" height="10"><tr><td></td></tr></table></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr valign="top">
+							<td class="main-shadow-left"><table border="0" cellpadding="0" cellspacing="0" height="600"><tr><td></td></tr></table></td>
+							<td class="content">
+								Дизайн студия "ФАРУМ" - <a href="http://www.farum.ru">создаем корпоративные сайты</a>! Сопровождаем и поддерживаем.
+							</td>
+							<td class="main-shadow-right"><img border="0" src="/style/main-shadow-top-right.gif" width="10" height="10"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td class="main-shadow-bottom"><img border="0" src="/style/main-shadow-bottom-left.gif" width="10" height="10"></td>
+							<td><img border="0" src="/style/main-shadow-bottom-right.gif" width="10" height="10"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+
+<? include '_bot.php'; ?>

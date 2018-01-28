@@ -1,0 +1,118 @@
+<? include '_top.php'; ?>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr id="tr_1">
+				<td><a href="/"><img alt="" src="/style/top-left.jpg" width="325" height="160"></a></td>
+				<td id="white-bg"></td>
+				<td><img alt="" src="/style/top-right-service.jpg" width="450" height="160"></td>
+			</tr>
+		</table>
+		<div class="marquee str_wrap"><?=$marquee_str?></div>
+		<?=menu('static')?>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%" id="menu-shadow">
+			<tr id="tr_2">
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td class="td_2"><table border="0" cellpadding="0" cellspacing="0" width="250"><tr><td></td></tr></table></td>
+				<td class="td_3"><table border="0" cellpadding="0" cellspacing="0" width="530"><tr><td></td></tr></table></td>
+			</tr>
+			<tr valign="top">
+				<td>
+					<?
+					if (($std->alias[0] == 'catalog') || (count($std->alias) == 0))
+					{
+						?>
+						<div id="ex2" style="display:none;">
+							<?=$catalog_menu;?>
+						</div>
+						<?
+					}
+					else
+					{
+						$childs = menuchild('static');
+						$adjacent = menuadjacent('static');
+						
+						if ($childs == '')
+						{
+							echo $adjacent;
+						}
+						else
+						{
+							echo $childs;
+						}
+					}
+					?>
+
+<div style="margin: 20px 0 0 12px;">
+				<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="210" height="160">
+                                                <param name="movie" value="/files/link/<?=$std->settings['rekl_img_1']?>" />
+                                                <param name="quality" value="high" />
+                                                <param name="bgcolor" value="#ffffff" />
+                                                <param name="play" value="true" />
+                                                <param name="loop" value="true" />
+                                                <param name="wmode" value="transparent" />
+                                                <param name="scale" value="noborder" />
+                                                <param name="menu" value="true" />
+                                                <param name="devicefont" value="false" />
+                                                <param name="salign" value="" />
+                                                <param name="allowScriptAccess" value="sameDomain" />
+                                                <!--[if !IE]>-->
+                                                <object type="application/x-shockwave-flash" data="/files/link/<?=$std->settings['rekl_img_1']?>" width="210" height="160">
+                                                        <param name="movie" value="/files/link/<?=$std->settings['rekl_img_1']?>" />
+                                                        <param name="quality" value="high" />
+                                                        <param name="bgcolor" value="#ffffff" />
+                                                        <param name="play" value="true" />
+                                                        <param name="loop" value="true" />
+                                                        <param name="wmode" value="transparent" />
+                                                        <param name="scale" value="noborder" />
+                                                        <param name="menu" value="true" />
+                                                        <param name="devicefont" value="false" />
+                                                        <param name="salign" value="" />
+                                                        <param name="allowScriptAccess" value="sameDomain" />
+                                                <!--<![endif]-->
+                                                      
+                                                <!--[if !IE]>-->
+                                                </object>
+                                                <!--<![endif]-->
+                                        </object>
+	<br><br><br>
+
+
+
+					<div>
+
+				</td>
+				<td>
+					<table border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td class="td_4"><table border="0" cellpadding="0" cellspacing="0" width="10"><tr><td></td></tr></table></td>
+							<td class="title"><h1><?=$h1?></h1></td>
+							<td class="td_4"><table border="0" cellpadding="0" cellspacing="0" width="10"><tr><td></td></tr></table></td>
+						</tr>
+						<tr>
+							<td><table border="0" cellpadding="0" cellspacing="0" height="10"><tr><td></td></tr></table></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr valign="top">
+							<td class="main-shadow-left"><table border="0" cellpadding="0" cellspacing="0" height="600"><tr><td></td></tr></table></td>
+							<td class="content">
+								<?=$body?><br><br><!--the_keys_cloud-->
+							</td>
+							<td class="main-shadow-right"><img alt="" src="/style/main-shadow-top-right.gif" width="10" height="10"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td class="main-shadow-bottom"><img alt="" src="/style/main-shadow-bottom-left.gif" width="10" height="10"></td>
+							<td><img alt="" src="/style/main-shadow-bottom-right.gif" width="10" height="10"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		</td>
+
+<? include '_bot.php'; ?>

@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("J:/home/zs/www/bitrix/js/jquery/jquery-1.5.2.min.js" => "139704985185925","/var/www/amurcar/data/www/amurcar.ru/bitrix/js/jquery/jquery-1.5.2.min.js" => "139704985085925",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>

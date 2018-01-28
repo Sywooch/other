@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="editors-xtd">
+	<name>Кнопка плагина Hide Guest Content</name>
+	<author>Beliyadm</author>
+	<creationDate>2012</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>beliyadm@gmail.com</authorEmail>
+	<authorUrl>www.blog.pbelkov.net</authorUrl>
+	<version>2.0</version>
+	<description>Кнопка редактора для плагина Hide Guest Content, вставляет теги {gcontent}скрытый текст{/gcontent}</description>
+	<files>
+		<filename plugin="GuestContentBtn">GuestContentBtn.php</filename>
+		<filename plugin="GuestContentBtn">GuestContentBtn.css</filename>
+		<filename plugin="GuestContentBtn">GuestContentBtn.png</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

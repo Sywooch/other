@@ -1,0 +1,294 @@
+.car_div {
+    position: relative;
+    z-index: 999;
+    margin-left: 0px;
+}
+
+.rel {
+    position: relative;
+}
+
+.owl {
+    overflow: visible;
+    z-index: 999;
+    padding: 0 0px;
+    position: relative;
+    display: none;
+    margin: 0 0px;
+    opacity: 0;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+.owl .owl-item {
+    float: left;
+    width: 292px;
+/ / width: 105 px !important;
+/ / height: 66 px;
+}
+
+.owl .item {
+    padding: 0 0px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+}
+
+.owl .item img {
+    display: inline-block;
+    position: relative;
+}
+
+.owl .item a {
+    display: block;
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.owl .item a:hover {
+/ / opacity: 0.5;
+}
+
+.owl .item a:hover, .owl .item.active a {
+/ / opacity: 0.5;
+}
+
+.owl-wrapper-outer {
+    padding-top: 0px;
+    overflow: hidden;
+    padding: 0 0px;
+    margin: 0px;
+}
+
+.owl .owl-prev, .owl .owl-next {
+    cursor: pointer;
+    position: absolute;
+/ / background: url(../img/prevnext.png) 0 0 no-repeat;
+    display: block;
+    height: 31px;
+    right: 0px;
+    top: 8px;
+    width: 51px;
+    overflow: hidden;
+/ / text-indent: - 999 px;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.owl .owl-next {
+    left: auto;
+    right: 0px;
+    background-position: right 0;
+}
+
+.owl .owl-next:hover {
+    background-position: right bottom;
+}
+
+.owl .owl-prev:hover {
+    background-position: 0 bottom;
+}
+
+.owl-controls .clickable {
+    position: relative;
+}
+
+.owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-perspective: 1000;
+}
+
+.owl1 {
+    overflow: visible;
+    z-index: 999;
+    padding: 0 0px;
+    position: relative;
+    margin: 0 0px;
+    opacity: 0;
+    margin-left: 0px;
+    padding-bottom: 90px;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    width: 100%;
+}
+
+.owl1 .owl-item {
+    float: left;
+/ / width: 100 %;
+/ / height: 66 px;
+    position: relative;
+    display: inline-block;
+}
+
+.owl1 .item {
+    padding: 0 0px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 292px;
+}
+
+.owl1 .item img {
+    display: inline-block;
+    position: relative;
+    /*max-height: 348px;*/
+    max-width: 292px;
+    margin: auto;
+    margin-top:0px;
+}
+
+.owl1 .item a {
+    display: flex;
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    overflow:hidden;
+    height:300px;
+}
+
+.owl1 .item a:hover {
+/ / opacity: 0.5;
+}
+
+.owl1 .item a:hover, .owl1 .item.active a {
+/ / opacity: 0.5;
+}
+
+.owl-wrapper-outer {
+    padding-top: 0px;
+    overflow: hidden;
+    padding: 0 0px;
+    margin: 0px;
+}
+
+.owl1 .owl-prev, .owl1 .owl-next {
+    text-transform: uppercase;
+    font: 22px/22px 'Vidaloka', serif !important;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    background: none;
+    display: block;
+    height: 31px;
+    right: 20px;
+    top: 8px;
+    width: 100px;
+    overflow: hidden;
+/ / text-indent: - 999 px;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.owl1 .owl-prev{
+    text-align:right;
+}
+
+.owl1 .owl-next{
+    text-align:left;
+}
+
+.owl1 .owl-next {
+    left: auto;
+    right: -120px;
+    background-position: right 0;
+}
+
+.owl1 .owl-next:hover {
+    right: -110px;
+}
+
+.owl1 .owl-prev:hover {
+    right: 10px;
+}
+
+.owl2 {
+    overflow: visible;
+    z-index: 999;
+    padding: 0 0px;
+    position: relative;
+    margin: 0 0px;
+    opacity: 0;
+    margin-left: 0px;
+    padding-bottom: 90px;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    width: 100%;
+}
+
+.owl2 .owl-item {
+    float: left;
+/ / width: 100 %;
+/ / height: 66 px;
+    position: relative;
+    display: inline-block;
+}
+
+.owl2 .item {
+    padding: 0 0px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 292px;
+}
+
+.owl2 .item img {
+    display: inline-block;
+    position: relative;
+}
+
+.owl2 .item a {
+    display: block;
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.owl2 .item a:hover {
+/ / opacity: 0.5;
+}
+
+.owl2 .item a:hover, .owl1 .item.active a {
+/ / opacity: 0.5;
+}
+
+.owl-wrapper-outer {
+    padding-top: 0px;
+    overflow: hidden;
+    padding: 0 0px;
+    margin: 0px;
+}
+
+.owl2 .owl-prev, .owl2 .owl-next {
+    text-transform: uppercase;
+    font: 22px/22px 'Vidaloka', serif;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    background: none;
+    display: block;
+    height: 31px;
+    right: 5px;
+    top: 8px;
+    width: 60px;
+    overflow: hidden;
+/ / text-indent: - 999 px;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.owl2 .owl-next {
+    left: auto;
+    right: -70px;
+    background-position: right 0;
+}
+
+.owl2 .owl-next:hover {
+    right: -80px;
+}
+
+.owl2 .owl-prev:hover {
+    right: 15px;
+}

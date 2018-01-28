@@ -1,0 +1,33 @@
+{
+	"style": [
+		"foundry",
+		"core",
+
+		"elements",
+		"layout",
+		"blocks",
+
+		"notifications",
+		"toolbar",
+
+		"profile",
+
+		"dashboard",
+		"friends",
+		"apps",
+		"unity",
+		"users",
+		"registration",
+
+		"story",
+		"stream",
+
+		"medias",
+		"photos",
+		"albums",
+
+		"search",
+		"groups",
+		"markitup"
+	]
+}

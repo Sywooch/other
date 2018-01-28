@@ -1,0 +1,1350 @@
+@import 'stylus-mixins'
+font-face(name,path,bold,italic)
+    @font-face {
+        font-family: name
+        src: url(path + ".eot");
+        src: url(path + ".eot?#iefix") format("embedded-opentype"), url(path + ".ttf") format("truetype"), url(path + ".woff") format("woff"), url(path + ".svg") format("svg");
+        font-weight: unquote(bold);
+        font-style: unquote(italic);
+    }
+fontName = 'NeoSansPro' 'neosanspro'
+font-face(fontName[0],'../fonts/'+fontName[1]+'-regular', 'normal', 'normal')
+font-face(fontName[0],'../fonts/'+fontName[1]+'-italic', 'normal', 'italic')
+font-face(fontName[0],'../fonts/'+fontName[1]+'-light', '300', 'normal')
+font-face(fontName[0],'../fonts/'+fontName[1]+'-bold', 'bold', 'normal')
+font-face(fontName[0],'../fonts/'+fontName[1]+'-medium', '500', 'normal')
+fontMain= "NeoSansPro",Verdana, Arial, "Helvetica CY", Helvetica, "Nimbus Sans L", sans-serif
+fontAddit = "Open Sans", Verdana, Arial, "Helvetica CY", Helvetica, "Nimbus Sans L", sans-serif
+/*!  / - Перед селектором, заставляет отсечь родительские селекторы
+    selector() - получает текущий селектор, позволяет допустим использовать в миксинах и т.д.
+    unquote("") - для строк можно испльзовать которые мешают компиляции стилей
+    Для удобства наверно лучше добавлять к наименованию переменной $, Вначало
+    arguments в миксинах содержит аргументы функции
+    .1. unless @.2. если не существует @.2., тогда отображается .1.
+    @ и имя свойства заменяются на содержимое этого свойства встречанное выше у этого же правила либо у родителя
+    for переменная in массив, массив может быть представлен в виде просто ряда через пробел
+    {переменная} позволяет задавать через содержимое переменной, селекторы
+    ! - нет
+    not - нет
+    - минус
+    and , or     && ||
+    list = 1 2 3 - массив    list[0] 1    list[-1] 3
+    1..4 ряд чисел включая все
+    1...4 ряд чисел включая все кроме последней
+    Для расчеты дроби - заключить выражение в скобки
+    2 ** 8   Степень
+    ... in ... Есть ли внутри переменной
+    ?= или := присваивание - если у переменной нет значения
+    ... is a ... - Проверка на тип переменной 'unit' - число 'rgba' - цвет
+    ... is defined - Проверка задано ли значение переменной
+    Тернарный оператор можно использовать ... ? ... : ...
+    К цветам можно плюсовать и вычитать другие цвета, проценты и градусы
+    Переменные можно использовать внутри строк "...%s,,," % значение, произойдет замена
+    В функции сделать {block} И вызов ее с плюсом вначале, позволит записывать содержимое в этот блок
+
+*/
+/*!-------------------  Mixins  ---------------------*/
+bg= {
+    main: #1f4772
+    dark: #0e1e2f
+    blue_grad: {
+        top: #1a4068
+        bottom: #1a2b3c
+    }
+    dark_o: rgba(#000, 0.7)
+    blue_o: rgba(#08131e, 0.8)
+    btn_orange: {
+        top: #ff8300
+        bottom: #e0640f
+    }
+    btn_red: {
+        top: #e8080b
+        bottom: #7d0b0b
+    }
+    lt: #fff
+}
+text= {
+    main: #fff
+    gray: #373737
+    active: #ffa200
+    active_second: #00c0ff
+}
+bd= {
+    main: #fff
+    gray: #9e9e9f
+    clr: #fb7f02
+    active: #ffa200
+
+}
+
+fsz= {
+    xs: 0.6em
+    sm: 0.67em
+    md: 1.23em
+    lg: 1.35em
+    xl: 1.55em
+    ex: 1.95em
+    ul: 2.15em
+}
+
+@import 'stylus/mixins'
+/*###################  Universal  ####################*/
+a
+    color:text.main
+    text-decoration: none
+    &:hover
+        text-decoration: none
+p
+    margin: 0
+    margin-top: 20px
+    clearfix()
+    &:first-child
+        margin-top: 0
+.text
+    margin: 0
+ul
+    margin: 20px 0
+    padding: 0 0 0
+    list-style: none
+    line-height: 1.7em
+    li
+        position: relative
+        list-style: none
+h1
+h2
+h3
+    font-size: 18px
+    font-weight: 500
+    margin-bottom: 20px;
+    position: relative
+    padding-bottom: 17px
+    &:first-child
+        margin-top: 0px
+    &:after
+        content: " ";
+        display: block
+        position: absolute
+        width:84px;
+        height: 2px
+        text-indent: -9999px;
+        bottom: 0
+        left: 0
+    &._textCenter
+    ._textCenter &
+    .W_slider &
+        &:after
+            left: 50%
+            width:84px;
+            margin-left: -(@width / 2);
+h1
+    margin-top: 20px
+    //font-family: fontMain;
+    position: relative
+    display: block
+    font-size: 1.375em;
+    letter-spacing: 2px
+    margin-bottom: 20px
+    line-height: 1.1em
+    .W_slider &
+        font-weight: 300
+    + h2
+        margin-top: 0
+h2
+    letter-spacing: 0px
+    margin-bottom: 20px
+    margin-top: 30px
+    line-height: 1.375em
+h3
+    margin-top: 29px
+    line-height: 1.375em
+    margin-bottom: 7px
+    &:after
+        display: none
+    &:first-child
+        margin-top: 0px
+
+.additional
+    padding: 27px 30px
+    line-height: 1.3em;
+    letter-spacing: 0.4px
+    border-radius: 5px
+    margin-top: 30px
+    font-style: italic
+    color: #3a3a3a;
+time
+    font-size: 12px
+table
+    width: 100%
+    margin-bottom: 35px
+    margin-top: 20px
+    tr:nth-child(2n+1)
+        th
+        td
+            background: #f1f1f1
+    &.withHeader
+        tr:nth-child(2n)
+            th
+            td
+                background: #f1f1f1
+    tr:nth-child(2n+1)
+        th
+        td
+            background: transparent
+
+    th
+        font-size: 16px
+        font-weight: 600
+    td
+    th
+        padding: 11px 45px;
+        letter-spacing: 0.1px
+        text-align: center
+        border-left: 1px solid #fff;
+        &:first-child
+            text-align: left;
+            border: none
+
+/*----------  inputs  ----------*/
+inputPadding = 0 13px 0 13px
+buttonPadding = 10px
+input[type="text"]
+    display: block
+    background: bg.lt
+    font-size: 16px
+    border: 0px solid #f5f5f5;
+    height 39px - @border[0] * 2
+    padding: inputPadding
+    width: 180px - inputPadding[1] - inputPadding[3] - @border[0] * 2;
+    line-height: @height
+    color: text.gray;
+    box-shadow: inset 0 0 5px rgba(#000, 0.7);
+    + input
+    + textarea
+        margin-top: 30px
+    .R & + input
+    .R & + textarea
+        margin-top: 0px
+    &:focus
+        border: 2px solid bd.clr;
+        height 39px - @border[0] * 2
+        outline: none
+        padding: 0 (inputPadding[1] - @border[0]) 0 (inputPadding[3] - @border[0])
+        width: 180px - @padding[1] - @padding[3] - @border[0] * 2;
+        line-height: @height
+textarea
+    display: block
+    background: bg.main
+    border: 2px solid #f5f5f5;
+    padding: 5px 10px
+    width: 324px - @padding[1] * 2 - @border[0] * 2;
+    min-height: 90px
+    line-height: 31px
+    + input
+    + textarea
+        margin-top: 30px
+    &:focus
+        border: 2px solid bd.clr !important;
+        outline: none
+        padding: (@padding[0]) (@padding[1]);
+        width: 324px - @padding[1] * 2 - @border[0] * 2 !important;
+form
+    .R
+        margin-bottom: 20px
+        label
+            margin-bottom: 3px
+            display: block
+.form
+    display: inline-block
+    margin-top: 55px
+    .R
+        position: relative
+    .error
+        border: 2px solid #e24a47 !important;
+        height 39px - @border[0] * 2
+        outline: none
+        padding: 0 (inputPadding[1] - @border[0]) 0 (inputPadding[3] - @border[0])
+        width: 180px - @padding[1] - @padding[3] - @border[0] * 2;
+        line-height: @height
+    .B
+        position: relative
+    label.error
+        position: absolute
+        padding: 2px 10px 5px;
+        min-height: 37px
+        top: -65px
+        display: block
+        min-width: 1px
+        box-sizing: border-box
+        height: auto
+        text-align: center
+        z-index: 1100;
+        left: 0px
+        width: 100%
+        border-radius: 4px
+        background: #e24a47;
+        overflow: visible
+        margin-bottom: 0
+        word-wrap break-word
+        font-size: 16px;
+        span
+            line-height: 1.2em;
+            display: inline-block
+            vertical-align: middle
+        &:after
+            triangle(down,10px,@background)
+            position: absolute
+            left: 50%
+            margin-left: -5px;
+            bottom: -10px
+            content: " ";
+            display: block
+    input[type="text"]
+        text-align: left;
+        position: relative
+    .BTN
+        height: 39px
+    ._bgDark &
+        #name
+            background-image: url(../img/icons/name_dark.png);
+        input[type="text"]
+        textarea
+            background-color: #263140;
+            border-color: #1f2732;
+            color: #f9f9f9;
+            &:focus
+                border-color: bd.clr;
+
+/*----------  Rows  ----------*/
+.R
+    position: relative
+    clearfix()
+    clear: both
+    width: 100%
+    > .B
+        float: left
+        display: block
+        margin-left: 11px
+        &_rt
+            float: right
+            margin-left: 0
+            margin-right: 11px
+            &:first-child
+                margin-right: 0
+
+        &:first-child
+            margin-left: 0
+
+/*----------  Blocks  ----------*/
+.B
+    clearfix()
+    display: block
+
+/*----------  Columns  ----------*/
+.CLM
+    float: left
+    &_1x2
+        margin-left: 3.5%
+        width: ((100% - @margin-left) / 2)
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_2x3
+        margin-left: 3%
+        width: (((100% - (@margin-left * 2)) / 3) * 2) + @margin-left
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_1x3
+        margin-left: 3%
+        width: ((100% - (@margin-left * 2)) / 3)
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_1x4
+        margin-left: 2.5%
+        width: ((100% - (@margin-left * 3)) / 4)
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_2x4
+        margin-left: 3%
+        width: (((100% - (@margin-left * 3)) / 4) * 2) + @margin-left
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_3x4
+        margin-left: 3%
+        width: (((100% - (@margin-left * 3)) / 4) * 3) + @margin-left
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_1x5
+        margin-left: 2%
+        width: ((100% - (@margin-left * 4)) / 5)
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_2x5
+        margin-left: 2%
+        width: (((100% - (@margin-left * 4)) / 5) * 2) + @margin-left
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_3x5
+        margin-left: 2%
+        width: (((100% - (@margin-left * 4)) / 5) * 3) + @margin-left
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_4x5
+        margin-left: 2%
+        width: (((100% - (@margin-left * 4)) / 5) * 4) + @margin-left
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_1x6
+        margin-left: 2%
+        width: ((100% - (@margin-left * 5)) / 6)
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &:first-child
+        margin-left: 0
+        ._vtCenter>&
+            padding-left: @margin-left;
+            margin-left: 0
+    &_left
+        width: 194px;
+        margin-left: 20px
+    &_right
+        @extend .CLM_left
+        float: right
+        min-width: 235px
+        text-align: right
+
+/*----------  wrappers  ----------*/
+.W
+    clearfix()
+    position: relative
+    > .wrap
+        z-index: 100;
+    nav
+        padding: 5px 2px 0;
+        .B
+            margin-left: 42px
+            clear: none
+            &:first-child
+                margin-left: 0
+            &_logo
+                margin-top: -30px
+                &:first-child
+                    margin-left: 0
+        .M_hz_top
+            margin-top: 5px
+            li
+                margin-left: 50px
+    &_slider
+        height: 580px
+        position: relative
+        width: 100%
+        padding: 0 !important
+        text-align: center
+        .B
+            display: block
+            position: absolute
+            width: 100%
+            z-index: 1
+            padding: 94px 0 110px
+            height: @height - @padding[0] - @padding[2];
+            &:first-child
+                z-index: 100;
+            > img:first-child
+                position: absolute
+                top: 0
+                left: 50%
+                margin-left: -(1600/ 2) px;
+                height: 100%
+            .wrap
+                height: 100%
+            p
+                line-height: 1.4em
+            .text
+                position: absolute
+                left: 2px
+                bottom: 46px
+                {txt-ei}
+                width: 530px;
+                p
+                    margin: 52px 0
+                    line-height: 1.3em
+            .TL
+            h1
+                font-size: 40px
+                padding-bottom: 32px
+                margin-bottom: 55px
+        .wrapSli
+            position: absolute
+            bottom: 81px
+            width: 100%
+            left: 0
+            z-index: 1000;
+            text-align: center
+        .sli-links
+            display: inline-block
+            margin: 0;
+            padding: 0px
+            height: 15px
+            text-align: left;
+            span
+                display: inline-block
+                margin-left: 11px;
+                cursor: pointer
+                width: 13px
+                height: @width;
+                border-radius: 100px;
+                border: 2px solid #fff;
+                text-indent: -9999px;
+                &.active
+                &:hover
+                    background: #fff;
+                &:first-child
+                    margin-left: 0
+
+/*----------  Menu  ----------*/
+$itemPad = 0px
+$itemLeftMar = 32px
+
+.M
+    clearfix()
+    width: 100%
+    position: relative
+    clear:both
+    line-height: 2.5em
+    ul
+    ul&
+        {uln}
+        clearfix()
+
+    &_hz
+        width: auto
+        font-weight: normal
+        li
+            float: left
+            display: block
+            text-align: center
+            margin-left: $itemLeftMar;
+            margin-bottom: 0
+            &:first-child
+                margin-left: 0px
+        a
+        strong
+            font-weight: normal
+            display: block
+            padding: 0 $itemPad
+            text-decoration: none
+            text-transform: uppercase
+            position: relative
+            &:after
+                display: none
+                width: 100%
+                content: ' ';
+                text-indent: -9999px;
+                bottom: -1px
+                left: 0
+                position: absolute
+                border-bottom: 4px solid bd.clr;
+        a
+            color: text.main
+            &:hover
+                &:after
+                    display: block
+        .active *
+            @extend .M_hz a:hover
+
+    &_soc
+        width: auto
+        li
+            float: left
+            &:first-child
+                a
+                    margin-left: 5px
+        a
+            display: block
+            width: 27px
+            height: @width;
+            line-height: @height;
+            text-align: center
+            border-radius: 100px;
+            margin-left: 16px
+            opacity: 0.3
+            img
+                vertical-align: middle
+            &:hover
+                opacity: 1
+        .vk:hover
+            background: #2c63a1;
+
+
+    &_vt
+        display: block
+        line-height: 1.2em
+        strong
+            font-weight: normal
+        li
+            margin-bottom: 17px
+        .active
+            font-weight: bold
+            a
+                text-decoration: none
+                cursor: default
+                &:hover
+                    color: text.main !important
+
+    &_dropdown
+        position: relative
+        width: auto
+        font-size: 16px
+        font-weight: 300
+        &_mobileRight
+            @media screen and (max-width:1100px)
+                > ul
+                    left: auto !important
+                    margin-left: 0 !important
+                    right: 0 !important
+                    &:after
+                        left: 90% !important
+        &_mobileLeft
+            @media screen and (max-width:1100px)
+                > ul
+                    left: 0 !important
+                    margin-left: 0 !important
+                    &:after
+                        left: 10% !important
+
+        &.M_lang
+            > ul
+                width: 120px;
+                margin-left: -(@width/2);
+        > ul
+            display: none
+            position: absolute
+            z-index: 2000;
+            top: 0
+            width: 260px
+            left: 50%
+            margin-left: -(@width/2)
+            &:before
+                content: " ";
+                display: block
+                position: absolute
+                left: 0
+                width: 100%
+                top: -17px
+                height: 17px
+            &:after
+                content: " ";
+                position: absolute
+                display: block
+                left: 50%
+                margin-left: -5px;
+                top: -9px;
+            li
+                width: 100%
+                margin: 0
+                display: block
+                overflow: hidden
+                &:first-child
+                    border-radius: 4px 4px 0 0;
+                &:last-child
+                    border-radius: 0 0 4px 4px;
+            a
+                display: block
+                padding: 5px 15px 5px;
+                text-decoration: none
+                box-sizing: border-box
+                &:hover
+                    background-color: #64b3f1;
+                    border-bottom-color: #7dbcef;
+                    border-top-color: #7dbcef;
+
+
+            .ICN
+                .PICT
+                    margin: 5px 15px 10px 0
+                    height: 30px;
+                    width: 30px;
+                    line-height: @height;
+                    img
+                        margin: 0
+
+
+/*----------  Title  ----------*/
+.TL
+    display: block
+    font-size: fsz.md;
+    letter-spacing: -0px
+    margin-bottom: 20px
+    line-height: 1.1em
+    &_bold
+        font-weight: 600
+    &_big
+        text-transform: uppercase
+
+/*----------  Button  ----------*/
+$buttonPadding = 15px
+.BTN
+    display: block
+    display: inline-block
+    border: none
+    grad(bg.btn_orange.top,bg.btn_orange.bottom)
+    line-height: 33px
+    //height: @line-height
+    min-width: 158px - $buttonPadding * 2;
+    padding: 0 $buttonPadding
+    text-align: center
+    letter-spacing: 1px
+    border-radius: 5px
+    text-decoration: none
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 500
+    text-shadow: 1px 2px 0px rgba(119, 129, 137, 0.8);
+    + p
+        margin-top: 10px
+    &:hover
+        grad(saturate(bg.btn_orange.top,20%),saturate(bg.btn_orange.bottom,20%))
+
+    &_outl
+        background: none
+        min-width: 99px - $buttonPadding *2
+        border-color: bd.clr;
+        &:hover
+            border-color: bd.clr;
+
+    &_lg
+        padding: @padding[0]+8px @padding[1]+10px;
+        letter-spacing: 1.4px
+
+    &_md
+        padding: @padding[0]+3px @padding[1]+6px;
+        min-height: 0;
+        letter-spacing: 1.1px
+
+    &_sm
+        font-size: 12px;
+        padding: @padding[0]+6px (@padding[1] - 4px);
+        min-width: 0
+        line-height: 1.3em
+        letter-spacing: 0
+        height: auto
+    &_xs
+        min-width: 0
+        border-radius: 2px
+        font-size: 17px
+        text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.75);
+        line-height: 1.3em
+        font-family: fontAddit;
+        width: auto
+
+    input&
+        line-height: @line-height - 5px;
+
+/*----------  ICN  ----------*/
+.ICN
+    img
+    .PICT
+        vertical-align: middle
+        display: inline-block
+        margin-bottom: 0
+    .PICT_auto
+        height: auto
+        line-height: 1.2em;
+    img:first-child
+        margin-right: 7px
+    img:last-child
+        margin-left: 16px
+    &.BTN
+        position: relative
+        text-align: left;
+        img
+        img + span
+            float: left
+        &_simply
+            padding-left: 27px;
+            &:hover
+                img
+                    top: -13px;
+            .ins
+                left: 7px !important
+                top: 5px !important
+    &_table
+        display: table
+        .PICT
+        .text
+            display: table-cell
+        .PICT
+            width: 90px
+            padding-right: 20px
+            padding-top: 8px
+            vertical-align: top
+            img
+                margin: 0
+
+
+/*----------  picture  ----------*/
+.PICT
+    height: 53px
+    line-height: @height
+    margin-bottom: 20px
+    text-align: center
+    &_round
+        border-radius: 1000px;
+        overflow: hidden
+        float: left
+        height: auto
+        width: auto
+        border: 2px solid bd.clr;
+    img
+        vertical-align: middle
+        max-width: 100%
+    +.text
+        margin-top: 28px
+
+/*----------  small  ----------*/
+.small
+    font-size: 0.9em
+    letter-spacing: 0.2px
+
+/*----------  Modificator  ----------*/
+._
+    &div
+        padding: 0
+        margin: 0
+    &vtCenter
+        display: table
+        > *
+            display: table-cell
+            vertical-align: middle
+            float: none
+        > .wrap
+            display: table
+            vertical-align: top
+            > .CLM
+                display: table-cell
+                vertical-align: middle
+                float: none
+            > .CLM_1x2
+                width: 51%;
+                margin-left: 0
+                padding-left: 2%
+                &:first-child
+                    width: 49%
+                    padding-left: 0
+    &left
+        float: left !important
+    &right
+        float: right !important
+    &hrCenter
+        margin: 0 auto;
+        > img
+            margin-top: 40px;
+            margin-bottom: 10px
+    &imgCenter
+        text-align: center
+        margin-top: 40px;
+        margin-bottom: 40px
+    &textCenter
+        text-align: center !important
+    &textRight
+        text-align: right !important
+
+    &italic
+        font-style: italic
+    &bold
+        font-weight: 400
+    &fzMd
+        font-size: 16px
+    &textBig
+        font-size: 1.375em;
+    &textLight
+        font-weight: 300
+    &textNormal
+        font-weight: 300
+        font-style: normal
+    &textUpper
+        text-transform: uppercase
+    &textAir
+        line-height: 1.6em
+    &noAfter
+        &:after
+            display: none !important
+    &noBefore
+        &:before
+            display: none !important
+    &bLine
+        position: relative
+        padding-bottom: 17px
+        &:after
+            content: " ";
+            display: block
+            position: absolute
+            width:84px;
+            height: 2px
+            text-indent: -9999px;
+            bottom: 0
+            left: 0
+        &._textCenter
+        ._textCenter &
+        .W_slider &
+            &:after
+                left: 50%
+                width:84px;
+                margin-left: -(@width / 2);
+    &pLeft
+        padding-left: 20px
+    &widthMd
+        padding-right: 10px
+        padding-left: 10px
+    &smallPadding
+        padding: 50px 0  45px!important
+        section& .wrap
+            padding: 0 45px;
+            width: 1000px - @padding[1];
+    &middlePadding
+        padding: 70px 0  50px!important
+    &mTopXs
+        margin-top: 33px !important
+    &mTopSm
+        margin-top: 55px !important
+    &mTopMd
+        margin-top: 99px !important
+    &mTop
+        margin-top: 111px !important
+    &bgWhite
+        background: bg.main !important;
+    &bgGray
+        background: bg.dark !important;
+    &bgColor
+        &.R_withSplit
+            margin-top: 35px
+    &bgDark
+        background: bg.dark;
+        body&
+            .addPanel
+                border-bottom: 1px solid #475e76;
+            .footer
+                border-top: 1px solid #475e76;
+        section&
+            padding: 100px 0 !important
+
+/*###################  Frame  ####################*/
+html
+    height: 100%
+    display: block
+    font-family:  fontMain
+    background: bg.main
+    {txt-nm}
+
+body
+    background: bg.main
+    color: text.main;
+    line-height: 1.2em
+    min-height: 100%
+    text-align: left
+    min-width: 480px
+    position: relative
+.wrap
+    margin: 0 auto
+    max-width: 1023px
+    padding: 0 10px;
+    width: 100%
+    min-width: 480px
+    box-sizing: border-box
+    clearfix()
+    position: relative
+    z-index: 1
+.addPanel
+.header
+.footer
+.content section
+    width: 100%
+    min-width: 480px;
+
+/*###################  Header and Footer and Column ####################*/
+
+.header
+    display: block
+    background: bg.main;
+    {txt-nm}
+    padding-top: 19px;
+    padding-bottom: 13px;
+    overflow: visible
+    position: absolute
+    top: 0
+    grad(bg.blue_grad.bottom,bg.blue_grad.top)
+    z-index: 1100;
+    .B
+        float: right
+        &_logo
+            float: left
+            margin-top: 6px
+            img
+                display: inline-block
+                vertical-align: middle
+            .slogan
+                display: inline-block
+                font-style: italic
+                padding-bottom: 9px
+                text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.75);
+                letter-spacing: 0.3px
+                vertical-align: bottom
+                margin-top: 0
+        .contacts
+            display: inline-block
+            margin-right: 25px
+
+//todo Перенести contacts
+.contacts
+    font-size: fsz.xs;
+    letter-spacing: 0.2px
+    .phone
+        font-size: fsz.ul;
+        letter-spacing: 0
+        position: relative
+        left: -2px
+
+.list
+    {txt-so}
+    li
+        clear: both
+        text-align: right
+        + li
+            margin-top: 10px;
+    a
+        clearfix()
+        &:hover
+            img
+                border-width: 3px;
+                border-color: bd.clr;
+                margin: -1px
+    img
+        display: inline-block
+        vertical-align: middle
+        border-radius: 4px;
+        border: 2px solid bd.main;
+    span
+        vertical-align: middle
+        display: inline-block
+        font-size: fsz.md;
+        letter-spacing: 0px
+        background: bg.dark_o;
+        padding: 0 10px;
+
+
+.column
+    position: absolute
+    background: bg.dark_o;
+    right: 0
+    top: 0
+    z-index: 1000;
+    height: 100%
+    {txt-nm}
+    display: block
+    box-sizing: border-box
+    padding: 15px
+    width: 162px;
+    .contacts
+        font-size: 0.84em;
+        letter-spacing: -0.2px
+        text-shadow 2px 4px 5px rgba(0, 0, 0, 0.75);
+        .phone
+            font-size: 0.93em
+            letter-spacing: -0.2px
+            + p
+                margin: 0px
+                position: relative
+                left: -1px
+                top: -3px
+    header
+        display: none
+        position: absolute
+        text-align: center
+        top: 18px
+        z-index: 1500;
+        left: 7px
+    .B_logo
+        height: 35px;
+        a
+            display: block
+    > .ins
+        height: 100%;
+        box-sizing: border-box
+        padding-top: 120px
+        clearfix()
+        vertical-align: middle
+        > div
+            display: none
+
+    nav
+        position: absolute
+        height: 600px
+        left: 15px
+        top: 50%
+        margin-top: -295px
+        width: @width - 30px
+        line-height: 600px
+    .M
+        font-size: fsz.sm
+        display: inline-block
+        text-align: right
+        vertical-align: middle
+        text-transform: uppercase
+        width: auto
+        margin-right: 15px
+        li
+            margin-bottom: 15px
+            a
+                display: block
+                position: relative
+                &:after
+                    content: "";
+                    display: block
+                    position: absolute
+                    right: -27px
+                    top: 0
+                    border-radius: 100px;
+                    border: 3px solid bd.main;
+                    width: 13px
+                    height: @width;
+                &.active
+                &:hover
+                    &:after
+                        border-color: bd.active;
+            ul
+                height: 0
+                overflow: hidden
+                transition: all 2s
+            &.active
+                ul
+                    height: auto
+                    a
+                        color: text.main;
+                    li.active
+                        a
+                            color: blue;
+                a
+                    color: text.active;
+                    &:after
+                        border-color: bd.active;
+
+
+
+.footer
+    position: absolute
+    bottom: 13px
+    z-index: 1100;
+    {txt-no}
+    .wrap
+        grad(bg.blue_grad.top,bg.blue_grad.bottom)
+        text-align: right
+        padding: 10px 20px;
+        .TL
+            margin-bottom: 5px
+            margin-right: 20px
+        .form
+            margin: 0
+            .R
+                margin-bottom: 0px
+                .B + .B
+                    margin-left: 18px
+
+
+/*###################  Content  ####################*/
+
+.section
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative
+    box-sizing: border-box
+    &_footer
+        padding-bottom: 100px
+.slide
+    background-position: center center;
+    background-size: cover;
+
+//.intro
+//    padding-right: 165px
+
+
+.intro
+    .BG:first-child
+        margin-top: 55px
+.BG
+    background: bg.dark_o;
+    display: inline-block
+    padding: 20px 25px;
+    box-sizing: border-box
+    +.BG
+        margin-top: 5px
+    &_blue
+        background: bg.blue_o;
+    > .TL
+    > h1
+    > h2
+    > h3
+        margin: 0
+        padding: 0
+        font-size: fsz.ex;
+    &_wide
+        position: relative
+        padding: 5px 25px;
+        &:after
+            height: 100%
+            position: absolute
+            top: 0
+            content: " ";
+            background: @background;
+            width: 9000px
+            left: -9000px
+#idMain
+    .intro
+        position: absolute
+        height: 100%
+        width: 100%
+        top: 0
+        box-sizing: border-box
+        &_footer
+            padding-bottom: 67px
+        .mCSB_container
+        .wrap
+            height: 100%
+        .list
+            position: absolute
+            right: 0
+            bottom: 0
+article
+    {txt-mi}
+    h1
+        font-size: 22px
+        margin-bottom: 30px
+        + h2
+            margin-top: 30px;
+    h2
+        font-size: 16px
+        margin-bottom: 13px !important
+        margin-top: 70px
+        &:after
+            display: none;
+    p
+        line-height: 1.6em
+
+ul.marker
+ol.marker
+    li
+        position: relative
+        padding-left: 40px
+        list-style: none
+        + li
+            margin-top: 10px
+        &:after
+            content: ' '
+            width: 20px
+            height: 2px
+            position: absolute
+            top: 12px
+            left: 0px
+    &_out
+        li
+            padding-left: 0
+            &:after
+                left: -40px
+ol.marker
+    counter-reset list
+    margin: 50px 0
+    {txt-sm}
+    &.BG
+        background: none
+        margin: 0
+        width: 100%
+        .-hide
+            .text
+                display: none
+            &:hover
+                width: 650px
+                margin-left: -325px
+                font-size: 25px;
+                padding-top: 10px;
+                padding-bottom: 10px
+                padding-left: 12% !important
+                &:before
+                    width: 14%
+                &:after
+                    left: 14%
+                .text
+                    display: block
+                    height: auto
+                    transition: all 500ms
+                .TL
+                    display: none
+                    transition: all 500ms
+        li
+            background: bg.dark_o;
+            min-height: 60px
+            position: relative;
+            left: 50%
+            margin-left: -205px
+            padding: 5px 10px
+            display: table
+            width: 410px
+            vertical-align: middle
+            box-sizing: border-box
+            border: 1px solid rgba(#fff,0.4);
+            .ins
+                display:table-cell;
+                vertical-align: middle
+        &_blue
+            li
+                background: bg.blue_o;
+
+    li
+        padding-left: 10% !important
+        .TL
+            font-size: 1em;
+            font-weight: 500;
+            margin-bottom: 0
+        &:before
+            width: 20%
+            text-align: center
+            padding: 0 12px;
+            box-sizing: border-box
+            vertical-align: middle
+            top: 50%
+
+            margin-top: -15px
+            background: none
+            font-size: fsz.xl
+            counter-increment list 1
+            position: absolute
+            left: 0
+            content: "0" counter(list);
+        &:after
+            display: block
+            content: " ";
+            border-right: 1px solid rgba(#fff,0.4);
+            width: 0
+            left: 19%
+            height: 80%
+            top: 10%
+
+    &_out
+        li:after
+            left: -70px
+
+
+
+.fp-controlArrow.fp-next
+    right: 177px !important
+
+.mCSB_scrollTools
+    right: 160px !important

@@ -1,0 +1,113 @@
+div.image-load-left
+{
+	background-image: url("images/tableft-hover.gif");
+}
+
+div.image-load-right
+{
+	background-image: url("images/tabright-hover.gif");
+}
+
+div.image-load-bg
+{
+	background-image: url("images/tab_bg_hover.gif");
+}
+
+
+div.web-blue-tabs-menu ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height:37px;
+}
+
+div.web-blue-tabs-menu ul li
+{
+	float: left;
+	display: block;
+	margin: 0;
+	padding: 0;
+background: url("/images/buttons.png") top center no-repeat;
+	margin-right: 4px;
+	margin-left: 2px;
+}
+
+div.web-blue-tabs-menu ul a
+{
+
+	text-decoration: none;
+	width:.1em;
+	cursor:pointer; cursor: hand;
+
+}
+
+div.web-blue-tabs-menu > ul a {width:auto;}
+
+
+/*#D3DDE9 */
+div.web-blue-tabs-menu ul a nobr
+{
+
+	font-size:8pt;
+
+
+	color:#ffffff;
+
+}
+
+div.web-blue-tabs-menu ul a, div.web-blue-tabs-menu ul a nobr
+{
+	display:block;
+	float: left;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	
+}
+
+/* Commented backslash hack hides rule from IE5-Mac \*/
+div.web-blue-tabs-menu ul a, div.web-blue-tabs-menu ul a nobr
+{
+	float: none;
+}
+/* End IE5-Mac hack */
+
+
+div.web-blue-tabs-menu li:hover, div.web-blue-tabs-menu li.jshover
+{
+	
+}
+
+div.web-blue-tabs-menu a:hover
+{
+
+}
+
+div.web-blue-tabs-menu a:hover nobr
+{
+	/*fix*/
+
+
+
+}
+
+div.web-blue-tabs-menu li.selected, div.web-blue-tabs-menu li.selected:hover
+{
+
+}
+
+div.web-blue-tabs-menu li.selected a, div.web-blue-tabs-menu li.selected a:hover
+{
+	;
+}
+
+div.web-blue-tabs-menu li.selected nobr, div.web-blue-tabs-menu li.selected a:hover nobr
+{
+
+}
+
+div.menu-clear-left
+{
+	clear:left;
+}

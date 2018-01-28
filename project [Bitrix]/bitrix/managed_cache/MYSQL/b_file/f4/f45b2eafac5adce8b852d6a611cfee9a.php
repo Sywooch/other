@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001397469171';
+$dateexpire = '001397472771';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:3:{i:70;a:13:{s:2:"ID";s:2:"70";s:11:"TIMESTAMP_X";s:19:"09.04.2014 23:37:37";s:9:"MODULE_ID";s:7:"fileman";s:6:"HEIGHT";s:3:"640";s:5:"WIDTH";s:4:"1024";s:9:"FILE_SIZE";s:6:"142139";s:12:"CONTENT_TYPE";s:10:"image/jpeg";s:6:"SUBDIR";s:16:"medialibrary/305";s:9:"FILE_NAME";s:36:"3056172a87c38aa1dd4ec00d90a53597.jpg";s:13:"ORIGINAL_NAME";s:74:"_var_www_ord_data_www_gandex.ru_upl_oboi_gandex.ru-26_3003_peugeot-rcz.jpg";s:11:"DESCRIPTION";s:0:"";s:10:"HANDLER_ID";N;s:4:"~src";b:0;}i:78;a:13:{s:2:"ID";s:2:"78";s:11:"TIMESTAMP_X";s:19:"10.04.2014 23:11:48";s:9:"MODULE_ID";s:6:"iblock";s:6:"HEIGHT";s:1:"0";s:5:"WIDTH";s:1:"0";s:9:"FILE_SIZE";s:7:"6327726";s:12:"CONTENT_TYPE";s:24:"application/octet-stream";s:6:"SUBDIR";s:10:"iblock/a06";s:9:"FILE_NAME";s:36:"a06bfa15269d5bd658af3bbc468a068a.flv";s:13:"ORIGINAL_NAME";s:5:"W.flv";s:11:"DESCRIPTION";s:0:"";s:10:"HANDLER_ID";N;s:4:"~src";b:0;}i:79;a:13:{s:2:"ID";s:2:"79";s:11:"TIMESTAMP_X";s:19:"10.04.2014 23:14:17";s:9:"MODULE_ID";s:6:"iblock";s:6:"HEIGHT";s:1:"0";s:5:"WIDTH";s:1:"0";s:9:"FILE_SIZE";s:7:"6327726";s:12:"CONTENT_TYPE";s:24:"application/octet-stream";s:6:"SUBDIR";s:10:"iblock/dc0";s:9:"FILE_NAME";s:36:"dc072fbded4e2616bb301100dc508c17.flv";s:13:"ORIGINAL_NAME";s:5:"W.flv";s:11:"DESCRIPTION";s:0:"";s:10:"HANDLER_ID";N;s:4:"~src";b:0;}}}';
+return true;
+?>

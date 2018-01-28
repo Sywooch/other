@@ -1,0 +1,36 @@
+
+// These alert rules are for core features
+[
+	{
+		"extension"	: "com_easyblog",
+		"element"	: "blog",
+
+		// The rule of this alert
+		"rule"		: "create",
+
+		// We don't want to send e-mail notifications via EasySocial
+		"value" :
+		{
+			"email"		: false,
+
+			// We only want to use system notifications
+			"system"	: true			
+		}
+	},
+	{
+		"extension"	: "com_easyblog",
+		"element"	: "blog",
+
+		// The rule of this alert
+		"rule"		: "likes",
+
+		// We don't want to send e-mail notifications via EasySocial
+		"value" :
+		{
+			"email"		: false,
+
+			// We only want to use system notifications
+			"system"	: true			
+		}
+	}
+]

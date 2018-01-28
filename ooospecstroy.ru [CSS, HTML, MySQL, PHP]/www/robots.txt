@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:/action/
+Disallow:/templates/
+Disallow:/search.php
+Host:ooospecstroy.ru
+Sitemap: http://ooospecstroy.ru/sitemap.xml

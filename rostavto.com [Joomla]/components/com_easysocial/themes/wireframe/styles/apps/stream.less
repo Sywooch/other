@@ -1,0 +1,169 @@
+/**
+* @package 		EasySocial
+* @copyright	Copyright (C) 2010 - 2013 Stack Ideas Sdn Bhd. All rights reserved.
+* @license 		Proprietary Use License http://stackideas.com/licensing.html
+* @author 		Stack Ideas Sdn Bhd
+**/
+/*------------------------------------*\
+	stream.less
+\*------------------------------------*/
+// Contains stream related styling for apps
+
+// Generic stream styling
+.es-streams
+{
+	h4
+	{
+		&.content-title
+		{
+			font-size: 14px;
+			font-weight: 700;
+		}
+
+		>a
+		{
+			font-size: 14px;
+		}
+	}
+
+	ul.nav-actions
+	{
+		li
+		{
+			margin-right: 8px;
+			display: inline-block;
+
+			+li
+			{
+				border-left: 1px dotted #d7d7d7;
+				padding-left: 10px;
+			}
+		}
+	}
+}
+
+.es-streams
+{
+	/**
+	 * Repost stream items
+	 */
+	.stream-repost
+	{
+		.stream-meta
+		{
+			border: 1px dashed #d7d7d7;
+			padding: 8px;
+			margin: 15px 0;
+
+			.meta-title
+			{
+				font-weight: 700;
+			}
+		}
+
+	}
+
+	.stream-files
+	{
+		h4
+		{
+			margin-bottom: 20px;
+		}
+
+		.file-contents
+		{
+			margin-bottom: 15px;
+		}
+		
+		.file-download
+		{
+			max-width: 250px;
+			border: 1px dashed #d7d7d7;
+			padding: 40px 80px;
+			background: #f4f4f4;
+			text-align: center;
+
+			i
+			{
+				color: #666;
+				display: block;
+				font-size: 64px;
+			}
+		}
+
+		.file-preview
+		{
+			max-width: 250px;
+			display: inline-block;
+			border: 1px dashed #d7d7d7;
+			padding: 5px;
+
+			img
+			{
+				border: 1px solid #d7d7d7;
+			}
+		}
+	}
+}
+
+.es-dashboard,
+.es-profile
+{
+	.es-streams
+	{
+		.stream-links
+		{
+			background: #f4f4f4;
+			border: 1px dotted #d7d7d7;
+			.clearfix();
+			padding: 12px;
+
+			h4
+			{
+				padding: 0 0 10px 0;
+				border-bottom: 1px dotted #d7d7d7;
+			}
+
+			.stream-preview-image
+			{
+				padding: 2px;
+				border: 1px solid #d7d7d7;
+				background: #fff;
+				
+				img
+				{
+					border: 1px solid #d7d7d7;
+				}
+			}
+		}
+
+		.stream-groups
+		{
+			.groups-meta
+			{
+				background: #fff;
+				margin-top: 4px;
+				padding: 8px 0 4px 4px;
+
+				li
+				{
+					font-size: 11px;
+					color: #666;
+					display: inline-block;
+					margin-right: 8px;
+
+					i
+					{
+						margin-right: 3px;
+					}
+					+ li
+					{
+						padding-left: 8px;
+						border-left: 1px dotted #d7d7d7;
+					}
+				}
+			}
+		}
+
+	}	
+}

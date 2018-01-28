@@ -1,0 +1,543 @@
+﻿@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('OpenSans-Light-webfont.eot');
+    src: url('OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Light-webfont.woff') format('woff'),
+         url('OpenSans-Light-webfont.ttf') format('truetype'),
+         url('OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansLightItalic';
+    src: url('OpenSans-LightItalic-webfont.eot');
+    src: url('OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-LightItalic-webfont.woff') format('woff'),
+         url('OpenSans-LightItalic-webfont.ttf') format('truetype'),
+         url('OpenSans-LightItalic-webfont.svg#OpenSansLightItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeuchaRegular';
+    src: url('OpenSans-Regular-webfont.eot');
+    src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Regular-webfont.woff') format('woff'),
+         url('OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansItalic';
+    src: url('OpenSans-Italic-webfont.eot');
+    src: url('OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Italic-webfont.woff') format('woff'),
+         url('OpenSans-Italic-webfont.ttf') format('truetype'),
+         url('OpenSans-Italic-webfont.svg#OpenSansItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src: url('OpenSans-Semibold-webfont.eot');
+    src: url('OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Semibold-webfont.woff') format('woff'),
+         url('OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansSemiboldItalic';
+    src: url('OpenSans-SemiboldItalic-webfont.eot');
+    src: url('OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+         url('OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
+         url('OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('OpenSans-Bold-webfont.eot');
+    src: url('OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Bold-webfont.woff') format('woff'),
+         url('OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansBoldItalic';
+    src: url('OpenSans-BoldItalic-webfont.eot');
+    src: url('OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-BoldItalic-webfont.woff') format('woff'),
+         url('OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+         url('OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansExtrabold';
+    src: url('OpenSans-ExtraBold-webfont.eot');
+    src: url('OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-ExtraBold-webfont.woff') format('woff'),
+         url('OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+         url('OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansExtraboldItalic';
+    src: url('OpenSans-ExtraBoldItalic-webfont.eot');
+    src: url('OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+         url('OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+         url('OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+  margin:0;
+  padding:0;
+  position:relative;
+  height:100%;
+  min-width:990px;
+  font:normal 13px Arial, Helvetica, sans-serif;
+  color:#434343;
+  background:url(top_img0ss.jpg) top center repeat-y;
+}
+a {color:#0c7294; outline-style:none;text-decoration:underline;}
+  a:hover {color:#0c7294; text-decoration:none; cursor:pointer;}
+    a img {border-color:#0c7294}
+    
+h1 {
+  font:normal 21px 'NeuchaRegular', Arial, Helvetica, sans-serif;
+  color:#434343;
+  margin:0;
+  padding:0;
+}
+
+h2,h3,h4,h5,h6 { margin:10px 0; padding:0; color:#434343; font-family: 'NeuchaRegular', Arial, Helvetica, sans-serif; font-weight:normal;}
+h2 { font-size:18px}
+h3 { font-size:16px}
+h4 { font-size:13px}
+h5,h6 { font-size:10px}
+
+.thumb              {color:#000}
+
+h3 {display:none}
+/* tables */
+ 
+#popup {
+display: none;
+	background: #fff;
+	padding: 30px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	border-radius: 3px;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5), inset 0 0 60px rgba(0, 0, 0, 0.2);
+	color: #565656;
+	z-index: 1000;
+	display: none;
+}
+
+#popup h3 {
+display: none;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#popup p {
+	margin: 6px 0;
+}
+
+#popup a {
+	color: #66c3e6;
+}
+
+#close_popup {
+	width: 14px;
+	height: 16px;
+	background: url(close000.png) no-repeat;
+	cursor: pointer;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+#overlay {
+    background: #000;
+    position: fixed;
+	top: 0;
+    left: 0;
+    height: 100%;
+	width: 100%;
+    opacity: 0.5;
+    z-index: 999;
+	display: none;
+}
+
+table{border: 1px solid grey;}
+
+TABLE {
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+   }
+   TD, TH {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid grey; /* Параметры рамки */
+   }
+
+table.table0 { border-collapse:collapse;}
+  table.table0 td { padding:5px; border: none}
+
+table.table1 { border-collapse:collapse;}
+
+    table.table1 td { padding:5px; border: 1px solid #999;}
+
+table.table2 { border-collapse:collapse;}
+
+    table.table2 td { padding:5px; border: 1px solid #999;}
+      table.table2 th { padding:8px 5px; border: 1px solid #999; background-color:#0c7294; color:#fff; text-align:left;}
+
+/* GALLERY */
+
+table.gallery {border-spacing:10px; border-collapse:separate;}
+  table.gallery td {background:none; text-align:center; padding:15px;}
+    table.gallery td img {}
+
+hr {height:1px; font-size:0; line-height:0; background:#434343;border:none}
+.YMaps { color:#000; } 
+/*======================= main =======================*/
+#site-wrap {
+  height:auto !important;
+  height:100%;
+  min-height:100%;
+  width:100%;
+  margin:0 0 -199px;
+  background:url(top_img0.png) no-repeat top center;
+}
+#site-wrap-in {
+  height:100%;
+  width:951px;
+  margin:0 auto;
+}
+.clear-footer {
+  clear:both;
+  height:199px;
+}
+.clear {clear:both; font-size:0; line-height:0;}
+/*======================= header ======================*/
+.site-header {
+  height:405px;
+  position:relative;
+}
+.site-logo{
+  position:absolute;
+  left:-49px;
+  top:-135px;
+}
+/*====  phone ====*/
+.phone-top-box{
+  position:absolute;
+  left:-71px;
+  bottom:50px;
+  width:169px;
+  min-height:67px;
+  padding:67px 20px 0 97px;
+  font:normal 24px 'NeuchaRegular', Arial, Helvetica, sans-serif;
+  color:#fff;
+  background:url(phone_bg.png) no-repeat top left;
+}
+.phone-top-box p{
+  margin:0;
+}
+/*====  search  ====*/
+.search{
+  position:absolute;
+  top:367px;
+  left:15px;
+}
+form.search-form {
+  width:191px;
+  height:26px;
+  margin:0;
+  padding:0;
+  background:url(search00.png) no-repeat;
+}
+.search-text{
+  float:left;
+  width:130px;
+  padding:0;
+  margin:0 14px 0 8px;
+  border:none;
+  font:normal 15px 'NeuchaRegular', Arial, Helvetica, sans-serif;
+  line-height:26px;
+  height:26px;
+  color:#0c1b3c;
+  background:transparent;
+  outline:none;
+}
+.search-button {
+  float:left;
+  width:34px;
+  height:23px;
+  padding:0;
+  margin:0;
+  border:none;
+  cursor:pointer;
+  background:transparent;
+}
+.search-button:hover {
+  cursor:pointer;
+}
+/*===  top menu  ===*/
+.menu-top {float:left; margin:345px 0 0 240px; height:60px; padding:0; list-style:none; font:normal 15px 'NeuchaRegular', Tahoma, Geneva, sans-serif;}
+.menu-top li{float:left; padding:0; margin:0;}
+.menu-top li:first-child{background:none;}
+.menu-top li a{display:block; padding:0 10px 0 0; cursor:pointer; color:#fff; text-decoration:none;}
+.menu-top li a span{display:block; padding:27px 10px 20px 20px; cursor:pointer; color:#fff; text-decoration:none;}
+.menu-top li a:hover{text-decoration:none; color:#782d08; background:url(tmenu_ho.png) no-repeat top 6px right;}
+.menu-top li a:hover span{text-decoration:none; color:#782d08; background:url(tmenu_hp.png) no-repeat top 6px left;}
+
+.menu-top li#active a{color:#782d08; background:url(tmenu_ho.png) no-repeat top 6px right;}
+.menu-top li#active  a span{color:#782d08; background:url(tmenu_hp.png) no-repeat top 6px left;}
+/*===================== content table ====================*/
+.site-content, .site-content-left, .site-content-middle, .site-content-right{
+  border-collapse:collapse;
+  border:none;
+  border-spacing:0;
+  padding:0;
+  margin:0;
+}
+.site-content{
+  width:100%;
+}
+.site-content-left{
+  width:215px;
+  vertical-align:top;
+  top: 4px;
+  position: relative;
+}
+.left-sidebar{
+}
+.site-content-middle{
+  vertical-align:top;
+  
+}
+.right-sidebar{
+  padding:20px 40px 275px;
+
+}
+/*======================= left column =====================*/
+/*====  left menu  ====*/
+.lmenu-box{
+  width:215px;
+   background:url(lmenu_bg.png) repeat-y left;
+}
+.menu-left{width:215px; padding:8px 0 60px; margin:0; list-style:none; font:normal 15px 'NeuchaRegular', Tahoma, Geneva, sans-serif; background:url(flower00.gif) no-repeat top right;}
+.menu-left li.level1{width:215px; padding:0; margin:-2px 0 0; background:url(lmenu_li.png) no-repeat top center;}
+.menu-left li.level1:first-child{ background:none;}
+.menu-left li.level1 a{width:215px; margin:0 0 13px; display:block; cursor:pointer; color:#fff; text-decoration:none; position:relative; z-index:2; display:inline-block; *display:inline;  zoom:1; position:relative;}
+.menu-left li.level1 a span { display:block; width:165px; padding:10px 25px; margin-bottom:-13px;}
+.menu-left li.level1 a:hover{color:#6e2306; text-decoration:none; background:url(lmenu_ho.png) no-repeat top left;}
+.menu-left li.level1 a:hover span{ background:url(lmenu_hp.png) no-repeat bottom left;}
+
+.menu-left li#active a{color:#6e2306; background:url(lmenu_ho.png) no-repeat top left;}
+.menu-left li#active a span{ background:url(lmenu_hp.png) no-repeat bottom left;}
+
+.menu-left .level2{padding:7px 10px 7px 30px; margin:-4px 0 0; font:normal 12px Arial, Helvetica, sans-serif; cursor:default; background:#ffe259; position:relative; z-index:1}
+.menu-left .level2 a{cursor:pointer; padding:0 0 0 10px; color:#683409; text-decoration: underline; background:url(http://teremklub.ru/d/401094/t/v0/images/level2_marker.gif) no-repeat left center;}
+.menu-left .level2 a:hover{color:#0e729f; text-decoration: underline; background:url(http://teremklub.ru/d/401094/t/v0/images/marker_hov.gif) no-repeat left center;}
+.menu-left .level2-last{
+     background:url(http://teremklub.ru/d/401094/t/v0/images/last_level2.gif) repeat-x bottom #ffe259;
+}
+/*=====  lblock  =====*/
+.block-box{
+  display:inline-block; 
+  *display:inline;  
+  zoom:1;
+  width:215px;
+  margin:13px 0 6px;
+  background:url(block_bo.jpg) no-repeat bottom left #ffcf39;
+}
+.block-bottom{
+  width:215px;
+  margin-top:-103px;
+  padding:70px 0 24px;
+  min-height:90px;
+  background:url(block_to.png) no-repeat top left;
+}
+.lblock_title{
+  padding:0 18px 0 18px;
+  font:normal 26px 'NeuchaRegular', Arial, Helvetica, sans-serif;
+  color:#782d08;
+
+}
+.lblock_text{
+  width:179px;
+  padding:14px 18px 0;
+  font:normal 12px Arial, Helvetica, sans-serif;
+  color:#491a03;
+}
+.lblock_text a{
+  color:#491a03;
+}
+.lblock_text a:hover{
+  color:#491a03;
+}
+/*==== informers ====*/    
+.informer{margin:0 0 20px 0; text-align:center;}
+  
+/*=========================content ======================*/
+.site-path{
+  padding-bottom:15px;
+  font: normal 12px Arial, Helvetica, sans-serif;
+  color:#434343;
+}
+.site-path a{
+  color:#0c7294;
+}
+.content-box{
+  padding:16px 0 0;
+}
+/*==================== footer ============================*/
+.site-footer{
+z-index:-1;
+position:relative;
+top:-70px;
+  height:421px;
+  width:951px;
+  margin:0 auto;
+  font:normal 10px Arial, Helvetica, sans-serif;
+  color:#fff;
+  position:relative;
+  background:url(footer_b.jpg) no-repeat top left;
+}
+/*=====  news  =====*/
+.news-box{
+  position:absolute;
+  top:-176px;
+  right:15px;
+  width:690px;
+  height:421px;
+  background:url(http://teremklub.ru/d/401094/t/v0/images/news_bg.png) no-repeat top left;
+}
+.news-name{
+  position:relative;
+  height:33px;
+  padding:11px 0 0 18px;
+  font:normal 24px 'NeuchaRegular', Tahoma, Geneva, sans-serif;
+  color:#fff;
+  background:url(http://teremklub.ru/d/401094/t/v0/images/news_title.png) no-repeat top left;
+}
+.all-news{
+  position:absolute;
+  top:22px;
+  left:115px;
+  width:92px;
+  height:22px;
+  text-align:center;
+  background:url(http://teremklub.ru/d/401094/t/v0/images/all_news.png) no-repeat top left;
+}
+.all-news a{
+  font:normal 16px 'NeuchaRegular', Tahoma, Geneva, sans-serif;
+  color:#683409;
+  text-decoration:none;
+}
+.news-wrap{
+  float:left;
+  width:190px;
+  height:88px;
+  padding:19px 20px 0;
+  overflow:hidden;
+}
+.news-date{
+  width:62px;
+  height:16px;
+  margin-bottom:6px;
+  font:normal 11px Arial, Helvetica, sans-serif;
+  color:#fff;
+  line-height:16px;
+  text-align:center;
+  background:url(http://teremklub.ru/d/401094/t/v0/images/date_bg.png) no-repeat top left;
+}
+.news-title{padding-bottom:10px;}
+  .news-title a{font:normal 13px Arial, Helvetica, sans-serif; color:#1175c2; text-decoration:underline;}
+    .news-title a:hover{text-decoration:none; color:#711325;}
+/*===  bottom menu  ===*/
+.menu-bottom {float:left; margin:74px 0 0 12px; padding:0; list-style:none; font:normal 14px 'NeuchaRegular', Tahoma, Geneva, sans-serif;}
+.menu-bottom li{float:left; padding:0 20px; margin:0;}
+.menu-bottom li a{cursor:pointer; color:#fff; text-decoration:none;}
+.menu-bottom li a:hover{text-decoration:underline; color:#ffe60f;}
+.site-name-bottom{
+  position:absolute;
+  top:143px;
+  left:26px;
+  width:230px;
+  font:normal 12px Arial, Helvetica, sans-serif;
+  color:#fff;
+}
+.site-counters{
+  position:absolute;
+  top:146px;
+  left:256px;
+  width:350px;
+  height:50px;
+  overflow:hidden;
+}
+.site-copyright{
+  position:absolute;
+  top:145px;
+  left:805px;
+  width:140px;
+  height:52px;
+  font:normal 11px Arial, Helvetica, sans-serif;
+  color:#ececec;
+}
+.site-copyright a{color:#ffe60f; text-decoration:underline;}
+.site-copyright a:hover{text-decoration:none;}
+/*m.k.*/
+
+/* ==== реклама ==== */
+.lblock_advertising{
+width:215px; height:215px; background-color:#ffcf39;
+
+}
+
+.lblock_advertising span{
+font-size: 14pt; font:normal 14pt Arial, Helvetica, sans-serif; color:#491a03;
+}
+
+/* ===== sale ===== */
+#pwebcontact91_toggler{
+height:165px !important;
+width:186px !important;
+background-color:transparent !important;
+border-width:0px !important;
+background-image:url(/img/sale.png) !important;
+background-repeat:no-repeat !important;
+background-position:center center !important;
+}
+
+.pweb-text{
+display:none !important;
+}
+
+.sale1{
+width:186px; height:177px; background-color:transparent; position:absolute; bottom:50px; right:150px;				
+} 

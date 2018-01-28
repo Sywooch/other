@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="community" method="upgrade">
+	<name>My Blog Entries</name>
+	<author>StackIdeas</author>
+	<creationDate>18 August 2010</creationDate>
+	<copyright>Copyright 2009 - 2011 StackIdeas. All rights reserved.</copyright>
+	<license>GPL License</license>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>http://www.stackideas.com</authorUrl>
+	<version>3.9.1</version>
+	<isapplication>true</isapplication>
+	<isbrowsable>true</isbrowsable>
+	<description>
+		Displays a list of blog entries for each particular user. User's can then comment on the blog entries in the listings.
+	</description>
+	<languages>
+	    <language tag="en-GB">en-GB.plg_easyblog.ini</language>
+		<language tag="da-DK">da-DK.plg_easyblog.ini</language>
+		<language tag="sv-SE">sv-SE.plg_easyblog.ini</language>
+		<language tag="hu-HU">hu-HU.plg_easyblog.ini</language>
+	</languages>
+	<files>
+		<file plugin="easyblog">easyblog.php</file>
+		<filename>index.html</filename>
+		<folder>easyblog</folder>
+	</files>
+	<params>
+		<param name="coreapp" type="list" default="0" label="Core Application" description="Set whether this application is a core JomSocial application or not.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this plugin">
+			<option value="1">Use Global</option>
+			<option value="0">No</option>
+		</param>
+		<param name="expanded" type="list" default="0" label="Content initially expanded" description="Collapse or expand the blog content when the page loaded.">
+			<option value="0">Collapsed</option>
+			<option value="1">Expanded</option>
+		</param>
+		<param name="allowcomment" type="list" default="1" label="Allow comment" description="Allow site member and site visitor to comment on the blog post.">
+			<option value="0">No</option>
+			<option value="1">yes</option>
+		</param>
+		<param name="allowhits" type="list" default="1" label="Display hits" description="Enable or disable hits in the listings.">
+			<option value="0">No</option>
+			<option value="1">yes</option>
+		</param>
+		<param name="allowreadon" type="list" default="1" label="Display readon" description="Enable or disable readon in the listings.">
+			<option value="0">No</option>
+			<option value="1">yes</option>
+		</param>
+		<param name="showcontent" type="list" default="1" label="Display contents" description="If enabled, the contents of the blog post will be displayed.">
+			<option value="0">No</option>
+			<option value="1">yes</option>
+		</param>
+		<param name="showratings" type="list" default="1" label="Show ratings" description="If enabled, the ratings will be displayed.">
+			<option value="0">No</option>
+			<option value="1">yes</option>
+		</param>
+		<param name="limit" type="text" default="250" label="Text Limit" description="Limit the length of the blog content." />
+		<param name="count" type="text" default="5" label="Max Count" description="The number of max blog entries to display." />
+		<param name="order_by" type="list" default="created" label="Order By" description="Blog entries sorting by either creation date or blog title.">
+			<option value="created">Date</option>
+			<option value="title">Blog title</option>
+		</param>
+		<param name="order" type="list" default="DESC" label="Order" description="Blog entries display ordering.">
+			<option value="DESC">Descending</option>
+			<option value="ASC">Ascending</option>
+		</param>
+		<param name="position" type="list" default="content" label="Position" description="Default position if you select this as core apps">
+			<option value="content">Main  content</option>
+			<option value="sidebar-top">Sidebar top</option>
+			<option value="sidebar-bottom">Sidebar bottom</option>
+		</param>
+	</params>
+		
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="coreapp" type="list" default="0" label="Core Application" description="Set whether this application is a core JomSocial application or not.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>					
+				</field>				
+				<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this plugin">
+					<option value="1">Use Global</option>
+					<option value="0">No</option>
+				</field>				
+				<field name="expanded" type="list" default="0" label="Content initially expanded" description="Collapse or expand the blog content when the page loaded.">
+					<option value="0">Collapsed</option>
+					<option value="1">Expanded</option>					
+				</field>
+				<field name="allowcomment" type="list" default="0" label="Allow comment" description="Allow site member and site visitor to comment on the blog post.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>					
+				</field>
+				<field name="allowhits" type="list" default="1" label="Display hits" description="Enable or disable hits in the listings.">
+					<option value="0">No</option>
+					<option value="1">yes</option>
+				</field>
+				<field name="allowreadon" type="list" default="1" label="Display readon" description="Enable or disable readon in the listings.">
+					<option value="0">No</option>
+					<option value="1">yes</option>
+				</field>
+				<field name="showcontent" type="list" default="1" label="Display contents" description="If enabled, the contents of the blog post will be displayed.">
+					<option value="0">No</option>
+					<option value="1">yes</option>
+				</field>
+				<field name="showratings" type="list" default="1" label="Show ratings" description="If enabled, the ratings will be displayed.">
+					<option value="0">No</option>
+					<option value="1">yes</option>
+				</field>
+				<field name="limit" type="text" default="250" label="Text Limit" description="Limit the length of the blog content.">
+				</field>
+				<field name="count" type="text" default="5" label="Max Count" description="The number of max blog entries to display.">
+				</field>
+				<field name="order_by" type="list" default="created" label="Order By" description="Blog entries sorting by either creation date or blog title.">
+					<option value="created">Date</option>
+					<option value="title">Blog title</option>
+				</field>
+				<field name="order" type="list" default="DESC" label="Sorting" description="Blog entries display sorting.">
+					<option value="DESC">Descending</option>
+					<option value="ASC">Ascending</option>
+				</field>
+				<field name="position" type="list" default="content" label="Position" description="Default position for this application">
+					<option value="content">Main  content</option>
+					<option value="sidebar-top">Sidebar top</option>
+					<option value="sidebar-bottom">Sidebar bottom</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>	
+</install>

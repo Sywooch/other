@@ -1,0 +1,391 @@
+AWSTATS DATA FILE 7.0 (build 1.971)
+# If you remove this file, all statistics for date 201304 will be lost/reset.
+# Last config file used to build this data file was /etc/awstats/awstats.ooospecstroy.ru.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1995                
+POS_TIME 2674                
+POS_VISITOR 8686                
+POS_DAY 10289               
+POS_DOMAIN 3536                
+POS_LOGIN 3771                
+POS_ROBOT 3963                
+POS_WORMS 4616                
+POS_EMAILSENDER 4747                
+POS_EMAILRECEIVER 4890                
+POS_SESSION 10631               
+POS_SIDER 10838               
+POS_FILETYPES 5025                
+POS_DOWNLOADS 5253                
+POS_OS 5323                
+POS_BROWSER 5463                
+POS_SCREENSIZE 5840                
+POS_UNKNOWNREFERER 5914                
+POS_UNKNOWNREFERERBROWSER 6311                
+POS_ORIGIN 6393                
+POS_SEREFERRALS 6535                
+POS_PAGEREFS 6703                
+POS_SEARCHWORDS 7031                
+POS_KEYWORDS 7353                
+POS_MISC 2336                
+POS_ERRORS 7584                
+POS_CLUSTER 3627                
+POS_SIDER_404 7723                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20130430120222 2065 493279 37344169981
+FirstTime 20130421052250
+LastTime 20130430111826
+LastUpdate 20130430121702 6 0 6 0 0
+TotalVisits 81                  
+TotalUnique 36                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 37                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 119 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 54 63 2033462
+1 1 62 3780782 4 14 2358980
+2 70 597 48145285 3 168 7396995
+3 20 387 17846758 10 37 1963868
+4 27 835 31220923 13 53 425585
+5 94 1687 51436439 37 199 2364668
+6 71 1741 21637983 5 81 2512188
+7 74 1480 46834130 9 138 6409192
+8 217 4160 133312057 53 442 31565809
+9 206 3375 143914035 9 183 2587555
+10 39 1321 27882108 3 73 2640502
+11 40 547 36159399 6 84 2553126
+12 84 1894 100394539 4 113 4741480
+13 88 1354 70853019 11 126 4232640
+14 78 2107 88780166 17 134 4671333
+15 42 874 35879634 59 116 2483734
+16 4 93 5875420 2 18 1794002
+17 4 56 3336205 7 38 1796764
+18 12 84 7564651 2 37 5116111
+19 3 54 5760493 14 27 1363167
+20 2 53 5734136 2 5 53062
+21 1 1 19612 1 5 327413
+22 1 1 26003 0 20 1535747
+23 0 0 0 3 15 707799
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 1178 22763 886393777
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 1
+ooospecstroy 8 8 1804 20130421074226
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 14
+googlebot 527 78974357 20130430110323 19
+msnbot\-media 56 1917514 20130430094636 40
+mj12bot 55 772928 20130426051135 3
+yandex 24 231134 20130429003354 12
+bot[\s_+:,\.\;\/\\-] 21 439336 20130430110141 9
+crawl 10 238604 20130430043535 0
+spider 3 71664 20130427140709 0
+[\s_+:,\.\;\/\\-]bot 3 45975 20130426123730 1
+nutch 2 19469 20130421061418 1
+robot 2 39075 20130422195037 0
+commons\-httpclient 1 26265 20130426192443 0
+no_user_agent 1 26003 20130424231034 0
+mail\.ru 1 98 20130428021849 1
+unknown 1 98 20130423232035 1
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 8
+php 814 24136931 0 0
+css 2599 2095400 0 0
+png 5384 11096665 0 0
+html 362 8015452 0 0
+xml 2 12638 0 0
+jpg 12086 836031251 0 0
+js 1076 4302980 0 0
+gif 440 702460 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 1
+/robots.txt 87 0 8527
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS 9
+linuxandroid 53
+winxp 4804
+win2000 1
+linux 79
+winvista 5054
+win7 12233
+macosx 521
+winme 1
+Unknown 17
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 21
+msie6.0 87
+firefox20.0 822
+android 53
+firefox2.0.0.1 1
+chrome22.0.1229 78
+chrome22.0.1106.241 39
+firefox3.6.16 11
+opera9.80 1132
+msie8.0 277
+mozilla 16
+chrome19.0.1084.5409 1
+chrome26.0.1410.64 10929
+netscape5.0 1
+msie7.0 5676
+safari5.1.2 642
+msie10.0 1004
+firefox6.0 6
+msie9.0 1329
+firefox15.0.1 136
+firefox11.0 2
+safari 521
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 5
+Mozilla/5.0 20130426084533
+Mozilla/5.0_(compatible;_Google-Site-Verification/1.0) 20130428090955
+Mozilla/5.0_(compatible;_U;_AnyEvent-HTTP/2.15;__http://software.schmorp.de/pkg/AnyEvent) 20130429153616
+Mozilla/5.0_(compatible;_Google-Proxy) 20130428084155
+Mozilla/3.0_(compatible;_Indy_Library) 20130425182121
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 362 450
+From1 0 0
+From2 18 18
+From3 8 8
+From4 790 22287
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+google 12 12
+yandex 6 6
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 5
+http://resident.su/ru/ooospecstroy.html 3 3
+http://e.mail.ru/cgi-bin/link 2 2
+http://vlad24.ru/blagoveshhensk/by_nom/nom/3933/ 1 1
+http://disforex.ru 1 1
+http://www.forexhm.ru 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 3
+www.ooospecstroy.ru 4
+%d1%81%d0%bf%d0%b5%d1%86%d1%81%d1%82%d1%80%d0%be%d0%b9+%d0%b1%d0%bb%d0%b0%d0%b3%d0%be%d0%b2%d0%b5%d1%89%d0%b5%d0%bd%d1%81%d0%ba 1
+ooospecstroy.ru 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 4
+www.ooospecstroy.ru 4
+%d0%b1%d0%bb%d0%b0%d0%b3%d0%be%d0%b2%d0%b5%d1%89%d0%b5%d0%bd%d1%81%d0%ba 1
+%d1%81%d0%bf%d0%b5%d1%86%d1%81%d1%82%d1%80%d0%be%d0%b9 1
+ooospecstroy.ru 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 5
+401 2 964
+302 1085 326040
+206 193 10449623
+500 4 0
+404 65 19999
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 9
+/action/css/style.css 1 http://www.ooospecstroy.ru/action/authorisation.php
+/apple-touch-icon-precomposed.png 2 -
+/action/css/style_content.css 1 http://www.ooospecstroy.ru/action/authorisation.php
+/images/close.png 2 http://www.ooospecstroy.ru/documentation.php
+/action/css/global.css 1 http://www.ooospecstroy.ru/action/authorisation.php
+/content/images/certificates_content/11_big.jpg 1 http://www.ooospecstroy.ru/certificates.php
+/css/images/submit_fon.png 55 http://ooospecstroy.ru/
+/action/css/style_header.css 1 http://www.ooospecstroy.ru/action/authorisation.php
+/action/css/style_footer.css 1 http://www.ooospecstroy.ru/action/authorisation.php
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 37
+195.14.118.175 940 20261 667621144 20130430111826 20130430111826 /index.php/
+176.123.192.7 133 1325 126143007 20130430094501
+80.83.238.106 15 173 14787988 20130425185124
+80.83.239.82 11 105 10013325 20130426112507
+87.226.228.68 8 98 11962363 20130423101022
+80.83.239.18 8 90 2938578 20130427025005
+66.249.81.159 7 47 3331086 20130428084029
+217.69.133.44 6 6 852 20130429150603
+66.249.83.224 5 5 131811 20130428084155
+66.249.81.157 4 43 3316561 20130428091034
+89.208.17.22 2 2 46631 20130429153616
+188.255.23.82 0 16 1507239 
+79.111.45.29 1 45 3345339 20130424121001
+93.80.248.226 2 76 5429461 20130425092351
+37.200.65.208 1 1 26357 20130425193851
+79.143.187.164 1 1 26265 20130427070607
+178.154.243.104 1 1 19396 20130421133948
+79.111.44.232 1 8 39187 20130423154741
+178.140.172.164 2 2 49834 20130425182121
+96.31.81.82 1 1 26351 20130426084533
+91.142.153.135 1 39 302212 20130421153307
+46.188.24.158 1 62 3780782 20130423014757
+217.69.133.45 4 4 568 20130423145103
+164.215.86.199 2 53 5734136 20130423191157
+46.32.66.10 2 53 5734136 20130423205539
+178.63.16.210 1 1 19612 20130422212707
+80.83.239.41 1 41 3512405 20130426070609
+91.142.155.250 3 49 5557117 20130427080605
+78.30.193.20 1 1 35748 20130428185550
+91.142.147.132 2 43 4013661 20130422114211
+37.72.94.241 1 1 26003 20130424222754
+46.164.237.198 1 1 26265 20130426160350
+37.57.127.26 2 2 52714 20130426035545
+93.159.230.89 1 11 146583 20130426025511
+80.83.238.86 4 56 3336205 20130429170946
+95.211.99.69 1 1 19612 20130423032834
+80.83.238.42 1 39 3333243 20130424052311
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 10
+20130421 81 1039 39186549 8
+20130422 143 2948 155742697 8
+20130423 41 740 61596068 11
+20130424 266 8338 152127458 7
+20130425 344 4987 230882569 11
+20130426 98 2019 102474627 12
+20130427 17 233 14420285 6
+20130428 17 95 6779383 5
+20130429 54 474 38556082 8
+20130430 117 1890 84628059 5
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 14
+5mn-15mn 6
+2mn-5mn 2
+30s-2mn 7
+0s-30s 38
+15mn-30mn 5
+30mn-1h 8
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 32
+/ 335 7879497 55 37
+/index.php 115 2669017 10 5
+/responses.php 101 3188441 1 5
+/furniture.php 62 1596937 1 3
+/mirrors.php 60 1726476 1 4
+/restoration.php 56 1546087 1 4
+/repair.php 52 3364934 0 1
+/building.php 43 1226347 0 1
+/contacts.php 39 1063245 1 5
+/design.php 34 969753 0 0
+/map.php 30 125683 1 1
+/department.php 20 501523 0 0
+/sitemap.xml 2 12638 0 1
+/wmail_7ec50398788cf6d8.html 10 1420 5 5
+/index.php/ 5 132572 1 1
+/about.php 16 536755 1 1
+/action/admin.php 12 6963 0 0
+/news.php 27 900395 0 0
+/index_foto.php 27 55383 0 0
+/partners.php 13 351490 0 0
+/purchase.php 16 515505 0 1
+/action/authorisation.php 20 31194 0 0
+/google92db07e0d256a857.html 3 106 1 0
+/price_list.php 14 2004717 0 2
+/certificates.php 15 622506 0 1
+/action/action_responses.php 3 110 0 0
+/webstat/ 8 1804 1 0
+/purchase_foto.php 4 10920 0 0
+/google9929374967b9148b.html 1 53 0 0
+/action/exit.php 1 33 0 0
+/action/delete.php 3 0 0 0
+/documentation.php 31 1122517 1 2
+END_SIDER

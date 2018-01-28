@@ -1,0 +1,177 @@
+a:link .useradmin_contener, a:visited .useradmin_contener, span  .useradmin_contener, p .useradmin_contener
+{
+	display: inline;
+}
+.useradmin_active, .useradmin_active p, .useradmin_active div, .useradmin_active span, .useradmin_active a:link, .useradmin_active a:visited,  .useradmin_active h1, .useradmin_active h2,  .useradmin_active h3,  .useradmin_active h4
+{
+	cursor:url(../../adm/img/useradmin_edit.gif), default;
+	color: red;
+}
+.useradmin_panel
+{
+    background: transparent url("../../adm/img/admin_top_x.png") repeat-x scroll 0 0;
+    font-family: Trebuchet MS,Verdana,sans-serif;
+    font-size: 13px;
+    height: 52px;
+    position: fixed;
+
+    vertical-align: middle;
+    width: 100%;
+    z-index: 999;
+    margin-top: -52px;
+}
+.useradmin_panel_meta {
+	background-color: #eee;
+}
+.useradmin_meta {
+	display: hide;
+}
+.useradmin_meta td {
+	padding: 10px 0px 0px 10px;
+}
+.useradmin_meta_first_td{
+	width: 1%;
+	text-align: right;
+}
+.useradmin_panel a {
+	color: #5659A5;
+}
+
+.useradmin_panel table
+{
+    margin: 0;
+    width: 100%;
+	padding: 0px;
+	border-spacing: 0px;
+	height: 48px;
+}
+
+.useradmin_panel .head_td{
+    vertical-align: middle;
+}
+
+.useradmin_panel .head_1{
+    width: 240px;
+    background: url(../../adm/img/admin_sep.png) repeat-y 100% -1px;
+	padding-left: 20px;
+}
+
+.useradmin_panel .head_2{
+    width: 413px;
+    background: url(../../adm/img/admin_sep.png) repeat-y 100% -1px;
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+
+.useradmin_panel .head_3{
+    background: url(../../adm/img/admin_sep.png) repeat-y 100% -1px;
+    text-align: center;
+}
+
+.useradmin_panel .head_4{
+    text-align: right;
+    padding: 0 20px 0 0;
+}
+
+.useradmin_panel .head_2 img {
+    position: relative;
+    top: 7px;
+}
+
+.useradmin_panel .go_edit span {
+    border-bottom: 1px dashed #8C8787;
+    cursor: pointer;
+}
+
+.useradmin_panel  .red {
+    color:white !important;
+    background-color:red;
+    font-weight: bold;
+}
+
+.useradmin_panel .go_edit {
+    color: #5659A5;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.useradmin_panel .logo_diafan {
+    background: url("../../adm/img/diafan.png") no-repeat 0 4px;
+    padding: 0 0 0px 40px;
+    margin: 0;
+	height: 34px;
+}
+
+.useradmin_panel .logo_diafan a{
+    color: #1d1d1d;
+	font-size: 11px;
+}
+
+.useradmin_panel a.go_site{
+    color: #5659a5;
+}
+
+.useradmin_panel a.lang{
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #1d1d1d;
+    margin: 0 10px 0 0;
+}
+
+.useradmin_panel .lang_act{
+    font-size: 11px;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    padding: 0 3px;
+    background: #cacaca;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+
+.useradmin_panel .user_name a:link, .user_name a:visited{
+    color: #1d1d1d;
+    font-size: 11px;
+}
+
+.useradmin_panel .exit a:link, .exit a:visited{
+    color: #1d1d1d;
+    font-size: 11px;
+}
+
+
+.useradmin_panel .user_name {
+    display: inline-block;
+    background: url(../../adm/img/user_icon.png) no-repeat 0 3px;
+    padding: 0 20px 0 15px;
+    width: 100px;
+    height: 14px;
+    overflow: hidden;
+    text-align: left;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+}
+
+.useradmin_panel .user_info {
+    height: 14px;
+    min-width: 150px;
+    position: relative;
+}
+
+.useradmin_panel .exit {
+    display: inline-block;
+    background: url(../../adm/img/exit_icon.png) no-repeat 0 3px;
+    padding: 0 0 0 20px;
+
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 20px;
+}
+
+body
+{
+    padding-top: 52px;
+}

@@ -1,0 +1,11 @@
+
+/* Start:/bitrix/components/softserv/simple.slider.gallery/templates/.default/style.css*/
+div.news-list img.preview_picture
+{
+	margin:0 4px 6px 0;
+}
+.news-date-time {
+	color:#486DAA;
+}
+
+/* End */

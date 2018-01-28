@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>YouMomentum Slider</name>
+	<author>YouJoomla.com</author>
+	<creationDate>3-28-2011</creationDate>
+	<license>commercial</license>
+	<authorEmail>youjoomla@gmail.com</authorEmail>
+	<authorUrl>www.youjoomla.com</authorUrl>
+	<version>2.0</version>
+	<description>
+		<![CDATA[<style type="text/css" media="all">#wrap1 {padding:0px 0px 4px 0px;}h1 {clear:both;font-family: Arial Narrow,sans-serif;font-size:18px;margin:0px 0px 12px 0px;padding:0px 0px 1px 10px;color:#C64934;}.wrap2 {background:#F7F7F7;}</style><div id="holdthem"><h1>YouMomentum News Slider ver 2.0 for Joomla 1.6x</h1><div class="wrap2"><a title="Visit the official website!" href="http://joomla1.5.youjoomla.info/youmomentum"> <img style="float:left;border:1px solid #CFCFCF;margin:0px 15px 4px 22px;" src="../modules/mod_youm_slider/images/yj_extensions.jpg" border="0" alt="Logo" /></a>]]>
+	</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_youm_slider.ini</language>
+		<language tag="en-GB">en-GB.mod_youm_slider.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_youm_slider">mod_youm_slider.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>script</folder>
+		<folder>lib</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>elements</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields  name="params" addfieldpath="/modules/mod_youm_slider/elements/">
+			<fieldset name="basic">
+			<field name="handler" type="yjhandler"/>
+			<field type="yjspacer" default="&lt;strong&gt;SLIDER LAYOUT SETTINGS&lt;/strong&gt;" />
+			<field name="module_template" type="folderlist" default="Default" hide_none="blank" label="Select default module template" directory="modules/mod_youm_slider/tmpl" description="You can create custom module  templates for Youomentum News Slider Simply copy modules/mod_youm_slider/tmpl/Default folder , rename it to your own template name and edit default.php within your template folder to your liking. Once you have created your module template , your template name will be visible here. You can also copy your template folder to your template/html/mod_youm_slider/ folder and create custom overides for each module instance. To get you started we have created blank module template name New" />
+			<field name="full_player_width" type="text" default="960" label="Player width" description="Usualy width of the containing div" />
+			<field name="player_height" type="text" default="300" label="Player Height" description="Please try to have height devidable by number of visible playist items  ( last setting ). Example: 300px height , number of visible items 5 , each playlist item would be 50px high," />
+			<field name="slide_width" type="text" default="580" label="Slide width" description="Usualy width of your intro images" />
+			<field name="intro_desc_width" type="text" default="80%" label="Slide intro text width" description="Can be px or percentage" />
+			<field name="intro_desc_height" type="text" default="auto" label="Slide intro text height" description="Leave at auto to adjust itself automatically by the amount of intro text. Define in px. Example: 250px" />
+			<field name="playlist_width" type="text" default="380" label="Playlist width" description="Calculate Player width minus Slide width" />
+			<field name="playlist_align" type="list" default="left" label="Playlist align" description="Left or right" >
+				<option value="left">Left</option>
+				<option value="right">Right</option>
+			</field>
+			<field name="show_thumb" type="list" default="1" label="Show playlist thumbnail image" description="Show playlist thumbnail image">
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+			<field name="thumb_width" type="text" default="60px" label="Thumbnail width" description="Thumbnail widtht" />
+			<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+			<field type="yjspacer" default="&lt;strong&gt;NEWS SETTINGS&lt;/strong&gt;" />
+			<field name="get_items" type="category" extension="com_content" default="1" label="News items category" description="In this category there must be min 1 news item published" />
+			<field name="item" type="yjgetitem" default="" label="Select specific items" description="Choose specific news items you would like to display" />
+			<field name="getspecific" type="yjlistitems" default="" label="Specific items list and order" description="First select few items from setting above. Drag and drop to re-order items. Click the remove icon to remove an item from the list. Note that the items reorder works only if you set News items ordering to Specific items order!" />
+			<field name="ordering" type="list" default="1" label="News Items Ordering" description="Choose news items order sequence. Note that Specific items order is the display order of your Specific items order setting above ">
+				<option value="1">Joomla news item ordering</option>
+				<option value="2">Most popular</option>
+				<option value="3">Random  news item</option>
+				<option value="4">Date created oldest article first</option>
+				<option value="5">Date created newest article first</option>
+				<option value="6">Specific items order</option>
+			</field>
+			<field name="nitems" type="text" default="4" label="Number of news items to display" description="Number of news items to display" />
+			<field name="chars" type="text" default="200" label="Number of characters to display" description="Number of characters to display" />
+			<field name="chars_nav" type="text" default="150" label="Max number of playlist intro text characters to display" description="Max number of slide intro text characters to display" />
+			<field name="allow_tags"   filter="safehtml" type="text" default="" size="60" label="Alowable html tags" description="ALLOWTAGSTEXT" />
+			<field type="yjspacer" default="&lt;strong&gt;SLIDE SCRIPT SETTINGS&lt;/strong&gt;" />
+			<field name="autoSlide" type="text" default="5000" label="Auto slide speed" description="If set to 0 slider will not slide automaticaly"/>
+			<field name="startElem" type="text" default="2" label="First news item to slide" description="This goes by playlist ordering. Example if 6 news items second slide from above will slide first"/>
+			<field name="visibleItems" type="text" default="3" label="Number of visible playlist items" description="If you set player height at 400px than this should be set at 4"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

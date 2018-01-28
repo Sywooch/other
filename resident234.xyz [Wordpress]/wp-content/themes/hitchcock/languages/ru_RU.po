@@ -1,0 +1,220 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Hitchcock v10.03\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-11-15 21:31+0300\n"
+"Last-Translator: Игорь <dybabiz@ya.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"Language: ru\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ hitchcock
+#: 404.php:11
+msgid "Error 404"
+msgstr "Ошибка 404"
+
+# @ hitchcock
+#: 404.php:19
+msgid "It seems like you have tried to open a page that doesn't exist. It could have been deleted, moved, or it never existed at all. You are welcome to search for what you are looking for with the form below."
+msgstr "Нет такой страницы! Возможно вы ошиблись в наборе или вам дали не верную ссылку. Проверьте адрес или воспользуйтесь поиском."
+
+# @ hitchcock
+#: archive.php:8
+msgid "Date"
+msgstr "Дата"
+
+# @ hitchcock
+#: archive.php:11
+msgid "Month"
+msgstr "Месяц"
+
+# @ hitchcock
+#: archive.php:14
+msgid "Year"
+msgstr "Год"
+
+# @ hitchcock
+#: archive.php:17
+msgid "Category"
+msgstr "Категория"
+
+# @ hitchcock
+#: archive.php:20
+msgid "Tag"
+msgstr "Метка"
+
+# @ hitchcock
+#: archive.php:23
+msgid "Author"
+msgstr "Автор"
+
+# @ hitchcock
+#: archive.php:27
+msgid "Archive"
+msgstr "Архив"
+
+# @ hitchcock
+#. gettext fix: identical singular and plural forms found, that may be ambiguous! Please check the code!
+#: comments.php:18 comments.php:90
+msgid "Comment"
+msgid_plural "Comments"
+msgstr[0] "Комментарий"
+msgstr[1] "Комментариев"
+
+# @ hitchcock
+#: comments.php:37
+msgid "Pingback"
+msgid_plural "Pingbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ hitchcock
+#: comments.php:55
+msgid "Older"
+msgstr "Назад"
+
+# @ hitchcock
+#: comments.php:61
+msgid "Newer"
+msgstr "Вперед"
+
+# @ hitchcock
+#: comments.php:80
+msgid "Leave a Reply"
+msgstr "Оставить комментарий"
+
+# @ hitchcock
+#: comments.php:98
+msgid "Name"
+msgstr "Имя"
+
+# @ hitchcock
+#: comments.php:104
+msgid "Email"
+msgstr ""
+
+# @ hitchcock
+#: comments.php:110
+msgid "Website"
+msgstr "Веб-сайт"
+
+# @ hitchcock
+#: content.php:9
+msgid "Sticky"
+msgstr "Закреплено"
+
+# @ hitchcock
+#: functions.php:46
+msgid "Primary Menu"
+msgstr "Основное меню"
+
+# @ hitchcock
+#: functions.php:47
+msgid "Social Menu"
+msgstr "Социальные кнопки"
+
+# @ hitchcock
+#: functions.php:303
+msgid "Pingback:"
+msgstr ""
+
+# @ hitchcock
+#: functions.php:303 functions.php:346
+msgid "Edit"
+msgstr "Изменить"
+
+# @ hitchcock
+#: functions.php:321
+msgid "Post Author"
+msgstr "Автор записи"
+
+# @ hitchcock
+#: functions.php:337
+msgid "Reply"
+msgstr "Ответить"
+
+# @ hitchcock
+#: functions.php:350
+msgid "Your comment is awaiting moderation."
+msgstr "Спасибо! Ваш комментарий ожидает проверки."
+
+# @ hitchcock
+#: functions.php:372 functions.php:408
+msgid "Logo"
+msgstr "Лого"
+
+# @ hitchcock
+#: functions.php:374
+msgid "Upload a logo to replace the default site title in the sidebar/header"
+msgstr "Загрузите логотип, находящийся в боковой панели, чтобы заменить логотип по умолчанию."
+
+# @ hitchcock
+#: functions.php:400
+msgid "Accent Color"
+msgstr "Основной цвет"
+
+# @ hitchcock
+#: header.php:43 searchform.php:2
+msgid "Search Form"
+msgstr "Искать"
+
+# @ hitchcock
+#: index.php:17
+#, php-format
+msgid "Page %s of %s"
+msgstr "Страница %s из %s"
+
+# @ hitchcock
+#: page.php:35 single.php:53
+msgid "Pages:"
+msgstr "Страницы:"
+
+# @ hitchcock
+#: page.php:41
+msgid "Edit Page"
+msgstr "Редактировать"
+
+# @ hitchcock
+#: page.php:53 single.php:126
+msgid "We couldn't find any posts that matched your query. Please try again."
+msgstr "Записи не найдены. Пожалуйста, попробуйте ещё раз."
+
+# @ hitchcock
+#: search.php:9 search.php:33
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+# @ hitchcock
+#: search.php:46
+msgid "No results. Try again, would you kindly?"
+msgstr "К сожалению, по вашему запросу ничего не найдено."
+
+# @ hitchcock
+#: single.php:69
+msgid "In"
+msgstr "В"
+
+# @ hitchcock
+#: single.php:93
+msgid "Next"
+msgstr "Вперед"
+
+# @ hitchcock
+#: single.php:93 single.php:104
+msgid "Post"
+msgstr "Запись "
+
+# @ hitchcock
+#: single.php:104
+msgid "Previous"
+msgstr "Назад"

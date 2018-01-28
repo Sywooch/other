@@ -1,0 +1,237 @@
+/**
+* @package 		EasySocial
+* @copyright	Copyright (C) 2010 - 2013 Stack Ideas Sdn Bhd. All rights reserved.
+* @license 		Proprietary Use License http://stackideas.com/licensing.html
+* @author 		Stack Ideas Sdn Bhd
+**/
+.es-header {
+	position: relative;
+	.es-action {
+		margin: 0;
+	}
+}
+
+.es-header-cover {
+
+	position: relative;
+
+	.es-cover {
+		z-index: 1;
+	}
+
+	.es-profile-avatar {
+		z-index: 2;
+		padding: 0;
+		background: rgba(0,0,0,.1);
+		border-radius: 0;
+		.es-avatar {
+			.square(140px);
+			border: none;
+			border-radius: 0;
+			border-right: 1px solid #fff;
+			img {
+				.square(140px);
+				background: #f5f5f5;
+			}
+		}
+	}
+
+	// Standardizes flyout
+	.es-flyout-content {
+
+		background: rgba(0,0,0,.6);
+		text-align: right;
+		font-size: 11px;
+		padding: 10px;
+		opacity: 0;
+		.transition(opacity .2s ease);
+
+		.es-flyout-button {
+			color: #fff;
+		}
+
+		.dropdown-menu {
+			left: auto;
+			right: 0;
+			text-align: left;
+			margin-top: 6px;
+		}
+	}
+}
+
+.without-cover {
+	+ .es-header-content {
+		margin-left: 145px;
+	}
+}
+
+// Heading block
+.es-header {
+	.es-header-content {
+		background: rgba(255, 255, 255, 0.85);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		margin: 0;
+		padding: 10px 0 0 140px;
+		height: 140px;
+		.fd-nav {
+
+			&.user-actions {
+
+				a {
+					color: @esHeaderContentColor;
+					span {
+						font-size: 11px;
+					}
+				}
+
+
+				[class^="icon-es-"],
+				[class*=" icon-es-"] {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+	.es-header-info {
+		margin-left: 10px;
+	}
+	.es-header-stat {
+		position: absolute;
+		right: 10px;
+		bottom: 50px;
+
+		.stat-desc{
+			> span
+			{
+				font-size: 11px;
+			}
+		}
+	}
+	.user-meta {
+		display: none; // enable user-meta in mobile view
+	}
+	.es-action {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		padding-left: 140px;
+	}
+	.fd-nav {
+		&.user-actions {
+			width: 100%;
+			margin: 0;
+			top: -40px;
+			position: static;
+			background: #fff;
+			border-top: 1px solid @esBorder;
+			.clearfix();
+			> li {
+				margin: 0;
+				padding: 0;
+				float: left;
+				width: 33.33%;
+				.btn {
+					border-radius: 0;
+					height: 32px;
+					line-height: 20px;
+					width: 100%;
+					border: none;
+					border-right: 1px solid @esBorder;
+					.badge {
+						border: 1px solid @esBorder;
+						padding: 3px 12px;
+						position: absolute;
+						right: 10px;
+						top: 5px;
+						color: @esBorder;
+
+					}
+					&.is-following,
+					&.is-friends {
+						.badge i {
+							color: #2DA541;
+							
+						}
+					}
+				}
+				&:nth-child(3) {
+					.btn {
+						border-right: none;
+					}
+				}
+			}
+		}
+	}
+
+	.es-header-footer {
+		position: relative;
+	}
+}//es-header
+
+.btn-action-followers{
+	&.is-following,
+	&.is-following:hover,
+	&.is-following:focus{
+
+		[class^="ies-"],
+		[class*=" ies-"] {
+			&:before {
+				font-size: 9px;
+			}
+		}
+		#gradient > .vertical(#fff, #fff);
+		color: #333 !important;
+	}
+}
+.btn-action-friends {
+	&.is-friends,
+	&.is-friends:hover,
+	&.is-friends:focus{
+		#gradient > .vertical(#fff, #fff);
+		color: #333 !important;
+	}
+}
+
+&.w480 {
+	.es-header {
+		// border: none;
+		margin-bottom: 40px;
+		.es-header-content {
+			padding: 0 0 0 90px;
+			height: 80px;
+			.es-header-info {
+				margin-left: 0;
+				padding-top: 0;
+			}
+			.es-header-stat {
+				display: none; // enable stat in .user-meta
+			}
+			.user-meta {
+				display: block;
+			}
+			.es-action {
+				height: auto;
+				margin: 0;
+				position: absolute;
+				top: auto;
+				right: 0;
+				float: none;
+				width: 100%;
+				padding-left: 0;
+				bottom: -33px;
+				.user-actions {
+					border: 1px solid @esBorder;
+					border-top: none;
+				}
+				.fd-nav > li > .btn {
+					padding: 5px;
+				}
+			}
+		}
+	}
+}

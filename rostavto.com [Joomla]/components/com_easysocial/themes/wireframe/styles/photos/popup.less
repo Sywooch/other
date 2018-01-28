@@ -1,0 +1,257 @@
+&.es-photo-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	// background: rgba(0,0,0,0.3);
+	display: none;
+
+	z-index: 9999;
+	.box-sizing(border-box);
+	padding: 30px;
+
+	&.active {
+		display: block !important;
+	}
+
+	&.is-loading {
+	}
+
+	> .fd-loading {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+	}
+}
+
+div.fd-loading {
+	// Reset fd-loading styling
+	background: none;
+	min-width: none;
+	min-height: none;
+	display: block;
+	padding: 0;
+
+	// Horizontally center loading image & text
+	text-align: center;
+
+	// When showing loading image without text,
+	// it should be accurately centered.
+	text-indent: -8px;
+
+	// Exact replica of .fd-loading
+	span {
+		background: url("@{global_uri}/images/loading.gif") left center no-repeat;
+		min-height: 16px;
+		min-width: 16px;
+		margin-left: -16px;
+		vertical-align: bottom;
+		display: inline-block;
+		padding: 0 0 0 16px;
+		text-indent: 8px;
+	}
+}
+
+.es-popup-viewport {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #eee;
+	.box-shadow(0 3px 12px rgba(0, 0, 0, 0.5));
+}
+
+.es-popup-close-button {
+	position: absolute;
+	display: none;
+}
+
+.es-popup-handle {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-right: 320px;
+	.box-sizing(border-box);
+}
+
+&.es-photo-popup {
+
+	.es-photo-item {
+		.box-sizing(border-box);
+		width: 100%;
+		height: 100%;
+
+		&:hover {
+			.es-photo-header {
+				opacity: 1;
+			}
+		}
+	}
+
+	.es-photo-header {
+		//background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+		background: none;
+		padding: 15px;
+		height: 60px;
+		margin: 0;
+
+		// opacity: 0;
+		.transition(opacity .5s ease);
+
+		// &.active {
+		// 	opacity: 1;
+		// }
+	}
+
+	.es-photo-footer {
+		position: absolute;
+		top: 0;
+		right: -320px;
+		width: 320px;
+		height: 100%;
+		background: #fff;
+		overflow: hidden;
+		overflow-y: auto;
+
+		.box-sizing(border-box);
+		padding: 15px;
+	}
+
+	.es-photo-content {
+		background: none;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		margin: 0;
+
+		position: absolute;
+		// For top bar
+		padding-top: 70px;
+		// For bottom bar
+		padding-bottom: 30px;
+	}
+
+	.es-photo-image {
+		height: 100%;
+	}
+
+	.es-photo-interaction.row {
+		margin: 0;
+		.box-sizing(border-box);
+	}
+
+	.es-media-header .media {
+		border: none;
+		height: auto;
+	}
+
+	.es-media-item-menu {
+		position: relative;
+	}
+
+	.es-photo-title {
+		font-size: 13px;
+	}
+
+	.es-media-stat {
+		// float: left;
+		// width: 33%;
+		padding: 4px 0;
+		// color: rgba(255,255,255,0.7);
+		// border-right: 1px solid rgba(0,0,0,0.25);
+
+		// Don't show stat label
+		> b {
+			display: none;
+		}
+
+		> i {
+			display: inline-block;
+			font-size: 8px;
+			line-height: 10px;
+		}
+
+		> span {
+			font-size: 10px;
+		}
+
+		.es-photo-tag-list-item {
+			float: left;
+		}
+	}
+
+	.es-photo-prev-button,
+	.es-photo-next-button {
+		background: none;
+
+		// > i {
+		// 	background: #999;
+		// 	border-radius: 100%;
+		// 	.box-shadow(0px 2px 0px rgba(0,0,0,0.7));
+		// 	padding: 18px;
+		// 	width: 60px;
+		// 	height: 60px;
+		// 	padding: 18px;
+		// }
+	}
+
+	.es-photo-tag-list-item-group {
+		padding: 5px;
+	}
+
+	.es-photo-item.tagging .es-photo-image {
+		margin: 0;
+	}
+
+	.es-photo-content {
+		background: transparent;
+	}
+
+	.es-photo-item.tagging .es-photo-content {
+		background: #ccc;
+		.transition(background .3s ease);
+	}
+
+	.es-photo-item .es-photo-hint.tag-hint.alert {
+		margin: 0;
+		margin-top: -70px;
+		top: 0px;
+		border: none;
+		border-radius: 0px;
+		padding: 15px;
+		padding-left: 32px;
+
+		background: none;
+		color: #444;
+		text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+		font-weight: bold;
+		text-align: center;
+		font-size: 13px;
+
+		&:before {
+			top: 15px;
+			display: none;
+		}
+
+		> button {
+			// top: 9px;
+			// right: 15px;
+			padding: 3px 8px;
+			margin-left: 10px;
+			font-weight: bold;
+			position: relative;
+			top: auto;
+			left: auto;
+			font-size: 12px;
+		}
+	}
+
+	.es-photo-item .es-photo-image {
+		margin-top: 0px;
+	}
+
+	.es-photo-item.tagging .es-media-header {
+		display: none;
+	}
+}

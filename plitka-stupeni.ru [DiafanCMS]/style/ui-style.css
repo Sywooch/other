@@ -1,0 +1,45 @@
+.ui-menu {
+	width: 294px;
+	padding: 20px;
+	background: #364c5a;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px
+}
+.ui-menu li a { cursor: pointer; position: relative; }
+.ui-menu span.link { display: block; float: left; color: #84b2da; text-decoration: underline; }
+.ui-menu span.link:hover { text-decoration: none; }
+.ui-menu span.type { float: right; color: #ffd7ba; }
+.ui-menu .ui-autocomplete-explode {
+	margin: 10px 0;
+	border-bottom: 1px dotted #8092a0;
+}
+
+.cont h1 > span { color: #ffd7ba; }
+.cont h2 {
+	margin-bottom: 18px;
+	font-size: 21px;
+	color: #84b2da;
+	position: relative;
+	font-weight: normal;
+}
+
+.search_res_coll { margin: 10px 0; }
+.search_res_coll img { display: inline-block; float: left; margin-right: 15px; }
+.search_res_coll div.descr { display: inline-block; }
+.search_res_coll div.descr a { text-decoration: underline; }
+.search_res_coll div.descr a:hover { text-decoration: none; }
+.search_res_coll div.descr a.name { font-size: 16px; font-weight: bold; color: #84b2da; }
+.search_res_coll div.descr a.fabric { font-size: 11px; color: #fff; }
+.search_res_coll div.descr span.country { font-size: 11px; color: #738491; font-style: italic; }
+.search_res_coll div.descr span.size { font-size: 11px; color: #ffd7ba; }
+.search_res_coll div.descr span.ptype { font-size: 11px; color: #738491; font-style: italic; }
+
+.text_zag h2 {
+	margin-bottom: 0px;
+	font-size: 21px;
+	color: #84b2da;
+	position: relative;
+	font-weight: normal;
+}

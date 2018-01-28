@@ -1,0 +1,12 @@
+2014-07-24 23:50:35 -  - exec CUpdateClient::GetUpdatesList
+2014-07-24 23:50:35 -  - exec CUpdateClient::CollectRequestData
+2014-07-24 23:50:35 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=anekdot&CHHB=anekdot&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.3.13&stable=Y&bitm_main=14.5.0&bitm_bitrixcloud=14.0.4&bitm_clouds=14.5.0&bitm_compression=14.0.0&bitm_fileman=14.5.0&bitm_highloadblock=14.0.6&bitm_iblock=14.5.0&bitm_perfmon=14.0.1&bitm_search=14.5.0&bitm_seo=14.5.0&bitm_socialservices=14.0.4&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-07-24 23:50:35 -  - exec CUpdateClient::GetHTTPPage
+2014-07-24 23:50:38 -  - TIME GetUpdatesList(request) 2.36 sec
+2014-07-24 23:50:38 -  - exec CUpdateClient::ParseServerData
+2014-07-25 00:00:57 -  - exec CUpdateClient::GetUpdatesList
+2014-07-25 00:00:57 -  - exec CUpdateClient::CollectRequestData
+2014-07-25 00:00:57 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=anekdot&CHHB=anekdot&CSAB=127.0.0.1&CANGZIP=Y&CLIENT_PHPVER=5.3.13&stable=Y&bitm_main=14.5.0&bitm_bitrixcloud=14.0.4&bitm_clouds=14.5.0&bitm_compression=14.0.0&bitm_fileman=14.5.0&bitm_highloadblock=14.0.6&bitm_iblock=14.5.0&bitm_perfmon=14.0.1&bitm_search=14.5.0&bitm_seo=14.5.0&bitm_socialservices=14.0.4&bitl_en=&bitl_ru=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-07-25 00:00:57 -  - exec CUpdateClient::GetHTTPPage
+2014-07-25 00:00:59 -  - TIME GetUpdatesList(request) 1.721 sec
+2014-07-25 00:00:59 -  - exec CUpdateClient::ParseServerData
