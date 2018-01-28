@@ -1,1 +1,0 @@
-#x#a:2:{s:6:"output";s:0:"";s:6:"result";O:8:"stdClass":4:{s:2:"id";s:3:"103";s:6:"option";s:6:"joomla";s:6:"params";s:51:"{"mediaversion":"064922a8570bd99d995e4be7e9cda40f"}";s:7:"enabled";s:1:"1";}}
