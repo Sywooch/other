@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - RSEvents!Pro PDF plugin</name>
+	<author>RSJoomla!</author>
+	<creationDate>15.03.2012</creationDate>
+	<copyright>Copyright (C) 2012 www.rsjoomla.com. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>http://www.rsjoomla.com</authorUrl>
+	<version>1.2.0</version>
+	<description><![CDATA[RSEvents!Pro PDF Plugin allows you to attach the event ticket to the activation email in PDF format.]]></description>
+	<scriptfile>script.php</scriptfile>
+	
+	<files>
+		<filename plugin="rsepropdf">rsepropdf.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_system_rsepropdf.ini</language>
+	</languages>
+</extension>

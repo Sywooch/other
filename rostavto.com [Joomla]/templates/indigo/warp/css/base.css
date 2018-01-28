@@ -1,0 +1,481 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+
+
+/*
+
+ * Base Style Sheet - Reduces inconsistencies across all browsers
+
+ * Stripped down and improved collection of best practises
+
+ * To avoid redundant code it sets new default values instead of baseline defaults and re-resetting them later
+
+ * Thanks to HTML5 Boilerplate, Yahoo! User Interface (YUI) Library, Normalize.css
+
+ */
+
+
+
+
+
+/* Useful Snippets
+
+----------------------------------------------------------------------------------------------------*/
+
+
+
+/* Force vertical scrollbar, force body height to fit at least the browser window, prevent iOS text size adjust on device orientation change */
+
+html {
+
+	overflow-y: scroll;
+
+	min-height: 100%;
+
+	-webkit-text-size-adjust: 100%;
+
+}
+
+
+
+/* Create a stacking context to prevent z-index issues */
+
+body { position: relative; 
+background: url("/magazin/catalog/view/theme/default/image/bg_img.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+/* Remove outline when clicking links: people.opera.com/patrickl/experiments/keyboard/test */
+
+a:hover, a:active { outline: none; }
+
+
+
+/* Removes scrollbar in IE */
+
+textarea { overflow: auto; }
+
+
+
+/* Remove background from selected images */
+
+img::selection { background: transparent; }
+
+img::-moz-selection { background: transparent; }
+
+
+
+/* Remove borders */
+
+img, fieldset,
+iframe { border: 0; }
+
+.adsmanager_subcats fieldset {
+	border: 1px solid #CCCCCC;
+	color: #cccccc;
+}
+.share {
+    border: 1px dotted #CCCCCC;
+    color: #CCCCCC;
+}
+
+/* Consistency of cursor style, Corrects inability to style clickable 'input' types in iOS */
+
+button,
+
+input[type="button"],
+
+input[type="reset"],
+
+input[type="submit"] {
+
+	cursor: pointer;
+
+	-webkit-appearance: button;
+
+}
+
+
+
+button[disabled],
+
+input[disabled] { cursor: default; }
+
+
+
+/* Removes inner padding and border in FF3+ */
+
+button::-moz-focus-inner,
+
+input::-moz-focus-inner {
+
+    border: 0;
+
+    padding: 0;
+
+}
+
+
+
+
+
+/* HTML5 display definitions
+
+----------------------------------------------------------------------------------------------------*/
+
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
+
+audio, canvas, video { display: inline-block; }
+
+audio:not([controls]) { display: none; }
+
+[hidden] { display: none; }
+
+
+
+
+
+/* New Base Values
+
+----------------------------------------------------------------------------------------------------*/
+
+
+
+body { margin: 0; }
+
+#wrapper_body {
+	overflow: hidden;
+	min-width: 980px;
+	width: 100%;
+}
+
+
+
+/* Block Space */
+
+p, hr,
+
+ul, ol, dl,
+
+blockquote, pre,
+
+figure { margin: 15px 0; }
+
+.content p{
+	 text-indent: 25px;
+}
+
+
+/* h1, h2, h3, h4, h5, h6 { margin: 25px 0 15px 0; } */
+
+
+
+/* Lists */
+
+ul, ol, dl { padding-left: 30px }
+
+dd { margin-left: 40px; }
+
+
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+
+
+/* h1 { font-size: 36px; line-height: 36px; } */
+
+h2 { border-bottom: 1px solid #CCCCCC; color: #A74949; font-size: 19px; padding-bottom: 10px;}
+
+h3 { font-size: 18px; line-height: 18px; }
+
+h4, h5, h6 {  }
+
+
+
+/* Links */
+
+a, a:hover { text-decoration: underline; }
+
+
+
+/* Text-level Semantics */
+
+b, strong { font-weight: bold; font-family: Verdana;  font-size: 12px;  }
+
+#system strong { font-weight: bold; font-family: Verdana;  font-size: 15px;  }
+
+
+
+small { font-size: 11px; }
+
+
+
+ins { text-decoration: none; }
+
+del { text-decoration: line-through; }
+
+
+
+abbr[title], dfn[title] {
+
+	border-bottom: 1px dotted;
+
+	cursor: help;
+
+}
+
+dfn[title] { font-style: normal; }
+
+
+
+/* Horizontal Rule */
+
+hr {
+
+	display: block;
+
+	height: 1px;
+
+	padding: 0;
+
+	border: 0;
+
+	border-top: 1px solid;
+
+}
+
+
+
+/* Quotes */
+
+q, blockquote {
+
+	quotes: '\201C' '\201D' '\2018' '\2019';
+
+	font-family: "Times New Roman", Times, serif;
+
+	font-style: italic;
+
+}
+
+	
+
+blockquote {
+
+	padding: 0 20px;
+
+	font-size: 16px;
+
+	line-height: 22px;
+
+}
+
+
+
+blockquote:before { content: '\201C'; }
+
+blockquote:after { content: '\201D'; }
+
+
+
+/* Code */
+
+code, pre { font-family: "Courier New", Courier, monospace; }
+
+
+
+code { word-spacing: -2px; }
+
+
+
+pre {
+
+	padding: 10px;
+
+	font-size: 12px;
+
+	line-height: 18px;
+
+	white-space: pre-wrap;
+
+	word-wrap: break-word;
+
+}
+
+
+
+/* Tables */
+
+table {
+
+	border-collapse: collapse;
+
+	border-spacing: 0;
+
+}
+
+#tbl td{
+
+	padding: 10px;
+
+}
+
+
+
+th, td { padding: 1px; }
+
+.deepest tr:hover { background-color: #fffacd; }
+
+.wraphead {	width: 930px; margin: auto; }
+
+/* Forms */
+
+input, select { vertical-align: middle; }
+
+
+
+select, input, textarea, button { font: 12px Arial, sans-serif; }
+
+
+
+form, textarea { margin: 0; }
+
+input { padding: 2px; }
+
+
+
+textarea,
+
+input[type='text'],
+
+input[type='password'],
+
+select { padding: 2px; }
+
+select { line-height: 19px; } /* Needed for Safari */
+
+
+
+button,input[type='button'],input[type='submit'],
+
+input[type="reset"] { 	
+
+	padding: 6px 10px;
+
+	border: 1px solid #ddd;
+
+	background: #EEE;
+
+	border-radius: 4px;
+
+	color: #444;
+
+	margin-top: 0px;	  }
+
+	
+
+button,input[type='submit']:hover { 	
+
+	border-color: #a74949;
+
+	background: #a74949;
+
+	color: #fff; }
+
+
+
+button { 	
+
+	padding: 6px 10px;
+
+	border: 1px solid #ddd;
+
+	background: #EEE;
+
+	border-radius: 4px;
+
+	color: #444;
+
+	margin-top: 0px;	  }
+
+	
+
+button:hover { 	
+
+	border-color: #a74949;
+
+	background: #a74949;
+
+	color: #fff; }
+    .post-form {
+        display: block;
+        margin: 0 35px 0 0;
+    }
+    .post-form legend {
+        font-size: 22px;
+    }
+    .post-form input[type="text"] {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .post-form input[type="submit"] {
+        cursor: pointer;
+    }
+    .post-form textarea {
+        border: 1px solid #999;
+        height: 200px;
+        width: 100%;
+        padding: 5px;
+        resize: vertical;
+    }
+    .post-form li {
+        clear: both;
+        list-style: none outside none !important;
+        margin: 10px 0;
+    }
+    .post-form label {
+        float: left;
+        width: 200px;
+    }
+   .post-form p.messages {
+       border: 1px dashed #999;
+        border-radius: 5px;
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 10px 0;
+        padding: 10px 20px;
+    }
+    .post-form p.errors {
+       border: 1px dashed #ffbbb1;
+        color: #d90000;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 10px 0 10px 20px;
+        padding: 10px 20px;
+    }
+   .post-form .required {
+        color: #d90000;
+        font-weight: bold;
+    }
+    .post-form .error {
+        color: #d90000;
+    }
+    .post-form input[type="text"] {
+        border: 1px solid #999;
+        font-size: 16px;
+        padding: 3px 5px;
+    }
+
+    .post-form input[type="submit"] {
+        background: none repeat scroll 0 0 #a74949;
+        border: 1px solid #a74949;
+        color: #fff;
+        float: right;
+        font-size: 16px;
+        margin: 0 -13px 0 0;
+        padding: 5px 35px;
+    }

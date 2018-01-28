@@ -1,0 +1,2762 @@
+/**
+
+ * @author ( Angie Radtke )
+ * @package Joomla
+ * @subpackage Accessible-Template-Beez
+ * @copyright Copyright (C) 2005 - 2009 Open Source Matters. All rights reserved.
+ * @license GNU/GPL, see LICENSE.php
+ * Joomla! is free software. This version may have been modified pursuant to the
+ * GNU General Public License, and as distributed it includes or is derivative
+ * of works licensed under the GNU General Public License or other free or open
+ * source software licenses. See COPYRIGHT.php for copyright notices and
+ * details.
+ */
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+html {
+    background: #ffffff;
+    font-size: 100.01%;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: #f3f5f6;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+
+    position: relative;
+    width: 100%;
+    line-height: 1.5em;
+    background: #fff;
+}
+
+#wrapper2 .item-page h2{
+  font-size: 24.878px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  text-transform: uppercase;
+ /* -moz-transform: matrix( 1.46508662984582,0,0,1.4647099762561,0,0);
+  -webkit-transform: matrix( 1.46508662984582,0,0,1.4647099762561,0,0);
+  -ms-transform: matrix( 1.46508662984582,0,0,1.4647099762561,0,0);
+	*/
+	padding-bottom:0px;
+	margin-bottom:0px;
+}
+
+#wrapper2 .item-page .head{
+font-size: 16px;
+
+  font-family: "Ubuntu",sans-serif;
+  color: rgba( 153, 153, 153, 0.702 );
+font-style:normal !important;
+}
+
+#wrapper2 .item-page p{
+  font-size: 16px;
+  font-family: "calibri";
+  color: rgb( 51, 51, 51 );
+  font-style: italic;
+  line-height:16px;
+	
+}
+
+
+.vmgrouplistproizv{
+display:inline-block;	
+  float: right;
+  width:666px;
+}
+
+
+.vmgrouplistproizv .vmmanufacturerlistproizv > div{
+width:148px;
+height:148px;
+padding:5px;
+border:1px #e5e5e5 solid;	
+margin-top:-1px;
+margin-left:-1px;
+text-align:center;
+position:relative;
+}
+
+.vmgrouplistproizv .vmmanufacturerlistproizv > div a  img{
+max-width:100%;	
+}
+
+.vmgrouplistproizv .vmmanufacturerlistproizv > div a{
+	
+text-decoration:none;
+}
+
+
+.item_partner > div{
+width:148px;
+height:148px;
+padding:5px;
+border:1px #e5e5e5 solid;	
+margin-top:-1px;
+margin-left:-1px;
+text-align:center;
+}
+
+.item_partner > div a{
+text-decoration:none;
+}
+
+
+.vmgrouplistproizv .vmmanufacturerlistproizv > div > div{
+margin-top:10px;	
+}
+
+.item_partner > div > div{
+margin-top:10px;	
+	
+}
+
+.vmgrouplistproizv .name{
+  margin-top: 5px;
+  width: 131px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgb( 43, 43, 42 );
+  font-weight: bold;
+  line-height: 16px;
+  position: absolute;
+  left: 7px;
+  top: 98px;
+
+}
+
+
+.left_menu_prouzv{
+  position: absolute;
+  width: 219px;
+  height: auto;
+  background-color: #f9f9f9;
+  border-left: 12px #4fccf3 solid;
+  top: 341px;
+}
+
+
+.vmgrouplistproizv .name_cat{
+display:block;
+width:100%;
+height:30px;	
+float:left;
+margin-top:60px;
+ margin-bottom:20px;
+  font-size: 20px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgb( 43, 43, 42 );
+  font-weight: bold;
+
+}
+
+
+.left_menu_prouzv .head{
+  display: block;
+  background-image: url(../images/icon1.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  font-size: 14.926px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgb( 246, 185, 31 );
+  font-weight: bold;
+  text-transform: uppercase;
+  background-size: 26px;
+  line-height: 20px;
+  margin-top: 22px;
+  padding-left: 42px;
+  margin-left: 14px;
+	
+}
+
+.left_menu_prouzv .cat_name{
+  display: block;
+  width: 156px;
+  border-top: 2px #e7e7e7 dotted;
+  font-size: 14.926px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+
+  margin-top: 14px;
+  margin-left: 11px;
+  line-height: 17px;
+  background-image: url(../images/icon2.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: left center;
+  padding-left: 33px;
+  padding-top: 11px;
+
+}
+
+.manufacturer-details-view{
+	  max-width: 645px;
+  margin-right: 15px;
+  margin-top: 76px;
+  float: right;
+}
+
+.manufacturer-details-view h1{
+  font-size: 24.878px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  text-transform: uppercase;
+	margin-bottom:20px;
+}
+
+.manufacturer-description a{
+
+
+}
+
+.manufacturer-details-view .manufact_detail{
+	display:inline-block;
+width:100%;
+  padding-left: 138px;
+  
+  font-size: 17px;
+  font-family: "calibri";
+  color: rgb( 77, 203, 243 );
+  font-style: italic;
+  text-decoration:none;
+}
+
+.manufacturer-details-view .manufacturer-image{
+float:left;
+margin-right:20px;
+margin-bottom:10px;	
+}
+
+.manufacturer-details-view .manufacturer-description{
+  font-size: 17px;
+  font-family: "calibri";
+  color: rgb( 51, 51, 51 );
+  font-style: italic;
+	float:right;
+	position:relative;
+	width:500px;
+}
+
+.manufacturer-details-view .manufacturer-image img{
+margin:0px;	
+}
+
+.manufacturer-details-view .spacer{
+padding:0px;	
+}
+
+.left_menu_prouzv ul{
+margin-top:20px;	
+}
+
+.left_menu_prouzv .manfactirer_name{
+  display: block;
+  width: 140px;
+  font-size: 14px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgb( 133, 133, 133 );
+  line-height: 16px;
+  padding-left: 37px;
+	margin-bottom:10px;
+}
+
+
+
+
+.customresponseshd{
+	  float: right;
+  width: 600px;
+  margin-right: 42px;
+  margin-top:100px;
+}
+
+.customresponseshd .head{
+  font-size: 34px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  -moz-transform: matrix( 1.46508662984582,0,0,1.4647099762561,0,0);
+  -webkit-transform: matrix( 1.46508662984582,0,0,1.4647099762561,0,0);
+  -ms-transform: matrix( 1.46508662984582,0,0,1.4647099762561,0,0);
+font-weight:600;
+}
+
+
+.customresponseshd .text{
+  font-size: 12px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgb( 102, 102, 102 );
+  line-height: 10px;
+  text-align: left;
+
+}
+
+
+.vmgrouplistproizv .block1{
+	width:100%;
+	display:block;
+}
+
+.mod_sef th{
+display:none;	
+}
+
+.mod_sef td{
+border-width:0px !important;	
+}
+
+.mod_sef_tr{
+border-color:transparent;	
+}
+
+.mod_sef_tr{
+border-top-width:0px;
+border-bottom-width:0px;	
+}
+
+.mod_sef_table{
+}
+
+.mod_sef{
+float:right;
+width:600px;	
+  margin-right: 42px;
+  position:relative;
+	height:400px;
+}
+
+.mod_sef_table #mod_simpleemailform_field1_1{
+  border-width: 1px;
+  border-color: rgb( 160, 160, 160 );
+  border-style: solid;
+  border-radius: 8px;
+  background-color: rgb( 255, 255, 255 );
+  opacity: 0.8;
+  position: absolute;
+  width: 175px;
+  height: 41px;
+  
+  
+  font-size: 18px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgba( 51, 51, 51, 0.502 );
+  padding-left:15px;
+  
+  position:absolute;
+  top:0px;
+  right:0px;
+
+}
+
+.mod_sef_table #mod_simpleemailform_field2_1{
+	  border-width: 1px;
+  border-color: rgb( 160, 160, 160 );
+  border-style: solid;
+  border-radius: 8px;
+  background-color: rgb( 255, 255, 255 );
+  opacity: 0.8;
+  position: absolute;
+  width: 175px;
+  height: 41px;
+  
+    font-size: 18px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgba( 51, 51, 51, 0.502 );
+  padding-left:15px;
+position:absolute;
+  top:0px;
+  left:205px;
+}
+
+.mod_sef_table #mod_simpleemailform_field3_1{
+  border-width: 1px;
+  border-color: rgb( 160, 160, 160 );
+  border-style: solid;
+  border-radius: 8px;
+  background-color: rgb( 255, 255, 255 );
+  opacity: 0.8;
+  position: absolute;
+  width: 175px;
+  height: 41px;	
+  
+    font-size: 18px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgba( 51, 51, 51, 0.502 );
+
+   padding-left:15px;
+   position:absolute;
+  top:0px;
+  left:0px;
+}
+
+
+.mod_sef_table #mod_simpleemailform_field4_1{
+width:575px;
+height:90px;
+  border-width: 1px;
+  border-color: rgb( 160, 160, 160 );
+  border-style: solid;
+  border-radius: 8px;
+  background-color: rgb( 255, 255, 255 );
+  opacity: 0.8;
+	
+	
+  font-size: 18px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgba( 51, 51, 51, 0.502 );
+   padding-left:15px;
+   
+position:absolute;
+left:0px;
+top:61px;   
+   
+}
+
+.mod_sef_table #mod_simpleemailform_reset_1{
+display:none;	
+}
+
+.mod_sef_table #mod_simpleemailform_submit_1{
+  font-size: 16px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgb( 255, 255, 255 );
+  border-radius: 20px;
+  background-color: rgb( 23, 115, 204 );
+  width: 119px;
+  height: 41px;
+
+border-width:0px;
+
+position:absolute;
+left:0px;
+top:183px;
+	
+}
+
+
+
+/* ###################### general ###################### */
+#all {
+    margin: 0 auto;
+    max-width: 970px;
+    padding: 0;
+    text-align: left;
+    font-size: 0.8em
+}
+
+#header {
+    display: block !important;
+    position: relative;
+    padding: 0 0 0 0;
+    background-color:transparent;
+}
+
+#header ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: block;
+    margin: 0 0 1px 0;
+    text-align: right;
+    list-style-type: none;
+    padding: 10px 0
+}
+
+#header ul.menu li.active{
+	  border-bottom: 3px #fff solid;
+}
+
+#header ul.menu li.active a{
+	color:rgb( 255, 255, 255 );
+	text-decoration:none;
+}
+
+#header ul.menu li a{
+	color:rgb( 255, 255, 255 );
+	text-decoration:none;
+}
+
+body#shadow{
+background-size:1555px;	
+}
+
+#header .lng{
+	  border-radius: 4px;
+  background-color: rgb( 255, 255, 255 );
+  position: absolute;
+  right: 0px;
+  top: 31px;
+  width: 161px;
+  height: 27px;
+}
+
+
+#back {
+    margin: 0;
+    padding: 0;
+}
+
+#contentarea,
+#contentarea2 {
+    position: relative;
+    overflow: hidden;
+    padding: 0 0px !important;
+    margin: 0;
+
+}
+
+#wrapper {
+    width: 53%;
+    float: left;
+    position: relative;
+
+}
+
+#wrapper2 {
+    width: 100%;
+    float: left;
+    position: relative;
+    padding-bottom: 20px;
+
+}
+
+#system-message-container{
+display:none;	
+}
+
+#wrapper2 .item-page {
+    max-width: 645px;
+margin-right:15px;
+  margin-top: 76px;
+
+	float:right;
+}
+
+.head1{
+  font-size: 30.936px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 255, 255, 255 );
+  font-weight: bold;
+  line-height: 1.528;
+  text-align: center;
+  -moz-transform: matrix( 0.94248249386739,0,0,0.94224019460171,0,0);
+  -webkit-transform: matrix( 0.94248249386739,0,0,0.94224019460171,0,0);
+  -ms-transform: matrix( 0.94248249386739,0,0,0.94224019460171,0,0);
+display:block;
+text-align:center;
+width:100%;
+margin-top:143px;
+}
+
+.div_line{
+	width:100%;
+	text-align:center;
+	display:block;
+	height:2px;
+	margin-top:3px;
+}
+
+.div_line .line_white1{
+	width:102px;
+	height:100%;
+	background-color:#fff;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.sub_head1{
+	  font-size: 25px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 255, 255, 255 );
+  font-weight: normal;
+  line-height: 1.528;
+  text-align: center;
+  -moz-transform: matrix( 0.94248249386739,0,0,0.94224019460171,0,0);
+  -webkit-transform: matrix( 0.94248249386739,0,0,0.94224019460171,0,0);
+  -ms-transform: matrix( 0.94248249386739,0,0,0.94224019460171,0,0);
+display:block;
+text-align:center;
+width:100%;
+
+}
+
+#main {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: relative;
+
+}
+
+#main .div_slider{
+width:100%;
+height:441px;
+text-align:center;	
+}
+
+#main .head1{
+	
+  font-size: 16px;
+  line-height:20px;
+  font-family: 'Ubuntu', sans-serif;
+  color: rgba( 255, 255, 254, 0.988 );
+  font-weight: bold;
+  text-align: center;
+  -moz-transform: matrix( 3.058354711807,0,0,3.05894049725336,0,0);
+  -webkit-transform: matrix( 3.058354711807,0,0,3.05894049725336,0,0);
+  -ms-transform: matrix( 3.058354711807,0,0,3.05894049725336,0,0);
+height:50px;
+margin-top:115px;
+width:100%;
+text-align:center;
+display:block;
+
+}
+
+
+#main .div_button{
+	width:100%;
+	height:180px;
+	text-align:center;
+}
+
+#main .div_button .button{
+margin-left:auto;
+margin-right:auto;
+
+  font-size: 20px;
+  line-height:156px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 199, 158, 22 );
+
+margin-top:20px;
+ background-image:url(../images/button1.png);
+ background-position:center center;
+ background-repeat:no-repeat;
+  width: 300px;
+  height: 150px;
+display:block;
+background-color:transparent;
+border:0px;
+	
+}
+
+#main .div_button span{
+  font-size: 17px;
+  font-family: "calibri";
+  color: rgb( 255, 255, 255 );
+  font-style: italic;
+  text-align: center;
+ /* -moz-transform: matrix( 0.80984318675676,0,0,0.81005095765243,0,0);
+  -webkit-transform: matrix( 0.80984318675676,0,0,0.81005095765243,0,0);
+  -ms-transform: matrix( 0.80984318675676,0,0,0.81005095765243,0,0);*/
+width:100%;
+text-align:center;
+margin-top:-26px;
+display:block;
+line-height:18px;
+}
+
+
+#main .div_info{
+width:100%;
+height:502px;
+margin-top:45px;
+position:relative;
+}
+
+#main .line{
+height:3px;
+width:155px;
+left:0px;
+top:0px;
+background-color:#5bcff4;
+}
+
+
+#main .txt1{
+
+  font-size: 26.721px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 17, 17, 17 );
+
+  /*-moz-transform: matrix( 1.09111802681583,0,0,1.09132701534744,0,0);
+  -webkit-transform: matrix( 1.09111802681583,0,0,1.09132701534744,0,0);
+  -ms-transform: matrix( 1.09111802681583,0,0,1.09132701534744,0,0);*/
+  position: absolute;
+left:0px;
+top:30px;
+display:block;
+font-weight:600;
+line-height:33px;
+}
+
+#main ul{
+position:absolute;
+left:33px;
+top:226px;	
+padding:0px;
+}
+
+#main ul li{
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  line-height: 1.667;
+ /* -moz-transform: matrix( 0.80968616106701,0,0,0.80926481458418,0,0);
+  -webkit-transform: matrix( 0.80968616106701,0,0,0.80926481458418,0,0);
+  -ms-transform: matrix( 0.80968616106701,0,0,0.80926481458418,0,0);*/
+  font-weight:500;
+  list-style-type:none;
+  background-image:url(../images/marker.png);
+  background-repeat:no-repeat;
+  background-position:left center;
+  padding-left:30px;
+
+}
+
+#main .txt2{
+  font-size: 20.624px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  position: absolute;
+  left: 477px;
+  top: 258px;
+
+}
+
+#main .div_info .txt3{
+   font-size: 15px;
+  font-family: "calibri";
+  color: rgb( 102, 102, 102 );
+  font-style: italic;
+  position: absolute;
+  left: 478px;
+  top: 304px;
+  line-height: 18px;
+}
+
+#main .div_info .info2{
+border:2px #4fccf3 solid;
+width:966px;
+margin-top:372px;
+height:138px;
+position:relative;
+}
+
+
+#main .div_info .info2 .img1{
+background-image:url(../images/img1.png);
+background-repeat:no-repeat;
+background-position:center center;
+width:56px;
+height:146px;
+position:absolute;
+top:-4px;
+left:445px;
+}
+
+#main .div_brands{
+position:relative;	
+margin-top:50px;
+}
+
+#main .div_brands .prodict_slide{
+width:100%;
+position:absolute;
+height:550px;
+text-align:center;	
+background-image:url(../images/product_slide.png);
+background-repeat:no-repeat;
+background-position:center center;
+top:260px;
+}
+
+.prodict_slide{
+width:100%;
+position:absolute;
+height:550px;
+text-align:center;	
+background-image:url(../images/product_slide.png);
+background-repeat:no-repeat;
+background-position:center center;
+top:2016px;
+left:0px;
+}
+
+.prodict_slide .product_content{
+width:1136px;
+height:430px;
+margin-left:auto;
+margin-right:auto;
+margin-top:64px;
+background-color:transparent;
+
+}
+
+.prodict_slide .product_content .company{
+position:relative;
+width:100%;
+height:100%;	
+}
+
+.prodict_slide .product_content .company2{
+display:none;
+}
+
+.prodict_slide .product_content .company3{
+display:none;
+}
+
+.prodict_slide .product_content .company4{
+display:none;
+}
+
+.prodict_slide .product_content .company a.full_catalog{
+  position: absolute;
+  bottom: 8px;
+  border-radius: 14px;
+  background-color: rgb( 109, 72, 54 );
+  position: absolute;
+  width: 141px;
+  height: 29px;
+  font-size: 13px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 255, 255, 255 );
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 28px;
+  display: block;
+  text-decoration: none;
+  left: 50%;
+  margin-left: -70px;
+  z-index: 9999999999999999;
+}
+
+
+
+.prodict_slide .product_content .company .bt-cs .next, .prodict_slide .product_content .company  .bt-cs .prev{
+display:block;	
+}
+
+.prodict_slide .product_content .company .bt-cs a.prev{
+	background-image:url(../images/left2.png) !important;
+	width:53px !important;
+	margin-top:70px !important;
+	
+}
+
+.prodict_slide .product_content .company .bt-cs a.next{
+	background-image:url(../images/right2.png) !important;
+	width:53px !important;
+	margin-top:70px !important;
+}
+
+
+.prodict_slide .product_content .company .bt-cs .bt-inner .bt-title{
+	
+  font-size: 18px;
+    font-family: "calibri";
+  color: rgba( 109, 72, 54, 0.988 );
+  font-style: italic;
+  text-align: center;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+
+  text-transform:none !important;
+}
+
+
+.prodict_slide .product_content .company .bt-introtext{
+	  font-size: 15px;
+    font-family: "calibri";
+  color: rgba( 109, 72, 54, 0.988 );
+  font-style: italic;
+  text-align: center;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+margin-top:10px !important;
+  text-transform:none !important;
+  line-height:20px !important;
+}
+
+
+
+
+
+
+
+
+.prodict_slide .product_content .company .head{
+  font-size: 30.857px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 109, 72, 54 );
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  position: absolute;
+  left: 18px;
+  top: 0px;
+
+}
+
+.prodict_slide .product_content .company .text{
+	
+  font-size: 17px;
+  font-family: "calibri";
+  color: rgb( 109, 72, 54 );
+  font-style: italic;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  position: absolute;
+  left: 40px;
+  top: 30px;
+width:700px;
+text-align:left;
+}
+
+.prodict_slide .product_content .company .bt-category{
+display:none;	
+}
+
+.prodict_slide .product_content .company .bt_handles{
+display:none;	
+}
+
+
+
+#main .div_brands .brand{
+position:absolute;
+width:438px;
+height:189px;	
+background-color:transparent;
+
+}
+
+#main .div_brands .brand.brand1{
+top:30px;
+left:10px;
+}
+#main .div_brands .brand.brand2{
+top:30px;
+right:10px;
+}
+#main .div_brands .brand.brand3{
+bottom:0px;
+left:10px;
+}
+#main .div_brands .brand.brand4{
+bottom:0px;
+right:10px;
+}
+
+/*---------------------------------*/
+#main .div_brands .brand.brand1 .parent{
+width:100%;
+height:100%;
+position:relative;	
+}
+
+#main .div_brands .brand.brand1 .parent .logo{
+position:absolute;
+width:100px;
+height:100px;
+top:0px;
+left:0px;
+background-image:url(/images/brands/brand1.png);
+background-repeat:no-repeat;
+background-position:center center;
+
+}
+
+#main .div_brands .brand.brand1 .parent .head{
+display:block;
+position:absolute;
+top:0px;
+left:100px;
+  font-size: 24px;
+  font-family: "calibri";
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+	
+}
+
+
+#main .div_brands .brand.brand1 .parent .description{
+
+display:block;
+position:absolute;
+top:30px;
+left:95px;
+
+  font-size: 17px;
+  font-family: "calibri";
+  color: rgb( 51, 51, 51 );
+  font-style: italic;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+text-align:left;
+line-height:20px;
+}
+
+#main .div_brands .brand.brand1 .parent .line{
+  position: absolute;
+  width: 44px;
+  height: 2px;
+  top: 109px;
+  left: 125px;
+  background-color:#a1e4f9;
+}
+
+#main .div_brands .brand.brand1 .parent a{
+position:absolute;
+top: 97px;
+  left: 168px;
+  font-size: 17px;
+   font-family: "calibri";
+  color: rgb( 77, 203, 243 );
+  font-style: italic;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+text-decoration:none;
+}
+
+#main .div_brands .brand.brand1 .parent .btn1{
+width:25px;
+height:25px;
+position:absolute;
+top:150px;
+left:121px;
+background-image:url(/images/brands/button_products.png);
+background-position:center center;
+background-repeat:no-repeat;	
+cursor:pointer;
+}
+#main .div_brands .brand .parent .btn1{
+cursor:pointer;
+	
+}
+
+
+#main .div_brands .brand.brand1 .parent .link1{
+position:absolute;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top:145px;
+left:135px;	
+cursor:pointer;
+}
+#main .div_brands .brand .parent .link1{
+cursor:pointer;
+	
+}
+
+
+#main .div_brands .brand.brand1 .parent .link2{
+position:absolute;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcbcbc;
+  font-weight: 500;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top: 159px;
+  left: 127px;
+cursor:pointer;
+	
+}
+
+
+#main .div_brands .brand .parent .link2{
+cursor:pointer;
+	
+}
+
+
+#main .div_brands .brand.brand1 .parent .line2{
+height:33px;
+width:2px;
+position:absolute;
+  top: 147px;
+  left: 275px;
+background-color:#ebebeb;	
+}
+
+
+#main .div_brands .brand.brand1 .parent .btn2{
+width:25px;
+height:25px;
+position:absolute;
+top:150px;
+left:289px;
+background-image:url(/images/brands/button_catalog.png);
+background-position:center center;
+background-repeat:no-repeat;	
+}
+
+
+#main .div_brands .brand.brand1 .parent .link3{
+position:absolute;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top:145px;
+left:267px;	
+width:300px;
+text-align:left;
+}
+
+#main .div_brands .brand.brand1 .parent .link4{
+position:absolute;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcbcbc;
+  font-weight: 500;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top: 159px;
+  left: 268px;
+width:300px;	
+text-align:left;
+}
+/*---------------------------------*/
+
+/*---------------------------------*/
+#main .div_brands .brand.brand2 .parent{
+width:100%;
+height:100%;
+position:relative;	
+}
+
+#main .div_brands .brand.brand2 .parent .logo{
+position:absolute;
+width:100px;
+height:100px;
+top:0px;
+left:0px;
+background-image:url(/images/brands/brand2.png);
+background-repeat:no-repeat;
+background-position:center center;
+
+}
+
+#main .div_brands .brand.brand2 .parent .head{
+display:block;
+position:absolute;
+top:0px;
+left:100px;
+  font-size: 24px;
+  font-family: "calibri";
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+	
+}
+
+
+#main .div_brands .brand.brand2 .parent .description{
+
+display:block;
+position:absolute;
+top:30px;
+left:95px;
+
+  font-size: 17px;
+  font-family: "calibri";
+  color: rgb( 51, 51, 51 );
+  font-style: italic;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+text-align:left;
+line-height:20px;
+}
+
+#main .div_brands .brand.brand2 .parent .line{
+  position: absolute;
+  width: 44px;
+  height: 2px;
+  top: 109px;
+  left: 125px;
+  background-color:#a1e4f9;
+}
+
+#main .div_brands .brand.brand2 .parent a{
+position:absolute;
+top: 97px;
+  left: 168px;
+  font-size: 17px;
+   font-family: "calibri";
+  color: rgb( 77, 203, 243 );
+  font-style: italic;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+text-decoration:none;
+}
+
+#main .div_brands .brand.brand2 .parent .btn1{
+width:25px;
+height:25px;
+position:absolute;
+top:150px;
+left:121px;
+background-image:url(/images/brands/button_products.png);
+background-position:center center;
+background-repeat:no-repeat;	
+}
+
+
+#main .div_brands .brand.brand2 .parent .link1{
+position:absolute;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top:145px;
+left:135px;	
+}
+
+#main .div_brands .brand.brand2 .parent .link2{
+position:absolute;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcbcbc;
+  font-weight: 500;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top: 159px;
+  left: 127px;
+	
+}
+
+
+#main .div_brands .brand.brand2 .parent .line2{
+height:33px;
+width:2px;
+position:absolute;
+  top: 147px;
+  left: 275px;
+background-color:#ebebeb;	
+}
+
+
+#main .div_brands .brand.brand2 .parent .btn2{
+width:25px;
+height:25px;
+position:absolute;
+top:150px;
+left:289px;
+background-image:url(/images/brands/button_catalog.png);
+background-position:center center;
+background-repeat:no-repeat;	
+}
+
+
+#main .div_brands .brand.brand2 .parent .link3{
+position:absolute;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top:145px;
+left:267px;	
+width:300px;
+text-align:left;
+}
+
+#main .div_brands .brand.brand2 .parent .link4{
+position:absolute;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcbcbc;
+  font-weight: 500;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top: 159px;
+  left: 268px;
+width:300px;	
+text-align:left;
+}
+/*---------------------------------*/
+
+/*---------------------------------*/
+#main .div_brands .brand.brand3 .parent{
+width:100%;
+height:100%;
+position:relative;	
+}
+
+#main .div_brands .brand.brand3 .parent .logo{
+position:absolute;
+width:100px;
+height:100px;
+top:0px;
+left:0px;
+background-image:url(/images/brands/brand3.png);
+background-repeat:no-repeat;
+background-position:center center;
+
+}
+
+#main .div_brands .brand.brand3 .parent .head{
+display:block;
+position:absolute;
+top:0px;
+left:100px;
+  font-size: 24px;
+  font-family: "calibri";
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+	
+}
+
+
+#main .div_brands .brand.brand3 .parent .description{
+
+display:block;
+position:absolute;
+top:30px;
+left:95px;
+
+  font-size: 17px;
+  font-family: "calibri";
+  color: rgb( 51, 51, 51 );
+  font-style: italic;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+text-align:left;
+line-height:20px;
+}
+
+#main .div_brands .brand.brand3 .parent .line{
+  position: absolute;
+  width: 44px;
+  height: 2px;
+  top: 109px;
+  left: 125px;
+  background-color:#a1e4f9;
+}
+
+#main .div_brands .brand.brand3 .parent a{
+position:absolute;
+top: 97px;
+  left: 168px;
+  font-size: 17px;
+   font-family: "calibri";
+  color: rgb( 77, 203, 243 );
+  font-style: italic;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+text-decoration:none;
+}
+
+#main .div_brands .brand.brand3 .parent .btn1{
+width:25px;
+height:25px;
+position:absolute;
+top:150px;
+left:121px;
+background-image:url(/images/brands/button_products.png);
+background-position:center center;
+background-repeat:no-repeat;	
+}
+
+
+#main .div_brands .brand.brand3 .parent .link1{
+position:absolute;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top:145px;
+left:135px;	
+}
+
+#main .div_brands .brand.brand3 .parent .link2{
+position:absolute;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcbcbc;
+  font-weight: 500;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top: 159px;
+  left: 127px;
+	
+}
+
+
+#main .div_brands .brand.brand3 .parent .line2{
+height:33px;
+width:2px;
+position:absolute;
+  top: 147px;
+  left: 275px;
+background-color:#ebebeb;	
+}
+
+
+#main .div_brands .brand.brand3 .parent .btn2{
+width:25px;
+height:25px;
+position:absolute;
+top:150px;
+left:289px;
+background-image:url(/images/brands/button_catalog.png);
+background-position:center center;
+background-repeat:no-repeat;	
+}
+
+
+#main .div_brands .brand.brand3 .parent .link3{
+position:absolute;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top:145px;
+left:267px;	
+width:300px;
+text-align:left;
+}
+
+#main .div_brands .brand.brand3 .parent .link4{
+position:absolute;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcbcbc;
+  font-weight: 500;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top: 159px;
+  left: 268px;
+width:300px;	
+text-align:left;
+}
+/*---------------------------------*/
+/*---------------------------------*/
+#main .div_brands .brand.brand4 .parent{
+width:100%;
+height:100%;
+position:relative;	
+}
+
+#main .div_brands .brand.brand4 .parent .logo{
+position:absolute;
+width:100px;
+height:100px;
+top:0px;
+left:0px;
+background-image:url(/images/brands/brand4.png);
+background-repeat:no-repeat;
+background-position:center center;
+
+}
+
+#main .div_brands .brand.brand4 .parent .head{
+display:block;
+position:absolute;
+top:0px;
+left:100px;
+  font-size: 24px;
+  font-family: "calibri";
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+	
+}
+
+
+#main .div_brands .brand.brand4 .parent .description{
+
+display:block;
+position:absolute;
+top:30px;
+left:95px;
+
+  font-size: 17px;
+  font-family: "calibri";
+  color: rgb( 51, 51, 51 );
+  font-style: italic;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+text-align:left;
+line-height:20px;
+}
+
+#main .div_brands .brand.brand4 .parent .line{
+  position: absolute;
+  width: 44px;
+  height: 2px;
+  top: 109px;
+  left: 125px;
+  background-color:#a1e4f9;
+}
+
+#main .div_brands .brand.brand4 .parent a{
+position:absolute;
+top: 97px;
+  left: 168px;
+  font-size: 17px;
+   font-family: "calibri";
+  color: rgb( 77, 203, 243 );
+  font-style: italic;
+  -moz-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.80997742427284,0,0);
+text-decoration:none;
+}
+
+#main .div_brands .brand.brand4 .parent .btn1{
+width:25px;
+height:25px;
+position:absolute;
+top:150px;
+left:121px;
+background-image:url(/images/brands/button_products.png);
+background-position:center center;
+background-repeat:no-repeat;	
+}
+
+
+#main .div_brands .brand.brand4 .parent .link1{
+position:absolute;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top:145px;
+left:135px;	
+}
+
+#main .div_brands .brand.brand4 .parent .link2{
+position:absolute;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcbcbc;
+  font-weight: 500;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top: 159px;
+  left: 127px;
+	
+}
+
+
+#main .div_brands .brand.brand4 .parent .line2{
+height:33px;
+width:2px;
+position:absolute;
+  top: 147px;
+  left: 275px;
+background-color:#ebebeb;	
+}
+
+
+#main .div_brands .brand.brand4 .parent .btn2{
+width:25px;
+height:25px;
+position:absolute;
+top:150px;
+left:289px;
+background-image:url(/images/brands/button_catalog.png);
+background-position:center center;
+background-repeat:no-repeat;	
+}
+
+
+#main .div_brands .brand.brand4 .parent .link3{
+position:absolute;
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top:145px;
+left:267px;	
+width:300px;
+text-align:left;
+}
+
+#main .div_brands .brand.brand4 .parent .link4{
+position:absolute;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcbcbc;
+  font-weight: 500;
+  -moz-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -webkit-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+  -ms-transform: matrix( 0.63280144779909,0,0,0.6299824411011,0,0);
+top: 159px;
+  left: 268px;
+width:300px;	
+text-align:left;
+}
+/*---------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+#main .div_info .info2 .info_head1{
+top:24px;
+position:absolute;
+left:25px;	
+  font-size: 24px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 102, 102, 102 );
+  display:block;
+  line-height:20px;
+
+}
+#main .div_info .info2 .info_head2{
+top:24px;
+position:absolute;
+left:553px;
+  font-size: 24px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 102, 102, 102 );
+  display:block;
+  line-height:20px;
+
+}
+
+#main .div_info .info2 .info_txt1{
+position:absolute;	
+top:68px;
+left:25px;
+  font-size: 12px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgba( 51, 51, 51, 0.6 );
+  text-align: left;
+line-height:18px;
+display:block;
+width:397px;
+}
+
+#main .div_info .info2 .info_txt2{
+position:absolute;
+top:68px;	
+left:553px;
+
+  font-size: 12px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgba( 51, 51, 51, 0.6 );
+  text-align: left;
+
+line-height:18px;
+display:block;
+width:397px;
+}
+
+#main .head_parters{
+	margin-top:115px;
+	width:100%;
+	display:block;
+	text-align:center;
+  font-size: 30.936px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 17, 17, 17 );
+  font-weight: bold;
+  line-height: 1.528;
+  -moz-transform: matrix( 0.94248249386739,0,0,0.94257744191994,0,0);
+  -webkit-transform: matrix( 0.94248249386739,0,0,0.94257744191994,0,0);
+  -ms-transform: matrix( 0.94248249386739,0,0,0.94257744191994,0,0);
+
+}
+
+#main .head_responses{
+		margin-top:115px;
+	width:100%;
+	display:block;
+	text-align:center;
+  font-size: 30.936px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 17, 17, 17 );
+  font-weight: bold;
+  line-height: 1.528;
+  -moz-transform: matrix( 0.94248249386739,0,0,0.94257744191994,0,0);
+  -webkit-transform: matrix( 0.94248249386739,0,0,0.94257744191994,0,0);
+  -ms-transform: matrix( 0.94248249386739,0,0,0.94257744191994,0,0);
+
+}
+
+#main .div_responses{
+width:100%;
+height:420px;
+text-align:center;
+position:relative;
+margin-top:30px;
+padding-bottom:357px;
+background-color:transparent;	
+}
+
+#main .div_responses .foto{
+position:absolute;
+top:60px;	
+width:95px;
+height:95px;
+}
+
+#main .div_responses .foto.foto1{
+left:80px;	
+background-image:url(../images/foto1.png);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+
+#main .div_responses .foto.foto2{
+left:50%;
+margin-left:-48px;	
+background-image:url(../images/foto2.png);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+
+#main .div_responses .foto.foto3{
+right:80px;	
+background-image:url(../images/foto3.png);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+#main .div_responses .border_blue{
+position:absolute;
+top:54px;
+background-image:url(../images/blue_border1.png);
+background-position:center center;
+background-repeat:no-repeat;	
+width:106px;
+height:106px;
+}
+
+#main .div_responses .border_blue.border_blue1{
+left:75px;
+}
+
+#main .div_responses .border_blue.border_blue2{
+margin-left:-53px;
+left:50%;
+}
+
+#main .div_responses .border_blue.border_blue3{
+right:75px;
+}
+
+
+
+.fotogallery{
+text-align:center;	
+position:relative;
+}
+
+.fotogallery #btcontentslider114{
+width:970px !important;
+margin-left:auto;
+margin-right:auto;	
+}
+
+.fotogallery .bt-title{
+display:none !important;	
+}
+
+.fotogallery .bt-cs a.prev{
+	display:block !important;
+}
+
+.fotogallery .bt-cs a.next{
+	
+	display:block !important;
+}
+
+.fotogallery .head{
+	
+	top:10px;
+  font-size: 22px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgba( 1, 1, 1, 0.502 );
+margin-top:20px;
+	display:block;
+	width:970px;
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.fotogallery .bt-cs .bt-inner .img1{
+width:245px !important;
+height:158px !important;	
+background-size:cover !important;
+float:left;
+position:absolute !important;
+left:0px !important;
+top:20px !important;
+
+}
+
+
+.fotogallery .bt-introtext{
+position:absolute !important;
+width:200px !important;
+
+  font-size: 12px !important;
+   font-family: "calibri" !important;
+  color: rgb( 102, 102, 102 ) !important;
+  font-style: italic !important;
+  top:30px !important;
+  right:5px !important; 
+  line-height:15px !important;
+  text-align:left !important;
+}
+
+.fotogallery .bt-cs a.prev{
+	background-image:url(../images/left3.png) !important;
+	width:55px !important;
+	margin-left:-60px !important;
+	margin-top:-20px !important;
+}
+.fotogallery .bt-cs a.next{
+	background-image:url(../images/right3.png) !important;
+	width:55px !important;
+	margin-right:-60px !important;
+	margin-top:-20px !important;
+}
+
+
+.fotogallery .bt-date{
+position:absolute !important;
+bottom:70px !important;
+right:30px !important;
+  font-size: 17px;
+   font-family: "calibri" !important;
+  color: rgb( 77, 203, 243 );
+  font-style: italic;
+	
+}
+
+.fotogallery .bt-row{
+position:relative !important;	
+}
+
+
+#main .div_responses .name{
+  font-size: 22px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 51, 51, 51 );
+  font-weight: bold;
+  line-height: 1.403;
+  text-align: center;
+  -moz-transform: matrix( 0.68861161619385,0,0,0.68594899053833,0,0);
+  -webkit-transform: matrix( 0.68861161619385,0,0,0.68594899053833,0,0);
+  -ms-transform: matrix( 0.68861161619385,0,0,0.68594899053833,0,0);
+  position: absolute;
+top:164px;	
+text-align:center;
+display:block;
+width:300px;
+}
+
+#main .div_responses .name.name1{
+	left:-20px;
+}
+
+#main .div_responses .name.name2{
+	left:50%;
+	margin-left:-150px;
+}
+
+#main .div_responses .name.name3{
+	right:-20px;
+}
+
+#main .div_responses .status{
+position:absolute;
+top:185px;
+
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  color: #bcbcbc;
+  line-height: 1.403;
+  text-align: center;
+  -moz-transform: matrix( 0.68861161619385,0,0,0.68594899053833,0,0);
+  -webkit-transform: matrix( 0.68861161619385,0,0,0.68594899053833,0,0);
+  -ms-transform: matrix( 0.68861161619385,0,0,0.68594899053833,0,0);
+  position: absolute;
+text-align:center;
+display:block;
+width:300px;
+
+	
+}
+
+#main .div_responses .status.status1{
+	left:-19px;
+}
+#main .div_responses .status.status2{
+	left:50%;
+	margin-left:-150px;
+}
+#main .div_responses .status.status3{
+	right:-19px;
+}
+
+#main .div_responses .text{
+position:absolute;
+width:220px;
+border:2px #4dcbf3 solid;
+border-radius:5px;
+padding:22px;
+
+  font-size: 15.001px;
+  font-family: "Ubuntu",sans-serif;
+  color: rgba( 51, 153, 204, 0.988 );
+  line-height: 1.333;
+  -moz-transform: matrix( 0.88132490954319,0,0,0.88193441640642,0,0);
+  -webkit-transform: matrix( 0.88132490954319,0,0,0.88193441640642,0,0);
+  -ms-transform: matrix( 0.88132490954319,0,0,0.88193441640642,0,0);
+text-align:left;
+	top:220px;
+}
+
+
+#main .div_responses .text.text1{
+	left:0px;
+}
+
+#main .div_responses .text.text2{
+	left:50%;
+	margin-left:-127px;
+}
+
+#main .div_responses .text.text3{
+	right:0px;
+}
+
+
+
+
+.fotogallery{
+position:absolute;
+width:100%;
+top:3510px;
+text-align:center;
+left:0px;
+background-color:#f9f9f9;
+height:328px;	
+z-index:99999;
+}
+
+#main .head_line2{
+display:block;
+margin-top:4px;
+text-align:center;
+height:2px;	
+}
+
+#main .head_line2 div{
+height:100%;
+width:103px;
+background-color:#7ed9f6;
+margin-left:auto;
+margin-right:auto;
+}
+
+#main .head_brands{
+display:block;
+margin-top:6px;
+text-align:center;
+width:100%;
+ font-size: 25px;
+  font-family: "Ubuntu", sans-serif;
+  color: #999999;
+
+  line-height: 1.528;
+  -moz-transform: matrix( 0.94248249386739,0,0,0.94257744191994,0,0);
+  -webkit-transform: matrix( 0.94248249386739,0,0,0.94257744191994,0,0);
+  -ms-transform: matrix( 0.94248249386739,0,0,0.94257744191994,0,0);
+
+}
+
+#main .div_brands{
+width:100%;
+height:1046px;
+text-align:center;
+position:relative;	
+}
+
+#right {
+    float: left;
+    width: 20%;
+    margin: 10px 0 10px 2%;
+    padding: 0 0 5px 0;
+    position: relative;
+}
+
+.unseen,
+.hidelabeltxt,
+#line label {
+    display: inline;
+    height: 0;
+    left: -3000px;
+    position: absolute;
+    top: -2000px;
+    width: 0;
+}
+
+/* ++++++++++++++  nav after content  ++++++++++++++ */
+.left {
+    padding-top: 0;
+    float: right;
+    margin: 10px 0 10px 0;
+    width: 22%;
+    position: relative;
+
+}
+
+/* ++++++++++++++  nav before content  ++++++++++++++ */
+.left1 {
+    padding: 0;
+    float: left;
+    margin: 10px 3% 10px 0;
+    width: 21%;
+    position: relative
+}
+
+.leftbigger {
+    width: 25%;
+	display:none;
+}
+
+/* ###################### header ###################### */
+
+.skiplinks,
+.skiplinks li {
+    display: inline;
+    height: 0;
+    line-height: 0;
+    padding: 0 !important;
+}
+
+.skiplinks li a.u2 {
+    display: inline;
+    height: 0;
+    left: -3000px;
+    position: absolute;
+    top: -2000px;
+    width: 0;
+
+}
+
+.skiplinks li a.u2:active,
+.skiplinks li a.u2:focus {
+    position: absolute;
+    width: 13em;
+    top: -4em;
+    left: 10px;
+    line-height: 1.5em;
+    padding: 5px;
+    font-weight: bold;
+    height: 3em;
+
+}
+
+.wrap {
+    border: 0;
+    clear: both;
+    float: none;
+    font-size: 1px;
+    height: 0;
+    line-height: 1px;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+#logo {
+    
+    display: block;
+    width: 202px;
+	height:243px;
+	position:absolute;
+	top: -65px;
+  left: -24px;
+	z-index:9999;
+	background-image:url(../images/logo.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+    
+}
+
+@font-face {
+    font-family: calibri; /* имя шрифта для CSS правил */
+    src: local("calibri"), /* проверяем наличие шрифта в ОС пользователя */
+         url('/fonts/calibri.ttf'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+  
+  
+  
+@font-face {
+    font-family: calibrib; /* имя шрифта для CSS правил */
+    src: local("calibrib"), /* проверяем наличие шрифта в ОС пользователя */
+         url('/fonts/calibrib.ttf'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+  
+  
+  
+@font-face {
+    font-family: calibrii; /* имя шрифта для CSS правил */
+    src: local("calibrii"), /* проверяем наличие шрифта в ОС пользователя */
+         url('/fonts/calibrii.ttf'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+  
+  
+  
+@font-face {
+    font-family: calibriz; /* имя шрифта для CSS правил */
+    src: local("calibriz"), /* проверяем наличие шрифта в ОС пользователя */
+         url('/fonts/calibriz.ttf'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+  
+  
+  
+@font-face {
+    font-family: BaskervilleLight; /* имя шрифта для CSS правил */
+    src: local("BaskervilleLight"), /* проверяем наличие шрифта в ОС пользователя */
+         url('/fonts/BaskervilleLight.ttf'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+  
+  
+  
+  
+  
+#logo .txt1{
+position:absolute;
+  font-size: 20px;
+  font-family: "BaskervilleLight";
+  color: rgb( 109, 72, 54 );
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.686;
+  text-align: center;
+ /* -moz-transform: matrix( 1.05169157374262,0,0,1.05169157374261,0,0);
+  -webkit-transform: matrix( 1.05169157374262,0,0,1.05169157374261,0,0);
+  -ms-transform: matrix( 1.05169157374262,0,0,1.05169157374261,0,0);*/
+	top:91px;
+	width:100%;
+	text-align:center;
+	margin-left:2px;
+}
+
+#logo .txt2{
+position:absolute;
+  font-size: 7.3px;
+  font-family: "BaskervilleLight";
+  color: rgb( 109, 72, 54 );
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.686;
+  text-align: center;
+ /* -moz-transform: matrix( 1.05169157374262,0,0,1.05169157374261,0,0);
+  -webkit-transform: matrix( 1.05169157374262,0,0,1.05169157374261,0,0);
+  -ms-transform: matrix( 1.05169157374262,0,0,1.05169157374261,0,0);*/
+	top:114px;
+	width:100%;
+	text-align:center;
+	margin-left:2px;
+}
+
+#logo .txt3{
+  font-size: 6px;
+  font-family: "BaskervilleLight";
+  color: rgba( 110, 53, 29, 0.702 );
+  text-align: center;
+  position: absolute;
+  top: 135px;
+  left: 54px;
+  width: 95px;
+  height: 20px;
+  border: 2px #fffefc solid;
+  z-index: 78;
+  padding-top: 5px;
+}
+
+
+#logo img {
+    display: block;
+}
+
+#logo span {
+    padding-left: 2px
+}
+
+#logo span.header1 {
+    display: block;
+    top: 0;
+    line-height: 0.8em;
+    font-size: 0.7em;
+    padding-left: 55px
+}
+
+.logoheader {
+    margin: 0px 0px 0;
+    padding: 0;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1.5em;
+	
+}
+.header1 {
+	font-size: 1.5em;
+	margin-left: 10px;
+}
+
+#line {
+    padding: 5px 0 2px 2px;
+    position: absolute;
+    right: 10px;
+    top: 0.5em;
+    max-width: 40em;
+    text-align: right;
+    min-width: 40em;
+	display:none;
+}
+
+#fontsize,
+#line .search {
+    display: inline;
+    margin: 0;
+}
+
+/* ++++++++++++++  button for closing right column  ++++++++++++++ */
+
+#close {
+    margin-right: 0;
+    text-transform: uppercase;
+}
+
+#close span {
+    position: absolute;
+    right: 20px;
+    z-index: 10000;
+    top: 5px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 1.5em;
+    margin-top:20px;
+    padding: 5px
+}
+
+#close > a {
+    display: block;
+    overflow: hidden
+}
+
+#close > a:hover span {
+    background: #095197
+}
+
+/* ###################### main ###################### */
+
+/* ++++++++++++++  position  ++++++++++++++ */
+
+.blog-featured {
+    padding: 0;
+}
+
+.items-leading {
+    padding: 0 5px 10px 5px;
+    overflow: hidden;
+    margin-bottom: 10px
+}
+
+.row-separator {
+    display: block;
+    clear: both;
+    margin: 0;
+    border: 0;
+    height: 1px
+}
+
+.item-separator {
+    display: none;
+    margin: 0;
+}
+
+.shownocolumns {
+    width: 100% !important;
+}
+
+#top {
+    margin: 0 0 20px 0;
+    overflow: hidden
+}
+
+/* ++++++++++++++  blog  ++++++++++++++ */
+
+.cols-1 {
+    display: block;
+    float: none !important;
+    margin: 0 !important;
+}
+
+.cols-2 .column-1 {
+    width: 46%;
+    float: left;
+}
+
+.cols-2 .column-2 {
+    width: 46%;
+    float: right;
+    margin: 0
+}
+
+.cols-3 .column-1 {
+    float: left;
+    width: 29%;
+    padding: 0 5px;
+    margin-right: 4%
+
+}
+
+.cols-3 .column-2 {
+    float: left;
+    width: 29%;
+    margin-left: 0;
+    padding: 0 5px
+}
+
+.cols-3 .column-3 {
+    float: right;
+    width: 29%;
+    padding: 0 5px
+}
+
+.items-row {
+    overflow: hidden;
+    margin-bottom: 10px !important;
+}
+
+.column-1,
+.column-2,
+.column-3 {
+    padding: 10px 5px
+}
+
+.column-2 {
+    width: 55%;
+    margin-left: 40%;
+}
+
+.column-3 {
+    width: 30%
+}
+
+.blog-more {
+    padding: 10px 5px
+}
+
+/* ++++++++++++++  footer  ++++++++++++++ */
+
+#bottom {
+    overflow: hidden
+}
+
+.box {
+    width: 27%;
+    float: left;
+    margin-right: 10px;
+    min-height: 100px
+}
+
+.box1 {
+    width: 35%
+}
+
+.box2 {
+    width: 32%
+}
+
+.box3 {
+    float: right
+}
+#footer {
+    max-width: 1025px;
+    margin: 0 auto;
+
+    padding: 10px 15px 10px 10px;
+}
+
+#footer-inner{
+	max-width: 970px;
+	height:100%;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	position: relative;
+}
+
+.footer2{
+text-align:center;	
+}
+
+.footer2 .footer2_content{
+width:970px;
+margin-left:auto;
+margin-right:auto;
+	height:100%;
+	position:relative;
+}
+
+.footer2 .footer2_content .copy{
+  font-size: 15px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgba( 51, 51, 51, 0.702 );
+  line-height: 0.778;
+  /*-moz-transform: matrix( 0.80989583333333,0,0,0.81005095765243,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.81005095765243,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.81005095765243,0,0);*/
+  position: absolute;
+top:58px;
+left:0px;
+}
+
+.footer2_content ul li{
+  display: inline;
+  padding: 0;
+  margin: 0;
+  
+  
+  
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+  color: #9e8613;
+  line-height: 0.778;
+}
+.footer2_content ul.menu li.active a{
+font-weight:normal;
+text-decoration:none;
+color:#9e8613;
+
+}
+
+.footer2_content ul{
+position:absolute;
+text-align:left;
+left:0px;
+top:80px;	
+}
+
+.footer2_content ul li{
+margin-right:24px;
+}
+
+.footer2_content .lng{
+  border-radius: 4px;
+  background-color: #cd0301;
+  position: absolute;
+  right: 0px;
+  top: 67px;
+  width: 161px;
+  height: 27px;
+}
+
+#footer-inner .pic{
+position:absolute;	
+}
+
+#footer-inner .pic.pic1{
+top:161px;
+left:10px;	
+}
+
+#footer-inner .pic.pic2{
+top:161px;
+left:342px;	
+}
+
+#footer-inner .pic.pic3{
+top:161px;
+left:656px;	
+}
+
+
+#footer-inner .pic.pic4{
+top: 323px;
+  left: 9px;
+}
+
+
+#footer-inner .pic.pic5{
+top: 323px;
+  left: 246px;
+}
+
+
+#footer-inner .pic.pic6{
+top: 323px;
+  left: 482px;
+}
+
+#footer-inner .pic.pic7{
+top: 323px;
+  left: 740px;
+}
+
+
+#footer-inner .hd{
+position:absolute;
+  font-size: 15.468px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb( 255, 255, 255 );
+  line-height: 1.862;
+  text-align: left;
+ /* -moz-transform: matrix( 0.94248249386739,0,0,0.94266301332323,0,0);
+  -webkit-transform: matrix( 0.94248249386739,0,0,0.94266301332323,0,0);
+  -ms-transform: matrix( 0.94248249386739,0,0,0.94266301332323,0,0);
+	*/
+}
+
+#footer-inner .hd.hd1{
+  top: 132px;
+  left: 79px;
+}
+#footer-inner .hd.hd2{
+  top: 132px;	
+  left:403px;
+}
+#footer-inner .hd.hd3{
+  top: 132px;	
+  left:726px;
+}
+#footer-inner .hd.hd4{
+top: 298px;
+  left: 79px;
+
+}
+#footer-inner .hd.hd5{
+top: 298px;
+  left: 323px;	
+}
+#footer-inner .hd.hd6{
+	top: 298px;
+  left: 564px;
+}
+#footer-inner .hd.hd7{
+	top: 298px;
+  left: 821px;
+}
+
+
+#footer-inner .txt{
+position:absolute;
+  font-size: 13px;
+  font-family: "Ubuntu", sans-serif;
+  color: rgba( 255, 255, 255, 0.988 );
+  text-align: left;
+  line-height:15px;
+ /* -moz-transform: matrix( 0.80989583333333,0,0,0.81005095765243,0,0);
+  -webkit-transform: matrix( 0.80989583333333,0,0,0.81005095765243,0,0);
+  -ms-transform: matrix( 0.80989583333333,0,0,0.81005095765243,0,0);
+	*/
+}
+
+#footer-inner .txt.txt1{
+	  top: 180px;
+  left: 79px;
+}
+#footer-inner .txt.txt2{
+	  top: 180px;	
+  left:403px;
+}
+#footer-inner .txt.txt3{
+	  top: 180px;	
+  left:726px;
+}
+#footer-inner .txt.txt4{
+	top: 353px;
+  left: 79px;
+}
+#footer-inner .txt.txt5{
+	top: 353px;
+  left: 323px;
+}
+#footer-inner .txt.txt6{
+		top: 353px;
+  left: 564px;
+}
+#footer-inner .txt.txt7{
+		top: 353px;
+  left: 821px;
+}
+
+.footer2{
+width:100%;
+height:125px;
+background-color:#fbd832;	
+margin-top:-62px;
+}
+
+
+
+img {
+    border: 0 none;
+    max-width: 100%;
+}
+
+/* hide the mobile menu button */
+#mobile_select {
+    display: none
+}

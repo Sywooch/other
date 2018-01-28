@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>EasyBlog Welcome</name>
+	<author>StackIdeas</author>
+	<creationDate>May 2010</creationDate>
+	<copyright>Copyright 2009 - 2011 Stack Ideas. All rights reserved.</copyright>
+	<license>GPL License</license>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>http://www.stackideas.com</authorUrl>
+	<version>3.9.1</version>
+	<description>A module that provides users login and will welcome the users if they are already logged in. Also consist of all sort of shortcut for easy access to EasyBlog's features.</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_easyblogwelcome.ini</language>
+		<language tag="da-DK">da-DK.mod_easyblogwelcome.ini</language>
+		<language tag="sv-SE">sv-SE.mod_easyblogwelcome.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_easyblogwelcome">mod_easyblogwelcome.php</filename>
+		<filename>mod_easyblogwelcome.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<params addpath="/administrator/components/com_easyblog/elements">
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="0">Never</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="routingtype" type="list" default="default" label="Routing Type" description="Choose the routing type when generate links">
+			<option value="default">Use default behaviour</option>
+			<option value="menuitem">Use menu item</option>
+		</param>
+		<param name="menuitemid" type="easyblogmenuitem" default="" label="Use Menu Item" description="Select menu item if you have choose to use 'menu item' as routing type" state="1" />
+
+		<param name="display_avatar" type="list" default="1" label="Show avatar" description="Select to enable/disable avatar from being display.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="enable_login" type="list" default="1" label="Login Option" description="Select to enable/disable this module from showing the login option.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="name" type="list" default="0" label="Name/Username">
+			<option value="0">Username</option>
+			<option value="1">Name</option>
+		</param>
+		<param name="usesecure" type="radio" default="0" label="Encrypt Login Form" description="Submit encrypted login data (requires SSL)">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="login" type="menuitem" default="" disable="separator" label="Login Redirection URL" description="MOD_EASYBLOGWELCOME_LOGIN_REDIRECT" state="1">
+			<option value="0">None</option>
+		</param>
+		<param name="logout" type="menuitem" default="" disable="separator" label="Logout Redirection URL" description="MOD_EASYBLOGWELCOME_LOGOUT_REDIRECT" state="1">
+			<option value="0">None</option>
+		</param>
+	</params>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_easyblog/elements/fields">
+				<field name="routingtype" type="list" default="default" label="Routing Type" description="Choose the routing type when generate links">
+					<option value="default">Use default behaviour</option>
+					<option value="menuitem">Use menu item</option>
+				</field>
+				<field name="menuitemid" type="modal_easyblogmenuitem" default="" label="Use Menu Item" description="Select menu item if you have choose to use 'menu item' as routing type" state="1" />
+				<field name="display_avatar" type="list" default="1" label="Show avatar" description="Select to enable/disable avatar from being display." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="enable_login" type="list" default="1" label="Login Option" description="Select to enable/disable this module from showing the login option." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="name" type="list" default="0" label="Name/Username" description="Select to either display the username or name of the user.">
+					<option value="0">Username</option>
+					<option value="1">Name</option>
+				</field>
+				<field name="usesecure" type="radio" default="0" label="Encrypt Login Form" description="Submit encrypted login data (requires SSL)" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="login" type="menuitem" default="none" disable="separator" label="Login Redirection URL" description="MOD_EASYBLOGWELCOME_LOGIN_REDIRECT" state="1">
+					<option value="0">None</option>
+				</field>
+				<field name="logout" type="menuitem" default="none" disable="separator" label="Logout Redirection URL" description="MOD_EASYBLOGWELCOME_LOGOUT_REDIRECT" state="1">
+					<option value="0">None</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" >
+					<option value="0">Never</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

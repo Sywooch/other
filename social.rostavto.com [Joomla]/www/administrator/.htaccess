@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Authentification"
+AuthUserFile "/home/c5597/.htpasswds/public_html/www.rostavto.com/administrator/passwd"
+require valid-user

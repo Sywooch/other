@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>COM_ERROR404</name>
+	<author>Alain Bolli</author>
+	<creationDate>7 mars 2012</creationDate>
+	<copyright>Copyright (C) 2009-2011 cdprof.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>alain.bolli@cdprof.com</authorEmail>
+	<authorUrl>http://www.cdprof.com</authorUrl>
+	<version>3.5</version>
+	<description>COM_ERROR404_DESCRIPTION</description>
+	<installfile>install.error404.php</installfile>
+	<uninstallfile>uninstall.error404.php</uninstallfile>
+	<install>
+	<sql>
+		<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+	</sql>
+	</install>
+	<uninstall>
+	<sql>
+		<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+	</sql>
+	</uninstall>
+	<files folder="site">
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>controller.php</filename>
+		<filename>error404.php</filename>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_error404.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.com_error404.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.com_error404.ini</language>
+		<language tag="uk-UK">language/uk-UK/uk-UK.com_error404.ini</language>
+		<language tag="cs-CZ">language/cs-CZ/cs-CZ.com_error404.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.com_error404.ini</language>
+		<language tag="ja-JA">language/ja-JP/ja-JP.com_error404.ini</language>
+		<language tag="nl-NL">language/nl-NL/nl-NL.com_error404.ini</language>
+	</languages>
+	<administration>
+	  <menu link="option=com_error404" img="class:error404">COM_ERROR404_MENU</menu>
+	  <languages folder="admin">
+	  	<language tag="en-GB">language/en-GB/en-GB.com_error404.ini</language>
+	  	<language tag="en-GB">language/en-GB/en-GB.com_error404.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.com_error404.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.com_error404.sys.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.com_error404.ini</language>
+		<language tag="ru-RU">language/ru-RU/ru-RU.com_error404.sys.ini</language>
+		<language tag="uk-UK">language/uk-UK/uk-UK.com_error404.ini</language>
+		<language tag="uk-UK">language/uk-UK/uk-UK.com_error404.sys.ini</language>
+		<language tag="cs-CZ">language/cs-CZ/cs-CZ.com_error404.ini</language>
+		<language tag="cs-CZ">language/cs-CZ/cs-CZ.com_error404.sys.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.com_error404.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.com_error404.sys.ini</language>
+		<language tag="nl-NL">language/nl-NL/nl-NL.com_error404.ini</language>
+		<language tag="nl-NL">language/nl-NL/nl-NL.com_error404.sys.ini</language>
+	  </languages>
+	  <files folder="admin">
+		<filename>config.xml</filename>
+		<filename>controller.php</filename>
+		<filename>error404.php</filename>
+		<folder>models</folder>
+		<folder>views</folder>
+		<folder>tables</folder>
+		<folder>controllers</folder>
+		<folder>sql</folder>
+	  </files>
+	</administration>
+	<!-- UPDATESERVER DEFINITION -->
+        <updateservers>
+                <!-- Note: No spaces or linebreaks allowed between the server tags -->
+                <server type="extension" priority="1" name="Error404 Update Site">http://www.cdprof.com/update/error404-update.xml</server>
+        </updateservers>
+</extension>

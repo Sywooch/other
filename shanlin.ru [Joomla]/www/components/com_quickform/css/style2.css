@@ -1,0 +1,229 @@
+.qfblock {
+	text-align: left;
+	padding: 10px 0;
+	color: #666;
+	width: 80%;
+	margin-left: 10%;
+	border: 2px solid;
+	border-color: #CCC;
+	line-height: normal;
+	
+}
+.qfblock div {
+	padding: 3px 0;
+}
+
+.qfblock TEXTAREA {
+    width:250px;
+    height: 100px;
+}
+
+.qfblock select {
+	width: 180px;
+	height: 24px;
+	padding: 0;
+}
+
+.qfblock label {
+	text-align: right;
+	padding: 0 20px 0 0;
+	display: inline-block;
+	width: 40%;
+}
+.qfblock textarea {
+	vertical-align: top;
+}
+.qfradio input {
+	margin: 0 10px 0 5px !important;
+	vertical-align: central;
+}
+.qfsubmit input {
+	padding: 1px 10px;
+}
+.qfprice {
+	font-weight: bold;
+}
+.qflink {
+	text-align: right;
+}
+.qflink a {
+	color: #CCC !important;
+	font-size: 10px !important;
+}
+.nfl {
+	display: none;
+}
+.qfblock div input {
+	display: inline-block;
+	float: none;
+	margin: 0;
+	width: 160px;
+	height: 24px;
+}
+.qfblock div.qfsubmit input {
+	width: auto;
+	height: 36px;
+	margin-top: 10px;
+}
+.qfblock div.qfback input {
+	width: auto;
+}
+.qfblock div.qflong input {
+	width: 100px;
+}
+.number input {
+width: 40px;
+}
+.number div {
+width: 47px;
+}
+.surname input {
+width: 200px;
+}
+
+.cvet div {
+width: 70px;
+float:left;
+}
+.spisok div {
+padding: 0;
+}
+#plus {
+
+}
+.qfclone {
+	position: relative;
+	border: 1px solid #CCC;
+	margin: 5px;
+}
+.qfcloneone {
+	position: relative;
+	float: none;
+	width: 100%;
+}
+.qfclone select{
+/*width: auto;*/
+}
+div.qfclonep, div.qfclonem, div.qfclonesum{
+	width: 45px;
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.qflong div.qfclonep, .qflong div.qfclonem, .qflong div.qfclonesum{
+	position: relative;
+}
+.len_1 div.qfclonep a, .len_1 div.qfclonem a{
+	background-color: #EFEFEF;
+	width: 30px;
+	display: block;
+	text-decoration: none;
+	height: 30px;
+}
+.len_1 div.qfclonep{
+	right: 50px;
+}
+.len_1 div.qfclonem{
+	right: 0px;
+}
+.len_1 .len_1 div.qfclonep{
+	right: 44px;
+}
+.len_1 .len_1 div.qfclonem{
+	right: -5px;
+}
+.qflong {
+	display: table !important;
+	width: 100%;
+}
+.qflong div{
+	display: table-cell;
+	text-align: center;
+}
+.qflong label{
+	display: block;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+}
+.qflong input, .qflong select{
+	width: 80%;
+}
+.qflong div.qfclonep, .qflong div.qfclonem{
+	display: table-cell;
+	position: static;
+	vertical-align: bottom;
+}
+.qflong div.qfclonep a, .qflong div.qfclonem a{
+	border-radius: 10px;
+	border: 1px solid;
+	width: 24px;
+	height: 24px;
+	line-height: normal;
+	border-color: #BDBDBD;
+}
+
+.len_4 .qfc_1{
+	width: 100px;
+	padding-left: 70px;
+}
+.len_4 .qfc_2{
+	width: 180px;	
+}
+.len_4 .qfc_3{
+	width: 100px;	
+}
+.len_4  .qfc_4{
+	width: 100px;	
+	padding-right: 25px;
+}
+.len_3 .qfc_1{
+	width: 150px;
+	padding-left: 70px;
+}
+.len_3  .qfc_3{
+	width: 100px;	
+	padding-right: 25px;
+}
+.hidden{
+	visibility:hidden;
+}
+
+
+.qflong div.qfclonep{
+	/*padding-right: 0px;*/
+}
+.qflong div.qfclonem{
+	/*padding-right: 0px;*/
+}
+.qfblockch label img{
+	width: 100px;	
+}
+.qfclone div.qfclonesum{
+	right: -10px;
+	position: relative;
+	top: -100%;
+}
+.qfclone div.qfclonesum{
+	/*right: 5px;*/
+}
+div.qfclonesum{
+	vertical-align: middle;
+	font-size: 12px;
+	padding: 0 3px;
+	border: 1px solid #CCC;
+	border-radius: 10px;
+	height: 10px;
+	white-space: nowrap;
+}
+.qfclone .qflong div.qfclonesum{
+	right: 5px;
+}
+.alertvalidat{
+	color: #F00;
+	text-align: center;
+}

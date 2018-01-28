@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+
+  <name>Collective</name>
+
+  <creationDate>2014</creationDate>
+  <author>Qweritos</author>
+  <authorEmail>qweritos@gmail.com</authorEmail>
+  <copyright></copyright>
+  <version>1.0.0</version>
+
+  <description>Форма добавления новостей пользователями</description>
+
+  <files folder="site">
+	<filename>index.html</filename>
+	<filename>collective.php</filename>
+	<filename>controller.php</filename>
+
+	<folder>views</folder>
+  </files>
+  
+  <administration>
+  	<menu>Collective</menu>
+    <files folder="admin">
+		<filename>index.html</filename>
+        <filename>collective.php</filename>
+		<folder>helpers</folder>
+		<filename>helpers/content.php</filename>
+    </files>
+  </administration>
+
+</extension> 

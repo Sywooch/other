@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>EasyBlog Calendar</name>
+	<author>StackIdeas</author>
+	<creationDate>May 2010</creationDate>
+	<copyright>Copyright 2009 - 2010 Stack Ideas. All rights reserved.</copyright>
+	<license>GPL License</license>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>http://www.stackideas.com</authorUrl>
+	<version>3.9.1</version>
+	<description>A archive module for EasyBlog in a calendar form.</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_easyblogcalendar.ini</language>
+		<language tag="da-DK">da-DK.mod_easyblogcalendar.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_easyblogcalendar">mod_easyblogcalendar.php</filename>
+		<filename>mod_easyblogcalendar.xml</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<params addpath="/administrator/components/com_easyblog/elements">
+		<param name="routingtype" type="list" default="default" label="Routing Type" description="Choose the routing type when generate calendar links">
+			<option value="default">Use default behaviour</option>
+			<option value="menuitem">Use menu item</option>
+		</param>
+		<param name="menuitemid" type="easyblogmenuitem" default="" label="Use Menu Item" description="Select menu item if you have choose to use 'menu item' as routing type" state="1" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="0">Never</option>
+		</param>
+	</params>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_easyblog/elements/fields">
+				<field name="routingtype" type="list" default="default" label="Routing Type" description="Choose the routing type when generate calendar links">
+					<option value="default">Use default behaviour</option>
+					<option value="menuitem">Use menu item</option>
+				</field>
+				<field name="menuitemid" type="modal_easyblogmenuitem" default="" label="Use Menu Item" description="Select menu item if you have choose to use 'menu item' as routing type" state="1" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC" >
+					<option value="0">Never</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

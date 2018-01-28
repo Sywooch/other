@@ -1,0 +1,1 @@
+<h1>Collective news</h1>

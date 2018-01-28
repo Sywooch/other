@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="2.5">
+	<packagename>community_ru-RU</packagename>
+	<name>JomSocial Russian language Pack</name>
+	<version>2.8.4.01</version>
+	<url>www.joomlasocial.ru</url>
+	<packager>Kharol</packager>
+	<packagerurl>joomlasocial.ru</packagerurl>
+	<author>www.joomlasocial.ru</author>
+	<authorEmail>info@joomlasocial.ru</authorEmail>
+	<authorUrl>Kharol</authorUrl>
+    <creationDate>2013-03-14</creationDate>
+	<copyright>Copyright (C) 2011 JoomlaSocial.ru. Все права защищены.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description><![CDATA[
+		<link rel="stylesheet" href="http://www.joomlasocial.ru/translation/css/bootstrap.min.css" type="text/css">
+<table width="40%" height="355" border="0" cellpadding="2" cellspacing="2">
+<tr><td width="547" height="300"><div class="hero-unit"><a href="http://www.joomlasocial.ru" class="thumbnail">
+<img src="http://www.joomlasocial.ru/translation/img/jomsocial_russian_support.png" alt="JomSocial Российская поддержка">
+          </a>
+            <h3><em>JomSocial 2.8.4 rus</em></h3>
+            <h5>Русский язык: Backend&Frontend</h5><br/>
+             <h6>Дополнительно: Перевод модулей и плагинов<br/>
+             Версия: 2.8.4 v.01 от 14 марта 2013г. Локализация компонента Jomsocial 2.8.4</h6> <br/>
+			 Автор: <a href="http://www.joomlasocial.ru">Kha&reg;ol</a><br/>
+            &copy; Все права защищены 
+            <p><a href="http://www.joomlasocial.ru/o-komponente-jomsocial.html" class="btn btn-large">Обзор JomSocial</a> <a href="http://www.joomlasocial.ru/jomsocial-kupit.html" class="btn btn-primary btn-large">Купить JomSocial</a>
+			<a href="http://www.joomlasocial.ru/jomsocial-support.html" class="btn btn-danger btn-large">Полигон JomSocial</a></p>
+ </div></td>
+  	         <td width="90">&nbsp;</td>
+  </tr>
+</table>
+]]></description>
+
+    <files>
+        <file type="language" client="site" id="ru-RU">site_ru-RU.zip</file>
+		<file type="language" client="administrator" id="ru-RU">admin_ru-RU.zip</file>
+    </files>
+<updateservers>
+  <server type="collection" priority="1" name="JomSocial Russian Translations">http://joomlasocial.ru/translation/translationlist.xml</server>
+</updateservers>
+</extension>

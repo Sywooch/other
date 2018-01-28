@@ -1,0 +1,417 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+
+
+/*
+
+ * Layout Style Sheet - Provides a fluid grid and helper classes to create any layout and some layout defaults
+
+ */
+
+
+
+
+
+/* Grid and Clearing Tools
+
+----------------------------------------------------------------------------------------------------*/
+
+
+
+.clearfix:before,
+
+.clearfix:after,
+
+.grid-block:before,
+
+.grid-block:after,
+
+.deepest:before,
+
+.deepest:after {
+
+	content: "";
+
+    display: table;
+
+}
+
+.clearfix:after,
+
+.grid-block:after,
+
+.deepest:after { clear: both; }
+
+
+
+.grid-box { float: left; }
+
+
+
+/* Grid Units */
+
+.width16 { width: 16.666%; }
+
+.width20 { width: 20%; }
+
+.width25 { width: 25%; }
+
+.width33 { width: 32.333%; }
+
+.width40 { width: 40%; }
+
+.width50 { width: 50%; }
+
+.width60 { width: 60%; }
+
+.width66 { width: 66.666%; }
+
+.width75 { width: 75%; }
+
+.width80 { width: 80%; }
+
+.width100 { width: 100%; }
+
+
+
+/* Create new Block Formatting Contexts */
+
+.bfc-o { overflow: hidden; }
+
+.bfc-f {
+
+	width: 100%;
+
+	float: left;
+
+}
+
+.contact {
+/*margin-left: 290px; 
+margin-top: 45px; */
+right:10px;
+bottom:30px;
+position: absolute;
+}
+.contact img {
+	width: 100%;
+}
+
+/* Align Boxes */
+
+.float-left { float: left; }
+
+.float-right { float: right; }
+
+#time {
+	margin-right: 13px;
+	margin-top: 10px;
+	color: #555;
+	font-size: 14px;
+}
+
+#price_benzin{
+	/*margin-right: 13px;
+	margin-top: 20px;*/
+	top:35px;
+	right:15px;
+	color: #555;
+	font-size: 14px;
+	position:absolute;
+
+}
+
+.left_col {
+    background-image: url("../../images/left_col.png");
+    height: 1500px;
+    margin-left: -170px;
+    position: absolute;
+    width: 169px;
+    background-repeat:no-repeat;
+}
+.right_col {
+    background-image: url("../../images/right_col.png");
+    height: 337px;
+    position: absolute;
+    width: 169px;
+    bottom: 0;
+    right: 0;
+    margin-right: -170px;
+}
+
+.right_col2 {
+    
+    height: 1500px;
+    position: absolute;
+    width: 169px;
+    top: 0;
+    right: 0;
+    margin-right: -170px;
+}
+
+/* Grid Gutter */
+
+.grid-gutter.grid-block { margin: 0 -15px; }
+
+.grid-gutter > .grid-box > * { margin: 0 15px; }
+
+
+
+.grid-gutter > .grid-box > * > :first-child { margin-top: 0; }
+
+.grid-gutter > .grid-box > * > :last-child { margin-bottom: 0; }
+
+
+
+
+
+/* Layout Defaults
+
+----------------------------------------------------------------------------------------------------*/
+
+
+
+/* Center Page */
+
+.wrapper {
+
+	-moz-box-sizing: border-box;
+
+	box-sizing: border-box;
+
+	margin: auto;
+	
+	background: #FFFFFF repeat-y scroll;
+	
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+	
+	position: relative;
+
+}
+
+#right {
+	background: url("../../images/l_right.png") repeat-y scroll right center #FFFFFF;
+}
+
+.content img {
+    border-color: #DDDDDD;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+
+
+/* Header */
+
+#header { position: relative; }
+
+
+
+#toolbar .float-left .module,
+
+#toolbar .float-left > time {
+
+	margin: 0 15px 0 0;
+
+	float: left;
+
+}
+
+
+
+#toolbar .float-right .module {
+
+	margin: 0 0 0 15px;
+
+	float: right;
+
+}
+
+
+
+#headerbar .module {
+
+	margin-right: 0;
+
+	float: right;
+
+}
+
+
+
+#logo, #logo > img,
+
+#menu { float: left; }
+
+#menu span {
+	font-size: 12px;
+
+}
+
+#search { float: left; margin-top: 40px !important; margin-left: -25px;}
+
+#logo {
+	padding-left: 10px;
+	padding-top: 15px;
+
+}
+
+#banner {
+
+	position: absolute;
+
+	top: 5px;
+
+	right: 25px;
+
+}
+
+
+
+/* Footer */
+
+#footer {
+
+	position: relative;
+
+	text-align: center;
+
+}
+
+
+
+/* Absolute */
+
+#absolute {
+	z-index: 15;
+	border-radius: 15px;
+	height: 30px;
+   position: absolute;
+   right: 10px;
+   top: 80px;
+   width: 225px;
+
+}
+.pbutton {
+	 position: absolute;
+    margin-top: 95px;
+    margin-left: 40px;
+    height: 88px;
+    cursor: pointer;
+}
+
+#autorization {
+	background: none repeat scroll 0 0 #FFFFFF;
+	position: absolute;
+	z-index: 900;
+	border-radius: 10px;
+   margin-top: 18px;
+   padding: 10px;
+   border: 1px solid #f3e896;
+   width: 203px;
+}
+.button {
+	cursor: pointer;
+	color: #444;
+    font-size: 16px;
+    left: 55px;
+    position: relative;
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    margin-top: 0;
+    padding: 6px 10px;z
+
+}
+span.button {
+	top: 5px;
+	 font-size: 12px;
+    left: 0;
+    margin-top: 0;
+    padding: 5px 6px;
+}
+
+#adsm {
+	text-decoration: none;
+}
+.button:hover {
+	border-color: #a74949;
+	background: none repeat scroll 0% 0% #a74949;
+	color: #fff;
+}
+
+#absolute span:hover {
+
+}
+
+.container {width: 96%; margin: 20px auto;}
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px;
+	width: 100%;
+}
+ul.tabs li {
+	float: left;
+	margin: 0 2px 0 0;
+	padding: 0;
+	height: 31px;
+	line-height: 31px;
+	background: #ffffff;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #f3e896;
+	border-radius: 15px 15px 0 0;
+}
+ul.tabs li a {
+	text-decoration: none;
+	display: block;
+	padding: 0 20px;
+	outline: none;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+li.active a {
+	color: #760F00;
+}
+ul.tabs li a:hover {
+
+
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  {
+	background: url(../../images/bg_menus.png) repeat-x scroll;
+	border-radius: 15px 15px 0 0;
+
+
+}
+.tab_container {
+	border: 1px solid #f3e896;
+	clear: both;
+	float: left;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 20px;
+
+}
+.tab_content {
+	display: none;
+}
+.tab_content.visible {
+	display: block;
+}
+
+.tab_content h2 {
+	font-weight: normal;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #f3e896;
+	font-size: 1.8em;
+}
+.tab_content h3 a{
+	color: #254588;
+}
+

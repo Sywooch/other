@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+	<name>MOD_RSEVENTSPRO_LOCATION</name>
+	<creationDate>02/05/2012</creationDate>
+	<author>www.rsjoomla.com</author>
+	<copyright>GNU General Public License</copyright>
+	<authorEmail>suport@rsjoomla.com</authorEmail>
+	<authorUrl>http://www.rsjoomla.com</authorUrl>
+	<version>1.0</version>
+	<description>MOD_RSEVENTSPRO_LOCATION_DESCRIPTION</description>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rseventspro_location.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_rseventspro_location.sys.ini</language>
+	</languages>
+	
+	<files>
+		<filename module="mod_rseventspro_location">mod_rseventspro_location.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>style.css</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_RSEVENTSPRO_LOCATION_CLASS_SUFFIX" description="MOD_RSEVENTSPRO_LOCATION_CLASS_SUFFIX_DESC" />
+				<field name="itemid" type="text" default="" label="MOD_RSEVENTSPRO_LOCATION_ITEMID" description="MOD_RSEVENTSPRO_LOCATION_ITEMID_DESC" />
+				<field name="width" type="text" default="190" label="MOD_RSEVENTSPRO_LOCATION_WIDTH" description="MOD_RSEVENTSPRO_LOCATION_WIDTH_DESC" />
+				<field name="height" type="text" default="170" label="MOD_RSEVENTSPRO_LOCATION_HEIGHT" description="MOD_RSEVENTSPRO_LOCATION_HEIGHT_DESC" />
+				<field name="zoom" type="text" default="10" label="MOD_RSEVENTSPRO_LOCATION_MAP_ZOOM" description="MOD_RSEVENTSPRO_LOCATION_MAP_ZOOM_DESC" />
+				<field name="showmap" type="radio" class="btn-group" default="1" label="MOD_RSEVENTSPRO_LOCATION_SHOW_MAP" description="MOD_RSEVENTSPRO_LOCATION_SHOW_MAP_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="showaddress" type="radio" class="btn-group" default="1" label="MOD_RSEVENTSPRO_LOCATION_SHOW_ADDRESS" description="MOD_RSEVENTSPRO_LOCATION_SHOW_ADDRESS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="showurl" type="radio" class="btn-group" default="1" label="MOD_RSEVENTSPRO_LOCATION_SHOW_URL" description="MOD_RSEVENTSPRO_LOCATION_SHOW_URL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>

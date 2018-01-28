@@ -1,0 +1,215 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+
+
+@import url(../../../warp/css/layout.css);
+
+
+
+
+
+/* Spacing
+
+----------------------------------------------------------------------------------------------------*/
+
+
+
+.module,
+
+#breadcrumbs,
+
+#content { margin: 20px; }
+
+
+
+#menu .module { margin: 10px 5px; }
+
+
+
+#header { margin: 0px; }
+
+
+
+#toolbar { margin-bottom: 10px;  }
+
+#headerbar { background: url(../../../images/bg_header.png) repeat-x scroll; position: relative; width: 100%; height: 200px }
+
+
+#headerbar .module { margin: 15px 0 15px 15px; }
+
+#footer { margin-top: 0; background-color: white; padding-top: 15px; font-size: 12px; }
+
+#footer .module { margin: 0; padding-top: 10px; color: #999; }
+
+#footer .menu-line a:hover {
+	text-decoration: underline;
+	color: #a41c03;
+}
+#footer .module a {
+	color: #5e0b00;
+}
+
+
+/* Layout
+
+----------------------------------------------------------------------------------------------------*/
+
+
+
+/* Menubar */
+
+#menubar {
+
+	padding: 5px 5px 5px 0;
+
+	background: #fff;
+
+	border-radius: 4px;
+
+}
+
+
+
+/* Search */
+
+
+
+
+/* Block Separators */
+
+#top-a:after,
+
+#top-b:after,
+
+#innertop:after {
+
+	content: "";
+
+	display: block;
+
+	margin: 0 20px;
+
+
+}
+
+
+
+#bottom-a:before,
+
+#bottom-b:before,
+
+#innerbottom:before {
+
+	content: "";
+
+	display: block;
+
+	margin: 0 20px;
+
+
+}
+
+
+
+/* Remove Block Separators if System Output is disabled */
+
+#header + #bottom-a:before,
+
+#header + #bottom-b:before,
+
+#top-a + #bottom-a:before,
+
+#top-a + #bottom-b:before,
+
+#top-b + #bottom-a:before,
+
+#top-b + #bottom-b:before { border: none; }
+
+
+
+/* Sidebar Backgrounds */
+
+#sidebar-a,
+
+#sidebar-b { position: relative; }
+
+
+
+#sidebar-a:before,
+
+#sidebar-b:before {
+
+	content: "";
+
+	display: block;
+
+	position: absolute;
+
+	top: 20px;
+
+	bottom: 20px;
+
+	left: 0;
+
+	right: 0;
+
+	z-index: -1;
+
+}
+
+
+
+.sidebar-a-right #sidebar-a:before,
+
+.sidebar-b-right #sidebar-b:before { background: url(../images/line_dotted_v.png) 0 0 repeat-y; }
+
+
+
+.sidebar-a-left #sidebar-a:before,
+
+.sidebar-b-left #sidebar-b:before { background: url(../images/line_dotted_v.png) 100% 0 repeat-y; }
+
+
+
+/* Footer + Toolbar */
+
+#footer,
+
+#toolbar {
+	line-height: 18px;
+}
+
+
+
+/* ToTop Scroller */
+
+#totop-scroller {
+
+	display: block;
+
+	position: absolute;
+
+	top: 10px;
+
+	right: 10px;
+
+	z-index: 1;
+
+	width: 21px;
+
+	height: 21px;
+
+	background: #a74949 url(../images/totop_scroller.png) 50% 50% no-repeat;
+
+	border-radius: 4px;
+
+	text-decoration: none;
+
+}
+
+
+
+#totop-scroller:hover { background-color: #EEE; }
+
+
+

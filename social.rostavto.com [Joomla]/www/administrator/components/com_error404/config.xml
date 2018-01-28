@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config><fieldset name="error404" label="COM_ERROR404_LABEL_CONFIG" description="COM_ERROR404_DESC_CONFIG">
+    <field type="text" name="titre_page" size="40" label="COM_ERROR404_TITRE_PAGE" description="COM_ERROR404_TITRE_PAGE_DESC" default="Erreur 404" />
+    <field type="radio" name="rediriger_accueil" label="COM_ERROR404_REDIRIGER_ACCUEIL" description="COM_ERROR404_REDIRIGER_ACCUEIL_DESC" default="1">
+    <option value="0">COM_ERROR404_OUI</option>
+    <option value="1">COM_ERROR404_NON</option>
+    </field>
+    <field type="text" name="site_web" size="40" label="COM_ERROR404_SITE_WEB" description="COM_ERROR404_SITE_WEB_DESC" default="http://www.cdprof.com" />
+    <field type="radio" name="afficher_web" label="COM_ERROR404_DISPLAY_WEB" description="COM_ERROR404_DISPLAY_WEB_DESC" default="0">
+    <option value="0">COM_ERROR404_OUI</option>
+    <option value="1">COM_ERROR404_NON</option>
+    </field>
+    <field type="text" name="objet_mail" size="40" label="COM_ERROR404_MAIL_OBJECT" description="COM_ERROR404_MAIL_OBJECT_DESC" />
+    <field type="text" name="destinataire_mail" size="40" label="COM_ERROR404_MAIL_DEST" description="COM_ERROR404_MAIL_DEST_DESC" default="" />
+    <field type="text" name="expediteur_mail" size="40" label="COM_ERROR404_MAIL_EXP" description="COM_ERROR404_MAIL_EXP_DESC" default="" />
+    <field type="radio" name="send_mail" label="COM_ERROR404_SEND_EMAIL" description="COM_ERROR404_SEND_EMAIL_DESC" default="0">
+    <option value="0">COM_ERROR404_OUI</option>
+    <option value="1">COM_ERROR404_NON</option>
+    </field>
+    <field type="radio" name="use_google_search" label="COM_ERROR404_DISPLAY_GOOGLE" description="COM_ERROR404_DISPLAY_GOOGLE_DESC" default="0">
+    <option value="0">COM_ERROR404_OUI</option>
+    <option value="1">COM_ERROR404_NON</option>
+    </field>
+</fieldset>
+<fieldset name="texte" label="COM_ERROR404_LABEL_TEXT" description="COM_ERROR404_DESC_TEXT">
+    <field type="editor" filter="raw" name="texte_erreur" label="COM_ERROR404_TEXT_ERROR" description="COM_ERROR404_DESC_TEXT_ERROR" width="400" />
+</fieldset>  
+</config>
+

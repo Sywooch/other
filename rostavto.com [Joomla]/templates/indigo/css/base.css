@@ -1,0 +1,78 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+
+
+@import url(../warp/css/base.css);
+
+
+
+
+
+/* New style-related Base Values
+
+----------------------------------------------------------------------------------------------------*/
+
+
+
+body {
+
+	font: normal 14px/20px Arial, Helvetica, sans-serif;
+
+	color: #444;
+
+}
+
+
+
+
+
+
+a:hover,
+
+em, code { color: #f16d1a; }
+
+
+
+ins, mark { background-color: #ffa; }
+
+mark { color: #444; }
+
+
+
+hr { border-top-color: #ddd; display: none }
+
+
+
+pre {
+
+	border: 1px solid #ddd;
+
+	background: #fafafa;
+
+}
+
+
+
+::-moz-selection { background: #39f; color: #fff; }
+
+::selection { background: #39f; color: #fff; }
+
+
+
+
+
+fieldset > div > label:first-child {
+
+    display: block;
+
+    float: left;
+
+    width: 150px;
+
+}
+
+fieldset > div {
+
+    margin: 0;
+
+}
