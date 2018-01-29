@@ -1,0 +1,117 @@
+/**
+ * @file
+ * CSS targeted specifically for Internet Explorer for Windows.
+ *
+ * Any CSS in this file will apply to all versions of IE. You can target
+ * specific versions of IE by using conditional comments. See your sub-theme's
+ * .info file for an easy way to use them.
+ *
+ * While building your theme, you should be aware that IE limits Drupal to 31
+ * stylesheets total. The work-around for the bug is to enable CSS aggregation
+ * under: admin / settings / performance.
+ */
+
+
+/*
+ * Tabs
+ */
+ul.primary li a,
+ul.primary li a .tab,
+ul.secondary li a,
+ul.secondary li a .tab {
+  cursor: pointer;
+}
+
+/*
+ * Drupal nodes
+ */
+.node-unpublished .node-inner>* {
+  position: relative; /* Otherwise these elements will appear below the "Unpublished" text. */
+}
+
+/*
+ * Drupal admin tables
+ */
+tr.even th,
+tr.even td,
+tr.odd th,
+tr.odd td {
+  border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
+}
+
+/*
+ * Markup free clearing
+ */
+.clearfix {
+  zoom: 1;
+}
+
+/*
+ * Добавлено Викентием
+ */
+
+#block-block-2 /* Блок "Контактная информация" */ {
+	width: 167px;
+	margin: 30px 0 0 0;
+}
+
+#block-block-4 /* Блок "Часы" */ {
+  width: 272px;
+	margin: 0 192px 0 0;
+}
+
+#mission2 {
+	margin: -42px 0 0 22px;
+}
+
+#block-views-main_categories-block_1 h2 {
+	margin-bottom: 5px;
+}
+
+#block-views-main_categories-block_1 .view-content {
+	position: relative;
+	width: 657px;
+	margin: 0 0 0 -4px;
+}
+
+#block-webform-client-block-6 form input,
+.node-type-webform form input {
+	height: 24px;
+	padding: 8px 0 0 20px;
+}
+
+#block-webform-client-block-6 form .captcha input#edit-captcha-response,
+#block-webform-client-block-6 form .captcha input#edit-captcha-response-1,
+.node-type-webform form .captcha input#edit-captcha-response,
+.node-type-webform form .captcha input#edit-captcha-response-1 {
+	width: 78px;
+	height: 24px;
+	padding: 8px 0 0 0;
+	text-align: center;
+}
+
+#block-block-3 /* Блок "Курс валют" */ {
+	width: 251px;
+	padding: 23px 0 0 0;
+}
+
+#counters {
+	float: left;
+	width: 186px;
+	margin: 7px 0 0 126px;
+}
+
+#counter_01 {
+	float: left;
+	width: 88px;
+	height: 31px;
+	margin-right: 10px;
+	background-image: url(../images/counter_01.jpg);
+}
+
+#counter_02 {
+	float: left;
+	width: 88px;
+	height: 31px;
+	background-image: url(../images/counter_02.jpg);
+}

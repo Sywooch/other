@@ -1,0 +1,42 @@
+<?
+    if(strpos(PHP_OS, "WIN") !== false) 
+        define('S', '\\');
+    else
+        define('S', '/');
+    if( $_POST && !@$_POST['instanceKey'] ){
+        $_POST['instanceKey'] = 'opendemo';
+    }
+    if($_POST){
+        $configcustom = file_get_contents(dirname(dirname(__FILE__)).S.'configcustom_template.php');
+        $configcustom = str_replace("define('CFG_SERVICE_INSTANCEKEY', '');", "define('CFG_SERVICE_INSTANCEKEY', '".$_POST['instanceKey']."');", $configcustom);
+        $configcustom = str_replace("define('CFG_SITE_NAME', 'DEMOSITE');", "define('CFG_SITE_NAME', '".$_POST['name']."');", $configcustom);
+        file_put_contents(dirname(dirname(__FILE__)).S.'temp'.S.'configcustom.php', $configcustom);
+        exec('cd '.dirname(dirname(__FILE__)).S.'temp; cp ../opentao.zip .;zip opentao configcustom.php');
+        header('Location: temp'.S.'opentao.zip');
+    }
+?>
+<?=$HeaderNew?>
+<?=$CrumbsNew?>
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+<div class="main"><div class="wrap clrfix">
+		<!-- .col700 -->
+<h1><?=Lang::get('files')?></h1>
+		<div class="col700">
+		
+			<div class="content">
+            <br>
+            <form action="index.php?p=download" method="POST">
+                <label style="width: 420px; display: inline-block"><?=Lang::get('enter_key')?> <br />(<?=Lang::get('or_leave_field_key_empty')?>):</label><input type="text" name="instanceKey" class="download-input" />
+                <br /><br />
+                <label style="width: 420px; display: inline-block"><?=Lang::get('enter_site_name')?>:</label><input type="text" name="name" class="download-input" />
+                <br /><br />
+                <input id="submit-link" type="submit" name="archive" value=">> <?=Lang::get('download_site')?>" />
+            </form>
+            <br>
+            <br>
+			</div><!-- /.content -->
+			
+		</div>
+		<!-- /.col700 -->
+	</div></div><!-- /.main -->
+<?=$FooterNew?>

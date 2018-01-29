@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_RETINASHOP_VENDOR_VIEW_CONTACT_TITLE">
+        <message><![CDATA[COM_RETINASHOP_VENDOR_VIEW_CONTACT_DESC]]></message>
+
+    </layout>
+    <state>
+        <name>COM_RETINASHOP_VENDOR_VIEW_CONTACT_TITLE</name>
+        <description><![CDATA[COM_RETINASHOP_VENDOR_VIEW_CONTACT_DESC]]></description>
+        <url addpath="/admin/components/com_retinashop/elements">
+            <param name="retinashop_vendor_id" section="com_retinashop" type="rsvendormenu"  value_field="vendor_name" label="COM_RETINASHOP_VENDOR_FIELD_SELECT_TITLE" description="COM_RETINASHOP_VENDOR_FIELD_SELECT_TITLE_DESC" />
+        </url>
+    </state>
+
+    <fields name="request" >
+        <fieldset name="request" addfieldpath="/admin/components/com_retinashop/models/fields">
+            <field name="retinashop_vendor_id" type="vendor"
+				label="COM_RETINASHOP_VENDOR_FIELD_SELECT_TITLE"
+				required="true"
+				description="COM_RETINASHOP_VENDOR_FIELD_SELECT_TITLE_DESC"
+			/>
+        </fieldset>
+    </fields>
+</metadata>

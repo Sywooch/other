@@ -1,0 +1,25 @@
+<div class="row-fluid">
+    <div class="span12">
+
+        <div class="span10">
+            <h1>Создание нового XEditable поля</h1>
+        </div>
+
+    </div>
+</div>
+
+<form class="form-horizontal ot_form" action="<?=$PageUrl->AssignDo('saveBank')?>">
+
+    <div class="control-group control-group-large">
+        <label class="control-label" for="ot_field_name">Имя поля</label>
+        <div class="controls">
+            <input id="ot_field_name" name="field[name]" value="" placeholder="Имя поля" class="input-xlarge" required="" type="text">
+        </div>
+    </div>
+
+    <div class="control-group control-group-large">
+        <div class="controls">
+            <button type="button" class="btn btn-primary btn_preloader" data-loading-text="Сгенерировать" autocomplete="off">Сохранить</button>
+        </div>
+    </div>
+</form>

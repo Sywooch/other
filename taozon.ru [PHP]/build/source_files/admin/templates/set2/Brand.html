@@ -1,0 +1,63 @@
+<h5><?=LangAdmin::get('brands')?></h5>
+
+<!--Вывод подборки товаров-->
+<ul id="sortable-items" class="list-type-none">
+    <? if($itemRatingTypeId == 'Best'){ ?>
+    <li class="ui-state-default" style="position: relative; min-height: 20px; text-align: center">
+        <form action="index.php?cmd=Set2&do=addToRatingList" class="ajax-form" method="post" onsuccess="refreshTab"
+              onerror="refreshTab">
+            <table style="background: none; margin: 0">
+                <tr>
+                    <td style="background: none">
+                        <?=LangAdmin::get('adding_a_brand_is_by_its_identifier')?>
+                    </td>
+                    <td style="background: none; text-align: right">
+                        <input type="text" name="ItemList" />
+                    </td>
+                </tr>
+                <?=Plugins::invokeEvent('onRenderAddBestItemsForm')?>
+                <tr>
+                    <td style="background: none"></td>
+                    <td style="background: none; text-align: right">
+                        <input type="submit" value="<?=LangAdmin::get('add_brand_to_favorites')?>" />
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" name="contentType" value="Brand" />
+            <input type="hidden" name="currentCategory" value="<?=$activeCategory?>" />
+        </form>
+    </li>
+    <? } ?>
+    <?foreach($items as $item){?>
+        <li class="ui-state-default" id="item-<?=$item['id']?>" style="position: relative; min-height: 70px">
+            <div class="inline-block float-left w80">
+                <a href="../index.php?p=search&search=&brand=<?=$item['id'];?>" target="_blank">
+                    <img src="<?=$item['pictureurl'];?>" class="is80" />
+                </a>
+            </div>
+            <div class="inline-block float-left w500 ml10 justify">
+                <?=$item['Name'];?>
+                <div class="clear"></div>
+            </div>
+            <div class="inline-block float-right">
+                <a href="#" class="delete-from-item-set" itemid="<?=$item['Id']?>"
+                   itemratingtypeid="<?=$itemRatingTypeId?>" contenttype="Brand" categoryid="<?=$activeCategory?>">
+                    <img src="css/i/Delete.ico" width="20" />
+                </a>
+            </div>
+            <!--<div style="position: absolute; right: 5px; bottom: 5px;">
+                <a href="#" class="edit-item-set" itemid="<?=$item['Id']?>" categoryid="<?=$activeCategory?>">
+                    <img src="css/i/Edit.ico" />
+                </a>
+            </div>-->
+            <div class="clear"></div>
+        </li>
+    <?}?>
+</ul>
+
+<script type="text/javascript">
+    categories = <?=json_encode($categories)?>;
+    activeCategory = '<?=$activeCategory?>';
+</script>
+<script type="text/javascript" src="js/set/categories.js"></script>
+<script type="text/javascript" src="js/set/edit.items.js"></script>

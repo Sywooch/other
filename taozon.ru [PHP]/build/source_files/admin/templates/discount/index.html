@@ -1,0 +1,231 @@
+<?=$Header?>
+
+<link rel="stylesheet" href="css/discount.css" type="text/css" />
+<div id="top_menu"><a onclick="showaddform()" class="linktext"><?=LangAdmin::get('add_discount')?></a>
+<? if(isset($_GET['d_group'])){ ?>
+| <a onclick="showaddform2()" class="linktext"><?=LangAdmin::get('add_user_discount')?></a>
+<? } ?>
+</div>
+<div style="color:#F00"><? Session::checkErrors(); ?></div>
+<div id="left_col">
+<h4><?=LangAdmin::get('avlbl_discount')?></h4> 
+<? if(is_array($discounts)) { ?>
+<ul id="leftmenu">
+  <? foreach ($discounts as $item) {  ?>
+  <li><a id="cat" href="index.php?cmd=discount&d_group=<?=$item['id']?>&sid=<?=$GLOBALS['ssid']?>"><?=$item['name']?></a><br>
+  <div id="sm_cat"><a class="linktext" onclick="showeditform('<?=$item['name']?>','<?=$item['Description']?>','<?=$item['Discount']?>','<?=$item['DiscountIdentificationParametr']?>','<?=$item['id']?>')"><?=LangAdmin::get('edit')?></a> | <a href="index.php?cmd=discount&do=DelDiscount&d_group=<?=$item['id']?>&sid=<?=$GLOBALS['ssid']?>"><?=LangAdmin::get('remove')?></a></div>
+  </li>
+  <? } ?>
+</ul>
+<? } else { ?>
+<span><?=LangAdmin::get('dicount_must_add')?> <br> <a onclick="showaddform()" class="linktext"><?=LangAdmin::get('add_now')?>?</a> </span>
+<? } ?>
+</div>
+
+<div id="right_col"> 
+<h4><?=LangAdmin::get('list_users')?>  </h4> 
+<? if(isset($_GET['d_group'])){ ?>
+    <? if(is_array($discount_users['Content'])) { ?>
+       <? foreach ($discount_users['Content'] as $item) {  ?>
+       <div id="usr_list"> 
+         <?=LangAdmin::get('login')?>: <?=$item['Login']?><br>
+         <?=LangAdmin::get('last_name')?> : <?=$item['LastName']?><br>
+         <?=LangAdmin::get('name_short')?> : <?=$item['FirstName']?><br>
+         <?=LangAdmin::get('middle_name')?> : <?=$item['MiddleName']?><br>
+         <?=LangAdmin::get('account')?> : <?=$item['PersonalAccountId']?><br>
+         <div id="usr_del_but"><a href="index.php?cmd=discount&do=DelUserFromDiscount&d_group=<?=$_GET['d_group']?>&user_id=<?=$item['Id']?>&sid=<?=$GLOBALS['ssid']?>" style="color:#FFF; text-decoration:none;">Х</a></div>
+       </div>
+       <? } ?>
+       <!-- Страницы-->
+       <div style="clear:both"></div>
+       <div class="pagination">
+       <? if(isset($_GET['page'])) { $curpage = $_GET['page']; } else { $curpage = 1;} ?>
+          <? $maxpage = ceil($discount_users['TotalCount'] / $perpage); ?>
+
+          <? for ($i = 1; $i <= $maxpage; $i++) { ?>
+          <? if ($curpage == $i) { ?>
+              <span class="active curved"><?=$i?></span>
+          <? } else { ?>
+              <a class="curved" href="index.php?sid=<?=$GLOBALS['ssid']?>&cmd=discount&d_group=<?=$_GET['d_group']?>&page=<?=$i?>"><?=$i?></a>
+          <? } ?>
+       <? } ?>
+             
+             
+       </div>
+    <? } else { ?>
+       <?=LangAdmin::get('disount_no_users')?> <a onclick="showaddform2()" class="linktext"><?=LangAdmin::get('add_now')?>?</a>
+    <? }  ?>
+<? } else { ?>
+  <?=LangAdmin::get('disount_choice')?>
+<? } ?>
+<div style="clear:both"> </div>
+</div>
+
+<div id="dialog-form-add">
+    <p id="title_add_discount"></p>
+    <form action="index.php?cmd=discount&do=AddDiscount&sid=<?=$GLOBALS['ssid']?>" method="post">
+    <b><?=LangAdmin::get('name')?>*:</b><br/>
+    <input type="text" value="" name="Name" class="text ui-widget-content ui-corner-all" />
+    <br><br>
+    <b><?=LangAdmin::get('description')?>:</b> <br/>
+    <input type="text" name="Description" value="" class="text ui-widget-content ui-corner-all" />
+    <br><br>
+    <b><?=LangAdmin::get('Percent')?>:</b><br/>
+    <span id="smltxt"><?=LangAdmin::get('Percent_help')?> </span>
+    <input type="text" value="" name="Percent" class="text ui-widget-content ui-corner-all" /> %     
+    <br><br>
+    <b><?=LangAdmin::get('discount_order_sum')?>:</b><br/>
+    <input type="text" value="" name="PurchaseVolume" class="text ui-widget-content ui-corner-all" /> <?= $currency_settings['internalcurrencycode'];?>
+    <input name="id" type="hidden" value="" /><br><br>
+    <input name="submit" type="submit" value="<?=LangAdmin::get('add')?>"/>
+     <input name="cancel" type="button" onclick="hideaddform()" value="<?=LangAdmin::get('cancel')?>"/>
+    </form>
+</div>
+<div id="dialog-form-edit">
+    <p id="title_add_discount"></p>
+    <form action="index.php?cmd=discount&do=UpdateDiscount&sid=<?=$GLOBALS['ssid']?>" method="post">
+    <b><?=LangAdmin::get('name')?>*:</b><br/>
+    <input type="text" value="" name="Name" id="nme" class="text ui-widget-content ui-corner-all" />
+    <br><br>
+    <b><?=LangAdmin::get('description')?>:</b> <br/>
+    <input type="text" name="Description" id="desc" value="" class="text ui-widget-content ui-corner-all" />
+    <br><br>
+    <b><?=LangAdmin::get('Percent')?>:</b><br/>
+    <span id="smltxt"><?=LangAdmin::get('Percent_help')?> </span>
+    <input type="text" value="" name="Percent" id="perc" class="text ui-widget-content ui-corner-all" /> %       
+    <br><br>
+    <b><?=LangAdmin::get('discount_order_sum')?>:</b><br/>
+    <input type="text" value="" name="PurchaseVolume" id="pvolume"  class="text ui-widget-content ui-corner-all" /> <?= $currency_settings['internalcurrencycode'];?>
+    <input name="id" id="ids" type="hidden" value="" /><br><br>
+    <input name="submit" type="submit" value="<?=LangAdmin::get('update_base')?>"/>
+     <input name="cancel" type="button" onclick="hideeditform()" value="<?=LangAdmin::get('cancel')?>"/>
+    </form>
+</div>
+
+
+
+<div id="dialog-form2">
+    <p><?=LangAdmin::get('add_user_discount')?></p>
+    <form action="index.php?cmd=discount&do=AddUserToDiscount&d_group=<?=$_GET['d_group']?>&sid=<?=$GLOBALS['ssid']?>" method="post">
+    <input type="text" name="username" id="username"  class="text ui-widget-content ui-corner-all" />
+    <div style="position:relative;">
+    <div id="showera"></div></div>
+    <input name="userid" id="user_ids" type="hidden" value="" /><br><br>
+    <input name="submit" type="submit" value="<?=LangAdmin::get('add')?>"/>
+     <input name="cancel" type="button" onclick="hideaddform2()" value="<?=LangAdmin::get('cancel')?>"/>
+    </form>
+</div>
+
+
+<script> 
+  
+
+$(document).ready(function () { 
+	   
+$('#username').keyup(function(e) { 
+    if ((e.keyCode != 40) && (e.keyCode != 38) && (e.keyCode != 13)) {
+      counter = $(this).val().length; 
+	  if(counter >= 2){  			  
+  		$.post('index.php?cmd=discount&do=GetUser&sid=<?=$GLOBALS['ssid']?>', { nme: $("#username").val() }, function(data){ 
+ 		   if(data != 0){   
+  		     $("#showera").html(data); 
+  	         $("#showera").fadeIn(400);   
+           }else { 
+	         $("#showera").css('display','none'); 
+           } 
+  
+       });   
+      } else {
+		 $("#showera").html('');
+		 $("#showera").css('display','none');
+	  }
+	}
+}); 
+
+$("#username").keydown(function(e){
+	var ind=$("#scr li").index($(".seleted")); // 38-up, 40-down
+    if (e.keyCode == 40) {			
+		if (ind > -1){		   
+			$('#scr li:eq('+ind+')').removeClass('seleted');
+		}
+		if (ind == $("#scr li:last").index()){		   
+			ind=-1;
+		}
+		ind++;
+		$('#scr li:eq('+ind+')').addClass('seleted');			 
+		         	        
+        return false;
+    }
+    if (e.keyCode == 38) { 
+	    if (ind == 0){	
+		    $('#scr li:eq('+ind+')').removeClass('seleted');	   
+			ind=$("#scr li:last").index()+1;			
+		}
+		if (ind > 0 ){		   
+			$('#scr li:eq('+ind+')').removeClass('seleted');
+		}
+		ind--;
+		$('#scr li:eq('+ind+')').addClass('seleted');	
+		
+        return false;
+    }
+	
+	
+	if (e.keyCode == 13) {	    
+		$('#scr li:eq('+ind+') a').click();	    		
+        return false;
+    }
+	
+	
+	
+});
+  
+
+
+}); 
+
+function SetUser(ide , nme) {	
+     $("#user_ids").val(ide);
+     $("#username").val(nme);	
+     $("#showera").css('display','none');
+}
+
+
+function showaddform(tpe){ 
+	$("#dialog-form-add").css({'display' : 'block'});  	
+}
+function hideaddform(){    
+	$("#dialog-form-add").css({'display' : 'none'}); 
+	$("#Name").val='';
+	$("#Description").val='';
+	$("#Percent").val='';
+	$("#PurchaseVolume").val='';
+	
+}
+function showeditform(name,desc,percent,volume,id){ 
+	$("#dialog-form-edit").css({'display' : 'block'});
+	$("#nme").val(name);
+	$("#desc").val(desc);
+	$("#perc").val(percent);
+	$("#pvolume").val(volume);
+	$("#ids").val(id);
+}
+function hideeditform() {    
+	$("#dialog-form-edit").css({'display' : 'none'}); 
+	$("#Name").val='';
+	$("#Description").val='';
+	$("#Percent").val='';
+	$("#PurchaseVolume").val='';
+	
+}
+
+
+function showaddform2(){    
+	$("#dialog-form2").css({'display' : 'block'});   
+}
+function hideaddform2(){    
+	$("#dialog-form2").css({'display' : 'none'});
+}
+</script>
+
+<?=$Footer?>

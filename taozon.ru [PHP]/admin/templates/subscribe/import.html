@@ -1,0 +1,23 @@
+<?=$Header?>
+
+<h2> <?=LangAdmin::get('sub_import')?> </h2><br/><br/>
+<form id="quittance_config" action="<?=BASE_DIR;?>index.php?do=import&amp;cmd=newsletter" method="post" enctype="multipart/form-data" >
+	<?=LangAdmin::get('select_the_file')?>:
+	<input name="import_file"type="file" value="">
+	<br/><br/>
+	<button id="submit1"><?=LangAdmin::get('imports')?></button>
+	<button id="submit2"><?=LangAdmin::get('cancellation')?></button>
+</form>
+<script>
+	$( "#submit1" )
+			.button()
+			.click(function() {
+				$("#form1").submit();
+			});
+	$( "#submit2" )
+			.button()
+			.click(function() {
+				location.href = 'index.php?cmd=category';
+			});
+</script>
+<?=$Footer?>

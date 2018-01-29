@@ -1,0 +1,4 @@
+.nav>.disabled>a:hover,
+.nav>.disabled>a:focus {
+    background-color: #eee;
+    }

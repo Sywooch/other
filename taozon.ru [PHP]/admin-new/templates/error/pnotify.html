@@ -1,0 +1,11 @@
+<script>
+    $(function(){
+        showError('<?=htmlspecialchars($code . ': ' . $message, ENT_QUOTES)?>');
+        /*$.pnotify({
+            title: '<?=htmlspecialchars($code, ENT_QUOTES)?>',
+            text: '<?=htmlspecialchars($message, ENT_QUOTES)?>',
+            history: false,
+            type: 'error'
+        });*/
+    });
+</script>

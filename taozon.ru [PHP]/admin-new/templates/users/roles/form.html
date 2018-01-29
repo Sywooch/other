@@ -1,0 +1,101 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignDo('default')?>"><?=LangAdmin::get('Users')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('roles', 'default')?>"><?=LangAdmin::get('Roles')?></a> <span class="divider">›</span></li>
+    <? if (isset($role_name)) { ?>
+        <li class="active"><?=$this->escape(LangAdmin::get($role_name))?></li>
+    <? } else { ?>
+        <li class="active"><?=$this->escape($actionTitle)?></li>
+    <? } ?>
+</ul><!--/.breadcrumb-->
+
+<? require TPL_ABSOLUTE_PATH . 'users/inc/tabs.php'; ?>
+<? require TPL_ABSOLUTE_PATH . 'global_modals.php'; ?>
+<!-- ot-sub-sub-nav -->
+<? XEditableFields::Init('build', $PageUrl); ?>
+
+<div class="roles-form-wrapper">
+
+<h1><?=$this->escape($actionTitle)?></h1>
+
+
+<div class="well">
+
+        <form method="post" action="<?=$PageUrl->AssignCmdAndDo('roles', 'save')?>" class="form-horizontal ot_form">
+            <input type="hidden" name="exists" value="<?=(!empty($role_name) ? $role_name : '')?>" />
+            <? if (! $role_name) { ?>
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label"><strong>Название роли</strong></label>
+                        <div class="controls">
+                            <input id="RoleName" name="RoleName" class="input-medium not_from_template" type="text" required="required" value="">
+                        </div>
+                    </div>
+
+                </fieldset>
+            <? } ?>
+
+            <h3>Права</h3>
+            <fieldset class="template_role">
+                <? if (! $role_name) { ?>
+                    <div class="control-group">
+                        <label class="control-label">По образу <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-placement="top" data-content="Для упрощения создания новой роли можно воспользоваться шаблоном наборов прав для стандартных ролей"></i></label>
+                        <div>
+                            <select name="TemplateRole" class="input-large">
+                                <option></option>
+                                <? foreach ($template_roles as $item) { ?>
+                                    <option value="<?=$item['name']?>"><?=LangAdmin::get($item['name'])?></option>
+                                <? } ?>
+                            </select>
+                        </div>
+                    </div>
+                <? } ?>
+
+                <div class="tree_rights">
+                    <? if (count($role_rights)) { ?>
+                        <? foreach ($role_rights as $item) { ?>
+                        <h4>
+                            <? $checked = ($item['isturnon'] == 'true') ? "checked='checked'" : ""; ?>
+                            <? $name = "Rights[]"; ?>
+                            <input disabled="disabled" data-level="0" data-name="<?=(string)$item['Name']?>" class="not_from_template right-<?=$item['Id']?>" type="checkbox" name="<?=$name?>" value="<?=(string)$item['Id']?>" <?=$checked?>>
+                            <span class="blink" data-toggle="collapse" data-name="<?=(string)$item['Name']?>" data-target=".<?=strtolower($item['Name'])?>-rights"><?=LangAdmin::get('Feature_' . (string)$item['Name']);?></span>
+                        </h4>
+
+                        <div class="collapse in <?=strtolower($item['Name'])?>-rights">
+                            <ul class="unstyled">
+                                <? Roles::printRoleTree($item, 1, $role_rights);?>
+                            </ul>
+                            <hr>
+                        </div>
+                        <? } ?>
+                    <? } ?>
+                </div>
+
+            </fieldset>
+
+            <div class="offset-top1">
+                <button type="submit" class="btn btn-primary btn_preloader" data-loading-text="<?=LangAdmin::get('Saving')?>"><?=LangAdmin::get('Save')?></button>
+
+                <a href="<?=$PageUrl->AssignCmdAndDo('roles', 'default')?>" type="button" class="btn btn_preloader offset-left1" data-loading-text="Отменяется" name="cancel">Отменить</a>
+            </div>
+
+
+        </form>
+
+</div><!-- /.well -->
+<div class="well inset-top0">
+
+        <form method="post" action="<?=$PageUrl->AssignCmdAndDo('roles', 'save')?>" class="form-horizontal ot_form">
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+    InlineFields = new Backbone.Collection;
+    InlineFields.add(<?=json_encode(XEditableFields::GetFields())?>);
+</script>
+<? ScriptIncluder::AddCustomScript('js/ot-render-template.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-inline.editable.init.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-roles-form.js'); ?>

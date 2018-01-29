@@ -1,0 +1,20 @@
+{
+    "defaultSaveUrl": {
+        "cmd": "orders",
+        "do": "changeOrderWeight"
+    },
+    "fields": [
+        {
+            "name": "newWeight",
+            "type": "text"
+        },
+        {
+            "name": "newPrice",
+            "type": "text",
+            "saveUrl": {
+                "cmd": "orders",
+                "do": "changeItemPrice"
+            }
+        }
+    ]
+}

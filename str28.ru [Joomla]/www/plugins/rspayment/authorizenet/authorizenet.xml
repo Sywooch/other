@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="rspayment" >
+    <name>rs Payment - authorize.net AIM</name>
+    <creationDate>April 2012</creationDate>
+    <author>The retinashop Development Team</author>
+    <authorUrl>http://www.retinashop.net</authorUrl>
+    <copyright>Copyright (C) 2004-2011 retinashop Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>2.0.6</version>
+    <element>authorizenet</element>
+    <files>
+	<filename plugin="authorizenet">authorizenet.php</filename>
+    </files>
+    <params addpath="/admin/components/com_retinashop/elements" />
+    <params addpath="/plugins/rspayment/authorizenet/elements" />
+    <params addpath="/plugins/rspayment/authorizenet/authorizenet/elements" />
+
+    <params>
+	<param type="spacer" default="rsPAYMENT_AUTHORIZENET_AIM" level="level1" />
+	<param type="rsjpluginwarning" />
+	<param type="authorizenetcurl" />
+	<param type="spacer" default="rsPAYMENT_AUTHORIZENET_MUST_SSL" level="level1" />
+	<param type="spacer" default=" " level="level1" />
+	<param type="spacer" default="rsPAYMENT_AUTHORIZENET_PARAMS" level="level1" />
+	<param name="hostname" type="text" size="50" default="https://secure.authorize.net/gateway/transact.dll" label="rsPAYMENT_AUTHORIZENET_HOSTNAME" description="rsPAYMENT_AUTHORIZENET_HOSTNAME_DESC"/>
+	<param name="login_id" type="text" size="50" default="" label="rsPAYMENT_AUTHORIZENET_LOGIN_ID" description="rsPAYMENT_AUTHORIZENET_LOGIN_ID_DESC"/>
+	<param name="transaction_key" type="text" ize="50" default="" label="rsPAYMENT_AUTHORIZENET_TRANSACTION_KEY" description="rsPAYMENT_AUTHORIZENET_TRANSACTION_KEY_DESC"   />
+	<param name="secure_post" type="radio" default="0" label="rsPAYMENT_AUTHORIZENET_SECURE_POST" description="rsPAYMENT_AUTHORIZENET_SECURE_POST_DESC">
+	    <option value="0">COM_RETINASHOP_NO</option>
+	    <option value="1">COM_RETINASHOP_YES</option>
+	</param>
+
+	<param   type="spacer" default="rsPAYMENT_AUTHORIZENET_SANDBOX_PARAMS" level="level1" />
+	<param name="sandbox" type="radio" default="0" label="rsPAYMENT_AUTHORIZENET_USE_SANDBOX" description="rsPAYMENT_AUTHORIZENET_USE_SANDBOX_DESC">
+	    <option value="0">COM_RETINASHOP_NO</option>
+	    <option value="1">COM_RETINASHOP_YES</option>
+	</param>
+	<param name="sandbox_hostname" type="text" size="50" default="https://test.authorize.net/gateway/transact.dll" label="rsPAYMENT_AUTHORIZENET_SANDBOX_HOSTNAME" description="rsPAYMENT_AUTHORIZENET_SANDBOX_HOSTNAME_DESC"/>
+
+	<param name="sandbox_login_id" type="text" size="50" default="" label="rsPAYMENT_AUTHORIZENET_SANDBOX_LOGIN_ID" description="rsPAYMENT_AUTHORIZENET_SANDBOX_LOGIN_ID_DESC"/>
+	<param name="sandbox_transaction_key" type="text" size="50" default="" label="rsPAYMENT_AUTHORIZENET_SANDBOX_TRANSACTION_KEY" description="rsPAYMENT_AUTHORIZENET_SANDBOX_TRANSACTION_KEY_DESC"  />
+
+	<param   type="spacer" default="rsPAYMENT_AUTHORIZENET_retinashop_PARAMS" level="level1" />
+
+	<param name="creditcards" type="authorizenetcreditcards"   default="" label="rsPAYMENT_AUTHORIZENET_CREDITCARDS" description="rsPAYMENT_AUTHORIZENET_CREDITCARDS_DESC">
+	    <option value="Visa">rsPAYMENT_AUTHORIZENET_VISA</option>
+	    <option value="Mastercard">rsPAYMENT_AUTHORIZENET_MASTERCARD</option>
+	    <option value="AmericanExpress">rsPAYMENT_AUTHORIZENET_AMERICANEXPRESS</option>
+	    <option value="Discover">rsPAYMENT_AUTHORIZENET_DISCOVER</option>
+	    <option value="DinersClub">rsPAYMENT_AUTHORIZENET_DINERSCLUB</option>
+	    <option value="JCB">rsPAYMENT_AUTHORIZENET_JCB</option>
+	</param>
+	<param	name="payment_logos" type="rsfiles" label="rsPAYMENT_AUTHORIZENET_LOGOS"
+		description="rsPAYMENT_AUTHORIZENET_LOGOS_DESC"
+		directory="/images/stories/retinashop/payment"
+		default="default" hide_default="1" hide_none="1"
+		stripext="0"  exclude="^_" />
+	<param	name="cvv_images" type="rsfiles" label="rsPAYMENT_AUTHORIZENET_CVVIMAGES"
+		description="rsPAYMENT_AUTHORIZENET_CVVIMAGES_DESC"
+		directory="/images/stories/retinashop/payment"
+		default="default" hide_default="1" hide_none="1"
+		stripext="0"  exclude="^_" />
+	<param name="debug" type="radio" default="0" label="rsPAYMENT_AUTHORIZENET_DEBUG" description="rsPAYMENT_AUTHORIZENET_DEBUG_DESC" >
+	    <option value="0">COM_RETINASHOP_NO</option>
+	    <option value="1">COM_RETINASHOP_YES</option>
+	</param>
+	<param name="payment_approved_status" type="rsorderstate" scope="com_retinashop" default="C" label="rsPAYMENT_AUTHORIZENET_ORDERSTATUS_APPROVED" description="rsPAYMENT_AUTHORIZENET_ORDERSTATUS_SUCCESS_DESC" />
+	<param name="payment_declined_status" type="rsorderstate" scope="com_retinashop" default="X" label="rsPAYMENT_AUTHORIZENET_ORDERSTATUS_DECLINED" description="rsPAYMENT_AUTHORIZENET_ORDERSTATUS_INVALID_DESC" />
+	<param name="payment_held_status" type="rsorderstate" scope="com_retinashop" default="P" label="rsPAYMENT_AUTHORIZENET_ORDERSTATUS_HELD" description="rsPAYMENT_AUTHORIZENET_ORDERSTATUS_CANCEL_DESC" />
+	<param name="countries" type="rscountries"  scope="com_retinashop" default="" label="rsPAYMENT_AUTHORIZENET_COUNTRIES_DESC" description="rsPAYMENT_AUTHORIZENET_COUNTRIES_DESC"/>
+	<param name="min_amount" type="text"  label="rsPAYMENT_AUTHORIZENET_MIN_AMOUNT" description="rsPAYMENT_AUTHORIZENET_MIN_AMOUNT_DESC" />
+	<param name="max_amount" type="text"  label="rsPAYMENT_AUTHORIZENET_MAX_AMOUNT" description="rsPAYMENT_AUTHORIZENET_MAX_AMOUNT_DESC" />
+	<param name="cost_per_transaction" type="text"  label="rsPAYMENT_AUTHORIZENET_COST_PER_TRANSACTION" description="rsPAYMENT_AUTHORIZENET_COST_TRANSACTION_DESC" />
+	<param name="cost_percent_total" type="text"  label="rsPAYMENT_AUTHORIZENET_COST_PERCENT_TOTAL" description="rsPAYMENT_AUTHORIZENET_COST_TOTAL_DESC" />
+
+	<param name="tax_id" type="rstaxes" scope="com_retinashop"  label="rsPAYMENT_AUTHORIZENET_TAX" description="rsPAYMENT_AUTHORIZENET_TAX_DESC" />
+
+    </params>
+
+</install>

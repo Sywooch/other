@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - Advanced field "Title tag" in com_content</name>
+	<creationDate>2012.08.07</creationDate>
+    <author>Usov Dima</author>
+    <authorUrl>http://myext.ru</authorUrl>
+    <authorEmail>usovdm@gmail.com</authorEmail>
+    <copyright>Copyright (C) 2012 usovdm</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3</license>
+    <version>1.1.1</version>
+	<description><![CDATA[
+		Add "Title tag" field into com_content form.<br/><br/>For support of third extensions write on usovdm@gmail.com
+	]]></description>
+	<files>
+		<filename plugin="contenttitle">contenttitle.php</filename>
+	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="contenttitle">http://myext.ru/updates/plg_content_contenttitle.xml</server>
+	</updateservers>
+</extension>

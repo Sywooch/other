@@ -1,0 +1,24 @@
+<? if (!empty($digestBlock))  { ?>
+
+        <div class="bproduct">
+        <h2 class="mb25"><span><?=Lang::get('post')?></span></h2>
+            
+            <ul>
+                    <?  foreach ($digestBlock as $post) { ?>
+										<li>
+										
+												<a class="roundAngle" title="<?= $post['title'] ?>" href="?p=post&id=<?= $post['id'] ?>">
+												<img alt="<?= $post['title'] ?>" src="<?= $post['image'] ?>">
+												<i class="leftTop"></i><i class="topRight"></i><b class="bottomRight"></b><b class="bottomLeft"></b>
+												</a>
+											
+												<span class="date"><?= $post['created'] ?></span>
+												<a class="linkNews" title="<?=$post['title']?>" href="?p=post&id=<?= $post['id'] ?>"><?=$post['title'] ?></a>
+											
+									</li>
+    <? } ?>
+	</ul>
+	<br clear="all"/>
+    <div class="all_news"><a href="?p=digest"><?=Lang::get('digest')?></a></div>
+</div>
+<? } ?>

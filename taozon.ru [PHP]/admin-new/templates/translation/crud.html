@@ -1,0 +1,74 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'default')?>"><?=LangAdmin::get('Configuration')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('MultilingualSettings', 'default')?>"><?=LangAdmin::get('languages')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('Translations', 'default')?>"><?=LangAdmin::get('translations')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('edit_translation')?></li>
+</ul><!--/.breadcrumb-->
+
+<? require TPL_ABSOLUTE_PATH . 'site_config/inc/tabs.php'; ?>
+
+<!-- ot-sub-sub-nav -->
+<div class="tabbable ot_sub_sub_nav">
+    <ul class="nav nav-pills">
+        <li <? if($PageUrl->GetCmd() == 'MultilingualSettings'){ ?>class="active"<?} ?>>
+            <a href="<?=$PageUrl->AssignCmdAndDo('MultilingualSettings', 'default')?>">
+                <?=LangAdmin::get('Multilingual')?>
+            </a>
+        </li>
+        <li <? if($PageUrl->GetCmd() == 'Translations'){ ?>class="active"<?} ?>>
+            <a href="<?=$PageUrl->AssignCmdAndDo('Translations', 'default')?>">
+                <?=LangAdmin::get('Translations')?>
+            </a>
+        </li>
+    </ul>
+</div><!-- /ot-sub-sub-nav -->
+
+<h1><?=LangAdmin::get('edit_translation')?></h1>
+
+<div class="well">
+    <?=$key == 'China_Other_Flag' ? '<p style="color:red">'.LangAdmin::get('Search_providers_translations_alert').'</p><br>': '' ;?>
+    <form method="post" action="<?=$PageUrl->AssignDo('saveKey')?>" class="form-horizontal ot_form">
+    <fieldset>
+
+        <!-- Form Name -->
+        <!--<legend><?=LangAdmin::get('Edit_translation')?></legend>-->
+
+        <!-- developer's prescription -->
+        <!--<div class="alert alert-info">
+            <button data-dismiss="alert" class="close" type="button">×</button>
+            <?=LangAdmin::get('Edit_create_key')?>
+        </div>-->
+        <!-- /developer prescription -->
+
+        <!-- changing form part -->
+        <div class="control-group">
+            <label class="control-label" for="ot_translation_key"><?=LangAdmin::get('Key')?> <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-content="<?=LangAdmin::get('Translation_Key_hint')?>" title=""></i></label>
+            <div class="controls">
+                <input id="ot_translation_key" name="key" class="input-xlarge" type="text" value="<?=$key?>">
+            </div>
+        </div><!-- /changing form part -->
+
+
+        <? foreach($AvailableLanguages as $key => $lang){ ?>
+            <!-- Textarea -->
+            <div class="control-group">
+                <label class="control-label" for="ot_russian_translation"><?=$lang?></label>
+                <div class="controls">
+                    <textarea id="ot_russian_translation" name="translation[<?=$key?>]" class="input-xlarge"><?=isset($translation[$key]) ? $translation[$key] : ''?></textarea>
+                </div>
+            </div>
+        <? } ?>
+
+        <!-- Button (Double) -->
+        <div class="control-group">
+            <div class="controls">
+                <button id="save" type="submit" name="save" class="btn btn-primary"><?=LangAdmin::get('Save')?></button>
+                <a class="btn btn-default offset1" href="<?=$PageUrl->DeleteKey('lang')->DeleteKey('key')->AssignDo('default')?>"><?=LangAdmin::get('Cancel')?></a>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+</div>
+

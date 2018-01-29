@@ -1,0 +1,201 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignDo('default')?>" class="muted"><?=LangAdmin::get('Catalog')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('warehouse', 'default')?>" class="muted"><?=LangAdmin::get('Warehouse')?></a> <span class="divider">›</span></li>
+    <li class="active">
+                <? if(isset($predefinedFormData['id'])){ ?>
+                <?=LangAdmin::get('edit_product')?>
+                <? }else{ ?>
+                <?=LangAdmin::get('add_product')?>
+                <? } ?>
+    </li>
+</ul><!--/.breadcrumb-->
+
+<?=TabsGenerator::GetTabs('templates/catalog/navigation/tabs.xml', $PageUrl)?>
+
+<?=TabsGenerator::GetSubTabs('templates/warehouse/navigation/tabs.xml', $PageUrl)?>
+
+<? ScriptIncluder::AddCustomScript('js/vendor/jstree/jquery.jstree.js'); ?>
+
+<script>
+    categoryPath = <?=json_encode($categoryPath)?>;
+    <? if(isset($currentItem)){ ?>
+        currentItem = <?=json_encode($currentItem)?>;
+    <? } ?>
+    var WarehouseCategories = new Backbone.Collection();
+    var data = <?=json_encode($categories);?>;
+    WarehouseCategories.add(data);
+</script>
+<? ScriptIncluder::AddCustomScript('/js/vendor/jquery.form.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-warehouse-product-edit.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/vendor/jasny-bootstrap.min.js'); ?>
+<? ScriptIncluder::AddCustomScript('/js/tiny_mce/ajaxfilemanager.js'); ?>
+<? ScriptIncluder::AddCustomScript('/js/tiny_mce/tiny_mce.js'); ?>
+
+<? if(isset($predefinedFormData['id'])){ ?>
+    <!-- Form Name -->
+    <h1><?=LangAdmin::get('Edit_product')?></h1>
+<? }else{ ?>
+    <!-- Form Name -->
+    <h1><?=LangAdmin::get('Add_product')?></h1>
+<? } ?>
+
+
+<div class="well row" id="warehouse-product" style="margin-left: 0px"> <!--fuelux-->
+    <?
+    $predefinedFormData = isset($predefinedFormData) ? $predefinedFormData : Session::get('ItemFormRequest');
+    $predefinedFormData = is_array($predefinedFormData) ? $predefinedFormData : array(
+        'Name' => '',
+        'Vendor' => '',
+        'Price' => '',
+        'Quantity' => '1',
+        'Description' => '',
+        'MainImageUrl' => ''
+    );
+    ?>
+    <div style="display: none" id="item-description"><?=$predefinedFormData['Description']?></div>
+
+    <!-- Взять данные с существующего товара-->
+    <p class="offset-bottom2">
+        <a class="get-item-info bold"
+            href="#" data-name="Price"
+            data-type="text"
+            data-pk="1"
+            data-url="<?=$PageUrl->Add('do', 'getItemData')->Get()?>"
+            data-original-title=""
+            data-inputclass="input-xxlarge"
+            data-placement="left"
+            data-value=""
+            data-placeholder="<?=LangAdmin::get('Choose_existing_product')?>"
+            >
+            <?=LangAdmin::get('Choose_existing_product')?>
+        </a>
+    </p>
+
+    <form class="form-horizontal ot_form" action="<?=$PageUrl->Add('do', 'saveProduct')->Get()?>" method="post" enctype="multipart/form-data">
+        <? if(isset($predefinedFormData['id'])){ ?>
+            <input type="hidden" name="Id" value="<?=$predefinedFormData['id']?>">
+        <? } ?>
+
+        <!-- Название товара-->
+        <div class="control-group">
+            <label class="control-label bold" for="Name"><?=LangAdmin::get('Name')?></label>
+            <div class="controls">
+                <input id="Name" name="Name" placeholder="<?=LangAdmin::get('Enter_product_name')?>" value="<?=$this->escape($predefinedFormData['Name'])?>" class="input-xlarge" required type="text">
+            </div>
+        </div>
+
+        <!-- Продавец-->
+        <div class="control-group">
+            <label class="control-label bold" for="Vendor"><?=LangAdmin::get('Vendor')?></label>
+            <div class="controls">
+                <? $vendorName = is_array($predefinedFormData['Vendor']) ? $predefinedFormData['Vendor']['Name'] : $predefinedFormData['Vendor']; ?>
+                <input id="Vendor" name="Vendor" placeholder="<?=LangAdmin::get('Enter_vendor')?>" value="<?=$this->escape($vendorName)?>" class="input-medium" required type="text">
+            </div>
+        </div>
+
+        <!-- Категория в каталоге-->
+        <div class="control-group">
+            <label class="control-label bold" for="CategoryName"><?=LangAdmin::get('Category')?></label>
+            <div class="controls">
+                <input required title="<?=LangAdmin::get('Choose_category_in_the_list')?>" placeholder="<?=LangAdmin::get('Choose_category_in_the_list')?>" id="CategoryName" name="CategoryName" class="input-medium" type="text" value="<?=$category ? $this->escape($category['Name']) : ''?>" disabled="disabled">
+                <input type="hidden" id="CategoryId" name="CategoryId" value="<?=$category ? $category['Id'] : 0?>">
+                <!--button type="button" data-toggle="button" class="btn" title="Указать раздел каталога"><i class="icon-list-alt font-14"></i></button-->
+                <a href="#tree-modal" role="button" data-toggle="modal" type="button" data-toggle="button" class="btn" title="<?=LangAdmin::get('Choose_from_category_list')?>"><i class="icon-list-alt font-14"></i></a>
+            </div>
+        </div>
+
+        <div class="control-group">
+                    <label class="control-label bold" for="CategoryName"><?=LangAdmin::get('Images')?></label>
+                    <div class="controls">
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                            <div class="left">
+                            <div class="fileupload-preview fileupload-exists thumbnail" style="width: 100px; height: 100px; display: inline-block">
+                                <img id="MainImageThumb" src="<?=$predefinedFormData['MainImageUrl'] ? ProductsHelper::getImage($predefinedFormData, 100, false) : 'http://www.placehold.it/100x100/EFEFEF/AAAAAA'?>" />
+                            </div>
+
+                            <input type="hidden" id="ExistingMainImageUrl" name="ExistingMainImageUrl"
+                                   value="<?=$predefinedFormData['MainImageUrl'] ? $predefinedFormData['MainImageUrl'] : ''?>">
+                            </div>
+                            <div>
+                            <span class="btn btn-file btn-inverse" >
+                                <span class="fileupload-new"><?=LangAdmin::get('Select_image')?></span>
+                                <span class="fileupload-exists"><?=LangAdmin::get('Change')?></span>
+                                <input type="file" id="MainImageUrl" name="MainImageUrl" />
+                            </span>
+
+                            <a href="#" class="btn btn-inverse fileupload-exists" data-dismiss="fileupload"><?=LangAdmin::get('Remove')?></a>
+                            </div>
+
+                        </div>
+            </div>
+        </div>
+
+                <!-- Цена-->
+                <div class="control-group">
+                    <label class="control-label bold" for="Price"><?=LangAdmin::get('Price')?></label>
+                    <div class="controls">
+                        <div class="input-append">
+                            <input id="Price" name="Price" class="input-mini price" required type="text" value="<?=$this->escape($predefinedFormData['Price'])?>">
+                            <span class="add-on"><?=$currency?></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Количество-->
+                <div class="control-group">
+                    <label class="control-label bold" for="Quantity"><?=LangAdmin::get('Quantity')?></label>
+                    <div class="controls">
+                        <input id="Quantity" name="Quantity" class="input-mini input_numeric_only" required type="text" value="<?=$this->escape($predefinedFormData['Quantity'])?>" placeholder="<?=LangAdmin::get('Quantity_placeholder')?>">
+                    </div>
+                </div>
+                
+                <!-- Вес-->
+                <div class="control-group" id="WeightExist">
+                    <label class="control-label bold" for="Weight"><?=LangAdmin::get('Weight')?></label>
+                    <div class="controls">
+                        <input id="Weight" name="Weight" class="input-mini" type="text" value="<?=$this->escape($predefinedFormData['Weight'])?>" placeholder="<?=LangAdmin::get('Weight_placeholder')?>">
+                    </div>
+                </div>
+                
+                <!-- Ресет Веса-->
+                <div class="control-group">
+                    <label class="control-label bold" for="WeightReset"><?=LangAdmin::get('Weight_is_not_use')?></label>
+                    <div class="controls">
+                        <input id="WeightReset" name="WeightReset" type="checkbox" <?=$predefinedFormData['Weight'] ? '' : 'checked="checked"'?>/>
+                    </div>
+                </div>
+
+                <!-- Описание-->
+                <div class="control-group">
+                    <label class="control-label bold" for="Description"><?=LangAdmin::get('Description')?></label>
+                    <div class="controls">
+                        <textarea id="Description" name="Description"> </textarea>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <button id="submit_btn" class="btn btn-primary btn_preloader" data-loading-text="<?=LangAdmin::get('Saving')?>"><?=LangAdmin::get('Save')?></button>
+                        <a href="<?=$PageUrl->AssignCmdAndDo('WarehouseProducts', 'default')?>" class="btn offset-left2"><?=LangAdmin::get('Cancel_noun')?></a>
+                    </div>
+                </div>
+        </form>
+</div>
+
+<div class="modal hide fade" id="tree-modal">
+  <input type="hidden" id="categoryId" value="0">
+  <input type="hidden" id="categoryName" value="0">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3><?=LangAdmin::get('Category')?></h3>
+  </div>
+  <div class="modal-body" style="overflow: auto;">
+    <div id="jstree">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true"><?=LangAdmin::get('Cancel')?></button>
+    <button class="btn btn-primary"><?=LangAdmin::get('choose')?></button>
+  </div>
+</div>

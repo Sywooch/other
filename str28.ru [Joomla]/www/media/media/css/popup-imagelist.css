@@ -1,0 +1,70 @@
+/**
+ * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @license		
+ */
+
+html, body {
+	margin: 0 !important;
+	padding: 0 !important;
+	font-family: Tahoma, Verdana, sans-serif !important;
+}
+
+.element {
+	float: left;
+	border: 1px solid #ccc !important;
+	margin: 3px;
+	position: relative;
+	padding: 0 !important;
+}
+
+.element a {
+	display: table-cell !important;
+	display: block;
+	width: 80px;
+	height: 90px;
+	overflow: hidden;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	line-height: 90px;
+	background: #fff !important;
+}
+
+.element img {
+	display: inline;
+	margin-top: expression(( 80 - this.height ) / 2);
+	border: 0;
+}
+
+html>body .element img {
+	margin: auto;
+}
+
+.element span {
+	line-height: 100%;
+	clear: both;
+	display: block;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2px 0;
+	background-color: #eee;
+	overflow: hidden;
+	font-family: Tahoma, Verdana, sans-serif !important;
+	font-size: 11px;
+}
+
+.element  a:link span,
+.element a:visited span {
+	background-color: #eee;
+	color: #333;
+}
+
+.element  a:hover span,
+.element a:active span,
+.element a:active focus {
+	background-color: #eee;
+	color: #095197;
+}

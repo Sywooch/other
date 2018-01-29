@@ -1,0 +1,10 @@
+<td colspan="2" style="padding: 0 25px 0 0;">
+    <table class="info_delivery">
+        <?foreach($summary as $name => $value){?>
+            <tr>
+                <td class="tagr"><?=Lang::get($name)?>:</td>
+                <td><nobr><span><?=$value?></span></nobr></td>
+            </tr>
+        <?}?>
+    </table>
+</td>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content">
+	<name>plg_content_retina</name>
+	<author>Retina Project</author>
+	<creationDate>November 2010</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license></license>
+	<authorEmail>admin@retina.org</authorEmail>
+	<authorUrl>www.retina-studio.ru</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_CONTENT_retina_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="retina">retina.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_retina.ini</language>
+		<language tag="en-GB">en-GB.plg_content_retina.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="check_categories"
+					type="radio"
+					default="1"
+					description="PLG_CONTENT_retina_FIELD_CHECK_CATEGORIES_DESC"
+					label="PLG_CONTENT_retina_FIELD_CHECK_CATEGORIES_LABEL">
+					<option value="0">RNO</option>
+					<option value="1">RYES</option>
+				</field>
+
+				<field name="email_new_fe"
+					type="radio"
+					default="1"
+					description="PLG_CONTENT_retina_FIELD_EMAIL_NEW_FE_DESC"
+					label="PLG_CONTENT_retina_FIELD_EMAIL_NEW_FE_LABEL">
+					<option value="0">RNO</option>
+					<option value="1">RYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

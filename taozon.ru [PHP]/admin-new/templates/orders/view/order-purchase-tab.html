@@ -1,0 +1,274 @@
+<h2 class="offset-top0 offset-bottom05">Готовые к закупке</h2>
+
+<? if (! empty($order->readyToPurchaseItems)) { ?>
+    <!-- group operations -->
+    <div class="row-fluid offset-bottom2">
+
+        <div class="pull-left">
+
+            <label class="checkbox inline offset-left1">
+                <input type="checkbox" class="checkAll" />
+            </label>
+
+            <div class="btn-group">
+                <button id="purchaseOrderItemsBtn" class="btn btn-primary btn-tiny">
+                    <i class="icon-cog"></i>
+                    Забронировать на Таобао
+                </button>
+            </div>
+
+            <div class="btn-group">
+                <button data-toggle="dropdown" class="btn btn-tiny btn-primary dropdown-toggle"><i class="icon-star-empty"></i> Изменить статус <span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-large bulkChangeItemStatus">
+                    <? foreach ($itemsStatusList as $status) { ?>
+                        <li>
+                            <a data-status="<?=$status['id']?>" href="javascript:void(0)" title="">
+                                <?=$status['Name']?>
+                            </a>
+                        </li>
+                    <? } ?>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- /group operations -->
+
+    <? foreach ($order->readyToPurchaseItems as $item) { ?>
+    <!-- product item -->
+    <div class="ot_order_product_item" data-id="<?=$item->id?>">
+        <!-- product number, status, actions -->
+        <div class="row-fluid">
+
+            <div class="span8">
+                <label class="checkbox inline">
+                    <input type="checkbox" />
+                </label>
+
+                <a target="_blank" href="/<?=UrlGenerator::generateItemUrl($item['itemid'])?>" title="Страница товара на сайте">
+                    № <?=$order->getNumericId()?> - <?=$item['LineNum']?>
+                </a>
+
+                <i class="icon-info-sign ot_inline_info ot_product_item_description_popup" data-placement="top" title="Описание товара"></i>
+                <div class="ot_popup_product_item_description_info"><?=$this->escape($item['BriefDescrTrans'])?></div>
+
+                <span class="offset2"><span class="label weight-normal font-12 offset-left2"><?=$item['StatusName']?></span></span>
+            </div>
+
+        </div>
+        <!-- /product number, status, actions -->
+
+        <!-- product summary -->
+        <div class="row-fluid">
+
+            <div class="span8">
+                <div class="row-fluid">
+
+                    <div class="span2">
+
+                        <a href="#<?=$order->getNumericId()?>-<?=$item->id?>-img-purchase-tab" class="thumbnail" data-toggle="lightbox" title="Увеличить изображение">
+                            <img src="<?=ProductsHelper::getImage($item, 100)?>" alt="" />
+                        </a>
+                        <div id="<?=$order->getNumericId()?>-<?=$item->id?>-img-purchase-tab" class="lightbox hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="lightbox-header">
+                                <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true" title="Закрыть"><i class="icon-remove-sign"></i></button>
+                            </div>
+                            <div class="lightbox-content">
+                                <img src="<?=$item->itemimageurl?>" />
+                                <div class="lightbox-caption">
+                                    <p class="text-clipped-general"><?=$item['BriefDescrTrans']?></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="span10">
+                        <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+                            <dt>Оригинал:</dt>
+                            <dd>
+                                <a target="_blank" href="<?=$item->ItemExternalURL?>" title="Страница товара на Таобао">
+                                    <?=$item->itemId?>
+                                </a>
+                            </dd>
+
+                            <dt>Продавец:</dt>
+                            <dd>
+                                <a target="_blank" href="#" title="Страница продавца на Таобао">
+                                    <?=$item->vendNick?>
+                                </a>
+                            </dd>
+                        </dl>
+                        <p>
+                            <strong>Конфигурация:</strong> <?=$item->configtext?>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="span4">
+                <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+                    <dt>Вес:</dt>
+                    <dd><?=$item->weight?> кг</dd>
+                    <dt>Цена:</dt>
+                    <dd><?=((float)$item->newpricecust ? $item->newpricecust : $item->pricecust)?></dd>
+                    <dt>Количество:</dt>
+                    <dd><?=$item->qty?></dd>
+                    <dt>Сумма:</dt>
+                    <dd><?=TextHelper::formatPrice($item->amountcust, $order->currencysign)?></dd>
+                </dl>
+            </div>
+        </div>
+        <!-- /product summary -->
+       <div class="row-fluid item-comments-block">
+            <p>
+                <i class="icon-comments-alt"></i> <strong><?=LangAdmin::get('Comments')?></strong>
+            </p>
+
+            <div class="comments-list">
+            <? if (! empty($item->custcomment)) { ?>
+                <blockquote class="custcomment">
+                    <p class="font-13"><?=$this->escape(str_replace('\n', "\n", $item->custcomment))?></p>
+                    <small><?=LangAdmin::get('Customer')?></small>
+                </blockquote>
+            <? } ?>
+            <? if (! empty($item->operatorcomment)) { ?>
+                <blockquote>
+                    <p class="font-13"><?=$this->escape($item->operatorcomment)?></p>
+                    <small>
+                        <?=LangAdmin::get('Operator')?>
+                    </small>
+                </blockquote>
+            <? } ?>
+            </div>
+        </div>
+
+    </div>
+    <!-- /product item -->
+    <? } ?>
+
+<? } else { ?>
+    <?=LangAdmin::get('No_products_found');?>
+<? } ?>
+
+<h2 class="offset-top1">Закупленные</h2>
+
+<? if (! empty($order->purchasedItems)) { ?>
+    <? foreach ($order->purchasedItems as $item) { ?>
+    <!-- product item -->
+    <div class="ot_order_product_item" data-id="<?=$item->id?>">
+        <!-- product number, status, actions -->
+        <div class="row-fluid">
+
+            <div class="span8">
+
+                <a target="_blank" href="/<?=UrlGenerator::generateItemUrl($item['itemid'])?>" title="Страница товара на сайте">
+                    № <?=$order->getNumericId()?> - <?=$item['LineNum']?>
+                </a>
+
+                <i class="icon-info-sign ot_inline_info ot_product_item_description_popup" data-placement="top" title="Описание товара"></i>
+                <div class="ot_popup_product_item_description_info"><?=$this->escape($item['BriefDescrTrans'])?></div>
+
+                <span class="offset2"><span class="label weight-normal font-12 offset-left2"><?=$item['StatusName']?></span></span>
+            </div>
+
+        </div>
+        <!-- /product number, status, actions -->
+
+        <!-- product summary -->
+        <div class="row-fluid">
+
+            <div class="span8">
+                <div class="row-fluid">
+
+                    <div class="span2">
+
+                        <a href="#<?=$order->getNumericId()?>-<?=$item->id?>-img" class="thumbnail" data-toggle="lightbox" title="Увеличить изображение">
+                            <img src="<?=ProductsHelper::getImage($item, 100)?>" alt="" />
+                        </a>
+                        <div id="<?=$order->getNumericId()?>-<?=$item->id?>-img" class="lightbox hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="lightbox-header">
+                                <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true" title="Закрыть"><i class="icon-remove-sign"></i></button>
+                            </div>
+                            <div class="lightbox-content">
+                                <img src="<?=$item->itemimageurl?>" />
+                                <div class="lightbox-caption">
+                                    <p class="text-clipped-general"><?=$item['BriefDescrTrans']?></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="span10">
+                        <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+                            <dt class="text-success">OutId:</dt>
+                            <dd class="text-success"><?=$item->VendPurchId?>&nbsp;</dd>
+                            <dt>Оригинал:</dt>
+                            <dd>
+                                <a target="_blank" href="<?=$item->ItemExternalURL?>" title="Страница товара на Таобао">
+                                    <?=$item->itemId?>
+                                </a>
+                            </dd>
+
+                            <dt>Продавец:</dt>
+                            <dd>
+                                <a target="_blank" href="#" title="Страница продавца на Таобао">
+                                    <?=$item->vendNick?>
+                                </a>
+                            </dd>
+                        </dl>
+                        <p>
+                            <strong>Конфигурация:</strong> <?=$item->configtext?>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="span4">
+                <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+                    <dt>Вес:</dt>
+                    <dd><?=$item->weight?> кг</dd>
+                    <dt>Цена:</dt>
+                    <dd><?=((float)$item->newpricecust ? $item->newpricecust : $item->pricecust)?></dd>
+                    <dt>Количество:</dt>
+                    <dd><?=$item->qty?></dd>
+                    <dt>Сумма:</dt>
+                    <dd><?=TextHelper::formatPrice($item->amountcust, $order->currencysign)?></dd>
+                </dl>
+            </div>
+        </div>
+        <!-- /product summary -->
+        <div class="row-fluid item-comments-block">
+            <p>
+                <i class="icon-comments-alt"></i> <strong><?=LangAdmin::get('Comments')?></strong>
+            </p>
+
+            <div class="comments-list">
+            <? if (! empty($item->custcomment)) { ?>
+                <blockquote class="custcomment">
+                    <p class="font-13"><?=$this->escape(str_replace('\n', "\n", $item->custcomment))?></p>
+                    <small><?=LangAdmin::get('Customer')?></small>
+                </blockquote>
+            <? } ?>
+            <? if (! empty($item->operatorcomment)) { ?>
+                <blockquote>
+                    <p class="font-13"><?=$this->escape($item->operatorcomment)?></p>
+                    <small>
+                        <?=LangAdmin::get('Operator')?>
+                    </small>
+                </blockquote>
+            <? } ?>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /product item -->
+    <? } ?>
+
+<? } else { ?>
+    <?=LangAdmin::get('No_products_found');?>
+<? } ?>

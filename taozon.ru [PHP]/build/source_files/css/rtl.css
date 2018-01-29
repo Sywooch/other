@@ -1,0 +1,284 @@
+.i{
+	margin: 0 0 0 5px;
+	vertical-align: middle;
+}
+
+.col{
+	float: right;
+}
+
+.hblocks li{
+	float: right;
+}
+.header .logo{
+	margin-left: 0;
+	margin-right: 40px;
+	background-position: right top;
+}
+
+.col240.mr30{
+	margin-right: 0;
+	margin-left: 30px;
+}
+.hblocks li.name{
+	margin-left: 10px;
+	margin-right: 0;
+	padding-top: 0px;
+	text-align: left;
+}
+
+.hblocks li.phone{
+	margin-left: 20px!important;
+	margin-right: 0px;
+}
+
+.hblocks li.operator a{
+	background-position: 10px 0;
+}
+
+.fll{
+	float: right;
+}
+
+.flr{
+	float: left;
+}
+.navigation li{
+	float: right;
+}
+.dropdown{
+	right: 20px;
+	left: auto;
+	top: 46px;
+}
+.dropdown-main{
+	right: 0;
+	top: 0;
+}
+.sblocks .menu-lang li{
+	margin: 0.3em 0 0.3em 11px;
+}
+.sblocks .menu-lang a.lang{
+	margin-right: 0;
+}
+.sblocks li a.lang.arrow:after{
+	margin-left: 0;
+	margin-right: 3px;
+}
+
+form.search{
+	margin-right: 13px;
+	margin-left: 0;
+}
+form.search .dropdown-search{
+	left: auto;
+	right: 3px;
+	border-width: 1px 0 1px 1px;
+}
+form.search .field{
+	float: right;
+}
+form.search .field .arrow span,
+form.search .field .selection span{
+	float: right;
+}
+form.search .field .arrow,
+form.search .field .selection{
+	border-right: 0px;
+	border-left: 1px solid #B2B2B2;
+	float: right;
+}
+form.search input[type="text"]{
+	width: 265px;
+}
+form.search .btn{
+	padding: 0 8px;
+}
+
+#actions_banner img{
+	float: right;
+}
+
+.uluserbar li.cats a.category{
+	margin-right: 0;
+	margin-left: 10px;
+}
+.uluserbar li.itemmenu:first-child{
+	background: url("i/background.png") no-repeat scroll 0 -66px transparent;
+}
+.uluserbar li.itemmenu:last-child{
+	background: none repeat scroll 0 0 transparent;
+}
+.uluserbar a.mydata{
+	margin: 15px 15px 0 15px;
+	padding: 0 40px 0 0;
+	text-align: right;
+}
+.uluserbar a.favorites{
+	background-position: 85px -344px;
+}
+.uluserbar a.basket{
+	background-position: 55px -377px;
+}
+.uluserbar a.mydata i.rounder{
+	right: 20px;
+	left: auto;
+}
+
+.flin li{
+	float: right;
+}
+
+.bproduct>h2.mb25 span,
+.bproduct>h2.mb20 span{
+	float: right;
+	padding: 0 0 0 10px;
+	background-color: #fff;
+}
+
+
+.lproduct .price .glow{
+	right: auto;
+	left: 0px;
+}
+
+.lcategory li a:before,
+.lcategory li small.before{
+	left: auto;
+	right: 0px;
+}
+
+.lcategory li a{
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+.footer .up{
+	left: 0;
+	right: auto;
+}
+
+.footer .fmenu li{
+	margin-left: 20px;
+	margin-right: 0;
+}
+
+.footer .pay{
+	margin-left: 0;
+	margin-right: -10px;
+}
+
+
+.lproduct .price{
+	border-radius: 0 0 3px 0;
+}
+.lproduct .price span, .bbprice{
+	border-radius: 0 0 3px 0;
+}
+.main .info td{
+	padding: 8px 10px 5px 10px;
+}
+
+.main .info .raiting td{
+	padding: 5px 10px 5px 10px;
+}
+
+.tabs{
+	float: right;
+}
+ul.tabs{
+	padding: 0 5px 0 0;
+}
+ul.tabs li{
+	float: right;
+}
+
+.list_minipic li{
+	float: right;
+	margin: 0 0 4px 4px;
+}
+
+.addbasket span{
+	padding: 0 40px 0 0;
+	background-position: 145px -377px;
+}
+
+.addbasket span .i{
+	left: auto;
+	right: 31px;
+}
+
+.ml20{
+	margin-left: 20px;
+}
+
+.crumbs .wrap a,
+.crumbs .wrap span{
+	float: right;
+	margin-right: 0;
+	margin-left: 5px;
+	padding-left: 0;
+	padding-right: 10px;
+	background-image: none;
+}
+
+.userform .btn_office{
+	padding: 8px 0 11px;
+}
+
+.pager{
+	float: right;
+}
+
+.pager li:first-child{
+	border-radius: 0 5px 5px 0;
+}
+
+.btn, .btn-apper{
+	background-image: url('i/rtl/ivrit_btn.png');
+	background-position: 0 0;
+}
+
+.btn:hover, .btn-apper:hover{
+	background-position: 0 30px;
+}
+
+.rating-slider-block .slider-min-indicator .from,
+.rating-slider-block .slider-max-indicator .till{
+	float: right;
+	margin: 0 0 0 6px;
+}
+
+.rating-slider-block .slider-min-indicator .from-value,
+.rating-slider-block .slider-max-indicator .till-value{
+	float: right;
+}
+
+.rating-slider-block .slider-input{
+	float: left;
+	margin-right: 0;
+	margin-left: 20px;
+}
+
+.listitem li .cat{
+	padding: 5px 10px 0 0;
+}
+
+.listitem li>.delete,
+.listitem li>.delLink{
+	right: auto;
+	left: 5px;
+}
+
+.lproduct .price .glow{
+	background-image: url('i/rtl//glow_i.png');
+	background-position: 0 0;
+}
+
+.calc-form label, .calc-form .for-input{
+	float: right;
+}
+
+.calc-form label{
+	text-align: left;
+}

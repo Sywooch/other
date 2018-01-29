@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="rspayment" method="upgrade">
+    <name>rs - Payment, mainpay</name>
+    <creationDate>April 2012</creationDate>
+    <author>Lyra Network</author>
+    <authorEmail>supportvad@lyra-network.com</authorEmail>
+    <authorUrl>http://www.lyra-network.com</authorUrl>
+    <copyright>Copyright Lyra Network.</copyright>
+    <license></license>
+    <version>2.0.6</version>
+    <description>
+    	<![CDATA[<a href="http://www.lyra-network.com" target="_blank">mainpay</a> is a multi bank payment provider. ]]>
+    </description>
+
+    <files>
+	<filename plugin="mainpay">mainpay.php</filename>
+	<folder>mainpay</folder>
+    </files>
+
+    <languages>
+	<language tag="en-GB">languageBE/en-GB.plg_rspayment_mainpay.ini</language>
+	<language tag="fr-FR">languageBE/fr-FR.plg_rspayment_mainpay.ini</language>
+    </languages>
+
+    <media folder="images" destination="../images/stories/retinashop/payment">
+	<filename>mainpay.jpg</filename>
+    </media>
+
+    <params addpath="/plugins/rspayment/mainpay/elements" />
+    <params addpath="/plugins/rspayment/mainpay/mainpay/elements" />
+
+    <params addpath="/admin/components/com_retinashop/elements">
+	<param type="rsjpluginwarning" />
+
+	<param type="spacer" default="rsPAYMENT_mainPAY_MODULE_INFORMATION_TITLE" level="level1" />
+	<param type="spacer" default="rsPAYMENT_mainPAY_MODULE_INFORMATION" level="level1" />
+
+	<param name="developed_by" type="mainpaylabel" label="rsPAYMENT_mainPAY_DEVELOPED_BY" default="&lt;a href=&quot;http://www.lyra-network.com/&quot; target=&quot;_blank&quot;&gt;Lyra network&lt;/a&gt;"/>
+	<param name="contact_email" type="mainpaylabel" label="rsPAYMENT_mainPAY_CONTACT_EMAIL" default="&lt;a href=&quot;mailto:supportvad@lyra-network.com&quot;&gt;supportvad@lyra-network.com&lt;/a&gt;"/>
+	<param name="contrib_version" type="mainpaylabel" label="rsPAYMENT_mainPAY_CONTRIB_VERSION" default="1.2"/>
+	<param name="gateway_version" type="mainpaylabel" label="rsPAYMENT_mainPAY_GATEWAY_VERSION" default="V2"/>
+	<param name="documentation" type="mainpaylabel" label="rsPAYMENT_mainPAY_DOC" default="&lt;a href=&quot;http://media.payzen.eu/documentation_support/retinashop_2.pdf&quot; target=&quot;_blank&quot;&gt;Documentation&lt;/a&gt;"/>/>
+
+	<param type="spacer" default="" level="level1" />
+	<param type="spacer" default="rsPAYMENT_mainPAY_PAYMENT_MODULE_SETTINGS" level="level1" />
+	<param	name="payment_logos" type="rsfiles" label="rsPAYMENT_mainPAY_LOGOS"
+			description="rsPAYMENT_mainPAY_LOGOS_DESC"
+			directory="/images/stories/retinashop/payment"
+			default="mainpay.jpg" hide_default="1" hide_none="1"
+			stripext="0" exclude="^_" />
+	<param name="cost_per_transaction" type="text" label="rsPAYMENT_mainPAY_COST_PER_TRANSACTION" description="rsPAYMENT_mainPAY_COST_PER_TRANSACTION_DESC" />
+	<param name="cost_percent_total" type="text" label="rsPAYMENT_mainPAY_COST_PERCENT_TOTAL" description="rsPAYMENT_mainPAY_COST_PERCENT_TOTAL_DESC" />
+	<param name="tax_id" type="rstaxes" scope="com_retinashop"  label="rsPAYMENT_mainPAY_TAX" description="rsPAYMENT_mainPAY_TAX_DESC" />
+
+	<param type="spacer" default="rsPAYMENT_mainPAY_PAYMENT_GATEWAY_ACCESS" level="level1" />
+
+	<param name="site_id" type="text" size="10" default="" label="rsPAYMENT_mainPAY_SITE_ID" description="rsPAYMENT_mainPAY_SITE_ID_DESC"/>
+	<param name="key_test" type="text" size="20" default="" label="rsPAYMENT_mainPAY_TEST_KEY" description="rsPAYMENT_mainPAY_TEST_KEY_DESC"/>
+	<param name="key_prod" type="text" size="20" default="" label="rsPAYMENT_mainPAY_PROD_KEY" description="rsPAYMENT_mainPAY_PROD_KEY_DESC"/>
+	<param name="ctx_mode" type="radio" default="TEST" label="rsPAYMENT_mainPAY_CTX_MODE" description="rsPAYMENT_mainPAY_CTX_MODE_DESC">
+	    <option value="TEST">rsPAYMENT_mainPAY_TEST</option>
+	    <option value="PRODUCTION">rsPAYMENT_mainPAY_PRODUCTION</option>
+	</param>
+	<param name="platform_url" type="text" size="50" default="https://paiement.mainpay.fr/vads-payment/" label="rsPAYMENT_mainPAY_PLATFORM_URL" description="rsPAYMENT_mainPAY_PLATFORM_URL_DESC"/>
+
+	<param type="spacer" default="rsPAYMENT_mainPAY_PAYMENT_PAGE" level="level1" />
+
+	<param name="language" type="list" default="fr" label="rsPAYMENT_mainPAY_LANGUAGE" description="rsPAYMENT_mainPAY_LANGUAGE_DESC">
+	    <option value="fr">rsPAYMENT_mainPAY_FRENCH</option>
+	    <option value="de">rsPAYMENT_mainPAY_GERMAN</option>
+	    <option value="en">rsPAYMENT_mainPAY_ENGLISH</option>
+	    <option value="es">rsPAYMENT_mainPAY_SPANISH</option>
+	    <option value="zh">rsPAYMENT_mainPAY_CHINESE</option>
+	    <option value="it">rsPAYMENT_mainPAY_ITALIAN</option>
+	    <option value="ja">rsPAYMENT_mainPAY_JAPANESE</option>
+	    <option value="pt">rsPAYMENT_mainPAY_PORTUGUESE</option>
+	    <option value="nl">rsPAYMENT_mainPAY_DUTCH</option>
+	</param>
+	<param name="available_languages" type="mainpaymultilist" multiple="multiple" default="" label="rsPAYMENT_mainPAY_AVAILABLES_LANGUAGES" size= "8" description="rsPAYMENT_mainPAY_AVAILABLES_LANGUAGES_DESC">
+	    <option value="">rsPAYMENT_mainPAY_ALL</option>
+	    <option value="fr">rsPAYMENT_mainPAY_FRENCH</option>
+	    <option value="de">rsPAYMENT_mainPAY_GERMAN</option>
+	    <option value="en">rsPAYMENT_mainPAY_ENGLISH</option>
+	    <option value="es">rsPAYMENT_mainPAY_SPANISH</option>
+	    <option value="zh">rsPAYMENT_mainPAY_CHINESE</option>
+	    <option value="it">rsPAYMENT_mainPAY_ITALIAN</option>
+	    <option value="ja">rsPAYMENT_mainPAY_JAPANESE</option>
+	    <option value="pt">rsPAYMENT_mainPAY_PORTUGUESE</option>
+	    <option value="nl">rsPAYMENT_mainPAY_DUTCH</option>
+	</param>
+	<param name="capture_delay" type="text" size="10" default="" label="rsPAYMENT_mainPAY_CAPTURE_DELAY" description="rsPAYMENT_mainPAY_CAPTURE_DELAY_DESC"/>
+	<param name="validation_mode" type="list" default="" label="rsPAYMENT_mainPAY_VALIDATION_MODE" description="rsPAYMENT_mainPAY_VALIDATION_MODE_DESC">
+	    <option value="">rsPAYMENT_mainPAY_BY_DEFAULT</option>
+	    <option value="0">rsPAYMENT_mainPAY_AUTOMATIC</option>
+	    <option value="1">rsPAYMENT_mainPAY_MANUAL</option>
+	</param>
+	<param name="payment_cards" type="mainpaymultilist" multiple="multiple" default="" label="rsPAYMENT_mainPAY_PAYMENT_CARDS" size= "10" description="rsPAYMENT_mainPAY_PAYMENT_CARDS_DESC">
+	    <option value="">rsPAYMENT_mainPAY_ALL</option>
+	    <option value="CB">Carte Bleue</option>
+	    <option value="MASTERCARD">MasterCard</option>
+	    <option value="VISA">Visa</option>
+	    <option value="AMEX">American Express</option>
+	</param>
+
+	<param type="spacer" default="rsPAYMENT_mainPAY_AMOUNT_RESTRICTIONS" level="level1" />
+
+	<param name="min_amount" type="text" size="10" default="" label="rsPAYMENT_mainPAY_AMOUNT_MIN" description="rsPAYMENT_mainPAY_AMOUNT_MIN_DESC"/>
+	<param name="max_amount" type="text" size="10" default="" label="rsPAYMENT_mainPAY_AMOUNT_MAX" description="rsPAYMENT_mainPAY_AMOUNT_MAX_DESC"/>
+
+	<param type="spacer" default="rsPAYMENT_mainPAY_RETURN_OPTIONS" level="level1" />
+
+	<param name="redirect_enabled" type="radio" default="0" label="rsPAYMENT_mainPAY_REDIRECT_ENABLED" description="rsPAYMENT_mainPAY_REDIRECT_ENABLED_DESC">
+	    <option value="0">rsPAYMENT_mainPAY_NO</option>
+	    <option value="1">rsPAYMENT_mainPAY_YES</option>
+	</param>
+	<param name="redirect_success_timeout" type="text" size="10" default="5" label="rsPAYMENT_mainPAY_REDIRECT_SUCCESS_TIMEOUT" description="rsPAYMENT_mainPAY_REDIRECT_SUCCESS_TIMEOUT_DESC"/>
+	<param name="redirect_success_message" type="text" size="50" default="Votre paiement a bien été pris en compte, vous allez être redirigé dans quelques instants." label="rsPAYMENT_mainPAY_REDIRECT_SUCCESS_MESSAGE" description="rsPAYMENT_mainPAY_REDIRECT_SUCCESS_MESSAGE_DESC" />
+	<param name="redirect_error_timeout" type="text" size="10" default="5" label="rsPAYMENT_mainPAY_REDIRECT_ERROR_TIMEOUT" description="rsPAYMENT_mainPAY_REDIRECT_ERROR_TIMEOUT_DESC"/>
+	<param name="redirect_error_message" type="text" size="50" default="Une erreur est survenue, vous allez être redirigé dans quelques instants." label="rsPAYMENT_mainPAY_REDIRECT_ERROR_MESSAGE" description="rsPAYMENT_mainPAY_REDIRECT_ERROR_MESSAGE_DESC"/>
+	<param name="return_mode" type="list" default="GET" label="rsPAYMENT_mainPAY_RETURN_MODE" description="rsPAYMENT_mainPAY_RETURN_MODE_DESC">
+	    <option value="GET">GET</option>
+	    <option value="POST">POST</option>
+	</param>
+	<param name="url_success" type="mainpayurl" size="50" default="index.php?option=com_retinashop&amp;view=pluginresponse&amp;task=pluginresponsereceived" label="rsPAYMENT_mainPAY_URL_SUCCESS" description="rsPAYMENT_mainPAY_URL_SUCCESS_DESC" editable="true"/>
+	<param name="url_return" type="mainpayurl" size="50" default="index.php?option=com_retinashop&amp;view=pluginresponse&amp;task=pluginresponsereceived" label="rsPAYMENT_mainPAY_URL_ERROR" description="rsPAYMENT_mainPAY_URL_ERROR_DESC" editable="true"/>
+	<param name="url_cancel" type="mainpayurl" size="50" default="index.php?option=com_retinashop&amp;view=pluginresponse&amp;task=pluginUserPaymentCancel" label="rsPAYMENT_mainPAY_URL_CANCEL" description="rsPAYMENT_mainPAY_URL_CANCEL_DESC" editable="true"/>
+	<param name="silent_url" type="mainpayurl" label="rsPAYMENT_mainPAY_URL_CHECK" default="index.php?option=com_retinashop&amp;view=pluginresponse&amp;task=pluginnotification&amp;tmpl=component" editable="false"/>
+
+	<param name="order_success_status" type="rsorderstate" scope="com_retinashop" default="C" label="rsPAYMENT_mainPAY_ORDER_SUCCESS_STATUS" description="rsPAYMENT_mainPAY_ORDER_SUCCESS_STATUS_DESC" />
+	<param name="order_failure_status" type="rsorderstate" scope="com_retinashop" default="X" label="rsPAYMENT_mainPAY_ORDER_FAILURE_STATUS" description="rsPAYMENT_mainPAY_ORDER_FAILURE_STATUS_DESC" />
+	<param name="debug" type="radio" default="0" label="rsPAYMENT_mainPAY_DEBUG" description="rsPAYMENT_mainPAY_DEBUG_DESC" >
+	    <option value="0">rsPAYMENT_mainPAY_NO</option>
+	    <option value="1">rsPAYMENT_mainPAY_YES</option>
+	</param>
+
+    </params>
+</install>

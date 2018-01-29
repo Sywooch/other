@@ -1,0 +1,32 @@
+<? if(!empty($userhistory)){  ?>
+    <div class="bproduct fs15 mb30">
+        <h2 class="mb20"><span><?=Lang::get('user_last_view')?></span></h2>
+        
+        
+        
+       <!-- .product --> 
+        <? if (in_array('Seo2', General::$enabledFeatures)) {
+        $url = 'item?';
+    	} else {
+        $url = 'index.php?p=item&';
+    	} ?>
+        <? foreach ($userhistory as $item) { ?>
+        <div align="center" style="border:#CCC 1px solid; padding:3px; margin:3px; float:left; width:200px; height:230px; overflow:hidden;">
+            <a class="pic" href="<?=$url?>id=<?=$item['id']?>" >
+                <?if($item['pic']){?>
+                <i><img src="<?=$item['pic']?>_160x160.jpg"></i>                
+                <?}?>
+            </a>
+
+            <div style="height:48px; overflow:hidden">
+                <div class="line"></div>
+                <span><?=$item['price']?></span><br>              
+				<a href="<?=$url?>id=<?=$item['id']?>"><span><?=$item['name']?></span></a> 
+            </div>            
+        </div> 
+        <? } ?>
+        <div style="clear:both"></div>
+    </div>
+    <!-- /.product -->       
+
+ <? } ?>

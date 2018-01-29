@@ -1,0 +1,72 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignDo('default')?>"><?=LangAdmin::get('Reports')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('Service_statistics')?></li>
+</ul>
+<!--/.breadcrumb-->
+
+<?=TabsGenerator::GetTabs('templates/reports/navigation/tabs.xml', $PageUrl)?>
+
+<h1><?=LangAdmin::get('Service_statistics')?></h1>
+
+<div class="well inline-block">
+    <dl class="dl-horizontal dl-horizontal-large dl-ot-horizontal offset-vertical-none">
+        <dt><?=LangAdmin::get('Tariff')?>:</dt>
+        <dd><?=$tarif->Name?>&nbsp;</dd>
+
+        <dt><?=LangAdmin::get('Limit_calls')?>:</dt>
+        <dd><? print (($tarif->CallLimit === '') ? '&mdash;' : $tarif->CallLimit)?>&nbsp;</dd>
+
+        <dt><?=LangAdmin::get('Percentage_of_turnover')?>:</dt>
+        <dd><?=$tarif->TurnoverPercent?> %</dd>
+
+        <dt><?=LangAdmin::get('Cost_one_call')?>:</dt>
+        <dd><?=$tarif->CallPrice?>&nbsp;</dd>
+    </dl>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="width: 596px;"><?=LangAdmin::get('Parameter_statistics')?></th>
+            <th style="width: 130px;"><?=LangAdmin::get('Per_day')?></th>
+            <th style="width: 147px;"><?=LangAdmin::get('This_month')?></th>
+            <th style="width: 173px;"><?=LangAdmin::get('Total')?></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr id="OtapiAllCallStatistics" class="odd">
+            <td><?=LangAdmin::get('Total_quantity_of_references_to_services')?></td>
+            <td class="DailyCallCount"  ><?=number_format($statistic['OtapiAllCallStatistics']['DailyCallCount']  , 0, ',', ' ')?>&nbsp;</td>
+            <td class="MonthlyCallCount"><?=number_format($statistic['OtapiAllCallStatistics']['MonthlyCallCount'], 0, ',', ' ')?>&nbsp;</td>
+            <td class="TotalCount"      ><?=number_format($statistic['OtapiAllCallStatistics']['TotalCount']      , 0, ',', ' ')?>&nbsp;</td>
+        </tr>
+        <tr id="OtapiCallStatistics" class="even">
+            <td><?=LangAdmin::get('Paid_quantity_of_references_to_services')?></td>
+            <td class="DailyCallCount"  ><?=number_format($statistic['OtapiCallStatistics']['DailyCallCount']  , 0, ',', ' ')?>&nbsp;</td>
+            <td class="MonthlyCallCount"><?=number_format($statistic['OtapiCallStatistics']['MonthlyCallCount'], 0, ',', ' ')?>&nbsp;</td>
+            <td class="TotalCount"      ><?=number_format($statistic['OtapiCallStatistics']['TotalCount']      , 0, ',', ' ')?>&nbsp;</td>
+        </tr>
+        <tr id="TotalLengthTranslatedTexts" class="odd">
+            <td><?=LangAdmin::get('Total_volume_of_translated_texts')?></td>
+            <td class="DailyCallCount"  ><?=number_format($statistic['TotalLengthTranslatedTexts']['DailyCallCount']  , 0, ',', ' ')?>&nbsp;</td>
+            <td class="MonthlyCallCount"><?=number_format($statistic['TotalLengthTranslatedTexts']['MonthlyCallCount'], 0, ',', ' ')?>&nbsp;</td>
+            <td class="TotalCount"      ><?=number_format($statistic['TotalLengthTranslatedTexts']['TotalCount']      , 0, ',', ' ')?>&nbsp;</td>
+        </tr>
+        <tr id="LengthExternalTranslatedTexts" class="even">
+            <td><?=LangAdmin::get('Volume_of_texts_translated_automatic_external_compiler')?></td>
+            <td class="DailyCallCount"  ><?=number_format($statistic['LengthExternalTranslatedTexts']['DailyCallCount']  , 0, ',', ' ')?>&nbsp;</td>
+            <td class="MonthlyCallCount"><?=number_format($statistic['LengthExternalTranslatedTexts']['MonthlyCallCount'], 0, ',', ' ')?>&nbsp;</td>
+            <td class="TotalCount"      ><?=number_format($statistic['LengthExternalTranslatedTexts']['TotalCount']      , 0, ',', ' ')?>&nbsp;</td>
+        </tr>
+        <tr class="odd">
+            <td><?=LangAdmin::get('Caching_efficiency_source_of_goods')?></td>
+            <td id="CachedDailyCallCount"><?=$statistic['CachedDailyCallCount']?>%</td>
+            <td id="CachedMonthlyCallCount"><?=$statistic['CachedMonthlyCallCount']?>%</td>
+            <td id="CachedTotalCount"><?=$statistic['CachedTotalCount']?>%</td>
+        </tr>
+    </tbody>
+</table>
+
+<? ScriptIncluder::AddCustomScript('js/ot-service-statistics.js'); ?>

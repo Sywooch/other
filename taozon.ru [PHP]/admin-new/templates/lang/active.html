@@ -1,0 +1,37 @@
+<!-- site language -->
+<div class="btn-group pull-right">
+    <a class="btn dropdown-toggle offset-top05" data-toggle="dropdown" href="#" title="<?=LangAdmin::get('Language_select_for_edit')?>">
+
+        <? $activeLang = false; ?>
+        <? if ($languages) foreach ($languages as $key => $lang) { ?>
+            <? if ((string)$key == Session::get('active_lang_' . strtolower($PageUrl->GetKey('cmd')))) { ?>
+                <? $activeLang = (string)$key; ?>
+                <?=(string)$lang?>
+            <? } ?>
+        <? } ?>
+        <? if (! $activeLang) { ?>
+            <?=LangAdmin::get('All_languages_versions')?>
+        <? } ?>
+
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+        <? if ($activeLang) { ?>
+        <li>
+            <a data-value="" href="<?=$PageUrl->SetPageLangUrl('')?>">
+                <?=LangAdmin::get('All_languages_versions')?>
+            </a>
+        </li>
+        <? } ?>
+        <? if ($languages) foreach($languages as $key => $lang) { ?>
+            <? if ((string)$key != $activeLang) { ?>
+            <li>
+                <a data-value="<?=(string)$key?>" href="<?=$PageUrl->SetPageLangUrl((string)$key)?>">
+                    <?=(string)$lang?>
+                </a>
+            </li>
+            <? } ?>
+        <? } ?>
+    </ul>
+</div>
+<!-- /site language -->

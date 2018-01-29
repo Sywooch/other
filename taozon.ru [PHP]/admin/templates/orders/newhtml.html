@@ -1,0 +1,491 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Opentao Admin</title>
+    <link rel="stylesheet" href="css/960.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="css/jquery-ui.css" type="text/css" media="screen" charset="utf-8">
+    <!--<link rel="stylesheet" href="css/fluid.css" type="text/css" media="screen" charset="utf-8" />-->
+    <link rel="stylesheet" href="css/template.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="css/colour.css" type="text/css" media="screen" charset="utf-8">
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+    <script type="text/javascript" src="js/fileuploader.js"></script>
+
+        
+</head>
+<body>
+
+<h1 id="head">Opentao Admin</h1>
+
+
+<ul id="navigation">
+                        <li><a href="index.php?sid=t4vr18lut6k7smn4np8qt7duf1">Настройки</a></li>
+                                <li><a href="index.php?sid=t4vr18lut6k7smn4np8qt7duf1&amp;do=case">Ценообразование</a></li>
+                                <li><a href="index.php?sid=t4vr18lut6k7smn4np8qt7duf1&amp;cmd=category">Категории</a></li>
+                                <li><span class="active">Заказы</span></li>
+                                <li><a href="index.php?sid=t4vr18lut6k7smn4np8qt7duf1&amp;cmd=users">Пользователи</a></li>
+                                <li><a href="index.php?sid=t4vr18lut6k7smn4np8qt7duf1&amp;cmd=set">Подборки</a></li>
+                                <li><a href="index.php?sid=t4vr18lut6k7smn4np8qt7duf1&amp;cmd=brands">Бренды</a></li>
+                                <li><a href="index.php?sid=t4vr18lut6k7smn4np8qt7duf1&amp;cmd=banners">Баннеры</a></li>
+            </ul>
+
+
+<div id="content" class="container_16 clearfix">
+
+
+<div class="main"><div class="canvas clrfix">
+
+    <div class="windialog" id="dialog-form" title="Сообщение">
+        <span id="info"></span>
+    </div>
+        
+    <a href="index.php?cmd=orders&sid=t4vr18lut6k7smn4np8qt7duf1"><<Вернуться к списку заказов</a>
+    <br/><br/>
+
+    <h2>Заказ номер SO-00000313</h2><br/>
+        <div class="grid_16">
+    <table>
+        <thead>
+            <tr>
+                <th>Номер заказа</th>
+                <th>Время создания</th>
+                <th>Количество товара</th>
+                <th>Стоимость товаров</th>
+                <th>Стоимость доставки</th>
+                <th>Общая стоимость</th>
+                <th>Оплачено</th>
+                <th>Действия с заказом</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>SO-00000313</td>
+                <td>5/28/2012 11:53:12 am</td>
+                <td>1</td>
+                <td><span class="pr">109 ¥ </span></td>
+                <td><span class="pr">108.53 ¥ </span></td>
+                <td><span class="pr">217.53 ¥ </span></td>
+                <td><span class="pr">0 ¥</span></td>
+                <td style="text-align: right;">
+
+                      
+                        <a href="index.php?&sid=t4vr18lut6k7smn4np8qt7duf1&cmd=orders&id=SO-00000313&do=cancel&id=SO-00000313">Отменить заказ</a><br/><br/>
+                    
+                    
+                                            
+                    <a href="index.php?&sid=t4vr18lut6k7smn4np8qt7duf1&cmd=orders&id=SO-00000313&do=paymentreserve&id=SO-00000313">Зарезервировать деньги под заказ</a><br/>
+                        
+                </td>
+             </tr>
+          </tbody>
+    </table>
+    </div>
+    
+    <strong>ФИО покупателя: </strong>Иванов И.И.; <strong>Комментарий покупателя:</strong> <br/>
+    <strong>ФИО оператора:</strong>  
+
+    <div id="tabs">
+            <ul>
+                    <li><a href="#tabs-1">Список товаров</a></li>
+                    <li><a href="#tabs-2">Закупка товаров</a></li>
+                    <li><a href="#tabs-3">Посылки</a></li>
+                    <li><a href="#tabs-4">История изменений</a></li>
+            </ul>
+            <span id="error" style="color:red;font-weight: bold;">
+                            </span>
+            <div id="tabs-1"><div>
+
+    <div class="grid_3">
+        <p>
+            <button id="submit1">Создать посылку</button>
+        </p>
+    </div>
+        
+    <div class="grid_3">
+        <p>
+            <button id="submit2">Отправить все посылки по заказу</button> 
+        </p>
+    </div>
+    
+    
+                <div class="grid_16">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Код посылки</th>
+                        <!--<th>Кол-во товаров</th>-->
+                        <th>Способ поставки</th>
+                        <th>Адрес доставки, ФИО получателя</th>
+                        <th>Вес посылки</th>
+                        <th>Трекинг-номер</th>
+                        <th>Статус посылки</th>
+                        <th>Действия с посылкой</th>
+                    </tr>
+                </thead>
+                <tbody>
+                                        <tr id="packagePCK-0000047">
+                    <td>PCK-0000047</td>
+                    <td>China Post Airmail. Сервис доставки посылок весом до 2 кг.</td>
+                    <td>
+                        фыв, Имя Отчество фамилия                        
+                    </td>
+                    <td>
+                                                0 кг.                    </td>
+                    <td></td>
+                    <td>Создано</td>
+                    <td width="20%" style="text-align: right;">
+                         
+                            <span onClick='confirm_delete_package("PCK-0000047")' class="linktext">
+                            Удалить посылку</span><br/>
+                                                  
+                            <br/><a href="index.php?cmd=orders&packageinfo&do=orderinfo&id=SO-00000313&pid=PCK-0000047">Обновить посылку</a><br/>
+                                            </td>
+                    </tr>
+                                    <tbody>
+            </table>
+            </div>
+    
+<script>
+  
+$('#save')
+    .button()
+    .click(function(){
+        window.location.href = 'index.php?cmd=orders&do=savenewpackage&id=SO-00000313';
+});
+$('#cancel')
+    .button()
+    .click(function(){
+        window.location.href = 'index.php?cmd=orders&do=orderinfo&id=SO-00000313&tab=3';
+});
+$("#submit1")
+    .button()
+    .click(function () {
+        window.location.href = 'index.php?cmd=orders&do=makepackage&id=SO-00000313&tab=3';
+});
+
+$("#submit2")
+    .button()
+    .click(function () {
+        window.location.href = 'index.php?cmd=orders&do=orderinfo&id=SO-00000313';
+});
+
+</script>
+
+</div></div>
+            <div id="tabs-2"></div>
+            <div id="tabs-3"><div>
+
+    <div class="grid_3">
+        <p>
+            <button id="submit1">Создать посылку</button>
+        </p>
+    </div>
+        
+    <div class="grid_3">
+        <p>
+            <button id="submit2">Отправить все посылки по заказу</button> 
+        </p>
+    </div>
+    
+    
+                <div class="grid_16">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Код посылки</th>
+                        <!--<th>Кол-во товаров</th>-->
+                        <th>Способ поставки</th>
+                        <th>Адрес доставки, ФИО получателя</th>
+                        <th>Вес посылки</th>
+                        <th>Трекинг-номер</th>
+                        <th>Статус посылки</th>
+                        <th>Действия с посылкой</th>
+                    </tr>
+                </thead>
+                <tbody>
+                                        <tr id="packagePCK-0000047">
+                    <td>PCK-0000047</td>
+                    <td>China Post Airmail. Сервис доставки посылок весом до 2 кг.</td>
+                    <td>
+                        фыв, Имя Отчество фамилия                        
+                    </td>
+                    <td>
+                                                0 кг.                    </td>
+                    <td></td>
+                    <td>Создано</td>
+                    <td width="20%" style="text-align: right;">
+                         
+                            <span onClick='confirm_delete_package("PCK-0000047")' class="linktext">
+                            Удалить посылку</span><br/>
+                                                  
+                            <br/><a href="index.php?cmd=orders&packageinfo&do=orderinfo&id=SO-00000313&pid=PCK-0000047">Обновить посылку</a><br/>
+                                            </td>
+                    </tr>
+                                    <tbody>
+            </table>
+            </div>
+    
+<script>
+  
+$('#save')
+    .button()
+    .click(function(){
+        window.location.href = 'index.php?cmd=orders&do=savenewpackage&id=SO-00000313';
+});
+$('#cancel')
+    .button()
+    .click(function(){
+        window.location.href = 'index.php?cmd=orders&do=orderinfo&id=SO-00000313&tab=3';
+});
+$("#submit1")
+    .button()
+    .click(function () {
+        window.location.href = 'index.php?cmd=orders&do=makepackage&id=SO-00000313&tab=3';
+});
+
+$("#submit2")
+    .button()
+    .click(function () {
+        window.location.href = 'index.php?cmd=orders&do=orderinfo&id=SO-00000313';
+});
+
+</script>
+
+</div></div>
+            <div id="tabs-4">    <div class="grid_16">
+    <table>
+        <thead>
+            <tr>
+                <th width="10%">Фото</th>
+                <th width="25%">Информация о товаре</th>
+                <th width="10%">Цена*кол-во = Сумма</th>
+                <th width="30%">Статус товара</th>
+                <th width="25%" style="text-align: rignt;"></th>
+            </tr>
+        </thead>
+
+        <tbody style="border: 1px dotted #D3D3D3;">
+                                    
+            <tr id="item5637156349" style="border: 1px dotted #D3D3D3;">
+                    <td >
+                        <a href="index.php?p=item&id=5637156349"><img src="http://img04.taobaocdn.com/bao/uploaded/i4/T1xabcXX8lXXb9JaUW_022504.jpg" alt="" width="100%" height="100%"/></a>
+                    </td>
+                    <td>
+                            кассета vivi фондирует тип Европ 2012 лет новый и Америка восстанавливает снежок парика старо актера для того чтобы закрутить шелк бутона цв<br/>
+                            <b>Оригинал:</b><a target="blank" href="http://item.taobao.com/item.htm?id=15868268842&spm=2014.12424337.0.0">15868268842</a><br/>
+                            <b>Продавец:</b>尚古主义旗舰店<br/>
+                                                            <b>Конфигурация:</b>Цвет:Голубая сторона;Размер:XL имеет надувательство заранее синь товара 7 дней голубая on-hand;                                                </td>
+                    <td>
+                        <span class="pr">109  ¥</span>
+                         * 1 = <span class="pr">109  ¥</span>                        <div id="qty5637156349" style="display:none;">1</div>
+                    </td> 
+                    <td>
+                        <strong>Текущий статус:</strong> <span id="curstatus5637156349">В обработке</span><br/><br/>
+                        <span id="curstatusid5637156349" style="display:none;">0</span>
+                        <strong>Изменить статус на:</strong><br/>
+                        
+                                                    <select class="combolist" id="status5637156349" name="status5637156349">
+                                <option value="">Выберите статус</option>
+                                                                    <option value="1" >Не оплачено</option>
+                                                                    <option value="2" >В обработке</option>
+                                                                    <option value="3" >Подтверждение цены</option>
+                                                                    <option value="4" >Заказан</option>
+                                                                    <option value="5" >Контроль качества</option>
+                                                                    <option value="6" >Получено</option>
+                                                                    <option value="7" >Упаковано</option>
+                                                                    <option value="8" >Готов к отправке</option>
+                                                                    <option value="9" >Отправлено</option>
+                                                                    <option value="10" >Завершено</option>
+                                                                    <option value="12" >Невозможно поставить</option>
+                                                                    <option value="13" >Отменено</option>
+                                                            </select>
+                         
+                    </td>
+                    <td style="text-align: right;">
+                                                <span class="linktext" id="delete5637156349" onClick='confirm_delete("SO-00000313","5637156349")'>Отменить товар
+                        </span><br/><br/>
+                        <span class="linktext" id="savestatus5637156349"onClick='confirm_cnange("SO-00000313","5637156349")'> Сохранить статус</span>
+                                            </td>
+              </tr>
+              <tr id="itemcom5637156349" style="border: 1px dotted #D3D3D3;">
+                  <td colspan="3"><strong>Комментарий покупателя к товару:</strong></td>
+                  <td><strong>Комментарий оператора к товару:</strong><br/>
+                      <textarea width="200px" rows="4" cols="20" name="opcom5637156349" onFocus="$('#saveopcom5637156349').show()" id="opcom5637156349"></textarea>
+                  </td>
+                  <td style="text-align: right;"><span class="linktext" onClick='cnange_status("SO-00000313","5637156349")' style="display:none;" id="saveopcom5637156349">Сохранить комментарий</span></td>
+              </tr>
+                        </tbody>
+    </table>
+    </div>
+<div style="padding-left:750px;">
+        <strong>Итого стоимость:</strong><span class="pr" id="total_w"> 109 ¥</span><br/>
+    <strong>Итого вес:</strong><span id="total_m"> 0  кг.</span>
+</div>
+
+<script type="text/javascript" src="js/jquery.combobox.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('.combolist').combobox();
+});
+
+$('#cancelline')
+    .button()
+    .click(function(){
+        window.location.href = 'index.php?cmd=orders&do=savenewpackage&id=SO-00000313';
+});
+</script></div>
+    </div>
+
+        
+    <br/>
+</div></div><!-- /.main -->
+<script>
+
+var tab_number = 1;
+
+
+var order_id = '';
+var item_id  = '';
+var action = '';
+var package_id = '';
+
+function confirm_delete(id, itemid){
+   $("#dialog-form").dialog("open");
+   $('#info').html('Товар будет удален из заказа. Продолжить?');
+   
+   order_id = id;
+   item_id  = itemid;
+   action = 0;
+}
+
+function confirm_cnange(id, itemid){
+   $("#dialog-form").dialog("open");
+   $('#info').html('Статус товара будет изменен, продолжить?');
+   
+   order_id = id;
+   item_id  = itemid;
+   action = 1;
+}
+
+function confirm_delete_package(id){
+   $("#dialog-form").dialog("open");
+   $('#info').html('Посылка будет удалена. Продолжить?');
+   
+   package_id = id;
+   action = 2;
+}
+
+$(function() 
+{
+    $('#tabs').tabs();
+    $( "#dialog-form:ui-dialog" ).dialog( "destroy" );
+        
+    $("#dialog-form").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons : {
+            "Да" : function() {
+                if(action == 0) delete_item(order_id, item_id);
+                if(action == 1) cnange_status(order_id, item_id);
+                if(action == 2) delete_package(package_id);
+                
+                $("#dialog-form").dialog("close");
+            },
+            "Нет" : function() {
+                $("#dialog-form").dialog("close");
+            }
+        }
+    });
+	
+}); 
+
+function delete_item(id, itemid){
+    var server_url = 'index.php?cmd=orders&sid=t4vr18lut6k7smn4np8qt7duf1&do=cancelitem&id='+id+'&itemid='+itemid;
+    
+    $.ajax({
+        url: server_url,
+        success: function(data) {
+            if (data == 'RELOGIN') location.href='index.php?expired';
+            
+            if (data == 'Ok'){
+                $('#item' + itemid).hide();
+                $('#itemcom' + itemid).hide();
+                clear_error();
+            } else {
+                $('#error').html('Произошла ошибка ' + data);
+            }
+        },
+        error: function() {
+            $('#error').html('Произошла ошибка ');
+        }
+    });
+} 
+
+function delete_package(id){
+    var server_url = 'index.php?cmd=orders&sid=t4vr18lut6k7smn4np8qt7duf1&do=deletepackage&id='+id;
+    
+    $.ajax({
+        url: server_url,
+        success: function(data) {
+            if (data == 'RELOGIN') location.href='index.php?expired';
+            
+            if (data == 'Ok'){
+                $('#package' + id).hide();
+                clear_error();
+            } else {
+                $('#error').html('Произошла ошибка ' + data);
+            }
+        },
+        error: function() {
+            $('#error').html('Произошла ошибка!');
+        }
+    });
+} 
+
+function cnange_status(id, itemid){
+    //alert($("#opcom" + itemid).val());
+    //alert($("#qty" + itemid).html());
+    //alert($("#status" + itemid +" option:selected").text());
+    var qty = $("#qty" + itemid).html();
+    var comment = $("#opcom" + itemid).val();
+    var status  = $("#status" + itemid +" option:selected").val();
+    if(status == '') status = $("#curstatusid" + itemid).html();
+    var server_url = 'index.php?cmd=orders&sid=t4vr18lut6k7smn4np8qt7duf1&do=changestatus&id='+id+
+        '&itemid='+itemid+'&status='+status+'&comment='+comment+'&qty='+qty;
+    
+    $.ajax({
+        url: server_url,
+        success: function(data) {
+            if (data == 'RELOGIN') location.href='index.php?expired';
+            if (data == 'Ok'){ 
+                var new_status = $("#status" + itemid +" option:selected").text();
+                $('#curstatus' + itemid).html(new_status);
+                clear_error();
+            } else {
+                $('#error').html('Произошла ошибка ' + data);
+            }
+        },
+        error: function() {
+            $('#error').html('Произошла ошибка ');
+        }
+    });
+}
+
+function clear_error()
+{
+     $('#error').html('');
+}
+
+</script>
+
+
+</div>
+
+<div id="foot">
+    <a href="http://opentao.ru/" target="_blank">(C) 2011 - 2012 opentao.ru</a>
+
+</div>
+
+</body>
+</html>	<!-- {{ отладочная информация --><hr><div align="left"><pre>Время основной сборки страницы: 5.87477 сек<br>    [2012-06-06 13:33:35] OTAPIlib->GetSalesOrderDetailsForOperator — 1.37 сек.<br> X-Opentao-RequestHandleTime: 1029,602<br>|    1032,831ms = OtapiService: Service call<br><br><br>    [2012-06-06 13:33:38] OTAPIlib->GetSalesPackageList — 1.04 сек.<br> X-Opentao-RequestHandleTime: 826,802<br>|     823,803ms = OtapiService: Service call<br><br><br>    [2012-06-06 13:33:37] OTAPIlib->GetLineAvailableStatusList — 0.97 сек.<br> X-Opentao-RequestHandleTime: 748,801<br>|     742,644ms = OtapiService: Service call<br><br><br>    [2012-06-06 13:33:36] OTAPIlib->GetSalesProcessLog — 0.96 сек.<br> X-Opentao-RequestHandleTime: 717,601<br>|     715,333ms = OtapiService: Service call<br><br><br>    [2012-06-06 13:33:33] OTAPIlib->GetWebUISettings — 0.75 сек.<br> X-Opentao-RequestHandleTime: 405,601<br>|     409,828ms = OtapiService: Service call (overhead: 35,773ms)<br>||      35,973ms = ISettingsStorage: GetWebUISettings<br>||     338,083ms = IGoblin: TranslateTextPackageByKeys (overhead: 9,544ms)<br>|||     328,538ms = GoblinService: Service call (overhead: 1,118ms)<br>||||      14,032ms = Linq2Sql: Get translate<br>||||       0,000ms = Goblin Say: Found Translates in DB: 0 / 5<br>||||     313,389ms = Translator: TranslateTextPackage<br>||||       0,000ms = Goblin Say: Translated texts: 5 / 5<br><br><br>    [2012-06-06 13:33:34] OTAPIlib->GetWebUISettings — 0.74 сек.<br> X-Opentao-RequestHandleTime: 421,201<br>|     405,805ms = OtapiService: Service call (overhead: 36,787ms)<br>||     145,125ms = ISettingsStorage: GetWebUISettings<br>||     223,894ms = IGoblin: TranslateTextPackageByKeys (overhead: 5,075ms)<br>|||     218,818ms = GoblinService: Service call (overhead: 0,784ms)<br>||||      11,442ms = Linq2Sql: Get translate<br>||||       0,000ms = Goblin Say: Found Translates in DB: 0 / 5<br>||||     206,593ms = Translator: TranslateTextPackage<br>||||       0,000ms = Goblin Say: Translated texts: 5 / 5<br><br><br>    прочее — 0.02894 сек.<br><div id='ajax_debug'></div></pre></div><!-- отладочная информация }} -->

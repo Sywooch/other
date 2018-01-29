@@ -1,0 +1,34 @@
+<table width="400px" border="1" cellpadding="5" cellspacing="0" style="font-family:'Arial'; font-size:10pt;">
+    <tr>
+        <td><%= trans.get("Date") %></td>
+        <td><%= package.get("creationdate") %></td>
+    </tr>
+    <tr>
+        <td><%= trans.get("Country") %></td>
+        <td><%= package.get("deliverycountry") %></td>
+    </tr>
+    <tr>
+        <td><%= trans.get("Postal_code") %></td>
+        <td><%= package.get("deliverypostalcode") %></td>
+    </tr>
+    <tr>
+        <td><%= trans.get("Region") %></td>
+        <td><%= package.get("deliveryregionname") %></td>
+    </tr>
+    <tr>
+        <td><%= trans.get("City") %></td>
+        <td><%= package.get("deliverycity") %></td>
+    </tr>
+    <tr>
+        <td><%= trans.get("Address") %></td>
+        <td style="font-size:9pt;"><%= package.get("deliveryaddress") %></td>
+    </tr>
+    <tr>
+        <td><%= trans.get("Customer_display_name") %></td>
+        <td><%= package.get("recipientName") %></td>
+    </tr>
+    <tr>
+        <td><%= trans.get("Phone") %></td>
+        <td><%= package.get("deliverycontactphone") %></td>
+    </tr>
+</table>

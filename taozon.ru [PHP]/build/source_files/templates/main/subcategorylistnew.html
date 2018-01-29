@@ -1,0 +1,68 @@
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+
+<!-- .main -->
+<div class="main">
+    <div class="wrap clrfix">
+        <div class="bproduct">
+            <h2 class="mb25"><span><?=Lang::get('catalog')?></span></h2>
+            <? if ($rootcats) { ?>
+                <!-- .col240 -->
+                <div class="col300 dib mr20 tpt">
+					<div class="titlecat bbn"><?= Lang::get('categories') ?></div>
+					<ul class="listitem bgr-block">
+						<? if (is_array($rootcats)) foreach ($rootcats as $cat) { ?>
+							<?
+								$active = '';
+								if($cat['id'] == $cid || in_array($cat['id'], $ids_path)){
+									$active = ' class="active"';
+								}
+							?>
+							<? if ($cat['ishidden'] == 'false') { ?>
+								<? if ($cat['isparent'] == 'false') { ?>
+									<li><a <?=$active?> href="<?=General::generateUrl('category', array_merge(array('clear'=> true), $cat) )?>"><?= $cat['name'] ?></a></li>
+								<? } else { ?>
+									<li><a <?=$active?> href="<?=General::generateUrl('subcategory', array_merge(array('clear'=> true), $cat) )?>"><?= $cat['name'] ?></a></li>
+								<? } ?>
+							<? } ?>
+						<? } ?>
+					</ul>
+                </div>
+            <? } ?>
+
+            <? if ($subcats_prev) { ?>
+                <!-- .col240 -->
+                <div class="col300 dib mr20 tpt">
+					<div class="titlecat bbn"><?= Lang::get('subcategories') ?></div>
+					<ul class="listitem bgr-block">
+						<? if (is_array($subcats)) foreach ($subcats_prev as $cat) { ?>
+							<? if ($cat['ishidden'] == 'false') { ?>
+								<? if ($cat['isparent'] == 'false') { ?>
+									<li><a href="<?=General::generateUrl('category', array_merge(array('clear'=> true), $cat) )?>"><?= $cat['name'] ?></a></li>
+								<? } else { ?>
+									<li><a <?= ($cat['id'] == $cid ? 'class="active"' : '') ?> href="<?=General::generateUrl('subcategory', array_merge(array('clear'=> true), $cat) )?>"><?= $cat['name'] ?></a></li>
+								<? } ?>
+							<? } ?>
+						<? } ?>
+					</ul>
+                </div>
+            <? } ?>
+
+            <div class="col300 dib">
+				<div class="titlecat bbn"><?= Lang::get('subcategories') ?></div>
+				<ul class="listitem bgr-block">
+					<? if (is_array($subcats)) foreach ($subcats as $cat) { ?>
+						<? if ($cat['ishidden'] == 'false') { ?>
+							<? if ($cat['isparent'] == 'false') { ?>
+								<li><a href="<?=General::generateUrl('category', array_merge(array('clear'=> true), $cat) )?>"><?= $cat['name'] ?></a></li>
+							<? } else { ?>
+								<li><a href="<?=General::generateUrl('subcategory', array_merge(array('clear'=> true), $cat) )?>"><?= $cat['name'] ?></a></li>
+							<? } ?>
+						<? } ?>
+					<? } ?>
+				</ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /.main -->

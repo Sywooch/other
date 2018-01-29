@@ -1,0 +1,11 @@
+<div class="crumbs">
+    <div class="wrap clrfix">
+        <a href="/"><?=Lang::get('home')?></a>
+        <? if ($crumbs){ 
+            foreach($crumbs as $k=>$crumb) { if($k!='last'){ ?>
+                <a href="<?=@UrlGenerator::generateContentUrl($k)?>"><?=$crumb?></a>
+            <? }} ?>
+            <span><?=$crumbs['last']?></span>
+        <? } ?>
+	</div>
+</div><!-- /.path -->

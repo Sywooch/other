@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters>
+    <predefined_paramters>
+        <parameter name='CategoryMode'>External</parameter>
+        <parameter name='IsClearItemTitles'>true</parameter>
+        <parameter name='IsOriginal'>false</parameter>
+    </predefined_paramters>
+    <parameter name='ItemTitle' request_type="get" p="search">
+        <request>search</request>
+    </parameter>
+    <parameter name='CategoryId' request_type="get">
+        <request>cid</request>
+    </parameter>
+    <parameter name='VendorId' request_type="get">
+        <request>vid</request>
+    </parameter>
+    <parameter name='MinPrice' request_type="get">
+        <request>cost</request>
+        <request>from</request>
+    </parameter>
+    <parameter name='MaxPrice' request_type="get">
+        <request>cost</request>
+        <request>to</request>
+    </parameter>
+    <parameter name='MinVendorRating' request_type="get">
+        <request>rating</request>
+        <request>from</request>
+    </parameter>
+    <parameter name='MaxVendorRating' request_type="get">
+        <request>rating</request>
+        <request>to</request>
+    </parameter>
+    <parameter name='BrandPropertyValueId' request_type="get">
+        <request>brand</request>
+    </parameter>
+    <parameter name='IsTmall' request_type="get">
+        <request>istmall</request>
+    </parameter>
+    <parameter name='IsTmall' request_type="get">
+        <request>tmall</request>
+    </parameter>
+    <parameter name='OrderBy' request_type="post_or_get">
+        <request>sort_by</request>
+    </parameter>
+</parameters>

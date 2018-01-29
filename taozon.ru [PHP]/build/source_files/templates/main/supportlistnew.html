@@ -1,0 +1,195 @@
+<div class="addform" id="dialog-form" title="<?= Lang::get('saving') ?>" style="display: none;">
+    <span id="message" ><?= Lang::get('all_changes_saved') ?></span>
+</div>
+
+<div id="dialog-confirm" title="<?=Lang::get('need_confirm')?>"  style="display: none;">
+  <?=Lang::get('sure_delete')?><span id="itemid" style="display:none;"></span>
+</div> 
+
+
+<input type="hidden" id="comment_saved" value="<?= Lang::get('comment_saved') ?>" />
+<input type="hidden" id="close" value="<?= Lang::get('close') ?>" />
+
+<div class="tabs-content" id="overlay-wrapper">
+    <!-- .supportlist -->
+    <? if (count($list)) { ?>
+        <div id="overlay"></div>
+        <table class="basket tsimple">
+            <tr>
+                <td style="width: 20px;">                        
+                    <input name="deleter_all" type="checkbox" value=""/>		
+                </td>
+                <td colspan="5" width="98%">
+                    <?/*=Lang::get('actions_with_supportlist');*/?>
+                    <div class="mb10" style="cursor:pointer;display:inline">
+                        <a class="btn-small fll" onClick="confirm('DelGroup');" style="margin-right:20px"><span><?=Lang::get('del_group')?></span></a>
+                    </div>
+                    <div class="mb10" style="cursor:pointer;display:inline">
+                        <a class="btn-small fll" onClick="add_group_to_basket();"><span><?=Lang::get('add_group_to_basket')?></span></a>
+                    </div>
+                </td>
+            </tr>
+            <? $total_sum = 0; ?>
+            <? $sign = ''; ?>
+            <? foreach ($list as $item) { ?>
+                <?
+                foreach($item['Fields'] as $field){
+                    $paramName = (string)$field['Name'];
+                    $$paramName = (string)$field['Value'];
+                }
+                ?>
+                <? $total_sum += $item['Quantity'] * (float)$item['Price']; ?>
+                <? $sign = $item['CurrencySign']; ?>
+                <tr class="del-item-1" id="item<?= $item['ItemId'] ?>">
+                    <td style="width: 20px;">                        
+                        <input name="deleter" type="checkbox" value="<?= $item['Id']; ?>"/>		
+                    </td>
+                    <td class="w80">
+                        
+                        <ul class="lproduct w80li">
+                        
+                            <li>
+                                <a href="index.php?p=item&id=<?= $item['ItemId']; ?>" class="pic">
+                                    <i><img src="<?= $PictureURL ?>_70x70.jpg"></i>
+                                    <ins></ins>
+                                </a>
+                            </li>	
+                        </ul>		
+                    </td>
+                    <td>
+                        <p class="mb5"><span class="lgray"><?= Lang::get('good_code') ?></span> <b><?= $item['ItemId']; ?></b></p>
+                        <p class="mb5"><span class="lgray"><?= Lang::get('vendor') ?></span> <b><?= $VendorId; ?></b></p>
+                        <p class="mb5"><span class="lgray"><?= Lang::get('category') ?></span> <a href="index.php?p=category&cid=<?= $CategoryId ?>"><b><?= $CategoryName ?></b></a></p>
+                        <p class="lblue"><a href="index.php?p=item&id=<?= $item['ItemId']; ?>"><b class="item-title" itemid="<?= $item['Id']; ?>"><?= $item['ItemTitle']; ?></b></a></p>
+                    </td>
+                    <td>
+                        <table class="info infoitem">
+                            <? if (isset($ItemConfiguration)) { ?>
+                                <? foreach (explode(';', $ItemConfiguration) as $cfg) { ?>
+                                    <? if ($cfg) { ?>
+                                        <tr>
+                                            <td class="lgray"><?= current(explode(':', $cfg)); ?>:</td>
+                                            <? $configArray = explode(':', $cfg); ?>
+                                            <td><b><?= end($configArray); ?></b></td>
+                                        </tr>
+                                    <? } ?>
+                                <? } ?>
+                            <? } ?>
+                            <tr>
+                                <td class="lgray"><nobr><?= Lang::get('price') ?>:</nobr></td>
+                                <td><b><span id="price-1-<?=$item['Id']?>"><?=number_format((float)$item['Price'], 2, ",", " ")?></span> <?= $item['CurrencySign'] ?></b></td>
+                            </tr>
+                        </table>
+                    </td>
+        <td>
+            <div class="calc">
+                <span class="lgray mr10"><?= Lang::get('quantity') ?>:</span>
+                <b><input type="text" value="<?= $item['Quantity'] ?>" class="w20 tar" disabled id="count-<?= $item['Id'] ?>"></b>
+                <span class="num-controls">
+                    <span class="plus unselectable" rel="count-<?= $item['Id'] ?>" itemid="<?= $item['Id']; ?>">+</span>
+                    <span class="minus unselectable" rel="count-<?= $item['Id'] ?>" itemid="<?= $item['Id']; ?>">-</span>
+                </span>
+                <span class="total bbprice" id="total-price-<?= $item['Id']; ?>"><?=number_format($item['Quantity'] * (float)$item['Price'], 2, ",", " ")." ".$item['CurrencySign']?></span>
+            </div>
+            <div class="mess_oper">
+                <label for="message" class="lgray"><?= Lang::get('comments_for_operator') ?>:</label>
+                <textarea name="" class="fs11" itemid="<?= $item['Id']; ?>"><?= $Comment ?></textarea>
+                <i class="i copy" itemid="<?= $item['Id']; ?>"></i>
+            </div>
+        </div>
+        </td>
+        <td class="w168 pr0">
+            <? $id = $item["Id"]; ?>
+            <div class="clrfix mb10"><a class="btn-small btn-delete-item fll" href="index.php?p=supportlist&del=<?= $item['Id']; ?>" item="item-1" onClick="confirm('<?= $id; ?>'); return false;"><span><?= Lang::get('drop_item') ?></span></a></div>
+            <div class="clrfix"><a class="btn-small btn-add fll add-to-basket" href="#" itemid="<?= $item['Id']; ?>"><span><?= Lang::get('to_basket') ?></span></a></div>
+            <form action="index.php" id="add-to-basket-<?= $id; ?>">
+                <input type="hidden" name="p" value="MoveItemFromNoteToBasket" />
+                <input type="hidden" name="id" value="<?= $item['Id']; ?>" />
+            </form>
+        </td>
+        </tr>
+    <? } ?>
+
+
+    <tr class="bdb0">
+        <td class="w80"></td>
+        <td></td>
+        <td></td>
+        <td>
+            <div class="bigTotal bbprice" style="width:270px;">
+                <span><?= Lang::get('total') ?>:</span>
+                <span id="price" sign="<?= $item['CurrencySign'] ?>"><?=number_format((float)$total_sum, 2, ",", " ")?> <?= $item['CurrencySign'] ?></span>
+            </div>
+        </td>
+        <td class="w168 pr0"></td>
+    </tr>
+    </table>
+<? } else { ?>
+    <h3 class="lgray tagc mt10"> <?= Lang::get('empty_list') ?>! </h3>
+<? } ?>
+<!-- /.basket -->
+</div>
+
+<!-- /.main -->
+
+
+<script type="text/javascript">
+
+var item_id = 0;
+
+$(function() 
+{
+    $("#dialog-confirm:ui-dialog").dialog("destroy");
+    $("#dialog-confirm").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons : {
+            "<?=Lang::get('yes')?>" : function() {
+				if (item_id=="DelGroup") {	
+				     var checks=document.getElementsByName("deleter");
+ 					 var checks_do="";
+					 for (i=0; i<checks.length; i++){
+   						 if (checks[i].checked){
+       					    checks_do=checks_do+checks[i].value+"|";	   
+    					 }
+ 					 }
+ 					checks_do=checks_do.substring(0, checks_do.length - 1); 					
+                    document.location.href = "index.php?p=supportlist&delGroup="+checks_do;
+				} else { 
+				    document.location.href = 'index.php?p=supportlist&del=' + item_id;
+				}
+            },
+            "<?=Lang::get('no')?>" : function() {
+                $(this).dialog("close");
+            }
+        }
+    });
+
+    $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+    $( "#dialog-form" ).dialog({
+        autoOpen: false,
+        width:210,
+        height:160,
+        modal: true,
+        buttons: {
+            "<?=Lang::get('close')?>": function() {
+                $( this ).dialog( "close" );
+            }
+        }
+    });
+});
+
+function confirm(id) { 
+    item_id = id;
+	if (item_id=="DelGroup") {
+	  $("#dialog-confirm").html("<?=Lang::get('sure_delete_group')?><span id='itemid' style='display:none;'></span>");
+	} else {
+	  $("#dialog-confirm").html("<?=Lang::get('sure_delete')?><span id='itemid' style='display:none;'></span>");
+    }
+    $("#dialog-confirm").dialog("open");
+    return false;
+}
+
+
+</script>

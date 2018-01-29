@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="rsshipment" >
+    <name>rsSHIPMENT_WEIGHT_COUNTRIES</name>
+    <creationDate>April 2012</creationDate>
+    <author>The retinashop Development Team</author>
+    <authorUrl>http://www.retinashop.net</authorUrl>
+    <copyright>Copyright (C) 2004-2012 retinashop Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>2.0.6</version>
+    <description>rsSHIPMENT_WEIGHT_COUNTRIES_PLUGIN_DESC</description>
+    <languages>
+	<language tag="en-GB">en-GB.plg_rsshipment_weight_countries.ini</language>
+    </languages>
+    <files>
+	<filename plugin="weight_countries">weight_countries.php</filename>
+	<folder>weight_countries</folder>
+    </files>
+    <params addpath="/admin/components/com_retinashop/elements">
+	<param type="rsjpluginwarning" />
+	<param type="spacer" default="rsSHIPMENT_WEIGHT_COUNTRIES_PLUGIN" level="level1" />
+	<param	name="shipment_logos" type="rsfiles" label="rsSHIPMENT_WEIGHT_COUNTRIES_LOGOS"
+             	description="rsSHIPMENT_WEIGHT_COUNTRIES_LOGOS_DESC"
+             	directory="/images/stories/retinashop/shipment"
+             	default="default" hide_default="1" hide_none="1"
+             	stripext="0"   exclude="^_" />
+	<param name="countries" type="rscountries"  scope="com_retinashop" default="" label="rsSHIPMENT_WEIGHT_COUNTRIES_COUNTRIES" description="rsSHIPMENT_WEIGHT_COUNTRIES_COUNTRIES_DESC"/>
+	<param name="zip_start" type="text" size="10" default="" label="rsSHIPMENT_WEIGHT_COUNTRIES_ZIP_START" description="rsSHIPMENT_WEIGHT_COUNTRIES_ZIP_START_DESC"/>
+	<param name="zip_stop" type="text" size="10" default="" label="rsSHIPMENT_WEIGHT_COUNTRIES_ZIP_STOP" description="rsSHIPMENT_WEIGHT_COUNTRIES_ZIP_STOP_DESC"/>
+	<param name="weight_start" type="text" size="10" default="" label="rsSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_START" description="rsSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_START_DESC"/>
+	<param name="weight_stop" type="text" size="10" default="" label="rsSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_STOP" description="rsSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_STOP_DESC"/>
+	<param name="weight_unit" type="rsweightunit" size="10" default="" label="rsSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT" description="rsSHIPMENT_WEIGHT_COUNTRIES_WEIGHT_UNIT_DESC"/>
+	<param name="nbproducts_start" type="text" size="10" default="" label="rsSHIPMENT_WEIGHT_COUNTRIES_NBPRODUCTS_START" description="rsSHIPMENT_WEIGHT_COUNTRIES_NBPRODUCTS_START_DESC"/>
+	<param name="nbproducts_stop" type="text" size="10" default="" label="rsSHIPMENT_WEIGHT_COUNTRIES_NBPRODUCTS_STOP" description="rsSHIPMENT_WEIGHT_COUNTRIES_NBPRODUCTS_STOP_DESC"/>
+	<param name="orderamount_start" type="text" size="10" default="" label="rsSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_START" description="rsSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_START_DESC"/>
+	<param name="orderamount_stop" type="text" size="10" default="" label="rsSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_STOP" description="rsSHIPMENT_WEIGHT_COUNTRIES_ORDERAMOUNT_STOP_DESC"/>
+
+	<param name="cost" type="text"   label="rsSHIPMENT_WEIGHT_COUNTRIES_COST" description="rsSHIPMENT_WEIGHT_COUNTRIES_COST_DESC" />
+	<param name="package_fee" type="text"   label="rsSHIPMENT_WEIGHT_COUNTRIES_PACKAGE_FEE" description="rsSHIPMENT_WEIGHT_COUNTRIES_PACKAGE_FEE_DESC" />
+	<param name="tax_id" type="rstaxes" scope="com_retinashop"  label="rsSHIPMENT_WEIGHT_COUNTRIES_TAX" description="rsSHIPMENT_WEIGHT_COUNTRIES_TAX_DESC" />
+	<param name="free_shipment" type="text"    label="rsSHIPMENT_WEIGHT_COUNTRIES_FREE_SHIPPING_AMOUNT" description="rsSHIPMENT_WEIGHT_COUNTRIES_FREE_SHIPPING_AMOUNT_DESC" />
+    </params>
+
+</install>

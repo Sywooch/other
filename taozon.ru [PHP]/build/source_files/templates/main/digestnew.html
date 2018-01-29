@@ -1,0 +1,25 @@
+<div class="bigtitle"><div class="wrap clrfix">
+        <h1><?=Lang::get('digest')?></h1>
+    </div></div>	
+
+<!-- .main -->
+<div class="main"><div class="wrap clrfix">
+		<div class="digest-menu">
+			<div><?=Lang::get('digest_categories')?></div>
+			<ul>
+			<? foreach ($digestCats as $cat) {?>
+				<li><h3><a href="?p=digest&cat=<?=$cat['cid']?>"><?=$cat['title']?></a></h3></li>
+			<? } ?>
+		</ul>
+		</div>
+		<? if(is_array($digest)) { foreach ($digest as $post) { ?>
+		<div class="left"><a href="?p=post&id=<?=$post['id']?>"><img src="<?=$post['image']?>"></a></div>
+		<div class="right">
+			<p><?=$post['created']?></p>
+			<h3><a href="?p=post&id=<?=$post['id']?>"><?=$post['title']?></a></h3></div>
+			<?
+			} } else { ?>
+		<span><?=Lang::get('no_posts')?></span>
+		<? } ?>
+</div></div>
+<!-- /.main -->

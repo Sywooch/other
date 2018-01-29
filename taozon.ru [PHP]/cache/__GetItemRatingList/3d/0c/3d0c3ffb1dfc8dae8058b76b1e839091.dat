@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OtapiItemInfoRatingListAnswer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://services.opentao.net">
+  <ErrorCode>Ok</ErrorCode>
+  <SubErrorCode/>
+  <RequestTimeStatistic>131.340 = {OtapiService} Service call (overhead: 0.179)
+  0.037 = |-{Otapi} Create core
+  0.075 = |-{Otapi} AccumulateCallCount (overhead: 0.034)
+  0.002 = |-|-{Otapi} Create dependency Counter
+  0.039 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+  0.044 = |-{Otapi} AccumulateCallCount (overhead: 0.016)
+  0.028 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+117.445 = |-{Otapi} AccumulateCallCount (overhead: 0.035)
+  0.030 = |-|-[2 **] {BufferedCounter} Get counter data from Buffer
+117.358 = |-|-{Service client call} Counter.SetCounters
+          |-|-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+  0.021 = |-|-{BufferedCounter} Get counter data from Buffer
+  0.056 = |-{Otapi} AccumulateCallCount (overhead: 0.019)
+  0.037 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+  0.002 = |-{Otapi} Create dependency ItemRedLightsStreet
+ 13.503 = |-{Service client call} ItemRedLightsStreet.GetItemRatingListFrame (overhead: 7.345)
+          |-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+  6.159 = |-|-{ItemRedLightsStreetService} Service call (overhead: 6.149)
+  0.009 = |-|-|-{ORM} Get rating list (result size = 0)
+Time distribution: database = 0.009 (0.0%), interservice = 7.345 (5.6%), other = 123.987 (94.4%), Otapi = 0.479 (0.4%), Counter = 117.358 (89.4%), ItemRedLightsStreet = 6.159 (4.7%)
+Debug info process time: 0.117
+</RequestTimeStatistic>
+  <Content>
+    <Content/>
+  </Content>
+</OtapiItemInfoRatingListAnswer>

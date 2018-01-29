@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BatchUserDataAnswer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://services.opentao.net">
+  <ErrorCode>Ok</ErrorCode>
+  <SubErrorCode/>
+  <RequestTimeStatistic>94.565 = {OtapiService} Service call (overhead: 0.099)
+ 0.048 = |-{Otapi} Create core
+ 0.080 = |-{Otapi} AccumulateCallCount (overhead: 0.033)
+ 0.002 = |-|-{Otapi} Create dependency Counter
+ 0.044 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.048 = |-{Otapi} AccumulateCallCount (overhead: 0.018)
+ 0.030 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+94.290 = |-{Batch} Run tasks (overhead: 0.045)
+40.526 = |-|-{Batch} Get BasketSummary block (overhead: 0.647)
+ 0.985 = |-|-|-{Service client call} PublicAccountManager.GetUserKeyBySessionId (overhead: 0.964)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.021 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.014)
+ 0.007 = |-|-|-|-|-{Logic} Create core
+12.947 = |-|-|-{Service client call} ItemsCollector.GetCollection (overhead: 1.236)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+11.712 = |-|-|-|-{ItemsCollectorService} Service call (overhead: 0.203)
+ 0.070 = |-|-|-|-|-{ORM} Create DataContext
+ 4.595 = |-|-|-|-|-{ORM} Find collections by userKey, instanceKey, collectionTypeId (found)
+ 6.844 = |-|-|-|-|-{ORM} Get collection's elements (result size = 3)
+ 1.763 = |-|-|-{Service client call} MoneyChanger.GetCurrencies (overhead: 1.693)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+ 0.070 = |-|-|-|-{MoneyChangerService} Service call
+ 2.180 = |-|-|-{Service client call} SettingsManager.GetPriceFormationGroupListByCategoryIdList (overhead: 2.031)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.150 = |-|-|-|-{SettingsManagerService} Service call
+ 2.993 = |-|-|-{Service client call} SettingsManager.FindDiscountGroup (overhead: 2.892)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.102 = |-|-|-|-{SettingsManagerService} Service call
+ 2.063 = |-|-|-{Service client call} MoneyChanger.ConvertMoneyListToDisplayedList (overhead: 1.942)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+ 0.121 = |-|-|-|-{MoneyChangerService} Service call (overhead: 0.094)
+ 0.028 = |-|-|-|-|-{MoneyChangeBuilder} DoBuild ListDictionary
+ 5.244 = |-|-|-{Service client call} SettingsManager.GetPriceFormationSettings (overhead: 5.126)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.118 = |-|-|-|-{SettingsManagerService} Service call
+ 2.534 = |-|-|-{Service client call} SettingsManager.GetCollectionPriceFormationGroup (overhead: 2.373)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.161 = |-|-|-|-{SettingsManagerService} Service call
+ 3.294 = |-|-|-{Service client call} ProvidersDirector.GetProviderInfo (overhead: 1.947)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 1.347 = |-|-|-|-{ProvidersDirectorService} Service call (overhead: 0.092)
+ 0.001 = |-|-|-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+ 0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+         |-|-|-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+ 0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency Goblin
+ 1.249 = |-|-|-|-|-{Data translate} Value provider is ProviderInfoContextedValueProvider (overhead: 0.035)
+ 1.214 = |-|-|-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.054)
+         |-|-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.159 = |-|-|-|-|-|-|-{GoblinService} Service call (overhead: 0.097)
+         |-|-|-|-|-|-|-|-{For Counter} Goblin:Input text length:6
+         |-|-|-|-|-|-|-|-{Goblin Say} langFrom en, langTo ru
+ 0.004 = |-|-|-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+ 0.049 = |-|-|-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.013)
+ 0.014 = |-|-|-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+ 0.004 = |-|-|-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+ 0.016 = |-|-|-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+ 0.003 = |-|-|-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+ 0.007 = |-|-|-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.006)
+ 0.002 = |-|-|-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 0)
+ 0.002 = |-|-|-|-|-|-|-|-{Goblin} TranslateHtml
+         |-|-|-|-|-|-|-|-{Goblin Say} Found Translates in DB: 1 / 1
+ 5.876 = |-|-|-{Service client call} ProvidersDirector.GetCategoryInfoList (overhead: 1.712)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 4.164 = |-|-|-|-{ProvidersDirectorService} Service call (overhead: 0.467)
+ 0.001 = |-|-|-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+ 0.008 = |-|-|-|-|-{ORM} Get categories by local ids (result size = 2)
+ 0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+         |-|-|-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+ 2.287 = |-|-|-|-|-{Service client call} TopapiAdapter.GetCategoryInfoList (overhead: 1.293)
+         |-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.994 = |-|-|-|-|-|-{CachedTopapiAdapterService} Service call (overhead: 0.048)
+ 0.029 = |-|-|-|-|-|-|-{CachedTopapiAdapter} Create core (overhead: 0.028)
+ 0.001 = |-|-|-|-|-|-|-|-{CachedTopapiAdapter} Create dependency TopapiAdapter
+         |-|-|-|-|-|-|-{For Counter} CachedTopapiAdapter::1
+ 0.002 = |-|-|-|-|-|-|-{ORM} Get deleted TopapiIds (result size = 0)
+ 0.916 = |-|-|-|-|-|-|-{CategoryWorkInfoController} SetCachedWorkItems (overhead: 0.102)
+ 0.814 = |-|-|-|-|-|-|-|-{ORM} Get CachedCategory elements (result size = 1)
+ 0.032 = |-|-|-|-|-{Logic} FixParentIdsToInternal (overhead: 0.031)
+ 0.002 = |-|-|-|-|-|-{ORM} Get categories candidates by provider id (result size = 0)
+ 0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency Goblin
+         |-|-|-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+ 1.362 = |-|-|-|-|-{Data translate} Value provider is ListContextedValueProvider&lt;OtapiCategory&gt; (overhead: 0.032)
+ 1.331 = |-|-|-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.153)
+         |-|-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.178 = |-|-|-|-|-|-|-{GoblinService} Service call (overhead: 0.090)
+         |-|-|-|-|-|-|-|-{For Counter} Goblin:Input text length:43
+         |-|-|-|-|-|-|-|-{Goblin Say} langFrom zh-chs, langTo ru
+ 0.004 = |-|-|-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+ 0.065 = |-|-|-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.012)
+ 0.022 = |-|-|-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+ 0.003 = |-|-|-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+ 0.024 = |-|-|-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+ 0.003 = |-|-|-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+ 0.016 = |-|-|-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.010)
+ 0.006 = |-|-|-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 0)
+ 0.003 = |-|-|-|-|-|-|-|-{Goblin} TranslateHtml
+         |-|-|-|-|-|-|-|-{Goblin Say} Found Translates in DB: 3 / 3
+52.204 = |-|-{Batch} Get NoteSummary block (overhead: 5.110)
+ 0.006 = |-|-|-{Otapi} Create dependency ItemsCollector
+ 1.352 = |-|-|-{Service client call} PublicAccountManager.GetUserKeyBySessionId (overhead: 1.323)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.029 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.019)
+ 0.010 = |-|-|-|-|-{Logic} Create core
+ 3.077 = |-|-|-{Service client call} ItemsCollector.GetCollection (overhead: 3.053)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.024 = |-|-|-|-{ItemsCollectorService} Service call
+ 0.006 = |-|-|-{Otapi} Create dependency MoneyChanger
+ 2.003 = |-|-|-{Service client call} MoneyChanger.GetCurrencies (overhead: 1.934)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+ 0.069 = |-|-|-|-{MoneyChangerService} Service call
+ 0.004 = |-|-|-{Otapi} Create dependency SettingsManager
+ 2.482 = |-|-|-{Service client call} SettingsManager.GetPriceFormationGroupListByCategoryIdList (overhead: 2.295)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.187 = |-|-|-|-{SettingsManagerService} Service call
+ 1.684 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.638)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.046 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.022)
+ 0.012 = |-|-|-|-|-{Logic} Create core
+ 0.012 = |-|-|-|-|-{Logic} Check session
+ 2.052 = |-|-|-{Service client call} SettingsManager.FindDiscountGroup (overhead: 1.901)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.151 = |-|-|-|-{SettingsManagerService} Service call
+ 0.003 = |-|-|-{Otapi} Create dependency PriceFormation
+ 3.822 = |-|-|-{Service client call} MoneyChanger.ConvertMoneyListToDisplayedList (overhead: 3.616)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+ 0.206 = |-|-|-|-{MoneyChangerService} Service call (overhead: 0.089)
+ 0.117 = |-|-|-|-|-{MoneyChangeBuilder} DoBuild ListDictionary
+ 2.069 = |-|-|-{Service client call} SettingsManager.GetPriceFormationSettings (overhead: 1.913)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.157 = |-|-|-|-{SettingsManagerService} Service call
+ 2.333 = |-|-|-{Service client call} SettingsManager.GetCollectionPriceFormationGroup (overhead: 2.176)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.157 = |-|-|-|-{SettingsManagerService} Service call
+ 0.004 = |-|-|-{Otapi} Create dependency ProvidersDirector
+ 3.483 = |-|-|-{Service client call} ProvidersDirector.GetProviderInfo (overhead: 1.944)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 1.539 = |-|-|-|-{ProvidersDirectorService} Service call (overhead: 0.096)
+ 0.002 = |-|-|-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+ 0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+         |-|-|-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+ 0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency Goblin
+ 1.435 = |-|-|-|-|-{Data translate} Value provider is ProviderInfoContextedValueProvider (overhead: 0.039)
+ 1.396 = |-|-|-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.171)
+         |-|-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.226 = |-|-|-|-|-|-|-{GoblinService} Service call (overhead: 0.140)
+         |-|-|-|-|-|-|-|-{For Counter} Goblin:Input text length:6
+         |-|-|-|-|-|-|-|-{Goblin Say} langFrom en, langTo ru
+ 0.006 = |-|-|-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+ 0.069 = |-|-|-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.013)
+ 0.021 = |-|-|-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+ 0.004 = |-|-|-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+ 0.028 = |-|-|-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+ 0.004 = |-|-|-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+ 0.009 = |-|-|-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.007)
+ 0.002 = |-|-|-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 0)
+ 0.002 = |-|-|-|-|-|-|-|-{Goblin} TranslateHtml
+         |-|-|-|-|-|-|-|-{Goblin Say} Found Translates in DB: 1 / 1
+22.715 = |-|-|-{Service client call} ProvidersDirector.GetCategoryInfoList (overhead: 2.142)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+20.573 = |-|-|-|-{ProvidersDirectorService} Service call (overhead: 0.852)
+ 0.001 = |-|-|-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+ 0.014 = |-|-|-|-|-{ORM} Get categories by local ids (result size = 11)
+ 0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+         |-|-|-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+ 2.964 = |-|-|-|-|-{Service client call} TopapiAdapter.GetCategoryInfoList (overhead: 1.483)
+         |-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 1.481 = |-|-|-|-|-|-{CachedTopapiAdapterService} Service call (overhead: 0.086)
+ 0.025 = |-|-|-|-|-|-|-{CachedTopapiAdapter} Create core (overhead: 0.024)
+ 0.001 = |-|-|-|-|-|-|-|-{CachedTopapiAdapter} Create dependency TopapiAdapter
+         |-|-|-|-|-|-|-{For Counter} CachedTopapiAdapter::1
+ 0.007 = |-|-|-|-|-|-|-{ORM} Get deleted TopapiIds (result size = 0)
+ 1.363 = |-|-|-|-|-|-|-{CategoryWorkInfoController} SetCachedWorkItems (overhead: 0.172)
+ 1.191 = |-|-|-|-|-|-|-|-{ORM} Get CachedCategory elements (result size = 22)
+ 0.073 = |-|-|-|-|-{Logic} FixParentIdsToInternal (overhead: 0.064)
+ 0.009 = |-|-|-|-|-|-[4 ****] {ORM} Get categories candidates by provider id (result size = 0)
+ 0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency Goblin
+         |-|-|-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+16.664 = |-|-|-|-|-{Data translate} Value provider is ListContextedValueProvider&lt;OtapiCategory&gt; (overhead: 0.082)
+16.582 = |-|-|-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.445)
+         |-|-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+15.137 = |-|-|-|-|-|-|-{GoblinService} Service call (overhead: 0.162)
+         |-|-|-|-|-|-|-|-{For Counter} Goblin:Input text length:310
+         |-|-|-|-|-|-|-|-{Goblin Say} langFrom zh-chs, langTo ru
+ 0.016 = |-|-|-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+ 0.379 = |-|-|-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.026)
+ 0.191 = |-|-|-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+ 0.017 = |-|-|-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+ 0.120 = |-|-|-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+ 0.024 = |-|-|-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+14.573 = |-|-|-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.060)
+ 0.013 = |-|-|-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 2)
+14.501 = |-|-|-|-|-|-|-|-|-{CounterTranslator} TranslateTextPackage (overhead: 0.022)
+         |-|-|-|-|-|-|-|-|-|-{For Counter} Translator:Input text length:4
+14.479 = |-|-|-|-|-|-|-|-|-|-{ITranslator} TranslateTextPackage (overhead: 0.087)
+ 0.006 = |-|-|-|-|-|-|-|-|-|-|-{CharacterwiseDictionaryTranslator} Translate text by 'client' dictionary
+         |-|-|-|-|-|-|-|-|-|-|-{TextPartCollections} AnyFound: 0, All: 2
+         |-|-|-|-|-|-|-|-|-|-|-{TextParts} Found: 0, All: 2
+ 0.011 = |-|-|-|-|-|-|-|-|-|-|-[2 **] {CharacterwiseDictionaryTranslator} Translate text by 'opentao' dictionary
+         |-|-|-|-|-|-|-|-|-|-|-{TextPartCollections} AnyFound: 0, All: 2
+         |-|-|-|-|-|-|-|-|-|-|-{TextParts} Found: 0, All: 2
+14.376 = |-|-|-|-|-|-|-|-|-|-|-{SelectLanguageTranslator} TranslateTextPackage (overhead: 0.026)
+         |-|-|-|-|-|-|-|-|-|-|-|-{SelectLanguageTranslator} External name langFrom/langTo: zh-chs/ru
+ 1.366 = |-|-|-|-|-|-|-|-|-|-|-|-{Goblin} Create dependency Translator
+12.983 = |-|-|-|-|-|-|-|-|-|-|-|-{Service client call} Translator.TranslateTextPackage
+         |-|-|-|-|-|-|-|-|-|-|-|-|-{Logic} Parse input texts
+         |-|-|-|-|-|-|-|-|-|-|-|-|-{DB} Get translates from cache
+         |-|-|-|-|-|-|-|-|-|-|-|-|-{External} Translate texts
+ 0.007 = |-|-|-|-|-|-|-|-{Goblin} TranslateHtml
+         |-|-|-|-|-|-|-|-{Goblin Say} Found Translates in DB: 31 / 33
+         |-|-|-|-|-|-|-|-{Goblin Say} Translated texts (2 unique): 2 / 33
+ 1.514 = |-|-{Batch} Get UserStatus block (overhead: 0.016)
+ 0.004 = |-|-|-{Otapi} Create dependency PublicAccountManager
+ 1.495 = |-|-|-{Service client call} PublicAccountManager.GetUserStatusInfo (overhead: 1.450)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.045 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.020)
+ 0.011 = |-|-|-|-|-{Logic} Create core
+ 0.013 = |-|-|-|-|-{Logic} Check session
+Time distribution: database = 13.577 (14.4%), interservice = 54.896 (58.1%), logic = 0.375 (0.4%), other = 25.717 (27.2%), Otapi = 6.120 (6.5%), PublicAccountManager = 0.141 (0.1%), ItemsCollector = 11.736 (12.4%), MoneyChanger = 0.466 (0.5%), SettingsManager = 1.182 (1.2%), ProvidersDirector = 1.850 (2.0%), Goblin = 2.717 (2.9%), CachedTopapiAdapter = 2.475 (2.6%), Translator = 12.983 (13.7%)
+Debug info process time: 0.919
+</RequestTimeStatistic>
+  <Result>
+    <Status>
+      <IsSessionExpired>false</IsSessionExpired>
+      <Info>
+        <Login>Valery</Login>
+        <Id>131692</Id>
+      </Info>
+    </Status>
+    <NoteSummary>
+      <TotalCount>40</TotalCount>
+      <TotalPrice>
+        <OriginalPrice>10342.21</OriginalPrice>
+        <MarginPrice>14396.1</MarginPrice>
+        <ConvertedPriceList>
+          <Internal Sign="руб." Code="RUB">105262.4</Internal>
+          <DisplayedMoneys>
+            <Money Sign="руб." Code="RUB">105262.4</Money>
+          </DisplayedMoneys>
+        </ConvertedPriceList>
+      </TotalPrice>
+    </NoteSummary>
+    <BasketSummary>
+      <TotalCount>3</TotalCount>
+      <TotalPrice>
+        <OriginalPrice>158.00</OriginalPrice>
+        <MarginPrice>258.2</MarginPrice>
+        <ConvertedPriceList>
+          <Internal Sign="руб." Code="RUB">1888.1</Internal>
+          <DisplayedMoneys>
+            <Money Sign="руб." Code="RUB">1888.1</Money>
+          </DisplayedMoneys>
+        </ConvertedPriceList>
+      </TotalPrice>
+    </BasketSummary>
+  </Result>
+</BatchUserDataAnswer>

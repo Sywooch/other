@@ -1,0 +1,108 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'default')?>"><?=LangAdmin::get('Configuration')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'system')?>"><?=LangAdmin::get('system')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('general')?></li>
+</ul><!--/.breadcrumb-->
+
+<? require TPL_ABSOLUTE_PATH . 'site_config/inc/tabs.php'; ?>
+
+<script>
+    InlineFields = new Backbone.Collection;
+</script>
+<? XEditableFields::Init('system', $PageUrl); ?>
+
+<!-- ot-sub-sub-nav -->
+<div class="tabbable ot_sub_sub_nav">
+    <ul class="nav nav-pills">
+        <li <? if($PageUrl->GetAction() == 'system'){ ?>class="active"<?} ?>>
+            <a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'system')?>">
+            <?=LangAdmin::get('General')?>
+            </a>
+        </li>
+<!--
+        <li <? if($PageUrl->GetCmd() == 'cache'){ ?>class="active"<?} ?>>
+            <a href="<?=$PageUrl->AssignCmdAndDo('CacheSettings', 'default')?>">
+                <?=LangAdmin::get('Caching')?>
+            </a>
+        </li>
+-->
+        <li <? if($PageUrl->GetCmd() == 'Update'){ ?>class="active"<?} ?>>
+            <a href="<?=$PageUrl->AssignCmdAndDo('Update', 'default')?>">
+                <?=LangAdmin::get('Update')?>
+            </a>
+        </li>
+    </ul>
+    
+    
+</div><!-- /ot-sub-sub-nav -->
+
+<h1><?=LangAdmin::get('general')?></h1>
+
+<!-- caching configuration -->
+<div class="well">
+
+    <form class="form-horizontal inline_editable_form ot_form">
+            <div class="row-fluid">
+
+                <fieldset class="span6">
+
+                    <div data-field="show_debug"></div>
+                    <? XEditableFields::Register('show_debug', General::getConfigValue('show_debug')); ?>
+
+                    <div data-field="site_temporary_unavailable"></div>
+                    <? XEditableFields::Register('site_temporary_unavailable', General::getConfigValue('site_temporary_unavailable')); ?>
+
+                    <div data-field="auth_capcha_admin"></div>
+                    <? XEditableFields::Register('auth_capcha_admin', General::getConfigValue('auth_capcha_admin')); ?>
+
+                </fieldset>
+
+
+                <fieldset class="span6">
+
+                    <legend class="legend-mini"><?=LangAdmin::get('Item_comments')?></legend>
+
+                    <div data-field="site_admin_email"></div>
+                    <? XEditableFields::Register('site_admin_email', General::getConfigValue('site_admin_email'), array('placeholder' => 'example@domain.tld')); ?>
+
+                    <div data-field="site_email"></div>
+                    <? XEditableFields::Register('site_email', General::getConfigValue('site_email'), array('placeholder' => 'example@domain.tld')); ?>
+                    
+                    <div data-field="notification_send_from_name"></div>
+                    <? XEditableFields::Register('notification_send_from_name', General::getConfigValue('notification_send_from_name'), array('placeholder' => LangAdmin::get('notification_send_from_name_hint'))); ?>
+                    
+                </fieldset>
+                
+                <? if (General::checkPHPVersion('5.3.0')) { ?>
+                <fieldset class="span6">
+
+                    <legend class="legend-mini"><?=LangAdmin::get('Smtp_mailer_settings')?></legend>
+
+                    <div data-field="email_smtp_adress"></div>
+                    <? XEditableFields::Register('email_smtp_adress', General::getConfigValue('email_smtp_adress'), array('placeholder' => 'gmail.com')); ?>
+
+                    <div data-field="email_smtp_port"></div>
+                    <? XEditableFields::Register('email_smtp_port', General::getNumConfigValue('email_smtp_port'), array('placeholder' => '8080', 'inputClass' => 'numeric')); ?>
+                    
+                    <div data-field="email_smtp_user"></div>
+                    <? XEditableFields::Register('email_smtp_user', General::getConfigValue('email_smtp_user'), array('placeholder' => LangAdmin::get('Login'))); ?>
+                    
+                    <div data-field="email_smtp_pass"></div>
+                    <? XEditableFields::Register('email_smtp_pass', General::getConfigValue('email_smtp_pass'), array('placeholder' => '********')); ?>
+                                                           
+                    <div data-field="email_smtp_security"></div>
+                    <? XEditableFields::Register('email_smtp_security', General::getConfigValue('email_smtp_security')); ?>
+                </fieldset>
+                <? } ?>
+            </div>
+
+        </form>
+
+</div>
+
+<script>
+    InlineFields.add(<?=json_encode(XEditableFields::GetFields())?>);
+</script>
+<? ScriptIncluder::AddCustomScript('js/ot-render-template.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-inline.editable.init.js'); ?>

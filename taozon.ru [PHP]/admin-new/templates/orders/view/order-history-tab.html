@@ -1,0 +1,14 @@
+
+<h3>История изменений заказа</h3>
+
+<? if (! empty($order->processlog)) { ?>
+<dl class="dl-horizontal dl-ot-horizontal dl-horizontal-large">
+    <dt><?=LangAdmin::get('Date')?></dt>
+    <dd><strong><?=LangAdmin::get('Status')?></strong></dd>
+
+    <? foreach ($order->processlog as $record) { ?>
+    <dt><?=date('d.m.Y', strtotime($record->logdate))?> <span class="muted font-11 weight-normal">(<?=date('H:i:s', strtotime($record->logtime))?>)</span></dt>
+    <dd><!--<?=$record->prevvalue?> → --><?=$record->newvalue?></dd>
+    <? } ?>
+</dl>
+<? } ?>

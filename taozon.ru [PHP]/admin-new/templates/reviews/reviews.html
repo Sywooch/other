@@ -1,0 +1,74 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignDo('default')?>" class="muted"><?=LangAdmin::get('Catalog')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('reviews', 'default')?>" class="muted"><?=LangAdmin::get('reviews::Products_reviews')?></a></li>
+</ul><!--/.breadcrumb-->
+
+<?=TabsGenerator::GetTabs('templates/catalog/navigation/tabs.xml', $PageUrl)?>
+
+<h1><?=LangAdmin::get('reviews::Products_reviews')?></h1>
+
+<div class="reviews_wrapper">
+<div class="row-fluid">
+
+    <div class="span6">
+            <button class="btn btn-tiny accept-items-btn" title="<?=LangAdmin::get('reviews::Accept_selected_reviews')?>"><span class="text-success"><i class="icon-ok"></i> <?=LangAdmin::get('reviews::Accept')?></span></button>
+            <!-- button preloading  state -->
+            <!--<button class="btn btn-tiny disabled" title="Утвердить выбранные отзывы"><i class="ot-preloader-micro"></i> Утвердить</button>-->
+
+            <button class="btn btn-tiny delete-items-btn" title="<?=LangAdmin::get('reviews::Delete_selected_reviews')?>"><span class="text-error"><i class="icon-remove"></i> <?=LangAdmin::get('Delete')?></span></button>
+
+    </div>
+
+    <div class="span6 text-right">
+        <select class="input-mini" id="perpage">
+            <? foreach ($paginator->perPageLimits() as $perPageLimit) { ?>
+                <option value="<?=$perPageLimit?>" <?=($perPageLimit == $paginator->limit() ? ' selected="selected"' : '');?>><?=$perPageLimit?></option>
+            <? } ?>
+        </select>
+    </div>
+
+</div>
+
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>
+                <label class="checkbox inline">
+                    <input type="checkbox" class="rows-checkbox">
+                </label>
+            </th>
+            <th><?=LangAdmin::get('reviews::Review')?></th>
+            <th><?=LangAdmin::get('reviews::User')?></th>
+            <th><?=LangAdmin::get('reviews::Created')?></th>
+            <th class="td-3btn-width"><?=LangAdmin::get('reviews::Actions')?></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <?php foreach ($reviews['rows'] as $key => $review) { ?>
+        <tr id="<?=$review['review_id']?>"> 
+            <td><input type="checkbox" class="row-checkbox"/></td>
+            <td><?=$this->escape($review['text'])?></td>
+            <td><!--a href="users/customers/user-profile" email="<?=$review['email']?>"--><?=$this->escape($review['name'])?><!--/a--></td>
+            <?php $date = strtotime($review['created']);?>
+            <td><?=date('d.m.Y', $date)?>, <span class="muted"><?=date('h:i', $date)?></span></td>
+            <td>
+                <span class="btn-group">
+                    <a href="/item?id=<?=$review['item_id']?>&reviewtab" class="btn btn-mini" title="<?=LangAdmin::get('reviews::Go_to_review')?>Перейти к отзыву"><i class="icon-external-link"></i></a>
+                    <button class="btn btn-mini accept-item-btn" title="<?=LangAdmin::get('reviews::Accept_review')?>"><i class="icon-ok"></i></button> <!--    -->
+                    <button class="btn btn-mini ot_show_deletion_dialog_modal" title="<?=LangAdmin::get('reviews::Delete_review')?>"><i class="icon-remove"></i></button>
+                </span>
+            </td>
+        </tr>
+        <?php } ?>
+    </tbody>
+
+</table>
+
+<?php $paginator->display(); ?>
+
+</div> <!-- wrapper -->
+<? ScriptIncluder::AddCustomScript('js/ot-reviews.js'); ?>

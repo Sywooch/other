@@ -1,0 +1,135 @@
+<div class="main"><div class="wrap clrfix">
+<div class="news-block">
+<? if ($news) { ?>
+	<h1><span><?=$news['title']?></span> <div class="date"><?=$news['created']?></div></h1>
+
+			<div align="justify">
+			<div class="img"><img src="<?=$news['image']?>"></div>
+                <? if ($admin) { ?>
+                    <p id="edb"><a href="javascript:editBlock()" class="btn fll"><?=Lang::get('edit_text')?></a><br clear="all"></p>
+					<div id="sb">
+						<a href="javascript:cancelEdit()" class="btn-apper fll"><?=Lang::get('cancel')?></a>
+						<a href="javascript:saveBlock()" class="btn fll" style="margin-left:20px"><?=Lang::get('save')?></a>
+					</div>
+                    
+<script language="javascript" type="text/javascript" src="js/tiny_mce/tiny_mce.js"></script>
+<script>
+<? if ($show_editor) { ?>
+$(document).ready(function() {
+    editBlock();
+});
+<? } ?>
+function cancelEdit()
+{
+	location.href='?p=<?=SCRIPT_NAME?>';
+}
+function saveBlock()
+{
+    $('#feditor').submit();
+}
+function editBlock()
+{
+	//
+	$('#content_area2').css('height', 1000);
+	$('#content_area').hide();
+	$('#content_area3').show();
+	$('#edb').hide();
+	$('#sb').show();
+	$('#sb2').show();
+	//
+
+	tinyMCE.init({
+		mode : "exact",
+		elements : "content_area2",
+		theme : "advanced",
+		plugins : "table,heading,advhr,advimage,advlink,paste,fullscreen,noneditable,contextmenu,inlinepopups,emotions,media,insertdatetime,nonbreaking",
+		theme_advanced_buttons1_add_before : "newdocument,separator",
+        theme_advanced_buttons1_add_before : "fontselect,fontsizeselect,h1,h2,h3,h4,h5,h6,separator",
+        theme_advanced_buttons1_add : "fontselect,fontsizeselect",
+		theme_advanced_buttons2_add : "separator,forecolor,backcolor,liststyle,separator,insertdate,inserttime",
+		theme_advanced_buttons2_add_before: "cut,copy,paste,pastetext,pasteword,separator",
+		theme_advanced_buttons3_add_before : "tablecontrols,separator",
+		theme_advanced_buttons3_add : "flash,advhr,emotions,media,nonbreaking,separator,fullscreen,mybutton",
+		theme_advanced_toolbar_location : "top",
+		theme_advanced_toolbar_align : "left",
+		extended_valid_elements : "hr[class|width|size|noshade]",
+		file_browser_callback : "ajaxfilemanager",
+		paste_use_dialog : false,
+		theme_advanced_resizing : true,
+		theme_advanced_resize_horizontal : true,
+		apply_source_formatting : true,
+		force_br_newlines : false,
+		force_p_newlines : true,
+		relative_urls : true,
+        content_css : "css/style_editor.css", //+ new Date().getTime(),
+        content_css : "css/style.css",
+        init_instance_callback : "myCustomInitInstance",
+        //theme_advanced_styles : "Popup Image=thickbox"
+        setup: function(ed){
+            ed.addButton('mybutton',
+                { title : 'My button',
+                    'class' : 'MyCoolBtn',
+                    onclick : function() {
+                        ed.focus();
+                        ed.selection.setContent('<h2>' + ed.selection.getContent() + '</h2>');
+                    }
+                }
+            );
+        }
+	});
+}
+
+function myCustomInitInstance(){
+
+}
+
+function ajaxfilemanager(field_name, url, type, win)
+{
+	var ajaxfilemanagerurl = "js/tiny_mce/plugins/ajaxfilemanager/ajaxfilemanager.php";
+	switch (type) {
+		case "image":
+			break;
+		case "media":
+			break;
+		case "flash":
+			break;
+		case "file":
+            break;
+		default:
+			return false;
+	}
+    tinyMCE.activeEditor.windowManager.open({
+        url: "js/tiny_mce/plugins/ajaxfilemanager/ajaxfilemanager.php",
+        width: 782,
+        height: 440,
+        inline : "yes",
+        close_previous : "no"
+    },{
+        window : win,
+        input : field_name
+    });
+}
+
+</script>
+                <? } ?>
+				<div id="content_area"><?=$text?></div>
+                <? if ($admin) { ?>
+                <form id="feditor" method="post" action="admin/?cmd=news&do=blocksave">
+                <input type="hidden" name="id" value="<?=$news['id']?>">
+                <div id="content_area3" style="display:none;"><textarea name="text" id="content_area2" style="height:1000px;width:960px"><?=$text?></textarea></div>
+                </form>
+				<div id="sb2">
+					<a href="javascript:cancelEdit()" class="btn-apper fll"><?=Lang::get('cancel')?></a>
+					<a href="javascript:saveBlock()" class="btn fll" style="margin-left:20px"><?=Lang::get('save')?></a>
+				</div>
+                <? } ?>
+		<div class="bgr-panel"><a class="btn flr" href="?p=allnews"><?=Lang::get('all_news')?></a></div>
+	</div>
+	<? } else {?>
+		<h2 class="mb25"><span><?=Lang::get('empty_page')?></span></h2>
+		<div class="flr col900 content" align="justify">
+			<?=Lang::get('empty_page_msg')?>
+		</div>
+	<? }?>
+</div>
+</div></div>

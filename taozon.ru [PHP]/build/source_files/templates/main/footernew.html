@@ -1,0 +1,49 @@
+    <? if(General::getSiteConfig('footer_text') && SCRIPT_NAME == 'index'){ ?>
+        <div class="wrap clrfix">
+            <?  
+               $l="footer_text_"; 
+               $l.=$_SESSION['active_lang'];
+               if(!General::$siteConf[$l]) {
+               	  $l="footer_text";
+               }
+            ?>
+            <?=General::$siteConf[$l]?>
+            
+        </div>
+    <? } ?>
+    <div class="footer"><div class="wrap clrfix">
+            <a href="#" class="up" ></a>
+            <div class="fll col240">
+                <div class="f12">&copy; 2011&ndash;<? echo date('Y');?> <b><?=General::getSiteConfig('site_name')?></b></div>
+                <p class="f11 mt5">Powered by &copy; Opentao platform <a href="http://opentao.net" target="_blank" alt="opentao.net" title="opentao.net">opentao.net</a></p>
+            </div>
+            <div class="flr col690">
+                <ul class="fmenu flin clrfix">
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('main_user_agreement')?>" alt="<?=Lang::get('user_agreement1')?>" title="<?=Lang::get('user_agreement1')?>"><?=Lang::get('user_agreement1')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('policy')?>" alt="<?=Lang::get('security_policy')?>" title="<?=Lang::get('security_policy')?>"><?=Lang::get('security_policy')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('about_us')?>" alt="<?=Lang::get('about_us')?>" title="<?=Lang::get('about_us')?>"><?=Lang::get('about_us')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('contacts')?>" alt="<?=Lang::get('contacts')?>" title="<?=Lang::get('contacts')?>"><?=Lang::get('contacts')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('help')?>" alt="<?=Lang::get('help')?>" title="<?=Lang::get('help')?>"><?=Lang::get('help')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('sitemap')?>" alt="<?=Lang::get('sitemap')?>" title="<?=Lang::get('sitemap')?>"><?=Lang::get('sitemap')?></a></li>
+                    <? if(General::$siteConf['counter']){ ?>
+                    <li>
+                        <?=General::$siteConf['counter']?>
+                    </li>
+                    <? } ?>
+                </ul>
+                <div class="pay mt15">
+                    <? if(General::$siteConf['payment_image']){ ?>
+                        <img src="<?=General::$siteConf['payment_image']?>" />
+                    <? } else { ?>
+                        <img src="p/pay.png" />
+                    <? } ?>
+                </div>
+            </div>	
+        </div></div>
+
+<?if(file_exists(CFG_APP_ROOT.'/js/jsfinalcustom.js')){?>
+    <script type="text/javascript" src="js/jsfinalcustom.js"></script>
+<?}?>
+<? print (General::getSiteConfig('html_for_footet')) ? General::getSiteConfig('html_for_footet') : ''; ?>
+</body>
+</html>	

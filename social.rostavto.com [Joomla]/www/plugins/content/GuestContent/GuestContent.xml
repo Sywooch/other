@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="content">
+	<name>Hide Guest Content</name>
+	<author>Beliyadmt</author>
+	<creationDate>2012</creationDate>
+	<copyright>Copyright (C)2012 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>beliyadm@gmail.com</authorEmail>
+	<authorUrl>www.blog.pbelkov.net</authorUrl>
+	<version>2.0</version>
+	<description>Скрывает произвольный текст в материалах от гостей: {gcontent}материал для пользователей{/gcontent}</description>
+	<files>
+		<filename plugin="GuestContent">GuestContent.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="guest_text" type="textarea"
+					cols="30" rows="5" filter="raw"
+					default="Данный текст доступен только для авторизованных пользователей сайта"
+					label="Текст только гостей" description="Текст только для пользователей" />
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

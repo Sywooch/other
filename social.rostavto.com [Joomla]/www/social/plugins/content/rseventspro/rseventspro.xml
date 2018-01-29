@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" version="2.5" type="plugin" group="content">
+	<name>plg_content_rseventspro</name>
+	<creationDate>July 2013</creationDate>
+	<author>rsjoomla.com</author>
+	<copyright>Copyright 2008-2013 RSJoomla.com All rights reserved!</copyright>
+	<authorEmail>support@rsjoomla.com</authorEmail>
+	<authorUrl>http://www.rsjoomla.com</authorUrl>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_RSEVENTSPRO_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="rseventspro">rseventspro.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_rseventspro.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_rseventspro.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="itemid" type="text" class="input-small" size="5" default="" description="PLG_CONTENT_RSEVENTSPRO_FIELD_ITEMID_DESC" label="PLG_CONTENT_RSEVENTSPRO_FIELD_ITEMID_LABEL" />
+			</fieldset>
+		</fields>
+	</config>
+	
+</extension>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProviderSearchMethodInfoListAnswer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://services.opentao.net">
+  <ErrorCode>Ok</ErrorCode>
+  <SubErrorCode/>
+  <RequestTimeStatistic>15.094 = {OtapiService} Service call (overhead: 0.054)
+ 0.035 = |-{Otapi} Create core
+ 0.045 = |-{Otapi} AccumulateCallCount (overhead: 0.017)
+ 0.001 = |-|-{Otapi} Create dependency Counter
+ 0.027 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.032 = |-{Otapi} AccumulateCallCount (overhead: 0.009)
+ 0.023 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.002 = |-{Otapi} Create dependency ProvidersDirector
+14.925 = |-{Service client call} ProvidersDirector.GetProviderSearchMethodInfoList (overhead: 4.847)
+         |-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+10.079 = |-|-{ProvidersDirectorService} Service call (overhead: 0.192)
+ 0.002 = |-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+ 0.005 = |-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+ 0.004 = |-|-|-{ProvidersDirector} Create dependency Goblin
+ 9.875 = |-|-|-{Data translate} Value provider is ListContextedValueProvider&lt;ProviderSearchMethodInfo&gt; (overhead: 0.591)
+ 9.284 = |-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.294)
+         |-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 7.990 = |-|-|-|-|-{GoblinService} Service call (overhead: 0.320)
+         |-|-|-|-|-|-{For Counter} Goblin:Input text length:569
+         |-|-|-|-|-|-{Goblin Say} langFrom en, langTo ru
+ 7.464 = |-|-|-|-|-|-[5 *****] {ORM} Get context (not found)
+ 0.010 = |-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+ 0.183 = |-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.016)
+ 0.091 = |-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+ 0.007 = |-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+ 0.056 = |-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+ 0.013 = |-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+ 0.010 = |-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.007)
+ 0.003 = |-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 0)
+ 0.003 = |-|-|-|-|-|-{Goblin} TranslateHtml
+         |-|-|-|-|-|-{Goblin Say} Found Translates in DB: 25 / 26
+         |-|-|-|-|-|-{Goblin Say} No markings or not-translated: 1 / 26
+Time distribution: database = 7.467 (49.5%), interservice = 6.141 (40.7%), logic = 0.111 (0.7%), other = 1.375 (9.1%), Otapi = 0.169 (1.1%), ProvidersDirector = 0.794 (5.3%), Goblin = 7.990 (52.9%)
+Debug info process time: 0.115
+</RequestTimeStatistic>
+  <Result>
+    <Content>
+      <Item>
+        <Provider>Taobao</Provider>
+        <SearchMethod>Official</SearchMethod>
+        <DisplayName>Фирменные товары (Tmall)</DisplayName>
+        <OptimalFrameSize>40</OptimalFrameSize>
+        <MaximumFrameSize>200</MaximumFrameSize>
+        <MaximumItemsCount>4000</MaximumItemsCount>
+        <AvailableSorts>
+          <Sort>
+            <Field>Default</Field>
+            <Direction>Asc</Direction>
+            <OrderBy>Default</OrderBy>
+            <DisplayName>Порядок по умолчанию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Popularity</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>Popularity:Desc</OrderBy>
+            <DisplayName>Популярность</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Volume</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>Volume:Desc</OrderBy>
+            <DisplayName>Объем продаж по убыванию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>TotalVolume</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>TotalVolume:Desc</OrderBy>
+            <DisplayName>Общий объем продаж по убыванию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Latest</Field>
+            <Direction>Asc</Direction>
+            <OrderBy>Latest:Asc</OrderBy>
+            <DisplayName>Время появления товаров</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Price</Field>
+            <Direction>Asc</Direction>
+            <OrderBy>Price:Asc</OrderBy>
+            <DisplayName>Цена по возрастанию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Price</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>Price:Desc</OrderBy>
+            <DisplayName>Цена по убыванию</DisplayName>
+          </Sort>
+        </AvailableSorts>
+        <Vendor>true</Vendor>
+        <VendorLocation>false</VendorLocation>
+        <Brand>false</Brand>
+        <Configurators>true</Configurators>
+        <MultipleConfiguratorLogic>All</MultipleConfiguratorLogic>
+        <PriceRange>true</PriceRange>
+        <VendorRatingRange>false</VendorRatingRange>
+        <VolumeRange>false</VolumeRange>
+        <StuffStatus>false</StuffStatus>
+        <Features>
+          <Feature>
+            <Name>Discount</Name>
+            <CanBeTrue>true</CanBeTrue>
+            <CanBeFalse>false</CanBeFalse>
+            <DisplayName>Товары со скидками</DisplayName>
+            <DisplayNameForTrue>Товары со скидками</DisplayNameForTrue>
+          </Feature>
+        </Features>
+      </Item>
+      <Item>
+        <Provider>Taobao</Provider>
+        <SearchMethod>Promoted</SearchMethod>
+        <DisplayName>Рекомендации Таобао</DisplayName>
+        <OptimalFrameSize>40</OptimalFrameSize>
+        <MaximumFrameSize>40</MaximumFrameSize>
+        <MaximumItemsCount>400</MaximumItemsCount>
+        <AvailableSorts>
+          <Sort>
+            <Field>Default</Field>
+            <Direction>Asc</Direction>
+            <OrderBy>Default</OrderBy>
+            <DisplayName>Порядок по умолчанию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>VendorRating</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>VendorRating:Desc</OrderBy>
+            <DisplayName>Рейтинг продавца по убыванию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Price</Field>
+            <Direction>Asc</Direction>
+            <OrderBy>Price:Asc</OrderBy>
+            <DisplayName>Цена по возрастанию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Price</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>Price:Desc</OrderBy>
+            <DisplayName>Цена по убыванию</DisplayName>
+          </Sort>
+        </AvailableSorts>
+        <Vendor>true</Vendor>
+        <VendorLocation>false</VendorLocation>
+        <Brand>false</Brand>
+        <Configurators>false</Configurators>
+        <MultipleConfiguratorLogic>None</MultipleConfiguratorLogic>
+        <PriceRange>true</PriceRange>
+        <VendorRatingRange>true</VendorRatingRange>
+        <MinVendorRating>1</MinVendorRating>
+        <MaxVendorRating>20</MaxVendorRating>
+        <VolumeRange>true</VolumeRange>
+        <StuffStatus>false</StuffStatus>
+      </Item>
+      <Item>
+        <Provider>Taobao</Provider>
+        <SearchMethod>Extended</SearchMethod>
+        <DisplayName>Товары из Китая</DisplayName>
+        <Flags>
+          <Flag>Extended</Flag>
+        </Flags>
+        <OptimalFrameSize>40</OptimalFrameSize>
+        <MaximumFrameSize>200</MaximumFrameSize>
+        <MaximumItemsCount>4000</MaximumItemsCount>
+        <AvailableSorts>
+          <Sort>
+            <Field>Default</Field>
+            <Direction>Asc</Direction>
+            <OrderBy>Default</OrderBy>
+            <DisplayName>Порядок по умолчанию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Popularity</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>Popularity:Desc</OrderBy>
+            <DisplayName>Популярность</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Volume</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>Volume:Desc</OrderBy>
+            <DisplayName>Объем продаж по убыванию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>VendorRating</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>VendorRating:Desc</OrderBy>
+            <DisplayName>Рейтинг продавца по убыванию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Latest</Field>
+            <Direction>Asc</Direction>
+            <OrderBy>Latest:Asc</OrderBy>
+            <DisplayName>Время появления товаров</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Price</Field>
+            <Direction>Asc</Direction>
+            <OrderBy>Price:Asc</OrderBy>
+            <DisplayName>Цена по возрастанию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>Price</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>Price:Desc</OrderBy>
+            <DisplayName>Цена по убыванию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>TotalPrice</Field>
+            <Direction>Asc</Direction>
+            <OrderBy>TotalPrice:Asc</OrderBy>
+            <DisplayName>Полная цена по возрастанию</DisplayName>
+          </Sort>
+          <Sort>
+            <Field>TotalPrice</Field>
+            <Direction>Desc</Direction>
+            <OrderBy>TotalPrice:Desc</OrderBy>
+            <DisplayName>Полная цена по убыванию</DisplayName>
+          </Sort>
+        </AvailableSorts>
+        <Vendor>true</Vendor>
+        <VendorLocation>true</VendorLocation>
+        <Brand>true</Brand>
+        <Configurators>true</Configurators>
+        <MultipleConfiguratorLogic>Any</MultipleConfiguratorLogic>
+        <PriceRange>true</PriceRange>
+        <VendorRatingRange>false</VendorRatingRange>
+        <VolumeRange>false</VolumeRange>
+        <StuffStatus>true</StuffStatus>
+      </Item>
+    </Content>
+  </Result>
+</ProviderSearchMethodInfoListAnswer>

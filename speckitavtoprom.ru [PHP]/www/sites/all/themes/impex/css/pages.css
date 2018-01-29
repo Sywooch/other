@@ -1,0 +1,554 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+
+/*
+ * Body
+ */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#page-wrapper {
+}
+
+#page {
+}
+
+/*
+ * The skip navigation link will be completely hidden until a user tabs to the
+ * link. See http://www.webaim.org/techniques/skipnav/
+ */
+#skip-link a,
+#skip-link a:visited {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+#skip-link a:hover,
+#skip-link a:active,
+#skip-link a:focus {
+  position: static;
+  width: 100%;
+  height: auto;
+  padding: 2px 0 3px 0;
+}
+
+/*
+ * Header
+ */
+#header {
+  margin: 0 0 19px 0;
+}
+
+#header .section {
+}
+
+#logo /* Wrapping link for logo */ {
+  float: left; /* LTR */
+  margin: 15px 0 0 17px;
+  padding: 0;
+}
+
+#logo img {
+  vertical-align: bottom;
+}
+
+#name-and-slogan /* Wrapper for website name and slogan */ {
+}
+
+h1#site-name,
+div#site-name /* The name of the website */ {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.3em;
+}
+
+#site-name a:link,
+#site-name a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+}
+
+#site-slogan /* The slogan (or tagline) of a website */ {
+}
+
+.region-header /* Wrapper for any blocks placed in the header region */ {
+  float: left;
+  margin: 0 0 0 180px;
+}
+
+.section-admin tr.region-header {
+  float: none;
+  margin: 0;
+}
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content {
+}
+
+#content .section {
+  font-family: Calibri;
+  color: #e1e1e1;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#content .section .block-region {
+  color: #000;
+}
+
+#content .section p {
+  text-shadow: 0px 0px 1px #e1e1e1;
+}
+
+#content .section #content-area .node ul {
+  padding: 0 0 0 13px;
+  list-style-type: none;
+}
+
+#content .section #content-area .node ul li {
+  background: transparent url(/sites/all/themes/impex/images/ul_li_image.png) 0 8px no-repeat;
+  padding: 0 0 3px 15px;
+  text-shadow: 0px 0px 1px #e1e1e1;
+}
+
+#content .section #content-area .node ol li {
+  padding: 0 0 3px 0;
+  text-shadow: 0px 0px 1px #e1e1e1;
+}
+
+#mission /* The mission statement of the site (displayed on homepage) */ {
+}
+
+#mission2 {
+  margin: -42px 0 0 22px;
+  float: left;
+  font-family: "Century Gothic";
+  font-size:14px;
+  font-weight: bold;
+}
+
+#mission2 * {
+  padding: 0;
+  margin: 0;
+}
+
+.region-content-top /* Wrapper for any blocks placed in the "content top" region */ {
+  float: left;
+  width: 647px;
+  height: 100%;
+}
+
+.breadcrumb /* The path to the current page in the form of a list of links */ {
+  padding-bottom: 4px; /* Undo system.css */
+  margin: 15px 0 24px 0;
+  border-bottom: 1px dotted #828282;
+  border-style: 
+}
+
+.breadcrumb a, .breadcrumb span {
+  font-family: "Century Gothic";
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+  color: #f6b005;
+  text-shadow: 0px 0px 1px #f6b005;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #ddb85e;
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  margin: 0 16px 0 19px;
+  color: #696969;
+  text-shadow: 0px 0px 1px #696969;
+}
+
+h1.title, /* The title of the page */
+h2.title, /* Block title or the title of a piece of content when it is given in a list of content */
+h3.title /* Comment title */ {
+  margin: 0;
+}
+
+#content .section h1.title,
+#content .section h2.title, h2.title {
+  font-family: "Century Gothic";
+  font-size: 23px;
+  font-weight: bold;
+  font-style: italic;
+  color: #f6b005;
+}
+
+tr.even /* Some tables have rows marked even or odd. */ {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
+}
+
+div.status /* Normal priority messages */ {
+}
+
+div.warning,
+tr.warning /* Medium priority messages */ {
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error /* High priority messages. See also the .error declaration below. */ {
+}
+
+.error /* Errors that are separate from div.messages status messages. */ {
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning /* Warnings that are separate from div.messages status messages. */ {
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+div.tabs /* See also the tabs.css file. */ {
+}
+
+.help /* Help text on a page */ {
+  margin: 1em 0;
+}
+
+.more-help-link /* Link to more help */ {
+  font-size: 0.85em;
+  text-align: right;
+}
+
+#content-area /* Wrapper for the actual page content */ {
+  float: left;
+  width: 647px;
+}
+
+ul.links /* List of links */ {
+  margin: 1em 0;
+  padding: 0;
+}
+
+ul.links.inline {
+  margin: 0;
+  display: inline;
+}
+
+ul.links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;
+}
+
+.item-list .pager /* A list of page numbers when more than 1 page of content is available */ {
+  float: left;
+  clear: none;
+  margin: 3px 0 0 0;
+  padding: 0;
+  text-align: left;
+}
+
+.item-list .pager * {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.item-list .pager li {
+  margin-right: 23px;
+  padding: 4px 0 0 0;
+}
+
+.item-list .pager li.pager-current {
+  display: block;
+  float: left;
+  width: 28px;
+  height: 27px;
+  margin: 0 13px 0 -10px;
+  padding: 4px 0 0 0;
+  text-align: center;
+  color: #402d04;
+  background: transparent url("../images/pager_current_bg.png") 0 0 no-repeat;
+}
+
+.item-list .pager li.first {
+  margin-left: 0;
+}
+
+.item-list .pager a,
+.item-list .pager .pager-current /* Each page number in the pager list */ {
+  font-family: Calibri;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: italic;
+  color: #ababab;
+  text-decoration: none;
+}
+
+.item-list .pager a:hover {
+  color: #f3ae15;
+  text-decoration: underline;
+}
+
+.feed-icons /* The links to the RSS or Atom feeds for the current list of content */ {
+  margin: 1em 0;
+}
+
+.more-link /* Aggregator, blog, and forum more link */ {
+  text-align: right; /* LTR */
+}
+
+.region-content-bottom /* Wrapper for any blocks placed in the "content bottom" region */ {
+  float: left;
+  width: 647px;
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+.region-sidebar-first {
+}
+
+.region-sidebar-first .section {
+}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+.region-sidebar-second {
+  margin-bottom: 18px;
+}
+
+.region-sidebar-second .section {
+}
+
+/*
+ * Footer
+ */
+#footer {
+  margin-top: 14px;
+  height: 113px;
+  padding: 34px 0 0 20px;
+  background: transparent url("../images/footer_up_line.png") 0 0 no-repeat;
+}
+
+#footer .section {
+}
+
+#footer-message /* Wrapper for the footer message from Drupal's "Site information"
+                   and for any blocks placed in the footer region */ {
+}
+
+#footer .region-footer {
+  float: left;
+  width: 487px;
+}
+
+#footer .region-footer p {
+  margin: 0!important;
+}
+
+#footer .region-footer, #bifacial {
+  font-family: Calibri;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ababab;
+}
+
+#footer .region-footer a {
+  color: #f3ae15;
+}
+
+#bifacial {
+  float: left;
+  padding-left: 15px;
+}
+
+#counters {
+  float: left;
+  margin: 7px 0 0 131px;
+}
+
+#counter_01 {
+  float: left;
+  width: 88px;
+  height: 31px;
+  margin-right: 10px;
+  background-image: url(../images/counter_01.jpg);
+}
+
+#counter_02 {
+  float: left;
+  width: 88px;
+  height: 31px;
+  background-image: url(../images/counter_02.jpg);
+}
+
+/*
+ * Closure
+ */
+.region-page-closure /* Wrapper for any blocks placed in the closure region */ {
+}
+
+/*
+ * Drupal boxes
+ *
+ * Wrapper for Comment form, Comment viewing options, Menu admin, and
+ * Search results.
+ */
+.box /* Wrapper for box */ {
+}
+
+.box h2 /* Box title */ {
+}
+
+.box .content /* Box's content wrapper */ {
+}
+
+/*
+ * Markup free clearing (See: http://www.positioniseverything.net/easyclearing.html )
+ */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+.element-hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Страница товара */
+
+.node-type-goods {
+}
+
+.node-type-goods #content-area {
+  margin-bottom: 26px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #828282;
+}
+
+.node-type-goods #content-area-left {
+  float: left;
+  position: relative;
+  width: 207px;
+  margin-right: 13px;
+}
+
+.node-type-goods #content-area-right {
+  float: right;
+  width: 427px;
+}
+
+.node-type-goods #content-area-left .field-field-photo-goods {
+  float: left;
+  margin: 0 13px 25px 0;
+  width: 207px;
+  height: 215px;
+  background: transparent url("../images/goods_border.png") 0 0 no-repeat;
+}
+
+
+.node-type-goods #content-area-left .field-field-photo-goods .field-items {
+  width: 193px;
+  height: 201px;
+  margin: 7px 0 0 7px;
+}
+.node-type-goods #content-area-left .field-field-discount-goods,
+.node-type-goods #content-area-left .field-field-share-goods,
+.node-type-goods #content-area-left .field-field-new-goods {
+  position: absolute;
+  top: 0;
+  width: 81px;
+  height: 83px;
+  margin: 3px 0 0 123px;
+}
+
+.node-type-goods #content-area-left .field-field-discount-goods {
+  background: transparent url("../images/goods_discount_bg.png") 0 0 no-repeat;
+}
+
+.node-type-goods #content-area-left .field-field-share-goods {
+  background: transparent url("../images/goods_action_bg.png") 0 0 no-repeat;
+}
+
+.node-type-goods #content-area-left .field-field-new-goods {
+  background: transparent url("../images/goods_new_bg.png") 0 0 no-repeat;
+}
+
+.node-type-goods #content-area-left .field-field-discount-goods .field-item,
+.node-type-goods #content-area-left .field-field-share-goods .field-item,
+.node-type-goods #content-area-left .field-field-new-goods .field-item {
+  display: none;
+}
+

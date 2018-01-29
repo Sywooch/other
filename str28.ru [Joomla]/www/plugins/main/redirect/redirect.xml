@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="main">
+	<name>plg_main_redirect</name>
+	<author>Retina Project</author>
+	<creationDate>April 2009</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license></license>
+	<authorEmail>admin@retina.org</authorEmail>
+	<authorUrl>www.retina-studio.ru</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_REDIRECT_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="redirect">redirect.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_main_redirect.ini</language>
+		<language tag="en-GB">en-GB.plg_main_redirect.sys.ini</language>
+	</languages>
+</extension>

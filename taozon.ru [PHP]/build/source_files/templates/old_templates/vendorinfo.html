@@ -1,0 +1,45 @@
+<?=$Header?>
+<?=$Crumbs?>
+    <div class="main"><div class="canvas clrfix">
+	<!-- .col240 -->
+	<div class="col240">
+        <? if(isset($GLOBALS['cats']) && count($GLOBALS['cats']) > 0) { ?> 
+        <small> Товар найден в категориях: </small>
+        <ul class="mcats">
+            <? foreach($GLOBALS['cats'] as $category) { ?>
+            <li><a href="<?=$GLOBALS['url'];?>&cid=<?=$category['id'];?>"> <?=$category['name'];?> (<?=$category['itemcount']?>)</a></li>
+            <? } ?>
+        </ul> 
+        <br />
+        <? } ?>
+        
+	<small class="stitle">Информация о поставщике:</small>
+	
+	<table class="tinfo itemdesc">
+		<tr>
+			<td class="td1">Имя:</td>
+			<td class="td2"><a href="?p=vendor&id=<?=$vendorInfo['id']?>"><?=$vendorInfo['name']?></a></td>
+		</tr>
+		<tr>
+			<td class="td1">Рейтинг:</td>
+			<td class="td2"><img src="i/hearts/level_<?=$vendorInfo['credit']['level']?>.gif" id="max_rate"> (<?=$vendorInfo['credit']['level']?>)</td>
+		</tr>
+		<tr>
+			<td class="td1">Отзывы:</td>
+			<td class="td2"><?=$vendorInfo['credit']['TotalFeedbacks']?> (<span style="color:Green"><?=$vendorInfo['credit']['PositiveFeedbacks']?></span>)</td>
+		</tr>
+		<tr>
+			<td class="td1">Местонахождение:</td>
+			<td class="td2"><?=$vendorInfo['location']['city']?> (<?=$vendorInfo['location']['state']?>)</td>
+		</tr>
+	</table>
+	</div>
+	<!-- /.col240 -->
+
+	<!-- .col700 -->
+    <div class="col700 clrfix avisited">
+            <?=$Vendor?>
+	</div>
+		<!-- /.col700 -->
+    </div></div><!-- /.main -->
+<?=$Footer?>

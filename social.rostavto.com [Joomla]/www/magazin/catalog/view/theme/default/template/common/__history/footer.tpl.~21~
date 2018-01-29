@@ -1,0 +1,56 @@
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div id="footercontainer">
+		<footer class="group">
+			
+  <?php if ($informations) { ?>
+  <div class="col span_1_of_4">
+
+    <ul>
+      <?php foreach ($informations as $information) { ?>
+      <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+      <?php } ?>
+    </ul>
+  </div>
+  <?php } ?>
+  <div class="col span_1_of_4">
+
+    <ul>
+      <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+      <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+      <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
+    </ul>
+  </div>
+  <div class="col span_1_of_4">
+
+    <ul>
+      <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+      <li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
+      <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
+      <li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
+    </ul>
+  </div>
+  <div class="col span_1_of_4">
+
+    <ul>
+      <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+      <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+      <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
+      <li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
+    </ul>
+  </div>
+<br class="breaker" />
+</footer>  
+</div>
+
+
+
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="catalog/view/theme/default/js/selectivizr-min.js"></script>
+	<![endif]-->
+	<!-- More Scripts-->
+	<script src="catalog/view/theme/default/js/responsivegridsystem.js"></script>
+</body></html>

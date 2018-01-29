@@ -1,0 +1,19 @@
+<?=$HeaderNew?>
+<?=$CrumbsNew?>
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+<div class="bigtitle">
+    <div class="wrap clrfix">
+        <h1><?=$GLOBALS['pagetitle']?></h1>
+    </div>
+</div>
+<?=$SubCategoryNew?>
+
+<?if(in_array('Seo2', General::$enabledFeatures)){?>
+    <div class="main">
+        <div class="wrap clearfix mt20">
+            <?=General::getSeoText($_GET['cid'])?>
+        </div>
+    </div>
+<?}?>
+
+<?=$FooterNew?>

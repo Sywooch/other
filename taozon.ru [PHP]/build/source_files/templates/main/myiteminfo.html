@@ -1,0 +1,281 @@
+
+<div id="dialog-form" title="<?=Lang::get('message')?>">
+    <span id="basketinfo"></span>
+</div>
+
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+
+<div class="bigtitle"><div class="wrap clrfix">
+    <h1><?= $iteminfo['name']; ?></h1>
+</div></div>
+
+<!-- .main -->
+<div class="main"><div class="wrap clrfix">
+<div class="fll col690" id="overlay-wrapper">
+<div id="overlay"></div>
+<div class="bproduct clrfix">
+    <h2 class="mb25"><span><?=Lang::get('product_info')?></span></h2>
+</div>
+<div class="fll col330">
+    <div class="bprd">
+        <ul class="lproduct flin w310li clrfix">
+            <li>
+                <a href="<?= $iteminfo['image'] ?>" class="pic" alt="<?= $iteminfo['name'] ?>" title="<?= $iteminfo['name'] ?>">
+                    <i><img id="main-image" src="css/i/default-image.gif" main="<?= $image ?>" default="css/i/default-image.gif" alt=""></i>
+                    <ins></ins>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="flr col340">
+<div class="btitle f11 mb10 clrfix">
+    <div class="fll"><?=Lang::get('good_code')?> <b><?= $iteminfo['id'] ?></b></div>
+</div>
+<div class="bgr-block bx5">
+    <? if($iteminfo['configurations']){ ?>
+    <div class="titlecat"><?=Lang::get('select_configuration')?>:</div>
+    <? } ?>
+    <table class="info infoitem f11">
+        <? if(is_array($iteminfo['configurations'])){ ?>
+        <? foreach ($iteminfo['configurations'] as $configuration) { ?>
+            <tr>
+                <td class="w100" id="cname<?= $configuration['id'] ?>"><?= $configuration['name'] ?>:</td>
+                <td>
+                    <select name="<?= $configuration['id'] ?>" id="<?= $configuration['id'] ?>" onchange="changeconfig()" class="w200">
+                        <? foreach ($configuration['values'] as $value) { ?>
+                        <option value="<?= $value['id'] ?>" id="val<?= $value['id'] ?>"><? if (!empty($value['alias'])) { ?><?= $value['alias'] ?><? } else { ?><?= $value['name'] ?><? } ?></option>
+                        <? } ?>
+                    </select>
+                </td>
+            </tr>
+            <? }} ?>
+
+
+        <!--tr>
+            <td class="w100"><?=Lang::get('status')?>:</td>
+            <td><b><?=Lang::get('status'.$iteminfo['StuffStatus'])?></b></td>
+        </tr-->
+
+        <tr>
+            <td class="w100"><?=Lang::get('in_existence')?>:</td>
+		<td><span id="c_count" style="font-weight: bold"><?= $iteminfo['amount'] ?></span> <?=Lang::get('pcs')?></td>
+        </tr>
+
+        <tr>
+            <td class="w100"><?=Lang::get('price')?>:</td>
+            <td><span id="c_cost"><?=$iteminfo['price']?></span> <span id="c_curr" > <?=$currency?></span></td>
+        </tr>
+
+        <tr>
+            <td class="w100"><?=Lang::get('quantity')?>:</td>
+            <td>
+                <b><input type="text" value="1" class="w20 tar" name="quantity" id="quantity" price="<?= $iteminfo['ConvertedPriceWithoutSign'] ?>" disabled></b>
+				<span class="num-controls">
+					<span class="plus">+</span>
+					<span class="minus">-</span>
+				</span>
+            </td>
+        </tr>
+
+        <tr class="total">
+            <td><?=Lang::get('total')?>:</td>
+            <td style="vertical-align: middle;"><span style="display: block" class="dl mr15" id="total"><img src="i/ajax-loader-transparent.gif" /></span></td>
+        </tr>
+        <!--tr class="addcart">
+            <td colspan="2">
+                <?
+                $lexicons = array('translation_loading',
+                    'add_to_cart','drop_from_cart',
+                    'pcs','responses_loading',
+                    'item_not_exist','good_added_to_cart',
+                    'delete_from_cart','good_not_added',
+                    'good_deleted_from_basket','add_to_cart',
+                    'product_not_removed'
+                );
+                foreach($lexicons as $l){
+                    ?>
+                    <div id="<?=$l?>" style="display: none"><?=Lang::get($l)?></div>
+                    <?
+                }
+                ?>
+
+                <? if($iteminfo['IsSellAllowed'] == 'true'){ ?>
+
+                <form action="index.php" id="addToBasket">
+                    <? if($inCart){ ?>
+                    <a href="#" class="addbasket icon remove-action" id="basket-action" title="<?=Lang::get('drop_from_cart')?>" alt="<?=Lang::get('drop_from_cart')?>"><span><i class="i removeitem"></i><?=Lang::get('drop_from_cart')?></span></a>
+                    <?}else{?>
+                    <a href="#" class="addbasket icon add-action" id="basket-action" alt="<?=Lang::get('add_to_cart')?>" title="<?=Lang::get('add_to_cart')?>"><span><i class="i additem"></i><?=Lang::get('add_to_cart')?></span></a>
+                    <?}?>
+                    <div class="infocart f11">
+                    </div>
+                    <?
+                    $cat = @end($GLOBALS['itempath']);
+                    ?>
+                    <input type="hidden" name="p" value="basketadd" />
+                    <input type="hidden" name="itemTitle" value="<?=$iteminfo['title']?>" />
+                    <input type="hidden" name="price" value="<?=$iteminfo['convertedpricewithoutsign']?>" />
+                    <input type="hidden" name="currencyName" value="<?=$iteminfo['currencyname']?>" />
+                    <input type="hidden" name="externalURL" value="<?=$iteminfo['taobaoitemurl']?>" />
+                    <input type="hidden" name="pictureURL" value="<?=$iteminfo['mainpictureurl']?>" />
+                    <input type="hidden" name="vendorId" value="<?=$iteminfo['vendorid']?>" />
+                    <input type="hidden" name="categoryName" value="<?=@$cat['Name']?>" />
+                    <input type="hidden" name="categoryId" value="<?=@$cat['Id']?>" />
+                    <input type="hidden" name="id" value="<?=$iteminfo['id']?>" />
+                    <input type="hidden" name="weight" value="<?=@(float)$iteminfo['ApproxWeight']?>" />
+                    <input type="hidden" name="comment" value="" />
+                </form>
+
+                <? } else { ?>
+                <h3><?=@Lang::get('item_not_allowed')?></h3>
+                <? } ?>
+            </td>
+        </tr-->
+    </table>
+</div>
+<!--p class="mt15 clrfix">
+    <? if($inNote){ ?>
+    <a class="btn-small btn-remove fll" id="note-action" href="#"><span><?=Lang::get('drop_from_fav')?></span></a>
+    <?}else{?>
+    <a class="btn-small btn-add fll" id="note-action" href="#"><span><?=Lang::get('add_to_fav')?></span></a>
+    <?}?>
+<form action="index.php" id="addToFavourites">
+    <input type="hidden" name="p" value="supportlistadd" />
+    <input type="hidden" name="itemTitle" value="<?=$iteminfo['title']?>" />
+    <input type="hidden" name="price" value="<?=$iteminfo['convertedpricewithoutsign']?>" />
+    <input type="hidden" name="currencyName" value="<?=$iteminfo['currencyname']?>" />
+    <input type="hidden" name="externalURL" value="<?=$iteminfo['taobaoitemurl']?>" />
+    <input type="hidden" name="pictureURL" value="<?=$iteminfo['mainpictureurl']?>" />
+    <input type="hidden" name="vendorId" value="<?=$iteminfo['vendorid']?>" />
+    <input type="hidden" name="categoryName" value="<?=@$cat['Name']?>" />
+    <input type="hidden" name="categoryId" value="<?=@$cat['Id']?>" />
+    <input type="hidden" name="id" value="<?=$iteminfo['id']?>" />
+    <input type="hidden" name="comment" value="" />
+</form>
+</p-->
+
+<? if(defined('CFG_SHOW_SOCIAL_BLOCK')) if(CFG_SHOW_SOCIAL_BLOCK) { ?>
+<div class="socblocks mb20 clrfix">
+    <div class="fll col55w">
+        <div class="title"><?=Lang::get('share_with_friends')?>:</div>
+        <table>
+            <tr>
+                <td class="fb">
+                    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdemo.sites.opentao.ru%2F&amp;send=false&amp;layout=button_count&amp;width=130&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:21px;" allowTransparency="true"></iframe>
+                </td>
+                <td class="tw">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="Opentao" data-lang="ru">Твитнуть</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </td>
+                <td class="vk">
+                    <div id="vk_like"></div>
+                    <script type="text/javascript">
+                    </script>
+                </td>
+            </tr>
+            <tr><td colspan="3"><div class="title"><?=Lang::get('follow_news')?>:</div></td></tr>
+            <tr>
+                <td>
+                    <a href="http://vk.com/opentao" target="_blank">
+                        <img src="p/vk.jpg" />
+                    </a><br/>
+                    <a href="https://twitter.com/#!/Opentao" target="_blank">
+                        <img src="p/tw.jpg" />
+                    </a>
+                </td>
+                <td>
+                    <a href="http://www.facebook.com/pages/%D0%9E%D0%BF%D0%B5%D0%BD%D1%82%D0%B0%D0%BE%D0%A0%D1%83/252116681541607" target="_blank">
+                        <img src="p/fb.jpg" />
+                    </a>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</div>
+    <? } ?>
+</div>
+</div>
+
+</div></div>
+<!-- /.main -->
+
+<div class="btabs mt15"><div class="wrap clrfix">
+    <div class="bgr clrfix">
+        <ul id="product-tabs" class="tabs clrfix">
+            <li class="active" tab="properties"><a href="#"><span><?=Lang::get('prod_char')?></span></a></li>
+            <li tab="photos" class=""><a href="#" attr="tab2"><span><?=Lang::get('photo_descr')?></span></a></li>
+        </ul>
+    </div>
+    <div class="tabs-content">
+        <!-- properties -->
+        <div id="properties" class="tab" style="display: block;">
+            <table class="itcharac">
+                <tbody>
+				<?php $properties = empty($iteminfo['properties']) ? array() : unserialize($iteminfo['properties']); ?>
+				<?php foreach ($properties as $prop => $val) : ?>
+
+				<tr>
+					<td class="td1"><?=$prop;?>:</td>
+					<td class="td2"><?=$val;?></td>
+				</tr>
+				<?php endforeach; ?>
+
+                </tbody>
+			</table>
+        </div>
+        <!-- /properties -->
+        <!-- photos -->
+        <div id="photos" class="tab">
+            <div id="photos-inner"><?= $iteminfo['description']; ?></div>
+        </div>
+        <!-- /photos -->
+    </div>
+</div></div>
+
+<script type="text/javascript" src="js/jquery.colorbox.js"></script>
+<link rel="stylesheet" href="css/colorbox.css"/>
+
+<script type="text/javascript">
+
+$(function () {
+	var recountTotalPrice = function() {
+       var amount = Number ($('#quantity').val());
+       var price = Number ($('#c_cost').html());
+	   $('#total').html('').append(
+                $('<div></div>')
+                    .addClass('mb5')
+                    .html(amount*price + '<span> ' + $('#c_curr').html() +'</span>')
+            );
+	}
+
+	$('#main-image').closest('a').colorbox();
+
+    $('.plus').click(function(){
+        var q = Number ($('#quantity').val());
+		var a = Number ($('#c_count').html());
+        $('#quantity').val(q+1>a ? a : q+1);
+
+        recountTotalPrice();
+    });
+
+    $('.minus').click(function(){
+        var q = $('#quantity').val();
+        if(q>1){
+            $('#quantity').val(parseInt(q)-1);
+        }
+
+        recountTotalPrice();
+    });
+
+	recountTotalPrice();
+
+    var img = new Image();
+    img.onload = function(){
+        $('#main-image').attr('src', img.src);
+    }
+    img.src = $('#main-image').attr('main');
+});
+
+</script>

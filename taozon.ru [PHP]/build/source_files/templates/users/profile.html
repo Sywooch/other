@@ -1,0 +1,172 @@
+<div class="userform userBigLabel">
+    <form action="index.php?p=profile" method="post">
+        <? if($success){ ?>
+        <div class="success">
+            <?=$success?>
+        </div>
+        <? } ?>
+        <? if($error){ ?>
+        <div class="error">
+            <?=$error?>
+        </div>
+        <? } ?>
+        
+		<div class="bproduct mb30">
+			<h2 class="mb20"><span><?=Lang::get('fullname')?></span></h2>		
+		
+			<div class="form-row">
+				<label for="FirstName"><?=Lang::get('name')?></label>
+				<input id="FirstName" type="text" name="FirstName" value="<?=$FirstName?>" />
+			</div>
+        
+			<div class="form-row">
+				<label for="LastName"><?=Lang::get('last_name')?></label>
+				<input id="LastName" type="text" name="LastName" value="<?=$LastName?>" />
+			</div>
+        
+			<div class="form-row">
+				<label for="MiddleName"><?=Lang::get('middle_name')?></label>
+				<input id="MiddleName" type="text" name="MiddleName" value="<?=$MiddleName?>" />
+			</div>
+			
+		</div>
+
+		<div class="bproduct mb30">
+			<h2 class="mb20"><span><?=Lang::get('delivery_data')?></span></h2>	
+        
+			<div class="form-row">
+				<label for="RecipientFirstName"><?=Lang::get('name')?><span class="red">*</span></label>
+				<input id="RecipientFirstName" type="text" name="RecipientFirstName" value="<?=$RecipientFirstName?>" />
+			</div>
+			
+			<div class="form-row">
+				<label for="RecipientLastName"><?=Lang::get('last_name')?><span class="red">*</span></label>
+				<input id="RecipientLastName" type="text" name="RecipientLastName" value="<?=$RecipientLastName?>" />
+			</div>
+			
+			<div class="form-row">
+				<label for="RecipientMiddleName"><?=Lang::get('middle_name')?><span class="red">*</span></label>
+				<input id="RecipientMiddleName" type="text" name="RecipientMiddleName" value="<?=$RecipientMiddleName?>" />
+			</div>
+			
+			<div class="form-row">
+				<label for="Email">Email</label>
+				<input id="Email" type="text" value="<?=$Email?>" disabled="disabled" />
+				<input type="hidden" name="Email" value="<?=$Email?>" />
+			</div>
+			
+			<div class="form-row">
+				<label for="Sex"><?=Lang::get('gender')?><span class="red">*</span></label>
+				<select name="Sex" id="Sex">
+					<option value="Male" <? if($Sex=='Male') print 'selected'; ?>><?=Lang::get('male')?></option>
+					<option value="Female" <? if($Sex=='Female') print 'selected'; ?>><?=Lang::get('female')?></option>
+				</select>
+			</div>
+			
+			<div class="form-row">
+				<label for="Country"><?=Lang::get('country')?><span class="red">*</span></label>
+				<select name="Country" id="Country">
+					<? foreach($countries as $item) { ?>
+					<option value="<?=$item['Id']?>" <? if($Country==$item['Name']) print 'selected'; ?>> <?=$item['Name']?></option>
+					<? } ?>
+				</select>
+			</div>
+			
+			<div class="form-row">
+				<label for="City"><?=Lang::get('city')?><span class="red">*</span></label>
+				<input id="City" type="text" name="City" value="<?=$City?>" />
+			</div>
+			
+			<div class="form-row">
+				<label for="Address"><?=Lang::get('address')?><span class="red">*</span></label>
+				<input id="Address" type="text" name="Address" value="<?=$Address?>" />
+			</div>
+			
+			<div class="form-row">
+				<label for="Phone"><?=Lang::get('phone')?><span class="red">*</span></label>
+				<input id="Phone" type="text" name="Phone" value="<?=$Phone?>" />
+			</div>
+			
+			<div class="form-row">
+				<label for="PostalCode"><?=Lang::get('post_code')?><span class="red">*</span></label>
+				<input id="PostalCode" type="text" name="PostalCode" value="<?=$PostalCode?>" />
+			</div>
+			
+			<div class="form-row">
+				<label for="Region"><?=Lang::get('state_territory')?></label>
+				<input id="Region" type="text" name="Region" value="<?=$Region?>" />
+			</div>
+			
+			<div class="form-row">
+				<span class="red"><?=Lang::get('stars_inputs')?></span>
+			</div>
+            
+			<div class="form-row enter">
+				<input type="submit" name="login" value="<?=Lang::get('save')?>" class="btn_office" />
+			</div>
+			
+		</div>
+    </form>
+
+
+    <form action="index.php?p=profile" method="post">
+	
+		<div class="bproduct mb30">
+			<h2 class="mb20"><span><?=Lang::get('changing_email')?></span></h2>
+                        
+                        <? if($error_email){ ?>
+			<div class="error">
+				<?=$error_email?>
+			</div>
+			<? } ?>
+                        
+			<div class="form-row">
+				<label><?=Lang::get('current_password')?></label>
+				<input  type="password" name="password" />
+			</div>
+			
+			<div class="form-row">
+                                <label><?=Lang::get('new_email')?></label>
+                                <input type="text" name="newEmail" />
+
+                                <div class="form-row enter">
+                                        <input type="submit" name="change_email" value="<?=Lang::get('save')?>" class="btn_office" />
+                                </div>
+			
+                        </div>
+                </div>
+    </form>
+
+    <form action="index.php?p=profile" method="post">
+	
+		<div class="bproduct mb30">
+			<h2 class="mb20"><span><?=Lang::get('changing_password')?></span></h2>	
+			
+			<? if($error_password){ ?>
+			<div class="error">
+				<?=$error_password?>
+			</div>
+			<? } ?>
+			
+			<div class="form-row">
+				<label for="currentPassword"><?=Lang::get('current_password')?></label>
+				<input id="currentPassword" type="password" name="currentPassword" />
+			</div>
+			
+			<div class="form-row">
+				<label for="newPassword"><?=Lang::get('new_password')?></label>
+				<input id="newPassword" type="password" name="newPassword" />
+			</div>
+			
+			<div class="form-row">
+				<label for="newPasswordConfirm"><?=Lang::get('new_password_confirm')?></label>
+				<input id="newPasswordConfirm" type="password" name="newPasswordConfirm" />
+			</div>
+			
+			<div class="form-row enter">
+				<input type="submit" name="change_password" value="<?=Lang::get('save')?>" class="btn_office" />
+			</div>
+			
+		</div>
+    </form>
+</div>

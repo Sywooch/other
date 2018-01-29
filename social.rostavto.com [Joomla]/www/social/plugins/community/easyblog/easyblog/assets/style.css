@@ -1,0 +1,47 @@
+/**
+ * @package		plg_easyblog
+ * @copyright	Copyright (C) 2010 Stack Ideas Private Limited. All rights reserved.
+ * @license		GNU/GPL, see LICENSE.php
+ *
+ * EasyBlog is free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or
+ * is derivative of works licensed under the GNU General Public License or
+ * other free or open source software licenses.
+ * See COPYRIGHT.php for copyright notices and details.
+ */
+
+/*reset styling*/
+#easyblog-app-wrapper .ezul,
+#easyblog-app-wrapper .ezul li{background:none;border:none;clear:none;list-style:none;list-style-image:none;margin:0;overflow:visible;padding:0;position:relative}
+#easyblog-app-wrapper .eztc{display:table-cell;width:10000px;vertical-align:top}
+/*IE7*/*:first-child+html #easyblog-app-wrapper .eztc{display:table-cell;vertical-align:top;zoom:1;width:auto}
+
+h3.add-comment{ text-decoration: underline; font-weight: 700;}
+#easyblog-app-wrapper .post-date { background: url( 'calendar.png' ) 0 center no-repeat; display:inline; padding: 0 0 0 20px; margin: 12px 0 0 0;}
+#easyblog-app-wrapper .blog-title{ font-size: 14px; text-decoration: underline; font-weight:700; margin: 0 0 5px;}
+#easyblog-app-wrapper .blog-content{ padding: 5px; background: #f4f4f4; border: 1px solid #eee; -moz-border-radius: 6px; margin: 4px 0 0 0;}
+#easyblog-app-wrapper .blog-tools{text-align:right;margin:5px 0}
+#easyblog-app-wrapper .blog-tools span{display:inline-block;padding-left:20px;margin-left:10px;height:16px;line-height:16px;}
+#easyblog-app-wrapper .blog-tools span a{display:inline-block;height:16px;line-height:16px}
+#easyblog-app-wrapper .blog-tools .blog-readon{background:url('readon.png') 0 center no-repeat}
+#easyblog-app-wrapper .blog-tools .blog-hits{background:url('hits.png') 0 center no-repeat}
+#easyblog-app-wrapper .blog-tools .blog-comments{background:url('comments.png') 0 center no-repeat}
+#easyblog-app-wrapper .blog-tools span.expand {float:left;margin:5px 0}
+#easyblog-app-wrapper .blog-tools span.expand a{text-decoration:none}
+#easyblog-app-wrapper .ezb-blogComment{margin-top:5px}
+#easyblog-app-wrapper .comment-notify{margin:5px 0;display:none}
+#easyblog-app-wrapper .comment-notify,
+#easyblog-app-wrapper .ezb-blogComment li{padding:5px;border:1px solid #ccc;background:#f9f9f9;margin-left:20px}
+#easyblog-app-wrapper .ezb-blogComment li+li{margin-top:5px}
+#easyblog-app-wrapper .blog-comment-avatar{float:left;display:inline-block;margin-right:10px}
+div#comment-form textarea#comment{ height: 50px !important; }
+div#comment-form div.comment-actions { margin: 5px 0 10px 0; }
+#easyblog-app-wrapper .blog-ratings{margin-top: 8px}
+#easyblog-app-wrapper .blog-rating-text{display:inline-block}
+#easyblog-app-wrapper .blog-ratings .ratings-value { background: none repeat scroll 0 0 #444444; color: #FFFFFF; height: 13px; line-height: 13px; margin: 1px 0 0 10px; padding: 1px 3px; position: relative; font-size: 10px; white-space:nowrap }
+#easyblog-app-wrapper .blog-ratings .ratings-value .in span { background: url("ratings.png") repeat scroll 0 0 transparent; height: 10px; left: -5px; position: absolute; top: 3px; width: 5px; }
+
+#easyblog-app-wrapper .item-container img {max-width: 400px !important;}
+
+/* Mighty Touch integrations */
+#easyblog-app-wrapper.ezb-mighty{margin-top:10px}

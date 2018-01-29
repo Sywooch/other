@@ -1,0 +1,1 @@
+2014-02-19 10:41:14 - PHP Notice:  Error: MySQL server has gone away<br />Error No: 2006<br />UPDATE magaz_currency SET value = '35.702', date_modified = '2014-02-19 10:41:14' WHERE code = 'RUB' in /home/c5597/public_html/www.rostavto.com/magazin/system/database/mysql.php on line 50

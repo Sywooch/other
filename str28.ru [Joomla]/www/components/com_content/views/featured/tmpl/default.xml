@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_CONTENT_FEATURED_VIEW_DEFAULT_TITLE" option="COM_CONTENT_FEATURED_VIEW_DEFAULT_OPTION">
+		<help
+			key = "RHELP_MENUS_MENU_element_ARTICLE_FEATURED"
+		/>
+		<message>
+			<![CDATA[COM_CONTENT_CATEGORY_VIEW_FEATURED_DESC]]>
+		</message>
+	</layout>
+
+<!-- Add fields to the parameters object for the layout. -->
+<fields name="params">
+<fieldset name="advanced" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS">
+			<field
+			name="featured_categories"
+			type="category"
+			extension="com_content"
+			multiple="true"
+			size="10"
+			default=""
+			label="COM_CONTENT_FEATURED_CATEGORIES_LABEL"
+			description="COM_CONTENT_FEATURED_CATEGORIES_DESC" >
+			<option value="">ROPTION_ALL_CATEGORIES</option>
+			</field>
+			
+			<field name="layout_type"
+				type="hidden"
+				default="blog"
+			/>
+			<field name="bloglayout" type="spacer" class="text"
+					label="RGLOBAL_SUBSLIDER_BLOG_LAYOUT_LABEL"
+			/>
+
+			<field name="num_leading_articles" type="text"
+				description="RGLOBAL_NUM_LEADING_ARTICLES_DESC"
+				label="RGLOBAL_NUM_LEADING_ARTICLES_LABEL"
+				size="3"
+			/>
+
+			<field name="num_intro_articles" type="text"
+				description="RGLOBAL_NUM_INTRO_ARTICLES_DESC"
+				label="RGLOBAL_NUM_INTRO_ARTICLES_LABEL"
+				size="3"
+			/>
+
+			<field name="num_columns" type="text"
+				description="RGLOBAL_NUM_COLUMNS_DESC"
+				label="RGLOBAL_NUM_COLUMNS_LABEL"
+				size="3"
+			/>
+
+			<field name="num_links" type="text"
+				description="RGLOBAL_NUM_LINKS_DESC"
+				label="RGLOBAL_NUM_LINKS_LABEL"
+				size="3"
+			/>
+
+			<field name="multi_column_order" type="list"
+				description="RGLOBAL_MULTI_COLUMN_ORDER_DESC"
+				label="RGLOBAL_MULTI_COLUMN_ORDER_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="0">RGLOBAL_Down</option>
+				<option value="1">RGLOBAL_Across</option>
+			</field>
+
+			<field name="orderby_pri" type="list"
+				description="RGLOBAL_CATEGORY_ORDER_DESC"
+				label="RGLOBAL_CATEGORY_ORDER_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="none">RGLOBAL_No_Order</option>
+				<option value="alpha">RGLOBAL_TITLE_ALPHABETICAL</option>
+				<option value="ralpha">RGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+				<option value="order">RGLOBAL_CATEGORY_MANAGER_ORDER</option>
+			</field>
+
+			<field name="orderby_sec" type="list"
+				description="RGLOBAL_ARTICLE_ORDER_DESC"
+				label="RGLOBAL_ARTICLE_ORDER_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="front">COM_CONTENT_FEATURED_ORDER</option>
+				<option value="rdate">RGLOBAL_MOST_RECENT_FIRST</option>
+				<option value="date">RGLOBAL_OLDEST_FIRST</option>
+				<option value="alpha">RGLOBAL_TITLE_ALPHABETICAL</option>
+				<option value="ralpha">RGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+				<option value="author">RGLOBAL_AUTHOR_ALPHABETICAL</option>
+				<option value="rauthor">RGLOBAL_AUTHOR_REVERSE_ALPHABETICAL</option>
+				<option value="hits">RGLOBAL_MOST_HITS</option>
+				<option value="rhits">RGLOBAL_LEAST_HITS</option>
+				<option value="order">RGLOBAL_ORDERING</option>
+			</field>
+
+			<field name="order_date" type="list"
+				description="RGLOBAL_ORDERING_DATE_DESC"
+				label="RGLOBAL_ORDERING_DATE_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="created">RGLOBAL_CREATED</option>
+				<option value="modified">RGLOBAL_MODIFIED</option>
+				<option value="published">JPUBLISHED</option>
+			</field>
+
+			<field name="show_pagination" type="list"
+				description="RGLOBAL_PAGINATION_DESC"
+				label="RGLOBAL_PAGINATION_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+				<option value="2">RGLOBAL_AUTO</option>
+			</field>
+
+			<field name="show_pagination_results" type="list"
+				label="RGLOBAL_PAGINATION_RESULTS_LABEL"
+				description="RGLOBAL_PAGINATION_RESULTS_DESC">
+
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+
+</fieldset>
+
+<fieldset name="article" label="COM_CONTENT_ATTRIBS_FIELDSET_LABEL">
+			<field name="show_title" type="list"
+				description="RGLOBAL_SHOW_TITLE_DESC"
+				label="RGLOBAL_SHOW_TITLE_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="link_titles" type="list"
+				description="RGLOBAL_LINKED_TITLES_DESC"
+				label="RGLOBAL_LINKED_TITLES_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+
+			<field name="show_intro" type="list"
+				description="RGLOBAL_SHOW_INTRO_DESC"
+				label="RGLOBAL_SHOW_INTRO_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_category" type="list"
+				description="RGLOBAL_SHOW_CATEGORY_DESC"
+				label="RGLOBAL_SHOW_CATEGORY_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="link_category" type="list"
+				description="RGLOBAL_LINK_CATEGORY_DESC"
+				label="RGLOBAL_LINK_CATEGORY_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+
+			<field name="show_parent_category" type="list"
+				description="RGLOBAL_SHOW_PARENT_CATEGORY_DESC"
+				label="RGLOBAL_SHOW_PARENT_CATEGORY_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="link_parent_category" type="list"
+				description="RGLOBAL_LINK_PARENT_CATEGORY_DESC"
+				label="RGLOBAL_LINK_PARENT_CATEGORY_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">RNO</option>
+				<option value="1">RYES</option>
+			</field>
+
+			<field name="show_author" type="list"
+				description="RGLOBAL_SHOW_AUTHOR_DESC"
+				label="RGLOBAL_SHOW_AUTHOR_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="link_author" type="list"
+				description="RGLOBAL_LINK_AUTHOR_DESC"
+				label="RGLOBAL_LINK_AUTHOR_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+
+			<field name="show_create_date" type="list"
+				description="RGLOBAL_SHOW_CREATE_DATE_DESC"
+				label="RGLOBAL_SHOW_CREATE_DATE_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_modify_date" type="list"
+				description="RGLOBAL_SHOW_MODIFY_DATE_DESC"
+				label="RGLOBAL_SHOW_MODIFY_DATE_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_publish_date" type="list"
+				description="RGLOBAL_SHOW_PUBLISH_DATE_DESC"
+				label="RGLOBAL_SHOW_PUBLISH_DATE_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_element_navigation" type="list"
+				description="RGLOBAL_SHOW_NAVIGATION_DESC"
+				label="RGLOBAL_SHOW_NAVIGATION_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+			name="show_vote" type="list"
+			label="RGLOBAL_SHOW_VOTE_LABEL"
+			description="RGLOBAL_SHOW_VOTE_DESC"
+		>
+			<option value="">RGLOBAL_USE_GLOBAL</option>
+			<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+			<option value="0">JHIDE</option>
+			<option	value="1">JSHOW</option>
+		</field>
+
+			<field
+				name="show_readmore"
+				type="list"
+				description="RGLOBAL_SHOW_READMORE_DESC"
+				label="RGLOBAL_SHOW_READMORE_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_readmore_title"
+				type="list"
+				label="RGLOBAL_SHOW_READMORE_TITLE_LABEL"
+				description="RGLOBAL_SHOW_READMORE_TITLE_DESC"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_icons" type="list"
+				description="RGLOBAL_SHOW_ICONS_DESC"
+				label="RGLOBAL_SHOW_ICONS_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_print_icon" type="list"
+				description="RGLOBAL_SHOW_PRINT_ICON_DESC"
+				label="RGLOBAL_SHOW_PRINT_ICON_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_email_icon" type="list"
+				description="RGLOBAL_SHOW_EMAIL_ICON_DESC"
+				label="RGLOBAL_SHOW_EMAIL_ICON_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_hits" type="list"
+				description="RGLOBAL_SHOW_HITS_DESC"
+				label="RGLOBAL_SHOW_HITS_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_noauth" type="list"
+				description="RGLOBAL_SHOW_UNAUTH_LINKS_DESC"
+				label="RGLOBAL_SHOW_UNAUTH_LINKS_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">RNO</option>
+				<option value="1">RYES</option>
+			</field>
+</fieldset>
+		<fieldset name="integration"
+		>
+
+			<field name="show_feed_link" type="list"
+				description="RGLOBAL_SHOW_FEED_LINK_DESC"
+				label="RGLOBAL_SHOW_FEED_LINK_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="feed_summary" type="list"
+				description="RGLOBAL_FEED_SUMMARY_DESC"
+				label="RGLOBAL_FEED_SUMMARY_LABEL"
+			>
+				<option value="">RGLOBAL_USE_GLOBAL</option>
+				<option value="0">RGLOBAL_INTRO_TEXT</option>
+				<option value="1">RGLOBAL_FULL_TEXT</option>
+			</field>
+		</fieldset>
+</fields>
+</metadata>

@@ -1,0 +1,162 @@
+
+<script type="text/javascript">
+$(function(){
+    var cid = "<?=$cat_id?>";
+    if(cid){
+        $('[name="cid"] option').removeAttr('selected');
+        if(!$('[name="cid"] option[value="ic:'+cid+'"]').length){
+            $('[name="cid"]').prepend($('<option></option>').attr({
+                value: 'ic:'+cid
+            }).text('<?=$cat_name?>'));
+        }
+        $('[name="cid"] option[value="ic:'+cid+'"]').attr('selected', 'selected');
+    }
+});
+</script>
+
+<? if(isset($brand)){ ?>
+    <h2><?=$brand['Name']?></h2>
+<? }else{ ?>
+    <h2><?=$catinfo['name']?></h2>
+<?} ?>
+
+<? $emptymessage = 'Ничего не найдено';?>
+
+<? if (isset($hintcats) && count($hintcats)>0) { ?>
+<h3>Подходящие категории</h3>
+
+<ul class="col300">
+<? foreach ($hintcats as $url => $name){ ?>
+    <li style="float:left; padding: 10px;"><a href="<?= $url ?>"><?= $name ?></a></li>
+<? } ?>
+</ul>
+<br/><br/><br/>
+<? } ?>
+
+<? if (!empty($itemlist)) { ?>
+<? if (isset($search)) {?>
+<h3>Товаров по запросу "<?=$search;?>"(<?=$count?>)</h3>
+<?}?>
+<!-- tabs -->
+<? $class_all = ($tmall=="true") ? '' : 'active'; ?>
+<? $class_tmall = ($tmall=="true") ? 'active' : ''; ?>
+<ul class="itabs mt30 flin clrfix">
+    <li class="<?=$class_all?>" id="ttab1"><a href="<?=str_replace('&tmall=true','',$pageurl)?>">Все товары</a></li>
+    <li class="<?=$class_tmall?>" id="ttab2"><a href="<?=$pageurl?>&tmall=true" >Tmall</a></li>
+</ul>
+
+<!-- /tabs -->
+<br/>
+<ul class="cat160 flin clrfix">
+    <div style="float:left">
+    <form method="post" id="sort_form">
+    Сортировать по
+    <select name="sort_by" onchange="document.getElementById('sort_form').submit();">
+        <option value="popularity:desc" <?if ($_GET['sort_by'] == 'popularity:desc'){?>selected<?}?>>Популярности</option>
+        <option value="price:desc" <?if ($_GET['sort_by'] == 'price:desc'){?>selected<?}?>>Цене по убыванию</option>
+        <option value="price:asc" <?if ($_GET['sort_by'] == 'price:asc'){?>selected<?}?>>Цене по возрастанию</option>
+        <option value="vendorRating:desc" <?if ($_GET['sort_by'] == 'vendorRating:desc'){?>selected<?}?>>Рейтингу продавца</option>
+        <option value="volume:desc" <?if ($_GET['sort_by'] == 'volume:desc'){?>selected<?}?>>Объему продаж</option>
+    </select>
+    </form>
+    </div>
+    <div style="float:right;margin-right:20px">
+    <form method="post" id="per_page">
+    Выводить по
+    <select name="per_page" onchange="document.getElementById('per_page').submit();">
+        <option value="16" <?if ($perpage == '16'){?>selected<?}?>>16</option>
+        <option value="64" <?if ($perpage == '64'){?>selected<?}?>>64</option>
+        <option value="128" <?if ($perpage == '128'){?>selected<?}?>>128</option>
+    </select>
+    </form>
+    </div>
+    <br clear="all">
+    <? if (!empty($itemlist)) foreach($itemlist as $item) { ?>
+    <? $item['title'] = str_replace(array('&lt; ', ' &gt;', '&lt;', '&gt;', '&LT;', '&Lt; ', ' & gt'),array('<','>','<','>','<','<','>'),$item['title']) ?>
+			<li onmouseover="cshow('<?=$item['id']?>')">
+				<a href="index.php?p=item&id=<?=$item['id']?>" class="i160"><img src="<?=$item['mainpictureurl']?>_160x160.jpg" alt=""/></a>
+				<!--<p class="ve">Продавец: <a href="?p=vendor&id=<?=$item['vendorid']?>&clear"><?=$item['vendorname']?></a></p>-->
+				<p class="ve">Рейтинг: <img src="i/hearts/level_<?=$item['vendorscore']?>.gif" align="top" title="<?=$item['vendorscore']?>"></p>
+				<!--<p class="ve">Число продаж: <?=number_format($item['volume'])?></p>-->
+				<!--<a href="index.php?p=item&id=<?=$item['id']?>" class="te"><?=$item['title']?></a>-->
+				<a href="index.php?p=item&id=<?=$item['id']?>" class="pr"><?=$item['convertedprice']?></a>
+			</li>
+            <li class="catpopup" id="<?=$item['id']?>" onmouseout="chide('<?=$item['id']?>')"
+                style="display:none;width:210px;height:340px;padding:4px;position:relative;margin-bottom:-150px;margin-top:0px;margin-left:-210px;margin-right:-30px;background:#fff;border:1px solid #bbb; z-index:100">
+				<a id="_" href="index.php?p=item&id=<?=$item['id']?>" class="i160"><img id="_" src="<?=$item['mainpictureurl']?>_210x210.jpg" alt=""/></a>
+				<p id="_" class="ve">Продавец: <a id="_" href="?p=vendor&id=<?=$item['vendorid']?>&clear"><?=$item['vendorname']?></a></p>
+				<p id="_" class="ve">Рейтинг: <img id="_" src="i/hearts/level_<?=$item['vendorscore']?>.gif" align="top" title="<?=$item['vendorscore']?>"></p>
+				<p id="_" class="ve">Число продаж: <?=number_format($item['volume'])?></p>
+				<a href="index.php?p=item&id=<?=$item['id']?>" class="te" id="title_<?=$item['id']?>"><?=$item['title']?></a>
+				<a id="_" href="index.php?p=item&id=<?=$item['id']?>" class="pr"><?=$item['convertedprice']?></a>
+			</li>
+    <? } ?>
+</ul>
+<script>
+function cshow(cid)
+{
+    $('.catpopup').hide();
+    document.getElementById(cid).style.display = 'inline';
+    setTimeout('gettitle("'+cid+'")', 1000);
+    //gettitle(cid);
+}
+function chide(cid)
+{
+    var e = window.event;
+    if (e) var relTarg = e.relatedTarget || e.toElement;
+    if (!e || !relTarg || !relTarg.id) document.getElementById(cid).style.display = 'none';
+}
+function gettitle(cid)
+{
+    if (document.getElementById(cid) && document.getElementById(cid).style.display == 'none') return;
+    if (document.getElementById('title_'+cid) && document.getElementById('title_'+cid).innerHTML == '')
+    {
+        $('#title_'+cid).html('<img src="i/spinner.gif">');
+        $.ajax({
+            url: 'index.php?p=itemtitle&itemid='+cid,
+            success: function(data) {
+                $('#title_'+cid).html(data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $('#title_'+cid).html('');
+            }
+        });
+    }
+}
+</script>
+<div class="paging">
+	<? $curpage=floor($from/$perpage)+1 ?>
+	<? $maxpage=ceil($count/$perpage) ?>
+	<? if ($maxpage>1 && !($curpage>=$maxpage)) { ?>
+        <a href="<?=$pageurl?>&from=<?=$from+$perpage?>&tmall=<?=$tmall?>" class="b30 flr"><span>Следующая страница</span></a>
+        <? }  elseif($curpage > $maxpage) { ?>
+        <? }?>
+	
+	<ul class="flin">
+		<? if ($curpage>3) { ?>
+            <li><a href="<?=$pageurl?>&from=1&tmall=<?=$tmall?>">1</a></li>
+		<? } ?>
+		<? if ($curpage>4) { ?>
+            <li>...</li>
+		<? } ?>
+		<? for ($i=max(1, $curpage-2);$i<=min($maxpage, $curpage+2);$i++) { ?>
+            <? if ($curpage == $i) { ?>
+                <li class="active"><a href="<?=$pageurl?>&from=<?=(($i-1)*$perpage+1)?>&tmall=<?=$tmall?>"><?=$i?></a></li>
+            <? }else{ ?>
+                <li><a href="<?=$pageurl?>&from=<?=(($i-1)*$perpage+1)?>&tmall=<?=$tmall?>"><?=$i?></a></li>
+            <? } ?>
+		<? } ?>
+		<? if ($curpage<$maxpage-3) { ?>
+            <li>...</li>
+		<? } ?>
+		<? if ($curpage<$maxpage-2) { ?>
+            <li><a href="<?=$pageurl?>&from=<?=(($maxpage-1)*$perpage)?>&tmall=<?=$tmall?>"><?=$maxpage?></a></li>
+		<? } ?>
+	</ul>
+</div>
+
+<?}else{?>
+	<div class="block-list">
+		<h2 class=""><?=$emptymessage?></h2>
+	</div>
+<?}?>

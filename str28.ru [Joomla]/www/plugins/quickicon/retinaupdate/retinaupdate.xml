@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="quickicon">
+	<name>plg_quickicon_retinaupdate</name>
+	<author>Retina Project</author>
+	<creationDate>August 2011</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>admin@retina.org</authorEmail>
+	<authorUrl>www.retina-studio.ru</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_QUICKICON_retinaUPDATE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="retinaupdate">retinaupdate.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_quickicon_retinaupdate.ini</language>
+		<language tag="en-GB">en-GB.plg_quickicon_retinaupdate.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="context"
+					type="text"
+					default="mod_quickicon"
+					description="PLG_QUICKICON_retinaUPDATE_GROUP_DESC"
+					label="PLG_QUICKICON_retinaUPDATE_GROUP_LABEL"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

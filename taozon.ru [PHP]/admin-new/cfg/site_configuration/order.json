@@ -1,0 +1,196 @@
+{
+    "defaultSaveUrl": {
+        "cmd": "SiteConfiguration",
+        "do": "save"
+    },
+    "defaultFieldsParameters": {
+        "text": {
+            "emptytext": {
+                "trans": "Not_filled"
+            }
+        },
+        "textarea": {
+            "emptytext": {
+                "trans": "Not_filled"
+            }
+        }
+    },
+    "fields": [
+        {
+            "name": "payment_in_cash",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "name": "hide_middle_name",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        },        
+        {
+            "name": "open_payment_in_new_window",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "name": "notification_email",
+            "type": "text"
+        },
+        {
+            "name": "notification_send_from",
+            "type": "text"
+        },
+        {
+            "name": "notification_send_from_name",
+            "type": "text"
+        },
+        {
+            "name": "CFG_PREFIX_REPLACE_USR",
+            "type": "text"
+        },
+        {
+            "name": "CFG_PREFIX_REPLACE_ORD",
+            "type": "text"
+        },
+        {
+            "name": "origin_package",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "order_insurance_percent",
+            "type": "text"
+        },
+        {
+            "name": "MinOrderCost",
+            "type": "text",
+            "saveUrl": {
+                "cmd": "SiteConfiguration",
+                "do": "saveOrderSettings"
+            }
+        },
+        {
+            "name": "MaxNoteItemsCount",
+            "type": "text",
+            "saveUrl": {
+                "cmd": "SiteConfiguration",
+                "do": "saveOrderSettings"
+            }
+        },
+        {
+            "name": "MaxCartItemsCount",
+            "type": "text",
+            "saveUrl": {
+                "cmd": "SiteConfiguration",
+                "do": "saveOrderSettings"
+            }
+        },
+        {
+            "name": "IsAuctionTypeItemSellAllowed",
+            "type": "select",
+            "valuesList": [
+                "true",
+                "false"
+            ],
+            "saveUrl": {
+                "cmd": "SiteConfiguration",
+                "do": "saveShowcase"
+            }
+        },
+        {
+            "name": "IsNotDeliverableItemSellAllowed",
+            "type": "select",
+            "valuesList": [
+                "true",
+                "false"
+            ],
+            "saveUrl": {
+                "cmd": "SiteConfiguration",
+                "do": "saveShowcase"
+            }
+        },
+        {
+            "name": "IsSecondhandItemSellAllowed",
+            "type": "select",
+            "valuesList": [
+                "true",
+                "false"
+            ],
+            "saveUrl": {
+                "cmd": "SiteConfiguration",
+                "do": "saveShowcase"
+            }
+        },
+        {
+            "name": "IsHasntShowcaseItemSellAllowed",
+            "type": "select",
+            "valuesList": [
+                "true",
+                "false"
+            ],
+            "saveUrl": {
+                "cmd": "SiteConfiguration",
+                "do": "saveShowcase"
+            }
+        },
+        {
+            "name": "IsInStockItemSellAllowed",
+            "type": "select",
+            "valuesList": [
+                "true",
+                "false"
+            ],
+            "saveUrl": {
+                "cmd": "SiteConfiguration",
+                "do": "saveShowcase"
+            }
+        },
+        {
+            "name": "IsFilteredItemsSellAllowed",
+            "type": "select",
+            "valuesList": [
+                "true",
+                "false"
+            ],
+            "saveUrl": {
+                "cmd": "SiteConfiguration",
+                "do": "saveShowcase"
+            }
+        },
+        {
+            "name": "hide_item_for_restrictions",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "name":"admin_letter_lang",
+            "type": "select",
+            "valuesList": [
+                "ru",
+                "en"
+            ]
+        },
+        {
+            "name": "is_postal_code_required",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        }
+    ]
+}

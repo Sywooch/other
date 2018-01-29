@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install method="upgrade" version="1.5" type="plugin" group="rscustom" >
+    <name>rsCustom - textinput</name>
+    <creationDate>June 2011</creationDate>
+    <author>The retinashop Development Team</author>
+    <authorUrl>http://www.retinashop.net</authorUrl>
+    <copyright>Copyright (C) 2004-2011 retinashop Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>2.0.6</version>
+    <description>text input plugin for product</description>
+    <languages>
+        <language tag="en-GB">en-GB.plg_rscustom_textinput.ini</language>
+        <language tag="fr-FR">fr-FR.plg_rscustom_textinput.ini</language>
+    </languages>
+    <files>
+        <filename plugin="textinput">textinput.php</filename>
+        <folder>textinput</folder>
+    </files>
+    <params addpath="/admin/components/com_retinashop/elements">
+        <param type="rsjpluginwarning" />
+        <param name="custom_title" type="text" size="20"  default="COM_RETINASHOP_COMMENT" label="rsCUSTOM_NAME_INFO" description="rsCUSTOM_NAME_INFO_DESC" />
+        <param name="custom_size" type="text"  size="15"  default="10" label="rsCUSTOM_TEXTINPUT_SIZE" description="rsCUSTOM_TEXTINPUT_SIZE_DESC" />
+        <param name="custom_price_by_letter" type="list"  default="0" label="rsCUSTOM_PRICE_BY_LETTER" description="rsCUSTOM_PRICE_BY_LETTER_DESC" >
+			<option value="0">COM_RETINASHOP_NO</option>
+			<option value="1">COM_RETINASHOP_YES</option>
+		</param>
+    </params>
+</install>

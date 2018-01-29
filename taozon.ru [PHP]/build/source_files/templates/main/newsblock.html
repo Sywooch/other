@@ -1,0 +1,19 @@
+<? if (!empty($newsBlock))  { ?>
+<div class="newsblock clrfix">
+	<h2 class="mb25"><span><?=Lang::get('news')?></span></h2>
+	<ul class="list-news">
+	<? if (!empty($newsBlock)) foreach ($newsBlock as $news) { ?>
+
+		<li class="news news-<?= $news['id'] ?>">
+			<div class="img"><a href="?p=news&id=<?=$news['id']?>"><img src="<?=$news['image']?>"></a></div>
+			<div class="date"><?= date('d.m.Y', strtotime($news['created'])) ?></div>
+			<div class="title">
+				<a class="title" href="?p=news&id=<?= $news['id'] ?>"><?= $news['title'] ?></a>
+			</div>
+		</li>
+
+	<? } ?>
+	</ul>
+	<div class="link_all-news"><a href="?p=allnews"><?=Lang::get('all_news')?></a></div>
+</div>
+<? } ?>

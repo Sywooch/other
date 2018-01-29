@@ -1,0 +1,89 @@
+{
+    "defaultSaveUrl": {
+        "cmd": "SiteConfiguration",
+        "do": "save"
+    },
+    "defaultFieldsParameters": {
+        "text": {
+            "emptytext": {
+                "trans": "Not_filled"
+            }
+        },
+        "textarea": {
+            "emptytext": {
+                "trans": "Not_filled"
+            }
+        }
+    },
+    "fields": [
+        {
+            "name": "show_debug",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "name": "site_temporary_unavailable",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "name": "auth_to_private_office",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        },
+		{
+            "name": "auth_capcha_admin",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        },		
+        {
+            "name": "site_admin_email",
+            "type": "text"
+        },
+        {
+            "name": "site_email",
+            "type": "text"
+        },
+        {
+            "name": "email_smtp_security",
+            "type": "select",
+            "valuesList": [
+                "none",
+                "ssl",
+                "tls"
+            ]
+        },		
+        {
+            "name": "email_smtp_pass",
+            "type": "text"
+        },
+        {
+            "name": "email_smtp_user",
+            "type": "text"
+        },
+        {
+            "name": "email_smtp_port",
+            "type": "text"
+        },
+        {
+            "name": "email_smtp_adress",
+            "type": "text"
+        },
+        {
+            "name": "notification_send_from_name",
+            "type": "text"
+        }
+    ]
+}

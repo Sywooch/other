@@ -1,0 +1,85 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'default')?>"><?=LangAdmin::get('Configuration')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignDo('internal')?>"><?=LangAdmin::get('Delivery_small')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('Delivery_internal_small')?></li>
+</ul><!--/.breadcrumb-->
+
+<? require TPL_ABSOLUTE_PATH . 'site_config/inc/tabs.php'; ?>
+
+
+<?
+$current_delivery = (string)$Settings->Settings->DeliveryType;
+$current_region_id = (int)$Settings->Settings->ExternalDeliveryRegionId;
+$current_region_name = (string)$Settings->Settings->ExternalDeliveryRegionName;
+?>
+
+<!-- ot-sub-sub-nav -->
+<? require_once 'sub_nav.html'; ?>
+<!-- /ot-sub-sub-nav -->
+
+<h1><?=LangAdmin::get('Delivery_internal_small')?> <i class="icon-question-sign ot_inline_help ot-header-hint" data-toggle="popover" data-content="<?=LangAdmin::get('Delivery_internal_hint')?>"></i></h1>
+
+ 
+
+
+<div class="well" id="internal-wrapper">
+
+    <div class="row-fluid offset-bottom1">
+
+        <form id="case-settings" action="<?=$PageUrl->AssignDo('saveInternal')?>" method="POST">
+            <div class="span3">
+
+                <p><strong><?=LangAdmin::get('Delivery_types')?></strong> <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-content="<?=LangAdmin::get('Delivery_types_hint')?>"></i></p>
+
+                <ol id="chosenItems" class="unstyled ot_sortable_list ot_sortable">
+                    <? if(isset($Settings->Settings->DeliveryTypes->DeliveryTypes) && !empty($Settings->Settings->DeliveryTypes->DeliveryTypes))
+                        foreach($Settings->Settings->DeliveryTypes->DeliveryTypes as $del){ ?>
+                        <? $enabledDels[] = (string)$del; ?>
+                        <li data-name="<?=(string)$del?>">
+                            <span class="badge"><i class="icon-move" title="<?=LangAdmin::get('MoveTo')?>"></i> <?=(string)$del?>
+                                <i class="icon-remove" title="<?=LangAdmin::get('Delete')?>"></i>
+                            </span>
+                        </li>
+                    <? } ?>
+                </ol>
+            </div>
+
+            <div class="span4">
+                <p><strong><?=LangAdmin::get('Delivery_add')?></strong></p>
+                <div class="">
+                    <select class="input-large span8 select_searched_list" name="new_internal">
+                       <? $hasItems = false; if(@$Settings->Settings->AvailableDeliveryTypes->NamedProperty) foreach($Settings->Settings->AvailableDeliveryTypes->NamedProperty as $prop){ $hasItems = true; ?>
+                            <? if(!in_array((string)$prop->Name, $enabledDels)){ ?>
+                                <option value="<?=(string)$prop->Name?>"><?=(string)$prop->Name?></option>
+                            <? } ?>
+                        <? } ?>
+                    </select>
+
+                    <p class="span1"><button id="internal-add" class="btn btn-small btn-primary add-internal<?=($hasItems ? '' : ' disabled')?>" href="javascript:void(0)" title="<?=LangAdmin::get('Add')?>" data-loading-text="<i class='icon-plus'></i>" autocomplete="off" type="button"><i class="icon-plus"></i></button></p>
+                </div>
+            </div>
+
+            <div class="span5">
+
+
+                <p><strong><?=LangAdmin::get('Delivery_region')?></strong> <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-content="<?=LangAdmin::get('Delivery_region_hint')?>"></i></p>
+
+                <p><a href="#" class="ot_show_choose_region_modal blink"><?=LangAdmin::get('Chose_region')?></a></p>
+
+                <br/>
+                <div id="delivery-choosed"><?=LangAdmin::get('selected_region')?>: <span><?=$current_region_id;?> <?=$current_region_name;?></span></div>
+                <input type="hidden" name="ExternalDeliveryRegionId" value="<?=$current_region_id;?>" />
+                <input type="hidden" name="ExternalDeliveryRegionName" value="<?=$current_region_name;?>" />
+
+            </div>
+        </form>
+    </div>
+
+    <button type="submit" class="btn btn_preloader btn-primary save-case" data-loading-text="<?=LangAdmin::get('Saving')?>" autocomplete="off"><?=LangAdmin::get('Save')?></button>
+
+
+</div>
+
+<? ScriptIncluder::AddCustomScript('js/ot-shipment.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-shipment-internal.js'); ?>

@@ -1,0 +1,444 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+
+.block /* Block wrapper */ {
+  margin-bottom: 1em;
+}
+
+.block.first /* The first block in the region */ {
+}
+
+.block.last /* The last block in the region */ {
+}
+
+.block.region-odd /* Zebra striping for each block in the region */ {
+}
+
+.block.region-even /* Zebra striping for each block in the region */ {
+}
+
+.block.odd /* Zebra striping independent of each region */ {
+}
+
+.block.even /* Zebra striping independent of each region */ {
+}
+
+.region-count-1 /* Incremental count for each block in the region */ {
+}
+
+.count-1 /* Incremental count independent of each region */ {
+}
+
+.block h2.title /* Block title */ {
+}
+
+.block .content /* Block's content wrapper */ {
+}
+
+#block-aggregator-category-1 /* Block for the latest news items in the first category */ {
+}
+
+#block-aggregator-feed-1 /* Block for the latest news items in the first feed */ {
+}
+
+#block-block-1 /* First administrator-defined block */ {
+}
+
+#block-blog-0 /* "Recent blog posts" block */ {
+}
+
+#block-book-0 /* "Book navigation" block for the current book's table of contents */ {
+}
+
+#block-comment-0 /* "Recent comments" block */ {
+}
+
+#block-forum-0 /* "Active forum topics" block */ {
+}
+
+#block-forum-1 /* "New forum topics" block */ {
+}
+
+#block-menu-primary-links /* "Primary links" block */ {
+}
+
+#block-menu-secondary-links /* "Secondary links" block */ {
+}
+
+#block-node-0 /* "Syndicate" block for primary RSS feed */ {
+}
+
+#block-poll-0 /* "Most recent poll" block */ {
+}
+
+#block-profile-0 /* "Author information" block for the profile of the page's author */ {
+}
+
+#block-search-0 /* "Search form" block */ {
+}
+
+#block-statistics-0 /* "Popular content" block */ {
+}
+
+#block-user-0 /* "User login form" block */ {
+}
+
+#block-user-1 /* "Navigation" block for Drupal navigation menu */ {
+}
+
+#block-user-2 /* "Who's new" block for a list of the newest users */ {
+}
+
+#block-user-3 /* "Who's online" block for a list of the online users */ {
+}
+
+#block-block-2 /* Блок "Контактная информация" */ {
+  float: left;
+  width: 165px;
+  margin: 113px 0 0 0;
+  font-family: "Century Gothic";
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #d0d0d0;
+  text-shadow: 0px 0px 1px #d0d0d0;
+}
+
+#block-block-3 /* Блок "Курс валют" */ {
+  width: 201px;
+  height: 65px;
+  margin: 0 0 13px 75px;
+  padding: 23px 0 0 50px;
+  background: transparent url("../images/currency_bg.png") 0 0 no-repeat;
+}
+
+#block-block-3 table {
+  width: 150px;
+  margin: 0;
+}
+
+#block-block-3 .usd_currency,
+#block-block-3 .cny_currency {
+  padding-bottom: 9px;
+  font-family: "Century Gothic";
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #e9960a;
+  text-shadow: 0px 0px 1px #e9960a;
+}
+
+#block-block-3 .usd_rate,
+#block-block-3 .cny_rate {
+  font-family: "Century Gothic";
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0px 0px 1px #fff;
+}
+
+#block-block-3 .usd_currency,
+#block-block-3 .usd_rate {
+  width: 95px;
+}
+
+#block-block-3 .cny_currency,
+#block-block-3 .cny_rate {
+  width: 55px;
+}
+
+#block-block-4 /* Блок "Часы" */ {
+  margin: 0 0 0 -56px;
+  padding: 0;
+}
+
+#block-block-4, #block-block-4 .content {
+  float: right;
+  height: 83px;
+}
+
+#block-block-4 canvas {
+  margin-top: 3px;
+}
+
+#block-block-4 * {
+  margin: 0;
+  padding: 0;
+  font-family: "Century Gothic";
+}
+
+#block-block-4 .clock_1_col, #block-block-4 .clock_2_col, #block-block-4 .clock_3_col {
+  line-height: 12px;
+}
+
+#block-block-4 .clock_2_col {
+  padding: 0 37px 0 23px;
+}
+
+#block-block-4 span {
+  font-size:11px;
+  line-height:11px;
+  color:#1f1f1f;
+  text-shadow:none;
+  font-style: normal;
+}
+/*.node-type-webform*/
+
+#block-webform-client-block-6 /* Блок "Обратная связь" */ {
+}
+
+#block-webform-client-block-6 form {
+  width: 251px;
+  margin: 0 0 0 70px;
+}
+
+.node-type-webform form {
+  width: 251px;
+  margin: 20px 0 0 0;
+}
+
+#block-webform-client-block-6 form .form-item,
+.node-type-webform form .form-item {
+  margin: 0 0 8px 0;
+}
+
+#block-webform-client-block-6 form input,
+.node-type-webform form input {
+  width: 231px;
+  height: 32px;
+  padding: 0 0 0 20px;
+  font-family: Calibri;
+  font-size: 14px;
+  color: #e1e1e1;
+  font-weight: bold;
+  font-style: italic;
+  background: transparent url("../images/form_input_bg.png") 0 0 repeat;
+  border: 0;
+}
+
+#block-webform-client-block-6 form textarea,
+.node-type-webform form textarea {
+  width: 231px;
+  height: 116px;
+  padding: 9px 0 0 20px;
+  font-family: Calibri;
+  font-size: 14px;
+  color: #e1e1e1;
+  font-weight: bold;
+  font-style: italic;
+  overflow: hidden;
+  background: transparent url("../images/form_input_bg.png") 0 0 repeat;
+  border: 0;
+}
+
+#block-webform-client-block-6 form .description,
+#block-webform-client-block-6 form label,
+.node-type-webform form .description,
+.node-type-webform form label {
+  display: none;
+}
+
+#block-webform-client-block-6 form .captcha,
+.node-type-webform form .captcha {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#block-webform-client-block-6 form .captcha img,
+.node-type-webform form .captcha img {
+  float: left;
+  width: 163px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+#block-webform-client-block-6 form .captcha .form-item,
+.node-type-webform form .captcha .form-item {
+  float: left;
+  width: 78px;
+  height: 32px;
+}
+
+#block-webform-client-block-6 form .captcha input#edit-captcha-response,
+#block-webform-client-block-6 form .captcha input#edit-captcha-response-1,
+.node-type-webform form .captcha input#edit-captcha-response,
+.node-type-webform form .captcha input#edit-captcha-response-1 {
+  width: 78px;
+  height: 32px;
+  padding: 0;
+  text-align: center;
+}
+
+#block-webform-client-block-6 form #edit-submit,
+#block-webform-client-block-6 form #edit-submit-1,
+.node-type-webform form #edit-submit,
+.node-type-webform form #edit-submit-1 {
+  width: 257px;
+  height: 38px;
+  margin-left: -3px;
+  padding: 0;
+  font-family: Calibri;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  color: #402d04;
+  text-transform: uppercase;
+  background: transparent url("../images/form_input_submit_bg.png") 0 0 repeat;
+}
+
+#block-webform-client-block-6 form input#edit-submit:active,
+#block-webform-client-block-6 form input#edit-submit-1:active,
+.node-type-webform form input#edit-submit:active {
+   padding: 1px 0 0 1px
+}
+
+/* Блок "Дочерние категории" */
+
+#block-block-7 {
+  width: 422px;
+  margin-left: 225px;
+}
+
+#block-block-7 * {
+  margin: 0;
+  padding: 0;
+}
+
+#block-block-7 ul {
+  padding: 0;
+}
+
+#block-block-7 li {
+  width: 422px;
+  padding: 12px 0 5px 0;
+  list-style-type: none;
+  border-bottom: 1px dotted grey;
+
+}
+#block-block-7 li.last {
+  border: 0;
+}
+
+#block-block-7 a {
+  font-family: "Century Gothic";
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  color: #f6b005;
+  text-shadow: 0px 0px 1px #f6b005;
+}
+
+#block-block-7 a:hover {
+  text-decoration: underline;
+  color: #ddb85e;
+}
+
+#block-block-7 .term_count {
+  display: inline;
+  float: right;
+  margin-right: 1px;
+  font-family: "Century Gothic";
+  font-size: 15px;
+  font-style: italic;
+  color: #848484;
+  text-shadow: 0px 0px 1px #848484;
+}
+
+/* Блок "Похожие товары" */
+#block-views-related_goods-block_1 {
+  float: left;
+  margin-bottom: 12px;
+}
+
+#block-views-related_goods-block_1 h2.title {
+  font-family: Calibri!important;
+  font-size: 18px!important;
+}
+
+#block-views-related_goods-block_1 .view-related-goods {
+  float: left;
+  height: 161px;
+  margin: 4px -30px 0 -20px;
+  padding: 22px 10px 0 20px;
+  background: transparent url("../images/goods_related_bg.png") 0 0 no-repeat;
+}
+
+#block-views-related_goods-block_1 .views-row {
+  float: left;
+  position: relative;
+  width: 207px;
+  height: 139px;
+  margin-right: 13px;
+  background: transparent url("../images/goods_related_border.png") 0 0 no-repeat;
+}
+
+#block-views-related_goods-block_1 .views-row .views-field-field-discount-goods-value,
+#block-views-related_goods-block_1 .views-row .views-field-field-share-goods-value,
+#block-views-related_goods-block_1 .views-row .views-field-field-new-goods-value {
+  position: absolute;
+  top: 0;
+  width: 81px;
+  height: 83px;
+  margin: 3px 0 0 123px;
+}
+
+#block-views-related_goods-block_1 .views-row .views-field-field-discount-goods-value {
+  background: transparent url("../images/goods_discount_bg.png") 0 0 no-repeat;
+}
+
+#block-views-related_goods-block_1 .views-row .views-field-field-share-goods-value {
+  background: transparent url("../images/goods_action_bg.png") 0 0 no-repeat;
+}
+
+#block-views-related_goods-block_1 .views-row .views-field-field-new-goods-value {
+  background: transparent url("../images/goods_new_bg.png") 0 0 no-repeat;
+}
+
+#block-views-related_goods-block_1 .views-row .views-field-field-discount-goods-value span,
+#block-views-related_goods-block_1 .views-row .views-field-field-share-goods-value span,
+#block-views-related_goods-block_1 .views-row .views-field-field-new-goods-value span {
+  display: none;
+}
+
+#block-views-related_goods-block_1 .views-row .views-field-field-photo-goods-fid {
+  margin: 7px 0 0 7px;
+}
+
+#block-views-related_goods-block_1 .views-row .views-field-title {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 171px;
+  min-height: 35px;
+  max-height: 121px;
+  margin: 0px 0 7px 7px;
+  padding: 2px 11px 2px 11px;
+  background: transparent url("../images/goods_related_title_bg.png") 0 0 repeat;
+  overflow: hidden;
+}
+
+#block-views-related_goods-block_1 .views-row .views-field-title span {
+  display: block;
+  overflow: hidden;
+  min-height: 35px;
+  max-height: 108px;
+}
+
+#block-views-related_goods-block_1 .views-row .views-field-title a {
+  font-family: Calibri;
+  font-size: 13px;
+  /*line-height: 14px;*/
+  text-decoration: none;
+  color: #d85c05;
+}
+
+#block-views-related_goods-block_1 .views-row .views-field-title a:hover {
+  color: #f6b005;
+  text-decoration: underline;
+}

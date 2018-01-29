@@ -1,0 +1,59 @@
+<?
+/**
+ * @var AdminUrlWrapper $PageUrl
+ */
+?>
+
+<ul class="breadcrumb">
+    <li><a href="."><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('Promo', 'default')?>"><?=LangAdmin::get('Promo')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('Newsletters', 'default')?>"><?=LangAdmin::get('mailing')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('config')?></li>
+</ul>
+<!--/.breadcrumb-->
+
+<?=TabsGenerator::GetTabs('templates/promo/navigation/tabs.xml', $PageUrl)?>
+<div class="tabbable ot_sub_sub_nav">
+    <ul class="nav nav-pills">
+        <li <? if($PageUrl->GetAction() == 'default' && $PageUrl->GetCmd() == 'Newsletters'){ ?>class="active"<?} ?>><a href="<?=$PageUrl->AssignCmdAndDo('Newsletters', 'default')?>"><?=LangAdmin::get('mailing_list')?></a></li>
+        <li <? if($PageUrl->GetAction() == 'default' && $PageUrl->GetCmd() == 'Subscribers'){ ?>class="active"<?} ?>><a href="<?=$PageUrl->AssignCmdAndDo('Subscribers', 'default')?>"><?=LangAdmin::get('subscribers')?></a></li>
+        <li <? if($PageUrl->GetAction() == 'config' && $PageUrl->GetCmd() == 'Newsletters'){ ?>class="active"<?} ?>><a href="<?=$PageUrl->AssignCmdAndDo('Newsletters', 'config')?>"><?=LangAdmin::get('config')?></a></li>
+    </ul>
+</div>
+
+<h1><?=LangAdmin::get('config')?></h1>
+
+<div class="well">
+
+    <form class="form-horizontal ot_form" method="post" action="<?=$PageUrl->AssignCmdAndDo('Newsletters', 'saveConfig')?>">
+
+        <div class="control-group">
+            <label class="control-label">Адрес отправителя рассылки</label>
+            <div class="controls">
+                <input type="text" placeholder="test@site.net" name="newsletter_from_email" value="<?=General::getConfigValue('newsletter_from_email')?>">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Имя отправителя рассылки</label>
+            <div class="controls">
+                <input type="text" placeholder="Newsletter" name="newsletter_from_name" value="<?=General::getConfigValue('newsletter_from_name')?>">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label"><?=LangAdmin::get('config_messages_count')?> <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-placement="top" data-content="Количество писем, которые отправляет сервер за одну часть. Ввиду ограничения на рассылку большого количества писем одновременно, обычно создается очередь, которая рассылается сервером по частям."></i></label>
+            <div class="controls">
+                <input type="text" class="input-mini numeric" placeholder="5" name="newsletter_per_send_limit" value="<?=General::getConfigValue('newsletter_per_send_limit')?>">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn btn-primary btn_preloader" data-loading-text="Сохранить"><?=LangAdmin::get('Save')?></button>
+            </div>
+        </div>
+    </form>
+
+</div>
+

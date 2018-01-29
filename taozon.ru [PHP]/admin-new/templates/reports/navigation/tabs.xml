@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabs>
+    <tab title="Service_statistics" action="default" cmd="Reports">
+        <page data-action="default" data-cmd="reports" />
+    </tab>
+    <tab title="Billing" action="billing" cmd="Reports">
+        <page data-action="billing" data-cmd="reports" />
+    </tab>
+    <tab title="Operation_log" action="operationLog" cmd="Reports">
+        <page data-action="operationLog" data-cmd="reports" />
+    </tab>
+    
+</tabs>

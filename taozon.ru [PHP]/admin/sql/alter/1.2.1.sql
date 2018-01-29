@@ -1,0 +1,1 @@
+ALTER IGNORE table `site_categories` ADD UNIQUE KEY `alias`(`alias`);

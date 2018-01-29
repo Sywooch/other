@@ -1,0 +1,56 @@
+<div class="bigtitle">
+	<div class="wrap clrfix">
+        <h1>Бизнес с VeliChina</h1>
+    </div>
+</div>
+
+<div class="main">
+	<div class="clrfix">
+
+
+    <div class="bproduct fs15 mb30">
+        <h2 class="mb20"><span> </span></h2>
+		<? if ($user) : ?>
+
+        <table class="notepad note_office">
+            <tr>
+                <td class="f11 lgray">Статус:</td>
+                <td><b><?= $statuses[$user['status']]; ?></b></td>
+            </tr>
+            <tr>
+                <td class="f11 lgray">В ожидании:</td>
+                <td><b><?= $user['comission']; ?></b></td>
+            </tr>
+            <tr>
+                <td class="f11 lgray">Баланс:</td>
+                <td><b><?= $user['balance']; ?></b>
+                </td>
+            </tr>
+        </table>
+        <?if($messages){?>
+            <br />
+            <strong>Сообщения:</strong>
+            <br /><br />
+        <?}?>
+        <table class="notepad note_office">
+            <?foreach($messages as $m){ if($m['added']){?>
+            <tr>
+                <td><?=date('m-d-Y', $m['added'])?></td>
+                <td><?=$m['subject']?></td>
+                <td><?=$m['message']?></td>
+            </tr>
+            <?}}?>
+        </table>
+<? else : ?>
+
+	<div>
+		<h2>НЕТ ДАННЫХ</h2>
+	</div>
+
+<? endif; ?>
+
+    </div>
+
+    </div>
+
+</div>

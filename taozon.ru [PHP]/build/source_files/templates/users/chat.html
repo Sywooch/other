@@ -1,0 +1,52 @@
+<? if($chat !== false){ ?>
+<h1><?=empty($chat['TicketInfo']['OrderId'])?$chat['TicketInfo']['TicketId']:Lang::get('order_number_is').' '.$chat['TicketInfo']['OrderId']?> (<?=htmlspecialchars($chat['TicketInfo']['Subject'])?>)</h1>
+<? if(isset($error)){ ?>
+    <div class="error"><?=$error?></div>
+    <? } ?>
+<div id="support">
+    <div class="bproduct">
+        <h2 class="mb20"><span><?=Lang::get('messages_list')?></span></h2>
+        <? if(is_array($chat['TicketMessageList'])){ ?>
+        <? foreach($chat['TicketMessageList'] as $msg){ ?>
+            <div class="message">
+                <div class="title">
+                    <div class="date flr"><?=$msg['CreatedDate']?></div>
+                    <div class="name">
+                        <?
+                        if($msg['Direction']!='Out'){
+//                                            $name = $_SESSION[CFG_SITE_NAME.'loginUserData']['username'];
+                            print $name ? $name : $user['login'];
+                        }
+                        else{
+                            print Lang::get('operator');
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="content">
+                    <?=nl2br(htmlspecialchars($msg['Text']))?>
+                </div>
+            </div>
+            <? } ?>
+        <? } ?>
+    </div>
+    <div class="bproduct mb30">
+        <h2 class="mb15"><span><?=Lang::get('new_message2')?></span></h2>
+        <div class="userform newmessage">
+            <form action="<?=$_SERVER['REQUEST_URI']?>" method="post">
+                <div class="form-row">
+                    <label for="Text"><?=Lang::get('message_text')?>:</label>
+                    <span class="input"><textarea id="Text" name="Text"><?=$_POST['Text']?></textarea></span>
+                </div>
+
+                <div class="form-row send">
+                    <input type="submit" name="send" value="<?=Lang::get('send_message')?>" class="btn_office" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<? }else{ ?>
+<b><?=$error?></b>
+<? } ?>
+

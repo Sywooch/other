@@ -1,0 +1,26 @@
+<? if(count($ticketlist)){?>
+<table class="notepad">
+    <thead>
+        <tr>
+            <td>Дата размещения</td>
+            <td>Номер обращения</td>
+            <td>Тема</td>
+            <td>Всего сообщений</td>
+            <td>Непрочитанные</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        <? foreach($ticketlist as $ticket){ ?>
+            <tr>
+                <td><?=$ticket['createddate']?></td>
+                <td><?=$ticket['ticketid']?></td>
+                <td><?=$ticket['category']?></td>
+                <td><?=(string)$ticket['msgcount']?></td>
+                <td><?=(string)$ticket['newmsgcount']?></td>
+            </tr>
+        <?  }  ?>
+    </tbody>
+</table>
+<br/><br/>
+<? } ?>

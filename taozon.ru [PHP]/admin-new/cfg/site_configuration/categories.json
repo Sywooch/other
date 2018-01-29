@@ -1,0 +1,41 @@
+{
+    "defaultSaveUrl": {
+        "cmd": "categories",
+        "do": "default"
+    },
+    "fields": [
+        {
+            "name": "show_hidden_categories",
+            "type": "select",
+			"showbuttons": false,
+			"processSubmit": true,
+			"submitHandler": "categories_filter_changed",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "name": "show_empty_categories",
+            "type": "select",
+			"showbuttons": false,
+			"processSubmit": true,
+			"submitHandler": "categories_filter_changed",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        },
+        {
+            "name": "show_categories_wochild",
+            "type": "select",
+			"showbuttons": false,
+			"processSubmit": true,
+			"submitHandler": "categories_filter_changed",
+            "valuesList": [
+                "1",
+                "0"
+            ]
+        }
+    ]
+}

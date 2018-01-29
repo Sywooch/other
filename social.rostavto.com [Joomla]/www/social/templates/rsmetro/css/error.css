@@ -1,0 +1,11 @@
+/* error */
+*{font-family:Trebuchet MS, Helvetica CY, Sans-serif;font-size:16px;line-height:20px;color:#353333;letter-spacing:1px;}
+html{height:100%;margin-bottom:1px;}
+body{margin:0px;padding:0;height:100%;margin-bottom:1px;background:#fff;font-family:'Play',sans-serif;font-weight:normal;padding-top:0px;margin-top:0px;}
+.error{margin-left:auto;margin-right:auto;width:835px;margin:0 auto;padding:150px 0 0 0;}
+table,td,th,div,pre,blockquote,ul,ol,dl,address,.componentheading,.contentheading,.contentpagetitle,.sectiontableheader,.newsfeedheading{font-family:'Play',sans-serif;font-weight:normal;}
+ul,menu,dir{list-style-type:none;}
+#errorboxheader{margin:0;padding:0;color:#198BC4;font-weight:bold;font-size:36px;line-height:36px;text-align:center;}
+#errorboxbody{margin:0;padding:10px;text-align:left;}
+#techinfo{margin:0;padding:0;}
+#techinfo p{font-size:40px;line-height:40px;color:#fff;font-weight:bold;text-align:center;letter-spacing:5px;text-shadow:1px 1px 0 #39E639, -1px -1px 0 #39E639, 1px -1px 0 #39E639, -1px 1px 0 #39E639;}

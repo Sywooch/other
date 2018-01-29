@@ -1,0 +1,36 @@
+<?=$HeaderNew?>
+<?=$CrumbsNew?>
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+<div class="bigtitle">
+    <div class="wrap clrfix">
+        <h1><?=$GLOBALS['pagetitle']?></h1>
+        <? if(defined('CFG_USE_CURRENCIES_RECOUNT') && CFG_USE_CURRENCIES_RECOUNT){ ?>
+        <div class="clearfix recount-prices">
+            <a href="index.php?p=set_currency&c=UAH" class="btn-small fll"><span>Показать стоимость в гривне</span></a>
+            <a href="index.php?p=set_currency&c=RUB" class="btn-small fll"><span>Показать стоимость в рублях</span></a>
+            <a href="index.php?p=set_currency&c=USD" class="btn-small fll"><span>Показать стоимость в долларах</span></a>
+        </div>
+        <? } ?>
+        <script src="js/GeoLocatet.js"></script>
+        <link rel="stylesheet" href="css/GeoLocatet.css" />
+        <form  method="post" id="GeoCurr">                        
+                     <input type='hidden' name='c' id="c">
+         </form>
+        <div style="position:relative;">
+            <?=    Plugins::invokeEvent('ShowGeoLocate',array('LocalVal'=>@$_SESSION['CountryISO'])) ?>
+              
+                </div>
+    </div>
+</div>
+
+<?=$ItemListNew?>
+
+<?if(in_array('Seo2', General::$enabledFeatures)){?>
+<div class="main">
+    <div class="wrap clearfix mt20">
+        <?=General::getSeoText($_GET['cid'])?>
+    </div>
+</div>
+<?}?>
+
+<?=$FooterNew?>

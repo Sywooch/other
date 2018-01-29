@@ -1,0 +1,216 @@
+<? if (empty($ajax)) { ?>
+    <div class="goods-wrapper">
+
+    <!-- group operations -->
+    <div class="row-fluid">
+        <div class="pull-left">
+            <div class="btn-group">
+                <button data-toggle="dropdown" class="btn btn-tiny btn-primary dropdown-toggle"><i class="icon-cog"></i> С выбранными <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li class="hide bulkExportOrderItems">
+                        <a href="javascript:void(0)" title="Экспортировать товары"><i class="icon-share"></i> Экспортировать</a>
+                    </li>
+                    <!--li><a href="#" title="Распечатать этикетки для каждого товара"><i class="icon-print"></i> Распечатать этикетки</a></li-->
+                    <!--li class="divider"></li>
+                    <li><a href="#" class="ot_show_deletion_dialog_modal" title="Удалить товары"><i class="icon-remove"></i> Удалить</a></li-->
+                </ul>
+            </div>
+            <? if (! empty($itemsStatusList)) { ?>
+            <div class="btn-group">
+                <button data-toggle="dropdown" class="btn btn-tiny btn-primary dropdown-toggle"><i class="icon-star-empty"></i> Изменить статус <span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-large bulkChangeItemStatus">
+                    <? foreach ($itemsStatusList as $status) { ?>
+                        <li>
+                            <a data-status="<?=$status['id']?>" href="javascript:void(0)" title="">
+                                <?=$status['Name']?>
+                            </a>
+                        </li>
+                    <? } ?>
+                </ul>
+            </div>
+            <? } ?>
+        </div>
+        <div class="pull-right">
+            <label><?=LangAdmin::get('Show')?>
+                <select class="input-mini perpageSelect">
+                    <? foreach ($paginator->perPageLimits() as $perPageLimit) { ?>
+                    <option value="<?=$perPageLimit?>"
+                        <?=($perPageLimit == $paginator->limit() ? ' selected="selected"' : '');?>>
+                        <?=$perPageLimit?>
+                    </option>
+                    <? } ?>
+                </select> <!--<?=LangAdmin::get('per_page')?>-->
+            </label>
+        </div>
+
+    </div>
+    <!-- /group operations -->
+
+
+
+    <!-- filter results -->
+    <table class="table table-not-hover">
+        <thead>
+        <tr>
+            <th><!-- TODO: remove sorting from this column (datatables docs) -->
+                <label class="checkbox inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1" class="checkAll" />
+                </label>
+            </th>
+            <th>Номер<br> товара</th>
+            <th>Информация</th>
+            <th>Статус<br> товара</th>
+            <th><?=LangAdmin::get('Price')?></th>
+            <th><?=LangAdmin::get('Qty')?></th>
+            <th><?=LangAdmin::get('Amount')?></th>
+            <th>Покупатель/ <br><span class="font-11">Баланс</span></th>
+            <th>Оператор</th>
+            <th>Заказ</th>
+            <th class="width-6">Действия</th><!-- TODO: remove sorting from this column (datatables docs) -->
+        </tr>
+        </thead>
+
+        <tbody>
+<? } ?>
+
+    <? if (! empty($items)) { ?>
+
+    <? foreach ($items as $item) { ?>
+
+    <!-- product line -->
+    <tr id="<?=$item['id']?>" class="itemRow"
+        data-order-id="<?=$item->orderid?>"
+        data-order-numeric-id="<?=$item->orderNumericId?>"
+        data-image-preview="<?=ProductsHelper::getImage($item, 100)?>"
+    >
+
+        <td>
+            <? $disabled = ($itemsStatuses['ITEM_STATUS_CANCELLED'] == $item['StatusId']) ? 'disabled="disabled"' : ''; ?>
+            <input type="checkbox" <?=$disabled?> class="for_group_action"/>
+        </td>
+        <td>
+            <a target="_blank" href="/<?=UrlGenerator::generateItemUrl($item['itemid'])?>" title="Страница товара на сайте">
+                № <?=$item->orderNumericId?> - <?=$item['LineNum']?>
+            </a>
+        </td>
+        <td>
+            <div class="width-12">
+                <span title="Отобразить полную информацию о товаре" class="blink_img"
+                    data-toggle="collapse" data-target=".<?=$item->orderNumericId?>-<?=$item['id']?>-more-info">
+                    <img src="<?=ProductsHelper::getImage($item, 100)?>">
+                </span>
+            </div>
+        </td>
+        <td class="statusName"><?=$item['StatusName']?></td>
+        <td><?=TextHelper::formatPrice($item->PriceCust, $item->InternalPriceCurrencyCode)?></td>
+        <td><?=$item['Qty'];?></td>
+        <td><?=TextHelper::formatPrice($item->AmountCust, $item->InternalPriceCurrencyCode)?></td>
+        <td class="ot_customer_info">
+            <? if (RightsManager::isAvailableCmd('users')) { ?>
+                <a href="javascript:;" class="showCustomerInfo blink">Показать</a>
+            <? } ?>
+        </td>
+
+        <td class="ot_operator_name"></td>
+
+        <td>
+            <a href="<?=$PageUrl->generate(array('do'=>'view', 'id'=>$item['OrderId']))?>" title="Страница заказа">
+                <?=OrdersProxy::normalizeOrderId($item['OrderId'])?>
+            </a>
+        </td>
+        <td>
+            <? if (! empty($itemsStatusList)) { ?>
+                <div class="btn-group pull-right changeItemStatus">
+                    <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle" title="Изменить статус"><i class="icon-star-empty"></i> <span class="caret"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-large">
+                        <? foreach ($itemsStatusList as $status) { ?>
+                           <li>
+                                <a data-status="<?=$status['id']?>" href="javascript:void(0)" title="">
+                                    <?=$status['Name']?>
+                                </a>
+                           </li>
+                        <? } ?>
+                    </ul>
+                </div>
+            <? } ?>
+            <div class="btn-group pull-right">
+                <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle"><i class="icon-cog"></i> <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <? $hideShowFlag = ($itemsStatuses['ITEM_STATUS_CANCELLED'] == $item['StatusId']) ? 'cancelled' : ''; ?>
+                    <li class="hide exportOrderItem <?=$hideShowFlag?>" data="<?=$hideShowFlag?>">
+                        <a class="<?=$hideShowFlag?>" href="javascript:void(0)" title="Экспортировать товар"><i class="icon-share"></i> Экспортировать</a>
+                    </li>
+                    <? if (RightsManager::hasRight(RightsManager::RIGHT_EDITORDERLINE)) { ?>
+                        <? if ($item['qty'] > 1) { ?>
+                            <li>
+                                <a  class="splitItemQuantity"
+                                    title="<?=LangAdmin::get('Split_item_quantity')?>"
+                                    data-action="<?=$PageUrl->assignDo('splitItemQuantity')?>"
+                                    href="javascript:void(0)"
+                                >
+                                    <i class="icon-resize-full"></i> <?=LangAdmin::get('Split')?>
+                                </a>
+                            </li>
+                        <? } ?>
+                        <? if ($item->canBeDeleted()) { ?>
+                            <li>
+                                <a  class="deleteItemFromOrder"
+                                    title="<?=LangAdmin::get('Remove_item')?>"
+                                    data-action="<?=$PageUrl->assignDo('deleteItemFromOrder')?>"
+                                    href="javascript:void(0)"
+                                >
+                                    <i class="icon-remove"></i> <?=LangAdmin::get('Remove')?>
+                                </a>
+                            </li>
+                        <? } ?>
+                    <? } ?>
+                </ul>
+            </div>
+        </td>
+
+    </tr><!-- product line ends -->
+
+    <!--
+    TODO:
+    1) when ckick on more-info show preloader
+    2) get goods description <tr> via ajax
+    -->
+    <tr class="no-top-border">
+        <td colspan="11">
+            <div class="collapse on <?=$item->orderNumericId?>-<?=$item['id']?>-more-info">
+                <div class="well">
+                    <div class="text-center"><div class="ot-preloader-small"></div></div>
+                    <button type="button" class="close close-well" data-toggle="collapse"
+                        data-target=".<?=$item->orderNumericId?>-<?=$item['id']?>-more-info" title="Скрыть">
+                        &times;
+                    </button>
+                </div>
+            </div><!-- /.collapse goods -->
+        </td><!-- colspan=9-->
+    </tr><!-- /.no-top-border-->
+
+    <? } // end foreach ?>
+
+    <? } else { ?>
+        <tr>
+            <td colspan="11">
+                <? if ($activeTab == 'items') { ?>
+                    <?=LangAdmin::get('No_products_found')?>
+                <? } else { ?>
+                    <div class="text-center"><div class="ot-preloader-small"></div></div>
+                <? } ?>
+            </td>
+        </tr>
+    <? } ?>
+
+<? if (empty($ajax)) { ?>
+        </tbody>
+    </table>
+    <!-- /filter results -->
+
+    <div class="pagination-items">
+        <?= ($activeTab == 'items' && isset($paginator)) ? $paginator->display(false) : ''; ?>
+    </div>
+
+    </div>
+<? } ?>

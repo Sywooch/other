@@ -1,0 +1,54 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'default')?>"><?=LangAdmin::get('Configuration')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('IpAccess')?></li>
+</ul><!--/.breadcrumb-->
+
+<? require TPL_ABSOLUTE_PATH . 'site_config/inc/tabs.php'; ?>
+
+<div id="ip-wrapper">
+
+<h1><?=LangAdmin::get('IpAccess')?></h1>
+<p class="offset-bottom1"><i class="icon-plus color-blue"></i> <strong id="showIpForm" data-target=".ot_add_ip" data-toggle="collapse" class="blink"><?=LangAdmin::get('Add_Ip')?></strong></p>
+<div class="ot_add_ip collapse">
+    <input class="input-medium" type="text" id="add-ip-value" placeholder="<?=$_SERVER['SERVER_ADDR']?>"/>                
+    <button type="button" class="btn btn-primary btn_preloader ot_add_ip_button" data-loading-text="<?=LangAdmin::get('Add')?>"><?=LangAdmin::get('Add')?></button>
+    <button type="button" class="btn ot_hide_ip_button"><?=LangAdmin::get('Cancel')?></button>
+</div>
+
+
+
+<div class="row-fluid offset-bottom1">
+    <div class="span6">
+    <? if (count($ipList)) { ?>
+    
+    <table class="table table-bordered bootstrap-datatable">
+
+        <thead>
+            <tr>
+                <th class="span4"><?=LangAdmin::get('Naming')?></th>
+                <th class="span2"><?=LangAdmin::get('Actions')?></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <? foreach ($ipList as $ip) { ?> 
+            <tr>
+                <td><?=$ip?></td>
+                <td>
+                    <div class="btn-group">
+                        <button class="btn btn-tiny ot_show_deletion_dialog_modal" data-loading-text="<?=LangAdmin::get('Deleting')?>" title="<?=LangAdmin::get('Delete_Ip')?>" ip="<?=$ip?>" action="<?=$PageUrl->AssignDo('deleteIp')?>"><i class="icon-remove-sign"></i></button>
+                    </div>
+                </td>
+            </tr>
+            <? } ?>
+        </tbody>
+    </table>
+    
+    <? } ?>
+    </div>
+</div>
+</div>
+
+<? ScriptIncluder::AddCustomScript('js/ot-render-template.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-ipaccess.js'); ?>

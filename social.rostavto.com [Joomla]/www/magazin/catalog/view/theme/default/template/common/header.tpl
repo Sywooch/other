@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title><?php echo $title; ?></title>
+<base href="<?php echo $base; ?>" />
+<?php if ($description) { ?>
+<meta name="description" content="<?php echo $description; ?>" />
+<?php } ?>
+<?php if ($keywords) { ?>
+<meta name="keywords" content="<?php echo $keywords; ?>" />
+<?php } ?>
+	<meta name="author" content="DeniusCoder">
+	<meta http-equiv="cleartype" content="on">
+<meta property="og:title" content="<?php echo $title; ?>" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="<?php echo $og_url; ?>" />
+<?php if ($og_image) { ?>
+<meta property="og:image" content="<?php echo $og_image; ?>" />
+<?php } else { ?>
+<meta property="og:image" content="<?php echo $logo; ?>" />
+<?php } ?>
+<meta property="og:site_name" content="<?php echo $name; ?>" />
+<?php if ($icon) { ?>
+<link href="<?php echo $icon; ?>" rel="icon" />
+<?php } ?>
+<?php foreach ($links as $link) { ?>
+<link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
+<?php } ?>
+	<!-- Responsive and mobile friendly stuff -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="catalog/view/theme/default/css/html5reset.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/responsivegridsystem.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/col.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/2cols.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/3cols.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/4cols.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/5cols.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/6cols.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/7cols.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/8cols.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/9cols.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/10cols.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/11cols.css" media="all">
+	<link rel="stylesheet" href="catalog/view/theme/default/css/12cols.css" media="all">
+
+	<!-- Responsive Stylesheets -->
+	<link rel="stylesheet" media="only screen and (max-width: 1024px) and (min-width: 769px)" href="catalog/view/theme/default/css/1024.css">
+	<link rel="stylesheet" media="only screen and (max-width: 768px) and (min-width: 481px)" href="catalog/view/theme/default/css/768.css">
+	<link rel="stylesheet" media="only screen and (max-width: 480px)" href="catalog/view/theme/default/css/480.css">
+
+	<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements and feature detects -->
+	<script src="catalog/view/theme/default/js/modernizr-2.5.3-min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+<?php foreach ($styles as $style) { ?>
+<link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
+<?php } ?>
+<script type="text/javascript" src="catalog/view/theme/default/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
+<script type="text/javascript" src="catalog/view/javascript/common.js"></script>
+<?php foreach ($scripts as $script) { ?>
+<script type="text/javascript" src="<?php echo $script; ?>"></script>
+<?php } ?>
+<?php if ($stores) { ?>
+<script type="text/javascript"><!--
+$(document).ready(function() {
+<?php foreach ($stores as $store) { ?>
+$('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></iframe>');
+<?php } ?>
+});
+//--></script>
+<?php } ?>
+<?php echo $google_analytics; ?>
+</head>
+<body>
+<div id="wrapper">
+<div id="headcontainer">
+	<header>
+
+<div id="header">
+<div class="section group">
+  <?php if ($logo) { ?>
+  <div id="logo" class="col span_3_of_10">
+  <?php if ($home == $og_url) { ?>
+  <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" />
+  <?php } else { ?>
+  <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" /></a>
+  <a style="display: block; width: 144px; margin-left: 7px" href="http://rostavto.com" title="Автомобильный портал России"><div class="back_button"></div></a>
+  <?php } ?>
+  </div>
+<div class="col span_5_of_12"><img src="/magazin/image/data/head_contact.png"></div>
+<div class="col span_3_of_12" style="margin: 0 !important; text-align: right">
+<div id="welcome">
+<?php if (!$logged) { ?>
+<?php echo $text_welcome; ?>
+<?php } else { ?>
+<?php echo $text_logged; ?>
+<?php } ?>
+</div>
+<?php } ?>
+<?php echo $language; ?>
+<?php echo $currency; ?>
+<?php echo $cart; ?>
+<div id="search">
+<div class="button-search"></div>
+<input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+</div>
+<div id="white"><div id="right"><div id="maincontent">
+<div class="section group">
+<div class="section group">
+<div class="links">
+		<div class="col span_1_of_8"><a href="/how_pay"><div id="pay"></div>Как купить</a></div>
+		<div class="col span_1_of_8"><a href="<?php echo $shopping_cart; ?>"><div id="you-cart"></div><?php echo $text_shopping_cart; ?></a></div>
+		<div class="col span_1_of_8"><a href="/index.php?route=account/account"><div id="account"></div>Ваш кабинет</a></div>
+		<div class="col span_1_of_5"><a href="/index.php?route=product/search"><div id="isearch"></div>Инструменты поиска</a></div>
+		<div class="col span_1_of_8"><a href="/index.php?route=information/information&information_id=4"><div id="company"></div>Компания</a></div>
+		<div class="col span_1_of_8"><a href="/index.php?route=product/category&path=59"><div id="catalog"></div>Каталог</a></div>
+		<div class="col span_1_of_6"><a href="<?php echo $checkout; ?>"><div id="paycash"></div><?php echo $text_checkout; ?></a></div>
+</div>
+</div>
+<div class="section group"><div class="col span_1_of_12"></div><div id="notification" class="col span_10_of_12"></div></div>

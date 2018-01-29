@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<mosparam type="component" version="1.0.0">
+	<name>Mailto</name>
+	<author>Andrew Eddie</author>
+	<creationDate>13 Mar 2006</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license></license>
+	<authorEmail>admin@retina.org</authorEmail>
+	<authorUrl>www.retina-studio.ru</authorUrl>
+	<description>COM_MAILTO_XML_DESCRIPTION</description>
+</mosparam>

@@ -1,0 +1,41 @@
+<? if (empty($reviews)): ?>
+    <?if(@$_SESSION[CFG_SITE_NAME.'loginUserData']['IsAuthenticated']){?>
+        <h3><?=Lang::get('new_item_comment_txt')?></h3>
+    <? }else{ ?>
+        <h3><?=Lang::get('no_comments_to_good')?> — <a href="<?=@UrlGenerator::generateContentUrl('login')?>"><?=Lang::get('do_auth_now')?></a>, <?=Lang::get('post_comment_now')?>!</h3>
+    <? } ?>
+<? else: ?>
+<?if(!@$_SESSION[CFG_SITE_NAME.'loginUserData']['IsAuthenticated']){?>
+    <h3><a href="<?=@UrlGenerator::generateContentUrl('login')?>"><?=Lang::get('do_auth_now')?></a>, <?=Lang::get('post_comment_now')?>!</h3>
+<?}?>
+<table class="tinfo itemdesc">
+    <? foreach ($reviews as $review): ?>
+    <tr>
+        <td>
+            <b><?=Lang::get('author') ?> : <? empty($review['name']) ? Lang::get('no_name') : $review['name'] ?></b>
+            <br/>
+            <?= htmlspecialchars($review['text']) ?>
+            <br/>
+        </td>
+    </tr>
+    <? endforeach; ?>
+</table>
+<? endif; ?>
+
+<?if(@$_SESSION[CFG_SITE_NAME.'loginUserData']['IsAuthenticated']){?>
+<div class="mt30 userform" style="padding: 20px 0;">
+    <form method="post" action="<?= $itemurl ?>">
+		<input type="hidden" name="review[item_id]" value="<?= $itemid ?>"/>
+		<input type="hidden" name="review[item_cid]" value="<?= $itemcid ?>"/>
+		<input type="hidden" name="review[item_url]" value="<?= $itemurl ?>"/>
+
+		<div class="form-row">
+            <label><?=Lang::get('your_comment')?></label>
+            <textarea required rows="5" cols="30" name="review[text]"></textarea>
+        </div>
+        <div class="form-row enter">
+            <input type="submit" class="btn_office" value="<?=Lang::get('send')?>" name="">
+        </div>
+    </form>
+</div>
+<?}?>

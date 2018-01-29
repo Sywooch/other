@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CurrencyInfoAnswer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://services.opentao.net">
+  <ErrorCode>Ok</ErrorCode>
+  <SubErrorCode/>
+  <RequestTimeStatistic>2.499 = {OtapiService} Service call (overhead: 0.085)
+0.034 = |-{Otapi} Create core
+0.068 = |-{Otapi} AccumulateCallCount (overhead: 0.029)
+0.002 = |-|-{Otapi} Create dependency Counter
+0.038 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+0.047 = |-{Otapi} AccumulateCallCount (overhead: 0.018)
+0.029 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+0.006 = |-{Otapi} Create dependency MoneyChanger
+2.258 = |-{Service client call} MoneyChanger.GetMainDisplayedCurrency (overhead: 1.235)
+        |-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+1.023 = |-|-{MoneyChangerService} Service call (overhead: 0.045)
+0.979 = |-|-|-{DisplayedCurrencyRepository} GetMainDisplayedCurrency
+Time distribution: interservice = 1.235 (49.4%), other = 1.264 (50.6%), Otapi = 0.240 (9.6%), MoneyChanger = 1.023 (41.0%)
+Debug info process time: 0.064
+</RequestTimeStatistic>
+  <Result>
+    <Code>RUB</Code>
+    <Description>Russian ruble.</Description>
+    <Sign>руб.</Sign>
+  </Result>
+</CurrencyInfoAnswer>

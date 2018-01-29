@@ -1,0 +1,27 @@
+    <div class="path"><div class="canvas clrfix">
+		<ul class="flin">
+        <? if(!$isbrand) {?>
+		<li><a href="index.php">Каталог</a></li>
+        <? }else{ ?>
+		<li><a href="index.php?p=brands">Бренды</a></li>
+                <li><a href="index.php?search=&p=search&brand=<?=$brandcrumb['id']?>"><?=$brandcrumb['name']?></a></li>
+        <? } ?>
+        <? $i = 1;
+           if ($crumbs) foreach($crumbs as $crumb) { ?>
+            <? if (!$crumb['id']) { ?>
+                <li class="active"><a><?=$crumb['name']?></a></li>
+            <? }elseif ($crumb['last']) { ?>
+                <? if ($crumb['isparent'] == 'false') { ?>
+                    <li class="last"><a href="index.php?p=category&cid=<?=$crumb['id']?>"><?=$crumb['name']?></a></li>
+                <? } else { ?>
+                    <li class="last"><a href="index.php?p=subcategory<?=($crumb['isvirtual'] == 'true' ? '&virt' : '')?><?=($i == 1 ? '&root' : '')?>&cid=<?=$crumb['id']?>"><?=$crumb['name']?></a></li>
+                <? } ?>
+            <? }elseif ($crumb['isparent'] == 'false') { ?>
+                    <li><a href="index.php?p=category&brand=<?=$brandcrumb['id']?>&cid=<?=$crumb['id']?>"><?=$crumb['name']?></a></li>
+            <? } else { ?>
+                    <li><a href="index.php?p=subcategory&brand=<?=$brandcrumb['id']?><?=($crumb['isvirtual'] == 'true' ? '&virt' : '')?><?=($i == 1 ? '&root' : '')?>&cid=<?=$crumb['id']?>"><?=$crumb['name']?></a></li>
+            <? } ?>
+        <? $i++;
+           } ?>
+		</ul>
+	</div></div><!-- /.path -->

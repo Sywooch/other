@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>Joomlaxi Captcha</name>
+	<author>Joomlaxi Team</author>
+	<creationDate>17 Sep 2009</creationDate>
+	<copyright>(C) 2009 www.joomlaxi.com</copyright>
+	<license>GNU GPL V2</license>
+	<authorEmail>shyam@joomlaxi.com</authorEmail>
+	<authorUrl>www.joomlaxi.com</authorUrl>
+	<version>1.0.19</version>
+	<description>Provides Captcha facility for most parts of the JomSocial and Joomla.
+</description>
+	<languages>
+	    <language tag="en-GB">en-GB.plg_xi_captcha.ini</language>
+	    <language tag="ru-RU">ru-RU.plg_xi_captcha.ini</language>
+	</languages>
+	
+	<files>
+		<filename plugin="xi_captcha">xi_captcha.php</filename>
+		<filename>xi_captcha/xi_captcha_engine.php</filename>
+		<filename>xi_captcha/utils.php</filename>
+		<filename>xi_captcha/index.html</filename>
+		<filename>xi_captcha/elements/index.html</filename>
+		<filename>xi_captcha/elements/viewimage.php</filename>
+		<filename>xi_captcha/class/captcha_com_community.php</filename>
+		<filename>xi_captcha/class/captcha_com_contact.php</filename>
+		<filename>xi_captcha/class/captcha_com_user.php</filename>
+		<filename>xi_captcha/class/index.html</filename>
+		<filename>xi_captcha/fonts/index.html</filename>
+		<filename>xi_captcha/fonts/monofont.ttf</filename>
+		<filename>xi_captcha/fonts/stilltim.ttf</filename>
+		<filename>xi_captcha/fonts/saysochic.ttf</filename>
+		<filename>xi_captcha/fonts/earwigfa.ttf</filename>
+		<filename>xi_captcha/fonts/cuomotyp.ttf</filename>
+		<filename>xi_captcha/fonts/primer.ttf</filename>
+		<filename>xi_captcha/fonts/primerb.ttf</filename>
+		<filename>xi_captcha/fonts/interpla.ttf</filename>
+	</files>
+	
+    <params addpath="/plugins/system/xi_captcha/elements">
+    	<param name=" " type="viewimage" default="" label="Image Demo" description="" />
+        <param name="@spacer" type="spacer" default="Captcha Image Generation Parameters" label=" " description="" />
+
+		<param name="xiWidth"  type="text" size="25" default="150" label="Width" description="Enter width in pixels for the captcha image (Default is 150)" />
+		<param name="xiHeight" type="text" size="25" default="40"  label="Height" description="Enter height in pixels for captcha image (Default is 40)" />
+		<param name="xiChars"  type="text" size="25" default="5"   label="Characters" description="Enter number of captcha characters to generate (Default is 5)" />
+
+		<param name="xiBackgroundColor"  type="text" size="25" default="#ffffff" label="Background Color" description="Enter color" />
+		<param name="xiTextColor" type="text" size="25" default="#000000" label="Text Color" description="Enter color" />
+		<param name="xiNoiseColor" type="text" size="25" default="#ff00ff" label="Noise Color" description="Enter color" />
+		<param name="xiFontName" type="list" default="monofont" label="Font to Use" description="Font to use for Captcha">
+			<option value="monofont">monofont</option>
+			<option value="earwigfa">earwigfa</option>
+			<option value="stilltim">stilltim</option>
+			<option value="saysochic">saysochic</option>
+			<option value="cuomotyp">cuomotyp</option>
+			<option value="primer">primer</option>
+			<option value="primerb">primerb</option>
+			<option value="interpla">interpla</option>                                     
+		</param>
+		<param name="xiFontSize" type="text" size="25" default="26" label="Font Size" description="Enter font size to be used" />
+        <param name="@spacer" type="spacer" default="Define Captcha Locations" label=" " description="" />
+		<param name="@spacer" type="spacer" default="Advance Configuration" label="Advance Configuration" description="Do not touch if you do not know what you are doing" />
+		<param name="xiCaptchaLifetime" type="text" size="25" default="600" label="Captcha Expiration Delay" description="Captcha Expiration Time" />
+		<param name="xiNoiseLevel" type="text" size="25" default="50" label="Noise in Captcha(1 to 100)" description="How much noise is to be introduced into image" />		
+		<param name="xiDebugMode" type="radio" default="0" label="Enable to debug messages" description="" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+</install>

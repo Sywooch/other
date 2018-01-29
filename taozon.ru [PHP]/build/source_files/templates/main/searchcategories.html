@@ -1,0 +1,64 @@
+<? if (!isset($searchcats_ajax)) { ?>
+
+    <div class="pda10" style="border-bottom: 1px solid #E6E6E6;">
+        <a href="<?=General::generateUrl('allcats', array() )?>" class="all"><i class="i arrowright"></i><span><?=Lang::get('all_categories')?></span></a>
+    </div>
+    <? $opened = false; ?>
+    <? if (is_array($searchcats))
+{
+    $counter_top = 0;
+    foreach ($searchcats as $cat)
+    {
+        if ($cat['ishidden'] == 'false' && (string) $cat['isparent'] == 'true')
+        {
+            $counter_top++; if($counter_top>10) break;
+            ?><div class="bitem clrfix"><?
+            $opened = true;
+            if (empty($cat['externalid']))
+            {
+                ?><h3><?= $cat['name'] ?></h3><?
+            } else {
+                ?><h3><a cid="<?=$cat['id']?>" href="#" <? if (@$_GET['cid'] == $cat['id']) { ?> class="search-cat-active"<? } ?>><?= $cat['name'] ?></a></h3><?
+            }
+            ?><ul class="lcategory"><?
+                $counter_in = 0;
+                foreach ($searchcats as $cat2)
+                {
+                    if ($cat2['ishidden'] == 'false' && (string) $cat2['parentid'] == (string) $cat['id'])
+                    {
+                        if (empty($cat2['externalid']))
+                        {
+                        } else {
+                            $counter_in++; if($counter_in>4) break;
+                            ?><li><a href="#" cid="<?=$cat2['id']?>" <? if (@$_GET['cid'] == $cat2['id']) { ?> class="search-cat-active"<? } ?>><?= $cat2['name'] ?></a></li><?
+                        }
+                    }
+                }
+                ?></ul></div><?
+        }
+    }
+} ?>
+    <div class="pda10">
+        <a href="<?=General::generateUrl('allcats', array() )?>" class="all"><i class="i arrowright"></i><span><?=Lang::get('all_categories')?></span></a>
+    </div>
+
+<? } else { ?>
+<!-- Нету кэша --->
+<script>
+$(function(){ 
+    $("#searchcatsajax").html('<p align="center"><img src="/css/i/ajax-loader.gif" width="32" height="32" /></p>');
+	$.ajax({
+  		url: "index.php?p=search_ajax&searchcats_ajax=1",
+  		cache: false,
+  		success: function(html){
+    		$("#searchcatsajax").html(html);
+  		}
+	});
+});
+  
+</script>
+
+  
+
+
+<? } ?>

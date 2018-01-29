@@ -1,0 +1,167 @@
+<h5><?=Lang::get('item_set_list')?></h5>
+
+<!--Вывод подборки товаров-->
+<ul id="sortable-items" class="list-type-none">
+    <? if($itemRatingTypeId == 'Best'){ ?>
+    <li class="ui-state-default" style="position: relative; min-height: 20px; text-align: center">
+        <form action="index.php?cmd=Set2&do=addToRatingList" class="ajax-form" method="post" onsuccess="refreshTab"
+              onerror="refreshTab">
+            <table style="background: none; margin: 0">
+                <tr>
+                    <td style="background: none">
+                        <?=Lang::get('paste_link_from_site')?><br />
+                        (<?=Lang::get('for_example')?>:
+                        http://<?=$_SERVER['HTTP_HOST']?>/<?=UrlGenerator::generateItemUrl(17311487710)?>)
+                    </td>
+                    <td style="background: none; text-align: right">
+                        <input type="text" name="ItemList" />
+                    </td>
+
+                </tr>
+                <!---<?=Plugins::invokeEvent('onRenderAddBestItemsForm')?>--->
+                <?=Plugins::invokeEvent('onRenderAddCatForm')?>
+
+              <tr>
+                    <td style="background: none"></td>
+                    <td style="background: none; text-align: right">
+                        <input type="submit" value="<?=Lang::get('add_item')?>" />
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" name="contentType" value="Item" />
+            <input type="hidden" name="currentCategory" value="<?=$activeCategory?>" />
+        </form>
+         </li>
+        <!--li class="ui-state-default" style="position: relative; min-height: 20px; text-align: center">
+        <form action="index.php?cmd=Set2&do=addFileToRatingList" method="post" enctype="multipart/form-data">
+        <table style="background: none; margin: 0">
+                <tr>
+                    <td style="background: none">
+                        <?=LangAdmin::get('download_file_popularity')?>
+                    </td>
+                	<td style="background: none; text-align: right">
+                        <input name="filedata" type="file" />
+                    </td>
+                </tr>
+
+              <tr>
+                    <td style="background: none"></td>
+                    <td style="background: none; text-align: right">
+                        <input type="submit" value="<?=Lang::get('add_item')?>" />
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" name="contentType" value="Item" />
+            <input type="hidden" name="currentCategory" value="<?=$activeCategory?>" />
+        </form>
+    </li-->
+
+    <!--li class="ui-state-default" style="position: relative; min-height: 20px; text-align: center">
+    <script>
+	function EditSeo () {
+		tinyMCE.editors.txt.setContent('');
+		$('#edit_cat_seo').toggle();
+	}
+
+	function createUploader() {
+        var uploader = new qq.FileUploader({
+            element:document.getElementById('file-uploader'),
+            action:'/packages/Hierarchy2setscategories/UploadCatPic.php',
+            debug:true,
+            template:'<div class="qq-uploader">' +
+                '<div class="qq-upload-drop-area"><span></span></div>' +
+                '<div class="qq-upload-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" style="height:23px;padding-top:7px">&nbsp;&nbsp;&nbsp;<?=LangAdmin::get('select_a_picture')?>&nbsp;&nbsp;&nbsp;</div>' +
+                '<ul class="qq-upload-list"></ul>' +
+                '</div>',
+            onComplete:function (id, fileName, responseJSON) {
+                //$('.qq-upload-list').empty().append($('<li></li>').append($('<img />').attr('src', responseJSON.url + '?' + Math.random())));
+                $('[name="PictureUrl"]').val(responseJSON.url);
+            }
+        });
+    }
+	//createUploader();
+	</script>
+    <a href="#" onclick="EditSeo();" style="cursor:pointer;"><?=LangAdmin::get('edit_category')?></a>
+    <div align="justify" id="edit_cat_seo">
+     <form action="index.php?cmd=Set2&do=EditCat" method="post">
+     	<label class="mr10"><?=LangAdmin::get('name')?>:</label> <input type="text" name="name" value="<?=$activeCategory?>"/><br><br>
+
+        <? if (Plugins::invokeEvent('onHierarchyRender')) { ?>
+     	<label class="mr10"><?=LangAdmin::get('delivery_order')?>:</label><input type="text" name="order" value="<?=$Cats_Seo['order']?>"/><br><br>
+     	<label class="mr10"><?=LangAdmin::get('title')?>:</label><br>
+     	<input type="text" name="title" value="<?=$Cats_Seo['title']?>"/><br><br>
+        <label class="mr10">Meta description:</label><br>
+        <input type="text" name="meta_description" value="<?=$Cats_Seo['meta_description']?>"/><br><br>
+        <label class="mr10">Meta keywords:</label><br>
+        <input type="text" name="meta_keywords" value="<?=$Cats_Seo['meta_keywords']?>"/><br><br>
+        <textarea id="txt" name="txt" class="txt"><?=$Cats_Seo['txt']?></textarea><br><br>
+        <div id="file-uploader"></div>
+    	<input type="hidden" name="PictureUrl"/>
+        <? } ?>
+
+        <input type="hidden" name="catId" value="<?=$activeCategory?>" />
+     	<input type="hidden" name="RatingTypeId" value="Best" />
+     	<input type="hidden" name="contentType" value="Item" />
+        <input name="" type="submit" value="Сохранить" />
+        <input type="button" value="Отмена" onclick="$('#edit_cat_seo').toggle();$('.qq-upload-list').empty();"/>
+     </form>
+    </div>
+    </li-->
+
+
+
+  <? } ?>
+    <?foreach($items as $k=>$item){?>
+        <li class="ui-state-default" id="item-<?=$k?>" style="position: relative; min-height: 70px">
+            <div class="inline-block float-left w80">
+                <a href="../index.php?p=item&id=<?=$item['Id'];?>" target="_blank">
+                    <img src="<?=$item['MainPictureUrl'];?>_80x80.jpg" class="is80" />
+                </a>
+            </div>
+            <div class="inline-block float-left w500 ml10 justify">
+                <?=$item['Title']?>
+                <div class="clear"></div>
+            </div>
+            <div class="inline-block float-right">
+                <a href="#" class="delete-from-item-set" itemid="<?=$item['Id']?>"
+                   itemratingtypeid="<?=$itemRatingTypeId?>" contenttype="Item" categoryid="<?=$activeCategory?>">
+                    <img src="css/i/Delete.ico" width="20" />
+                </a>
+            </div>
+            <div style="position: absolute; right: 5px; bottom: 5px;">
+                <a href="#" class="edit-item-set" itemid="<?=$item['Id']?>" categoryid="<?=$activeCategory?>">
+                    <img src="css/i/Edit.ico" width="20" />
+                </a>
+            </div>
+          <div class="clear"></div>
+        </li>
+    <?}?>
+</ul>
+
+<form id="item-edit-form" class="hidden" action="index.php?cmd=Set2&do=saveItemInfo" method="POST">
+    <input type="hidden" name="ItemId" value="" />
+    <div class="mb10">
+        <label class="mr10"><?=Lang::get('item_title')?></label>
+        <input type="text" name="ItemTitle" value="">
+    </div>
+    <div class="mb10">
+        <label><?=Lang::get('item_description')?></label>
+        <textarea id="ItemDescription" name="ItemDescription" class="item-description"></textarea>
+    </div>
+</form>
+<script type="text/javascript">
+    categories = <?=json_encode($categories)?>;
+	//alert(JSON.stringify(categories));
+	<? if (Plugins::invokeEvent('onHierarchyRender')) { ?>
+	var hierarchy = [];
+	hierarchy = <?=json_encode($hierarchy)?>;
+	//alert(hierarchy);
+	<? } ?>
+    activeCategory = '<?=$activeCategory?>';
+</script>
+<? if (!Plugins::invokeEvent('onHierarchyRender')) { ?>
+<script type="text/javascript" src="js/set/categories.js"></script>
+<script type="text/javascript" src="js/set/edit.items.js"></script>
+<? } else { ?>
+<?=Plugins::invokeEvent('HierarchyJSSec')?>
+<? } ?>

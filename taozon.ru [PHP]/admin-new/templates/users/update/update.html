@@ -1,0 +1,70 @@
+<? require TPL_ABSOLUTE_PATH . 'site_config/inc/tabs.php'; ?>
+
+<!-- ot-sub-sub-nav -->
+<div class="tabbable ot_sub_sub_nav">
+    <ul class="nav nav-pills">
+        <li <? if($PageUrl->GetAction() == 'system'){ ?>class="active"<?} ?>>
+        <a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'system')?>"><?=LangAdmin::get('General')?>
+        </a>
+        </li>
+        <li <? if($PageUrl->GetCmd() == 'Update'){ ?>class="active"<?} ?>>
+        <a href="<?=$PageUrl->AssignCmdAndDo('Update', 'default')?>">
+        <?=LangAdmin::get('Update')?>
+        </a>
+        </li>
+    </ul>
+</div><!-- /ot-sub-sub-nav -->
+
+<h1><a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'default')?>" class="muted"><?=LangAdmin::get('Configuration')?></a>
+    / <a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'system')?>"><?=LangAdmin::get('system')?></a>
+    / <?=LangAdmin::get('update')?>
+</h1>
+
+
+<div class="well">
+
+    <!-- В ситуации, когда текущая версия устарела и есть версия для обновления -->
+    <h3><?=LangAdmin::get('Automatic_update')?></h3>
+
+    <? if($allowUpdate === 'Ok'){ ?>
+        <p><strong class="label label-info"><?=$currentVersion ? $currentVersion->Version[0]->Number : LangAdmin::get('Undefined')?></strong> — <?=LangAdmin::get('current_version')?></p>
+        <p><strong class="label label-success" title="<?=LangAdmin::get('Update_available')?>"><?=$versions->Version[0]->Number?></strong> — <?=LangAdmin::get('last_available_version_for_update')?> (<a herf="#" data-target=".collapse-chengelog-111" data-toggle="collapse" class="blink"><?=LangAdmin::get('change_log')?></a>)</p>
+    <? } else { ?>
+        <p><strong class="label label-info"><?=$currentVersion ? $currentVersion->Version[0]->Number : LangAdmin::get('Undefined')?></strong> — <?=LangAdmin::get('current_version')?></p>
+        <p><strong class="label label-important" title="<?=LangAdmin::get('Update_not_available')?>"><?=$versions->Version[0]->Number?></strong> — <?=LangAdmin::get('last_available_version_for_update')?> (<a herf="#" data-target=".collapse-chengelog-111-alt" data-toggle="collapse" class="blink"><?=LangAdmin::get('change_log')?></a>)</p>
+    <? } ?>
+
+    <div class="collapse collapse-chengelog-111">
+        <h4><?=LangAdmin::get('Changes_description')?></h4>
+        <?=  nl2br($versions->Version[0]->Description) ?>
+    </div>
+
+    <? if($allowUpdate === 'Ok'){ ?>
+        <p class="offset-top2">
+            <button type="button" class="btn btn_preloader btn-primary" id="update" data-loading-text="<?=LangAdmin::get('UpdateProcess')?>" autocomplete="off"><?=LangAdmin::get('DoUpdate')?></button>
+        </p>
+    <? } ?>
+
+
+</div>
+
+<script>
+    $(function(){
+        $('#update').click(function(){
+            $(this).attr('disabled', 'disabled');
+            $.get('index.php', {
+                'cmd': 'Update',
+                'do': 'download'
+            }, function(data){
+                $.get('index.php?cmd=Update&do=extract', function(data){
+                    if(data == 'Ok' || data == "\nOk"){
+                        window.location = window.location.href.replace(/admin.*$/, '')+'install/update.php';
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+<!-- hardship ☻ -->
+

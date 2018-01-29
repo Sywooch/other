@@ -1,0 +1,170 @@
+﻿/**
+ * SqueezeBox - Expandable Lightbox
+ *
+ * Allows to open various content as modal,
+ * centered and animated box.
+ *
+ * @version		1.3
+ *
+ * @license		MIT-style license
+ * @author		Harald Kirschner <mail [at] digitarald.de>
+ * @author		Rouven WeГџling <me [at] rouvenwessling.de>
+ * @copyright	Author
+ */
+
+#sbox-overlay {
+	position: absolute;
+	background-color: black !important;
+	left: 0px;
+	top: 0px;
+	padding:0 !important;
+	padding-left:0 !important;
+	padding-top:0 !important;
+
+}
+
+#sbox-window {
+	position: absolute;
+	/*width:100%;
+	height:100%;*/
+	text-align: left;
+	overflow: visible;
+	padding: 0px;
+	/* invalid values, but looks smoother! */
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+	margin-left:0px !important;
+}
+
+#sbox-window[aria-hidden=true],
+#sbox-overlay[aria-hidden=true] {
+	display: none;
+}
+
+#sbox-btn-close {
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	right: 0px;
+	top: 0px;
+	background-color:black;
+	border:1px white solid !important;
+	border: none;
+	visibility:hidden !important;
+}
+
+.sbox-loading #sbox-content {
+	background-image: url(../images/modal/spinner.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+#sbox-content {
+	clear: both;
+	overflow: visible;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	position:absolute;
+	
+	
+}
+
+.sbox-content-image#sbox-content {
+	overflow: visible;
+}
+
+#sbox-image {
+	display: block;
+}
+
+.sbox-content-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.sbox-content-iframe#sbox-content {
+	overflow: visible;
+}
+
+/* Hides scrollbars */
+.body-overlayed {
+	overflow: hidden;
+}
+
+/* Hides flash (Firefox problem) and selects (IE) */
+.body-overlayed embed, .body-overlayed object, .body-overlayed select {
+	visibility: hidden;
+}
+
+#sbox-window embed, #sbox-window object, #sbox-window select {
+	visibility: visible;
+}
+
+/* Shadows */
+
+.sbox-window{
+	left:0 !important;
+	top:0 !important;			
+}
+
+#sbox-window.shadow {
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	width:100% !important;
+	}
+
+.sbox-bg {
+	position: absolute;
+	width: 33px;
+	height: 40px;
+}
+
+.sbox-bg-n {
+	left: 0;
+	top: -40px;
+	width: 100%;
+	background: url(../images/modal/bg_n.png) repeat-x;
+}
+.sbox-bg-ne {
+	right: -33px;
+	top: -40px;
+	background: url(../images/modal/bg_ne.png) no-repeat;
+}
+.sbox-bg-e {
+	right: -33px;
+	top: 0;
+	height: 100%;
+	background: url(../images/modal/bg_e.png) repeat-y;
+}
+.sbox-bg-se {
+	right: -33px;
+	bottom: -40px;
+	background: url(../images/modal/bg_se.png) no-repeat;
+}
+.sbox-bg-s {
+	left: 0;
+	bottom: -40px;
+	width: 100%;
+	background: url(../images/modal/bg_s.png) repeat-x;
+}
+.sbox-bg-sw {
+	left: -33px;
+	bottom: -40px;
+	background: url(../images/modal/bg_sw.png) no-repeat;
+}
+.sbox-bg-w {
+	left: -33px;
+	top: 0;
+	height: 100%;
+	background: url(../images/modal/bg_w.png) repeat-y;
+}
+.sbox-bg-nw {
+	left: -33px;
+	top: -40px;
+	background: url(../images/modal/bg_nw.png) no-repeat;
+}

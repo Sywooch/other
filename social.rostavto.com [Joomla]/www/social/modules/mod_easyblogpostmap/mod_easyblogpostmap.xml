@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>EasyBlog Post Map</name>
+	<author>StackIdeas</author>
+	<creationDate>March 2012</creationDate>
+	<copyright>Copyright 2009 - 2010 Stack Ideas. All rights reserved.</copyright>
+	<license>GPL License</license>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>http://www.stackideas.com</authorUrl>
+	<version>3.9.1</version>
+	<description>Post map using Google Maps for your EasyBlog's component</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_easyblogpostmap.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_easyblogpostmap">mod_easyblogpostmap.php</filename>
+		<filename>location.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+
+	<params addpath="/administrator/components/com_easyblog/elements">
+		<param name="routingtype" type="list" default="default" label="Routing Type" description="Choose the routing type when generate blog post link">
+			<option value="default">Use default behaviour</option>
+			<option value="menuitem">Use menu item</option>
+			<option value="category">Use post's category</option>
+			<option value="tag">Use post's tag</option>
+		</param>
+		<param name="menuitemid" type="easyblogmenuitem" default="" label="Use Menu Item" description="Select menu item if you have choose to use 'menu item' as routing type" state="1" />
+		<param name="type" type="list" default="0" label="Filter Type" description="Choose the module filter type (Configure filter options below">
+			<option value="0">By Latest</option>
+			<option value="1">By Blogger</option>
+			<option value="2">By Category</option>
+			<option value="3">By Tag</option>
+			<option value="4">By Team</option>
+		</param>
+		<param name="count" type="text" default="5" label="Count" description="The maximum number of pins to display" />
+		<param name="showfeatureimage" type="list" default="1" label="Show Featured Image" description="Show or hide the post's featured image." >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="showauthor" type="list" default="1" label="Show Author of blog" description="If disabled, the author section will not be displayed.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="showavatar" type="list" default="1" label="Show Blogger Avatar" description="Show or hide the post's blogger avatar." >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="showaddress" type="list" default="1" label="Show Address" description="Show or hide the location address." >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="showhits" type="list" default="1" label="Show Hits" description="Show or hide the hits.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="showratings" type="list" default="1" label="Show Ratings" description="Show or hide the rating for the post">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="enableratings" type="list" default="1" label="Enable Ratings" description="Enable rating for the post">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="showcommentcount" type="list" default="1" label="Show Comment Count" description="Show or hide the post's comment total count in the module." >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+
+		<param name="usefeatured" type="list" default="0" label="Only pickup featured posts [By Latest]" description="If enabled, module will only fetch featured blog entries" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+
+		<param name="bloggerid" type="text" default="" label="Blogger Id [By Blogger]" description="Only select blog posts from specific blogger." />
+		<param name="showbloggeravatar" type="list" default="1" label="Show Blogger's Avatar [By Blogger]" description="Show or hide blogger's avatar in the module." >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+
+		<param name="categoryid" type="text" default="" label="Category Id [By Category]" description="Only select blog posts from specific category." />
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+
+		<param name="tagid" type="text" default="" label="Tag Id [By Tag]" description="Only select blog posts from specific tag." />
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+
+		<param name="teamid" type="text" default="" label="Team Id [By Team]" description="Only select blog posts from specific team." />
+	</params>
+
+	<params group="advanced">
+		<param name="mapwidth" type="text" default="600" label="Map Width" description="Width of the map (in pixels)." />
+		<param name="mapheight" type="text" default="600" label="Map Height" description="Height of the map (in pixels)." />
+		<param name="infowidth" type="text" default="250" label="Info Window Max Width" description="Maximum width of the info window (in pixels)." />
+		<param name="featuredimgwidth" type="text" default="230" label="Featured Image Max Width" description="Maximum width of the featured image (in pixels). This will only take effect if Show Featured Image is enabled." />
+		<param name="featuredimgheight" type="text" default="150" label="Featured Image Max Height" description="Maximum height of the featured image (in pixels). This will only take effect if Show Featured Image is enabled." />
+		<param name="mapui" type="list" default="0" label="Show Maps UI" description="Show Google Maps user interface on the map." >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="fitbounds" type="list" default="1" label="Fit Markers in Map Bounds" description="If enabled, Zoom Level will be disobeyed for map to fit all markers in map boundary." >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="zoom" type="text" default="10" label="Zoom Level" description="Set the default zoom level during map load." />
+		<param name="language" type="list" default="en" label="Map Language" description="Set the map language used" >
+			<option value="ar">Arabic</option>
+			<option value="eu">Basque</option>
+			<option value="bn">Bengali</option>
+			<option value="bg">Bulgarian</option>
+			<option value="ca">Catalan</option>
+			<option value="zh-CN">Chinese (Simplified)</option>
+			<option value="zh-TW">Chinese (Traditional)</option>
+			<option value="hr">Croatian</option>
+			<option value="cs">Czech</option>
+			<option value="da">Danish</option>
+			<option value="nl">Dutch</option>
+			<option value="en">English</option>
+			<option value="en-AU">English (Australian)</option>
+			<option value="en-GB">English (Great Britain)</option>
+			<option value="fa">Farsi</option>
+			<option value="fil">Filipino</option>
+			<option value="fi">Finnish</option>
+			<option value="fr">French</option>
+			<option value="gl">Galician</option>
+			<option value="de">German</option>
+			<option value="el">Greek</option>
+			<option value="gu">Gujarati</option>
+			<option value="iw">Hebrew</option>
+			<option value="hi">Hindi</option>
+			<option value="hu">Hungarian</option>
+			<option value="id">Indonesian</option>
+			<option value="it">Italian</option>
+			<option value="ja">Japanese</option>
+			<option value="kn">Kannada</option>
+			<option value="ko">Korean</option>
+			<option value="lv">Latvian</option>
+			<option value="lt">Lithuanian</option>
+			<option value="ml">Malayalam</option>
+			<option value="mr">Marathi</option>
+			<option value="no">Norwegian</option>
+			<option value="pl">Polish</option>
+			<option value="pt">Portuguese</option>
+			<option value="pt-BR">Portuguese (Brazil)</option>
+			<option value="pt-PT">Portuguese (Portugal)</option>
+			<option value="ro">Romanian</option>
+			<option value="ru">Russian</option>
+			<option value="sr">Serbian</option>
+			<option value="sk">Slovak</option>
+			<option value="sl">Slovenian</option>
+			<option value="es">Spanish</option>
+			<option value="sv">Swedish</option>
+			<option value="tl">Tagalog</option>
+			<option value="ta">Tamil</option>
+			<option value="te">Telugu</option>
+			<option value="th">Thai</option>
+			<option value="tr">Turkish</option>
+			<option value="uk">Ukrainian</option>
+			<option value="vi">Vietnamese</option>
+		</param>
+	</params>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_easyblog/elements/fields">
+				<field
+					name="routingtype"
+					type="list"
+					default="default"
+					label="Routing Type"
+					description="Choose the routing type when generate blog post link">
+					<option value="default">Use default behaviour</option>
+					<option value="menuitem">Use menu item</option>
+					<option value="category">Use post's category</option>
+					<option value="tag">Use post's tag</option>
+				</field>
+				<field name="menuitemid" type="modal_easyblogmenuitem" default="" label="Use Menu Item" description="Select menu item if you have choose to use 'menu item' as routing type" state="1" />
+				<field
+					name="type"
+					type="list"
+					default="0"
+					label="Filter Type"
+					description="Choose the module filter type (Configure filter options below">
+					<option value="0">By Latest</option>
+					<option value="1">By Blogger</option>
+					<option value="2">By Category</option>
+					<option value="3">By Tag</option>
+					<option value="4">By Team</option>
+				</field>
+				<field
+					name="count"
+					type="text"
+					default="5"
+					label="Count"
+					description="The maximum number of pins to display" />
+				<field
+					name="showfeatureimage"
+					type="list"
+					default="1"
+					label="Show Featured Image"
+					description="Show or hide the post's featured image." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="showauthor"
+					type="list"
+					default="1"
+					label="Show Author of blog"
+					description="If disabled, the author section will not be displayed.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="showavatar"
+					type="list"
+					default="1"
+					label="Show Blogger Avatar"
+					description="Show or hide the post's blogger avatar." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="showaddress"
+					type="list"
+					default="1"
+					label="Show Address"
+					description="Show or hide the location address" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="showhits"
+					type="list" default="1"
+					label="Show Hits"
+					description="Show or hide the hits.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="showratings"
+					type="list" default="1"
+					label="Show Ratings"
+					description="Show or hide the rating for the post">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="enableratings" type="list" default="1" label="Enable Ratings" description="Enable ratings for the post">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="showcommentcount"
+					type="list"
+					default="1"
+					label="Show Comment Count"
+					description="Show or hide the post's comment total count in the module." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="filterbylatest">
+				<field
+					name="usefeatured"
+					type="list"
+					default="0"
+					label="Only pickup featured posts"
+					description="If enabled, module will only fetch featured blog entries." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="filterbyblogger">
+				<field
+					name="bloggerid"
+					type="text"
+					default=""
+					label="Blogger Id"
+					description="Only select blog posts from specific blogger." />
+			</fieldset>
+
+			<fieldset name="filterbycategory">
+				<field
+					name="categoryid"
+					type="text"
+					default=""
+					label="Category Id"
+					description="Only select blog posts from specific category." />
+			</fieldset>
+
+			<fieldset name="filterbytag">
+				<field
+					name="tagid"
+					type="text"
+					default=""
+					label="Tag Id"
+					description="Only select blog posts from specific tag." />
+			</fieldset>
+
+			<fieldset name="filterbyteam">
+				<field
+					name="teamid"
+					type="text"
+					default=""
+					label="Team Id"
+					description="Only select blog posts from specific team." />
+			</fieldset>
+
+			<fieldset name="map">
+				<field
+					name="mapwidth"
+					type="text"
+					default="600"
+					label="Map Width"
+					description="Width of the map (in pixels)." />
+				<field
+					name="mapheight"
+					type="text"
+					default="600"
+					label="Map Height"
+					description="Height of the map (in pixels)." />
+				<field
+					name="infowidth"
+					type="text"
+					default="250"
+					label="Info Window Max Width"
+					description="Maximum width of the info window (in pixels)." />
+				<field
+					name="featuredimgwidth"
+					type="text"
+					default="230"
+					label="Featured Image Max Width"
+					description="Maximum width of the featured image (in pixels). This will only take effect if Show Featured Image is enabled." />
+				<field
+					name="featuredimgheight"
+					type="text"
+					default="150"
+					label="Featured Image Max Height"
+					description="Maximum height of the featured image (in pixels). This will only take effect if Show Featured Image is enabled." />
+				<field
+					name="mapui"
+					type="list"
+					default="0"
+					label="Show Maps UI"
+					description="Show Google Maps user interface on the map." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="fitbounds"
+					type="list"
+					default="1"
+					label="Fit Markers in Map Bounds"
+					description="If enabled, Zoom Level will be disobeyed for map to fit all markers in map boundary" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field
+					name="zoom"
+					type="text"
+					default="15"
+					label="Zoom Level"
+					description="Set the default zoom level during map load. This will only take effect if Fit Markers in Map Bounds is disabled." />
+				<field
+					name="language"
+					type="list"
+					default="en"
+					label="Map Language"
+					description="Set the map language used" >
+					<option value="ar">Arabic</option>
+					<option value="eu">Basque</option>
+					<option value="bn">Bengali</option>
+					<option value="bg">Bulgarian</option>
+					<option value="ca">Catalan</option>
+					<option value="zh-CN">Chinese (Simplified)</option>
+					<option value="zh-TW">Chinese (Traditional)</option>
+					<option value="hr">Croatian</option>
+					<option value="cs">Czech</option>
+					<option value="da">Danish</option>
+					<option value="nl">Dutch</option>
+					<option value="en">English</option>
+					<option value="en-AU">English (Australian)</option>
+					<option value="en-GB">English (Great Britain)</option>
+					<option value="fa">Farsi</option>
+					<option value="fil">Filipino</option>
+					<option value="fi">Finnish</option>
+					<option value="fr">French</option>
+					<option value="gl">Galician</option>
+					<option value="de">German</option>
+					<option value="el">Greek</option>
+					<option value="gu">Gujarati</option>
+					<option value="iw">Hebrew</option>
+					<option value="hi">Hindi</option>
+					<option value="hu">Hungarian</option>
+					<option value="id">Indonesian</option>
+					<option value="it">Italian</option>
+					<option value="ja">Japanese</option>
+					<option value="kn">Kannada</option>
+					<option value="ko">Korean</option>
+					<option value="lv">Latvian</option>
+					<option value="lt">Lithuanian</option>
+					<option value="ml">Malayalam</option>
+					<option value="mr">Marathi</option>
+					<option value="no">Norwegian</option>
+					<option value="pl">Polish</option>
+					<option value="pt">Portuguese</option>
+					<option value="pt-BR">Portuguese (Brazil)</option>
+					<option value="pt-PT">Portuguese (Portugal)</option>
+					<option value="ro">Romanian</option>
+					<option value="ru">Russian</option>
+					<option value="sr">Serbian</option>
+					<option value="sk">Slovak</option>
+					<option value="sl">Slovenian</option>
+					<option value="es">Spanish</option>
+					<option value="sv">Swedish</option>
+					<option value="tl">Tagalog</option>
+					<option value="ta">Tamil</option>
+					<option value="te">Telugu</option>
+					<option value="th">Thai</option>
+					<option value="tr">Turkish</option>
+					<option value="uk">Ukrainian</option>
+					<option value="vi">Vietnamese</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

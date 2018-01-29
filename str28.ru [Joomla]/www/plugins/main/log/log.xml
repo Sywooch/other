@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="main">
+	<name>plg_main_log</name>
+	<author>Retina Project</author>
+	<creationDate>April 2007</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license></license>
+	<authorEmail>admin@retina.org</authorEmail>
+	<authorUrl>www.retina-studio.ru</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_LOG_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="log">log.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_main_log.ini</language>
+		<language tag="en-GB">en-GB.plg_main_log.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="log_username" type="radio"
+					description="PLG_main_LOG_FIELD_LOG_USERNAME_DESC"
+					label="PLG_main_LOG_FIELD_LOG_USERNAME_LABEL"
+					default="0"
+				>
+					<option value="0">RNO</option>
+					<option value="1">RYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

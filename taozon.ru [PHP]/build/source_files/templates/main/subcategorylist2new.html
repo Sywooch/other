@@ -1,0 +1,13 @@
+	<small class="stitle"><?=Lang::get('subcategories')?>:</small>
+	
+	<ul class="mcats">
+    <? if(is_array($subcats)) foreach($subcats as $cat) { ?>
+        <? if ($cat['ishidden'] == 'false') { ?>
+            <? if ($cat['isparent'] == 'false') { ?>
+                <li><a href="index.php?p=category&cid=<?=$cat['id']?>&clear"><?=$cat['name']?></a></li>
+            <? } else { ?>
+                <li><a href="index.php?p=subcategory<?=($cat['isvirtual'] == 'true' ? '&virt' : '')?>&cid=<?=$cat['id']?>&clear"><?=$cat['name']?></a></li>
+            <? } ?>
+        <? } ?>
+    <? } ?>
+    </ul>

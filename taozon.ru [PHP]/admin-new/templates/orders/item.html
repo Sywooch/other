@@ -1,0 +1,81 @@
+<div class="well well-transp item-details-loaded">
+
+    <div class="row-fluid">
+
+        <div class="span1">
+
+            <a href="#<%= item.get("ordernumericid") %>-<%= item.get("id") %>-img" class="thumbnail"
+                data-toggle="lightbox" title="Увеличить изображение"><img src="<%= item.get("imagePreview") %>" alt=""></a>
+            <div id="<%= item.get("ordernumericid") %>-<%= item.get("id") %>-img" class="lightbox hide fade"
+                tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="lightbox-header">
+                    <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true"  title="Закрыть"><i class="icon-remove-sign"></i></button>
+                </div>
+                <div class="lightbox-content">
+                    <img src="<%= item.get("itemimageurl") %>">
+                    <div class="lightbox-caption"><p class="text-clipped-general"><%= item.get("briefdescrtrans") %></p></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="span4">
+            <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+                <dt>Оригинал:</dt>
+                <dd>
+                    <a target="_blank" href="<%= item.get("itemexternalurl") %>" title="Страница товара на Таобао">
+                        <%= item.get("itemid") %>
+                    </a>
+                </dd>
+                <dt>Продавец:</dt>
+                <dd><a target="_blank" href="<%= item.get("vendurl") %>" title="Страница продавца на Таобао"><%= item.get("vendnick") %></a></dd>
+            </dl>
+            <dl>
+                <p><strong>Полное описание:</strong> <%= item.get("briefdescrtrans") %></p>
+            </dl>
+        </div>
+
+        <div class="span7">
+
+            <div class="row-fluid">
+
+                <div class="span5">
+                    <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+                        <dt>Конфигурация:</dt>
+                        <dd><%= item.get("config").join("</dd><dd>") %></dd>
+                    </dl>
+                </div>
+
+                <div class="span5 offset2">
+                    <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+                        <dt>Вес:</dt>
+                        <dd><%= item.get("weight") %> кг.</dd>
+                        <dt>Цена:</dt>
+                        <dd class="editablePrice"></dd>
+                        <dt>Количество:</dt>
+                        <dd><%= item.get("qty") %></dd>
+                        <dt>Сумма:</dt>
+                        <dd class="amountcust">
+                            <span class="label weight-normal font-12">
+                                <%= item.get("NewAmountCust") %>&nbsp;<%= item.get("internalpricecurrencycode") %>
+                            </span>
+                        </dd>
+                    </dl>
+                </div>
+
+            </div>
+
+            <div class="comments-container">
+                <hr>
+
+                <p><i class="icon-comments-alt"></i> <strong>Комментарии</strong></p>
+                    <%= escapeData(item.get("custcomment")) %>
+                <div class="row-fluid comments-list"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <button type="button" class="close close-well" data-toggle="collapse" data-target=".<%= item.get("ordernumericid") %>-<%= item.get("id") %>-more-info" title="Скрыть">&times;</button>
+</div><!-- /.well-->

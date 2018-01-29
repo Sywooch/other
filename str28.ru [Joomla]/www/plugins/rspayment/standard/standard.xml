@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="rspayment" >
+    <name>rsPAYMENT_STANDARD</name>
+    <creationDate>April 2012</creationDate>
+    <author>The retinashop Development Team</author>
+    <authorUrl>http://www.retinashop.net</authorUrl>
+    <copyright>Copyright (C) 2004-2011 retinashop Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>2.0.6</version>
+    <description>Standard payment plugin</description>
+    <languages>
+	<language tag="en-GB">en-GB.plg_rspayment_standard.ini</language>
+    </languages>
+    <files>
+	<filename plugin="standard">standard.php</filename>
+    </files>
+    <params addpath="/admin/components/com_retinashop/elements">
+	<param type="rsjpluginwarning" />
+	<param	name="payment_logos" type="rsfiles" label="rsPAYMENT_STANDARD_LOGOS"
+		description="rsPAYMENT_STANDARD_LOGOS_DESC"
+		directory="/images/stories/retinashop/payment"
+		default="default" hide_default="1" hide_none="1"
+		stripext="0"   exclude="^_" />
+	<param name="countries" type="rscountries"  scope="com_retinashop" default="" label="rsPAYMENT_STANDARD_COUNTRIES" description="rsPAYMENT_STANDARD_COUNTRIES_DESC"/>
+        <param name="payment_currency" type="rsacceptedcurrency" default="" label="rsPAYMENT_STANDARD_CURRENCY" description="rsPAYMENT_STANDARD_CURRENCY_DESC" />
+
+	<param name="min_amount" type="text"  label="rsPAYMENT_STANDARD_MIN_AMOUNT" description="rsPAYMENT_STANDARD_MIN_AMOUNT_EXPLAIN" />
+	<param name="max_amount" type="text"  label="rsPAYMENT_STANDARD_MAX_AMOUNT" description="rsPAYMENT_STANDARD_MAX_AMOUNT_EXPLAIN" />
+	<param name="cost_per_transaction" type="text"  label="rsPAYMENT_STANDARD_COST_PER_TRANSACTION" description="rsPAYMENT_STANDARD_COST_PER_TRANSACTION_EXPLAIN" />
+	<param name="cost_percent_total" type="text"  label="rsPAYMENT_STANDARD_COST_PERCENT_TOTAL" description="rsPAYMENT_STANDARD_COST_PERCENT_TOTAL_EXPLAIN" />
+	<param name="tax_id" type="rstaxes" scope="com_retinashop"  label="rsPAYMENT_STANDARD_TAX" description="rsPAYMENT_STANDARD_TAX_DESC" />
+	<param name="payment_info" type="textarea" cols="60" rows="30" default="" label="rsPAYMENT_STANDARD_PAYMENTINFO" description="rsPAYMENT_STANDARD_PAYMENTINFO_EXPLAIN" />
+    </params>
+
+
+
+</install>

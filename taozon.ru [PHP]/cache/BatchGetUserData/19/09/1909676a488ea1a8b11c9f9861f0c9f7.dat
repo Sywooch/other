@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BatchUserDataAnswer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://services.opentao.net">
+  <ErrorCode>Ok</ErrorCode>
+  <SubErrorCode/>
+  <RequestTimeStatistic>216.688 = {OtapiService} Service call (overhead: 0.075)
+  0.063 = |-{Otapi} Create core
+  0.068 = |-{Otapi} AccumulateCallCount (overhead: 0.026)
+  0.001 = |-|-{Otapi} Create dependency Counter
+  0.041 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+  0.027 = |-{Otapi} AccumulateCallCount (overhead: 0.008)
+  0.019 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+  0.002 = |-{Otapi} Create dependency SettingsManager
+  8.273 = |-{Service client call} SettingsManager.GetAvailableFeatures (overhead: 2.118)
+          |-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  6.155 = |-|-{SettingsManagerService} Service call (overhead: 3.847)
+  2.300 = |-|-|-{ORM} SingleOrDefault entity of type 'Instance' (found)
+  0.008 = |-|-|-{ORM} Get instance features (result size = 27)
+208.180 = |-{Batch} Run tasks (overhead: 0.037)
+205.115 = |-|-{Batch} Get BasketSummary block (overhead: 4.535)
+  0.801 = |-|-|-{Service client call} PublicAccountManager.GetUserKeyBySessionId (overhead: 0.787)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.014 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.009)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  1.101 = |-|-|-{Service client call} ItemsCollector.GetCollection (overhead: 1.089)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.012 = |-|-|-|-{ItemsCollectorService} Service call
+  0.003 = |-|-|-{Otapi} Create dependency MoneyChanger
+  1.421 = |-|-|-{Service client call} MoneyChanger.GetCurrencies (overhead: 1.367)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+  0.054 = |-|-|-|-{MoneyChangerService} Service call
+  7.446 = |-|-|-{Service client call} SettingsManager.GetPriceFormationGroupListByCategoryIdList (overhead: 7.145)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.301 = |-|-|-|-{SettingsManagerService} Service call
+  1.179 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.047)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.132 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.046)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.078 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.004 = |-|-|-{Otapi} Create dependency PriceFormation
+  0.995 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.887)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.109 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.051)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.052 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.919 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.834)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.084 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.032)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.047 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.962 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.856)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.107 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.047)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.054 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.931 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.840)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.091 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.039)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.046 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.932 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.856)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.076 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.031)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.040 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.974 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.876)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.099 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.041)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.052 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.019 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.912)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.107 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.045)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.055 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.013 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.930)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.083 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.032)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.046 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.109 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.990)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.119 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.052)
+  0.008 = |-|-|-|-|-{Logic} Create core
+  0.058 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.903 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.824)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.079 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.031)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.042 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.137 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.027)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.110 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.045)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.059 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.045 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.959)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.086 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.034)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.047 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.052 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.967)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.086 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.032)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.049 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.901 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.831)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.070 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.028)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.038 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.926 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.851)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.075 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.029)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.041 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.117 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.008)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.109 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.045)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.058 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.138 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.009)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.129 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.053)
+  0.008 = |-|-|-|-|-{Logic} Create core
+  0.068 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.138 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.021)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.118 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.049)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.062 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.065 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.950)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.115 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.047)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.061 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.043 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.928)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.115 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.047)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.061 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.914 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.823)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.091 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.037)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.049 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.062 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.952)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.110 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.044)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.059 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.158 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.063)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.095 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.037)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.052 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.108 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.024)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.084 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.033)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.046 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.194 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.071)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.123 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.052)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.066 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.190 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.095)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.095 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.036)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.053 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.993 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.903)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.090 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.035)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.050 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.419 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.264)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.155 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.061)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.084 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  2.406 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 2.234)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.172 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.062)
+  0.011 = |-|-|-|-|-{Logic} Create core
+  0.098 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.791 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.630)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.161 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.058)
+  0.011 = |-|-|-|-|-{Logic} Create core
+  0.092 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  2.001 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.678)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.323 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.072)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.241 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.764 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.596)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.168 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.066)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.092 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.850 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.686)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.164 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.063)
+  0.011 = |-|-|-|-|-{Logic} Create core
+  0.091 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.627 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.469)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.158 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.061)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.087 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  4.763 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 4.591)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.172 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.064)
+  0.012 = |-|-|-|-|-{Logic} Create core
+  0.096 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.280 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.155)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.125 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.048)
+  0.008 = |-|-|-|-|-{Logic} Create core
+  0.069 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.238 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.114)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.123 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.051)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.066 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.915 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.837)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.077 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.031)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.042 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.138 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.022)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.116 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.047)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.060 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.376 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.233)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.143 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.057)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.077 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.604 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.437)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.167 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.064)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.092 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  3.054 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 2.626)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.428 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.069)
+  0.011 = |-|-|-|-|-{Logic} Create core
+  0.348 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.368 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.242)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.126 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.048)
+  0.008 = |-|-|-|-|-{Logic} Create core
+  0.071 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.489 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.326)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.163 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.065)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.089 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.583 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.399)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.184 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.063)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.111 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  2.078 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.929)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.148 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.060)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.079 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  2.730 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 2.557)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.173 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.065)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.099 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.596 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.437)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.159 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.057)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.091 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.904 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.735)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.170 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.068)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.092 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  2.388 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 2.221)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.167 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.059)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.099 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.343 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.216)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.127 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.046)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.074 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  2.208 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 2.064)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.144 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.054)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.081 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.434 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.293)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.142 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.060)
+  0.008 = |-|-|-|-|-{Logic} Create core
+  0.073 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.699 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.569)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.131 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.050)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.074 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.255 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.105)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.150 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.062)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.078 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.634 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.485)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.149 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.057)
+  0.008 = |-|-|-|-|-{Logic} Create core
+  0.083 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.457 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.309)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.148 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.063)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.077 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.937 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.786)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.152 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.059)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.083 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.712 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.511)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.201 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.062)
+  0.008 = |-|-|-|-|-{Logic} Create core
+  0.131 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.977 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.694)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.284 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.063)
+  0.136 = |-|-|-|-|-{Logic} Create core
+  0.085 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.816 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.613)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.203 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.071)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.122 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.784 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.606)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.177 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.075)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.093 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.316 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.169)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.147 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.054)
+  0.010 = |-|-|-|-|-{Logic} Create core
+  0.083 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.431 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.281)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.150 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.057)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.083 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.250 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.109)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.142 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.057)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.076 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.302 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.146)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.156 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.058)
+  0.023 = |-|-|-|-|-{Logic} Create core
+  0.075 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.330 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.183)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.147 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.057)
+  0.011 = |-|-|-|-|-{Logic} Create core
+  0.079 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.936 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.829)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.107 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.048)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.055 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.142 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.023)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.120 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.051)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.062 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.411 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.268)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.142 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.056)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.077 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.533 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.372)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.161 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.066)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.086 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.640 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.480)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.160 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.066)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.085 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.374 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.238)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.136 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.055)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.072 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.200 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.077)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.123 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.048)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.068 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.195 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.067)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.129 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.053)
+  0.009 = |-|-|-|-|-{Logic} Create core
+  0.066 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.201 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.085)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.115 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.045)
+  0.008 = |-|-|-|-|-{Logic} Create core
+  0.063 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.020 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.920)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.100 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.042)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.052 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.919 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.825)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.094 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.040)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.049 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.948 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.852)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.096 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.040)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.050 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.001 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.903)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.098 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.040)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.051 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.009 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.911)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.098 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.041)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.051 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.000 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.920)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.080 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.032)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.043 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.905 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.837)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.068 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.029)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.036 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.887 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.821)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.067 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.027)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.036 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.907 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.838)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.068 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.028)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.036 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.839 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.769)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.070 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.029)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.037 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.857 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.788)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.069 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.027)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.037 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.012 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.940)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.072 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.031)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.037 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.991 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.919)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.072 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.029)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.038 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.991 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.921)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.071 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.030)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.037 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.983 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.910)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.073 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.029)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.040 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.157 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.002)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.155 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.085)
+  0.006 = |-|-|-|-|-{Logic} Create core
+  0.065 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.959 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.861)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.098 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.036)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.056 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.987 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.904)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.083 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.034)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.045 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.876 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.799)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.077 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.030)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.043 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  0.943 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 0.858)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.085 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.030)
+  0.005 = |-|-|-|-|-{Logic} Create core
+  0.050 = |-|-|-|-|-{Logic} Check session
+          |-|-|-{Otapi} Warning: user is not authenticated
+  1.843 = |-|-|-{Service client call} MoneyChanger.ConvertMoneyListToDisplayedList (overhead: 1.701)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+  0.143 = |-|-|-|-{MoneyChangerService} Service call (overhead: 0.116)
+  0.027 = |-|-|-|-|-{MoneyChangeBuilder} DoBuild ListDictionary
+  1.858 = |-|-|-{Service client call} SettingsManager.GetPriceFormationSettings (overhead: 1.713)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.145 = |-|-|-|-{SettingsManagerService} Service call
+  1.733 = |-|-|-{Service client call} SettingsManager.GetCollectionPriceFormationGroup (overhead: 1.611)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.122 = |-|-|-|-{SettingsManagerService} Service call
+  0.004 = |-|-|-{Otapi} Create dependency ProvidersDirector
+ 42.924 = |-|-|-{Service client call} ProvidersDirector.GetProviderInfo (overhead: 40.972)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  1.952 = |-|-|-|-{ProvidersDirectorService} Service call (overhead: 0.144)
+  0.002 = |-|-|-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+  0.005 = |-|-|-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+          |-|-|-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+  0.004 = |-|-|-|-|-{ProvidersDirector} Create dependency Goblin
+  1.797 = |-|-|-|-|-{Data translate} Value provider is ProviderInfoContextedValueProvider (overhead: 0.068)
+  1.729 = |-|-|-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.397)
+          |-|-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.332 = |-|-|-|-|-|-|-{GoblinService} Service call (overhead: 0.207)
+          |-|-|-|-|-|-|-|-{For Counter} Goblin:Input text length:6
+          |-|-|-|-|-|-|-|-{Goblin Say} langFrom en, langTo ru
+  0.009 = |-|-|-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+  0.097 = |-|-|-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.026)
+  0.028 = |-|-|-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+  0.007 = |-|-|-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+  0.029 = |-|-|-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+  0.007 = |-|-|-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+  0.015 = |-|-|-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.012)
+  0.004 = |-|-|-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 0)
+  0.004 = |-|-|-|-|-|-|-|-{Goblin} TranslateHtml
+          |-|-|-|-|-|-|-|-{Goblin Say} Found Translates in DB: 1 / 1
+ 11.263 = |-|-|-{Service client call} ProvidersDirector.GetCategoryInfoList (overhead: 9.320)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  1.943 = |-|-|-|-{ProvidersDirectorService} Service call (overhead: 0.552)
+  0.002 = |-|-|-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+  0.027 = |-|-|-|-|-{ORM} Get categories by local ids (result size = 12)
+  0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency Goblin
+  0.004 = |-|-|-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+          |-|-|-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+  1.355 = |-|-|-|-|-{Data translate} Value provider is ListContextedValueProvider&lt;OtapiCategory&gt; (overhead: 0.084)
+  1.271 = |-|-|-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.069)
+          |-|-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.202 = |-|-|-|-|-|-|-{GoblinService} Service call (overhead: 0.093)
+          |-|-|-|-|-|-|-|-{For Counter} Goblin:Input text length:121
+          |-|-|-|-|-|-|-|-{Goblin Say} langFrom zh-chs, langTo ru
+  0.006 = |-|-|-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+  0.092 = |-|-|-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.012)
+  0.037 = |-|-|-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+  0.005 = |-|-|-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+  0.033 = |-|-|-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+  0.004 = |-|-|-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+  0.008 = |-|-|-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.006)
+  0.002 = |-|-|-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 0)
+  0.003 = |-|-|-|-|-|-|-|-{Goblin} TranslateHtml
+          |-|-|-|-|-|-|-|-{Goblin Say} Found Translates in DB: 12 / 12
+  1.821 = |-|-{Batch} Get NoteSummary block (overhead: 0.032)
+  0.003 = |-|-|-{Otapi} Create dependency ItemsCollector
+  0.824 = |-|-|-{Service client call} PublicAccountManager.GetUserKeyBySessionId (overhead: 0.811)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.013 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.009)
+  0.004 = |-|-|-|-|-{Logic} Create core
+  0.963 = |-|-|-{Service client call} ItemsCollector.GetCollection (overhead: 0.946)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.017 = |-|-|-|-{ItemsCollectorService} Service call
+  1.207 = |-|-{Batch} Get UserStatus block (overhead: 0.025)
+  0.003 = |-|-|-{Otapi} Create dependency PublicAccountManager
+  1.179 = |-|-|-{Service client call} PublicAccountManager.GetUserStatusInfo (overhead: 1.050)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.129 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.045)
+  0.007 = |-|-|-|-|-{Logic} Create core
+  0.077 = |-|-|-|-|-{Logic} Check session
+Time distribution: database = 2.340 (1.1%), interservice = 190.917 (88.1%), logic = 7.849 (3.6%), other = 15.582 (7.2%), Otapi = 4.881 (2.3%), SettingsManager = 6.723 (3.1%), PublicAccountManager = 12.512 (5.8%), ItemsCollector = 0.028 (0.0%), MoneyChanger = 0.197 (0.1%), ProvidersDirector = 0.895 (0.4%), Goblin = 0.534 (0.2%)
+Debug info process time: 1.855
+</RequestTimeStatistic>
+  <Result>
+    <Status>
+      <IsSessionExpired>true</IsSessionExpired>
+    </Status>
+    <NoteSummary>
+      <TotalCount>0</TotalCount>
+    </NoteSummary>
+    <BasketSummary>
+      <TotalCount>12</TotalCount>
+      <TotalPrice>
+        <OriginalPrice>334.00</OriginalPrice>
+        <MarginPrice>680.8</MarginPrice>
+        <ConvertedPriceList>
+          <Internal Sign="руб." Code="RUB">5632.6</Internal>
+          <DisplayedMoneys>
+            <Money Sign="руб." Code="RUB">5632.6</Money>
+          </DisplayedMoneys>
+        </ConvertedPriceList>
+      </TotalPrice>
+    </BasketSummary>
+  </Result>
+</BatchUserDataAnswer>

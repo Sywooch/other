@@ -1,0 +1,38 @@
+<?=$Header?>
+
+<?=Lang::loadJSTranslation(array('cant_load_tab', 'save', 'cancel', 'loading', 'saving', 'saved', 'home'))?>
+
+
+<? if (Plugins::invokeEvent('onHierarchyRender')) { ?>
+<?=Plugins::invokeEvent('HierarchyJSMain')?>
+<? } else { ?>
+<script type="text/javascript" src="js/set/forms.js"></script>
+<script type="text/javascript" src="js/set/delete.items.js"></script>
+<script type="text/javascript" src="js/set/tabs_handler.js"></script>
+<? } ?>
+<script type="text/javascript" src="../js/tiny_mce/tiny_mce.js"></script>
+
+<div id="sets-wrapper">
+    <table>
+        <tr>
+            <td>
+                <div id="tabs" class="inline-block">
+                    <ul>
+                        <li><a setid="Item0" href="index.php?cmd=Set2&do=showItemSet&contentType=Item&type=Best&categoryId=0"><?=Lang::get('best_items')?></a></li>
+                        <li><a setid="Item1" href="index.php?cmd=Set2&do=showItemSet&contentType=Item&type=Popular&categoryId=0"><?=Lang::get('popular_items')?></a></li>
+                        <li><a setid="Item2" href="index.php?cmd=Set2&do=showItemSet&contentType=Item&type=Last&categoryId=0"><?=Lang::get('last_items')?></a></li>
+                        
+                        <li><a setid="Item2" href="index.php?cmd=Set2&do=showItemSet&contentType=Brand&type=Best&categoryId=0"><?=LangAdmin::get('brands')?></a></li>
+                        <!--li><a setId="Vendor0" href="index.php?cmd=Set2&do=showItemSet&contentType=Vendor&type=Best&categoryId=0"><?=Lang::get('best_vendors')?></a></li-->
+                    </ul>                   
+                    <!---<?=Plugins::invokeEvent('onRenderSetsPage')?>-->
+                    <?=Plugins::invokeEvent('onRenderSetsCats')?>
+                    
+                    <div id="tabs-1">
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<?=$Footer?>

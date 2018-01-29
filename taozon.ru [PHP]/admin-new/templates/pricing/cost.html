@@ -1,0 +1,68 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignDo('default')?>"><?=LangAdmin::get('Pricing')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('Costs')?></li>
+</ul><!--/.breadcrumb-->
+
+<?=TabsGenerator::GetTabs('templates/pricing/navigation/tabs.xml', $PageUrl)?>
+<? XEditableFields::Init('cost', $PageUrl); ?>
+
+<h1><?=LangAdmin::get('Costs')?></h1>
+
+<? $percent = isset($Settings->Settings->MarginPercentage) ? (string)$Settings->Settings->MarginPercentage : ''; ?>
+<? $min_margin = isset($Settings->Settings->MinimumMargin) ? (string)$Settings->Settings->MinimumMargin : ''; ?>
+<? $use_discount = ((string)$Settings->Settings->UseDiscount=='true');?>
+<? $use_vip_discount = ((string)$Settings->Settings->UseVipDiscount=='true');?>
+<? $discount_mode = (string)$Settings->Settings->DiscountMode;?>
+
+<div class="well">
+        <form class="form-horizontal inline_editable_form ot_form">
+            <fieldset>
+
+                <div class="control-group control-group-medium">
+                    <div data-field="round_settings"></div>
+                    <? XEditableFields::Register('round_settings', @$RoundSettings['priceroundingfactor'], array(
+                        'placeholder' => LangAdmin::get('For_example', array('example' => 2)), 'inputClass' => 'numeric'
+                    )); ?>
+                </div>
+
+                <div class="control-group control-group-medium">
+                    <div data-field="persent"></div>
+                    <? XEditableFields::Register('persent', $percent, array(
+                        'placeholder' => LangAdmin::get('For_example', array('example' => 1.5)), 'inputClass' => 'price'
+                    )); ?>
+                </div>
+
+                <div class="control-group control-group-medium">
+                    <div data-field="minimummargin"></div>
+                    <? XEditableFields::Register('minimummargin', $min_margin, array(
+                        'placeholder' => LangAdmin::get('For_example', array('example' => 100)), 'inputClass' => 'numeric'
+                    )); ?>
+                </div>
+
+                <div class="control-group control-group-medium">
+                    <div data-field="usediscount"></div>
+                    <? XEditableFields::Register('usediscount', $use_discount); ?>
+                </div>
+                <div class="control-group control-group-medium">
+                    <div data-field="usevipdiscount"></div>
+                    <? XEditableFields::Register('usevipdiscount', $use_vip_discount); ?>
+                </div>
+
+                <div class="control-group control-group-medium">
+                    <div data-field="discountmode"></div>
+                    <? XEditableFields::Register('discountmode', $discount_mode, array('inputClass' => 'input-xxlarge')); ?>
+                </div>                
+                
+            </fieldset>
+        </form>
+
+    </div>
+
+<script>
+    InlineFields = new Backbone.Collection;
+    InlineFields.add(<?=json_encode(XEditableFields::GetFields())?>);
+</script>
+
+<? ScriptIncluder::AddCustomScript('js/ot-render-template.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-inline.editable.init.js'); ?>

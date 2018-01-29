@@ -1,0 +1,387 @@
+
+<!-- .col700 -->
+<div class="col700 clrfix">
+
+<div class="clrfix">
+        <div id="dialog-form" title="Сообщение">
+            <span id="basketinfo"></span>
+        </div>
+    
+        <h2><?=$iteminfo['title']?></h2>
+        <div class="mt15">
+            <a href="<?=$iteminfo['taobaoitemurl']?>" target="_blank">Этот товар на TaoBao</a>
+        </div>
+	<!-- .col320 -->
+	<div class="col320">
+		
+		<div class="i320"><img src="<?=$iteminfo['mainpictureurl']?>_310x310.jpg" alt="" id="main_img"/></div>
+		
+		<ul class="i40 flin">
+        <? if(is_array($iteminfo['pictures'])) foreach($iteminfo['pictures'] as $picture) { ?>
+            <li><a href="#" onclick="showpic('<?=$picture['url']?>'); return false" class="mini-pic"><img src="<?=$picture['url']?>_40x40.jpg" alt=""/></a></li>
+        <? } ?>
+		</ul>
+        </div>
+	<!-- /.col320 -->
+	<!-- .col360 -->
+	<div class="col360">
+	
+            <small class="stitle">Информация о товаре:</small>
+             
+            <table class="tinfo itemdesc">
+                    <tr>
+                            <td class="td1">Артикул:</td>
+                            <td class="td2"><?=$iteminfo['id']?></td>
+                    </tr>
+                    <tr>
+                            <td class="td1">В наличии:</td>
+                            <td class="td2" id="c_count"><?=$iteminfo['masterquantity']?> шт.</td>
+                    </tr>
+                    <tr>
+                            <td class="td1">Цена:</td>
+                            <td class="td2">
+                                <span class="orange" id="c_cost"><?=$iteminfo['convertedprice']?></span>
+                                <span class="orange" id="c_promo_cost"><?=$iteminfo['Promotions']['Price']['ConvertedPrice']?></span>
+                            </td>
+                    </tr>
+                    <? if(isset($iteminfo['deliveryinfo'])) { ?>
+                    <tr>
+                            <td class="td1">Местная доставка:</td>
+                            <td class="td2">
+                                <? 
+                                foreach($iteminfo['deliveryinfo'] as $value){ 
+                                    if($value['costwithoutsing']=='0') { echo '<span class="orange">Доставка за счет продавца</span>'; break; } ?>
+                                <p>способ: <?=$value['mode'];?>, стоимость: <span class="orange" id="c_cost"><?=$value['cost'];?> </span></p>
+                                <? } ?>
+                            </td>
+                    </tr> 
+                    <? } ?>
+                    <tr>
+                            <td class="td1">Продавец:</td>
+                            <td class="td2"><a href="?p=vendor&id=<?=$iteminfo['vendorid']?>&clear"><?=$iteminfo['vendorname']?></a></td>
+                    </tr>
+                    <tr>
+                            <td class="td1">Находится в:</td>
+                            <td class="td2"><?=$iteminfo['location']['city']?> (<?=$iteminfo['location']['state']?>)</td>
+                    </tr>
+                    <tr>
+                            <td class="td1">Тип товара:</td>
+                            <td class="td2"><? if ($iteminfo['stuffstatus'] == 'New'){?>Новый<?}?>
+                            <? if ($iteminfo['stuffstatus'] == 'Unused'){?>Неиспользованный<?}?>
+                            <? if ($iteminfo['stuffstatus'] == 'Second'){?>Б\У<?}?></td>
+                    </tr>
+            </table>
+
+        <br clear="all">
+        
+        <!-- <form method="POST" action="index.php?p=item&id=<=$iteminfo['id']>"> -->
+        
+        <? if (!empty($iteminfo['configurations'])) { ?>
+		<small class="stitle">Выберите конфигурацию товара:</small>
+        
+        <table class="tinfo itemdesc">
+            <col width="120px">
+            <col width="240px">
+        <?  foreach($iteminfo['configurations'] as $configuration) { ?>
+            <tr>
+                <td class="td1" id="cname<?=$configuration['id']?>"><?=$configuration['name']?>:</td>
+                <td class="td2">
+                <select name="<?=$configuration['id']?>" id="<?=$configuration['id']?>" onchange="changeconfig()" style="width:220px">
+                <? foreach($configuration['values'] as $value) { ?>
+                    <option value="<?=$value['id']?>" id="val<?=$value['id']?>"><? if (!empty($value['alias'])){?><?=$value['alias']?><?}else{?><?=$value['name']?><?}?></option>
+                <? } ?>
+                </select>
+                </td>
+            </tr>
+        <? } ?>
+            <tr>
+                    <td class="td1"><nobr>Выбранная конф-я:</nobr></td>
+                    <td class="td2" id="c_cur">...</td>
+            </tr>
+        </table>
+        
+<script type="text/javascript">
+
+var promoConf = eval('<?php print json_encode($iteminfo["Promotions"]["ConfiguredItems"]); ?>');
+
+var configurations = new Array();
+<? $i=1; if (!empty($iteminfo['item_with_config'])) foreach($iteminfo['item_with_config'] as $confid=>$confitem) { ?>
+configurations[<?=$i?>] = new Array('<? foreach($confitem['config'] as $cfid => $cfval) print $cfid.'_'.$cfval.'_'; ?>', '<?=$confitem['quantity']?>', '<?=$confitem['convertedprice']?>','<?=$confid?>','<?
+    foreach($confitem['config'] as $cfid => $cfval) { 
+		foreach($iteminfo['configurations'][$cfid]['values'] as $val) 
+			if(($val['id'] == $cfval)) 
+				print mysql_escape_string($iteminfo['configurations'][$cfid]['name'].':'.(empty($val['alias']) ? $val['name'] : $val['alias']).';');
+	}
+?>' );
+<? $i++;} ?>
+var count_configurations = <?=($i-1)?>;
+var configurators = new Array();
+<? $i=1; if (!empty($iteminfo['configurations'])) foreach($iteminfo['configurations'] as $configuration) { ?>
+configurators[<?=$i?>] = <?=$configuration['id']?>;
+<? $i++;} ?>
+var count_configurators = <?=($i-1)?>;
+
+$(function(){
+    changeconfig(window.location.hash.replace("#",""));
+});
+
+function changeconfig(confid)
+{
+    var conf = '';
+    var ctext = ''; 
+    document.getElementById('c_promo_cost').innerHTML = '';
+    document.getElementById('c_cost').style.textDecoration = 'none';
+    
+    for (var i=1;i<=count_configurators;i++)
+    {
+        conf += configurators[i]+'_'+document.getElementById(configurators[i]).value+'_';
+        ctext += document.getElementById('cname'+configurators[i]).innerHTML+' '+document.getElementById('val'+document.getElementById(configurators[i]).value).innerHTML+' <br>';
+    }
+    document.getElementById('c_cur').innerHTML = ctext;
+    for (var i=1;i<=count_configurations;i++)
+    {
+        var cond = configurations[i][0] == conf;
+        if(confid){
+            var cond = configurations[i][3] == confid;
+        }
+        if (cond)
+        {
+            document.getElementById('c_count').innerHTML = configurations[i][1]+' шт.';
+            document.getElementById('c_cost').innerHTML = configurations[i][2]+'';
+            if (document.getElementById('confid')) document.getElementById('confid').value = configurations[i][3]+'';
+            if (document.getElementById('confitem')) document.getElementById('confitem').value = configurations[i][4]+'';
+            
+            for(var j=0; j<configurations[i][0].split('_').length-1; j+=2){
+                $('[name="'+configurations[i][0].split('_')[j]+'"]').val(configurations[i][0].split('_')[j+1]);
+            }
+            
+            for(var j in promoConf){
+                if(promoConf[j]['Id'] == configurations[i][3]){
+                    document.getElementById('c_promo_cost').innerHTML = promoConf[j]['Price']['ConvertedPrice'];
+                    document.getElementById('c_cost').style.textDecoration = 'line-through';
+                    document.getElementById('c_cost').style.color = '#676767';
+                    document.getElementById('price').value = promoConf[j]['Price']['ConvertedPriceWithoutSign'];
+                    break;
+                }
+            }
+            if(!confid){
+                document.location.href='#'+configurations[i][3];
+            }
+            return;
+        }
+    }
+}
+</script>
+        <? } ?>
+        <br>
+        <small onClick="add_to_note()" class="addnote" id="addtonote">Добавить в избранное</small>   
+        <div class="clrfix mt20"> 
+            <input type="hidden" name="add" value=""/>
+            <input type="hidden" name="itemTitle" value="<?=$iteminfo['title']?>"/>
+            <input type="hidden" id="price" name="price" value="<?=$iteminfo['convertedpricewithoutsign']?>"/>
+            <input type="hidden" name="currencyName" value="<?=$iteminfo['currencyname']?>"/>
+            <input type="hidden" name="externalURL" value="<?=$iteminfo['taobaoitemurl']?>"/>
+            <input type="hidden" name="pictureURL" value="<?=$iteminfo['mainpictureurl']?>"/>
+            <input type="hidden" name="vendorId" value="<?=$iteminfo['vendorid']?>"/>
+            
+            <input type="hidden" name="configurationId" id="confid" value=""/>
+            <input type="hidden" name="itemConfiguration" id="confitem" value=""/>
+            <label class="fll c28">Кол-во:</label><input type="text" name="quantity" id="quantity"  value="1" size="2" class="fll c28"/>
+            <input type="button"  onclick="add_to_basket()" value="Добавить в корзину" class="b30 fll"/>
+        </div>    
+        
+        <? if(isset($_POST['add'])) {?>
+        <small class="orange">Добавлено</small>
+        <?}?>
+	</div>
+	<!-- /.col360 -->
+</div>
+<!-- tabs -->
+<ul class="itabs mt30 flin clrfix">
+	<li class="active" id="ttab1"><a href="#" onclick="showtab(1, this);return false">Характеристики</a></li>
+	<li id="ttab2"><a href="#" onclick="showtab(2, this);return false">Фото и описание</a></li>
+        <li id="ttab3"><a href="#" onclick="showtab(3, this);itemtraderateinfo(); return false">Отзывы</a></li>
+	<!--<li><a href="#" onclick="return false">Условия доставки</a></li>
+	<li><a href="#" onclick="return false">Обсуждение</a></li>-->
+</ul>
+<!-- /tabs -->
+
+<!-- tab-1 -->
+<div class="itab" id="tab1">
+	<!--<small class="stitle">Характеристики товара:</small>-->
+				
+    <table class="tinfo itemdesc">
+    <? if(is_array($iteminfo['properties'])) foreach($iteminfo['properties'] as $property) { ?>
+        <tr>
+            <td class="td1"><?=$property['name']?>:</td>
+            <td class="td2"><?=$property['value']?></td>
+        </tr>
+    <? } ?>
+    </table>
+</div>
+<!-- /tab-1 -->
+
+<!-- tab-2 -->
+<div class="itab" id="tab2" style="display:none">
+    <input id="tr_but" type="button" value="Перевести описание" class="b30 fll" onclick="tr_desc()"/>
+    <br clear="all">
+    <br clear="all">
+    <div id="tab2_inner">
+        <!--<small class="stitle">Описание товара:</small>-->
+        Загружается описание товара...
+        <?/*=$iteminfo['description']*/?>
+    </div>
+</div>
+<!-- /tab-2 -->
+
+<!-- tab-3 -->
+<div class="itab" id="tab3" style="display:none">
+    <br clear="all">
+    <br clear="all">
+    <div id="tab3_inner">
+        Загружаются отзывы...
+    </div>
+</div>
+<!-- /tab-3 -->
+
+<ul class="cat160 flin clrfix">
+    <? if (!empty($vendorItems)){ ?>
+    <br />
+    <h3>Другие товары этого производителя:</h3>
+    <? foreach($vendorItems as $item) { ?>
+    <? $item['title'] = str_replace(array('&lt; ', ' &gt;', '&lt;', '&gt;', '&LT;', '&Lt; ', ' & gt'),array('<','>','<','>','<','<','>'),$item['title']) ?>
+        <li onmouseover="cshow('<?=$item['id']?>')">
+            <a href="index.php?p=item&id=<?=$item['id']?>" class="i160"><img src="<?=$item['mainpictureurl']?>_160x160.jpg" alt=""/></a>
+            <p class="ve">Рейтинг: <img src="i/hearts/level_<?=$item['vendorscore']?>.gif" align="top" title="<?=$item['vendorscore']?>"></p>
+            <a href="index.php?p=item&id=<?=$item['id']?>" class="pr"><?=$item['convertedprice']?></a>
+        </li>
+    <? } } ?>
+</ul>
+
+
+</div>
+
+
+
+<!-- .col240 -->
+<div class="col230" style="padding-left: 5px;">
+        <br/><br/>
+	<small class="stitle">Информация о поставщике:</small>
+
+	<table class="tinfo itemdesc">
+		<tr>
+			<td class="td1">Имя:</td>
+			<td class="td2"><a href="?p=vendor&id=<?=$iteminfo['vendorid']?>&clear"><?=$iteminfo['vendorname']?></a></td>
+		</tr>
+		<tr>
+			<td class="td1">Рейтинг:</td>
+			<td class="td2"><img src="i/hearts/level_<?=$vendorInfo['credit']['level']?>.gif"> (<?=$vendorInfo['credit']['level']?>)</td>
+		</tr>
+		<tr>
+			<td class="td1">Отзывы:</td>
+			<td class="td2"><?=$vendorInfo['credit']['TotalFeedbacks']?> (<span style="color:Green"><?=$vendorInfo['credit']['PositiveFeedbacks']?></span>)</td>
+		</tr>
+		<tr>
+			<td class="td1">Местонахождение:</td>
+			<td class="td2"><?=$vendorInfo['location']['city']?> (<?=$vendorInfo['location']['state']?>)</td>
+		</tr>
+	</table>
+</div>
+<!-- /.col240 -->
+
+<script>
+$.ajax({
+    url: 'index.php?p=itemdescription&itemid=<?=$iteminfo['id']?>',
+    success: function(data) {
+        $('#tab2_inner').html(data);
+    }
+});
+function tr_desc()
+{
+    $('#tr_but').hide();
+    document.getElementById('tab2_inner').innerHTML = 'Загружается перевод описания товара...';
+    $.ajax({
+        url: 'index.php?p=itemdescriptiontranslated&itemid=<?=$iteminfo['id']?>',
+        success: function(data) {
+            $('#tab2').html(data);
+        }
+    });
+}
+function itemtraderateinfo(){
+    document.getElementById('tab3_inner').innerHTML = 'Загружаются отзывы о товаре...';
+    $.ajax({
+        url: 'index.php?p=itemtraderateinfo&itemid=<?=$iteminfo['id']?>',
+        success: function(data) {
+            $('#tab3').html(data);
+        }
+    });
+}
+
+function add_to_note(){
+    var conf_id = $('#confid').val();
+    var conf_item = $('#confitem').val();
+    $.ajax({
+        url: 'index.php?p=supportlistadd&itemTitle=<?=$iteminfo['title']?>' + 
+            '&price=<?=$iteminfo['convertedpricewithoutsign']?>&currencyName=<?=$iteminfo['currencyname']?>'+
+            '&externalURL=<?=$iteminfo['taobaoitemurl']?>&pictureURL=<?=$iteminfo['mainpictureurl']?>' +
+            '&vendorId=<?=$iteminfo['vendorid']?>' + '&configurationId=' + conf_id +
+            '&itemConfiguration=' + conf_item + '&id=<?=$iteminfo['id']?>',
+        success: function(data) {
+            $('#addtonote').html("Добавлено");
+        }
+    });
+}
+
+function add_to_basket(){
+    var conf_id = $('#confid').val();
+    var conf_item = $('#confitem').val();
+    var quantity = $('#quantity').val();
+    $.ajax({
+        url: 'index.php?p=basketadd&itemTitle=<?=$iteminfo['title']?>' + 
+            '&price=<?=$iteminfo['convertedpricewithoutsign']?>&currencyName=<?=$iteminfo['currencyname']?>'+
+            '&externalURL=<?=$iteminfo['taobaoitemurl']?>&pictureURL=<?=$iteminfo['mainpictureurl']?>' +
+            '&vendorId=<?=$iteminfo['vendorid']?>' + '&configurationId=' + conf_id +
+            '&itemConfiguration=' + conf_item + '&id=<?=$iteminfo['id']?>' + '&quantity=' + quantity + '&comment=',
+        success: function(data) {
+            if(data == 'Ok'){
+                $("#basketinfo").html("Товар добавлен в корзину!");
+            } else {
+                $("#basketinfo").html("Товар не добавлен, повторите попытку!");
+            }
+            $("#dialog-form").dialog("open");
+            
+        }
+    });
+}
+
+function showpic(url)
+{
+    document.getElementById('main_img').src=url+'_310x310.jpg';
+}
+function showtab(num, elm)
+{
+    for(i=1; i<4; i++){
+        document.getElementById('tab' + i).style.display='none';
+        document.getElementById('ttab' + i).className='';
+    }
+    document.getElementById('tab'+num).style.display='block';
+    document.getElementById('ttab'+num).className='active';
+}
+
+$(function() 
+{
+    $( "#dialog-form:ui-dialog" ).dialog( "destroy" );
+        
+    $("#dialog-form").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons : {
+            "Ок" : function() {
+                $("#dialog-form").dialog("close");
+            }
+        }
+    });
+	
+});    
+    
+</script>

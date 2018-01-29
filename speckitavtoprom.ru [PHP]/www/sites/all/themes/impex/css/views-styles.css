@@ -1,0 +1,238 @@
+/**
+
+ * @file
+
+ * Views Styling
+
+ */
+
+
+.section-catalog h1.title {
+  display: none;
+}
+
+#block-views-category_image-block_1 {
+  float: left;
+}
+
+
+#block-views-main_categories-block_1 h2 {
+
+  margin-bottom: 5px;
+
+}
+
+
+
+#block-views-main_categories-block_1 .view-content {
+
+  float: left;
+
+  height: 100%;
+
+  margin: 0 -7px 0 -3px;
+
+}
+
+
+
+#block-views-main_categories-block_1 .views-row,
+#block-views-category_image-block_1 .views-row {
+  float: left;
+  width: 215px;
+  margin-right: 4px;
+  background: transparent url("/sites/all/themes/impex/images/goods_row_bg.png") top center no-repeat;
+  background-position: 0 0;
+}
+
+#block-views-main_categories-block_1 .views-row:hover {
+  background: transparent url("/sites/all/themes/impex/images/goods_row_bg.png") top center no-repeat;
+  background-position: 0 -110px;
+}
+
+#block-views-category_image-block_1 .views-row {
+  margin-right: 10px;
+  background: transparent url("/sites/all/themes/impex/images/goods_row_bg.png") top center no-repeat;
+  background-position: 0 -110px;
+}
+
+
+#block-views-main_categories-block_1 .views-field-tid,
+#block-views-category_image-block_1 .views-field-tid {
+
+  margin: 0 0 -20px 5px;
+
+}
+
+
+
+#block-views-main_categories-block_1 .views-field-name,
+#block-views-category_image-block_1 .views-field-name {
+  display: table;
+  
+  position: relative;
+
+  width: 215px;
+
+  height: 64px;
+
+  line-height: 11px;
+
+  text-align: center;
+
+  background: transparent url("../images/main_categories_name_bg.png") 0 0 no-repeat;
+
+}
+
+#block-views-main_categories-block_1 .views-field-name span,
+#block-views-category_image-block_1 .views-field-name span {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0px 0px 9px 0px;
+}
+
+#block-views-main_categories-block_1 a,
+#block-views-category_image-block_1 .views-field-name span {
+
+  font-family: Calibri;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  font-style: italic;
+
+  text-decoration: none;
+
+  color: #462803;
+
+}
+
+
+/* Список товаров */
+
+.view-taxonomy-term {
+  float: left;
+}
+
+.view-taxonomy-term .view-content {
+  float: left;
+  margin-right: -13px;
+}
+
+.view-taxonomy-term .views-row {
+  float: left;
+  position: relative;
+  margin: 0 13px 25px 0;
+  width: 207px;
+  height: 215px;
+  background: transparent url("../images/goods_border.png") 0 0 no-repeat;
+}
+
+
+.view-taxonomy-term .views-row .views-field-field-photo-goods-fid {
+  width: 193px;
+  height: 201px;
+  margin: 7px 0 0 7px;
+}
+
+
+.view-taxonomy-term .views-row .views-field-title {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 165px;
+  min-height: 50px;
+  max-height: 145px;
+  margin: 0px 0 7px 7px;
+  padding: 18px 14px 38px 14px;
+  background: transparent url("../images/goods_title_bg.png") 0 0 repeat;
+  overflow: hidden;
+}
+
+.view-taxonomy-term .views-row .views-field-title span {
+  display: block;
+  overflow: hidden;
+  min-height: 50px;
+  max-height: 145px;
+}
+
+.view-taxonomy-term .views-row .views-field-title a {
+  font-family: Calibri;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 14px;
+
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.view-taxonomy-term .views-row .views-field-title a:hover {
+
+  text-decoration: underline;
+
+}
+
+
+.view-taxonomy-term .views-row:hover .views-field-title {
+  visibility: visible;
+}
+
+.view-taxonomy-term .views-row .views-field-view-node a {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 135px;
+  height: 31px;
+  margin: 173px 0 0 38px;
+  padding-left: 44px;
+  line-height: 31px;
+  font-family: Calibri;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  color: #402d04;
+  background: transparent url("../images/goods_more_bg.png") 0 0 no-repeat;
+
+  z-index: 1;
+}
+/*
+.view-taxonomy-term .views-row:hover .views-field-view-node a {
+  visibility: hidden;
+}*/
+
+.view-taxonomy-term .views-row .views-field-field-discount-goods-value,
+.view-taxonomy-term .views-row .views-field-field-share-goods-value,
+.view-taxonomy-term .views-row .views-field-field-new-goods-value {
+  position: absolute;
+  top: 0;
+  width: 81px;
+  height: 83px;
+  margin: 3px 0 0 123px;
+}
+
+.view-taxonomy-term .views-row .views-field-field-discount-goods-value {
+  background: transparent url("../images/goods_discount_bg.png") 0 0 no-repeat;
+}
+
+.view-taxonomy-term .views-row .views-field-field-share-goods-value {
+  background: transparent url("../images/goods_action_bg.png") 0 0 no-repeat;
+}
+
+.view-taxonomy-term .views-row .views-field-field-new-goods-value {
+  background: transparent url("../images/goods_new_bg.png") 0 0 no-repeat;
+}
+
+.view-taxonomy-term .views-row .views-field-field-discount-goods-value span,
+.view-taxonomy-term .views-row .views-field-field-share-goods-value span,
+.view-taxonomy-term .views-row .views-field-field-new-goods-value span {
+  display: none;
+}
+
+.view-taxonomy-term .item-list {
+   float: left;
+   width: 646px;
+}

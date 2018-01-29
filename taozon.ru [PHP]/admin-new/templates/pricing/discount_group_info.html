@@ -1,0 +1,100 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('Pricing', 'default')?>"><?=LangAdmin::get('Pricing')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('Discount', 'default')?>"><?=LangAdmin::get('Discounts')?></a> <span class="divider">›</span></li>
+    <li class="active">Скидка «<?=$this->escape($discountGroup['Name'])?>»</li>
+</ul><!--/.breadcrumb-->
+
+<?=TabsGenerator::GetTabs('templates/pricing/navigation/tabs.xml', $PageUrl)?>
+
+
+<script>
+    InlineFields = new Backbone.Collection;
+</script>
+
+<? XEditableFields::Init('discount', $PageUrl); ?>
+
+<h1>
+    Скидка «<?=$this->escape($discountGroup['Name'])?>»
+    <a href="<?=$PageUrl->AssignDo('editDiscount')?>&groupId=<?=$discountGroup['Id']?>" class="btn btn-primary weight-normal btn_preloader offset-left3" data-loading-text="Редактирование" autocomplete="off">Редактировать</a>
+</h1>
+
+
+<div class="row-fluid">
+    <div class="span6">
+
+        <!-- add new user -->
+        <p class="offset-bottom2">
+           
+            <a class="ot-typehead-discountusers" data-url="<?=$PageUrl->AssignDo('addUserDiscount')?>&groupId=<?=$discountGroup['Id']?>" href="#" data-toggle="tooltip" data-placement="bottom" do="refresh"><span class="blink" title="Добавить пользователя в скидку"> <i class="icon-plus"></i> Добавить пользователя</span></a>
+        </p>
+
+    </div>
+</div>
+
+
+<!-- list of users in discount group -->
+<div id="discount-group-wrapper" class="row-fluid">
+    <div class="span6">
+    
+    <? if (count($discountUsers['Content'])) { ?>
+    <table class="table table-bordered data_table_sorting">
+
+        <thead>
+        <tr>
+            <th class="span7">Пользователь</th>
+            <th class="span1">Действия</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+            <? foreach ($discountUsers['Content'] as $user) { ?>
+            <tr>
+                <td><a href="<?=$PageUrl->AssignCmdAndDo('users', 'profile')?>&id=<?=$user['id']?>"  data-original-title="data-original-title" title="Перейти в профиль пользователя"><?=$user['login']?></a></td>
+                <td>
+                    <div class="btn-group">
+                        <button class="btn btn-tiny icon-info-discount-user info-discount-user" data-placement="top" title="Информация о пользователе"><i class="icon-info"></i></button>
+                        <button class="btn btn-tiny ot_show_deletion_discont_user_dialog_modal" user-name="<?=$user['login']?>" user-group="<?=$discountGroup['Id']?>" user-id="<?=$user['id']?>" nodelete="<?=(string)$user['IsAutomateSetted']?>" action="<?=$PageUrl->AssignDo('deleteOrReplaceUserDiscount')?>" title="Удалить пользователя"><i class="icon-remove"></i></button>
+                        
+                        
+                    </div>
+                    <div class="user-discount-info">
+                        <dl class="dl-horizontal">
+                            <dt>Логин:</dt>
+                            <dd><a href="<?=$PageUrl->AssignCmdAndDo('users', 'profile')?>&id=<?=$user['id']?>"><?=$user['login']?></a></dd>
+                            <dt>Имя:</dt>
+                            <dd><?=$user['firstname']?></dd>
+                            <dt>Фамилия:</dt>
+                            <dd><?=$user['lastname']?></dd>
+                            <? if (! General::getConfigValue('hide_middle_name')) { ?>
+                                <dt>Отчество:</dt>
+                                <dd><?=$user['middlename']?></dd>
+                            <?php } ?>
+                            <dt>Счет:</dt>
+                            <dd><?=$user['id']?></dd>
+                        </dl>
+                    </div>
+                </td>
+            </tr>
+            <? } ?>
+        </tbody>
+
+    </table>
+    <? } else { ?>
+        <p> <?=LangAdmin::get('no_users_in_group')?> </p>
+    <? } ?>
+    </div>
+</div>
+
+<?php $paginator->display(); ?>
+
+<p><a href="<?=$PageUrl->AssignCmdAndDo('Discount', 'default')?>"><i class="icon-reply icon-linked"></i>К списку скидок</a></p>
+
+<script>
+    InlineFields.add(<?=json_encode(XEditableFields::GetFields())?>);
+	var allCategories = <?=json_encode($discounts)?>;
+</script>
+
+<? ScriptIncluder::AddCustomScript('js/ot-discount-group.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-render-template.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-inline.editable.init.js'); ?>

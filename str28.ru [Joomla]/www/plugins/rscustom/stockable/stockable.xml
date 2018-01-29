@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="rscustom" >
+    <name>rsCUSTOM_STOCKABLE</name>
+    <creationDate>June 2011</creationDate>
+    <author>The retinashop Development Team</author>
+    <authorUrl>http://www.retinashop.net</authorUrl>
+    <copyright>Copyright (C) 2004-2011 retinashop Team. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.9.8</version>
+    <description>rsCUSTOM_STOCKABLE_DESC</description>
+    <languages>
+        <language tag="en-GB">en-GB.plg_rscustom_stockable.ini</language>
+        <language tag="fr-FR">fr-FR.plg_rscustom_stockable.ini</language>
+    </languages>
+    <files>
+        <filename plugin="stockable">stockable.php</filename>
+    </files>
+    <params addpath="/admin/components/com_retinashop/elements">
+        <param type="rsjpluginwarning" />
+        <param name="selectname1" type="text"  size="30"  default="" label="rsCUSTOM_STOCKABLE_SELECTNAME" description="rsCUSTOM_STOCKABLE_SELECTNAME_DESC" />
+        <param name="selectoptions1" type="textarea"  rows="10" cols="25" label="rsCUSTOM_STOCKABLE_SELECTOPTIONS" description="rsCUSTOM_STOCKABLE_SELECTOPTIONS_DESC" />
+        <param name="selectname2" type="text"  size="30"  default="" label="rsCUSTOM_STOCKABLE_SELECTNAME" description="rsCUSTOM_STOCKABLE_SELECTNAME_DESC" />
+        <param name="selectoptions2" type="textarea"  rows="10" cols="25" label="rsCUSTOM_STOCKABLE_SELECTOPTIONS" description="rsCUSTOM_STOCKABLE_SELECTOPTIONS_DESC" />
+        <param name="selectname3" type="text"  size="30"  default="" label="rsCUSTOM_STOCKABLE_SELECTNAME" description="rsCUSTOM_STOCKABLE_SELECTNAME_DESC" />
+        <param name="selectoptions3" type="textarea"  rows="10" cols="25" label="rsCUSTOM_STOCKABLE_SELECTOPTIONS" description="rsCUSTOM_STOCKABLE_SELECTOPTIONS_DESC" />
+        <param name="selectname4" type="text"  size="30"  default="" label="rsCUSTOM_STOCKABLE_SELECTNAME" description="rsCUSTOM_STOCKABLE_SELECTNAME_DESC" />
+        <param name="selectoptions4" type="textarea"  rows="10" cols="25" label="rsCUSTOM_STOCKABLE_SELECTOPTIONS" description="rsCUSTOM_STOCKABLE_SELECTOPTIONS_DESC" />
+    </params>
+</install>

@@ -1,0 +1,62 @@
+<?php
+/**
+ * @package		Retina.Site
+ * @subpackage	com_mailto
+ * 
+ * 
+ */
+
+// No direct access
+defined('_REXEC') or die;
+
+jimport('retina.application.component.view');
+
+class MailtoViewMailto extends JView
+{
+	function display($tpl = null)
+	{
+		$data = $this->getData();
+		if ($data === false) {
+			return false;
+		}
+
+		$this->set('data'  , $data);
+
+		parent::display($tpl);
+	}
+
+	function &getData()
+	{
+		$user = JFactory::getUser();
+		$data = new stdClass();
+
+		$data->link = urldecode(JRequest::getVar('link', '', 'method', 'base64'));
+
+		if ($data->link == '') {
+			JError::raiseError(403, RText::_('COM_MAILTO_LINK_IS_MISSING'));
+			$false = false;
+			return $false;
+		}
+
+		// Load with previous data, if it exists
+		$mailto		= JRequest::getString('mailto', '', 'post');
+		$sender		= JRequest::getString('sender', '', 'post');
+		$from		= JRequest::getString('from', '', 'post');
+		$subject	= JRequest::getString('subject', '', 'post');
+
+		if ($user->get('id') > 0) {
+			$data->sender	= $user->get('name');
+			$data->from		= $user->get('email');
+		}
+		else
+		{
+			$data->sender	= $sender;
+			$data->from		= $from;
+		}
+
+		$data->subject	= $subject;
+		$data->mailto	= $mailto;
+
+		return $data;
+	}
+}

@@ -1,0 +1,33 @@
+<div class="userform">
+    <form action="index.php?p=profile" method="post">
+        <? if($success){ ?>
+        <div class="success">
+            <?=$success?>
+        </div>
+        <? } ?>
+        <? if($error){ ?>
+        <div class="error">
+            <?=$error?>
+        </div>
+        <? } ?>
+        
+        <div class="form-row">
+            <label for="Subject">Тема</label>
+            <input id="Subject" type="text" name="Subject" value="<?=$Subject?>" />
+        </div>
+        
+        <div class="form-row">
+            <label for="Text">Текст</label>
+            <textarea id="Text" name="Text"><?=htmlspecialchars($Text)?></textarea>
+        </div>
+        
+        <div class="form-row">
+            <label for="MiddleName">Отчество</label>
+            <input id="MiddleName" type="text" name="MiddleName" value="<?=$MiddleName?>" />
+        </div>
+        
+        <div class="form-row">
+            <input type="submit" name="login" value="Сохранить" class="submit" />
+        </div>
+    </form>
+</div>

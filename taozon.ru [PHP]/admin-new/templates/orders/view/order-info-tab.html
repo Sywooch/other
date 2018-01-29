@@ -1,0 +1,56 @@
+
+<dl class="dl-horizontal dl-ot-horizontal dl-horizontal-large">
+    <dt>Стомость товаров </dt>
+    <dd><?=$order->getFormattedTotalAmount()?></dd>
+    <dt>Стоимость доставки</dt>
+    <dd>
+        <?=TextHelper::formatPrice($order->deliveryamount, $order->currencysign) . ' ' . $order->deliverymodename?>
+    </dd>
+    <dt>Общая стоимость</dt>
+    <dd><?=$order->getFormattedTotalAmount(true)?></dd>
+    <dt>Оплачено / осталось</dt>
+    <dd>
+        <?=$order->getPaidAmount()?> /
+        <?=TextHelper::formatPrice($order->remainamount, $order->currencysign)?>
+    </dd>
+    <dt>Вес</dt>
+    <dd>
+        <? if (empty($order->packages)) { ?>
+            <div data-field="newWeight"></div>
+            <? XEditableFields::Register('newWeight', $order->weight, array(
+                'useWrapper' => false, 'useLabel' => false, 'pk' => $order->id, 'inputClass' => 'input-mini',
+                'useLinkWrapper' => false
+            )); ?>
+        <? } else { ?>
+            <?=$order->weight?>
+        <? } ?>
+        кг
+    </dd>
+    <dt>Комментарий покупателя</dt>
+    <dd><?=$this->escape($order->custcomment);?>&nbsp;</dd>
+</dl>
+
+<dl class="dl-horizontal dl-ot-horizontal dl-horizontal-large">
+    <dt>Оператор</dt>
+    <dd><?=$this->escape($order->operatorname);?>&nbsp;</dd>
+    <dt>Доп. информация</dt>
+    <dd class="order-additional-info-block">
+        <span><?=$this->escape($order->additionalinfo);?></span>
+        <? if (empty($order->additionalinfo)) { ?>
+            <? $btnTitle = LangAdmin::get('Add'); ?>
+            <button class="btn btn-mini" title="<?=LangAdmin::get('Add')?>" data-toggle="collapse" data-target=".order-additional-info-form"><i class="icon-plus"></i></button>
+        <? } else { ?>
+            <? $btnTitle = LangAdmin::get('Save'); ?>
+            <button class="btn btn-mini" title="<?=LangAdmin::get('Edit')?>" data-toggle="collapse" data-target=".order-additional-info-form"><i class="icon-pencil"></i></button>
+        <? } ?>
+        <div class="collapse order-additional-info-form">
+            <form action="<?=$PageUrl->assignDo('changeOrderAdditionalInfo');?>" class="form-horizontal offset-top1 offset-bottom2">
+                <textarea rows="5" class="input-xlarge" placeholder=""><?=$this->escape($order->additionalinfo);?></textarea>
+                <div class="offset-top05">
+                    <button autocomplete="off" data-loading-text="<?=LangAdmin::get('Saving')?>" class="btn btn-tiny btn-primary btn_preloader " type="button"><?=$btnTitle?></button>
+                    <button class="btn btn-tiny offset-left1" type="button" data-toggle="collapse" data-target=".order-additional-info-form"><?=LangAdmin::get('Cancel')?></button>
+                </div>
+            </form>
+        </div>
+    </dd>
+</dl>

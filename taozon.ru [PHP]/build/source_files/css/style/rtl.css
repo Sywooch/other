@@ -1,0 +1,286 @@
+.rtl .i{
+	margin: 0 0 0 5px;
+	vertical-align: middle;
+}
+
+.rtl .col{
+	float: right;
+}
+
+.rtl .hblocks li{
+	float: right;
+}
+.rtl .header .logo{
+	margin-left: 0;
+	margin-right: 40px;
+	background-position: right top;
+}
+
+.rtl .col240.mr30{
+	margin-right: 0;
+	margin-left: 30px;
+}
+.rtl .hblocks li.name{
+	margin-left: 10px;
+	margin-right: 0;
+	padding-top: 0px;
+	text-align: left;
+}
+
+.rtl .hblocks li.phone{
+	margin-left: 20px!important;
+	margin-right: 0px;
+}
+
+.rtl .hblocks li.operator a{
+	background-position: 10px 0;
+}
+
+.rtl .fll{
+	float: right;
+}
+
+.rtl .flr{
+	float: left;
+}
+.rtl .navigation li{
+	float: right;
+}
+.rtl .dropdown{
+	right: 20px;
+	left: auto;
+	top: 46px;
+}
+.rtl .dropdown-main{
+	right: 0;
+	top: 0;
+}
+.rtl .sblocks .menu-lang li{
+	margin: 0.3em 0 0.3em 11px;
+}
+.rtl .sblocks .menu-lang a.lang{
+	margin-right: 0;
+}
+.rtl .sblocks li a.lang.arrow:after{
+	margin-left: 0;
+	margin-right: 3px;
+}
+
+.rtl form.search{
+	margin-right: 13px;
+	margin-left: 0;
+}
+.rtl form.search .dropdown-search{
+	left: auto;
+	right: 3px;
+	border-width: 1px 0 1px 1px;
+}
+.rtl form.search .field{
+	float: right;
+}
+.rtl form.search .field .arrow span,
+.rtl form.search .field .selection span{
+	float: right;
+}
+.rtl form.search .field .arrow,
+.rtl form.search .field .selection{
+	border-right: 0px;
+	border-left: 1px solid #B2B2B2;
+	float: right;
+}
+.rtl form.search input[type="text"]{
+	width: 265px;
+}
+.rtl form.search .btn{
+	padding: 0 8px;
+}
+
+.rtl #actions_banner img{
+	float: right;
+}
+
+.rtl .uluserbar li.cats a.category{
+	margin-right: 0;
+	margin-left: 10px;
+}
+.rtl .uluserbar li.itemmenu:first-child{
+	background: url("../i/background.png") no-repeat scroll 0 -66px transparent;
+}
+.rtl .uluserbar li.itemmenu:last-child{
+	background: none repeat scroll 0 0 transparent;
+}
+.rtl .uluserbar a.mydata{
+	margin: 15px 15px 0 15px;
+	padding: 0 40px 0 0;
+	text-align: right;
+}
+.rtl .uluserbar a.favorites{
+	background-position: 85px -344px;
+}
+.rtl .uluserbar a.basket{
+	background-position: 55px -377px;
+}
+.rtl .uluserbar a.mydata i.rounder{
+	right: 20px;
+	left: auto;
+}
+
+.rtl .flin li{
+	float: right;
+}
+
+.rtl .bproduct>h2.mb25 span,
+.rtl .bproduct>h2.mb20 span{
+	float: right;
+	padding: 0 0 0 10px;
+	background-color: #fff;
+}
+
+.rtl .lproduct .price .glow{
+	right: auto;
+	left: 0px;
+}
+
+.rtl .lcategory li a:before,
+.rtl .lcategory li small.before{
+	left: auto;
+	right: 0px;
+}
+
+.rtl .lcategory li a{
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+.rtl .footer .up{
+	left: 0;
+	right: auto;
+}
+
+.rtl .footer .fmenu li{
+	margin-left: 20px;
+	margin-right: 0;
+}
+
+.rtl .footer .pay{
+	margin-left: 0;
+	margin-right: -10px;
+}
+
+
+.rtl .lproduct .price{
+	border-radius: 0 0 3px 0;
+}
+.rtl .lproduct .price span, .bbprice{
+	border-radius: 0 0 3px 0;
+}
+.rtl .main .info td{
+	padding: 8px 10px 5px 10px;
+}
+
+.rtl .main .info .raiting td{
+	padding: 5px 10px 5px 10px;
+}
+
+.rtl .tabs{
+	float: right;
+}
+.rtl ul.tabs{
+	padding: 0 5px 0 0;
+}
+.rtl ul.tabs li{
+	float: right;
+}
+
+.rtl .list_minipic li{
+	float: right;
+	margin: 0 0 4px 4px;
+}
+
+.rtl .addbasket span{
+	padding: 0 40px 0 0;
+	background-position: 145px -377px;
+}
+
+.rtl .addbasket span .i{
+	left: auto;
+	right: 31px;
+}
+
+.rtl .ml20{
+	margin-left: 20px;
+}
+
+.rtl .crumbs .wrap a,
+.rtl .crumbs .wrap span{
+	float: right;
+	margin-right: 0;
+	margin-left: 5px;
+	padding-left: 0;
+	padding-right: 10px;
+	background-image: none;
+}
+
+.rtl .userform .btn_office{
+	padding: 8px 0 11px;
+}
+
+.rtl .pager{
+	float: right;
+}
+
+.rtl .pager li:first-child{
+	border-radius: 0 5px 5px 0;
+}
+
+.rtl .btn,
+.rtl .btn-apper{
+	background-image: url('../i/rtl/ivrit_btn.png');
+	background-position: 0 0;
+}
+
+.rtl .btn:hover,
+.rtl .btn-apper:hover{
+	background-position: 0 30px;
+}
+
+.rtl .rating-slider-block .slider-min-indicator .from,
+.rtl .rating-slider-block .slider-max-indicator .till{
+	float: right;
+	margin: 0 0 0 6px;
+}
+
+.rtl .rating-slider-block .slider-min-indicator .from-value,
+.rtl .rating-slider-block .slider-max-indicator .till-value{
+	float: right;
+}
+
+.rtl .rating-slider-block .slider-input{
+	float: left;
+	margin-right: 0;
+	margin-left: 20px;
+}
+
+.rtl .listitem li .cat{
+	padding: 5px 10px 0 0;
+}
+
+.rtl .listitem li>.delete,
+.rtl .listitem li>.delLink{
+	right: auto;
+	left: 5px;
+}
+
+.rtl .lproduct .price .glow{
+	background-image: url('../i/rtl/glow_i.png');
+	background-position: 0 0;
+}
+
+.rtl .calc-form label,
+.rtl .calc-form .for-input{
+	float: right;
+}
+
+.rtl .calc-form label{
+	text-align: left;
+}

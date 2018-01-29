@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OtapiBrandInfoListAnswer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://services.opentao.net">
+  <ErrorCode>Ok</ErrorCode>
+  <SubErrorCode/>
+  <RequestTimeStatistic>27.968 = {OtapiService} Service call (overhead: 0.103)
+ 0.027 = |-{Otapi} Create core
+ 0.041 = |-{Otapi} AccumulateCallCount (overhead: 0.017)
+ 0.001 = |-|-{Otapi} Create dependency Counter
+ 0.023 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.026 = |-{Otapi} AccumulateCallCount (overhead: 0.008)
+ 0.017 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.046 = |-{Otapi} AccumulateCallCount (overhead: 0.011)
+ 0.035 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.033 = |-{Otapi} AccumulateCallCount (overhead: 0.011)
+ 0.022 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.002 = |-{Otapi} Create dependency ProvidersDirector
+ 0.001 = |-{Otapi} Create dependency ItemRedLightsStreet
+ 8.086 = |-{Service client call} ItemRedLightsStreet.GetItemRatingListFrame (overhead: 2.469)
+         |-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+ 5.617 = |-|-{ItemRedLightsStreetService} Service call (overhead: 5.601)
+ 0.016 = |-|-|-{ORM} Get rating list (result size = 16)
+19.603 = |-{Service client call} ProvidersDirector.GetBrandInfoListByIds (overhead: 1.571)
+         |-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+18.032 = |-|-{ProvidersDirectorService} Service call (overhead: 0.786)
+ 0.001 = |-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+ 4.374 = |-|-|-{ORM} Count brands
+12.871 = |-|-|-{ORM} Get brands by ids (result size = 16)
+Time distribution: database = 17.260 (61.7%), interservice = 4.040 (14.4%), other = 6.667 (23.8%), Otapi = 0.279 (1.0%), ItemRedLightsStreet = 5.617 (20.1%), ProvidersDirector = 18.032 (64.5%)
+Debug info process time: 0.125
+</RequestTimeStatistic>
+  <BrandInfoList>
+    <Content>
+      <Item>
+        <Id>ot:23759</Id>
+        <ExternalId>29865</ExternalId>
+        <Name>Bebe</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/a01852d66c.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23793</Id>
+        <ExternalId>29493</ExternalId>
+        <Name>Jack &amp; Jones </Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/925e950a422b16b.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23774</Id>
+        <ExternalId>20811</ExternalId>
+        <Name>Diesel</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/76274e051a4.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23789</Id>
+        <ExternalId>30068</ExternalId>
+        <Name>Hello Kitty</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/c4b72f9354a3180.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:2920</Id>
+        <ExternalId>29499</ExternalId>
+        <Name>Lacoste</Name>
+        <Description>Lacoste — cамый популярный и модный лейбл у молодежи, и самый авторитетный и интеллигентный в истории. 
+А знаете ли вы с чего началась история бренда и откуда взялся этот крокодильчик? Название бренда «Лакост» - пошло от знаменитого французского теннисиста Рена Лакоста. Вот 1927 году он провел турнир в Англии, где разгромил всех своих соперников. Все критики и просто обычные любители этого вида спорта, наблюдая за Рене, прозвали его «крокодилом» — из-за его боевой стойки, которая была похожа на крокодила, который готовится напасть на жертву. И вот друг Рене Роберт Жорж сшил маленького крокодильчика, которого он прикрепил на рубашку, в которой теннисист выходил на корт. Этот зеленый крокодильчик стал для Лакоста символом удачи, а в последствии «фирменным знаком».
+Ссылка на источник: http://fashionprg.ru/ru/brands/view/124/</Description>
+        <PictureUrl>http://data.opentao.net/images/brands/lacoste.gif</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>false</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23787</Id>
+        <ExternalId>4127401</ExternalId>
+        <Name>H＆M</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/f5b17f869cabb98d.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23791</Id>
+        <ExternalId>20817</ExternalId>
+        <Name>Hugo Boss</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/9d61ea7e6edd10.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23827</Id>
+        <ExternalId>4540752</ExternalId>
+        <Name>VICTORIA’S SECRET</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/63f32a1e489.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23677</Id>
+        <ExternalId>3222763</ExternalId>
+        <Name>Alexander McQueen</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/daa23f336eddb1e9831cd3f059b62550.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23678</Id>
+        <ExternalId>20005</ExternalId>
+        <Name>Anna sui</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/a.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:22933</Id>
+        <ExternalId>29469</ExternalId>
+        <Name>Benetton</Name>
+        <Description/>
+        <PictureUrl>http://data.opentao.net/images/brands/benetton.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>false</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23763</Id>
+        <ExternalId>20810</ExternalId>
+        <Name>Calvin Klein</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/ba79375ebf.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:2916</Id>
+        <ExternalId>98427502</ExternalId>
+        <Name>D&amp;G</Name>
+        <Description/>
+        <PictureUrl>http://data.opentao.net/images/brands/dng.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>false</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:2918</Id>
+        <ExternalId>41657</ExternalId>
+        <Name>ECCO</Name>
+        <Description>Главное правило компании ЕССО  - производить обувь комфортную, удобную и легкую для ног.
+Обувь ЕССО представлена в 97 странах и ежегодно в мире продается почти 15 миллионов пар обуви ЕССО. 
+Компания ЕССО работает во всех сегментах обувного рынка, как производитель женской, мужской и детской обуви. Также ЕССО производит обувь, предназначенную для игры в гольф, обувь для активного отдыха, бега и спортивную.</Description>
+        <PictureUrl>http://data.opentao.net/images/brands/ecco.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>false</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23808</Id>
+        <ExternalId>29888</ExternalId>
+        <Name>Mexx</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/f2316842501848.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+      <Item>
+        <Id>ot:23823</Id>
+        <ExternalId>29510</ExternalId>
+        <Name>PLAYBOY</Name>
+        <Description/>
+        <PictureUrl>/brands_uploads/52a87b94ac187.jpg</PictureUrl>
+        <IsHidden>false</IsHidden>
+        <IsNameSearch>true</IsNameSearch>
+        <IsGlobal>false</IsGlobal>
+      </Item>
+    </Content>
+  </BrandInfoList>
+</OtapiBrandInfoListAnswer>

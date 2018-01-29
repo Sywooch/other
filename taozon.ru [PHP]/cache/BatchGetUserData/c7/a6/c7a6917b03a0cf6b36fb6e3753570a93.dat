@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BatchUserDataAnswer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://services.opentao.net">
+  <ErrorCode>Ok</ErrorCode>
+  <SubErrorCode/>
+  <RequestTimeStatistic>19.595 = {OtapiService} Service call (overhead: 0.093)
+ 0.050 = |-{Otapi} Create core
+ 0.064 = |-{Otapi} AccumulateCallCount (overhead: 0.027)
+ 0.002 = |-|-{Otapi} Create dependency Counter
+ 0.035 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.039 = |-{Otapi} AccumulateCallCount (overhead: 0.015)
+ 0.024 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+19.349 = |-{Batch} Run tasks (overhead: 0.063)
+10.067 = |-|-{Batch} Get BasketSummary block (overhead: 0.053)
+ 2.749 = |-|-|-{Service client call} PublicAccountManager.GetUserKeyBySessionId (overhead: 2.722)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.027 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.017)
+ 0.010 = |-|-|-|-|-{Logic} Create core
+ 7.265 = |-|-|-{Service client call} ItemsCollector.GetCollection (overhead: 1.904)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 5.362 = |-|-|-|-{ItemsCollectorService} Service call (overhead: 0.162)
+ 0.089 = |-|-|-|-|-{ORM} Create DataContext
+ 5.111 = |-|-|-|-|-{ORM} Find collections by userKey, instanceKey, collectionTypeId (not found)
+ 7.410 = |-|-{Batch} Get NoteSummary block (overhead: 0.042)
+ 0.004 = |-|-|-{Otapi} Create dependency ItemsCollector
+ 1.171 = |-|-|-{Service client call} PublicAccountManager.GetUserKeyBySessionId (overhead: 1.145)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.026 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.017)
+ 0.009 = |-|-|-|-|-{Logic} Create core
+ 6.192 = |-|-|-{Service client call} ItemsCollector.GetCollection (overhead: 1.503)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 4.689 = |-|-|-|-{ItemsCollectorService} Service call (overhead: 0.149)
+ 0.086 = |-|-|-|-|-{ORM} Create DataContext
+ 4.453 = |-|-|-|-|-{ORM} Find collections by userKey, instanceKey, collectionTypeId (not found)
+ 1.809 = |-|-{Batch} Get UserStatus block (overhead: 0.032)
+ 0.004 = |-|-|-{Otapi} Create dependency PublicAccountManager
+ 1.774 = |-|-|-{Service client call} PublicAccountManager.GetUserStatusInfo (overhead: 1.599)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.176 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.063)
+ 0.011 = |-|-|-|-|-{Logic} Create core
+ 0.102 = |-|-|-|-|-{Logic} Check session
+Time distribution: database = 9.739 (49.7%), interservice = 8.873 (45.3%), logic = 0.132 (0.7%), other = 0.852 (4.3%), Otapi = 0.444 (2.3%), PublicAccountManager = 0.229 (1.2%), ItemsCollector = 10.050 (51.3%)
+Debug info process time: 0.227
+</RequestTimeStatistic>
+  <Result>
+    <Status>
+      <IsSessionExpired>true</IsSessionExpired>
+    </Status>
+    <NoteSummary>
+      <TotalCount>0</TotalCount>
+    </NoteSummary>
+    <BasketSummary>
+      <TotalCount>0</TotalCount>
+    </BasketSummary>
+  </Result>
+</BatchUserDataAnswer>

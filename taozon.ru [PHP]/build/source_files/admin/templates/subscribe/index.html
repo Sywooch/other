@@ -1,0 +1,97 @@
+<?=$Header?>
+
+
+<div class="main"><div class="canvas clrfix">
+
+	<?
+	if(isset($_SESSION['clear_cache'])){
+		print '<div style="background-color: #ccc; border-radius: 5px; padding: 10px; margin-bottom: 10px"><h2 style="margin: 0;">'.LangAdmin::get('clear_cache_to_apply_changes').'</h2></div>';
+		unset($_SESSION['clear_cache']);
+	}
+	?>
+	<div class="col700">
+		<div class="tuning">
+
+			<div id="tabs">
+				<ul>
+					<li id="itab1"><a href="#tabs-1"><?=LangAdmin::get('sub_publication')?></a></li>
+					<li id="itab2"><a href="#tabs-2"><?=LangAdmin::get('sub_subscribers')?></a></li>
+					<li id="itab3"><a href="#tabs-3"><?=LangAdmin::get('settings')?></a></li>
+				</ul>
+                    
+                    <span id="error" style="color:red;font-weight: bold;">
+                        <? if(isset($error)) { print $error; } ?>
+                    </span>
+
+				<div id="tabs-1">
+					<? require TPL_DIR.'subscribe/publication.php'; ?>
+				</div>
+
+				<div id="tabs-2">
+					<? require TPL_DIR.'subscribe/subscribers.php'; ?>
+				</div>
+				<div id="tabs-3">
+					<div class="col700">
+						<div class="tuning">
+							<div style="margin: 0 0 10px 0;">
+								<br/>
+								<?if (isset($errors)&&!empty($errors)):?>
+								<p class="required"><?=LangAdmin::get('quittance_error')?></p>
+								<?endif?>
+								<form id="quittance_config" action="<?=BASE_DIR;?>index.php?do=saveSettings&amp;cmd=newsletter" method="post">
+
+									<label style="width: 200px; display: inline-block"><?=LangAdmin::get('sub_setting_send_count')?></label>
+									<input style="width: 500px;<?=isset($errors['send_count'])?'border-color: #FF0000;':''?>" type="text" name="send_count" value="<?=!empty($errors)?htmlspecialchars($_POST['send_count']):htmlspecialchars(@$settings[1]['send_count'])?>">
+									<br /><br />
+									<label style="width: 200px; display: inline-block"><?=LangAdmin::get('sub_setting_need_smtp')?></label>
+									<input type="checkbox" name="smtp" value="1" <?if (isset($settings[1]['smtp'])&&$settings[1]['smtp']) echo 'checked'?>>
+									<br /><br />
+									<label style="width: 200px; display: inline-block"><?=LangAdmin::get('sub_setting_smtp_ssl')?></label>
+									<input type="checkbox" name="smtp_ssl" value="1" <?if (isset($settings[1]['smtp_ssl'])&&$settings[1]['smtp_ssl']) echo 'checked'?>>
+									<br /><br />
+									<label style="width: 200px; display: inline-block"><?=LangAdmin::get('sub_setting_smtp_host')?></label>
+									<input style="width: 500px; <?=isset($errors['smtp_host'])?'border-color: #FF0000;':''?>" type="text" name="smtp_host" value="<?=!empty($errors)?htmlspecialchars($_POST['smtp_host']):htmlspecialchars(@$settings[1]['smtp_host'])?>">
+									<br /><br />
+									<label style="width: 200px; display: inline-block"><?=LangAdmin::get('sub_setting_smtp_port')?></label>
+									<input style="width: 500px; <?=isset($errors['smtp_port'])?'border-color: #FF0000;':''?>" type="text" name="smtp_port" value="<?=!empty($errors)?htmlspecialchars($_POST['smtp_port']):htmlspecialchars(@$settings[1]['smtp_port'])?>">
+									<br /><br />
+									<label style="width: 200px; display: inline-block"><?=LangAdmin::get('sub_setting_smtp_user')?></label>
+									<input style="width: 500px; <?=isset($errors['smtp_user'])?'border-color: #FF0000;':''?>" type="text" name="smtp_user" value="<?=!empty($errors)?htmlspecialchars($_POST['smtp_user']):htmlspecialchars(@$settings[1]['smtp_user'])?>">
+									<br /><br />
+									<label style="width: 200px; display: inline-block"><?=LangAdmin::get('sub_setting_smtp_password')?></label>
+									<input style="width: 500px; <?=isset($errors['smtp_password'])?'border-color: #FF0000;':''?>" type="text" name="smtp_password" value="<?=!empty($errors)?htmlspecialchars($_POST['smtp_password']):htmlspecialchars(@$settings[1]['smtp_password'])?>">
+									<br /><br />
+									<input type="submit" value="<?=LangAdmin::get('save')?>">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div></div><!-- /.main -->
+
+<script type="text/javascript" src="js/jquery.combobox.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		$('#tabs').tabs();
+
+		$('li[id^=itab]').each(function() {
+			$(this).removeClass('ui-tabs-selected').removeClass('ui-state-active');
+		});
+		$('div[id^=tabs-]').each(function() {
+			$(this).addClass('ui-tabs-hide');
+		});
+
+		var tab_number = <? echo (isset($_REQUEST['active_tab'])) ? $_REQUEST['active_tab'] : 1; ?>;
+		$("#itab" + tab_number).addClass('ui-tabs-selected').addClass('ui-state-active');
+		$("#tabs-" + tab_number).removeClass('ui-tabs-hide');
+	});
+
+</script>
+
+
+<?=$Footer?>

@@ -1,0 +1,260 @@
+<!-- product item -->
+<div class="ot_order_product_item" data-id="<?=$item['id']?>">
+    <!-- product number, status, actions -->
+    <div class="row-fluid">
+        <div class="span8">
+            <label class="checkbox inline">
+                <? $disabled = ($itemsStatuses['ITEM_STATUS_CANCELLED'] == $item['StatusId']) ? 'disabled="disabled"' : ''; ?>
+                <input class="for_group_action" type="checkbox" <?=$disabled?>/>
+            </label>
+            <a target="_blank" href="/<?=UrlGenerator::generateItemUrl($item['itemid'])?>" title="Страница товара на сайте">
+                № <?=$order->getNumericId()?> - <?=$item['LineNum']?>
+            </a>
+
+            <i class="icon-info-sign ot_inline_info ot_product_item_description_popup" data-placement="top" title="Описание товара"></i>
+            <div class="ot_popup_product_item_description_info"><?=$this->escape($item['BriefDescrTrans'])?></div>
+
+            <span class="offset2">
+                <span class="label weight-normal font-12 offset-left1 itemStatus"><?=$item['StatusName']?></span>
+                <? if ($itemPackage = $order->getItemPackage($item->id)) { ?>
+                    <span class="badge weight-normal font-12 itemInPackage">В посылке № <span><?=$itemPackage->id?></span></span>
+                <? } ?>
+            </span>
+        </div>
+
+        <div class="span4">
+
+            <div class="btn-group pull-right changeItemStatus">
+
+                <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle" title="Изменить статус"><i class="icon-star-empty"></i> <span class="caret"></span></button>
+                <ul class="dropdown-menu dropdown-menu-large">
+                    <? foreach ($itemsStatusList as $status) { ?>
+                        <li>
+                            <a data-status="<?=$status['id']?>" href="javascript:void(0)" title="">
+                                <?=$status['Name']?>
+                            </a>
+                        </li>
+                    <? } ?>
+                </ul>
+
+            </div>
+
+            <div class="btn-group pull-right">
+                <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle"><i class="icon-cog"></i> <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li class="hide exportOrderItem">
+                        <? $hideShowFlag = ($itemsStatuses['ITEM_STATUS_CANCELLED'] == $item['StatusId']) ? 'cancelled' : ''; ?>
+                        <a class="<?=$hideShowFlag?>" href="javascript:void(0)" title="Экспортировать товар"><i class="icon-share"></i> Экспортировать </a>
+                    </li>
+                    <!--li><a href="#" title="Распечатать этикетку для товара"><i class="icon-print"></i> Распечатать этикетку</a></li-->
+                        <? if ($item['qty'] > 1) { ?>
+                            <li>
+                                <a  class="splitItemQuantity"
+                                    title="<?=LangAdmin::get('Split_item_quantity')?>"
+                                    data-action="<?=$PageUrl->assignDo('splitItemQuantity')?>"
+                                    href="javascript:void(0)"
+                                >
+                                    <i class="icon-resize-full"></i> <?=LangAdmin::get('Split')?>
+                                </a>
+                            </li>
+                        <? } ?>
+                        <? if (Permission::show_order_field('can_delete_good') && $item->canBeDeleted()) { ?>
+                            <li>
+                                <a  class="deleteItemFromOrder"
+                                    title="<?=LangAdmin::get('Remove_item')?>"
+                                    data-action="<?=$PageUrl->assignDo('deleteItemFromOrder')?>"
+                                    href="javascript:void(0)"
+                                >
+                                    <i class="icon-remove"></i> <?=LangAdmin::get('Remove')?>
+                                </a>
+                            </li>
+                        <? } ?>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- /product number, status, actions -->
+
+    <!-- product summary -->
+    <div class="row-fluid">
+
+        <div class="span8">
+            <div class="row-fluid">
+
+                <div class="span2">
+
+                    <a href="#<?=$order->getNumericId()?>-<?=$item->id?>-img-goods-tab" class="thumbnail" data-toggle="lightbox" title="Увеличить изображение">
+                        <img src="<?=ProductsHelper::getImage($item, 100)?>" alt="" />
+                    </a>
+                    <div id="<?=$order->getNumericId()?>-<?=$item->id?>-img-goods-tab" class="lightbox hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="lightbox-header">
+                            <button type="button" class="close" data-dismiss="lightbox" aria-hidden="true" title="Закрыть"><i class="icon-remove-sign"></i></button>
+                        </div>
+                        <div class="lightbox-content">
+                            <img src="<?=$item->itemimageurl?>" />
+                            <div class="lightbox-caption">
+                                <p class="text-clipped-general"><?=$item['BriefDescrTrans']?></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="span10">
+
+                    <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+
+                        <dt>Оригинал:</dt>
+                        <dd>
+                            <? if (isset($item->ItemExternalURL) && $item->ItemExternalURL) { ?>
+                                <a target="_blank" href="<?=$item->ItemExternalURL?>" title="Страница товара на Таобао">
+                                <?=$item->itemId?>
+                                </a>
+                            <? } else { ?>
+                                <?=$item->itemId?>
+                            <? } ?>
+                        </dd>
+
+                        <dt>Продавец:</dt>
+                        <dd>
+                            <a target="_blank" href="<?=UrlGenerator::generateVendorUrl($item->vendNick)?>" title="Страница продавца на Таобао">
+                                <?=$item->vendNick?>
+                            </a>
+                        </dd>
+
+                    </dl>
+
+                    <p class="offset-bottom05"><strong>Конфигурация</strong></p>
+                    <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+
+                        <div class="itemEditableConfig"></div>
+
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="span4">
+            <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+                <dt>Вес:</dt>
+                <dd><?=$item->weight?> кг</dd>
+                <dt>Цена:</dt>
+                <dd>
+                    <div data-field="newPrice"></div> <?=$order->currencysign?>
+                    <? XEditableFields::Register(
+                        'newPrice',
+                        (float)$item->newpricecust ? $item->newpricecust : $item->pricecust,
+                        array(
+                            'useWrapper' => false,
+                            'saveUrl' => 'index.php?cmd=orders&do=changeItemPrice',
+                            'useLabel' => false,
+                            'pk' => $item->id . '_' . $order->id,
+                            'inputClass' => 'input-custom-mini price',
+                            'useLinkWrapper' => false
+                        )
+                    ); ?>
+                </dd>
+                <dt>Количество:</dt>
+                <dd><?=$item->qty?></dd>
+                <dt>Сумма:</dt>
+                <dd><?=TextHelper::formatPrice($item->amountcust, $order->currencysign)?></dd>
+            </dl>
+        </div>
+    </div>
+    <!-- /product summary -->
+
+    <!-- product comments, photoes -->
+    <div class="row-fluid">
+
+        <div class="span8 item-comments-block">
+            <p>
+                <i class="icon-comments-alt"></i> <strong><?=LangAdmin::get('Comments')?></strong>
+                <? if (empty($item->operatorcomment)) { ?>
+                    <button class="btn btn-mini addOperatorCommentBtn" data-toggle="collapse" data-target=".add-order-comment-form-<?=$item['id']?>"
+                        title="<?=LangAdmin::get('Add_comment')?>"><i class="icon-plus"></i></button>
+                <? } ?>
+            </p>
+
+            <div class="comments-list">
+            <? if (! empty($item->custcomment)) { ?>
+                <blockquote class="custcomment">
+                    <p class="font-13"><?=$this->escape(str_replace('\n', "\n", $item->custcomment))?></p>
+                    <small><?=LangAdmin::get('Customer')?></small>
+                </blockquote>
+            <? } ?>
+            <? if (! empty($item->operatorcomment)) { ?>
+                <blockquote>
+                    <p class="font-13"><?=$this->escape($item->operatorcomment)?></p>
+                    <small>
+                        <?=LangAdmin::get('Operator')?>
+                        <button class="btn btn-mini" title="<?=LangAdmin::get('Edit_comment')?>"
+                            data-toggle="collapse" data-target=".add-order-comment-form-<?=$item['id']?>"
+                        >
+                            <i class="icon-pencil"></i>
+                        </button>
+                    </small>
+                </blockquote>
+            <? } ?>
+            </div>
+
+            <div class="collapse add-order-comment-form-<?=$item['id']?>">
+                <form   action="<?=$PageUrl->assignDo('changeOperatorComment');?>"
+                        class="form-horizontal offset-top1 offset-bottom2"
+                >
+                    <textarea rows="5" class="input-xlarge" placeholder="<?=LangAdmin::get('Comment_text')?>"><?=$this->escape($item->operatorcomment)?></textarea>
+                    <div class="offset-top05">
+                        <button autocomplete="off" data-loading-text="<?=LangAdmin::get('Saving')?>" class="btn btn-tiny btn-primary btn_preloader changeOperatorCommentBtn" type="button">
+                            <?=(empty($item->operatorcomment) ? LangAdmin::get('Add') : LangAdmin::get('Save'))?>
+                        </button>
+                        <button class="btn btn-tiny offset-left2" type="button" data-toggle="collapse" data-target=".add-order-comment-form-<?=$item['id']?>"><?=LangAdmin::get('Cancel')?></button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <? if (CMS::IsFeatureEnabled('PhotoReport')) { ?>
+        <!-- Для фотобудки -->
+        <div class="span4">
+
+            <p>
+                <i class="icon-picture"></i> <strong><?=LangAdmin::get('Photos')?></strong>
+                <button data-toggle="modal" class="btn btn-mini addOrderItemPhotosBtn" title="<?=LangAdmin::get('Add_photo')?>"><i class="icon-plus"></i></button>
+            </p>
+
+            <!-- product images carousel -->
+            <div id="img-carousel-<?=$order->id?>-<?=$item->id?>" class="carousel slide ot_product_img_carousel">
+            <? if ($item->getPictures()) { ?>
+                <!-- Carousel items -->
+                <ul class="carousel-inner" data-toggle="modal-gallery" data-target="#modal-gallery">
+
+                    <? foreach ($item->getPictures() as $index => $picture) { ?>
+                        <li class="item <?=($index == 0 ? 'active' : '')?>" >
+                            <div class="row-fluid">
+                                <a href="<?=$picture->getUrl()?>" class="thumbnail" data-gallery="gallery" title="<?=LangAdmin::get('Enlarge_image')?>">
+                                    <img src="<?=$picture->getSize(100)?>" alt="">
+                                </a>
+                                <i class="icon-remove-sign ot_delete_img" title="<?=LangAdmin::get('Remove_image')?>"></i>
+                            </div>
+                        </li><!--/item-->
+                    <? } ?>
+
+                </ul><!--/carousel-inner-->
+
+                <a class="left carousel-control" href="#img-carousel-<?=$order->id?>-<?=$item->id?>" data-slide="prev">‹</a>
+                <a class="right carousel-control" href="#img-carousel-<?=$order->id?>-<?=$item->id?>" data-slide="next">›</a>
+            <? } ?>
+            </div><!--/.ot_product_img_carousel-->
+
+        </div>
+
+        <!-- /Для фотобудки -->
+        <? } ?>
+
+    </div>
+    <!-- /product comments, photoes -->
+</div>
+<!-- /product item -->

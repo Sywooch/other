@@ -1,0 +1,16 @@
+<div class="bigtitle"><div class="wrap clrfix">
+        <h1><?=Lang::get('all_news')?></h1>
+</div></div>
+
+<div class="main"><div class="wrap clrfix">
+	<ul class="list-news_all">
+	<? foreach ($allNews as $news) { ?>
+		<li>
+			<div class="img"><a href="?p=news&id=<?=$news['id']?>"><img src="<?=$news['image']?>"></a></div>
+			<h3><a href="?p=news&id=<?=$news['id']?>"><?=$news['title']?></a></h3>
+			<div class="date"><?=$news['created']?></div>
+			<p><?=$news['brief']?></p>
+		</li>
+	<? } ?>
+	</ul>
+</div></div>

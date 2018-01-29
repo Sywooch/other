@@ -1,0 +1,232 @@
+<div class="path"><div class="canvas clrfix">
+
+        <ul class="flin">
+            <li class="active"><a href="index.php?p=supportlist">Избранное</a></li>
+        </ul>
+
+</div></div>
+
+<div class="main"><div class="canvas clrfix">
+                <div class="addform" id="dialog-form" title="Сохранение">
+                    <br/><span id="message" >Все изменения сохранены</span>
+                </div>
+		<? if(count($list) > 0) { ?>
+		<table class="notepad" width="970px">
+			<thead>
+				<tr>
+					<td class="td1" width="5%">Товар</td>
+					<td width="32%">Оригинал</td>
+					<td width="12%">Конфигурация</td>
+					<td class="td4" width="15%">Комментарий</td>
+
+					<td width="15%"> Кол-во/Цена</td>
+                                        <td width="10%">Сумма</td>
+					<td class="td6"></td>
+				</tr>
+			</thead>
+
+			<tbody>
+                            <? $total_sum = 0; ?>
+                            <? $sign = ''; ?>
+                            <? foreach($list as $item){ ?>
+                            <? $total_sum += $item['Quantity']*$item['Price'];?>
+                            <? $sign = $item['CurrencySign']; ?>
+                            <tr id="item<?=$item['ItemId']?>">
+					<td class="td1">
+						<ul class="i40 flin"><li><a href="index.php?p=item&id=<?=$item['ItemId'];?>"><img src="<?=$item['PictureURL'];?>_40x40.jpg" alt="" width="100%" height="100%"/></a></li></ul>
+					</td>
+					<td width="350px">
+						<a href="index.php?p=item&id=<?=$item['ItemId'];?>"><?=$item['ItemTitle'];?> </a><br/>
+                                                <b>Оригинал:</b><a target="blank" href="<?=$item['ExternalURL'];?>"><?=$item['ItemId'];?></a><br/>
+                                                <b>Продавец:</b><a href="index.php?p=vendor&id=<?=$item['VendorId'];?>"><?=$item['VendorId'];?></a><br/>
+		
+					</td>
+					<td width="100px">
+                                            <ul class="flin coptions">
+                                                    <? if (isset($item['ItemConfiguration'])) { ?>
+                                                    <li><?=$item['ItemConfiguration'];?></li>
+                                                    <? } ?>
+                                            </ul>
+                                        </td> 
+					<td class="td4" width="130px">
+                                            <textarea rows="4" cols="15" name="com<?=$item['ItemId']?>" id="com<?=$item['ItemId']?>"><?=$item['Comment']?></textarea>
+                                        </td> 
+                                        
+					<td>
+                                            <input class="num_sup" type="text" name="num<?=$item['ItemId']?>" id="num<?=$item['ItemId']?>" value="<?=$item['Quantity']?>" onchange="changesum(<?=$item['ItemId']?>)"/>
+                                            <input type="hidden" name="price<?$item['ItemId']?>" id="price<?=$item['ItemId']?>" value="<?=$item['Price']?>"/>
+                                            <input type="hidden" name="cur<?$item['ItemId']?>" id="cur<?=$item['ItemId']?>" value="<?=$item['CurrencySign']?>"/>
+                                            <span class="pr"><nobr><? echo $item['Price'].' '.$item['CurrencySign']; ?></nobr></span>
+                                        </td>
+                                        <td>
+                                            <span class="pr" id="sum<?=$item['ItemId']?>"><? echo $item['Quantity']*$item['Price'].' '.$item['CurrencySign']; ?></span>
+                                        </td>
+					<td class="td6">
+                                            <span onclick="add_to_basket(<?=$item['ItemId'];?>, 1)" style="cursor:pointer;"><img src="i/basket.png" alt="В корзину" title="В корзину" width="15px" style="pointer:cursor;"/></span>&nbsp;
+                                            <input type="hidden" id="elemid<?=$item['ItemId'];?>" value="<?=$item['Id'];?>"/>
+                                            <a href="index.php?p=supportlist&del=<?=$item['Id'];?>"><img src="i/del.png" alt="Удалить" title="Удалить"/></a> <br/>
+                                            <small id="added<?=$item['ItemId'];?>" style="display:none;" class="flin coptions">Добавлено</small>
+                                        </td>
+				</tr>
+                                <?  }  ?>
+
+			</tbody>
+		</table>
+		
+		<div class="clrfix mt20">
+                    <div>
+                        <div class="col430"><a href="index.php?p=supportlist&clear" class="b30 fll"><span>Очистить избранное</span></a></div>
+                        <div class="col360"><span onclick="save_comments()" class="b30 fll"><span style="cursor:pointer;">Сохранить комментарии</span></span> <br/><br/>
+                            <small id="butcom"></small>
+                        </div>
+                        <div class="col250"><strong>Итого:</strong><span class="totalpr" id="total_sum"><? echo ' '.$total_sum.' '.$sign;?></span></div>
+                    </div>
+                    <br/><br/>
+                    <span style="float:right;cursor:pointer;" onclick="add_to_basket_all()" class="b30 fll">Добавить все в корзину</span>
+                    <br/><br/><small style="float:right;" id="butbasket"></small>
+                    
+                </div>
+                <? } else { ?>
+                    <h2> Пусто! </h2> 
+                <?}?>
+                <!--
+		<div class="clrfix mt20">
+			<a href="index.php?p=userorder&create" class="b30 fll" style="background:none;background-color:#F15A24"><span style="background:none">Оформить заказ</span></a>
+		</div>
+                -->
+		
+</div></div>
+<script>
+var count = <?=count($list)?>;
+var itemlist = new Array();
+<? $i=1; if (!empty($list)) foreach($list as $item) { ?>
+    itemlist[<?=$i?>] = new Array();
+    <?foreach($item as $key=>$value) { ?>
+        itemlist[<?=$i?>]['<?=$key?>'] = '<?=$value?>';
+    <?}?>
+<? $i++;} ?>
+
+//добавление одной позиции в корзину
+function add_to_basket(id, show_hint){
+    var post = '';
+    var num = document.getElementById('num' + id).value;
+    //alert(itemlist[1]['ItemId']);
+    for(var i=1; i<=count; i++){
+        if(itemlist[i]['ItemId'] == id){
+            post = {id : itemlist[i]['Id'], 
+                    itemId : itemlist[i]['ItemId'],
+                    itemTitle : itemlist[i]['ItemTitle'],
+                    configurationId : itemlist[i]['ConfigurationId'],
+                    price : itemlist[i]['Price'],
+                    currencySign : itemlist[i]['CurrencySign'],
+                    quantity : num,
+                    cost : itemlist[i]['Cost'],
+                    vendorId : itemlist[i]['VendorId'],
+                    itemConfiguration : itemlist[i]['ItemConfiguration'],
+                    externalURL : itemlist[i]['ExternalURL'],
+                    pictureURL : itemlist[i]['PictureURL'],
+                    comment:itemlist[i]['Comment']
+             }
+        }
+    }
+    $.ajax({
+        url: 'index.php?p=addnotetobasket',
+        data: post,
+        type: 'POST',
+        success: function(data) {
+            if(data != 'Error'){
+                if(show_hint){
+                    //$('#added'+id).show();
+                    $('#message').html('Товар сохранен в корзине!');
+                    $("#dialog-form").dialog("open");
+                }
+            }
+        }
+    });
+}
+
+//добавление всех позиций в корзину
+function add_to_basket_all(){
+    for(var i=1; i<=count; i++){
+        add_to_basket(itemlist[i]['ItemId'], 0);
+    }
+    
+    $('#message').html('Товары сохранены в корзине!');
+    $("#dialog-form").dialog("open");
+}
+
+//изменение количества и суммы
+
+function changesum( id ){
+    var num   = document.getElementById('num' + id).value;
+    var price = document.getElementById('price' + id).value;
+    var cur   = document.getElementById('cur' + id).value;
+    var elemid = document.getElementById('elemid' + id).value;
+
+    sum = num*price;
+    
+    document.getElementById('sum' + id).innerHTML = sum.toFixed(2)  + ' ' + cur;
+    
+    var total_sum = 0; //document.getElementById('total_sum').innerHTML;
+
+    for(var i=1; i<=count; i++){
+        num   = document.getElementById('num' + id).value;
+        price = document.getElementById('price' + id).value;
+        var sum = num*price;
+        total_sum += sum;
+    }
+    
+    document.getElementById('total_sum').innerHTML = total_sum.toFixed(2)  + ' ' + cur;
+    
+    $.ajax({
+        url: 'index.php?p=editnoteitemquantity&id=' + elemid + '&num=' + num,
+        success: function(data) {
+        }
+    });
+}
+
+//сохранить все комментарии
+function save_comments(){
+    var s = 0;
+    
+    for(var i=1; i<=count; i++){
+        
+        var id = itemlist[i]['ItemId'];
+        var comment = document.getElementById('com' + id).value;
+        var elemid  = document.getElementById('elemid' + id).value;
+        
+        $.ajax({
+            url: 'index.php?p=editnoteitemcomment&id=' + elemid + '&comment=' + comment,
+            success: function(data) {
+            }
+        });
+    }
+    
+    $('#message').html('Комментарии сохранены!');
+    $("#dialog-form").dialog("open");
+}
+
+$(function() {
+        $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+        $( "#dialog-form" ).dialog({
+                autoOpen: false,
+                width:210,
+                height:160,
+                modal: true,
+                buttons: {
+                        "Закрыть": function() {
+                                $( this ).dialog( "close" );
+                        }
+                }
+        });
+        
+        for(var i=1; i<=count; i++){
+            var id  = itemlist[i]['ItemId'];
+            $('#num' + id).numberMask({beforePoint:5});
+        }
+});
+
+
+</script>
+

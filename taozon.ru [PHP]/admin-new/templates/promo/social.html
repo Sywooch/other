@@ -1,0 +1,113 @@
+
+<ul class="breadcrumb">
+    <li><a href="."><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="promo/seo"><?=LangAdmin::get('Promo')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('social')?></li>
+</ul><!--/.breadcrumb-->
+
+<? require TPL_ABSOLUTE_PATH . 'promo/inc/tabs.php'; ?>
+<? XEditableFields::Init('promo', $PageUrl); ?>
+
+<div class="row-fluid">
+    <div class="span10">
+        <h1><?=LangAdmin::get('social')?></h1>
+    </div>
+    <div class="span2 offset-top1">
+        <div id="activeLanguagesContainer"></div>
+    </div>
+</div>
+
+<div class="well">
+    <form class="form-horizontal inline_editable_form ot_form">
+
+        <legend class="_legend-small"><?=LangAdmin::get('main_page')?></legend>
+
+        <div class="row-fluid">
+
+            <div class="span6">
+
+                <fieldset class="clearfix">
+
+                    <legend class="legend-small"><?=LangAdmin::get('widgets')?></legend>
+
+                    <div class="control-group">
+                    	<div data-field="hide_social"></div>
+                        <? XEditableFields::Register('hide_social', General::getConfigValue('hide_social'), array('useWrapper' => false)); ?>
+                    </div>
+
+                    <div class="control-group">
+                    	<div data-field="vkLikeWidget"></div>
+                        <? XEditableFields::Register('vkLikeWidget', General::getConfigValue('vkLikeWidget'), array('useWrapper' => false, 'placeholder' => LangAdmin::get('vkLikeWidget_placeholder'), 'displayValue' => LangAdmin::get('Filled'))); ?>
+                    </div>
+
+                    <div class="control-group">
+                        <div data-field="fbLikeWidget"></div>
+                        <? XEditableFields::Register('fbLikeWidget', General::getConfigValue('fbLikeWidget'), array('useWrapper' => false, 'placeholder' => LangAdmin::get('Copy_code_to_field'), 'displayValue' => LangAdmin::get('Filled'))); ?>
+                    </div>
+
+                    <div class="control-group">
+                        <div data-field="twitWidget"></div>
+                        <? XEditableFields::Register('twitWidget', General::getConfigValue('twitWidget'), array('useWrapper' => false, 'placeholder' => LangAdmin::get('Copy_code_to_field'), 'displayValue' => LangAdmin::get('Filled'))); ?>
+                    </div>
+
+                    <div class="control-group">
+                    	<div data-field="okWidget"></div>
+                        <? XEditableFields::Register('okWidget', General::getConfigValue('okWidget'), array('useWrapper' => false, 'placeholder' => LangAdmin::get('Copy_code_to_field'), 'displayValue' => LangAdmin::get('Filled'))); ?>
+                    </div>
+
+                    <div class="control-group">
+                    	<div data-field="banner_widget"></div>
+                        <? XEditableFields::Register('banner_widget', General::getConfigValue('banner_widget'), array('useWrapper' => false, 'placeholder' => LangAdmin::get('Copy_code_to_field'), 'displayValue' => LangAdmin::get('Filled'))); ?>
+                    </div>
+                </fieldset>
+            </div><!-- /.span6 -->
+
+            <div class="span6">
+                <fieldset class="clearfix">
+
+                    <legend class="legend-small"><?=LangAdmin::get('links')?></legend>
+
+                    <div class="control-group">
+                    	<div data-field="vk_link"></div>
+                        <? XEditableFields::Register('vk_link', General::getConfigValue('vk_link'), array('useWrapper' => false)); ?>
+                    </div>
+
+                    <div class="control-group">
+                    	<div data-field="fb_link"></div>
+                        <? XEditableFields::Register('fb_link', General::getConfigValue('fb_link'), array('useWrapper' => false)); ?>
+                    </div>
+
+                    <div class="control-group">
+                    	<div data-field="tw_link"></div>
+                        <? XEditableFields::Register('tw_link', General::getConfigValue('tw_link'), array('useWrapper' => false)); ?>
+                    </div>
+
+
+                </fieldset>
+
+            </div>
+        </div>
+
+
+        <legend><?=LangAdmin::get('product_page')?></legend>
+
+        <fieldset>
+
+            <div class="control-group">
+            	<div data-field="share_social_code"></div>
+            	<? XEditableFields::Register('share_social_code', General::getConfigValue('share_social_code'), array('useWrapper' => false, 'placeholder' => LangAdmin::get('Copy_code_to_field'), 'displayValue' => LangAdmin::get('Filled'))); ?>
+            </div>
+
+        </fieldset>
+
+    </form>
+</div>
+
+<script>
+    InlineFields = new Backbone.Collection;
+    InlineFields.add(<?=json_encode(XEditableFields::GetFields())?>);
+</script>
+<? ScriptIncluder::AddCustomScript('js/ot-render-template.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-inline.editable.init.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-site-config.js'); ?>
+<? ScriptIncluder::AddCustomScript('/js/vendor/jquery.form.js'); ?>

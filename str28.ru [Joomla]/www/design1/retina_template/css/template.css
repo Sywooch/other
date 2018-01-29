@@ -1,0 +1,18 @@
+﻿
+
+
+body
+{
+        background: #fff;
+        color: #000000;
+        font-size: 100.1%;
+        padding: 0px;
+        text-align: center;
+        }
+
+body.contentpane {
+    width:auto;
+    margin:10px;
+    text-align: left;
+    }
+img { border: 0 none; }

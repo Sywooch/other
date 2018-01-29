@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="main">
+	<name>plg_main_cache</name>
+	<author>Retina Project</author>
+	<creationDate>February 2007</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license></license>
+	<authorEmail>admin@retina.org</authorEmail>
+	<authorUrl>www.retina-studio.ru</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_CACHE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="cache">cache.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_main_cache.ini</language>
+		<language tag="en-GB">en-GB.plg_main_cache.sys.ini</language>
+	</languages>
+	<config>
+	<fields name="params">
+
+			<fieldset name="basic">
+		<field	name="browsercache" type="radio"
+			default="0"
+			description="PLG_CACHE_FIELD_BROWSERCACHE_DESC"
+			label="PLG_CACHE_FIELD_BROWSERCACHE_LABEL"
+		>
+			<option
+				value="0">JNo</option>
+			<option
+				value="1">JYes</option>
+		</field>
+		</fieldset>
+
+	</fields>
+	</config>
+</extension>

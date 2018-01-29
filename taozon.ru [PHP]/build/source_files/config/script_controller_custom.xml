@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controller>
+    <script name='index'>
+        <template name='indexnew' />
+        <blocks>
+            <block name='HeaderNew' />
+            <block name='FooterNew' />
+            <block name='MenuShortNew' />
+            <block name='ItemSetsNew' />
+            <block name='NewsBlock' />
+            <block name='Banners' />
+			<block name='DigestBlock' />
+        </blocks>
+    </script>
+    <script name='allcats'>
+        <template name='allcats' />
+        <blocks>
+            <block name='CrumbsNew' />
+            <block name='HeaderNew' />
+            <block name='FooterNew' />
+            <block name='AllCats' />
+        </blocks>
+    </script>
+	<script name='sitemap'>
+        <template name='sitemap' />
+        <blocks>
+            <block name='HeaderNew' />
+            <block name='FooterNew' />
+            <block name='Sitemap' />
+        </blocks>
+    </script>
+    <script name='search'>
+        <template name='searchnew' />
+        <blocks>
+			<block name='CrumbsNew' />
+            <block name='HeaderNew' />
+            <block name='FooterNew' />
+            <block name='ItemListNew' />            
+        </blocks>
+    </script>
+    <script name='category'>
+        <template name='categorynew' />
+        <blocks>
+            <block name='ItemListNew' />
+            <block name='CrumbsNew' />
+            <block name='HeaderNew' />
+            <block name='FooterNew' />
+        </blocks>
+    </script>
+    <script name='news'>
+        <template name='news' />
+        <blocks>
+            <block name='HeaderNew' />
+            <block name='FooterNew' />
+            <block name='News' />
+            <block name='CrumbsNew' />
+        </blocks>
+    </script>
+    <script name='allnews'>
+        <template name='allnews' />
+        <blocks>
+            <block name='CrumbsNew' />
+            <block name='HeaderNew' />
+            <block name='FooterNew' />
+            <block name='AllNews' />
+        </blocks>
+    </script>
+    <script name='pay_form_json' no_debug='1'>
+        <template name='pay' />
+        <blocks>
+            <block name="Pay" />
+        </blocks>
+    </script>
+    <script name='send_debug_info'>
+        <template name='send_debug_info' />
+        <blocks>
+            <block name="SendDebugInfo" />
+            <block name="HeaderNew" />
+            <block name="FooterNew" />
+        </blocks>
+    </script>
+    <script name='move_to_favourites'>
+        <template name='' />
+        <action block="BasketNew" action="moveToFavourites">
+            <param method="get" name="id" />
+        </action>
+    </script>
+    <script name='favourite_vendors'>
+        <template name='favourite_vendors' />
+        <blocks>
+            <block name='HeaderNew' />
+            <block name='FooterNew' />
+            <block name='FavouriteVendors' />
+        </blocks>
+    </script>
+    <script name='add_to_favourite_vendors'>
+        <template name='' />
+        <action block="FavouriteVendors" action="add">
+            <param method="get" name="id" />
+        </action>
+    </script>
+    <script name='delete_from_favourite_vendors'>
+        <template name='' />
+        <action block="FavouriteVendors" action="delete">
+            <param method="get" name="id" />
+        </action>
+    </script>
+    <script name='add_to_basket'>
+        <template name='' />
+        <action block="BasketNew" action="add"></action>
+    </script>
+    <script name='add_to_favourites'>
+        <template name='' />
+        <action block="SupportListNew" action="add"></action>
+    </script>
+</controller>

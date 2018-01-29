@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU" class="no-js" >
+<head>
+
+    
+    
+        <title>Opentao dev  - digest </title>
+    <meta name="description" content="digest" />
+    <meta name="keywords" content="digest" />
+    
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/css/style.css" />
+
+	
+	<script src="js/libs/jquery/jquery.min.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery-ui.min.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery.ui.core.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery.ui.widget.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery.ui.datepicker.js"></script>
+	<script src="js/libs/jquery/jquery.carousel/jquery.jcarousel.min.js"></script>
+	<script src="js/libs/jquery/jquery.colorbox/jquery.colorbox-min.js"></script>
+
+    <script src="js/general.js"></script>
+
+    
+    
+        <script src="js/inner.js"></script>
+    
+    
+    <script>
+		NotAvailableError = "NotAvailable";
+        $(function(){
+            url_gen_privateoffice = "privateoffice";
+            lang_privateoffice = "private_office";
+
+            url_gen_profile = "profile";
+
+            url_gen_logout = "logout";
+            lang_logout = "logout";
+
+            url_gen_login = "login";
+            lang_login = "login";
+
+            url_gen_register = "register";
+            lang_register = "registration";
+            $("#usermenu_ajax").prepend('<li id="loading_userdat"><img src="/css/i/ajax-loader.gif" width="16" height="16" /></li>');
+            $.ajax({
+                url: "index_ajax.php?p=get_user_data_summary",
+                cache: false,
+                dataType : "json",
+                success: function(json){
+                    $("#fav_ajax").html(json.favourites).show();
+                    $("#basket_ajax").html(json.basket).show();
+                    $("#loading_userdat").hide();
+                    if (json.IsAuthenticated) {
+                        $("#usermenu_ajax").prepend('<li><a href=' + url_gen_privateoffice +'>' + lang_privateoffice + '</a></li><li><a href='+ url_gen_profile +'>' + json.username + '</a></li><li><a href='+ url_gen_logout +'>'+ lang_logout +'</a></li>');
+                        //$("#usermenu_ajax").prepend('Вошел');
+                    } else {
+                        $("#usermenu_ajax").prepend('<li><a href='+ url_gen_login +'>'+ lang_login +'</a></li><li><a href='+ url_gen_register +'>'+ lang_register +'</a></li>');
+                        //$("#usermenu_ajax").prepend('Надо зайти');
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</head>
+<body >
+
+<form action="index.php?p=setlang" method="post">
+    <input type="hidden" name="lang" id="lang" />
+    <input type="hidden" name="from" value="/digest" />
+</form>
+
+<div id="error-dialog" style="display: none"></div>
+
+<div class="header">
+        <div class="wrap clrfix">
+                <div class="col col240 mr30">
+            <a href="index.php" class="logo">
+                <img src="http://dev.opentao.net/brands_uploads/logo%20%281%29.png" alt="Opentao dev - home" title="Opentao dev - home" />
+            </a>
+        </div>
+
+        <div class="col col690">
+            <ul class="hblocks">
+                <li class="name">
+                    
+                                    </li>
+                                <li class="phone mr20">
+                    <div class="bgr">
+                        <strong></strong>
+                        График работы 
+                    </div>
+                </li>
+                                                            </ul>
+        </div>
+    </div>
+</div>
+    
+<div class="spacer"><div class="wrap clrfix"></div></div>
+
+<div class="navigation"><div class="wrap clrfix">
+    <ul class="fll menu">
+                <li><a href="/" >home</a></li>
+        <li><a href="how_to_order" >how_to_order</a></li>
+        <li><a href="help" >help</a></li>
+                            </ul>
+
+    <form id="login_register">
+        <input type="hidden" name="from" value="/digest" />
+    </form>
+
+    <ul class="flr sblocks" id="usermenu_ajax">
+
+                
+                <li>
+            <a href="#" class="lang arrow"><span><i class="zh-chs">дё­е›Ѕзљ„</i></span></a>
+            <ul class="menu-lang">
+                                <li><a href="#" class="lang"><i class="zh-chs"></i></a></li>
+                                <li><a href="#" class="lang"><i class="en"></i></a></li>
+                                <li><a href="#" class="lang"><i class="ru"></i></a></li>
+                                <li><a href="#" class="lang"><i class="de"></i></a></li>
+                                <li><a href="#" class="lang"><i class="pt"></i></a></li>
+                                <li><a href="#" class="lang"><i class="khk"></i></a></li>
+                                <li><a href="#" class="lang"><i class="es"></i></a></li>
+                            </ul>
+        </li>
+            </ul>
+</div></div>
+
+<div class="userbar"><div class="wrap clrfix">
+    <ul class="uluserbar">
+        <li class="col col255 cats itemmenu">
+            <a href="#" onClick="return false" class="category "><span>by_categories</span><i></i></a>
+                        	<a href="brands" class="brand"><span>by_brands</span></a>
+                    </li>
+        <li class="col col435 itemmenu">
+                        <form action="http://dev.opentao.net/search" method="post" class="search" id="full_search_form" onSubmit="CheckSearch(); return false;">
+                <div class="field">
+                    <div class="in search-floating">
+                        <a href="#" class="selection allplace"><span>everywhere</span></a>
+                        <input type="text" name="search" id="full_search" value="" placeholder="default_search_text">
+                    </div>
+                    <input name="cid" type="hidden" />
+                    <div class="dropdown dropdown-search" id="searchcatsajax"><!-- Нету кэша --->
+<script type="text/javascript">
+$(function(){ 
+    $("#searchcatsajax").html('<p align="center"><img src="/css/i/ajax-loader.gif" width="32" height="32" /></p>');
+	$.ajax({
+  		url: "index.php?p=search_ajax&searchcats_ajax=1&cid=&name=",
+  		cache: false,
+  		success: function(html){
+    		$("#searchcatsajax").html(html);
+  		}
+	});
+});
+  
+</script>
+
+
+</div>
+                </div>
+                <input type="submit" value="find" class="btn fll" />
+            </form>
+        </li>
+
+        <li class="col col150 itemmenu">
+            <a href="supportlist" class="mydata favorites"><i class="i rounder" id="fav_ajax"> </i>favourites</a>
+        </li>
+        <li class="col col120 itemmenu">
+            <a href="basket" class="mydata basket"><i class="i rounder" id="basket_ajax"> </i> cart</a>
+        </li>
+
+    </ul>
+
+        <div class="dropdown dropdown-inner">
+        <div class="pda10" style="border-bottom: 1px solid #E6E6E6;">
+            <a href="allcats" class="all"><i class="i arrowright"></i><span>all_categories</span></a>
+        </div>
+        
+<div id="menu-short-complete">
+                    <div class="bitem clrfix">
+                <h3><a href="subcategory/﻿odezhda-otc-1?virt">﻿Одежда</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-2" href="subcategory/zhenskayaodezhda-otc-2">Женская одежда</a></li>
+                                                                                                                                                        <li><a cid="otc-46" href="subcategory/muzhskayaodezhda-otc-46">Мужская одежда</a></li>
+                                                                                                                                                        <li><a cid="otc-66" href="subcategory/detskayaodezhda-otc-66">Детская одежда</a></li>
+                                                                                                                                                        <li><a cid="otc-109" href="subcategory/sportivnayaodezhda-otc-109">Спортивная одежда</a></li>
+                                                                                                                                                                        </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/obuv-otc-212?virt">Обувь</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-213" href="subcategory/zhenskayaobuv-otc-213">Женская обувь</a></li>
+                                                                                                                                                        <li><a cid="otc-221" href="subcategory/muzhskayaobuv-otc-221">Мужская обувь</a></li>
+                                                                                                                                                        <li><a cid="otc-229" href="subcategory/detskayaobuv-otc-229">Детская обувь</a></li>
+                                                                                                                                                        <li><a cid="otc-246" href="subcategory/obuvdlyaaktivnogootdyhaiputeshestviy-otc-246">Обувь для активного отдыха и путешествий</a></li>
+                                                                                                                </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/sumkikoshelki-otc-273?virt">Сумки, кошельки</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-274" href="category/sumki-otc-274">Сумки</a></li>
+                                                                                                                                                        <li><a cid="otc-275" href="category/bumazhnikikoshelkiportmone-otc-275">Бумажники, кошельки, портмоне</a></li>
+                                                                                                                                                        <li><a cid="otc-276" href="category/chemodanydorozhnyesumki-otc-276">Чемоданы, дорожные сумки</a></li>
+                                                                                                                                                        <li><a cid="otc-277" href="subcategory/sportivnyesumki-otc-277">Спортивные сумки</a></li>
+                                                                                                                </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/yuvelirnyeizdeliyabizhuteriyaukrasheniya-otc-3035">Ювелирные изделия, бижутерия, украшения</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-3036" href="subcategory/yuvelirnyeizdeliyabrilliantyzoloto-otc-3036?virt">Ювелирные изделия, бриллианты, золото</a></li>
+                                                                                                                                                        <li><a cid="otc-3046" href="subcategory/bizhuteriyaukrasheniya-otc-3046?virt">Бижутерия, украшения</a></li>
+                                                                                    </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/tovarydlyauhodazarebenkomtovarydlyabuduschihmam-otc-906?virt">Товары для ухода за ребёнком, товары для будущих мам</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-907" href="subcategory/tovarydlyauhodazarebenkom-otc-907">Товары для ухода за ребёнком</a></li>
+                                                                                                                                                        <li><a cid="otc-1102" href="subcategory/tovarydlyamamibuduschihmam-otc-1102">Товары для мам и будущих мам</a></li>
+                                                                                    </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/krasotaizdorove-otc-2717?virt">Красота и здоровье</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-2718" href="subcategory/kosmetikadekorativnayaparfyumeriya-otc-2718">Косметика декоративная, парфюмерия</a></li>
+                                                                                                                                                        <li><a cid="otc-2747" href="subcategory/sredstvapouhoduzakozhey-otc-2747">Средства по уходу за кожей</a></li>
+                                                                                                                                                        <li><a cid="otc-2775" href="subcategory/sredstvapouhoduzavolosamipariki-otc-2775">Средства по уходу за волосами, парики</a></li>
+                                                                                                                                                        <li><a cid="otc-2792" href="subcategory/bytovyekosmeticheskiepribory-otc-2792">Бытовые косметические приборы</a></li>
+                                                                                                                                                                                                    </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/aksessuary-otc-284?virt">Аксессуары</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-285" href="category/chasynaruchnye-otc-285">Часы наручные</a></li>
+                                                                                                                                                        <li><a cid="otc-286" href="category/remnipoyasa-otc-286">Ремни, пояса</a></li>
+                                                                                                                                                        <li><a cid="otc-287" href="subcategory/zazhigalki-otc-287?virt">Зажигалки</a></li>
+                                                                                                                                                        <li><a cid="otc-315" href="category/shveycarskienozhi-otc-315">Швейцарские ножи</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/mobilnayaelektronika-otc-3722?virt">Мобильная электроника</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-3723" href="category/planshetnyepk-otc-3723">Планшетные ПК</a></li>
+                                                                                                                                                        <li><a cid="otc-3724" href="subcategory/fleshkartyzapominayuschieustroystva-otc-3724?virt">Флэшкарты, запоминающие устройства</a></li>
+                                                                                                                                                        <li><a cid="otc-3730" href="category/mp3mp4ipaddiktofony-otc-3730">Мp3, mp4, iPad, диктофоны</a></li>
+                                                                                                                                                        <li><a cid="otc-3731" href="subcategory/elektronnyeslovariknigi-otc-3731?virt">Электронные словари, книги</a></li>
+                                                                                                                                                                                                                                                            </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/detskiymir-otc-393?virt">Детский мир</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-394" href="category/aksessuarydlyadetey-otc-394">Аксессуары для детей</a></li>
+                                                                                                                                                        <li><a cid="otc-405" href="subcategory/igrushki-otc-405?virt">Игрушки</a></li>
+                                                                                                                                                        <li><a cid="otc-531" href="subcategory/detaliiinstrumentydlyamodelirovaniya-otc-531?virt">Детали и инструменты для моделирования</a></li>
+                                                                                                                                                        <li><a cid="otc-549" href="subcategory/kostyumydlyapredstavleniyfokusy-otc-549?virt">Костюмы для представлений, фокусы</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/sportivnyetovary-otc-1174?virt">Спортивные товары</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-1175" href="subcategory/badminton-otc-1175?virt">Бадминтон</a></li>
+                                                                                                                                                        <li><a cid="otc-1198" href="subcategory/tennisnastolnyy-otc-1198?virt">Теннис настольный</a></li>
+                                                                                                                                                        <li><a cid="otc-1217" href="subcategory/futbol-otc-1217?virt">Футбол</a></li>
+                                                                                                                                                        <li><a cid="otc-1246" href="subcategory/basketbol-otc-1246?virt">Баскетбол</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+            </div>
+                            </div>
+
+        <div class="pda10">
+            <a href="allcats" class="all"><i class="i arrowright"></i><span>all_categories</span></a>
+        </div>
+    </div>
+    </div></div><div class="crumbs">
+    <div class="wrap clrfix">
+        <a href="/">home</a>
+                    <span>digest</span>
+        	</div>
+</div><!-- /.path -->
+	<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+
+<!-- .main -->
+<div class="main">
+    <div class="wrap clrfix">
+        <div class="bproduct">
+        <div class="bproduct">
+        <div class="bigtitle"><div class="wrap clrfix">
+        	<h1>Обзор</h1>
+    	</div></div>
+        <ul class="blogDigest">
+            <li class="clearfix">
+                <a href="post?id=3">
+                    <img src="http://baconmockup.com/160/160" alt="" />
+                    <span class="blogAnounce">
+                        <span class="date">2013-06-27</span>
+                        <h2>А это как бы новость</h2>
+                        <p class="fewWords">
+                            Новости — программа (собрание нескольких новостей) на телевидении и радио. В печатной прессе новостями также называются сводки новостей, например, в специальной рубрике в газете.
+                        </p>
+                    </span>
+                </a>
+            </li><li class="clearfix">
+                <a href="post?id=3">
+                    <img src="http://baconmockup.com/160/160" alt="" />
+                    <span class="blogAnounce">
+                        <span class="date">2013-06-27</span>
+                        <h2>А это как бы новость</h2>
+                                                <p class="fewWords">
+                            Новости — программа (собрание нескольких новостей) на телевидении и радио. В печатной прессе новостями также называются сводки новостей, например, в специальной рубрике в газете.
+                        </p>
+                    </span>
+                </a>
+            </li><li class="clearfix">
+                <a href="post?id=3">
+                    <img src="http://baconmockup.com/160/160" alt="" />
+                    <span class="blogAnounce">
+                        <span class="date">2013-06-27</span>
+                        <h2>А это как бы новость</h2>
+                                                <p class="fewWords">
+                            Новости — программа (собрание нескольких новостей) на телевидении и радио. В печатной прессе новостями также называются сводки новостей, например, в специальной рубрике в газете.
+                        </p>
+                    </span>
+                </a>
+            </li><li class="clearfix">
+                <a href="post?id=3">
+                    <img src="http://baconmockup.com/160/160" alt="" />
+                    <span class="blogAnounce">
+                        <span class="date">2013-06-27</span>
+                        <h2>А это как бы новость</h2>
+                                                <p class="fewWords">
+                            Новости — программа (собрание нескольких новостей) на телевидении и радио. В печатной прессе новостями также называются сводки новостей, например, в специальной рубрике в газете.
+                        </p>
+                    </span>
+                </a>
+            </li>
+					
+            <!-- .pager -->
+    <table>
+		<tr>
+        	<td colspan="6" class="pagination">
+                                
+                                                    <span class="active curved">1</span>
+                                                </td>
+        </tr>
+</table>
+    <!-- /.pager -->
+            
+            
+            
+            
+            
+                    
+
+     </div>
+    </div>
+</div>
+<!-- /.main -->
+        
+        <div class="footer"><div class="wrap clrfix">
+            <a href="#" class="up" onClick="scroll(0,0); return false;"></a>
+            <div class="fll col240">
+                <div class="f12">&copy; 2011&ndash;2013 <b></b></div>
+                <p class="f11 mt5">Powered by &copy; Opentao platform <a href="http://opentao.net" target="_blank" alt="opentao.net" title="opentao.net">opentao.net</a></p>
+            </div>
+            <div class="flr col690">
+                <ul class="fmenu flin clrfix">
+                    <li><a href="main_user_agreement" alt="user_agreement1" title="user_agreement1">user_agreement1</a></li>
+                    <li><a href="policy" alt="security_policy" title="security_policy">security_policy</a></li>
+                    <li><a href="about_us" alt="about_us" title="about_us">about_us</a></li>
+                    <li><a href="contacts" alt="contacts" title="contacts">contacts</a></li>
+                    <li><a href="help" alt="help" title="help">help</a></li>
+                    <li><a href="sitemap" alt="sitemap" title="sitemap">sitemap</a></li>
+                                    </ul>
+                <div class="pay mt15">
+                                            <img src="p/pay.png" />
+                                    </div>
+            </div>	
+        </div></div>
+
+</body>
+</html>	
+<link rel="stylesheet" href="admin/css/jquery.treeview.css" />
+<script src="admin/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="admin/js/jquery.treeview.js" type="text/javascript"></script>
+<style>
+    #browser .closed {
+        background-color: white;
+        border: none;
+        height: auto;
+        overflow: auto;
+    }
+    span.time{
+        display: inline-block;
+        width: 120px;
+    }
+    span.method{
+        display: inline-block;
+        min-width: 200px;
+    }
+    #logs{
+        display: block;
+        width: 970px;
+        margin: 20px auto 100px auto;
+    }
+</style>
+<script>
+    $(function(){
+        $("#browser").treeview();
+    });
+</script>
+<!-- {{ отладочная информация --><hr><a onclick="$('.debug_info').toggle()">Время основной сборки страницы: 0.30168 сек</a><br><div align="left" style="display:none" class="debug_info"><pre>    <script>
+        $(function(){
+            $('.debug_info').toggle();
+        });
+    </script>
+        прочее — 0.30168 сек.<br></pre><br><br>====================DBcache_debug===========================<br>0.0009ms - Врямя - DBcache__construct.  <br>0.001ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.001ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br></div><!-- отладочная информация }} -->

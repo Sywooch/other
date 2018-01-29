@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="1.6.0" type="plugin" group="system" method="upgrade">
+	<name>System - Error404</name>
+	<author>Alain Bolli</author>
+	<creationDate>August 2009</creationDate>
+	<copyright>Copyright (C) 2009-2011 Holder. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>alain.bolli@cdprof.com</authorEmail>
+	<authorUrl>http://www.cdprof.com</authorUrl>
+	<version>3.4</version>
+	<description>PLG_ERROR404_DESCRIPTION</description>
+	<files>
+		<filename plugin="error404">error404.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+			<field name="redirection" type="radio"
+					default="1"
+					description="PLG_ERROR404_REDIRECTION_DESC"
+					label="PLG_ERROR404_REDIRECTION_LABEL"
+				>
+					<option value="1">PLG_ERROR404_YES</option>
+					<option value="0">PLG_ERROR404_NO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<languages>
+		<language tag="fr-FR">fr-FR.plg_system_error404.ini</language>
+		<language tag="fr-FR">fr-FR.plg_system_error404.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_system_error404.ini</language>
+		<language tag="en-GB">en-GB.plg_system_error404.sys.ini</language>
+	</languages>
+	<!-- UPDATESERVER DEFINITION -->
+        <updateservers>
+                <!-- Note: No spaces or linebreaks allowed between the server tags -->
+                <server type="extension" priority="1" name="Error404 Update Site">http://www.cdprof.com/update/plg_error404-update.xml</server>
+        </updateservers>
+</extension>

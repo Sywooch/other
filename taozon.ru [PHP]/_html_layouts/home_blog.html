@@ -1,0 +1,1025 @@
+﻿ <!DOCTYPE HTML>
+<html lang="ru-RU" class="no-js" >
+<head>
+    
+    
+        <title>Opentao dev - home</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/css/style.css" />
+
+	
+	<script src="js/libs/jquery/jquery.min.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery-ui.min.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery.ui.core.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery.ui.widget.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery.ui.datepicker.js"></script>
+	<script src="js/libs/jquery/jquery.carousel/jquery.jcarousel.min.js"></script>
+	<script src="js/libs/jquery/jquery.colorbox/jquery.colorbox-min.js"></script>
+
+    <script src="js/general.js"></script>
+
+    
+    
+    
+        <script src="js/main.js"></script>
+    
+    <script>
+		NotAvailableError = "NotAvailable";
+        $(function(){
+            url_gen_privateoffice = "privateoffice";
+            lang_privateoffice = "private_office";
+
+            url_gen_profile = "profile";
+
+            url_gen_logout = "logout";
+            lang_logout = "logout";
+
+            url_gen_login = "login";
+            lang_login = "login";
+
+            url_gen_register = "register";
+            lang_register = "registration";
+            $("#usermenu_ajax").prepend('<li id="loading_userdat"><img src="/css/i/ajax-loader.gif" width="16" height="16" /></li>');
+            $.ajax({
+                url: "index_ajax.php?p=get_user_data_summary",
+                cache: false,
+                dataType : "json",
+                success: function(json){
+                    $("#fav_ajax").html(json.favourites);
+                    $("#basket_ajax").html(json.basket);
+                    $("#loading_userdat").hide();
+                    if (json.IsAuthenticated) {
+                        $("#usermenu_ajax").prepend('<li><a href=' + url_gen_privateoffice +'>' + lang_privateoffice + '</a></li><li><a href='+ url_gen_profile +'>' + json.username + '</a></li><li><a href='+ url_gen_logout +'>'+ lang_logout +'</a></li>');
+                        //$("#usermenu_ajax").prepend('Вошел');
+                    } else {
+                        $("#usermenu_ajax").prepend('<li><a href='+ url_gen_login +'>'+ lang_login +'</a></li><li><a href='+ url_gen_register +'>'+ lang_register +'</a></li>');
+                        //$("#usermenu_ajax").prepend('Надо зайти');
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</head>
+<body >
+
+<form action="index.php?p=setlang" method="post">
+    <input type="hidden" name="lang" id="lang" />
+    <input type="hidden" name="from" value="/" />
+</form>
+
+<div id="error-dialog" style="display: none"></div>
+
+<div class="header">
+        <div class="wrap clrfix">
+                <div class="col col240 mr30">
+            <a href="index.php" class="logo">
+                <img src="http://dev.opentao.net/brands_uploads/logo%20%281%29.png" alt="Opentao dev - home" title="Opentao dev - home" />
+            </a>
+        </div>
+
+        <div class="col col690">
+            <ul class="hblocks">
+                <li class="name">
+                    
+                                    </li>
+                                <li class="phone mr20">
+                    <div class="bgr">
+                        <strong></strong>
+                        График работы 
+                    </div>
+                </li>
+                                                            </ul>
+        </div>
+    </div>
+</div>
+    
+<div class="spacer"><div class="wrap clrfix"></div></div>
+
+<div class="navigation"><div class="wrap clrfix">
+    <ul class="fll menu">
+                <li><a href="/"  class="active" >home</a></li>
+        <li><a href="how_to_order" >how_to_order</a></li>
+        <li><a href="help" >help</a></li>
+                            </ul>
+
+    <form id="login_register">
+        <input type="hidden" name="from" value="/" />
+    </form>
+
+    <ul class="flr sblocks" id="usermenu_ajax">
+
+                
+                <li>
+            <a href="#" class="lang arrow"><span><i class="zh-chs">дё­е›Ѕзљ„</i></span></a>
+            <ul class="menu-lang">
+                                <li><a href="#" class="lang"><i class="zh-chs"></i></a></li>
+                                <li><a href="#" class="lang"><i class="en"></i></a></li>
+                                <li><a href="#" class="lang"><i class="ru"></i></a></li>
+                                <li><a href="#" class="lang"><i class="de"></i></a></li>
+                                <li><a href="#" class="lang"><i class="pt"></i></a></li>
+                                <li><a href="#" class="lang"><i class="khk"></i></a></li>
+                                <li><a href="#" class="lang"><i class="es"></i></a></li>
+                            </ul>
+        </li>
+            </ul>
+</div></div>
+
+<div class="userbar"><div class="wrap clrfix">
+    <ul class="uluserbar">
+        <li class="col col255 cats itemmenu">
+            <a href="#" onClick="return false" class="category active"><span>by_categories</span><i></i></a>
+                        	<a href="brands" class="brand"><span>by_brands</span></a>
+                    </li>
+        <li class="col col435 itemmenu">
+                        <form action="http://dev.opentao.net/search" method="post" class="search" id="full_search_form" onSubmit="CheckSearch(); return false;">
+                <div class="field">
+                    <div class="in search-floating">
+                        <a href="#" class="selection allplace"><span>everywhere</span></a>
+                        <input type="text" name="search" id="full_search" value="" placeholder="default_search_text">
+                    </div>
+                    <input name="cid" type="hidden" />
+                    <div class="dropdown dropdown-search" id="searchcatsajax"><!-- Нету кэша --->
+<script type="text/javascript">
+$(function(){ 
+    $("#searchcatsajax").html('<p align="center"><img src="/css/i/ajax-loader.gif" width="32" height="32" /></p>');
+	$.ajax({
+  		url: "index.php?p=search_ajax&searchcats_ajax=1&cid=&name=",
+  		cache: false,
+  		success: function(html){
+    		$("#searchcatsajax").html(html);
+  		}
+	});
+});
+  
+</script>
+
+
+</div>
+                </div>
+                <input type="submit" value="find" class="btn fll" />
+            </form>
+        </li>
+
+        <li class="col col150 itemmenu">
+            <a href="supportlist" class="mydata favorites"><i class="i rounder" id="fav_ajax"> </i>favourites</a>
+        </li>
+        <li class="col col120 itemmenu">
+            <a href="basket" class="mydata basket"><i class="i rounder" id="basket_ajax"> </i> cart</a>
+        </li>
+
+    </ul>
+
+    </div></div>
+<!-- .main -->
+<div class="main"><div class="wrap clrfix">
+
+	<div class="fll col240">
+		<!-- IF MAIN_PAGE MENU  -->
+		<div class="dropdown dropdown-main" style="display: block;">
+			
+<div id="menu-short-complete">
+                    <div class="bitem clrfix">
+                <h3><a href="subcategory/﻿odezhda-otc-1?virt">﻿Одежда</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-2" href="subcategory/zhenskayaodezhda-otc-2">Женская одежда</a></li>
+                                                                                                                                                        <li><a cid="otc-46" href="subcategory/muzhskayaodezhda-otc-46">Мужская одежда</a></li>
+                                                                                                                                                        <li><a cid="otc-66" href="subcategory/detskayaodezhda-otc-66">Детская одежда</a></li>
+                                                                                                                                                        <li><a cid="otc-109" href="subcategory/sportivnayaodezhda-otc-109">Спортивная одежда</a></li>
+                                                                                                                                                                        </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/obuv-otc-212?virt">Обувь</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-213" href="subcategory/zhenskayaobuv-otc-213">Женская обувь</a></li>
+                                                                                                                                                        <li><a cid="otc-221" href="subcategory/muzhskayaobuv-otc-221">Мужская обувь</a></li>
+                                                                                                                                                        <li><a cid="otc-229" href="subcategory/detskayaobuv-otc-229">Детская обувь</a></li>
+                                                                                                                                                        <li><a cid="otc-246" href="subcategory/obuvdlyaaktivnogootdyhaiputeshestviy-otc-246">Обувь для активного отдыха и путешествий</a></li>
+                                                                                                                </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/sumkikoshelki-otc-273?virt">Сумки, кошельки</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-274" href="category/sumki-otc-274">Сумки</a></li>
+                                                                                                                                                        <li><a cid="otc-275" href="category/bumazhnikikoshelkiportmone-otc-275">Бумажники, кошельки, портмоне</a></li>
+                                                                                                                                                        <li><a cid="otc-276" href="category/chemodanydorozhnyesumki-otc-276">Чемоданы, дорожные сумки</a></li>
+                                                                                                                                                        <li><a cid="otc-277" href="subcategory/sportivnyesumki-otc-277">Спортивные сумки</a></li>
+                                                                                                                </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/yuvelirnyeizdeliyabizhuteriyaukrasheniya-otc-3035">Ювелирные изделия, бижутерия, украшения</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-3036" href="subcategory/yuvelirnyeizdeliyabrilliantyzoloto-otc-3036?virt">Ювелирные изделия, бриллианты, золото</a></li>
+                                                                                                                                                        <li><a cid="otc-3046" href="subcategory/bizhuteriyaukrasheniya-otc-3046?virt">Бижутерия, украшения</a></li>
+                                                                                    </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/tovarydlyauhodazarebenkomtovarydlyabuduschihmam-otc-906?virt">Товары для ухода за ребёнком, товары для будущих мам</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-907" href="subcategory/tovarydlyauhodazarebenkom-otc-907">Товары для ухода за ребёнком</a></li>
+                                                                                                                                                        <li><a cid="otc-1102" href="subcategory/tovarydlyamamibuduschihmam-otc-1102">Товары для мам и будущих мам</a></li>
+                                                                                    </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/krasotaizdorove-otc-2717?virt">Красота и здоровье</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-2718" href="subcategory/kosmetikadekorativnayaparfyumeriya-otc-2718">Косметика декоративная, парфюмерия</a></li>
+                                                                                                                                                        <li><a cid="otc-2747" href="subcategory/sredstvapouhoduzakozhey-otc-2747">Средства по уходу за кожей</a></li>
+                                                                                                                                                        <li><a cid="otc-2775" href="subcategory/sredstvapouhoduzavolosamipariki-otc-2775">Средства по уходу за волосами, парики</a></li>
+                                                                                                                                                        <li><a cid="otc-2792" href="subcategory/bytovyekosmeticheskiepribory-otc-2792">Бытовые косметические приборы</a></li>
+                                                                                                                                                                                                    </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/aksessuary-otc-284?virt">Аксессуары</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-285" href="category/chasynaruchnye-otc-285">Часы наручные</a></li>
+                                                                                                                                                        <li><a cid="otc-286" href="category/remnipoyasa-otc-286">Ремни, пояса</a></li>
+                                                                                                                                                        <li><a cid="otc-287" href="subcategory/zazhigalki-otc-287?virt">Зажигалки</a></li>
+                                                                                                                                                        <li><a cid="otc-315" href="category/shveycarskienozhi-otc-315">Швейцарские ножи</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/mobilnayaelektronika-otc-3722?virt">Мобильная электроника</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-3723" href="category/planshetnyepk-otc-3723">Планшетные ПК</a></li>
+                                                                                                                                                        <li><a cid="otc-3724" href="subcategory/fleshkartyzapominayuschieustroystva-otc-3724?virt">Флэшкарты, запоминающие устройства</a></li>
+                                                                                                                                                        <li><a cid="otc-3730" href="category/mp3mp4ipaddiktofony-otc-3730">Мp3, mp4, iPad, диктофоны</a></li>
+                                                                                                                                                        <li><a cid="otc-3731" href="subcategory/elektronnyeslovariknigi-otc-3731?virt">Электронные словари, книги</a></li>
+                                                                                                                                                                                                                                                            </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/detskiymir-otc-393?virt">Детский мир</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-394" href="category/aksessuarydlyadetey-otc-394">Аксессуары для детей</a></li>
+                                                                                                                                                        <li><a cid="otc-405" href="subcategory/igrushki-otc-405?virt">Игрушки</a></li>
+                                                                                                                                                        <li><a cid="otc-531" href="subcategory/detaliiinstrumentydlyamodelirovaniya-otc-531?virt">Детали и инструменты для моделирования</a></li>
+                                                                                                                                                        <li><a cid="otc-549" href="subcategory/kostyumydlyapredstavleniyfokusy-otc-549?virt">Костюмы для представлений, фокусы</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/sportivnyetovary-otc-1174?virt">Спортивные товары</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-1175" href="subcategory/badminton-otc-1175?virt">Бадминтон</a></li>
+                                                                                                                                                        <li><a cid="otc-1198" href="subcategory/tennisnastolnyy-otc-1198?virt">Теннис настольный</a></li>
+                                                                                                                                                        <li><a cid="otc-1217" href="subcategory/futbol-otc-1217?virt">Футбол</a></li>
+                                                                                                                                                        <li><a cid="otc-1246" href="subcategory/basketbol-otc-1246?virt">Баскетбол</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+            </div>
+                            </div>
+
+			<div class="pda10">
+				<a href="allcats" class="all"><i class="i arrowright"></i><span>all_goods_categories</span></a>
+			</div>
+		</div>
+		<!-- END MAIN_PAGE MENU  -->
+
+					<a href="index.php?p=help"><img src="p/banner.png"></a>
+			</div>
+
+	<div class="flr col690">
+		
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    next_banner = function (new_banner) {
+        $('#actions_navigation td.active').removeClass('active');
+        $(new_banner).parent().addClass('active');
+        $('#actions_banner').attr('href', new_banner.attr('rel'));
+        if (!new_banner.attr('href')) return;
+        var img = new_banner.attr('href');//.toLowerCase();
+        if (img.indexOf('.swf') + 1) {
+            $('#actions_banner').html('<object width="695" height="330">' + 
+                '<param name="movie" value="' + img + '">' +
+                '<embed src="' + img + '" width="695" height="330">' +
+                '</embed>' + '</object>');
+        } else {
+            $('#actions_banner').html('<img src="'+ img + '" alt="" class="fll"/>'); 
+        }
+    };
+
+    if($('#actions_navigation td').length > 1){
+        banner_interval_id = setInterval(function () {
+            newli = $('#actions_navigation td.active').next().find('a');
+            if (newli.size() < 1) {
+                newli = $($('#actions_navigation a')[0]);
+            }
+            if (newli) next_banner(newli);
+        }, 5000);
+
+        $("#actions_navigation > td > a").click(function () {
+            next_banner($(this));
+            clearInterval(banner_interval_id);
+            return false;
+        });
+    }
+})
+</script>
+		<div class="socblocks mb20 clrfix">
+						<div class="fll col55w">
+				<div class="title">share_with_friends:</div>
+				<table>
+																								</table>
+			</div>
+			<div class="fll col50w social-links">
+				<div class="title">follow_news:</div>
+				<p>
+										<a href="http://vk.com/opentao" target="_blank">
+						<img src="p/vk.jpg" />
+					</a>
+															<a href="http://www.facebook.com/pages/%D0%9E%D0%BF%D0%B5%D0%BD%D1%82%D0%B0%D0%BE%D0%A0%D1%83/252116681541607" target="_blank">
+						<img src="p/fb.jpg" />
+					</a>
+															<a href="https://twitter.com/#!/Opentao" target="_blank">
+						<img src="p/tw.jpg" />
+					</a>
+									</p>
+			</div>
+					</div>
+        		 <script src="js/GeoLocatet.js"></script>
+        <link rel="stylesheet" href="css/GeoLocatet.css" />
+        <form  method="post" id="GeoCurr">                        
+                     <input type='hidden' name='c' id="c">
+         </form>
+        <div style="position:relative;">
+                          
+                </div>
+		                	
+        <div class="bproduct">
+        <h2 class="mb25"><span>post</span></h2>
+            
+            <ul class="mainBlog">   
+                <li class="clearfix">
+                    <a href="#">
+                        <img src="gordeev.png" alt=""/>
+                        <span class="blogAnounce">
+                            <span class="date">06.15.2013</span>
+                            <span class="linkNews">Гордеев встретился с ректором Воронежской академии искусств</span>
+                        </span>
+                    </a>
+                </li><li class="clearfix">
+                    <a href="#">
+                        <img src="http://baconmockup.com/65/65" alt=""/>
+                        <span class="blogAnounce">
+                            <span class="date">06.15.2013</span>
+                            <span class="linkNews">Россельхознадзор: необходимо уничтожить диких кабанов в Воронежской области</span>
+                        </span>
+                    </a>
+                </li><li class="clearfix">
+                    <a href="#">
+                        <img src="http://baconmockup.com/70/70" alt=""/>
+                        <span class="blogAnounce">
+                            <span class="date">06.15.2013</span>
+                            <span class="linkNews">Фитнес — комплекс упражнений по расписанию</span>
+                        </span>
+                    </a>
+                </li>       
+    	</ul>
+    <div class="digest"><a href="digest">Все обзоры</a></div>
+</div>
+                
+		<div class="bproduct recom_goods-rating-list">
+    <h2 class="mb25"><span>recom_goods</span></h2>
+    <ul class="lproduct flin w700 w160li  clrfix">
+                <li title="春装连衣裙 2013新款长袖连衣裙春款韩版大码女装修身条纹打底裙" style="position:relative;">
+            <a class="pic" href="item?id=15642142992">
+                <i><img src="http://img01.taobaocdn.com/bao/uploaded/i1/11180021119486173/T1NzJ0Xt8cXXXXXXXX_!!2-item_pic.png_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=15642142992">
+                    <span>215.0 руб.</span>
+                </a>
+                <a href="item?id=15642142992">
+                    <ins class="name">春装连衣裙 2013新款长袖连衣裙春款韩版大码女装修身条纹打底裙</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="金皇冠 仓鼠兔子龙猫消臭木粒吸尿除味垫料垫材 经典款2kg3包包邮" style="position:relative;">
+            <a class="pic" href="item?id=10719081339">
+                <i><img src="http://img02.taobaocdn.com/bao/uploaded/i2/11819022079385366/T140WjXw4dXXXXXXXX_!!1-item_pic.gif_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=10719081339">
+                    <span>42.0 руб.</span>
+                </a>
+                <a href="item?id=10719081339">
+                    <ins class="name">金皇冠 仓鼠兔子龙猫消臭木粒吸尿除味垫料垫材 经典款2kg3包包邮</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="猫头猫砂铲 宠物铲子 猫砂铲 蓝色 黄色 红色 3色可选" style="position:relative;">
+            <a class="pic" href="item?id=12968496367">
+                <i><img src="http://img02.taobaocdn.com/bao/uploaded/i2/T16MuLXjJXXXX5wEcY_030725.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=12968496367">
+                    <span>42.5 руб.</span>
+                </a>
+                <a href="item?id=12968496367">
+                    <ins class="name">猫头猫砂铲 宠物铲子 猫砂铲 蓝色 黄色 红色 3色可选</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="得力9145 学生 精美大铅笔头笔筒 可爱卡通创意笔筒 笔架 笔座" style="position:relative;">
+            <a class="pic" href="item?id=13527619833">
+                <i><img src="http://img04.taobaocdn.com/bao/uploaded/i4/T1sVyYXjBbXXXvcAM1_042105.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=13527619833">
+                    <span>50.0 руб.</span>
+                </a>
+                <a href="item?id=13527619833">
+                    <ins class="name">得力9145 学生 精美大铅笔头笔筒 可爱卡通创意笔筒 笔架 笔座</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="★螺旋节奏棒 打棒★妙事多专用儿童打击乐器（对）35CM" style="position:relative;">
+            <a class="pic" href="item?id=7500351977">
+                <i><img src="http://img04.taobaocdn.com/bao/uploaded/i4/T1uZNFXl4hXXa7lnZ8_102053.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=7500351977">
+                    <span>64.5 руб.</span>
+                </a>
+                <a href="item?id=7500351977">
+                    <ins class="name">★螺旋节奏棒 打棒★妙事多专用儿童打击乐器（对）35CM</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="k特价儿童仿真玩具乐器/四音小号宝宝吹响玩具早教益智" style="position:relative;">
+            <a class="pic" href="item?id=9056854495">
+                <i><img src="http://img02.taobaocdn.com/bao/uploaded/i2/T160VYXlJoXXXPuw6b_123916.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=9056854495">
+                    <span>155.9 руб.</span>
+                </a>
+                <a href="item?id=9056854495">
+                    <ins class="name">k特价儿童仿真玩具乐器/四音小号宝宝吹响玩具早教益智</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+            </ul>
+</div>
+<div class="bproduct popular_goods-rating-list">
+    <h2 class="mb25"><span>popular_goods</span></h2>
+    <ul class="lproduct flin w700 w160li  clrfix">
+                <li title="原装正品 技展4U-600服务器机箱 加长4U工控机箱 监控机箱 特价" style="position:relative;">
+            <a class="pic" href="item?id=25063600768">
+                <i><img src="http://img04.taobaocdn.com/bao/uploaded/i4/13958023178724682/T1gDmGXvlXXXXXXXXX_!!0-item_pic.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=25063600768">
+                    <span>1 606.9 руб.</span>
+                </a>
+                <a href="item?id=25063600768">
+                    <ins class="name">原装正品 技展4U-600服务器机箱 加长4U工控机箱 监控机箱 特价</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="春装连衣裙 2013新款长袖连衣裙春款韩版大码女装修身条纹打底裙" style="position:relative;">
+            <a class="pic" href="item?id=15642142992">
+                <i><img src="http://img01.taobaocdn.com/bao/uploaded/i1/11180021119486173/T1NzJ0Xt8cXXXXXXXX_!!2-item_pic.png_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=15642142992">
+                    <span>215.0 руб.</span>
+                </a>
+                <a href="item?id=15642142992">
+                    <ins class="name">春装连衣裙 2013新款长袖连衣裙春款韩版大码女装修身条纹打底裙</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="顶级mobiado威图侈品奢华手机Vertu Signature代购签名版豪雅皮套" style="position:relative;">
+            <a class="pic" href="item?id=14341842100">
+                <i><img src="http://img04.taobaocdn.com/bao/uploaded/i4/T1uWi7XcXuXXambz.__110144.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=14341842100">
+                    <span>17 734.4 руб.</span>
+                </a>
+                <a href="item?id=14341842100">
+                    <ins class="name">顶级mobiado威图侈品奢华手机Vertu Signature代购签名版豪雅皮套</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="7条包邮 儿童纯棉刺绣加大加厚纱布垫背巾婴幼儿隔汗巾宝宝吸汗巾" style="position:relative;">
+            <a class="pic" href="item?id=4101836462">
+                <i><img src="http://img03.taobaocdn.com/bao/uploaded/i3/19718023895772804/T1Bq5XXxpiXXXXXXXX_!!0-item_pic.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=4101836462">
+                    <span>42.0 руб.</span>
+                </a>
+                <a href="item?id=4101836462">
+                    <ins class="name">7条包邮 儿童纯棉刺绣加大加厚纱布垫背巾婴幼儿隔汗巾宝宝吸汗巾</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="2013女装新款连衣裙 欧美莫代尔打底裙女吊带工字背心长裙背心裙" style="position:relative;">
+            <a class="pic" href="item?id=16111807491">
+                <i><img src="http://img01.taobaocdn.com/bao/uploaded/i1/17591036305748411/T1dA4hFd8fXXXXXXXX_!!0-item_pic.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=16111807491">
+                    <span>209.6 руб.</span>
+                </a>
+                <a href="item?id=16111807491">
+                    <ins class="name">2013女装新款连衣裙 欧美莫代尔打底裙女吊带工字背心长裙背心裙</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="【2013春夏新品】ECCO爱步 CLASSIC MOC. 经典莫克571014" style="position:relative;">
+            <a class="pic" href="item?id=22032028745">
+                <i><img src="http://img02.taobaocdn.com/bao/uploaded/i2/12017019219612559/T1P8.TXcFaXXXXXXXX_!!0-item_pic.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=22032028745">
+                    <span>9 130.5 руб.</span>
+                </a>
+                <a href="item?id=22032028745">
+                    <ins class="name">【2013春夏新品】ECCO爱步 CLASSIC MOC. 经典莫克571014</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="冬季阿迪达斯运动棉衣男士长款风衣加厚保暖棉大衣棉袄 男装棉服" style="position:relative;">
+            <a class="pic" href="item?id=18171947957">
+                <i><img src="http://img04.taobaocdn.com/bao/uploaded/i4/10068029936560240/T1dqkNXodbXXXXXXXX_!!0-item_pic.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=18171947957">
+                    <span>779.3 руб.</span>
+                </a>
+                <a href="item?id=18171947957">
+                    <ins class="name">冬季阿迪达斯运动棉衣男士长款风衣加厚保暖棉大衣棉袄 男装棉服</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="2013年新款方头平底芭蕾舞鞋 羊皮足尖鞋交叉绑带单鞋 真皮大码鞋" style="position:relative;">
+            <a class="pic" href="item?id=19839280226">
+                <i><img src="http://img05.taobaocdn.com/bao/uploaded/i5/T1C72LXgViXXbDVNw1_041401.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=19839280226">
+                    <span>1 069.5 руб.</span>
+                </a>
+                <a href="item?id=19839280226">
+                    <ins class="name">2013年新款方头平底芭蕾舞鞋 羊皮足尖鞋交叉绑带单鞋 真皮大码鞋</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+            </ul>
+</div>
+<div class="bproduct last_viewed_goods-rating-list">
+    <h2 class="mb25"><span>last_viewed_goods</span></h2>
+    <ul class="lproduct flin w700 w160li  clrfix">
+                <li title="【拇指斗价】韩伊Olive橄榄浴室营养护理经典套装包邮" style="position:relative;">
+            <a class="pic" href="item?id=18389039236">
+                <i><img src="http://img04.taobaocdn.com/bao/uploaded/i4/15671024288348601/T19NqLXptgXXXXXXXX_!!0-item_pic.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=18389039236">
+                    <span>558.9 руб.</span>
+                </a>
+                <a href="item?id=18389039236">
+                    <ins class="name">【拇指斗价】韩伊Olive橄榄浴室营养护理经典套装包邮</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="拉杆箱包配件支脚架 通用拉杆箱 旅行箱 行李箱前腿前脚支架支脚" style="position:relative;">
+            <a class="pic" href="item?id=18809848904">
+                <i><img src="http://img03.taobaocdn.com/bao/uploaded/i3/T1MHYwXaJeXXaQAis9_104011.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=18809848904">
+                    <span>48.4 руб.</span>
+                </a>
+                <a href="item?id=18809848904">
+                    <ins class="name">拉杆箱包配件支脚架 通用拉杆箱 旅行箱 行李箱前腿前脚支架支脚</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="宠物项圈颈圈-泡棉锦纶项圈-狗项圈 颈带防勒 脖圈" style="position:relative;">
+            <a class="pic" href="item?id=1788109614">
+                <i><img src="http://img05.taobaocdn.com/bao/uploaded/i5/T1CTRcXg0PEgDqXh_b_094338.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=1788109614">
+                    <span>53.8 руб.</span>
+                </a>
+                <a href="item?id=1788109614">
+                    <ins class="name">宠物项圈颈圈-泡棉锦纶项圈-狗项圈 颈带防勒 脖圈</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="英国正品 代购 ECCO/爱步 822553-55779女鞋凉鞋" style="position:relative;">
+            <a class="pic" href="item?id=17538689971">
+                <i><img src="http://img01.taobaocdn.com/bao/uploaded/i1/10428022260070729/T1iUyXXshiXXXXXXXX_!!2-item_pic.png_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=17538689971">
+                    <span>3 170.7 руб.</span>
+                </a>
+                <a href="item?id=17538689971">
+                    <ins class="name">英国正品 代购 ECCO/爱步 822553-55779女鞋凉鞋</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="哈道盟宠物钉耙梳狗梳子钢针开结排梳脱毛梳子大型犬藏獒金毛用品" style="position:relative;">
+            <a class="pic" href="item?id=17497832304">
+                <i><img src="http://img01.taobaocdn.com/bao/uploaded/i1/T1BcyLXdVwXXX1pUPa_122552.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=17497832304">
+                    <span>322.5 руб.</span>
+                </a>
+                <a href="item?id=17497832304">
+                    <ins class="name">哈道盟宠物钉耙梳狗梳子钢针开结排梳脱毛梳子大型犬藏獒金毛用品</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="英国代购 正品 ECCO 爱步 正装男鞋050144-00101 50144-00160" style="position:relative;">
+            <a class="pic" href="item?id=17063772630">
+                <i><img src="http://img04.taobaocdn.com/bao/uploaded/i4/T1M3ezXh02XXaxA7s1_042048.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=17063772630">
+                    <span>3 332.0 руб.</span>
+                </a>
+                <a href="item?id=17063772630">
+                    <ins class="name">英国代购 正品 ECCO 爱步 正装男鞋050144-00101 50144-00160</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="e-weita味它 犬主粮狗粮 贵宾泰迪狗粮 成犬2.5kg 鸡肉香米配方粮" style="position:relative;">
+            <a class="pic" href="item?id=17184213920">
+                <i><img src="http://img04.taobaocdn.com/bao/uploaded/i4/16933020610030365/T1B8xNXuhbXXXXXXXX_!!0-item_pic.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=17184213920">
+                    <span>252.6 руб.</span>
+                </a>
+                <a href="item?id=17184213920">
+                    <ins class="name">e-weita味它 犬主粮狗粮 贵宾泰迪狗粮 成犬2.5kg 鸡肉香米配方粮</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="包邮 美国维斯康 金毛寻回猎犬专用美毛粉300g 金毛美毛粉增毛粉" style="position:relative;">
+            <a class="pic" href="item?id=16673337980">
+                <i><img src="http://img03.taobaocdn.com/bao/uploaded/i3/14796018730274872/T1yasqXlVdXXXXXXXX_!!0-item_pic.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=16673337980">
+                    <span>419.2 руб.</span>
+                </a>
+                <a href="item?id=16673337980">
+                    <ins class="name">包邮 美国维斯康 金毛寻回猎犬专用美毛粉300g 金毛美毛粉增毛粉</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+            </ul>
+</div>
+<div class="bproduct with_reviews-rating-list">
+    <h2 class="mb25"><span>with_reviews</span></h2>
+    <ul class="lproduct flin w700 w160li  clrfix">
+                <li title="春装连衣裙 2013新款长袖连衣裙春款韩版大码女装修身条纹打底裙" style="position:relative;">
+            <a class="pic" href="item?id=15642142992">
+                <i><img src="http://img01.taobaocdn.com/bao/uploaded/i1/11180021119486173/T1NzJ0Xt8cXXXXXXXX_!!2-item_pic.png_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=15642142992">
+                    <span>215.0 руб.</span>
+                </a>
+                <a href="item?id=15642142992">
+                    <ins class="name">春装连衣裙 2013新款长袖连衣裙春款韩版大码女装修身条纹打底裙</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="艾斯正品40寸41寸 初学 民谣吉他 木吉他 个性木吉它 送套装包邮" style="position:relative;">
+            <a class="pic" href="item?id=10746281914">
+                <i><img src="http://img04.taobaocdn.com/bao/uploaded/i4/18622034513576437/T166CfXuVfXXXXXXXX_!!0-item_pic.jpg_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=10746281914">
+                    <span>1 494.0 руб.</span>
+                </a>
+                <a href="item?id=10746281914">
+                    <ins class="name">艾斯正品40寸41寸 初学 民谣吉他 木吉他 个性木吉它 送套装包邮</ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+                <li title="" style="position:relative;">
+            <a class="pic" href="item?id=19231476485">
+                <i><img src="_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="item?id=19231476485">
+                    <span>
+Warning: number_format() expects parameter 1 to be double, string given in /var/www/dev.opentao.net/public_html/lib/General.class.php on line 249
+ </span>
+                </a>
+                <a href="item?id=19231476485">
+                    <ins class="name"></ins>
+                    <span class="glow"></span>
+                </a>
+                
+            </div>
+                    </li>
+            </ul>
+</div>
+</div></div></div>
+
+<div class="brands">
+    <div class="wrap clrfix">
+        <div class="bproduct popular_brands-rating-list">
+            <h2 class="mb25"><span>popular_brands</span></h2>
+            
+            <ul class="lproduct flin w976 w100li clrfix">
+                                <li title="ECCO">
+                    <a class="pic" href="search?brand=ot:10">
+                        <i><img src="http://data.opentao.net/images/brands/ecco.jpg"></i>
+                        <ins></ins>
+                    </a>
+
+                    <div class="price">
+                        <div class="line"></div>
+                        <a href="search?brand=ot:10">
+                            <ins class="name">ECCO</ins>
+                            <span class="glow"></span>
+                        </a>
+                    </div>
+                </li>
+                                <li title="Adidasыы">
+                    <a class="pic" href="search?brand=ot:1433">
+                        <i><img src="http://data.opentao.net/images/brands/adidas.jpg"></i>
+                        <ins></ins>
+                    </a>
+
+                    <div class="price">
+                        <div class="line"></div>
+                        <a href="search?brand=ot:1433">
+                            <ins class="name">Adidasыы</ins>
+                            <span class="glow"></span>
+                        </a>
+                    </div>
+                </li>
+                                <li title="victoria’s secret">
+                    <a class="pic" href="search?brand=ot:2004">
+                        <i><img src=""></i>
+                        <ins></ins>
+                    </a>
+
+                    <div class="price">
+                        <div class="line"></div>
+                        <a href="search?brand=ot:2004">
+                            <ins class="name">victoria’s secret</ins>
+                            <span class="glow"></span>
+                        </a>
+                    </div>
+                </li>
+                            </ul>
+            <div class="mt15">
+                <a href="brands" class="all">
+                    <i class="i arrowright"></i><span>all_brands</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="brands">
+    <div class="wrap clrfix">
+        <div class="bproduct best_vendors-rating-list">
+            <h2 class="mb25"><span>best_vendors</span></h2>
+            <ul class="lproduct flin w976 w100li clrfix">
+                                <li title="xubaixiang358913400">
+                    <a class="pic" href="vendor?id=xubaixiang358913400">
+                        <i><img width="100" src="http://img.taobaocdn.com/sns_logo/i2/T1yiHRXlxbXXaCwpjX.png_100x100.jpg"></i><ins></ins>
+                    </a>
+
+                    <div class="price">
+                        <div class="line"></div>
+                        <a href="vendor?id=xubaixiang358913400">
+                            <ins class="name"></ins><span class="glow"></span>
+                        </a>
+                    </div>
+                </li>
+                                <li title="刘燕5188">
+                    <a class="pic" href="vendor?id=刘燕5188">
+                        <i><img width="100" src="http://img.taobaocdn.com/sns_logo/T1DD1iXDVhXXb1upjX.jpg_100x100.jpg"></i><ins></ins>
+                    </a>
+
+                    <div class="price">
+                        <div class="line"></div>
+                        <a href="vendor?id=刘燕5188">
+                            <ins class="name"></ins><span class="glow"></span>
+                        </a>
+                    </div>
+                </li>
+                                <li title="小南瓜45">
+                    <a class="pic" href="vendor?id=小南瓜45">
+                        <i><img width="100" src="http://img.taobaocdn.com/sns_logo/T1vrQkXXJiXXb1upjX.jpg_100x100.jpg"></i><ins></ins>
+                    </a>
+
+                    <div class="price">
+                        <div class="line"></div>
+                        <a href="vendor?id=小南瓜45">
+                            <ins class="name"></ins><span class="glow"></span>
+                        </a>
+                    </div>
+                </li>
+                                <li title="宠易宠物用品专营店">
+                    <a class="pic" href="vendor?id=宠易宠物用品专营店">
+                        <i><img width="100" src="http://a.tbcdn.cn/app/sns/img/default/avatar-120.png_100x100.jpg"></i><ins></ins>
+                    </a>
+
+                    <div class="price">
+                        <div class="line"></div>
+                        <a href="vendor?id=宠易宠物用品专营店">
+                            <ins class="name"></ins><span class="glow"></span>
+                        </a>
+                    </div>
+                </li>
+                                <li title="韩国折扣城">
+                    <a class="pic" href="vendor?id=韩国折扣城">
+                        <i><img width="100" src="http://a.tbcdn.cn/app/sns/img/default/avatar-120.png_100x100.jpg"></i><ins></ins>
+                    </a>
+
+                    <div class="price">
+                        <div class="line"></div>
+                        <a href="vendor?id=韩国折扣城">
+                            <ins class="name">韩国折扣城</ins><span class="glow"></span>
+                        </a>
+                    </div>
+                </li>
+                            </ul>
+            <div class="mt15">
+                <a href="all_vendors" class="all">
+                    <i class="i arrowright"></i><span>all_vendors</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+        	</div>
+</div></div>
+        <div class="footer"><div class="wrap clrfix">
+            <a href="#" class="up" onClick="scroll(0,0); return false;"></a>
+            <div class="fll col240">
+                <div class="f12">&copy; 2011&ndash;2013 <b></b></div>
+                <p class="f11 mt5">Powered by &copy; Opentao platform <a href="http://opentao.net" target="_blank" alt="opentao.net" title="opentao.net">opentao.net</a></p>
+            </div>
+            <div class="flr col690">
+                <ul class="fmenu flin clrfix">
+                    <li><a href="main_user_agreement" alt="user_agreement1" title="user_agreement1">user_agreement1</a></li>
+                    <li><a href="policy" alt="security_policy" title="security_policy">security_policy</a></li>
+                    <li><a href="about_us" alt="about_us" title="about_us">about_us</a></li>
+                    <li><a href="contacts" alt="contacts" title="contacts">contacts</a></li>
+                    <li><a href="help" alt="help" title="help">help</a></li>
+                    <li><a href="sitemap" alt="sitemap" title="sitemap">sitemap</a></li>
+                                    </ul>
+                <div class="pay mt15">
+                                            <img src="p/pay.png" />
+                                    </div>
+            </div>	
+        </div></div>
+
+</body>
+</html>	
+<link rel="stylesheet" href="admin/css/jquery.treeview.css" />
+<script src="admin/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="admin/js/jquery.treeview.js" type="text/javascript"></script>
+<style>
+    #browser .closed {
+        background-color: white;
+        border: none;
+        height: auto;
+        overflow: auto;
+    }
+    span.time{
+        display: inline-block;
+        width: 120px;
+    }
+    span.method{
+        display: inline-block;
+        min-width: 200px;
+    }
+    #logs{
+        display: block;
+        width: 970px;
+        margin: 20px auto 100px auto;
+    }
+</style>
+<script>
+    $(function(){
+        $("#browser").treeview();
+    });
+</script>
+<!-- {{ отладочная информация --><hr><a onclick="$('.debug_info').toggle()">Время основной сборки страницы: 0.28356 сек</a><br><div align="left" style="display:none" class="debug_info"><pre>    <script>
+        $(function(){
+            $('.debug_info').toggle();
+        });
+    </script>
+        прочее — 0.28356 сек.<br></pre><br><br>====================DBcache_debug===========================<br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br></div><!-- отладочная информация }} -->

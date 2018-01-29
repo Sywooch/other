@@ -1,0 +1,452 @@
+<script type="text/javascript" src="js/jquery.qtip-1.0.0.min.js"></script>
+<script type="text/javascript" src="js/tips.js"></script>
+
+
+<div class="qtip qtip-stylename">
+    <div class="qtip-tip" rel="cornerValue"></div>
+    <div class="qtip-wrapper">
+        <div class="qtip-borderTop"></div>
+        <div class="qtip-contentWrapper">
+            <div class="qtip-title">
+                <div class="qtip-button"></div>
+            </div>
+            <div class="qtip-content"></div>
+        </div>
+        <div class="qtip-borderBottom"></div>
+    </div>
+</div>
+<div id="dialog-confirm" title="<?=Lang::get('need_confirmed')?>" style="display:none;">
+    <span id="confirm_text"><?=Lang::get('sure_cancel')?></span>
+    <strong><span id="orderid"></span></strong>?
+</div>
+
+<div class="addform" id="dialog-form" title="<?=Lang::get('add_message')?>" style="display:none;">
+    <div class="form-row">
+        <label for="Subject"><?=Lang::get('subject')?></label><br/>
+        <input id="Subject" type="text" name="Subject" value="<?=$_POST['Subject']?>" />
+    </div>
+
+    <div class="form-row">
+        <label for="Text"><?=Lang::get('text')?></label><br/>
+        <textarea id="Text" name="Text"><?=$_POST['Text']?></textarea>
+    </div>
+
+    <div class="form-row">
+        <label for="SalesId"><?=Lang::get('order_number')?></label><br/>
+        <select id="SalesId" name="SalesId">
+            <option value=""><?=Lang::get('click_order')?></option>
+            <? foreach($orders as $c){ ?>
+            <option value="<?=$c['Id']?>" <? if ($_POST['SalesId']==$c['Id']) {?> selected <?} ?>><?=$c['Id']?></option>
+            <? } ?>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="CategoryId"><?=Lang::get('category')?></label><br/>
+        <select id="CategoryId" name="CategoryId">
+            <option value=""><?=Lang::get('select_category')?></option>
+            <? foreach($cats as $c){ ?>
+            <option value="<?=$c['CategoryId']?>" <? if ($_POST['CategoryId']==$c['CategoryId']) {?> selected <?} ?>><?=$c['Name']?></option>
+            <? } ?>
+        </select>
+    </div>
+    <br/>
+    <div id="error" class="pr"></div>
+</div>
+
+<? if(@$_GET['message']){ ?>
+<div class="bgr mb15 office_info_main order-msg  <? if(@$_GET['message']) print 'success'; ?>">
+    <? if(@$_GET['message']) print Lang::get('order_confirm_message'); ?>
+</div>
+<? } ?>
+
+<? if(@$_GET['errmessage']){ ?>
+<div class="bgr mb15 office_info_main order-msg  error">
+    <?=Lang::get(@$_GET['errmessage'])?>
+</div>
+<? } ?>
+
+<h1><? if(isset($_GET['orderstate'])) { echo Lang::get('orders'); } else { echo Lang::get('general_information'); } ?></h1>
+<? if($accountinfo && ( !defined('CFG_HIDE_DEPOSIT_STATUS') || @!CFG_HIDE_DEPOSIT_STATUS )) {?>
+<? $cur = (string)$accountinfo['currencysign']; ?>
+<div class="bgr mb30 office_info_main">
+    <table width="100%">
+        <tbody>
+        <tr>
+            <td>
+                <div class="account_name mb5"><? echo (string)$userinfo['firstname'].' '.(string)$userinfo['lastname'].' '.(string)$userinfo['middlename'];?></div>
+                <div class="account_number"><span class="f11 lgray"><?=Lang::get('account_number')?>:</span> <b><?=(defined('CFG_PREFIX_REPLACE_USR')?str_replace('USR', CFG_PREFIX_REPLACE_USR, (string)$accountinfo['num']):(string)$accountinfo['num'])?></b></div>
+            </td>
+            <td>
+                <div class="f11 lgray"><?=Lang::get('awaiting_payment')?>:</div>
+                <div class="money"><?=number_format((float)$accountinfo['paymwaitamount'], 2, '.', ' ').' '.$cur?></div>
+            </td>
+            <td>
+                <div class="f11 lgray"><?=Lang::get('on_account')?>:</div>
+                <div class="money"><?=number_format((float)$accountinfo['availableamount'], 2, '.', ' ').' '.$cur;?></div>
+            </td>
+            <td style="width: 181px;">
+                <a href="index.php?p=privateoffice&pay&deposit" class="addmoney"><span><i class="i additem"></i><?=Lang::get('deposit_funds')?></span></a>
+
+                <!--a href="index.php?p=support&mode=new&type=moneyOut">Вывод стредств</a -->
+            </td>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+<? } ?>
+
+<? if(!isset($_GET['orderstate'])) { ?>
+<? if(isset($userdiscount)){  ?>
+    <div class="bproduct fs15 mb30">
+        <h2 class="mb20"><span><?=Lang::get('avlbl_discount')?></span></h2>
+        <table class="notepad note_office">
+            <tbody>
+            <tr>
+                <td class="f11 lgray"><?=Lang::get('name_discount')?>:</td>
+                <td><b><?=$userdiscount['Name']?></b></td>
+            </tr>
+            <tr>
+                <td class="f11 lgray"><?=Lang::get('desc_discount')?>:</td>
+                <td><b><?=$userdiscount['Description']?></b></td>
+            </tr>
+            <tr>
+                <td class="f11 lgray"><?=Lang::get('discount')?>:</td>
+                <td><b><?=$userdiscount['Discount']?> % </b></td>
+            </tr>
+            <tr>
+                <td class="f11 lgray"><?=Lang::get('sum_for_discount')?>:</td>
+                <td><b><?=$userdiscount['DiscountIdentificationParametr']?></b></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <? } ?>
+<? } ?>
+
+<? if(!isset($_GET['orderstate'])) {?>
+<div class="bproduct fs15 mb30">
+    <h2 class="mb20"><span><?=Lang::get('name_address')?></span></h2>
+    <table class="notepad note_office">
+        <tr>
+            <td class="f11 lgray"><?=Lang::get('delivery_address')?>:</td>
+            <td>
+                <b><?=str_replace(', ,', ',', $userinfo['postalcode'].', '.$userinfo['country'].', '.$userinfo['region'].', '.$userinfo['city'].', '.$userinfo['address']) ?></b>
+            </td>
+        </tr>
+        <tr>
+            <td class="f11 lgray"><?=Lang::get('recipient')?>:</td>
+            <td>
+                <b><?=str_replace(', ,', ',', $userinfo['recipientfirstname'].' '.$userinfo['recipientmiddlename'].' '.$userinfo['recipientlastname']) ?></b>
+            </td>
+        </tr>
+        <tr>
+            <td class="f11 lgray"><?=Lang::get('contact_information')?>:</td>
+            <td>
+                <b><?=str_replace(', ,', ',', $userinfo['phone'].', '.$userinfo['email']) ?></b>
+            </td>
+        </tr>
+    </table>
+    <div class="clrfix mt20">
+        <a href="index.php?p=profile" class="btn_off"><span><?=Lang::get('change_data_recipient')?></span></a>
+    </div>
+</div>
+<? } ?>
+
+<? if(count($orders)){?>
+<div class="bproduct fs15 mb30">
+    <h2 class="mb20"><span><?=Lang::get('orders_awaiting_action')?></span></h2>
+    <? $orders_active_all = array_merge($orders_waited, $orders_active); ?>
+    <? if (count(@$orders_waited)) { ?>
+    <span class="lblue" style="color: #808080;" ><?=Lang::get('waited_orders_exist');?> </span><br/><br/>
+    <? } ?>
+
+    <div class="btabs mt15"><div class=" clrfix">
+        <div class="bgr clrfix">
+            <ul id="product-tabs" class="tabs clrfix">
+                <li class="active" tab="active_orders"><a href="#"><span><?=Lang::get('active_orders')?></span><i></i></a></li>
+                <li tab="cancel_orders" class=""><a href="#" attr="tab2"><span><?=Lang::get('canceled_orders')?></span><i></i></a></li>
+                <li tab="complite_orders" class=""><a href="#" attr="tab3"><span><?=Lang::get('closed_orders')?></span><i></i></a></li>
+            </ul>
+        </div>
+        <div class="tabs-content">
+
+            <div id="active_orders" class="tab" style="display: block;">
+                <? if(count($orders_active_all)) { ?>
+                <table class="notepad">
+                    <thead>
+                    <tr>
+                        <td><?=Lang::get('number')?>/<?=Lang::get('date')?></td>
+                        <td><?=Lang::get('quantity')?></td>
+                        <td><?=Lang::get('price_simple')?></td>
+                        <td><?=Lang::get('total_amount')?></td>
+                        <td><?=Lang::get('paid')?></td>
+                        <td><?=Lang::get('balance')?></td>
+                        <td><?=Lang::get('status')?></td>
+                        <td></td>
+                    </tr>
+                    </thead>
+
+                    <tbody class="bold">
+                        <? if(is_array($orders_active_all)) foreach($orders_active_all as $order){ ?>
+                        <? $cur = $order['currencysign']; ?>
+                        <? $pay = round((float)$order['totalamount'] - (float)$order['remainamount'],2); ?>
+                    <tr class="<?=$order_type?>">
+                        <td><a class="lblue" style="cursor:help" href="index.php?p=privateoffice&orderid=<?=$order['id']?>" title="<?=Lang::get('check_stat_order')?>"><nobr><?=(defined('CFG_PREFIX_REPLACE_ORD')?str_replace('ORD', CFG_PREFIX_REPLACE_ORD, (string)$order['id']):(string)$order['id'])?> (?)</nobr></a>
+                            <?  $order['createddatetime'] = strtotime($order['createddatetime']);
+                                $order['createddatetime'] = date('Y-m-d H:i:s', $order['createddatetime']);
+                            ?>
+                            <br/><nobr><?=$order['createddatetime']?></nobr></td>
+                        <td><?=(string)$order['itemscount']?></td>
+                        <td><span class="pr"><?=number_format((float)$order['goodsamount'], 2, '.', ' ').' '.$cur; ?> / <?=number_format((float)$order['deliveryamount'], 2, '.', ' ').' '.$cur; ?></span></td>
+                        <td><span class="pr"><?=number_format((float)$order['totalamount'], 2, '.', ' ').' '.$cur; ?></span></td>
+                        <td><span class="pr"><?=number_format((float)$pay, 2, '.', ' ').' '.$cur; ?></span></td>
+                        <td><span class="pr"><?=number_format((float)$order['remainamount'], 2, '.', ' ').' '.$cur; ?></span></td>
+                        <td>
+                            <?=$order['StatusName']?>
+                            <? if (!empty($order['substatusname'])){?>
+                                <br><br><font color="red" style="font-size:12px"><b><nobr><?=$order['substatusname']?></nobr></b></font>
+                            <?}?>
+                        </td>
+                        <td align="center">
+                            <? if((int)$order['cancancel']) {?>
+                                <a class="btn-small fll" onClick='confirm("<?=$order['id']?>")'><span style="cursor:pointer"><img src="i/del.png" width="12" height="12" align="middle"/> &nbsp; <?=Lang::get('cancel_order')?></span></a>
+                            <? } ?>
+                            <? if(@(int)$order['canclose']) {?>
+                                <a class="btn-small fll" onClick='confirm_close("<?=$order['id']?>")'><span style="cursor:pointer"><?=Lang::get('close_order')?></span></a>
+                            <? } ?>
+                        </td>
+                    </tr>
+                        <?  }  ?>
+                    </tbody>
+                </table>
+                <? } ?>
+            </div>
+
+            <div id="cancel_orders" class="tab">
+                <? $current_date = date(''); ?>
+                <? if(count($orders_canceled)) { ?>
+                <table class="notepad">
+                    <thead>
+                    <tr>
+                        <td><?=Lang::get('number')?>/<?=Lang::get('date')?></td>
+                        <td><?=Lang::get('quantity')?></td>
+                        <td><?=Lang::get('price_simple')?></td>
+                        <td><?=Lang::get('total_amount')?></td>
+                        <td><?=Lang::get('paid')?></td>
+                        <td><?=Lang::get('balance')?></td>
+                        <td><?=Lang::get('status')?></td>
+                        <td></td>
+                    </tr>
+                    </thead>
+
+                    <tbody class="bold">
+                        <? if(is_array($orders_canceled)) foreach($orders_canceled as $order){ ?>
+                        <? $cur = $order['currencysign']; ?>
+                        <? $pay = round((float)$order['totalamount'] - (float)$order['remainamount'],2); ?>
+                        <? $date_array = explode(' ', $order['createddatetime']); ?>
+                        <? list($month, $day, $year) = explode('/', $date_array[0]); ?>
+                        <? list($h, $m, $s) = explode(':', $date_array[1]); ?>
+                        <? if ((time() - mktime($h, $m, $s, $month, $day, $year)) > 60*24*3600) { continue; }?>
+                    <tr class="<?=$order_type?>">
+                        <td><a class="lblue" style="cursor:help" href="index.php?p=privateoffice&orderid=<?=$order['id']?>" title="<?=Lang::get('check_stat_order')?>"><nobr><?=(defined('CFG_PREFIX_REPLACE_ORD')?str_replace('ORD', CFG_PREFIX_REPLACE_ORD, (string)$order['id']):(string)$order['id'])?> (?)</nobr></a>
+                            <?  $order['createddatetime'] = strtotime($order['createddatetime']);
+                                $order['createddatetime'] = date('Y-m-d H:i:s', $order['createddatetime']);
+                            ?>
+                            <br/><nobr><?=$order['createddatetime']?></nobr></td>
+                        <td><?=(string)$order['itemscount']?></td>
+                        <td><span class="pr"><? echo round((float)$order['goodsamount'],2).' '.$cur; ?> / <? echo round((float)$order['deliveryamount'],2).' '.$cur; ?></span></td>
+                        <td><span class="pr"><? echo round((float)$order['totalamount'],2).' '.$cur; ?></span></td>
+                        <td><span class="pr"><? echo $pay.' '.$cur; ?></span></td>
+                        <td><span class="pr"><? echo round((float)$order['remainamount'],2).' '.$cur; ?></span></td>
+                        <td>
+                            <?=$order['StatusName']?>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                        <?  }  ?>
+                    </tbody>
+                </table>
+                <? } ?>
+            </div>
+
+            <div id="complite_orders" class="tab">
+                <? if(count($orders_complited)) { ?>
+                <table class="notepad">
+                    <thead>
+                    <tr>
+                        <td><?=Lang::get('number')?>/<?=Lang::get('date')?></td>
+                        <td><?=Lang::get('quantity')?></td>
+                        <td><?=Lang::get('price_simple')?></td>
+                        <td><?=Lang::get('total_amount')?></td>
+                        <td><?=Lang::get('paid')?></td>
+                        <td><?=Lang::get('balance')?></td>
+                        <td><?=Lang::get('status')?></td>
+                        <td></td>
+                    </tr>
+                    </thead>
+
+                    <tbody class="bold">
+                        <? if(is_array($orders_complited)) foreach($orders_complited as $order){ ?>
+                        <? $cur = $order['currencysign']; ?>
+                        <? $pay = round((float)$order['totalamount'] - (float)$order['remainamount'],2); ?>
+                    <tr class="<?=$order_type?>">
+                        <td><a class="lblue" style="cursor:help" href="index.php?p=privateoffice&orderid=<?=$order['id']?>" title="<?=Lang::get('check_stat_order')?>"><nobr><?=(defined('CFG_PREFIX_REPLACE_ORD')?str_replace('ORD', CFG_PREFIX_REPLACE_ORD, (string)$order['id']):(string)$order['id'])?> (?)</nobr></a>
+                            <?  $order['createddatetime'] = strtotime($order['createddatetime']);
+                                $order['createddatetime'] = date('Y-m-d H:i:s', $order['createddatetime']);
+                            ?>
+                            <br/><nobr><?=$order['createddatetime']?></nobr></td>
+                        <td><?=(string)$order['itemscount']?></td>
+                        <td><span class="pr"><? echo round((float)$order['goodsamount'],2).' '.$cur; ?> / <? echo round((float)$order['deliveryamount'],2).' '.$cur; ?></span></td>
+                        <td><span class="pr"><? echo round((float)$order['totalamount'],2).' '.$cur; ?></span></td>
+                        <td><span class="pr"><? echo $pay.' '.$cur; ?></span></td>
+                        <td><span class="pr"><? echo round((float)$order['remainamount'],2).' '.$cur; ?></span></td>
+                        <td>
+                            <?=$order['StatusName']?>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                        <?  }  ?>
+                    </tbody>
+                </table>
+                <? } ?>
+            </div>
+
+        </div>
+    </div></div>
+</div>
+<? } ?>
+
+<? if(!isset($_GET['orderstate'])) {?>
+
+<? if(count($ticketlist)) { ?>
+    <div class="bproduct fs15 mb30">
+        <h2 class="mb20"><span><?=Lang::get('support_service')?></span></h2>
+        <div id="support">
+            <? if(count($ticketlist)){?>
+            <table class="notepad bt0" width="100%">
+                <thead>
+                <tr>
+                    <td><?=Lang::get('msg_number')?></td>
+                    <td><?=Lang::get('date')?></td>
+                    <td><?=Lang::get('msgs')?></td>
+                    <td><?=Lang::get('unread')?></td>
+                </tr>
+                </thead>
+                <tbody class="bold">
+                    <? if(is_array($ticketlist)) foreach($ticketlist as $ticket){ ?>
+                <tr>
+                    <td class="lblue"><?=$ticket['ticketid']?></td>
+                    <td><?=$ticket['createddate']?></td>
+                    <td><?=(string)$ticket['msgcount']?></td>
+                    <td class="lgreen"><?=(string)$ticket['newmsgcount']?></td>
+                </tr>
+                    <?  }  ?>
+                </tbody>
+            </table>
+            <? } ?>
+            <div class="clrfix mt20">
+                <a href="index.php?p=support&mode=new" class="btn_off"><span><?=Lang::get('new_message')?></span></a>
+            </div>
+        </div>
+    </div>
+    <? } ?>
+<? } ?>
+<? if(!isset($_GET['orderstate'])) {?>
+<!-- Выводим просмотренные-->
+<? if(@General::$siteConf['show_user_history_views'])  Plugins::invokeEvent('ShowHistory');?>
+<!-- Вывели !!!! -->
+<? } ?>
+<script type="text/javascript">
+
+    var action = 'cancel';
+
+    $(function()
+    {
+        $("#dialog:ui-dialog").dialog("destroy");
+        $("#dialog-confirm:ui-dialog").dialog("destroy");
+        $('.order_complete').hide();
+        $('.order_cancel').hide();
+
+        $( "#dialog-form" ).dialog({
+            autoOpen: false,
+            height: 300,
+            width: 350,
+            modal: true,
+            buttons: {
+                '<?=Lang::get('add')?>': function() {
+                    var post = {Subject : $('#Subject').val(),
+                        Text : $('#Text').val(),
+                        SalesId : $('#SalesId').val(),
+                        CategoryId : $('#CategoryId').val()
+                    }
+                    $.ajax({
+                        url: 'index.php?p=createticket',
+                        data: post,
+                        type: 'POST',
+                        success: function(data) {
+                            if(data != 'Error'){
+                                $( this ).dialog( "close" );
+                                $("#support").html(data);
+                            } else {
+                                $("#error").html('<?=Lang::get('error_occured')?>');
+                            }
+                        }
+                    });
+
+                },
+                '<?=Lang::get('cancel')?>': function() {
+                    $( this ).dialog( "close" );
+                }
+            },
+            close: function() {
+            }
+        });
+
+        $("#dialog-confirm").dialog({
+            autoOpen: false,
+            modal: true,
+            buttons : {
+                '<?=Lang::get('yes')?>' : function() {
+                    if (action == 'cancel') {
+                        window.location.href = 'index.php?p=privateoffice&cancelorder=' + $('#orderid').html();
+                    }
+                    if (action == 'close') {
+                        window.location.href = 'index.php?p=privateoffice&closelorder=' + $('#orderid').html();
+                    }
+                },
+                '<?=Lang::get('no')?>' : function() {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    });
+
+    function show_form(){
+        $("#dialog-form").dialog("open");
+    }
+
+    function confirm(id) {
+        action = 'cancel';
+        $('#confirm_text').html('<?=Lang::get("sure_cancel")?>');
+        $('#orderid').html(id);
+        $("#dialog-confirm").dialog("open");
+    }
+
+    function confirm_close(id) {
+        action = 'close';
+        $('#confirm_text').html('<?=Lang::get("sure_close")?>');
+        $('#orderid').html(id);
+        $("#dialog-confirm").dialog("open");
+    }
+
+    function show(order_type) {
+        $('.order_active').hide();
+        $('.order_complete').hide();
+        $('.order_cancel').hide();
+        $('.order_' + order_type).show();
+    }
+
+</script>

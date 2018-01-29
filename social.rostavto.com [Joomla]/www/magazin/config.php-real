@@ -1,0 +1,27 @@
+<?php
+// HTTP
+define('HTTP_SERVER', 'http://rostavto.com/');
+
+// HTTPS
+define('HTTPS_SERVER', 'http://rostavto.com/');
+
+// DIR
+define('DIR_APPLICATION', '/home/c5597/public_html/www.rostavto.com/catalog/');
+define('DIR_SYSTEM', '/home/c5597/public_html/www.rostavto.com/system/');
+define('DIR_DATABASE', '/home/c5597/public_html/www.rostavto.com/system/database/');
+define('DIR_LANGUAGE', '/home/c5597/public_html/www.rostavto.com/catalog/language/');
+define('DIR_TEMPLATE', '/home/c5597/public_html/www.rostavto.com/catalog/view/theme/');
+define('DIR_CONFIG', '/home/c5597/public_html/www.rostavto.com/system/config/');
+define('DIR_IMAGE', '/home/c5597/public_html/www.rostavto.com/image/');
+define('DIR_CACHE', '/home/c5597/public_html/www.rostavto.com/system/cache/');
+define('DIR_DOWNLOAD', '/home/c5597/public_html/www.rostavto.com/download/');
+define('DIR_LOGS', '/home/c5597/public_html/www.rostavto.com/system/logs/');
+
+// DB
+define('DB_DRIVER', 'mysql');
+define('DB_HOSTNAME', 'localhost');
+define('DB_USERNAME', 'c5597_root');
+define('DB_PASSWORD', 'cGsQuABdVrSa');
+define('DB_DATABASE', 'c5597_rost');
+define('DB_PREFIX', '');
+?>

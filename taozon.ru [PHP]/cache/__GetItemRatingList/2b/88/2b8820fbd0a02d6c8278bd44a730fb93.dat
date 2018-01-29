@@ -1,0 +1,2087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OtapiItemInfoRatingListAnswer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://services.opentao.net">
+  <ErrorCode>Ok</ErrorCode>
+  <SubErrorCode/>
+  <RequestTimeStatistic>184.560 = {OtapiService} Service call (overhead: 0.763)
+  0.025 = |-{Otapi} Create core
+  0.050 = |-{Otapi} AccumulateCallCount (overhead: 0.021)
+  0.001 = |-|-{Otapi} Create dependency Counter
+  0.028 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+  0.028 = |-{Otapi} AccumulateCallCount (overhead: 0.011)
+  0.017 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+  0.033 = |-{Otapi} AccumulateCallCount (overhead: 0.010)
+  0.023 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+  0.030 = |-{Otapi} AccumulateCallCount (overhead: 0.009)
+  0.021 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+  0.001 = |-{Otapi} Create dependency ItemRedLightsStreet
+  9.918 = |-{Service client call} ItemRedLightsStreet.GetItemRatingListFrame (overhead: 2.560)
+          |-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+  7.358 = |-|-{ItemRedLightsStreetService} Service call (overhead: 7.348)
+  0.010 = |-|-|-{ORM} Get rating list (result size = 16)
+  0.003 = |-{Otapi} Create dependency ProvidersDirector
+160.622 = |-{Service client call} ProvidersDirector.GetItemInfoList (overhead: 59.060)
+          |-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+101.562 = |-|-{ProvidersDirectorService} Service call (overhead: 6.152)
+  0.001 = |-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+  0.003 = |-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+ 18.192 = |-|-|-{Service client call} TopapiAdapter.GetItemInfoList (overhead: 4.343)
+          |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 13.849 = |-|-|-|-{CachedTopapiAdapterService} Service call (overhead: 0.361)
+  0.043 = |-|-|-|-|-{CachedTopapiAdapter} Create core (overhead: 0.042)
+  0.001 = |-|-|-|-|-|-{CachedTopapiAdapter} Create dependency TopapiAdapter
+          |-|-|-|-|-{For Counter} CachedTopapiAdapter::1
+  0.004 = |-|-|-|-|-{ORM} Get deleted TopapiIds (result size = 0)
+  5.617 = |-|-|-|-|-{ItemMasterSlaveController} SetCachedWorkItems (overhead: 0.097)
+  0.104 = |-|-|-|-|-|-{MasterSlaveHelper} Create data Master context (overhead: 0.059)
+  0.045 = |-|-|-|-|-|-|-{MasterSlaveHelper} Get cached mapping source
+  5.416 = |-|-|-|-|-|-{ORM} Get CachedItem elements (result size = 16)
+  0.008 = |-|-|-|-|-{ItemMasterSlaveController} UpdateCachedVendorIds
+  7.816 = |-|-|-|-|-{ItemMasterSlaveController} UpdateItemInfoByVendor (overhead: 4.188)
+          |-|-|-|-|-|-{For Counter} CachedTopapiAdapter::1
+  3.628 = |-|-|-|-|-|-{VendorWorkInfoController} SetCachedWorkItems (overhead: 0.084)
+  3.544 = |-|-|-|-|-|-|-{ORM} Get CachedVendor elements (result size = 16)
+ 53.729 = |-|-|-{TaobaoItemProvider} Update discounts (overhead: 0.046)
+ 53.683 = |-|-|-|-{Service client call} TopapiAdapter.GetItemPromotionsList (overhead: 17.328)
+          |-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 36.355 = |-|-|-|-|-{CachedTopapiAdapterService} Service call (overhead: 0.361)
+  0.055 = |-|-|-|-|-|-{CachedTopapiAdapter} Create core (overhead: 0.054)
+  0.001 = |-|-|-|-|-|-|-{CachedTopapiAdapter} Create dependency TopapiAdapter
+          |-|-|-|-|-|-{For Counter} CachedTopapiAdapter::1
+  2.213 = |-|-|-|-|-|-{ORM} Get dictionary CachedItemPromotions (result size = 9)
+  0.004 = |-|-|-|-|-|-{ORM} Get deleted TopapiIds (result size = 0)
+ 33.723 = |-|-|-|-|-|-{Service client call} TopapiAdapter.GetItemPromotionsList (overhead: 33.492)
+          |-|-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.231 = |-|-|-|-|-|-|-{TopapiAdapterService} Service call (overhead: 0.224)
+  0.007 = |-|-|-|-|-|-|-|-{Logic} CreateSurrogateCategories
+          |-|-|-|-|-|-|-|-|-{Info} Break CreateSurrogateCategories. SurrogateCategories is already created
+          |-|-|-|-|-|-|-|-{Info} TopapiKey changed on lesotho
+          |-|-|-|-|-|-{ItemPromoWorkInfoController} Exception: [RKdevFormattedException][NotImplementedException] Implementation in CachedTopapiAdapter
+          |-|-|-|-[3 ***] {TaobaoItemProvider} Filter promotions. Count of valid/all: 1/1
+          |-|-|-|-{TaobaoItemProvider} Filter promotions. Count of valid/all: 0/0
+          |-|-|-|-[4 ****] {TaobaoItemProvider} Filter promotions. Count of valid/all: 1/1
+          |-|-|-|-{TaobaoItemProvider} Filter promotions. Count of valid/all: 3/3
+          |-|-|-|-{Info} Updated PromotionPrice for 9/16 items
+  0.003 = |-|-|-[2 **] {ORM} Get categories candidates by provider id (result size = 1)
+  0.001 = |-|-|-{ORM} Get categories candidates by provider id (result size = 3)
+  0.001 = |-|-|-{ORM} Get categories candidates by provider id (result size = 2)
+  0.001 = |-|-|-{ORM} Get categories candidates by provider id (result size = 1)
+  0.001 = |-|-|-{ORM} Get categories candidates by provider id (result size = 2)
+  0.001 = |-|-|-{ORM} Get categories candidates by provider id (result size = 1)
+  0.001 = |-|-|-{ORM} Get categories candidates by provider id (result size = 3)
+  0.002 = |-|-|-[2 **] {ORM} Get categories candidates by provider id (result size = 1)
+  0.001 = |-|-|-{ORM} Get categories candidates by provider id (result size = 3)
+  0.003 = |-|-|-[2 **] {ORM} Get categories candidates by provider id (result size = 1)
+  0.001 = |-|-|-{ORM} Get categories candidates by provider id (result size = 2)
+  0.002 = |-|-|-[2 **] {ORM} Get categories candidates by provider id (result size = 1)
+  0.005 = |-|-|-{ProvidersDirector} Create dependency Goblin
+          |-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+ 23.389 = |-|-|-{Data translate} Value provider is ListContextedValueProvider&lt;OtapiBaseItemInfo&gt; (overhead: 0.320)
+ 23.069 = |-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.601)
+          |-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 21.469 = |-|-|-|-|-{GoblinService} Service call (overhead: 0.206)
+          |-|-|-|-|-|-{For Counter} Goblin:Input text length:570
+          |-|-|-|-|-|-{Goblin Say} langFrom zh-chs, langTo ru
+  0.014 = |-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+  0.220 = |-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.015)
+  0.118 = |-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+  0.011 = |-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+  0.056 = |-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+  0.021 = |-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+ 21.021 = |-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.048)
+  0.016 = |-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 12)
+ 20.957 = |-|-|-|-|-|-|-{CounterTranslator} TranslateTextPackage (overhead: 0.016)
+          |-|-|-|-|-|-|-|-{For Counter} Translator:Input text length:384
+ 20.941 = |-|-|-|-|-|-|-|-{ITranslator} TranslateTextPackage (overhead: 0.181)
+  0.009 = |-|-|-|-|-|-|-|-|-{CharacterwiseDictionaryTranslator} Translate text by 'client' dictionary
+          |-|-|-|-|-|-|-|-|-{TextPartCollections} AnyFound: 0, All: 12
+          |-|-|-|-|-|-|-|-|-{TextParts} Found: 0, All: 12
+  0.099 = |-|-|-|-|-|-|-|-|-[12 ************] {CharacterwiseDictionaryTranslator} Translate text by 'opentao' dictionary
+          |-|-|-|-|-|-|-|-|-{TextPartCollections} AnyFound: 12, All: 12
+          |-|-|-|-|-|-|-|-|-{TextParts} Found: 89, All: 136
+ 20.652 = |-|-|-|-|-|-|-|-|-{SelectLanguageTranslator} TranslateTextPackage (overhead: 0.038)
+          |-|-|-|-|-|-|-|-|-|-{SelectLanguageTranslator} External name langFrom/langTo: zh-chs/ru
+  0.704 = |-|-|-|-|-|-|-|-|-|-{Goblin} Create dependency Translator
+ 19.910 = |-|-|-|-|-|-|-|-|-|-{Service client call} Translator.TranslateTextPackage (overhead: 4.910)
+          |-|-|-|-|-|-|-|-|-|-|-{Logic} Parse input texts
+          |-|-|-|-|-|-|-|-|-|-|-{DB} Get translates from cache
+ 15.000 = |-|-|-|-|-|-|-|-|-|-|-{External} Translate texts
+  0.008 = |-|-|-|-|-|-{Goblin} TranslateHtml
+          |-|-|-|-|-|-{Goblin Say} Found Translates in DB: 36 / 48
+          |-|-|-|-|-|-{Goblin Say} Translated texts (12 unique): 12 / 48
+  0.071 = |-|-|-[8 ********] {CategoriesRepository} Get category by local id
+  0.002 = |-{Otapi} Create dependency Statistics
+  2.647 = |-{FilterHelper} Filter items (overhead: 0.034)
+  2.613 = |-|-{Service client call} Statistics.FilterEntries (overhead: 2.377)
+          |-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.236 = |-|-|-{StatisticsService} Service call
+  0.002 = |-{Otapi} Create dependency SettingsManager
+  5.416 = |-{Service client call} SettingsManager.GetPriceFormationGroupListByCategoryIdList (overhead: 5.329)
+          |-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.086 = |-|-{SettingsManagerService} Service call
+  0.002 = |-{Otapi} Create dependency PriceFormation
+  0.003 = |-{Otapi} Create dependency MoneyChanger
+  2.397 = |-{Service client call} MoneyChanger.ConvertMoneyListToDisplayedList (overhead: 2.261)
+          |-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+  0.136 = |-|-{MoneyChangerService} Service call (overhead: 0.061)
+  0.075 = |-|-|-{MoneyChangeBuilder} DoBuild ListDictionary
+  2.619 = |-{Service client call} SettingsManager.GetPriceFormationSettings (overhead: 2.550)
+          |-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+  0.069 = |-|-{SettingsManagerService} Service call
+Time distribution: database = 11.228 (6.1%), external = 15.000 (8.1%), interservice = 135.811 (73.6%), logic = 0.149 (0.1%), other = 22.373 (12.1%), Otapi = 0.976 (0.5%), ItemRedLightsStreet = 7.358 (4.0%), ProvidersDirector = 6.617 (3.6%), CachedTopapiAdapter = 16.481 (8.9%), TopapiAdapter = 0.231 (0.1%), Goblin = 1.559 (0.8%), Translator = 15.000 (8.1%), Statistics = 0.236 (0.1%), SettingsManager = 0.155 (0.1%), MoneyChanger = 0.136 (0.1%)
+Debug info process time: 0.342
+</RequestTimeStatistic>
+  <Content>
+    <Content>
+      <Item>
+        <Id>42173121270</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Муфта для прогулок с ребенком на коляске</Title>
+        <OriginalTitle>童车伞车婴儿手推车保暖手套 加厚绒毛 冬天防冻防冷宝宝出行护套</OriginalTitle>
+        <MasterQuantity>107</MasterQuantity>
+        <CategoryId>otc-1072</CategoryId>
+        <ExternalCategoryId>50013857</ExternalCategoryId>
+        <VendorId>海边风格</VendorId>
+        <VendorName>海边风格</VendorName>
+        <VendorScore>11</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=42173121270&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img03.taobaocdn.com/bao/uploaded/i3/TB1ieo1GpXXXXb4XVXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>62.00</OriginalPrice>
+          <MarginPrice>107.2</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">1018.3</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">1018.3</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>1 018.30руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>1018.30</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>62.00</OriginalPrice>
+            <MarginPrice>91.2</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">866.3</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">866.3</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/TB1ieo1GpXXXXb4XVXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/TB1ieo1GpXXXXb4XVXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/TB1ieo1GpXXXXb4XVXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/TB1ieo1GpXXXXb4XVXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/TB1TElzGVXXXXcHXpXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/TB1TElzGVXXXXcHXpXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/TB1TElzGVXXXXcHXpXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/TB1TElzGVXXXXcHXpXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/TB1hvZgGFXXXXXWXXXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/TB1hvZgGFXXXXXWXXXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/TB1hvZgGFXXXXXWXXXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/TB1hvZgGFXXXXXWXXXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Чжоушань</City>
+          <State>Чжэцзян</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+          <Feature>Discount</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.400</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.400</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+      </Item>
+      <Item>
+        <Id>35595895432</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Сновидение зимний новая коллекция удерживающий тепло Вяжет кальсоны женский цветная хлопок удерживающий тепло Брюки очевидно тонки замшевый утепленный Брюки тела</Title>
+        <OriginalTitle>梦娜冬季新款 保暖打底裤 女士七彩棉保暖裤 显瘦 加绒加厚一体裤</OriginalTitle>
+        <MasterQuantity>70543</MasterQuantity>
+        <CategoryId>otc-11</CategoryId>
+        <ExternalCategoryId>50007068</ExternalCategoryId>
+        <VendorId>梦娜木离阁专卖店</VendorId>
+        <VendorName>梦娜木离阁专卖店</VendorName>
+        <VendorScore>15</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=35595895432&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img04.taobaocdn.com/bao/uploaded/i4/TB1VpHAGXXXXXa1XVXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>298.00</OriginalPrice>
+          <MarginPrice>454.1</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">4313.4</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">4313.4</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>4 313.40руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>4313.40</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>298.00</OriginalPrice>
+            <MarginPrice>438.1</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">4161.4</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">4161.4</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/TB1VpHAGXXXXXa1XVXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/TB1VpHAGXXXXXa1XVXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/TB1VpHAGXXXXXa1XVXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/TB1VpHAGXXXXXa1XVXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/1770993374/TB2vpK.aVXXXXXzXpXXXXXXXXXX_!!1770993374.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/1770993374/TB2vpK.aVXXXXXzXpXXXXXXXXXX_!!1770993374.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/1770993374/TB2vpK.aVXXXXXzXpXXXXXXXXXX_!!1770993374.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/1770993374/TB2vpK.aVXXXXXzXpXXXXXXXXXX_!!1770993374.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/1770993374/TB2niraaVXXXXcoXXXXXXXXXXXX_!!1770993374.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/1770993374/TB2niraaVXXXXcoXXXXXXXXXXXX_!!1770993374.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/1770993374/TB2niraaVXXXXcoXXXXXXXXXXXX_!!1770993374.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/1770993374/TB2niraaVXXXXcoXXXXXXXXXXXX_!!1770993374.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/1770993374/TB26Pk1bXXXXXb0XpXXXXXXXXXX_!!1770993374.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/1770993374/TB26Pk1bXXXXXb0XpXXXXXXXXXX_!!1770993374.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/1770993374/TB26Pk1bXXXXXb0XpXXXXXXXXXX_!!1770993374.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/1770993374/TB26Pk1bXXXXXb0XpXXXXXXXXXX_!!1770993374.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/1770993374/TB2G3I5bXXXXXXMXpXXXXXXXXXX_!!1770993374.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/1770993374/TB2G3I5bXXXXXXMXpXXXXXXXXXX_!!1770993374.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/1770993374/TB2G3I5bXXXXXXMXpXXXXXXXXXX_!!1770993374.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/1770993374/TB2G3I5bXXXXXXMXpXXXXXXXXXX_!!1770993374.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Цзиньхуа</City>
+          <State>Чжэцзян</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.350</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.350</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+      </Item>
+      <Item>
+        <Id>42209693371</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>2014 осень-зима Одежда корейская  версия новая коллекция Женская одежда зимний фасон средней длины стиль Suiting шерстей пальто шерсть куртка Зерно ворота turndown Niu большого</Title>
+        <OriginalTitle>2014秋冬装韩版新款女装冬季中长款呢子大衣毛呢外套一粒钮大翻领</OriginalTitle>
+        <MasterQuantity>5963</MasterQuantity>
+        <CategoryId>otc-23</CategoryId>
+        <ExternalCategoryId>50013194</ExternalCategoryId>
+        <VendorId>雅皇女旗舰店</VendorId>
+        <VendorName>雅皇女旗舰店</VendorName>
+        <VendorScore>12</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=42209693371&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img04.taobaocdn.com/bao/uploaded/i4/TB1RlZkGFXXXXX1XVXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>107.60</OriginalPrice>
+          <MarginPrice>174.2</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">1654.7</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">1654.7</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>1 654.70руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>1654.70</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>107.60</OriginalPrice>
+            <MarginPrice>158.2</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">1502.7</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">1502.7</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/TB1RlZkGFXXXXX1XVXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/TB1RlZkGFXXXXX1XVXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/TB1RlZkGFXXXXX1XVXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/TB1RlZkGFXXXXX1XVXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/2042598514/TB21ZYWaVXXXXX5XpXXXXXXXXXX_!!2042598514.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/2042598514/TB21ZYWaVXXXXX5XpXXXXXXXXXX_!!2042598514.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/2042598514/TB21ZYWaVXXXXX5XpXXXXXXXXXX_!!2042598514.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/2042598514/TB21ZYWaVXXXXX5XpXXXXXXXXXX_!!2042598514.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/2042598514/TB2yXLVaVXXXXbLXpXXXXXXXXXX_!!2042598514.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/2042598514/TB2yXLVaVXXXXbLXpXXXXXXXXXX_!!2042598514.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/2042598514/TB2yXLVaVXXXXbLXpXXXXXXXXXX_!!2042598514.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/2042598514/TB2yXLVaVXXXXbLXpXXXXXXXXXX_!!2042598514.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/2042598514/TB2UiVHXFXXXXboXpXXXXXXXXXX_!!2042598514.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/2042598514/TB2UiVHXFXXXXboXpXXXXXXXXXX_!!2042598514.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/2042598514/TB2UiVHXFXXXXboXpXXXXXXXXXX_!!2042598514.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/2042598514/TB2UiVHXFXXXXboXpXXXXXXXXXX_!!2042598514.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/2042598514/TB2PwPUaVXXXXb5XpXXXXXXXXXX_!!2042598514.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/2042598514/TB2PwPUaVXXXXb5XpXXXXXXXXXX_!!2042598514.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/2042598514/TB2PwPUaVXXXXb5XpXXXXXXXXXX_!!2042598514.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/2042598514/TB2PwPUaVXXXXb5XpXXXXXXXXXX_!!2042598514.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Кантон</City>
+          <State>Гуандун</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>2.190</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>2.190</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+        <PromotionPrice>
+          <OriginalPrice>53.00</OriginalPrice>
+          <MarginPrice>94</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">892.9</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">892.9</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+        </PromotionPrice>
+      </Item>
+      <Item>
+        <Id>35582736789</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Осень-зима Сезон высокие сапоги на высоком каблуке средние Женщина сапоги Пересекает колено и ботинки колена эластичные с острым носом Тонкие ботинки ноги европейский стиль Ботинки 2014 женщин</Title>
+        <OriginalTitle>秋冬季长靴高跟中筒女靴子过膝及膝靴弹力尖头瘦腿靴欧美女鞋2014</OriginalTitle>
+        <MasterQuantity>11507</MasterQuantity>
+        <CategoryId>otc-8390</CategoryId>
+        <ExternalCategoryId>50012028</ExternalCategoryId>
+        <VendorId>古奇天伦乐麦专卖店</VendorId>
+        <VendorName>古奇天伦乐麦专卖店</VendorName>
+        <VendorScore>13</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=35582736789&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img04.taobaocdn.com/bao/uploaded/i4/TB1CSl_GXXXXXXwaFXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>1190.00</OriginalPrice>
+          <MarginPrice>1765.3</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">16768.1</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">16768.1</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>16 768.10руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>16768.10</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>1190.00</OriginalPrice>
+            <MarginPrice>1749.3</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">16616.1</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">16616.1</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/TB1CSl_GXXXXXXwaFXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/TB1CSl_GXXXXXXwaFXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/TB1CSl_GXXXXXXwaFXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/TB1CSl_GXXXXXXwaFXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/1674626093/TB2j6OQbXXXXXXIXpXXXXXXXXXX_!!1674626093.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/1674626093/TB2j6OQbXXXXXXIXpXXXXXXXXXX_!!1674626093.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/1674626093/TB2j6OQbXXXXXXIXpXXXXXXXXXX_!!1674626093.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/1674626093/TB2j6OQbXXXXXXIXpXXXXXXXXXX_!!1674626093.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/1674626093/TB2hGqTbXXXXXcrXXXXXXXXXXXX_!!1674626093.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/1674626093/TB2hGqTbXXXXXcrXXXXXXXXXXXX_!!1674626093.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/1674626093/TB2hGqTbXXXXXcrXXXXXXXXXXXX_!!1674626093.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/1674626093/TB2hGqTbXXXXXcrXXXXXXXXXXXX_!!1674626093.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/1674626093/TB2.LHkXVXXXXauXXXXXXXXXXXX_!!1674626093.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/1674626093/TB2.LHkXVXXXXauXXXXXXXXXXXX_!!1674626093.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/1674626093/TB2.LHkXVXXXXauXXXXXXXXXXXX_!!1674626093.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/1674626093/TB2.LHkXVXXXXauXXXXXXXXXXXX_!!1674626093.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/1674626093/TB2Q54obXXXXXcfXpXXXXXXXXXX_!!1674626093.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/1674626093/TB2Q54obXXXXXcfXpXXXXXXXXXX_!!1674626093.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/1674626093/TB2Q54obXXXXXcfXpXXXXXXXXXX_!!1674626093.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/1674626093/TB2Q54obXXXXXcfXpXXXXXXXXXX_!!1674626093.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Путянь</City>
+          <State>Провинция Фуцзянь</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>1.200</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>1.200</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+      </Item>
+      <Item>
+        <Id>41974447140</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Зимний 2014 замшевый утепленный Knits вне кальсон для того чтобы положить дальше женскую одежду большой размер с жемчужинами Брюки тела ткани черный Длинние кальсоны очевидно тонки</Title>
+        <OriginalTitle>冬季2014加绒加厚打底裤外穿女装大码珍珠绒一体裤黑色长裤子显瘦</OriginalTitle>
+        <MasterQuantity>40142</MasterQuantity>
+        <CategoryId>otc-11</CategoryId>
+        <ExternalCategoryId>50007068</ExternalCategoryId>
+        <VendorId>婉洋旗舰</VendorId>
+        <VendorName>婉洋旗舰</VendorName>
+        <VendorScore>16</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=41974447140&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img01.taobaocdn.com/bao/uploaded/i1/TB1CwyUGFXXXXakapXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>98.00</OriginalPrice>
+          <MarginPrice>160.1</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">1520.8</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">1520.8</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>1 520.80руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>1520.80</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>98.00</OriginalPrice>
+            <MarginPrice>144.1</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">1368.8</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">1368.8</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/TB1CwyUGFXXXXakapXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/TB1CwyUGFXXXXakapXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/TB1CwyUGFXXXXakapXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/TB1CwyUGFXXXXakapXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/695765294/TB2m2rEbXXXXXaCXXXXXXXXXXXX_!!695765294.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/695765294/TB2m2rEbXXXXXaCXXXXXXXXXXXX_!!695765294.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/695765294/TB2m2rEbXXXXXaCXXXXXXXXXXXX_!!695765294.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/695765294/TB2m2rEbXXXXXaCXXXXXXXXXXXX_!!695765294.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/695765294/TB2RuzsbXXXXXXeXXXXXXXXXXXX_!!695765294.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/695765294/TB2RuzsbXXXXXXeXXXXXXXXXXXX_!!695765294.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/695765294/TB2RuzsbXXXXXXeXXXXXXXXXXXX_!!695765294.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/695765294/TB2RuzsbXXXXXXeXXXXXXXXXXXX_!!695765294.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/695765294/TB2J.cTbXXXXXXOXXXXXXXXXXXX_!!695765294.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/695765294/TB2J.cTbXXXXXXOXXXXXXXXXXXX_!!695765294.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/695765294/TB2J.cTbXXXXXXOXXXXXXXXXXXX_!!695765294.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/695765294/TB2J.cTbXXXXXXOXXXXXXXXXXXX_!!695765294.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/695765294/TB2_UoQbXXXXXbPXXXXXXXXXXXX_!!695765294.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/695765294/TB2_UoQbXXXXXbPXXXXXXXXXXXX_!!695765294.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/695765294/TB2_UoQbXXXXXbPXXXXXXXXXXXX_!!695765294.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/695765294/TB2_UoQbXXXXXbPXXXXXXXXXXXX_!!695765294.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Цзиньхуа</City>
+          <State>Чжэцзян</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.350</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.350</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+        <PromotionPrice>
+          <OriginalPrice>16.80</OriginalPrice>
+          <MarginPrice>40.7</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">386.6</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">386.6</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+        </PromotionPrice>
+      </Item>
+      <Item>
+        <Id>35036532230</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Угги из овчины - Cronene Ruidi новая коллекция Австралия [ 女] сапоги [ 绑带] средние зимние сапоги зимний [女鞋]</Title>
+        <OriginalTitle>蔻瑞迪新款澳洲羊皮毛一体雪地靴 女靴子 绑带中筒冬靴 冬季女鞋</OriginalTitle>
+        <MasterQuantity>292</MasterQuantity>
+        <CategoryId>otc-8390</CategoryId>
+        <ExternalCategoryId>50012028</ExternalCategoryId>
+        <VendorId>蔻瑞迪旗舰店</VendorId>
+        <VendorName>蔻瑞迪旗舰店</VendorName>
+        <VendorScore>12</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=35036532230&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img02.taobaocdn.com/bao/uploaded/i2/TB1h.zXGVXXXXc_XFXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>1280.00</OriginalPrice>
+          <MarginPrice>1897.6</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">18024.7</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">18024.7</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>18 024.70руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>18024.70</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>1280.00</OriginalPrice>
+            <MarginPrice>1881.6</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">17872.7</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">17872.7</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/TB1h.zXGVXXXXc_XFXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/TB1h.zXGVXXXXc_XFXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/TB1h.zXGVXXXXc_XFXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/TB1h.zXGVXXXXc_XFXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/1753055953/TB2SLU6bXXXXXb7XXXXXXXXXXXX_!!1753055953.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/1753055953/TB2SLU6bXXXXXb7XXXXXXXXXXXX_!!1753055953.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/1753055953/TB2SLU6bXXXXXb7XXXXXXXXXXXX_!!1753055953.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/1753055953/TB2SLU6bXXXXXb7XXXXXXXXXXXX_!!1753055953.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/1753055953/TB2qeaZaFXXXXcWXXXXXXXXXXXX_!!1753055953.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/1753055953/TB2qeaZaFXXXXcWXXXXXXXXXXXX_!!1753055953.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/1753055953/TB2qeaZaFXXXXcWXXXXXXXXXXXX_!!1753055953.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/1753055953/TB2qeaZaFXXXXcWXXXXXXXXXXXX_!!1753055953.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/1753055953/T2xXRMXyhaXXXXXXXX_!!1753055953.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/1753055953/T2xXRMXyhaXXXXXXXX_!!1753055953.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/1753055953/T2xXRMXyhaXXXXXXXX_!!1753055953.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/1753055953/T2xXRMXyhaXXXXXXXX_!!1753055953.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/1753055953/TB2LLmWaFXXXXauXpXXXXXXXXXX_!!1753055953.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/1753055953/TB2LLmWaFXXXXauXpXXXXXXXXXX_!!1753055953.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/1753055953/TB2LLmWaFXXXXauXpXXXXXXXXXX_!!1753055953.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/1753055953/TB2LLmWaFXXXXauXpXXXXXXXXXX_!!1753055953.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Чжэньцзян</City>
+          <State>Провинция Цзянсу</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>1.200</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>1.200</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+        <PromotionPrice>
+          <OriginalPrice>328.00</OriginalPrice>
+          <MarginPrice>498.2</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">4732.3</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">4732.3</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+        </PromotionPrice>
+      </Item>
+      <Item>
+        <Id>36692892129</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Накладка на коляску. Корейская. Удерживае тепло. Защищает от снега.</Title>
+        <OriginalTitle>韩国正品婴儿推车罩伞车罩防雾霾防风罩防雨罩防沙罩防寒罩保暖罩</OriginalTitle>
+        <MasterQuantity>1224</MasterQuantity>
+        <CategoryId>otc-1072</CategoryId>
+        <ExternalCategoryId>50013857</ExternalCategoryId>
+        <VendorId>shisuwei6</VendorId>
+        <VendorName>shisuwei6</VendorName>
+        <VendorScore>8</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=36692892129&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img03.taobaocdn.com/bao/uploaded/i3/TB1NcJsFVXXXXcbXpXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>118.00</OriginalPrice>
+          <MarginPrice>189.5</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">1800</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">1800</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>1 800.00руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>1800.00</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>118.00</OriginalPrice>
+            <MarginPrice>173.5</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">1648</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">1648</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/TB1NcJsFVXXXXcbXpXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/TB1NcJsFVXXXXcbXpXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/TB1NcJsFVXXXXcbXpXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/TB1NcJsFVXXXXcbXpXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/186152096/T2HZYjXNFXXXXXXXXX_!!186152096.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/186152096/T2HZYjXNFXXXXXXXXX_!!186152096.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/186152096/T2HZYjXNFXXXXXXXXX_!!186152096.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/186152096/T2HZYjXNFXXXXXXXXX_!!186152096.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/186152096/T2mxzfXJVaXXXXXXXX_!!186152096.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/186152096/T2mxzfXJVaXXXXXXXX_!!186152096.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/186152096/T2mxzfXJVaXXXXXXXX_!!186152096.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/186152096/T2mxzfXJVaXXXXXXXX_!!186152096.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/186152096/T2.7YfXI0XXXXXXXXX_!!186152096.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/186152096/T2.7YfXI0XXXXXXXXX_!!186152096.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/186152096/T2.7YfXI0XXXXXXXXX_!!186152096.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/186152096/T2.7YfXI0XXXXXXXXX_!!186152096.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Цзиньхуа</City>
+          <State>Чжэцзян</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+          <Feature>Original</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.400</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.400</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+      </Item>
+      <Item>
+        <Id>42490186196</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Одежда 2014 зим новая коллекция мужской хлопок Одежды мужской приталенный корейская  версия стоячий воротник зимний удерживающий тепло хлопок Зима одежды стиль куртка хлопок Выровнянная куртка</Title>
+        <OriginalTitle>2014冬装新款男装棉衣男士修身韩版立领冬季保暖棉服冬款外套棉袄</OriginalTitle>
+        <MasterQuantity>4228</MasterQuantity>
+        <CategoryId>otc-56</CategoryId>
+        <ExternalCategoryId>50011165</ExternalCategoryId>
+        <VendorId>驼丹奴旗舰店</VendorId>
+        <VendorName>驼丹奴旗舰店</VendorName>
+        <VendorScore>11</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=42490186196&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img01.taobaocdn.com/bao/uploaded/i1/TB1I7dqGVXXXXcWXFXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>1599.00</OriginalPrice>
+          <MarginPrice>2366.6</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">22479.6</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">22479.6</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>22 479.60руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>22479.60</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>1599.00</OriginalPrice>
+            <MarginPrice>2350.6</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">22327.6</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">22327.6</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/TB1I7dqGVXXXXcWXFXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/TB1I7dqGVXXXXcWXFXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/TB1I7dqGVXXXXcWXFXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/TB1I7dqGVXXXXcWXFXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB285zjbXXXXXXNXXXXXXXXXXXX_!!2089148587.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB285zjbXXXXXXNXXXXXXXXXXXX_!!2089148587.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB285zjbXXXXXXNXXXXXXXXXXXX_!!2089148587.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB285zjbXXXXXXNXXXXXXXXXXXX_!!2089148587.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB2ah2ebXXXXXcrXXXXXXXXXXXX_!!2089148587.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB2ah2ebXXXXXcrXXXXXXXXXXXX_!!2089148587.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB2ah2ebXXXXXcrXXXXXXXXXXXX_!!2089148587.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB2ah2ebXXXXXcrXXXXXXXXXXXX_!!2089148587.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB2Dv_ibXXXXXa2XXXXXXXXXXXX_!!2089148587.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB2Dv_ibXXXXXa2XXXXXXXXXXXX_!!2089148587.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB2Dv_ibXXXXXa2XXXXXXXXXXXX_!!2089148587.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/2089148587/TB2Dv_ibXXXXXa2XXXXXXXXXXXX_!!2089148587.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/2089148587/TB2k1f.bXXXXXXBXpXXXXXXXXXX_!!2089148587.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/2089148587/TB2k1f.bXXXXXXBXpXXXXXXXXXX_!!2089148587.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/2089148587/TB2k1f.bXXXXXXBXpXXXXXXXXXX_!!2089148587.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/2089148587/TB2k1f.bXXXXXXBXpXXXXXXXXXX_!!2089148587.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Сучжоу</City>
+          <State>Провинция Цзянсу</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.800</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.800</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+        <PromotionPrice>
+          <OriginalPrice>238.00</OriginalPrice>
+          <MarginPrice>365.9</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">3475.6</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">3475.6</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+        </PromotionPrice>
+      </Item>
+      <Item>
+        <Id>41841748604</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>2014 зимний новая коллекция замшевый утепленный Knits вне кальсон для того чтобы положить дальше очевидно тонкую tootsy ткань пояса эластичные удерживающий тепло осень-зима стиль Женские брюки</Title>
+        <OriginalTitle>2014冬季新款加绒加厚打底裤外穿显瘦小脚带绒弹力保暖秋冬款女裤</OriginalTitle>
+        <MasterQuantity>795</MasterQuantity>
+        <CategoryId>otc-11</CategoryId>
+        <ExternalCategoryId>50007068</ExternalCategoryId>
+        <VendorId>娇姿曲线旗舰店</VendorId>
+        <VendorName>娇姿曲线旗舰店</VendorName>
+        <VendorScore>12</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=41841748604&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img01.taobaocdn.com/bao/uploaded/i1/TB1v7rmGpXXXXXraXXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>278.00</OriginalPrice>
+          <MarginPrice>424.7</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">4034.1</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">4034.1</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>4 034.10руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>4034.10</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>278.00</OriginalPrice>
+            <MarginPrice>408.7</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">3882.1</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">3882.1</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/TB1v7rmGpXXXXXraXXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/TB1v7rmGpXXXXXraXXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/TB1v7rmGpXXXXXraXXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/TB1v7rmGpXXXXXraXXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/TB1P0H7GXXXXXcmXVXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/TB1P0H7GXXXXXcmXVXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/TB1P0H7GXXXXXcmXVXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/TB1P0H7GXXXXXcmXVXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/1762190769/TB2gvSWbXXXXXaBXpXXXXXXXXXX_!!1762190769.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/1762190769/TB2gvSWbXXXXXaBXpXXXXXXXXXX_!!1762190769.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/1762190769/TB2gvSWbXXXXXaBXpXXXXXXXXXX_!!1762190769.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/1762190769/TB2gvSWbXXXXXaBXpXXXXXXXXXX_!!1762190769.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/1762190769/TB2NTm8bXXXXXXdXXXXXXXXXXXX_!!1762190769.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/1762190769/TB2NTm8bXXXXXXdXXXXXXXXXXXX_!!1762190769.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/1762190769/TB2NTm8bXXXXXXdXXXXXXXXXXXX_!!1762190769.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/1762190769/TB2NTm8bXXXXXXdXXXXXXXXXXXX_!!1762190769.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/1762190769/TB2sellaVXXXXXiXpXXXXXXXXXX_!!1762190769.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/1762190769/TB2sellaVXXXXXiXpXXXXXXXXXX_!!1762190769.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/1762190769/TB2sellaVXXXXXiXpXXXXXXXXXX_!!1762190769.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/1762190769/TB2sellaVXXXXXiXpXXXXXXXXXX_!!1762190769.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Шаньтоу</City>
+          <State>Гуандун</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+          <Feature>Discount</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.350</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.350</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+      </Item>
+      <Item>
+        <Id>40653709094</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>[韩巢 ] замшевый утепленный зимний [打底裤] женский большой размер удерживающий тепло Брюки корейская  версия Влажное снаружи одежды падения очевидно тонкое кладет дальше женщину</Title>
+        <OriginalTitle>韩巢 加绒加厚冬季打底裤女士大码保暖裤韩版潮秋装显瘦外穿 女</OriginalTitle>
+        <MasterQuantity>59821</MasterQuantity>
+        <CategoryId>otc-11</CategoryId>
+        <ExternalCategoryId>50007068</ExternalCategoryId>
+        <VendorId>hanchao韩巢旗舰店</VendorId>
+        <VendorName>hanchao韩巢旗舰店</VendorName>
+        <VendorScore>16</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=40653709094&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img01.taobaocdn.com/bao/uploaded/i1/TB1WGJmGFXXXXXNaXXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>139.00</OriginalPrice>
+          <MarginPrice>220.4</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">2093.6</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">2093.6</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>2 093.60руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>2093.60</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>139.00</OriginalPrice>
+            <MarginPrice>204.4</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">1941.6</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">1941.6</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/TB1WGJmGFXXXXXNaXXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/TB1WGJmGFXXXXXNaXXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/TB1WGJmGFXXXXXNaXXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/TB1WGJmGFXXXXXNaXXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/TB1JXaBGFXXXXXyXpXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/TB1JXaBGFXXXXXyXpXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/TB1JXaBGFXXXXXyXpXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/TB1JXaBGFXXXXXyXpXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/2011877378/TB2waxiaVXXXXc1XXXXXXXXXXXX_!!2011877378.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/2011877378/TB2waxiaVXXXXc1XXXXXXXXXXXX_!!2011877378.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/2011877378/TB2waxiaVXXXXc1XXXXXXXXXXXX_!!2011877378.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/2011877378/TB2waxiaVXXXXc1XXXXXXXXXXXX_!!2011877378.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/TB1FTw6FVXXXXXaXVXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/TB1FTw6FVXXXXXaXVXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/TB1FTw6FVXXXXXaXVXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/TB1FTw6FVXXXXXaXVXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/2011877378/TB27w5haVXXXXbmXpXXXXXXXXXX_!!2011877378.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/2011877378/TB27w5haVXXXXbmXpXXXXXXXXXX_!!2011877378.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/2011877378/TB27w5haVXXXXbmXpXXXXXXXXXX_!!2011877378.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/2011877378/TB27w5haVXXXXbmXpXXXXXXXXXX_!!2011877378.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Цзиньхуа</City>
+          <State>Чжэцзян</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+          <Feature>Discount</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.350</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.350</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+        <PromotionPrice>
+          <OriginalPrice>16.90</OriginalPrice>
+          <MarginPrice>40.9</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">388.5</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">388.5</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+        </PromotionPrice>
+      </Item>
+      <Item>
+        <Id>42361612046</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>IFZ хлопок Одежды мужской куртка 2014 новая коллекция корейская  версия мужской Соединять утепленный зимний стоячий воротник приталенный хлопок Одежда мужской</Title>
+        <OriginalTitle>IFZ棉衣男装外套2014新款韩版男士拼接加厚冬季立领修身棉服男</OriginalTitle>
+        <MasterQuantity>10017</MasterQuantity>
+        <CategoryId>otc-56</CategoryId>
+        <ExternalCategoryId>50011165</ExternalCategoryId>
+        <VendorId>ifz旗舰店</VendorId>
+        <VendorName>ifz旗舰店</VendorName>
+        <VendorScore>11</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=42361612046&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img03.taobaocdn.com/bao/uploaded/i3/TB1espyGXXXXXcPaXXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>668.00</OriginalPrice>
+          <MarginPrice>998</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">9479.7</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">9479.7</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>9 479.70руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>9479.70</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>668.00</OriginalPrice>
+            <MarginPrice>982</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">9327.7</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">9327.7</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/TB1espyGXXXXXcPaXXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/TB1espyGXXXXXcPaXXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/TB1espyGXXXXXcPaXXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/TB1espyGXXXXXcPaXXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/2132764428/TB2Ium0bXXXXXXQXpXXXXXXXXXX_!!2132764428.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/2132764428/TB2Ium0bXXXXXXQXpXXXXXXXXXX_!!2132764428.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/2132764428/TB2Ium0bXXXXXXQXpXXXXXXXXXX_!!2132764428.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/2132764428/TB2Ium0bXXXXXXQXpXXXXXXXXXX_!!2132764428.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/2132764428/TB2pAG0bXXXXXX8XpXXXXXXXXXX_!!2132764428.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/2132764428/TB2pAG0bXXXXXX8XpXXXXXXXXXX_!!2132764428.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/2132764428/TB2pAG0bXXXXXX8XpXXXXXXXXXX_!!2132764428.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/2132764428/TB2pAG0bXXXXXX8XpXXXXXXXXXX_!!2132764428.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/2132764428/TB2Kgq1bXXXXXXEXpXXXXXXXXXX_!!2132764428.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/2132764428/TB2Kgq1bXXXXXXEXpXXXXXXXXXX_!!2132764428.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/2132764428/TB2Kgq1bXXXXXXEXpXXXXXXXXXX_!!2132764428.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/2132764428/TB2Kgq1bXXXXXXEXpXXXXXXXXXX_!!2132764428.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/2132764428/TB2uq19bXXXXXX9XXXXXXXXXXXX_!!2132764428.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/2132764428/TB2uq19bXXXXXX9XXXXXXXXXXXX_!!2132764428.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/2132764428/TB2uq19bXXXXXX9XXXXXXXXXXXX_!!2132764428.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/2132764428/TB2uq19bXXXXXX9XXXXXXXXXXXX_!!2132764428.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Пекин</City>
+          <State>Пекин</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+          <Feature>Discount</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.800</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.800</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+        <PromotionPrice>
+          <OriginalPrice>199.00</OriginalPrice>
+          <MarginPrice>308.6</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">2931.3</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">2931.3</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+        </PromotionPrice>
+      </Item>
+      <Item>
+        <Id>26882364062</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Зимняя муфта для рук для прогулки с ребенком зимой на коляске</Title>
+        <OriginalTitle>包邮外贸原单德国t婴儿手推车通用防寒高级保暖手套防冻加绒手套</OriginalTitle>
+        <MasterQuantity>240</MasterQuantity>
+        <CategoryId>otc-1072</CategoryId>
+        <ExternalCategoryId>50013857</ExternalCategoryId>
+        <VendorId>kuochiahung88</VendorId>
+        <VendorName>kuochiahung88</VendorName>
+        <VendorScore>9</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=26882364062&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img02.taobaocdn.com/bao/uploaded/i2/T1lPUdFg8cXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>108.00</OriginalPrice>
+          <MarginPrice>174.8</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">1660.4</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">1660.4</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>1 660.40руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>1660.40</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>108.00</OriginalPrice>
+            <MarginPrice>158.8</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">1508.4</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">1508.4</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/T1lPUdFg8cXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/T1lPUdFg8cXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/T1lPUdFg8cXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/T1lPUdFg8cXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/1619772882/T2yC83Xv0aXXXXXXXX_!!1619772882.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/1619772882/T2yC83Xv0aXXXXXXXX_!!1619772882.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/1619772882/T2yC83Xv0aXXXXXXXX_!!1619772882.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/1619772882/T2yC83Xv0aXXXXXXXX_!!1619772882.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/1619772882/T2JnN9XzhXXXXXXXXX_!!1619772882.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/1619772882/T2JnN9XzhXXXXXXXXX_!!1619772882.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/1619772882/T2JnN9XzhXXXXXXXXX_!!1619772882.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/1619772882/T2JnN9XzhXXXXXXXXX_!!1619772882.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Дунгуань</City>
+          <State>Гуандун</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.400</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.400</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+        <PromotionPrice>
+          <OriginalPrice>48.00</OriginalPrice>
+          <MarginPrice>86.6</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">822.6</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">822.6</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+        </PromotionPrice>
+      </Item>
+      <Item>
+        <Id>37327665407</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Воздухопроницаемый для влюбленной пары Обувает лето 2014 новая коллекция Студент кеды мужской Мертвый удар обувает женщину корейская  версия Педаль ноги прилива для отдыха Ботинки</Title>
+        <OriginalTitle>透气情侣鞋夏季2014新款学生帆布鞋男懒人鞋女韩版潮一脚蹬休闲鞋</OriginalTitle>
+        <MasterQuantity>159</MasterQuantity>
+        <CategoryId>otc-225</CategoryId>
+        <ExternalCategoryId>50011744</ExternalCategoryId>
+        <VendorId>布兰登鞋类专营店</VendorId>
+        <VendorName>布兰登鞋类专营店</VendorName>
+        <VendorScore>11</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=37327665407&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img03.taobaocdn.com/bao/uploaded/i3/T1pIPlFAXbXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>169.00</OriginalPrice>
+          <MarginPrice>264.5</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">2512.4</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">2512.4</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>2 512.40руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>2512.40</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>169.00</OriginalPrice>
+            <MarginPrice>248.5</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">2360.4</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">2360.4</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/T1pIPlFAXbXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/T1pIPlFAXbXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/T1pIPlFAXbXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/T1pIPlFAXbXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/1849839636/T2iBDtXqdXXXXXXXXX_!!1849839636.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/1849839636/T2iBDtXqdXXXXXXXXX_!!1849839636.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/1849839636/T2iBDtXqdXXXXXXXXX_!!1849839636.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/1849839636/T2iBDtXqdXXXXXXXXX_!!1849839636.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T25_vdXD0XXXXXXXXX_!!1849839636.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T25_vdXD0XXXXXXXXX_!!1849839636.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T25_vdXD0XXXXXXXXX_!!1849839636.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T25_vdXD0XXXXXXXXX_!!1849839636.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T29sHoXAVXXXXXXXXX_!!1849839636.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T29sHoXAVXXXXXXXXX_!!1849839636.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T29sHoXAVXXXXXXXXX_!!1849839636.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T29sHoXAVXXXXXXXXX_!!1849839636.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T2ji_nXrdaXXXXXXXX_!!1849839636.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T2ji_nXrdaXXXXXXXX_!!1849839636.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T2ji_nXrdaXXXXXXXX_!!1849839636.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/1849839636/T2ji_nXrdaXXXXXXXX_!!1849839636.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Цюаньчжоу</City>
+          <State>Провинция Фуцзянь</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+          <Feature>Discount</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.800</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.800</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+      </Item>
+      <Item>
+        <Id>37225578672</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Ходы бикини De'an вентилятора над gauze/to связывают юбку европейский стиль Seashore сексуального тюрбана пляжа песка костюма заплыва женский принимает связям каникулы марлю ультра большую</Title>
+        <OriginalTitle>范德安 比基尼披纱/裹裙 欧美性感泳衣沙滩巾 女海边度假裹纱超大</OriginalTitle>
+        <MasterQuantity>531</MasterQuantity>
+        <CategoryId>otc-1346</CategoryId>
+        <ExternalCategoryId>50016743</ExternalCategoryId>
+        <VendorId>balneaire旗舰店</VendorId>
+        <VendorName>balneaire旗舰店</VendorName>
+        <VendorScore>13</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=37225578672&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img01.taobaocdn.com/bao/uploaded/i1/TB1TtbXGVXXXXbNXFXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>148.00</OriginalPrice>
+          <MarginPrice>233.6</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">2218.9</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">2218.9</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>2 218.90руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>2218.90</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>148.00</OriginalPrice>
+            <MarginPrice>217.6</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">2066.9</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">2066.9</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/TB1TtbXGVXXXXbNXFXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/TB1TtbXGVXXXXbNXFXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/TB1TtbXGVXXXXbNXFXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/TB1TtbXGVXXXXbNXFXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/730250365/T2zn58XuNaXXXXXXXX_!!730250365.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/730250365/T2zn58XuNaXXXXXXXX_!!730250365.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/730250365/T2zn58XuNaXXXXXXXX_!!730250365.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/730250365/T2zn58XuNaXXXXXXXX_!!730250365.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/730250365/T2dQS_XqVXXXXXXXXX_!!730250365.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/730250365/T2dQS_XqVXXXXXXXXX_!!730250365.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/730250365/T2dQS_XqVXXXXXXXXX_!!730250365.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/730250365/T2dQS_XqVXXXXXXXXX_!!730250365.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/730250365/T2sZKgXO4XXXXXXXXX-730250365.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/730250365/T2sZKgXO4XXXXXXXXX-730250365.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/730250365/T2sZKgXO4XXXXXXXXX-730250365.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/730250365/T2sZKgXO4XXXXXXXXX-730250365.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img01.taobaocdn.com/bao/uploaded/i1/730250365/T2luOfXG4aXXXXXXXX-730250365.jpg</Url>
+            <Small Width="100" Height="100">http://img01.taobaocdn.com/bao/uploaded/i1/730250365/T2luOfXG4aXXXXXXXX-730250365.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img01.taobaocdn.com/bao/uploaded/i1/730250365/T2luOfXG4aXXXXXXXX-730250365.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img01.taobaocdn.com/bao/uploaded/i1/730250365/T2luOfXG4aXXXXXXXX-730250365.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Пекин</City>
+          <State>Пекин</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+          <Feature>Discount</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.200</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.200</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+        <PromotionPrice>
+          <OriginalPrice>136.16</OriginalPrice>
+          <MarginPrice>216.2</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">2053.7</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">2053.7</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+        </PromotionPrice>
+      </Item>
+      <Item>
+        <Id>36323992271</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Корейский MANITO на младенца Тележка удерживающий тепло накладка Против корабля дождя пыльной бури накладка Комплект ноги вообще подходящий высокомарочного корабля города товаров накладка</Title>
+        <OriginalTitle>韩国MANITO婴儿推车保暖罩防风沙雨车罩脚套通用配件精品城市车罩</OriginalTitle>
+        <MasterQuantity>741</MasterQuantity>
+        <CategoryId>otc-1072</CategoryId>
+        <ExternalCategoryId>50013857</ExternalCategoryId>
+        <VendorId>rosemari</VendorId>
+        <VendorName>rosemari</VendorName>
+        <VendorScore>10</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=36323992271&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img04.taobaocdn.com/bao/uploaded/i4/TB1_ixoGFXXXXaFaXXXXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>378.00</OriginalPrice>
+          <MarginPrice>571.7</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">5430.4</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">5430.4</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>5 430.40руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>5430.40</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>378.00</OriginalPrice>
+            <MarginPrice>555.7</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">5278.4</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">5278.4</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/TB1_ixoGFXXXXaFaXXXXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/TB1_ixoGFXXXXaFaXXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/TB1_ixoGFXXXXaFaXXXXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/TB1_ixoGFXXXXaFaXXXXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/T1Trx9FrFcXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/T1Trx9FrFcXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/T1Trx9FrFcXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/T1Trx9FrFcXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/72459042/T26hK3XwdaXXXXXXXX_!!72459042.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/72459042/T26hK3XwdaXXXXXXXX_!!72459042.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/72459042/T26hK3XwdaXXXXXXXX_!!72459042.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/72459042/T26hK3XwdaXXXXXXXX_!!72459042.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/72459042/T2Pi0VXqpaXXXXXXXX_!!72459042.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/72459042/T2Pi0VXqpaXXXXXXXX_!!72459042.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/72459042/T2Pi0VXqpaXXXXXXXX_!!72459042.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/72459042/T2Pi0VXqpaXXXXXXXX_!!72459042.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/T17oMUFaFaXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/T17oMUFaFaXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/T17oMUFaFaXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/T17oMUFaFaXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Пекин</City>
+          <State>Пекин</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+          <Feature>Discount</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.400</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.400</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+      </Item>
+      <Item>
+        <Id>39116079466</Id>
+        <ErrorCode>Ok</ErrorCode>
+        <HasError>false</HasError>
+        <ProviderType>Taobao</ProviderType>
+        <Title>Одежда команды одежды 2014 спортов бразильского вентилятора тенниски кубка мира полная имеет выполнено на заказ чествование беспрокладочная верхняя одежда Германия Голланди мужской короткий рукав комплект</Title>
+        <OriginalTitle>2014巴西世界 杯t恤球迷足球衣队服定制纪念衫德国荷兰男短袖套装</OriginalTitle>
+        <MasterQuantity>9128</MasterQuantity>
+        <CategoryId>otc-47</CategoryId>
+        <ExternalCategoryId>50000436</ExternalCategoryId>
+        <VendorId>stormra旗舰店</VendorId>
+        <VendorName>stormra旗舰店</VendorName>
+        <VendorScore>12</VendorScore>
+        <TaobaoItemUrl>http://item.taobao.com/item.htm?id=39116079466&amp;spm=2014.21361915.0.0</TaobaoItemUrl>
+        <MainPictureUrl>http://img04.taobaocdn.com/bao/uploaded/i4/T15m_nFpFiXXXXXXXX_!!0-item_pic.jpg</MainPictureUrl>
+        <StuffStatus>New</StuffStatus>
+        <Volume>0</Volume>
+        <Price>
+          <OriginalPrice>158.00</OriginalPrice>
+          <MarginPrice>248.3</MarginPrice>
+          <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+          <ConvertedPriceList>
+            <Internal Sign="руб." Code="RUB">2358.6</Internal>
+            <DisplayedMoneys>
+              <Money Sign="руб." Code="RUB">2358.6</Money>
+            </DisplayedMoneys>
+          </ConvertedPriceList>
+          <ConvertedPrice>2 358.60руб.</ConvertedPrice>
+          <ConvertedPriceWithoutSign>2358.60</ConvertedPriceWithoutSign>
+          <CurrencySign>руб.</CurrencySign>
+          <CurrencyName>RUB</CurrencyName>
+          <IsDeliverable>false</IsDeliverable>
+          <DeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </DeliveryPrice>
+          <OneItemDeliveryPrice>
+            <OriginalPrice>0</OriginalPrice>
+            <MarginPrice>16</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">152</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">152</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </OneItemDeliveryPrice>
+          <PriceWithoutDelivery>
+            <OriginalPrice>158.00</OriginalPrice>
+            <MarginPrice>232.3</MarginPrice>
+            <OriginalCurrencyCode>CNY</OriginalCurrencyCode>
+            <ConvertedPriceList>
+              <Internal Sign="руб." Code="RUB">2206.6</Internal>
+              <DisplayedMoneys>
+                <Money Sign="руб." Code="RUB">2206.6</Money>
+              </DisplayedMoneys>
+            </ConvertedPriceList>
+          </PriceWithoutDelivery>
+        </Price>
+        <Pictures>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/T15m_nFpFiXXXXXXXX_!!0-item_pic.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/T15m_nFpFiXXXXXXXX_!!0-item_pic.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/T15m_nFpFiXXXXXXXX_!!0-item_pic.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/T15m_nFpFiXXXXXXXX_!!0-item_pic.jpg_600x600.jpg</Large>
+            <IsMain>true</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/726406396/T20WdNX.XXXXXXXXXX_!!726406396.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/726406396/T20WdNX.XXXXXXXXXX_!!726406396.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/726406396/T20WdNX.XXXXXXXXXX_!!726406396.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/726406396/T20WdNX.XXXXXXXXXX_!!726406396.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img03.taobaocdn.com/bao/uploaded/i3/726406396/T20YpQXW4XXXXXXXXX_!!726406396.jpg</Url>
+            <Small Width="100" Height="100">http://img03.taobaocdn.com/bao/uploaded/i3/726406396/T20YpQXW4XXXXXXXXX_!!726406396.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img03.taobaocdn.com/bao/uploaded/i3/726406396/T20YpQXW4XXXXXXXXX_!!726406396.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img03.taobaocdn.com/bao/uploaded/i3/726406396/T20YpQXW4XXXXXXXXX_!!726406396.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img02.taobaocdn.com/bao/uploaded/i2/726406396/T2wNxNX68XXXXXXXXX_!!726406396.jpg</Url>
+            <Small Width="100" Height="100">http://img02.taobaocdn.com/bao/uploaded/i2/726406396/T2wNxNX68XXXXXXXXX_!!726406396.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img02.taobaocdn.com/bao/uploaded/i2/726406396/T2wNxNX68XXXXXXXXX_!!726406396.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img02.taobaocdn.com/bao/uploaded/i2/726406396/T2wNxNX68XXXXXXXXX_!!726406396.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+          <ItemPicture>
+            <Url>http://img04.taobaocdn.com/bao/uploaded/i4/726406396/T2ST4KX0RaXXXXXXXX_!!726406396.jpg</Url>
+            <Small Width="100" Height="100">http://img04.taobaocdn.com/bao/uploaded/i4/726406396/T2ST4KX0RaXXXXXXXX_!!726406396.jpg_100x100.jpg</Small>
+            <Medium Width="310" Height="310">http://img04.taobaocdn.com/bao/uploaded/i4/726406396/T2ST4KX0RaXXXXXXXX_!!726406396.jpg_310x310.jpg</Medium>
+            <Large Width="600" Height="600">http://img04.taobaocdn.com/bao/uploaded/i4/726406396/T2ST4KX0RaXXXXXXXX_!!726406396.jpg_600x600.jpg</Large>
+            <IsMain>false</IsMain>
+          </ItemPicture>
+        </Pictures>
+        <Location>
+          <City>Линьи</City>
+          <State>Шаньдун</State>
+        </Location>
+        <Features>
+          <Feature>Tmall</Feature>
+          <Feature>Discount</Feature>
+        </Features>
+        <IsSellAllowed>true</IsSellAllowed>
+        <ApproxWeight>0.300</ApproxWeight>
+        <PhysicalParameters>
+          <ApproxWeight>0.300</ApproxWeight>
+        </PhysicalParameters>
+        <IsFiltered>false</IsFiltered>
+        <FilterReasons/>
+      </Item>
+    </Content>
+  </Content>
+</OtapiItemInfoRatingListAnswer>

@@ -1,0 +1,127 @@
+<?php
+
+class Register extends GenerateBlock
+{
+    protected $_cache = false; //- кэшируем или нет.
+    protected $_life_time = 3600; //- время на которое будем кешировать
+    protected $_template = 'register'; //- шаблон, на основе которого будем собирать блок
+    protected $_template_path = '/users/';
+
+    public function __construct()
+    {
+        parent::__construct(true);
+    }
+
+    private function xmlParams($fields){
+        $xml = new SimpleXMLElement('<UserRegistrationData></UserRegistrationData>');
+        $xml->addChild('Email', htmlspecialchars($fields['email']));
+        $xml->addChild('Password', $fields['password']);
+        $xml->addChild('Login', $fields['username']);
+        
+        return $xml->asXML();
+    }
+    
+    private function validateFields($fields){
+        if(!$fields['username'])
+            return array(false, Lang::get('not_entered_login'), '');
+        if(!$fields['agree'])
+            return array(false, Lang::get('not_agree_with_user_agreement'), '');
+        if(!$fields['email'])
+            return array(false, Lang::get('not_entered_email'), '');
+        if(!filter_var($fields['email'], FILTER_VALIDATE_EMAIL))
+            return array(false, Lang::get('incorrect_email'), '');
+        if(!$fields['password'])
+            return array(false, Lang::get('not_entered_password'), '');
+        if(strlen($fields['password'])<6)
+            return array(false, Lang::get('pass_min_len'), '');
+        
+        return false;
+    }
+    
+    private function checkCaptcha($fields){
+        $captchapath = dirname(dirname(__FILE__)).'/lib/securimage/securimage.php';
+        require_once $captchapath;
+        $securimage = new Securimage();
+
+        if ($securimage->check($fields['ct_captcha']) == false) {
+            return array(false, Lang::get('not_entered_code'));
+        }
+        
+        return false;
+    }
+    
+    private function processReg($fields){
+        global $otapilib;
+        
+        $error = $this->validateFields($fields);
+        if($error) return $error;
+        
+        $error = $this->checkCaptcha($fields);
+        if($error) return $error;
+        
+        $xmlParams = str_replace('<?xml version="1.0"?>', '', $this->xmlParams($fields));
+        $reg = $otapilib->RegisterUser($xmlParams);
+        
+        if(!$reg){
+            if((string)$otapilib->error_message=='Login is already used')
+                return array(false, Lang::get('used_login_mail'), '');
+            else
+                return array(false, $otapilib->error_message, '');
+        }
+        
+        return array(true, Lang::get('reg_success'), '');
+    }
+    
+    private function sendEmail($email, $username, $password){
+        $block = new RegisterEmail();
+        mail($email, 'Регистрационные данные', $block->Generate(array($username, $password)), "Content-Type: text/html; charset=\"utf-8\"".
+                                                                                                "From: Интернет-магазин Taozon <noreply@taozon.ru>");
+        /*try{
+            require dirname(dirname(__FILE__)).'/lib/phpmailer/class.phpmailer.php';
+            $mail = new PHPMailer;
+            $mail->Subject = 'Регистрационные данные';
+            $mail->From = 'noreply@'.preg_replace('/^www\./','',$_SERVER['HTTP_HOST']);
+            $mail->FromName = CFG_SITE_NAME;
+            $mail->IsHTML(true);
+            $mail->CharSet = 'utf-8';
+            
+            $block = new RegisterEmail();
+            $mail->Body = $block->Generate(array($username, $password));
+            
+            $mail->AddAddress($email);
+            $res = $mail->Send();
+        }
+        catch(phpmailerException $e){
+            //print $e->getMessage();
+        }*/
+    }
+    
+    protected function setVars()
+    {
+        $error = '';
+        
+        if(isset($_GET['debug']))
+            $this->sendEmail('dgrachikov@gmail.com', 'dsfdsf', 'dfsgdsfgds');
+        
+        if($_POST){
+            list($success, $error, $errorcaptcha) = $this->processReg($_POST);
+            if(!$success){
+                $this->tpl->assign('username', $_POST['username']);
+                $this->tpl->assign('email', $_POST['email']);
+                
+                $this->tpl->assign('error', $error);
+                $this->tpl->assign('errorcaptcha', $errorcaptcha);
+            }
+            else{
+                $this->sendEmail($_POST['email'], $_POST['username'], $_POST['password']);
+                Users::Login($_POST);
+                header('Location: index.php?p=content&mode=reg_success');
+            }
+        }
+        if($_SERVER['HTTP_REFERER'] != $_SERVER['REQUEST_URI']){
+            $_SESSION['register_from'] = $_SERVER['HTTP_REFERER'];
+        }
+    }
+}
+
+?>

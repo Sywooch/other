@@ -1,0 +1,111 @@
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+
+<div class="bigtitle"><div class="wrap clrfix">
+        <h1><?=Lang::get('reg_order')?>: <?=Lang::get('weight_calc')?></h1>
+    </div></div>	
+
+<div id="dialog" title="<?=Lang::get('warning')?>" style="display:none;">
+  <?=Lang::get('weight_is_not_correct')?>
+</div>
+
+<!-- .main -->
+<div class="main"><div class="wrap clrfix">
+        <div class="bproduct" id="overlay-wrapper">
+            <div id="overlay"></div>
+            <h2 class="mb10"><span><?=Lang::get('goods_list')?></span></h2>
+            
+            <? if(count($list)) {?>
+                    <div id="sign" style="display: none"><?=Lang::get('kg').'.'?></div>
+                    <table class="basket tsimple notepad">   
+                        <thead>
+                            <tr>
+                                <td class="w80"><?=Lang::get('good')?></td>
+                                <td width="40%"><?=Lang::get('original')?></td>
+                                <td width="12%"><?=Lang::get('configuration')?></td>
+                                <td class="td4" width="10%"><?=Lang::get('unit_weight')?></td>
+                                <td align="center" width="10%"><?=Lang::get('quantity')?></td>
+                                <td width="15%"><?=Lang::get('total_weight')?></td>
+                            </tr>					
+                        </thead>
+                        <tbody>
+			    <? $total_w = 0; ?>
+                            <? $sign = ''; ?>
+                            <? $sign = ' '.Lang::get('kg').'.'; ?>
+                            <? foreach ($list as $item) { ?>
+                            <?
+                            foreach($item['Fields'] as $field){
+                                $paramName = (string)$field['Name'];
+                                $item[$paramName] = (string)$field['Value'];
+                            }
+                            ?>
+                            <? $total_w += $item['Quantity']*$item['Weight'];?>
+                            <tr id="item<?=$item['ItemId']?>">
+                                <td>
+                                    <ul class="lproduct w80li">
+                                        <li>
+                                            <a href="index.php?p=item&id=<?=$item['ItemId'];?>" class="pic" title="<?=$item['ItemTitle'];?>" alt="<?=$item['ItemTitle'];?>">
+                                                <i><img src="<?=$item['PictureURL'];?>_70x70.jpg"></i>
+                                                <ins></ins>
+                                            </a>
+                                        </li>	
+                                    </ul>
+                                </td>
+                                <td>
+                                    <p class="mb5 lblue"><a title="<?=$item['ItemTitle'];?>" alt="<?=$item['ItemTitle'];?>" href="index.php?p=item&id=<?=$item['ItemId'];?>"><b><?=$item['ItemTitle'];?> </b></a></p>
+                                    <p class="mb5"><span class="lgray"><?=Lang::get('vendor')?></span> <a href="index.php?p=vendor&id=<?=$item['VendorId'];?>" title="<?=$item['VendorId'];?>" alt="<?=$item['VendorId'];?>"><b><?=$item['VendorId'];?></b></a></p>
+                                    <p class="mb5"><span class="lgray"><?=Lang::get('category')?></span> <a href="index.php?p=category&cid=<?=$item['CategoryId']?>" alt="<?=$item['CategoryName']?>" title="<?=$item['CategoryName']?>"><b><?=$item['CategoryName']?></b></a></p>
+                                </td>
+                                <td>
+                                    <table class="info infoitem">
+                                        <? if (isset($item['ItemConfiguration'])) { ?>
+                                            <? foreach(explode(';', $item['ItemConfiguration']) as $cfg){ ?>
+                                                <? if($cfg) {?>
+                                                <tr>
+                                                    <? $configArray = explode(':',$cfg); ?>
+                                                    <td class="lgray"><?= current($configArray); ?>:</td>
+                                                    <td><b><?= end($configArray); ?></b></td>
+                                                </tr>
+                                                <? } ?>
+                                            <? } ?>
+                                        <? } ?>
+                                    </table>	
+                                </td>
+                                <td class="tagc"><input type="text" size="5" class="change-weight" itemid="<?=$item['Id'];?>" value="<?=$item['Weight']?>"></td>
+                                <td class="tagc"><?=$item['Quantity']?></td>
+                                <td class="row-weight" itemid="<?=$item['Id'];?>"><? echo round($item['Quantity']*$item['Weight'],2).' '.$sign; ?></td>
+                            </tr>
+                            <? } ?>
+                            <tr class="bdb0">
+                                <td colspan="5"></td>
+                                <td>
+                                    <strong><?=Lang::get('total')?>:&nbsp;</strong><span id="total_w"><? echo ' '.round($total_w, 2).' '.$sign;?></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bgr-panel mt20">
+                        <a href="<?=@UrlGenerator::generateContentUrl('basket')?>" class="btn-apper fll"><?=Lang::get('back')?></a>
+                        <a href="index.php?p=userorder&step2" id="next" class="btn flr"><?=Lang::get('continue')?></a>
+                    </div>
+            <? } else { ?>
+                <h3> <?=Lang::get('empty_cart')?> </h3>
+            <? } ?>
+        </div>
+    </div></div>
+<!-- /.main -->
+
+<script language="JavaScript">
+$(function() 
+{
+    $("#dialog:ui-dialog").dialog( "destroy" );
+    $("#dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons : {
+            "<?=Lang::get('ok')?>" : function() {
+                $(this).dialog("close");
+            }
+        }
+    });
+});
+</script>

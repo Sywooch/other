@@ -1,0 +1,96 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'default')?>"><?=LangAdmin::get('Configuration')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'system')?>"><?=LangAdmin::get('system')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('update')?></li>
+</ul><!--/.breadcrumb-->
+
+<? require TPL_ABSOLUTE_PATH . 'site_config/inc/tabs.php'; ?>
+
+<!-- ot-sub-sub-nav -->
+<div class="tabbable ot_sub_sub_nav">
+    <ul class="nav nav-pills">
+        <li <? if($PageUrl->GetAction() == 'system'){ ?>class="active"<?} ?>>
+            <a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'system')?>">
+                <?=LangAdmin::get('General')?>
+            </a>
+        </li>
+<!--
+        <li <? if($PageUrl->GetCmd() == 'cache'){ ?>class="active"<?} ?>>
+            <a href="<?=$PageUrl->AssignCmdAndDo('CacheSettings', 'default')?>">
+                <?=LangAdmin::get('Caching')?>
+            </a>
+        </li>
+-->
+        <li <? if($PageUrl->GetCmd() == 'Update'){ ?>class="active"<?} ?>>
+            <a href="<?=$PageUrl->AssignCmdAndDo('Update', 'default')?>">
+                <?=LangAdmin::get('Update')?>
+            </a>
+        </li>
+    </ul>
+</div><!-- /ot-sub-sub-nav -->
+
+<h1><?=LangAdmin::get('update')?>  <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-content="<?=LangAdmin::get('Update_warning')?>" title=""></i></h1>
+
+
+<div class="well">
+
+    <!-- В ситуации, когда текущая версия устарела и есть версия для обновления -->
+    <h3><?=LangAdmin::get('Automatic_update')?></h3>
+
+    <? if($allowUpdate === 'Ok'){ ?>
+        <p><strong class="label label-info"><?=$currentVersion ? $currentVersion->Version[0]->Number : LangAdmin::get('Undefined')?></strong> — <?=LangAdmin::get('current_version')?></p>
+        <p><strong class="label label-success" title="<?=LangAdmin::get('Update_available')?>"><?=$versions->Version[0]->Number?></strong> — <?=LangAdmin::get('last_available_version_for_update')?> (<a herf="#" data-target=".collapse-chengelog-111" data-toggle="collapse" class="blink"><?=LangAdmin::get('change_log')?></a>)</p>
+         <?=(!empty($updateNotice) ? '<p>' . $updateNotice . '</p>' : '');?>
+    <? } else { ?>
+        <p><strong class="label label-info"><?=$currentVersion ? $currentVersion->Version[0]->Number : LangAdmin::get('Undefined')?></strong> — <?=LangAdmin::get('current_version')?></p>
+        <p><strong class="label label-important"><?=$versions->Version[0]->Number?></strong> — <?=LangAdmin::get('last_available_version_for_update')?> (<a herf="#" data-target=".collapse-chengelog-111" data-toggle="collapse" class="blink"><?=LangAdmin::get('change_log')?></a>)</p>
+        <p><strong class="label label-important"><?=LangAdmin::get('Update_not_available')?></strong></p>
+    <? } ?>
+
+    <div class="collapse collapse-chengelog-111">
+        <h4><?=LangAdmin::get('Changes_description')?></h4>
+        <?=$versions->Version[0]->Description;?>
+        <h4><?=LangAdmin::get('Full_changes_history')?></h4></h4>
+         <ul>
+            <li><?=LangAdmin::get('Available_from')?> <a href="http://ru.opentao.net/updates.html" target="_blank"> <?=LangAdmin::get('form_link')?></a></li>
+         </ul>
+    </div>
+    <? if($allowUpdate === 'Ok'){ ?>
+        <p class="offset-top2">
+            <button type="button" class="btn btn_preloader btn-primary" id="update" data-loading-text="<?=LangAdmin::get('UpdateProcess')?>" autocomplete="off"><?=LangAdmin::get('DoUpdate')?></button>
+        </p>
+    <? } ?>
+
+
+</div>
+
+<script>
+    $(function(){
+        $('#update').click(function() {
+            $(this).attr('disabled', 'disabled');
+            $.get('index.php', {
+                'cmd': 'Update',
+                'do': 'download'
+            }, function(data){
+                if (! data.error) {
+                    $.get('index.php?cmd=Update&do=extract', function(dataEx){
+                        if (! dataEx.error) {
+                            window.location = window.location.href.replace(/admin.*$/, '')+'install/update.php';
+                        } else {
+                            showError(dataEx);
+                            $('#update').button('reset');
+                            $(this).removeAttr('disabled');
+                        }
+                    });
+                } else {
+                    showError(data);
+                    $('#update').button('reset');
+                    $(this).removeAttr('disabled');
+                }                
+            });
+        });
+    });
+</script>
+
+

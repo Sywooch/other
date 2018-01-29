@@ -1,0 +1,59 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignDo('default')?>"><?=LangAdmin::get('Users')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('config')?></li>
+</ul><!--/.breadcrumb-->
+
+<? require TPL_ABSOLUTE_PATH . 'users/inc/tabs.php'; ?>
+
+<!-- ot-sub-sub-nav -->
+<? XEditableFields::Init('users', $PageUrl); ?>
+
+<div class="users-form-wrapper">
+
+<h1><?=LangAdmin::get('config')?></h1>
+
+<div class="well">
+    <form class="form-horizontal inline_editable_form ot_form">
+
+        <fieldset>
+
+            <div class="row-fluid">
+                <div class="span6">
+                    <div data-field="auth_to_private_office"></div>
+                    <? XEditableFields::Register('auth_to_private_office', General::getConfigValue('auth_to_private_office')); ?>
+
+                    <div data-field="IsEmailConfirmationUsed"></div>
+                    <? XEditableFields::Register('IsEmailConfirmationUsed', $IsEmailConfirmationUsed); ?>
+                    <? if ($commonInstanceOptions['Registration'] == 'false') { ?>
+                        <div class="alert alert-error">
+                            <?=LangAdmin::get('simplified_registration_error_help')?>
+                        </div>
+                        <div class="control-group control-group-medium">
+                            <label class="control-label" for="ot_sidebar_nav_display">
+                                <?=LangAdmin::get('simplified_registration_label')?>
+                                <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-content="<?=LangAdmin::get('simplified_registration_hint')?>" title="" data-original-title=""></i>
+                            </label>
+                            <div class="controls">
+                                <span class="ot_inline_editable editable editable-click" style="display: inline-block;">Включить</span>
+                            </div>
+                        </div>
+                    <? } else { ?>
+                    <div data-field="simplified_registration"></div>
+                    <? XEditableFields::Register('simplified_registration', General::getConfigValue('simplified_registration')) ?>
+                    <? } ?>
+                </div>
+                <div class="span6">
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+
+<script>
+    InlineFields = new Backbone.Collection;
+    InlineFields.add(<?=json_encode(XEditableFields::GetFields())?>);
+</script>
+<? ScriptIncluder::AddCustomScript('js/ot-render-template.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-inline.editable.init.js'); ?>

@@ -1,0 +1,64 @@
+<?php
+
+class MenuShortNew extends GenerateBlock
+{
+    protected $_cache = true;
+    protected $_life_time = 3600;
+    protected $_template = 'menushortnew';
+    protected $_template_path = '/menu/';
+    protected $_hash = '';
+
+    public function __construct()
+    {
+        $this->_hash = $_SESSION['active_lang'];
+        parent::__construct(true);
+    }
+
+    protected function setVars()
+    {
+        if (($this->tpl->isCached()) or (isset($GLOBALS['menu_ajax']))){
+            global $otapilib;
+            $otapilib->curl_timeout = 20;
+
+            $rootcats = $otapilib->GetThreeLevelRootCategoryInfoList();
+
+            if(!$rootcats)
+                $this->tpl->_caching = false;
+
+            if ($rootcats === false) $this->_cache = false;
+
+            if(in_array('Seo2', General::$enabledFeatures)){
+                $cms = new SafedCMS();
+                if(is_array($rootcats))
+                    foreach($rootcats as &$c){
+                        $c['alias'] = $cms->getCategoryAlias($c['Id'], true, $c['Name']);
+                    }
+            }
+
+            $treeCats = array();
+            $parents = array();
+
+            if ($rootcats) foreach($rootcats as $c){
+                $parents[$c['Id']] = $c['ParentId'];
+                if(!$c['ParentId']){
+                    $treeCats[$c['Id']] = array_merge($c, array('children' => array(), 'level' => 1));
+                }
+                elseif(isset($treeCats[$c['ParentId']])){
+                    @$treeCats[$c['ParentId']]['children'][$c['Id']] = array_merge($c, array('children' => array(), 'level' => $treeCats[$c['ParentId']]['level'] + 1));
+                }
+                else{
+                    @$treeCats[$parents[$c['ParentId']]]['children'][$c['ParentId']]['children'][$c['Id']] = array_merge($c, array('children' => array(), 'level' => $treeCats[$c['ParentId']]['level'] + 1));
+                }
+            }
+
+            $this->tpl->assign('treeCats', $treeCats);
+            $this->tpl->assign('rootcats', $rootcats);
+        } else {
+            //Не закэшированно и прогружаем через аякс
+            $this->_cache = false;
+            $this->tpl->assign('menu_ajax', '1');
+        }
+    }
+}
+
+?>

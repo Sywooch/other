@@ -1,0 +1,431 @@
+{
+    "defaultSaveUrl": {
+        "cmd": "SiteConfiguration",
+        "do": "save"
+    },
+    "defaultFieldsParameters": {
+        "text": {
+            "emptytext": {
+                "trans": "Not_filled"
+            }
+        },
+        "textarea": {
+            "emptytext": {
+                "trans": "Not_filled"
+            }
+        }
+    },
+    "fields": [
+        {
+            "name": "",
+            "type": "",
+            "valuesList": [
+
+            ]
+        },
+        {
+            "name": "structure_type",
+            "type": "select",
+            "valuesList": [
+                "LeafMixed",
+                "Predefined",
+                "Internal",
+                "External"
+            ]
+        },
+
+        {
+            "name": "left_menu_mode_for_content",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        {
+            "name": "rtl",
+            "type": "select",
+            "valuesList": [
+                0,
+                1
+            ]
+        },
+        {
+            "name": "header_text",
+            "type": "textarea"
+        },
+        {
+            "name": "custom_head_code",
+            "type": "textarea",
+            "displayValue": "Filled"
+        },
+        {
+            "name": "display_as_carousel",
+            "type": "select",
+            "valuesList": [
+                0,
+                1
+            ]
+        },
+        {
+            "name": "news_count_print",
+            "type": "text"
+        },
+        {
+            "name": "items_with_comments",
+            "type": "text"
+        },
+        {
+            "name": "items_with_vendor",
+            "type": "text"
+        },
+        {
+            "name": "brand_with_best",
+            "type": "text"
+        },
+        {
+            "name": "items_with_best",
+            "type": "text"
+        },
+        {
+            "name": "items_with_popular",
+            "type": "text"
+        },
+        {
+            "name": "items_with_last",
+            "type": "text"
+        },
+        {
+            "name": "warehouse_items",
+            "type": "text"
+        },
+        {
+            "name": "items_with_pristroy",
+            "type": "text"
+        },
+        {
+            "name": "hide_taobao_responses",
+            "type": "select",
+            "valuesList": [
+                0,
+                1
+            ]
+        },
+        {
+            "name": "hide_item_info_status",
+            "type": "select",
+            "valuesList": [
+                0,
+                1
+            ]
+        },
+        {
+            "name": "hide_taobao_link",
+            "type": "select",
+            "valuesList": [
+                0,
+                1
+            ]
+        },
+        {
+            "name": "hide_item_info_price1",
+            "type": "select",
+            "valuesList": [
+                0,
+                1
+            ]
+        },
+        {
+            "name": "hide_item_info_price_local_delivery",
+            "type": "select",
+            "valuesList": [
+                0,
+                1
+            ]
+        },
+        {
+            "name": "show_user_history_views",
+            "type": "select",
+            "valuesList": [
+                0,
+                1
+            ]
+        },
+        {
+            "name": "hide_item_info_features",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "no_index_sets",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "hide_item_property_price_range",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "hide_item_site_responses",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "hide_item_info_weight",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "hide_item_site_responses",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "hide_item_info_in_existence",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "hide_item_info_sales_last30day",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "product_tabs",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "2",
+                "3"
+            ]
+        },
+        {
+            "name": "search_category_mode",
+            "type": "select",
+            "valuesList": [
+                "External",
+                "InternalLeaf",
+                "Nothing",
+                "CurrentLevel"
+            ]
+        },
+        {
+            "name": "oficial_catalog_perpage",
+            "type": "text"
+        },
+        {
+            "name": "extended_catalog_perpage",
+            "type": "text"
+        },
+        {
+            "name": "extendedNew_catalog_perpage",
+            "type": "text"
+        },
+        {
+            "name": "warehouse_catalog_perpage",
+            "type": "text"
+        },
+        {
+            "name": "comments_catalog_perpage",
+            "type": "text"
+        },
+
+        {
+            "name": "default_perpage",
+            "type": "select",
+            "valuesList": [
+                "20",
+                "40",
+                "100"
+            ]
+        },
+        {
+            "name": "use_multi_search",
+            "type": "select",
+            "valuesList": [
+                0,
+                1
+            ]
+        },
+        {
+            "name": "simple_search_perpage",
+            "type": "select",
+            "valuesList": [
+                "8",
+                "20",
+                "40",
+                "100"                
+            ]
+        },
+        {
+            "name": "simple_searchNew_perpage",
+            "type": "select",
+            "valuesList": [
+                "8",
+                "20",
+                "40",
+                "100"
+            ]
+        },
+        {
+            "name": "tmall_search_perpage",
+            "type": "select",
+            "valuesList": [
+                "4",
+                "8",
+                "16",
+                "32",
+                "64"
+            ]
+        },
+        {
+            "name": "promoted_search_perpage",
+            "type": "select",
+            "valuesList": [
+                "4",
+                "8",
+                "16",
+                "32",
+                "64"
+            ]
+        },
+        {
+            "name": "warehouse_search_perpage",
+            "type": "select",
+            "valuesList": [
+                "4",
+                "8",
+                "16",
+                "32",
+                "64"
+            ]
+        },
+        {
+            "name": "comments_search_perpage",
+            "type": "select",
+            "valuesList": [
+                "4",
+                "8",
+                "16",
+                "32",
+                "64"
+            ]
+        },
+        {
+            "name": "pager_count_print",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ]
+        },
+        {
+            "name": "hide_work_shedule",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "phone",
+            "type": "text"
+        },
+        {
+            "name": "work_shedule",
+            "type": "text"
+        },
+        {
+            "name": "hide_operator",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "online_chat_code",
+            "type": "textarea",
+            "displayValue": "Connected"
+        },
+        {
+            "name":"menu_count_lvl1",
+            "type":"text"
+        },
+        {
+            "name":"menu_count_lvl2",
+            "type":"text"
+        },
+        {
+            "name": "vendor_rating_view_as_number",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "menu_type",
+            "type": "select",
+            "valuesList": [
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        {
+            "name": "limit_items_by_catalog",
+            "type": "select",
+            "valuesList": [
+                "0",
+                "1"
+            ]
+        },
+        {
+            "name": "blog_posts_index",
+            "type": "text"
+        },
+        {
+            "name": "blog_posts",
+            "type": "text"
+        },
+        {
+            "name": "restriction_of_search",
+            "type": "select",
+            "valuesList": [
+                0,
+                1
+            ]
+        }
+
+    ]
+}

@@ -1,0 +1,250 @@
+/**
+ * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @license		
+ */
+
+/* Common CSS for main debug */
+div#main-debug {
+	clear: both;
+}
+
+#main-debug {
+	background-color: #fff;
+	color: #000;
+	border: 1px dashed silver;
+	padding: 5px;
+	text-align: left;
+}
+
+#main-debug div.dbgHeader {
+	background-color: #ddd;
+	border: 1px solid #eee;
+	font-size: 16px;
+}
+
+#main-debug h3 {
+	margin: 0;
+}
+
+#main-debug a h3 {
+	background-color: #ddd;
+	color: #000;
+	font-size: 14px;
+	padding: 5px;
+	text-decoration: none;
+	margin: 0px;
+}
+
+#main-debug a:hover,
+#main-debug a:focus,
+#main-debug a:active,
+#main-debug a:link,
+#main-debug a:visited {
+	background-color: #ddd;
+	color: #000;
+	text-decoration:none;
+}
+
+#main-debug a:hover h3,
+#main-debug a:focus h3 {
+	background-color: #4d4d4d;
+	color: #ddd;
+	font-size: 14px;
+	cursor: pointer;
+	text-decoration:none;
+}
+
+#main-debug div.dbgContainer {
+	padding: 10px;
+}
+
+#main-debug span.dbgCommand {
+	color: blue;
+	font-weight: bold;
+}
+
+#main-debug span.dbgTable {
+	color: green;
+	font-weight: bold;
+}
+
+#main-debug b.dbgOperator {
+	color: red;
+	font-weight: bold;
+}
+
+#main-debug h1 {
+	background-color: #2c2c2c;
+	color: #fff;
+	padding: 10px;
+	margin: 0;
+	font-size: 16px;
+	line-height: 1em;
+}
+
+#main-debug h4 {
+	font-size: 14px;
+	font-weight:bold;
+	margin: 5px 0 0 0;
+}
+
+#main-debug h5 {
+	font-size: 13px;
+	font-weight:bold;
+	margin: 5px 0 0 0;
+}
+
+div#main-debug {
+	margin: 5px;
+}
+
+#main-debug ol {
+	margin-left: 25px;
+	margin-right: 25px;
+	text-align: left;
+	direction: ltr;
+}
+
+#main-debug ul {
+	list-style: none;
+	text-align: left;
+	direction: ltr;
+}
+
+#main-debug li {
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+#main-debug code {
+	font-size: 13px;
+	text-align: left;
+	direction: ltr;
+}
+
+#main-debug p {
+	font-size: 13px;
+}
+
+
+/* Common CSS for main debug */
+
+#main-debug {
+	background-color: #fff;
+	color: #000;
+	border: 1px dashed silver;
+	padding: 10px;
+}
+
+#main-debug div.dbgHeader {
+	background-color: #ddd;
+	border: 1px solid #eee;
+	font-size: 16px;
+}
+
+#main-debug h3 {
+	margin: 0;
+}
+
+#main-debug a h3 {
+	background-color: #ddd;
+	color: #000;
+	font-size: 14px;
+	padding: 5px;
+	text-decoration: none;
+	margin: 0px;
+}
+
+#main-debug .dbgerror a h3 {
+	background-color: red;
+}
+
+#main-debug a:hover,
+#main-debug a:focus,
+#main-debug a:active,
+#main-debug a:link,
+#main-debug a:visited {
+	background-color: #ddd;
+	color: #000;
+	text-decoration:none;
+}
+
+#main-debug a:hover h3,
+#main-debug a:focus h3 {
+	background-color: #4d4d4d;
+	color: #ddd;
+	font-size: 14px;
+	cursor: pointer;
+	text-decoration:none;
+}
+
+#main-debug div.dbgContainer {
+	padding: 10px;
+}
+
+#main-debug span.dbgCommand {
+	color: blue;
+	font-weight: bold;
+}
+
+#main-debug span.dbgTable {
+	color: green;
+	font-weight: bold;
+}
+
+#main-debug b.dbgOperator {
+	color: red;
+	font-weight: bold;
+}
+
+#main-debug h1 {
+	background-color: #2c2c2c;
+	color: #fff;
+	padding: 10px;
+	margin: 0;
+	font-size: 16px;
+	line-height: 1em;
+}
+
+#main-debug h4 {
+	font-size: 14px;
+	font-weight:bold;
+}
+
+#main-debug h5 {
+	font-size: 13px;
+	font-weight:bold;
+	margin-top: 5px;
+}
+
+div#main-debug {
+	margin: 5px;
+}
+
+#main-debug ol {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+#main-debug ul {
+	list-style: none;
+}
+
+#main-debug li {
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+#main-debug code {
+	font-size: 13px;
+	text-align: left;
+	direction: ltr;
+}
+
+#main-debug p {
+	font-size: 13px;
+}
+
+#main-debug div.dbgHeader.dbgerror {
+	background-color: red;
+}

@@ -1,0 +1,167 @@
+/**
+ * @file
+ * Navigation Styling
+ *
+ * Default menu styling (ul.menu) is defined in system-menus.css.
+ */
+
+
+/*
+ * The active item in a Drupal menu
+ */
+li a.active {
+  color: #000;
+}
+
+/*
+ * Navigation bar
+ */
+#navigation {
+}
+
+.region-navigation {
+}
+
+/* Верхнее меню */
+.region-navigation .block-menu {
+	width: 739px;
+	height: 71px;
+	padding: 0 0 0 25px;
+	line-height: 55px;
+	background: transparent url("../images/top-menu_bg.png") 0 0 no-repeat;
+}
+
+.region-navigation .block-menu .content {
+	height: 71px;
+	padding: 0 70px 0 0;
+	background: transparent url("../images/top-menu_bg_right.png") right 0 no-repeat;
+}
+
+.region-navigation .block-menu li {
+	padding: 0;
+	margin: 0 33px 0 0;
+	list-style-type: none;
+}
+
+.region-navigation .block-menu li.last {
+	margin: 0;
+}
+
+.region-navigation .block-menu a {
+	display: block;
+	font-family: "Century Gothic";
+	font-size: 15px;
+	font-weight: bold;
+	color: #7d590d;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: 0px 0px 1px #7d590d;
+}
+
+.region-navigation .block-menu a:hover,
+.region-navigation .block-menu a.active {
+	color: #372603;
+	text-shadow: 0px 0px 1px #372603;
+}
+
+.region-navigation .block-menu a:hover {
+	padding: 0 18px;
+	margin: 0 -18px;
+	background: transparent url("../images/top-menu_li_hover.png") center 1px no-repeat;
+}
+
+/*
+ * Primary and Secondary menu links
+ */
+#main-menu {
+}
+
+#secondary-menu {
+}
+
+/*
+ * Menu blocks
+ */
+.block-menu {
+}
+
+/*
+ * "Menu block" blocks. See http://drupal.org/project/menu_block
+ */
+.block-menu_block {
+}
+
+/* Меню "Каталог" */
+
+#block-menu-menu-catalogue-menu {
+}
+
+#block-menu-menu-catalogue-menu h2 {
+}
+
+#block-menu-menu-catalogue-menu ul {
+	margin: 0 0 0 70px;
+	padding: 0;
+}
+
+#block-menu-menu-catalogue-menu li {
+	list-style-type: none;
+}
+
+#block-menu-menu-catalogue-menu li .li_link {
+	display: block;
+	width: 211px;
+	margin: 0 0 0 5px;
+	padding: 7px 0 9px 15px;
+	border-bottom: 1px dotted #6e6e6e;
+}
+
+#block-menu-menu-catalogue-menu li.last .li_link {
+	border: 0;
+}
+
+#block-menu-menu-catalogue-menu li a {
+	font-family: Calibri;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+	color: #e1e1e1;
+	text-decoration: none;
+}
+
+#block-menu-menu-catalogue-menu li.active-trail a,
+#block-menu-menu-catalogue-menu li a.active,
+#block-menu-menu-catalogue-menu li a:hover {
+	color: #eeaa14;
+}
+
+#block-menu-menu-catalogue-menu li ul {
+	margin: 0 13px 0 31px;
+	padding: 0;
+}
+
+#block-menu-menu-catalogue-menu li ul li .li_link {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#block-menu-menu-catalogue-menu li ul li a {
+	display: block;
+	margin: 7px 0 10px 0;
+	color: #828282!important;
+}
+
+#block-menu-menu-catalogue-menu li ul li.active-trail > .li_link > a,
+#block-menu-menu-catalogue-menu li ul li a.active,
+#block-menu-menu-catalogue-menu li ul li a:hover {
+	color: #828282;
+	text-decoration: underline;
+}
+
+
+#block-menu-menu-catalogue-menu li ul li ul li a {
+	margin: 0 0 10px 0;
+}
+

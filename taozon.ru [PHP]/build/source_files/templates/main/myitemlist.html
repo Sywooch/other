@@ -1,0 +1,198 @@
+<script type="text/javascript">
+    var overid = 0;
+
+    function gettitle(lid) {
+        if (lid != overid) return;
+        var obj = $('#' + lid + ' ins.name');
+
+        $.ajax({
+            url:'index.php?p=itemtitle&itemid=' + obj.attr('pid'),
+            success:function (data) {
+                obj.html(data);
+                obj.parent().attr('title', data);
+                obj.closest('li').find('.pic').attr('title', data);
+            },
+            error:function (jqXHR, textStatus, errorThrown) {
+                obj.html('');
+            }
+        });
+    }
+
+    $(function () {
+
+        $('.product').mouseover(function () {
+            if (overid != $(this).attr('id')) {
+                overid = $(this).attr('id');
+                setTimeout('gettitle("' + overid + '")', 1000);
+            }
+        });
+        $('.product').mouseout(function () {
+            overid = 0;
+        });
+    });
+</script>
+
+<!-- .main -->
+<div class="main">
+<div class="wrap clrfix">
+<div class="bproduct">
+<h2 class="mb25"><span><?=Lang::get('founded_goods')?></span></h2>
+
+<div class="fll col240">
+    <div class="bgr-block mb20">
+
+	<form method="get" id="filterform" action="<?=current(explode('?', $_SERVER['REQUEST_URI']))?>">
+		<input type="hidden" name="mcid" value="<?= $_GET['mcid'] ?>"/>
+		<input type="hidden" name="p" value="<?= @$_GET['p'] ?>"/>
+
+		<? if (isset($_GET['per_page'])) : ?>
+		<input type="hidden" name="per_page" value="<?= @$_GET['per_page'] ?>"/>
+		<? endif; ?>
+
+		<div class="titlecat"><?=Lang::get('filters')?></div>
+		<div class="opened">
+		<a href="#" class="ftitle" onclick="return false"><i class="i additem mdl"></i><?=Lang::get('search_conditions')?></a>
+		<div class="fbody">
+
+		<h5><?=Lang::get('price_simple')?></h5>
+
+		<table class="trange mt5">
+			<tbody>
+				<tr>
+					<td><input type="text" name="cost[from]" id="" class="w70" value="<?=@$_GET['cost']['from']?>"></td>
+					<td><?=$currency?> —</td>
+					<td><input type="text" name="cost[to]" id="" class="w70" value="<?=@$_GET['cost']['to']?>"></td>
+					<td><?=$currency?></td>
+				</tr>
+			</tbody>
+		</table>
+
+
+		<div class="fbut clrfix">
+				<a href="#" class="btn-small" onclick="document.getElementById('filterform').submit(); return false;"><span><?=Lang::get('select')?></span></a>
+				<a href="<?=$_SERVER['REQUEST_URI'].'&amp;clear'?>" class="dotted"><span><?=Lang::get('reset')?></span></a>
+		</div>
+
+		</div>
+		</div>
+	</form>
+
+    </div>
+</div>
+
+<div class="flr col690 bproduct">
+
+    <!-- .panel-search -->
+	<?php if (!empty($category['description'])) : ?>
+    <h2 class="mb25"><span>Описание категории</span></h2>
+    <div class="wrap clrfix" style="margin-bottom: 10px; width: 690px">
+        <?=$category['description'];?>
+    </div>
+	<?php endif; ?>
+    <div class="bgr-panel mb20">
+
+        <ul class="tableList">
+            <li><?=Lang::get('items_rus')?>: <b><?=$totalcount?></b></li>
+            <li><?=Lang::get('shown')?>: <?=Lang::get('from')?> <b><?=($from + 1)?></b> <?=Lang::get('to')?>
+                <b><? if ($from + $perpage < $count) print $from + $perpage; else print $count; ?></b> <?=Lang::get('from2')?>
+                <b><?=$count?></b></li>
+            <li style="width:50%">&nbsp;</li>
+            <li>
+                <form method="post" id="per_page">
+                    <?=Lang::get('output_to')?>
+                    <select name="per_page" onchange="document.getElementById('per_page').submit();">
+                        <option value="16" <?if ($perpage == '16') { ?>selected<? }?>>16</option>
+                        <option value="64" <?if ($perpage == '64') { ?>selected<? }?>>64</option>
+                        <option value="128" <?if ($perpage == '128') { ?>selected<? }?>>128</option>
+                    </select>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <!-- /.panel-search -->
+
+    <? if (!empty($itemlist)) { ?>
+    <!-- .product -->
+    <ul class="lproduct flin w700 w160li clrfix">
+
+        <? $url = 'index.php?p=myitem&'; ?>
+        <? foreach ($itemlist as $idx => $item) :
+			$file_parts = explode('.', $item['image']);
+			$ext = end($file_parts);
+			$image = str_replace('.' . $ext, '_160x160.' . $ext, $item['image']);
+		?>
+        <li class="product" id="product<?=$idx?>" title="<?= $item['name'] ?>">
+            <a class="pic" href="<?=$url?>id=<?=$item['id']?>" title="<?=$item['description']?>">
+                <i><img src="<?=$image?>"></i>
+                <ins></ins>
+            </a>
+
+            <div class="price">
+                <div class="line"></div>
+                <a href="<?=$url?>id=<?=$item['id']?>" title="<?=$item['price']?>">
+					<span><?=$item['price']?> <?= $currency;?></span>
+				</a>
+
+                <a href="<?=$url?>id=<?=$item['id']?>" title="<?=$item['description']?>">
+                    <ins class="name" pid="<?=$item['id']?>"><?=$item['description']?></ins>
+                    <span class="glow"></span>
+				</a>
+            </div>
+        </li>
+
+        <?php if ($idx % 4 == 3) : ?>
+            <div style="clear: both"></div>
+        <? endif; ?>
+        <? endforeach; ?>
+    </ul>
+    <!-- /.product -->
+    <? } else { ?>
+    <h2><?=Lang::get('nothing_found')?></h2>
+    <? } ?>
+
+    <!-- .pager -->
+    <div>
+        <? $page_count_print = (isset(General::$siteConf['pager_count_print'])) ? General::$siteConf['pager_count_print'] : '2'; ?>
+        <? $curpage = floor($from / $perpage) + 1 ?>
+        <? $maxpage = ceil($count / $perpage) ?>
+        <? if ($curpage != 1) {?>
+        <a href="<?=$pageurl?>&from=<?=$from - $perpage?>&tmall=<?=$tmall?>"
+           class="fll btn-apper border_radius_left"><span><?=Lang::get('prev_page')?></span></a>
+        <? } ?>
+
+        <ul class="flin pager clrfix">
+            <? if ($curpage > ($page_count_print + 1)) { ?>
+            <li><a href="<?=$pageurl?>&from=0&tmall=<?=$tmall?>">1</a></li>
+            <? } ?>
+            <? if ($curpage > ($page_count_print + 2)) { ?>
+            <li>...</li>
+            <? } ?>
+            <? for ($i = max(1, $curpage - $page_count_print); $i <= min($maxpage, $curpage + $page_count_print); $i++) { ?>
+            <? if ($curpage == $i) { ?>
+                <li class="active"><a href="<?=$pageurl?>&from=<?=(($i - 1) * $perpage)?>&tmall=<?=$tmall?>"><?=$i?></a>
+                </li>
+                <? } else { ?>
+                <li><a href="<?=$pageurl?>&from=<?=(($i - 1) * $perpage)?>&tmall=<?=$tmall?>"><?=$i?></a></li>
+                <? } ?>
+            <? } ?>
+            <? if ($curpage < $maxpage - ($page_count_print + 1)) { ?>
+            <li><span>...</span></li>
+            <? } ?>
+            <? if ($curpage < $maxpage - $page_count_print) { ?>
+            <li><a href="<?=$pageurl?>&from=<?=(($maxpage - 1) * $perpage)?>&tmall=<?=$tmall?>"><?=$maxpage?></a></li>
+            <? } ?>
+        </ul>
+
+        <? if ($maxpage > 1 && !($curpage >= $maxpage)) { ?>
+        <a href="<?=$pageurl?>&from=<?=$from + $perpage?>&tmall=<?=$tmall?>"
+           class="btn fll btn-apper border_radius_right"><span><?=Lang::get('next_page')?></span></a>
+        <? } elseif ($curpage > $maxpage) { ?>
+        <? } ?>
+    </div>
+    <!-- /.pager -->
+
+</div>
+</div>
+</div>
+</div>
+<!-- /.main -->

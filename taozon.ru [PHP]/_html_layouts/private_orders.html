@@ -1,0 +1,644 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU" class="no-js" >
+<head>
+
+    
+        <title>Opentao demo  - Личный кабинет </title>
+    <meta name="description" content="Личный кабинет" />
+    <meta name="keywords" content="Личный кабинет" />
+    
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/css/style.css" />
+
+	
+	<script src="js/libs/jquery/jquery.min.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery-ui.min.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery.ui.core.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery.ui.widget.js"></script>
+	<script src="js/libs/jquery/jquery.ui/jquery.ui.datepicker.js"></script>
+	<script src="js/libs/jquery/jquery.carousel/jquery.jcarousel.min.js"></script>
+	<script src="js/libs/jquery/jquery.colorbox/jquery.colorbox-min.js"></script>
+
+    <script src="js/general.js"></script>
+
+    
+    
+        <script src="js/inner.js"></script>
+    
+    
+    <script>
+		NotAvailableError = "Операция невозможна в связи с обновлением ПО.";
+        $(function(){
+            url_gen_privateoffice = "privateoffice";
+            lang_privateoffice = "Личный кабинет";
+
+            url_gen_profile = "profile";
+
+            url_gen_logout = "logout";
+            lang_logout = "Выход";
+
+            url_gen_login = "login";
+            lang_login = "Вход";
+
+            url_gen_register = "register";
+            lang_register = "Регистрация";
+            $("#usermenu_ajax").prepend('<li id="loading_userdat"><img src="/css/i/ajax-loader.gif" width="16" height="16" /></li>');
+            $.ajax({
+                url: "index_ajax.php?p=get_user_data_summary",
+                cache: false,
+                dataType : "json",
+                success: function(json){
+                    $("#fav_ajax").html(json.favourites);
+                    $("#basket_ajax").html(json.basket);
+                    $("#loading_userdat").hide();
+                    if (json.IsAuthenticated) {
+                        $("#usermenu_ajax").prepend('<li><a href=' + url_gen_privateoffice +'>' + lang_privateoffice + '</a></li><li><a href='+ url_gen_profile +'>' + json.username + '</a></li><li><a href='+ url_gen_logout +'>'+ lang_logout +'</a></li>');
+                        //$("#usermenu_ajax").prepend('Вошел');
+                    } else {
+                        $("#usermenu_ajax").prepend('<li><a href='+ url_gen_login +'>'+ lang_login +'</a></li><li><a href='+ url_gen_register +'>'+ lang_register +'</a></li>');
+                        //$("#usermenu_ajax").prepend('Надо зайти');
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</head>
+<body >
+
+<form action="index.php?p=setlang" method="post">
+    <input type="hidden" name="lang" id="lang" />
+    <input type="hidden" name="from" value="/index.php?p=privateoffice&orderstate=1" />
+</form>
+
+<div id="error-dialog" style="display: none"></div>
+
+<div class="header">
+        <div class="wrap clrfix">
+                <div class="col col240 mr30">
+            <a href="index.php" class="logo">
+                <img src="../css/i/logo.png" alt="Opentao demo - Главная" title="Opentao demo - Главная" />
+            </a>
+        </div>
+
+        <div class="col col690">
+            <ul class="hblocks">
+                <li class="name">
+                     Демонстрационный магазин<br />системы Оpentao.ru                                    </li>
+                                <li class="phone mr20">
+                    <div class="bgr">
+                        <strong>35646546</strong>
+                                            </div>
+                </li>
+                                                <li class="operator">
+                    <div class="bgr">
+                        <a href="#">Онлайн чат<br />с оператором</a>
+                    </div>
+                </li>
+                                            </ul>
+        </div>
+    </div>
+</div>
+    
+<div class="spacer"><div class="wrap clrfix"></div></div>
+
+<div class="navigation"><div class="wrap clrfix">
+    <ul class="fll menu">
+                <li><a href="/" >Главная</a></li>
+        <li><a href="how_to_order" >Как заказать</a></li>
+        <li><a href="help" >Помощь</a></li>
+                            </ul>
+
+    <form id="login_register">
+        <input type="hidden" name="from" value="/index.php?p=privateoffice&orderstate=1" />
+    </form>
+
+    <ul class="flr sblocks" id="usermenu_ajax">
+
+                
+                <li>
+            <a href="#" class="lang arrow"><span><i class="ru">Русский</i></span></a>
+            <ul class="menu-lang">
+                                <li><a href="#" class="lang"><i class="ru"></i></a></li>
+                                <li><a href="#" class="lang"><i class="en"></i></a></li>
+                                <li><a href="#" class="lang"><i class="he"></i></a></li>
+                            </ul>
+        </li>
+            </ul>
+</div></div>
+
+<div class="userbar"><div class="wrap clrfix">
+    <ul class="uluserbar">
+        <li class="col col255 cats itemmenu">
+            <a href="#" onClick="return false" class="category "><span>По категориям</span><i></i></a>
+                        	<a href="brands" class="brand"><span>По брендам</span></a>
+                    </li>
+        <li class="col col435 itemmenu">
+                        <form action="http://demo.opentao.net/search" method="post" class="search" id="full_search_form" onSubmit="CheckSearch(); return false;">
+                <div class="field">
+                    <div class="in search-floating">
+                        <a href="#" class="selection allplace"><span>Везде</span></a>
+                        <input type="text" name="search" id="full_search" value="" placeholder="Поиск среди 800 000 000 товаров из Китая">
+                    </div>
+                    <input name="cid" type="hidden" />
+                    <div class="dropdown dropdown-search" id="searchcatsajax"><!-- Нету кэша --->
+<script type="text/javascript">
+$(function(){ 
+    $("#searchcatsajax").html('<p align="center"><img src="/css/i/ajax-loader.gif" width="32" height="32" /></p>');
+	$.ajax({
+  		url: "index.php?p=search_ajax&searchcats_ajax=1&cid=&name=",
+  		cache: false,
+  		success: function(html){
+    		$("#searchcatsajax").html(html);
+  		}
+	});
+});
+  
+</script>
+
+
+</div>
+                </div>
+                <input type="submit" value="Найти" class="btn fll" />
+            </form>
+        </li>
+
+        <li class="col col150 itemmenu">
+            <a href="supportlist" class="mydata favorites"><i class="i rounder" id="fav_ajax"> </i>Избранное</a>
+        </li>
+        <li class="col col120 itemmenu">
+            <a href="basket" class="mydata basket"><i class="i rounder" id="basket_ajax"> </i> Корзина</a>
+        </li>
+
+    </ul>
+
+        <div class="dropdown dropdown-inner">
+        <div class="pda10" style="border-bottom: 1px solid #E6E6E6;">
+            <a href="allcats" class="all"><i class="i arrowright"></i><span>Все категории</span></a>
+        </div>
+        
+<div id="menu-short-complete">
+                    <div class="bitem clrfix">
+                <h3><a href="subcategory/elektronikatao-bao-otc-8279">Электроника Тао-Бао</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="50024103" href="category/camerafitting-50024103">Штуцер камеры</a></li>
+                                                                                                                                                        <li><a cid="111703" href="category/on3gwirelessnetworkcardequipment-111703">USB-модемы</a></li>
+                                                                                                                                                        <li><a cid="50008482" href="category/digitalpictureframe-50008482">Цифровые фоторамки</a></li>
+                                                                                                                                                        <li><a cid="50009211" href="category/dvigaetistochnikpitaniya-50009211">Мобильный аккумулятор</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/﻿odezhda-otc-1">﻿Одежда</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-2" href="subcategory/zhenskayaodezhda-otc-2">Женская одежда</a></li>
+                                                                                                                                                        <li><a cid="otc-46" href="subcategory/muzhskayaodezhda-otc-46">Мужская одежда</a></li>
+                                                                                                                                                        <li><a cid="otc-66" href="subcategory/detskayaodezhda-otc-66">Детская одежда</a></li>
+                                                                                                                                                        <li><a cid="otc-109" href="subcategory/sportivnayaodezhda-otc-109">Спортивная одежда</a></li>
+                                                                                                                                                                        </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/otc-212?virt">Обувь</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-213" href="subcategory/zhenskayaobuv-otc-213">Женская обувь</a></li>
+                                                                                                                                                        <li><a cid="otc-221" href="subcategory/muzhskayaobuv-otc-221">Мужская обувь</a></li>
+                                                                                                                                                        <li><a cid="otc-229" href="subcategory/detskayaobuv-otc-229">Детская обувь</a></li>
+                                                                                                                                                        <li><a cid="otc-246" href="subcategory/obuvdlyaaktivnogootdyhaiputeshestviy-otc-246">Обувь для активного отдыха и путешествий</a></li>
+                                                                                                                </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/sumkikoshelki-otc-273?virt">Сумки, кошельки</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-274" href="category/sumki-otc-274">Сумки</a></li>
+                                                                                                                                                        <li><a cid="otc-275" href="category/bumazhnikikoshelkiportmone-otc-275">Бумажники, кошельки, портмоне</a></li>
+                                                                                                                                                        <li><a cid="otc-276" href="category/chemodanydorozhnyesumki-otc-276">Чемоданы, дорожные сумки</a></li>
+                                                                                                                                                        <li><a cid="otc-277" href="subcategory/sportivnyesumki-otc-277">Спортивные сумки</a></li>
+                                                                                                                </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/yuvelirnyeizdeliyabizhuteriyaukrasheniya-otc-3035">Ювелирные изделия, бижутерия, украшения</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-3036" href="subcategory/yuvelirnyeizdeliyabrilliantyzoloto-otc-3036?virt">Ювелирные изделия, бриллианты, золото</a></li>
+                                                                                                                                                        <li><a cid="otc-3046" href="subcategory/bizhuteriyaukrasheniya-otc-3046?virt">Бижутерия, украшения</a></li>
+                                                                                    </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/tovarydlyauhodazarebenkomtovarydlyabuduschihmam-otc-906?virt">Товары для ухода за ребёнком, товары для будущих мам</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-907" href="subcategory/tovarydlyauhodazarebenkom-otc-907">Товары для ухода за ребёнком</a></li>
+                                                                                                                                                        <li><a cid="otc-1102" href="subcategory/tovarydlyamamibuduschihmam-otc-1102">Товары для мам и будущих мам</a></li>
+                                                                                    </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/krasotaizdorove-otc-2717?virt">Красота и здоровье</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-2718" href="subcategory/kosmetikadekorativnayaparfyumeriya-otc-2718">Косметика декоративная, парфюмерия</a></li>
+                                                                                                                                                        <li><a cid="otc-2747" href="subcategory/sredstvapouhoduzakozhey-otc-2747">Средства по уходу за кожей</a></li>
+                                                                                                                                                        <li><a cid="otc-2775" href="subcategory/sredstvapouhoduzavolosamipariki-otc-2775">Средства по уходу за волосами, парики</a></li>
+                                                                                                                                                        <li><a cid="otc-2792" href="subcategory/bytovyekosmeticheskiepribory-otc-2792">Бытовые косметические приборы</a></li>
+                                                                                                                                                                                                    </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/aksessuary-otc-284?virt">Аксессуары</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-285" href="category/chasynaruchnye-otc-285">Часы наручные</a></li>
+                                                                                                                                                        <li><a cid="otc-286" href="category/remnipoyasa-otc-286">Ремни, пояса</a></li>
+                                                                                                                                                        <li><a cid="otc-287" href="subcategory/zazhigalki-otc-287?virt">Зажигалки</a></li>
+                                                                                                                                                        <li><a cid="otc-315" href="category/shveycarskienozhi-otc-315">Швейцарские ножи</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/mobilnayaelektronika-otc-3722?virt">Мобильная электроника</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-3723" href="category/planshetnyepk-otc-3723">Планшетные ПК</a></li>
+                                                                                                                                                        <li><a cid="otc-3724" href="subcategory/fleshkartyzapominayuschieustroystva-otc-3724?virt">Флэшкарты, запоминающие устройства</a></li>
+                                                                                                                                                        <li><a cid="otc-3730" href="category/mp3mp4ipaddiktofony-otc-3730">Мp3, mp4, iPad, диктофоны</a></li>
+                                                                                                                                                        <li><a cid="otc-3731" href="subcategory/elektronnyeslovariknigi-otc-3731?virt">Электронные словари, книги</a></li>
+                                                                                                                                                                                                                                                            </ul>
+            </div>
+                            <div class="bitem clrfix">
+                <h3><a href="subcategory/detskiymir-otc-393?virt">Детский мир</a></h3>
+                <ul class="lcategory">
+                                                                                                            <li><a cid="otc-394" href="category/aksessuarydlyadetey-otc-394">Аксессуары для детей</a></li>
+                                                                                                                                                        <li><a cid="otc-405" href="subcategory/igrushki-otc-405?virt">Игрушки</a></li>
+                                                                                                                                                        <li><a cid="otc-531" href="subcategory/detaliiinstrumentydlyamodelirovaniya-otc-531?virt">Детали и инструменты для моделирования</a></li>
+                                                                                                                                                        <li><a cid="otc-549" href="subcategory/kostyumydlyapredstavleniyfokusy-otc-549?virt">Костюмы для представлений, фокусы</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+            </div>
+                            </div>
+
+        <div class="pda10">
+            <a href="allcats" class="all"><i class="i arrowright"></i><span>Все категории</span></a>
+        </div>
+    </div>
+    </div></div><div class="crumbs">
+    <div class="wrap clrfix">
+        <a href="/">Главная</a>
+                    <span>Личный кабинет</span>
+        	</div>
+</div><!-- /.path -->
+
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+<div class="main"><div class="wrap clrfix">
+    <div class="fll col240">
+		    <ul class="mcats">
+        <li class="mcats_item"><a href="index.php?p=privateoffice" >Общая информация</a></li>
+        <li class="mcats_item"><a href="index.php?p=privateoffice&orderstate=1" class="active">Заказы</a></li>
+        <li class="mcats_item"><a href="index.php?p=privateoffice&moneyinfo" >Состояние счета</a></li>
+        <li class="mcats_item"><a href="index.php?p=profile" >Личные данные</a></li>
+                <li class="mcats_item"><a href="index.php?p=support" >Служба поддержки</a></li>
+        				        <li class="mcats_item"><a href="index.php?p=outputofmoney" >Вывести средства</a></li>
+		    </ul>
+
+		<div class="subscribe">
+	<h3>Новостная рассылка</h3>
+	<a class="btn_off" href="privateoffice?subscribe=1">
+		<span>Подписаться</span>
+	</a>
+</div>	</div>
+    <div class="flr col690"><script type="text/javascript" src="js/jquery.qtip-1.0.0.min.js"></script>
+<script type="text/javascript" src="js/tips.js"></script>
+
+
+<div class="qtip qtip-stylename">
+    <div class="qtip-tip" rel="cornerValue"></div>
+    <div class="qtip-wrapper">
+        <div class="qtip-borderTop"></div>
+        <div class="qtip-contentWrapper">
+            <div class="qtip-title">
+                <div class="qtip-button"></div>
+            </div>
+            <div class="qtip-content"></div>
+        </div>
+        <div class="qtip-borderBottom"></div>
+    </div>
+</div>
+<div id="dialog-confirm" title="Требуется подтверждение" style="display:none;">
+    <span id="confirm_text">Вы точно хотите отменить заказ</span>
+    <strong><span id="orderid"></span></strong>?
+    <span id="orderid-origin" style="display:none;"></span>
+</div>
+
+<div class="addform" id="dialog-form" title="Добавить сообщение" style="display:none;">
+    <div class="form-row">
+        <label for="Subject">Тема</label><br/>
+        <input id="Subject" type="text" name="Subject" value="" />
+    </div>
+
+    <div class="form-row">
+        <label for="Text">Текст</label><br/>
+        <textarea id="Text" name="Text"></textarea>
+    </div>
+
+    <div class="form-row">
+        <label for="SalesId">№ заказа</label><br/>
+        <select id="SalesId" name="SalesId">
+            <option value="">Выберите заказ</option>
+                        <option value="ORD-0000001356" >ORD-0000001356</option>
+                        <option value="ORD-0000001081" >ORD-0000001081</option>
+                        <option value="ORD-0000001079" >ORD-0000001079</option>
+                        <option value="ORD-0000000324" >ORD-0000000324</option>
+                    </select>
+    </div>
+
+    <div class="form-row">
+        <label for="CategoryId">Категория</label><br/>
+        <select id="CategoryId" name="CategoryId">
+            <option value="">Выберите категорию</option>
+            
+Warning: Invalid argument supplied for foreach() in /var/www/demo.opentao.net/public_html/templates/privateoffice/maininfo.html on line 49
+        </select>
+    </div>
+    <br/>
+    <div id="error" class="pr"></div>
+</div>
+
+
+
+<h1>Заказы</h1>
+<div class="bgr mb30 office_info_main">
+    <table width="100%">
+        <tbody>
+        <tr>
+            <td>
+                <div class="account_name mb5">Грачиков Дмитрий </div>
+                <div class="account_number"><span class="f11 lgray">Номер счета:</span> <b>USR-0000000030</b></div>
+            </td>
+            <td>
+                <div class="f11 lgray">Ожидает оплаты:</div>
+                <div class="money">0.00 $</div>
+            </td>
+            <td>
+                <div class="f11 lgray">На вашем счету:</div>
+                <div class="money">329.29 $</div>
+            </td>
+            <td style="width: 181px;">
+                <a href="index.php?p=privateoffice&pay&deposit" class="addmoney"><span><i class="i additem"></i>Пополнить счет</span></a>
+
+                <!--a href="index.php?p=support&mode=new&type=moneyOut">Вывод стредств</a -->
+            </td>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+
+
+
+<div class="bproduct fs15 mb30">
+    <h2 class="mb20"><span>Заказы, ожидающие действия</span></h2>
+        
+    <div class="btabs mt15"><div class=" clrfix">
+        <div class="bgr clrfix">
+            <ul id="product-tabs" class="tabs clrfix">
+                <li class="active" tab="active_orders"><a href="#"><span>Активные заказы</span><i></i></a></li>
+                <li tab="cancel_orders" class=""><a href="#" attr="tab2"><span>Отмененные заказы</span><i></i></a></li>
+                <li tab="complite_orders" class=""><a href="#" attr="tab3"><span>Закрытые заказы</span><i></i></a></li>
+            </ul>
+        </div>
+        <div class="tabs-content">
+
+            <div id="active_orders" class="tab" style="display: block;">
+                                <table class="notepad">
+                    <thead>
+                    <tr>
+                        <td>номер/Дата</td>
+                        <td>Кол-во</td>
+                        <td>Цена</td>
+                        <td>Общая сумма</td>
+                        <td>Оплачено</td>
+                        <td>Остаток</td>
+                        <td>Состояние</td>
+                        <td></td>
+                    </tr>
+                    </thead>
+
+
+
+
+
+                    <tbody class="bold">
+                                   
+
+
+
+<!--NEW BEGIN-->                                                                                            <tr class="">
+                        <td><a class="orderNumder" href="index.php?p=privateoffice&orderid=ORD-0000001356">ORD-0000001356<a href="index.php?p=privateoffice&orderid=ORD-0000001356" class="lblue" title="Посмотреть информацию о заказе"></a></a>
+                        <nobr class="orderDate">2013-07-03 05:41:12</nobr>
+                        <a class="goodsStatus" href="#">Статусы товаров</a>
+                    </td>
+                        <td>1</td>
+                        <td><span class="pr">13.47 $ / 0.00 $</span></td>
+                        <td><span class="pr">13.47 $</span></td>
+                        <td><span class="pr">13.47 $</span></td>
+                        <td><span class="pr">0.00 $</span></td>
+                        <td>
+                            Готов к отправке                                                    </td>
+                        <td align="center">
+                                                                                </td>
+                    </tr>
+                                                                                            <tr class="">
+                        <td><a class="orderNumder" href="index.php?p=privateoffice&orderid=ORD-0000000324">ORD-0000000324<a href="index.php?p=privateoffice&orderid=ORD-0000000324" title="Посмотреть информацию о заказе" class="lblue"></a></a>
+                                                      <nobr  class="orderDate">2012-07-04 00:00:26</nobr>
+<a class="goodsStatus" href="#">Статусы товаров</a>
+
+
+
+<!--NEW END-->
+                                                  </td>
+                        <td>13</td>
+                        <td><span class="pr">285.64 $ / 30.60 $</span></td>
+                        <td><span class="pr">316.24 $</span></td>
+                        <td><span class="pr">316.24 $</span></td>
+                        <td><span class="pr">0.00 $</span></td>
+                        <td>
+                            Готов к отправке                                                    </td>
+                        <td align="center">
+                                                                                </td>
+                    </tr>
+                                            </tbody>
+                </table>
+
+
+
+
+                            </div>
+
+            <div id="cancel_orders" class="tab">
+                                                <table class="notepad">
+                    <thead>
+                    <tr>
+                        <td>номер/Дата</td>
+                        <td>Кол-во</td>
+                        <td>Цена</td>
+                        <td>Общая сумма</td>
+                        <td>Оплачено</td>
+                        <td>Остаток</td>
+                        <td>Состояние</td>
+                        <td></td>
+                    </tr>
+                    </thead>
+
+                    <tbody class="bold">
+                                                                                                                                                                                                                                                                                                                                            </tbody>
+                </table>
+                            </div>
+
+            <div id="complite_orders" class="tab">
+                            </div>
+
+        </div>
+    </div></div>
+</div>
+
+<script type="text/javascript">
+
+    var action = 'cancel';
+	CFG_PREFIX_REPLACE_ORD = 'CFG_PREFIX_REPLACE_ORD';
+    
+    $(function()
+    {
+        $("#dialog:ui-dialog").dialog("destroy");
+        $("#dialog-confirm:ui-dialog").dialog("destroy");
+        $('.order_complete').hide();
+        $('.order_cancel').hide();
+
+        $( "#dialog-form" ).dialog({
+            autoOpen: false,
+            height: 300,
+            width: 350,
+            modal: true,
+            buttons: {
+                'Добавить': function() {
+                    var post = {Subject : $('#Subject').val(),
+                        Text : $('#Text').val(),
+                        SalesId : $('#SalesId').val(),
+                        CategoryId : $('#CategoryId').val()
+                    }
+                    $.ajax({
+                        url: 'index.php?p=createticket',
+                        data: post,
+                        type: 'POST',
+                        success: function(data) {
+                            if(data != 'Error'){
+                                $( this ).dialog( "close" );
+                                $("#support").html(data);
+                            } else {
+                                $("#error").html('Произошла ошибка! Проверте, что данные введены корректно!');
+                            }
+                        }
+                    });
+
+                },
+                'Отмена': function() {
+                    $( this ).dialog( "close" );
+                }
+            },
+            close: function() {
+            }
+        });
+
+        $("#dialog-confirm").dialog({
+            autoOpen: false,
+            modal: true,
+            buttons : {
+                'Да' : function() {
+                    if (action == 'cancel') {
+                        window.location.href = 'index.php?p=privateoffice&cancelorder=' + $('#orderid-origin').html();
+                    }
+                    if (action == 'close') {
+                        window.location.href = 'index.php?p=privateoffice&closelorder=' + $('#orderid-origin').html();
+                    }
+                },
+                'Нет' : function() {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    });
+
+    function show_form(){
+        $("#dialog-form").dialog("open");
+    }
+
+    function confirm(id) {
+        action = 'cancel';
+        $('#orderid-origin').html(id);
+        id2 = id.replace("ORD",CFG_PREFIX_REPLACE_ORD);
+        $('#confirm_text').html('Вы точно хотите отменить заказ');
+        $('#orderid').html(id2);
+        $("#dialog-confirm").dialog("open");
+    }
+
+    function confirm_close(id) {
+        action = 'close';
+        $('#orderid-origin').html(id);
+        id2 = id.replace("ORD",CFG_PREFIX_REPLACE_ORD);
+        $('#confirm_text').html('Подтвердите закрытие заказа');
+        $('#orderid').html(id2);
+        $("#dialog-confirm").dialog("open");
+    }
+
+    function show(order_type) {
+        $('.order_active').hide();
+        $('.order_complete').hide();
+        $('.order_cancel').hide();
+        $('.order_' + order_type).show();
+    }
+
+</script></div>
+</div></div></div>
+        <div class="footer"><div class="wrap clrfix">
+            <a href="#" class="up" onClick="scroll(0,0); return false;"></a>
+            <div class="fll col240">
+                <div class="f12">&copy; 2011&ndash;2013 <b></b></div>
+                <p class="f11 mt5">Powered by &copy; Opentao platform <a href="http://opentao.net" target="_blank" alt="opentao.net" title="opentao.net">opentao.net</a></p>
+            </div>
+            <div class="flr col690">
+                <ul class="fmenu flin clrfix">
+                    <li><a href="main_user_agreement" alt="Пользовательское соглашение" title="Пользовательское соглашение">Пользовательское соглашение</a></li>
+                    <li><a href="policy" alt="Политика безопасности" title="Политика безопасности">Политика безопасности</a></li>
+                    <li><a href="about_us" alt="О нас" title="О нас">О нас</a></li>
+                    <li><a href="contacts" alt="Контакты" title="Контакты">Контакты</a></li>
+                    <li><a href="help" alt="Помощь" title="Помощь">Помощь</a></li>
+                    <li><a href="sitemap" alt="Карта сайта" title="Карта сайта">Карта сайта</a></li>
+                                    </ul>
+                <div class="pay mt15">
+                                            <img src="p/pay.png" />
+                                    </div>
+            </div>	
+        </div></div>
+
+</body>
+</html>	
+<link rel="stylesheet" href="admin/css/jquery.treeview.css" />
+<script src="admin/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="admin/js/jquery.treeview.js" type="text/javascript"></script>
+<style>
+    #browser .closed {
+        background-color: white;
+        border: none;
+        height: auto;
+        overflow: auto;
+    }
+    span.time{
+        display: inline-block;
+        width: 120px;
+    }
+    span.method{
+        display: inline-block;
+        min-width: 200px;
+    }
+    #logs{
+        display: block;
+        width: 970px;
+        margin: 20px auto 100px auto;
+    }
+</style>
+<script>
+    $(function(){
+        $("#browser").treeview();
+    });
+</script>
+<!-- {{ отладочная информация --><hr><a onclick="$('.debug_info').toggle()">Время основной сборки страницы: 0.50777 сек</a><br><div align="left" style="display:none" class="debug_info"><pre>    [2013-07-03 23:23:11] OTAPIlib->MultiRequest (count: 5) (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/MultiRequest (count: 5)?">Ссылка</a>) Параметры: [] — 0.19 сек.<br> <br><br>    [2013-07-03 23:23:11] OTAPIlib->GetDiscountGroup (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/GetDiscountGroup?sessionId=adbcc2dd-6468-4d62-9156-4ba9e90fef06&instanceKey=b01e9788-f117-4621-9102-f650a3ab4303&language=ru&">Ссылка</a>) Параметры: {&quot;sessionId&quot;:&quot;adbcc2dd-6468-4d62-9156-4ba9e90fef06&quot;,&quot;language&quot;:&quot;ru&quot;} — 0.19 сек.<br> |     176.439ms = OtapiService: Service call (overhead: 0.213ms)<br>||       0.644ms = Otapi: Create core<br>||       0.253ms = Otapi: AccumulateCallCount (overhead: 0.122ms)<br>|||       0.002ms = Otapi: Create dependency Counter<br>|||       0.130ms = [3 ***] BufferedCounter: Get counter data from Buffer<br>||       0.192ms = Otapi: AccumulateCallCount (overhead: 0.084ms)<br>|||       0.108ms = [3 ***] BufferedCounter: Get counter data from Buffer<br>||       0.076ms = Otapi: Create dependency PublicAccountManager<br>||      31.145ms = Service client call: PublicAccountManager.GetAuthenticatedUserId (overhead: 5.072ms)<br>|||      26.073ms = PublicAccountManagerService: Service call (overhead: 6.332ms)<br>||||      19.742ms = Logic: Check session<br>||      46.548ms = Service client call: PublicAccountManager.GetAuthenticatedUserId (overhead: 15.910ms)<br>|||      30.638ms = PublicAccountManagerService: Service call (overhead: 3.984ms)<br>||||      26.654ms = Logic: Check session<br>||       0.067ms = Otapi: Create dependency BusinessLogic<br>||      83.500ms = BusinessLogic: IOrdersInterface.GetCompletedOrdersVolume (overhead: 0.042ms)<br>|||       0.062ms = BL interface: Serialize request<br>|||      83.142ms = Service client call: BusinessLogicConnector.Call (overhead: 13.213ms)<br>||||      69.929ms = BL: Total Time MySQL: 3 (S:2, I:0, U:0)<br>|||       0.254ms = BL interface: Deserialize response<br>||       0.003ms = Otapi: Create dependency SettingsManager<br>||      13.798ms = Service client call: SettingsManager.FindDiscountGroup (overhead: 1.337ms)<br>|||      12.461ms = SettingsManagerService: Service call (overhead: 9.460ms)<br>||||       3.001ms = ORM: Get instance by instanceKey (found)<br>Time distribution: database = 3.001ms (1.7%), external = 69.929ms (39.6%), interservice = 35.532ms (20.1%), logic = 46.396ms (26.3%), other = 21.581ms (12.2%), Otapi = 1.805ms (1.0%), PublicAccountManager = 56.711ms (32.1%), BusinessLogicConnector = 69.929ms (39.6%), SettingsManager = 12.461ms (7.1%)<br><br><br>    [2013-07-03 23:23:11] OTAPIlib->GetAccountInfo (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/GetAccountInfo?sessionId=adbcc2dd-6468-4d62-9156-4ba9e90fef06&instanceKey=b01e9788-f117-4621-9102-f650a3ab4303&language=ru&">Ссылка</a>) Параметры: {&quot;sessionId&quot;:&quot;adbcc2dd-6468-4d62-9156-4ba9e90fef06&quot;,&quot;language&quot;:&quot;ru&quot;} — 0.17 сек.<br> |     149.404ms = OtapiService: Service call (overhead: 0.172ms)<br>||       0.479ms = Otapi: Create core<br>||       0.188ms = Otapi: AccumulateCallCount (overhead: 0.076ms)<br>|||       0.002ms = Otapi: Create dependency Counter<br>|||       0.110ms = [3 ***] BufferedCounter: Get counter data from Buffer<br>||       0.163ms = Otapi: AccumulateCallCount (overhead: 0.057ms)<br>|||       0.106ms = [3 ***] BufferedCounter: Get counter data from Buffer<br>||       0.005ms = Otapi: Create dependency PublicAccountManager<br>||      57.039ms = Service client call: PublicAccountManager.GetUserIdBySessionId (overhead: 37.564ms)<br>|||      19.476ms = PublicAccountManagerService: Service call<br>||       0.071ms = Otapi: Create dependency BusinessLogic<br>||      89.607ms = BusinessLogic: IPersonalAccountInterface.GetAccountInfo (overhead: 0.201ms)<br>|||       0.056ms = BL interface: Serialize request<br>|||      88.989ms = Service client call: BusinessLogicConnector.Call (overhead: 13.307ms)<br>||||      75.682ms = BL: Total Time MySQL: 7 (S:5, I:0, U:0)<br>|||       0.361ms = BL interface: Deserialize response<br>||       0.004ms = Otapi: Create dependency MoneyChanger<br>||       1.678ms = Service client call: MoneyChanger.GetCurrencies (overhead: 1.584ms)<br>|||       0.095ms = MoneyChangerService: Service call<br>Time distribution: external = 75.682ms (50.7%), interservice = 52.455ms (35.1%), other = 21.268ms (14.2%), Otapi = 1.697ms (1.1%), PublicAccountManager = 19.476ms (13.0%), BusinessLogicConnector = 75.682ms (50.7%), MoneyChanger = 0.095ms (0.1%)<br><br><br>    [2013-07-03 23:23:11] OTAPIlib->GetSalesOrdersList (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/GetSalesOrdersList?sessionId=adbcc2dd-6468-4d62-9156-4ba9e90fef06&filter=0&instanceKey=b01e9788-f117-4621-9102-f650a3ab4303&language=ru&">Ссылка</a>) Параметры: {&quot;sessionId&quot;:&quot;adbcc2dd-6468-4d62-9156-4ba9e90fef06&quot;,&quot;filter&quot;:0,&quot;language&quot;:&quot;ru&quot;} — 0.16 сек.<br> |     152.230ms = OtapiService: Service call (overhead: 0.319ms)<br>||       0.541ms = Otapi: Create core<br>||       0.208ms = Otapi: AccumulateCallCount (overhead: 0.084ms)<br>|||       0.002ms = Otapi: Create dependency Counter<br>|||       0.122ms = [3 ***] BufferedCounter: Get counter data from Buffer<br>||       0.146ms = Otapi: AccumulateCallCount (overhead: 0.053ms)<br>|||       0.094ms = [3 ***] BufferedCounter: Get counter data from Buffer<br>||       0.020ms = Otapi: Create dependency PublicAccountManager<br>||      26.368ms = Service client call: PublicAccountManager.GetUserIdBySessionId (overhead: 12.787ms)<br>|||      13.581ms = PublicAccountManagerService: Service call<br>||       0.095ms = Otapi: Create dependency BusinessLogic<br>||     122.885ms = BusinessLogic: IOrdersInterface.GetSalesOrdersList (overhead: 0.230ms)<br>|||       0.079ms = BL interface: Serialize request<br>|||     121.851ms = Service client call: BusinessLogicConnector.Call (overhead: 29.847ms)<br>||||      92.004ms = BL: Total Time MySQL: 28 (S:19, I:0, U:0)<br>|||       0.726ms = BL interface: Deserialize response<br>||       0.004ms = Otapi: Create dependency MoneyChanger<br>||       1.645ms = Service client call: MoneyChanger.ConvertMoneyListToDisplayedList (overhead: 1.550ms)<br>|||       0.095ms = MoneyChangerService: Service call (overhead: 0.070ms)<br>||||       0.026ms = MoneyChangeBuilder: DoBuild ListDictionary<br>||       0.001ms = Otapi: Create dependency Goblin<br>||       0.000ms = Translate Abort: langFrom equal langTo<br>Time distribution: external = 92.004ms (60.4%), interservice = 44.184ms (29.0%), other = 16.043ms (10.5%), Otapi = 2.366ms (1.6%), PublicAccountManager = 13.581ms (8.9%), BusinessLogicConnector = 92.004ms (60.4%), MoneyChanger = 0.095ms (0.1%)<br><br><br>    [2013-07-03 23:23:11] OTAPIlib->GetUserInfo (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/GetUserInfo?sessionId=adbcc2dd-6468-4d62-9156-4ba9e90fef06&instanceKey=b01e9788-f117-4621-9102-f650a3ab4303&language=ru&">Ссылка</a>) Параметры: {&quot;sessionId&quot;:&quot;adbcc2dd-6468-4d62-9156-4ba9e90fef06&quot;,&quot;language&quot;:&quot;ru&quot;} — 0.13 сек.<br> |     114.219ms = OtapiService: Service call (overhead: 0.197ms)<br>||       0.439ms = Otapi: Create core<br>||       0.152ms = Otapi: AccumulateCallCount (overhead: 0.063ms)<br>|||       0.002ms = Otapi: Create dependency Counter<br>|||       0.088ms = [3 ***] BufferedCounter: Get counter data from Buffer<br>||       0.130ms = Otapi: AccumulateCallCount (overhead: 0.042ms)<br>|||       0.088ms = [3 ***] BufferedCounter: Get counter data from Buffer<br>||       0.004ms = Otapi: Create dependency PublicAccountManager<br>||     108.275ms = Service client call: PublicAccountManager.GetUserInfo (overhead: 44.389ms)<br>|||      63.886ms = PublicAccountManagerService: Service call (overhead: 8.888ms)<br>||||      33.153ms = Logic: Check session<br>||||       0.130ms = Linq2Sql: Create DataContext<br>||||       7.568ms = ORM: Get user by Id (found)<br>||||      14.148ms = ORM: Get user delivery info list (result size = 2)<br>||       0.003ms = Otapi: Create dependency SettingsManager<br>||       2.116ms = Service client call: SettingsManager.GetCountryInfoList (overhead: 1.883ms)<br>|||       0.233ms = SettingsManagerService: Service call<br>||       0.002ms = Otapi: Create dependency Goblin<br>||       2.902ms = Service client call: Goblin.TranslateTextPackageByKeys (overhead: 2.535ms)<br>|||       0.366ms = GoblinService: Service call (overhead: 0.248ms)<br>||||       0.000ms = For Counter: Goblin:Input text length:10<br>||||       0.000ms = Goblin Say: langFrom en, langTo ru<br>||||       0.006ms = Goblin: FixTranslatesWithoutContextKeyId<br>||||       0.100ms = Goblin: TranslateByGoblin (overhead: 0.017ms)<br>|||||       0.029ms = Logic: Get ContextIds from WorkItemCollection<br>|||||       0.006ms = Logic: Get IdInContexts from WorkItemCollection<br>|||||       0.043ms = GoblinCacheRepository: GetDictionaryTranslatesByIds<br>|||||       0.005ms = Logic: UpdateFindedTranslateById<br>||||       0.010ms = Goblin: TranslateByExternalTranlator (overhead: 0.008ms)<br>|||||       0.002ms = ORM: Get workItems that needs to translated (result size = 0)<br>||||       0.003ms = Goblin: TranslateHtml<br>||||       0.000ms = Goblin Say: Found Translates in DB: 1 / 1<br>Time distribution: database = 21.848ms (19.1%), interservice = 48.807ms (42.7%), logic = 33.193ms (29.1%), other = 10.372ms (9.1%), Otapi = 0.927ms (0.8%), PublicAccountManager = 63.886ms (55.9%), SettingsManager = 0.233ms (0.2%), Goblin = 0.366ms (0.3%)<br><br><br>    [2013-07-03 23:23:11] OTAPIlib->GetTicketInfoList (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/GetTicketInfoList?sessionId=adbcc2dd-6468-4d62-9156-4ba9e90fef06&direction=In&instanceKey=b01e9788-f117-4621-9102-f650a3ab4303&language=ru&">Ссылка</a>) Параметры: {&quot;sessionId&quot;:&quot;adbcc2dd-6468-4d62-9156-4ba9e90fef06&quot;,&quot;direction&quot;:&quot;In&quot;,&quot;language&quot;:&quot;ru&quot;} — 0.12 сек.<br> |     102.579ms = OtapiService: Service call (overhead: 0.162ms)<br>||       0.503ms = Otapi: Create core<br>||       0.193ms = Otapi: AccumulateCallCount (overhead: 0.075ms)<br>|||       0.002ms = Otapi: Create dependency Counter<br>|||       0.117ms = [3 ***] BufferedCounter: Get counter data from Buffer<br>||       0.159ms = Otapi: AccumulateCallCount (overhead: 0.057ms)<br>|||       0.101ms = [3 ***] BufferedCounter: Get counter data from Buffer<br>||       0.004ms = Otapi: Create dependency PublicAccountManager<br>||      51.682ms = Service client call: PublicAccountManager.GetUserIdBySessionId (overhead: 18.863ms)<br>|||      32.819ms = PublicAccountManagerService: Service call<br>||       0.054ms = Otapi: Create dependency BusinessLogic<br>||      49.822ms = BusinessLogic: ICommunicationInterface.GetTicketInfoList (overhead: 0.154ms)<br>|||       0.055ms = BL interface: Serialize request<br>|||      49.228ms = Service client call: BusinessLogicConnector.Call (overhead: 11.533ms)<br>||||      37.694ms = BL: Total Time MySQL: 2 (S:1, I:0, U:0)<br>|||       0.385ms = BL interface: Deserialize response<br>Time distribution: external = 37.694ms (36.7%), interservice = 30.397ms (29.6%), other = 34.488ms (33.6%), Otapi = 1.669ms (1.6%), PublicAccountManager = 32.819ms (32.0%), BusinessLogicConnector = 37.694ms (36.7%)<br><br><br>    прочее — -0.4599 сек.<br><br>1. - [2013-07-03 23:23:11] OTAPIlib->MultiRequest (count: 5) (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/MultiRequest (count: 5)?">Ссылка</a>) Параметры: [] - Время - 0.19 сек.<br><br>2. - [2013-07-03 23:23:11] OTAPIlib->GetDiscountGroup (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/GetDiscountGroup?sessionId=adbcc2dd-6468-4d62-9156-4ba9e90fef06&instanceKey=b01e9788-f117-4621-9102-f650a3ab4303&language=ru&">Ссылка</a>) Параметры: {&quot;sessionId&quot;:&quot;adbcc2dd-6468-4d62-9156-4ba9e90fef06&quot;,&quot;language&quot;:&quot;ru&quot;} - Время - 0.19 сек.<br>  -->>   OtapiService: Service call - Время : 176.439ms - Время(overhead) : 0.213ms<br><br>3. - [2013-07-03 23:23:11] OTAPIlib->GetAccountInfo (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/GetAccountInfo?sessionId=adbcc2dd-6468-4d62-9156-4ba9e90fef06&instanceKey=b01e9788-f117-4621-9102-f650a3ab4303&language=ru&">Ссылка</a>) Параметры: {&quot;sessionId&quot;:&quot;adbcc2dd-6468-4d62-9156-4ba9e90fef06&quot;,&quot;language&quot;:&quot;ru&quot;} - Время - 0.17 сек.<br>  -->>   OtapiService: Service call - Время : 149.404ms - Время(overhead) : 0.172ms<br><br>4. - [2013-07-03 23:23:11] OTAPIlib->GetSalesOrdersList (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/GetSalesOrdersList?sessionId=adbcc2dd-6468-4d62-9156-4ba9e90fef06&filter=0&instanceKey=b01e9788-f117-4621-9102-f650a3ab4303&language=ru&">Ссылка</a>) Параметры: {&quot;sessionId&quot;:&quot;adbcc2dd-6468-4d62-9156-4ba9e90fef06&quot;,&quot;filter&quot;:0,&quot;language&quot;:&quot;ru&quot;} - Время - 0.16 сек.<br>  -->>   OtapiService: Service call - Время : 152.230ms - Время(overhead) : 0.319ms<br><br>5. - [2013-07-03 23:23:11] OTAPIlib->GetUserInfo (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/GetUserInfo?sessionId=adbcc2dd-6468-4d62-9156-4ba9e90fef06&instanceKey=b01e9788-f117-4621-9102-f650a3ab4303&language=ru&">Ссылка</a>) Параметры: {&quot;sessionId&quot;:&quot;adbcc2dd-6468-4d62-9156-4ba9e90fef06&quot;,&quot;language&quot;:&quot;ru&quot;} - Время - 0.13 сек.<br>  -->>   OtapiService: Service call - Время : 114.219ms - Время(overhead) : 0.197ms<br><br>6. - [2013-07-03 23:23:11] OTAPIlib->GetTicketInfoList (<a target="_blank" href="http://otapi.business.demo.services.opentao.net/OtapiWebService2.asmx/GetTicketInfoList?sessionId=adbcc2dd-6468-4d62-9156-4ba9e90fef06&direction=In&instanceKey=b01e9788-f117-4621-9102-f650a3ab4303&language=ru&">Ссылка</a>) Параметры: {&quot;sessionId&quot;:&quot;adbcc2dd-6468-4d62-9156-4ba9e90fef06&quot;,&quot;direction&quot;:&quot;In&quot;,&quot;language&quot;:&quot;ru&quot;} - Время - 0.12 сек.<br>  -->>   OtapiService: Service call - Время : 102.579ms - Время(overhead) : 0.162ms<br></pre><br><br>====================DBcache_debug===========================<br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0008ms - Врямя - DBcache__construct.  <br>0.0008ms - Врямя - DBcache__construct.  <br>0.0008ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0009ms - Врямя - DBcache__construct.  <br>0.0008ms - Врямя - DBcache__construct.  <br></div><!-- отладочная информация }} -->

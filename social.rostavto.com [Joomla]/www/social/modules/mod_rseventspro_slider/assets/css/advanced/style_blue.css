@@ -1,0 +1,80 @@
+div.rsepro_slider_box{margin:4px 2px 25px 2px; display:block;float:left;position:relative;text-align:left;}
+.rsepro_slider_box h4{padding:0px;}
+h4.stitle{color:#666;margin:0 0 5px 0}
+div.rsepro_slider_adv a.hasTip img {
+	margin:5px;
+}
+.links {padding:10px;margin-top:20px}
+.links a{font-size:14px;color:#0080FF;text-decoration:none}
+.links a:hover{font-weight:bold}
+
+.buttons{padding:4px 4px 4px 14px;display:block;float:left;color:#7F7F7F;}
+.buttons span.roundbtn{color:#BFDEFF;background:url(../../images/blue/roundbuton.png) no-repeat top left; margin-right:1px;width:3px;height:3px;display:block;float:left;padding:0 5px;cursor:pointer;font:10px Verdana ;padding:5px}
+.buttons span.active, .buttons span:hover{background:url(../../images/blue/roundbuton.png) no-repeat bottom left;color:#000;}
+.rsepro_slider_adv div a{color:#006BB9;text-decoration:none; }
+.prev_slide{
+	background:url(../../images/blue/arrow-left.png) no-repeat top left;
+	width:14px;
+	height:19px;
+	display:block;
+	position:absolute;
+	top:90px;
+	left:10px;
+	cursor:pointer;
+}
+.next_slide{
+	background:url(../../images/blue/arrow-right.png) no-repeat top left;
+	width:14px;
+	height:19px;
+	display:block;
+	position:absolute;
+	top:90px;
+	right:10px;
+	cursor:pointer;
+}
+
+.rsepro_slider_adv {
+	position:absolute;
+	color:#000;
+}
+div.rsepro_slider_mask3 div.rsepro_slider_adv div{
+	position:relative;
+	float:left;
+	color:#000;
+	padding-left:30px;
+	padding-right:30px;
+}
+
+div.rsepro_slider_adv div h3 a, div.rsepro_slider_adv div h3 span, div.rsepro_slider_adv div a{
+	color:#1874CD !important;
+}
+.rsepro_slider_adv p, .rsepro_slider_adv ul{
+	color:#000;
+}
+.rsepro_slider_adv p{
+	text-indent:16px;
+
+}
+.rsepro_slider_adv img{
+	width:200px;
+	height:150px;
+	float:left;
+	margin:0 10px 10px 15px;
+}
+#info4{
+	background:#fff !important;
+	color:#1874CD !important;
+	cursor:default
+}
+.rsepro_slider_mask3{
+	position:relative;
+	overflow:hidden;
+	padding:8px;
+}
+#handles4{
+	text-align:center !important;
+}
+.rsepro_slider_slide p {
+	width:100%;
+
+}

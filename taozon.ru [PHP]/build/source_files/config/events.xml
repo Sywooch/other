@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+    <event name="onRenderAdminOrdersList" pakage_path="../lib/orders_excel_export" class_name="ExportOrder"></event>
+    <event name="onExportOrder" pakage_path="../lib/orders_excel_export" class_name="ExportOrder"></event>
+    <event name="ShowHistory" pakage_path="../lib/UserHistory" class_name="UsrHistory"></event>
+    <event name="AddItemHistory" pakage_path="../lib/UserHistory" class_name="UsrHistory"></event>
+</events>

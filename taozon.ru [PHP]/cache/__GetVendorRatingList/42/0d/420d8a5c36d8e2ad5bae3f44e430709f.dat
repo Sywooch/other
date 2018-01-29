@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VendorInfoListAnswer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://services.opentao.net">
+  <ErrorCode>Ok</ErrorCode>
+  <SubErrorCode/>
+  <RequestTimeStatistic>33.357 = {OtapiService} Service call (overhead: 0.170)
+ 0.027 = |-{Otapi} Create core
+ 0.045 = |-{Otapi} AccumulateCallCount (overhead: 0.019)
+ 0.001 = |-|-{Otapi} Create dependency Counter
+ 0.025 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.031 = |-{Otapi} AccumulateCallCount (overhead: 0.009)
+ 0.022 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.034 = |-{Otapi} AccumulateCallCount (overhead: 0.013)
+ 0.021 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.031 = |-{Otapi} AccumulateCallCount (overhead: 0.010)
+ 0.021 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.002 = |-{Otapi} Create dependency ItemRedLightsStreet
+ 8.225 = |-{Service client call} ItemRedLightsStreet.GetItemRatingListFrame (overhead: 2.595)
+         |-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+ 5.630 = |-|-{ItemRedLightsStreetService} Service call (overhead: 5.621)
+ 0.009 = |-|-|-{ORM} Get rating list (result size = 16)
+ 0.007 = |-{Otapi} Create dependency ProvidersDirector
+24.786 = |-{Service client call} ProvidersDirector.GetVendorInfoList (overhead: 2.005)
+         |-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+22.781 = |-|-{ProvidersDirectorService} Service call (overhead: 0.441)
+ 0.001 = |-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+ 0.006 = |-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+12.222 = |-|-|-{Service client call} TopapiAdapter.GetVendorInfoList (overhead: 7.958)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 4.264 = |-|-|-|-{CachedTopapiAdapterService} Service call (overhead: 2.914)
+ 0.025 = |-|-|-|-|-{CachedTopapiAdapter} Create core (overhead: 0.024)
+ 0.001 = |-|-|-|-|-|-{CachedTopapiAdapter} Create dependency TopapiAdapter
+         |-|-|-|-|-{For Counter} CachedTopapiAdapter::1
+ 0.004 = |-|-|-|-|-{ORM} Get deleted TopapiIds (result size = 0)
+ 1.321 = |-|-|-|-|-{VendorWorkInfoController} SetCachedWorkItems (overhead: 0.096)
+ 1.225 = |-|-|-|-|-|-{ORM} Get CachedVendor elements (result size = 16)
+ 0.005 = |-|-|-{ProvidersDirector} Create dependency Goblin
+         |-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+10.106 = |-|-|-{Data translate} Value provider is ListContextedValueProvider&lt;OtapiVendorInfo&gt; (overhead: 0.129)
+ 9.977 = |-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.628)
+         |-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 8.349 = |-|-|-|-|-{GoblinService} Service call (overhead: 0.195)
+         |-|-|-|-|-|-{For Counter} Goblin:Input text length:64
+         |-|-|-|-|-|-{Goblin Say} langFrom zh-chs, langTo ru
+ 0.020 = |-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+ 0.282 = |-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.022)
+ 0.175 = |-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+ 0.015 = |-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+ 0.044 = |-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+ 0.025 = |-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+ 7.844 = |-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.056)
+ 0.013 = |-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 4)
+ 7.776 = |-|-|-|-|-|-|-{CounterTranslator} TranslateTextPackage (overhead: 0.019)
+         |-|-|-|-|-|-|-|-{For Counter} Translator:Input text length:12
+ 7.758 = |-|-|-|-|-|-|-|-{ITranslator} TranslateTextPackage (overhead: 0.106)
+ 0.007 = |-|-|-|-|-|-|-|-|-{CharacterwiseDictionaryTranslator} Translate text by 'client' dictionary
+         |-|-|-|-|-|-|-|-|-{TextPartCollections} AnyFound: 0, All: 4
+         |-|-|-|-|-|-|-|-|-{TextParts} Found: 0, All: 4
+ 0.018 = |-|-|-|-|-|-|-|-|-[4 ****] {CharacterwiseDictionaryTranslator} Translate text by 'opentao' dictionary
+         |-|-|-|-|-|-|-|-|-{TextPartCollections} AnyFound: 0, All: 4
+         |-|-|-|-|-|-|-|-|-{TextParts} Found: 0, All: 4
+ 7.627 = |-|-|-|-|-|-|-|-|-{SelectLanguageTranslator} TranslateTextPackage (overhead: 0.029)
+         |-|-|-|-|-|-|-|-|-|-{SelectLanguageTranslator} External name langFrom/langTo: zh-chs/ru
+ 0.836 = |-|-|-|-|-|-|-|-|-|-{Goblin} Create dependency Translator
+ 6.762 = |-|-|-|-|-|-|-|-|-|-{Service client call} Translator.TranslateTextPackage
+         |-|-|-|-|-|-|-|-|-|-|-{Logic} Parse input texts
+         |-|-|-|-|-|-|-|-|-|-|-{DB} Get translates from cache
+         |-|-|-|-|-|-|-|-|-|-|-{External} Translate texts
+ 0.007 = |-|-|-|-|-|-{Goblin} TranslateHtml
+         |-|-|-|-|-|-{Goblin Say} Found Translates in DB: 26 / 30
+         |-|-|-|-|-|-{Goblin Say} Translated texts (4 unique): 4 / 30
+Time distribution: database = 1.250 (3.7%), interservice = 14.186 (42.5%), logic = 0.215 (0.6%), other = 17.706 (53.1%), Otapi = 0.346 (1.0%), ItemRedLightsStreet = 5.630 (16.9%), ProvidersDirector = 0.582 (1.7%), CachedTopapiAdapter = 4.264 (12.8%), Goblin = 1.586 (4.8%), Translator = 6.762 (20.3%)
+Debug info process time: 0.351
+</RequestTimeStatistic>
+  <Result>
+    <Content>
+      <Item>
+        <Id>prase旗舰店</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>prase旗舰店</Name>
+        <Sex>Male</Sex>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/T1aCdrFn8XXXb1upjX.jpg</PictureUrl>
+        <Location>
+          <City>Ханчжоу</City>
+          <State>Провинция Zhejiang</State>
+        </Location>
+        <Credit>
+          <Level>14</Level>
+          <Score>151244</Score>
+          <TotalFeedbacks>151244</TotalFeedbacks>
+          <PositiveFeedbacks>151244</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>artmu旗舰店</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>artmu旗舰店</Name>
+        <PictureUrl>http://a.tbcdn.cn/app/sns/img/default/avatar-120.png</PictureUrl>
+        <Location>
+          <City>Тайчжоу</City>
+          <State>Чжэцзян</State>
+        </Location>
+        <Credit>
+          <Level>13</Level>
+          <Score>98459</Score>
+          <TotalFeedbacks>98459</TotalFeedbacks>
+          <PositiveFeedbacks>98459</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>挑战时尚的恶魔</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>挑战时尚的恶魔</Name>
+        <Sex>Female</Sex>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/i3/T1WTNoXoxwXXartXjX.gif</PictureUrl>
+        <Location>
+          <City>Шанхай</City>
+          <State>Шанхай</State>
+        </Location>
+        <Credit>
+          <Level>15</Level>
+          <Score>346803</Score>
+          <TotalFeedbacks>352511</TotalFeedbacks>
+          <PositiveFeedbacks>347461</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>balneaire旗舰店</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>balneaire旗舰店</Name>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/i3/T1kLPnXglXXXb1upjX.jpg</PictureUrl>
+        <Location>
+          <City>Пекин</City>
+          <State>Пекин</State>
+        </Location>
+        <Credit>
+          <Level>13</Level>
+          <Score>96082</Score>
+          <TotalFeedbacks>96082</TotalFeedbacks>
+          <PositiveFeedbacks>96082</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>hbcba</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>hbcba</Name>
+        <Sex>Male</Sex>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/TB1MfGjFVXXXXXzXFXXSutbFXXX.jpg</PictureUrl>
+        <Location>
+          <City>Шэньчжэнь</City>
+          <State>Гуандун</State>
+        </Location>
+        <Credit>
+          <Level>14</Level>
+          <Score>171571</Score>
+          <TotalFeedbacks>174458</TotalFeedbacks>
+          <PositiveFeedbacks>172229</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>雨的亭</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>雨的亭</Name>
+        <Sex>Female</Sex>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/i1/T1Zu88XipdXXb1upjX.jpg</PictureUrl>
+        <Location>
+          <City>Пекин</City>
+          <State>Пекин</State>
+        </Location>
+        <Credit>
+          <Level>15</Level>
+          <Score>265133</Score>
+          <TotalFeedbacks>267356</TotalFeedbacks>
+          <PositiveFeedbacks>265486</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>cmq20080808</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>cmq20080808</Name>
+        <Sex>Female</Sex>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/T1aAJSXqNgXXb1upjX.jpg</PictureUrl>
+        <Location>
+          <City>Шанхай</City>
+          <State>Шанхай</State>
+        </Location>
+        <Credit>
+          <Level>9</Level>
+          <Score>4598</Score>
+          <TotalFeedbacks>4635</TotalFeedbacks>
+          <PositiveFeedbacks>4606</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>unq旗舰店</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>unq旗舰店</Name>
+        <PictureUrl>http://a.tbcdn.cn/app/sns/img/default/avatar-120.png</PictureUrl>
+        <Location>
+          <City>Гуанчжоу</City>
+          <State>Провинция Гуандун</State>
+        </Location>
+        <Credit>
+          <Level>9</Level>
+          <Score>4614</Score>
+          <TotalFeedbacks>4614</TotalFeedbacks>
+          <PositiveFeedbacks>4614</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>晨光chenguang520</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>晨光chenguang520</Name>
+        <Sex>Male</Sex>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/i4/T1og8uXkdoXXaH.X6X.JPEG</PictureUrl>
+        <Location>
+          <City>Кантон</City>
+          <State>Гуандун</State>
+        </Location>
+        <Credit>
+          <Level>10</Level>
+          <Score>6308</Score>
+          <TotalFeedbacks>6407</TotalFeedbacks>
+          <PositiveFeedbacks>6346</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>dwj521000</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>dwj521000</Name>
+        <Sex>Male</Sex>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/T1ypRWXzdaXXb1upjX.jpg</PictureUrl>
+        <Location/>
+        <Credit>
+          <Level>12</Level>
+          <Score>21326</Score>
+          <TotalFeedbacks>21678</TotalFeedbacks>
+          <PositiveFeedbacks>21448</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>美衣诱惑</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>美衣诱惑</Name>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/i1/T1lt8RXgBwXXartXjX.gif</PictureUrl>
+        <Location>
+          <City>Шэньчжэнь</City>
+          <State>Гуандун</State>
+        </Location>
+        <Credit>
+          <Level>15</Level>
+          <Score>241242</Score>
+          <TotalFeedbacks>244008</TotalFeedbacks>
+          <PositiveFeedbacks>241833</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>guoshigao</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>guoshigao</Name>
+        <Sex>Male</Sex>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/i1/T1rUWBXehYXXb1upjX.jpg</PictureUrl>
+        <Location>
+          <City>Дунгуань</City>
+          <State>Гуандун</State>
+        </Location>
+        <Credit>
+          <Level>12</Level>
+          <Score>23018</Score>
+          <TotalFeedbacks>23226</TotalFeedbacks>
+          <PositiveFeedbacks>23052</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>德尚.德罗</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>德尚.德罗</Name>
+        <Sex>Male</Sex>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/i1/11575050589229748/TB2JfuLapXXXXbFXpXXXXXXXXXX_!!41575-0-mytaobao.jpg</PictureUrl>
+        <Location>
+          <City>Нанкин</City>
+          <State>Провинция Цзянсу</State>
+        </Location>
+        <Credit>
+          <Level>15</Level>
+          <Score>333554</Score>
+          <TotalFeedbacks>338765</TotalFeedbacks>
+          <PositiveFeedbacks>334349</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>妖精的口袋旗舰店</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>妖精的口袋旗舰店</Name>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/i2/T12Il9XohXXXb1upjX.jpg</PictureUrl>
+        <Location>
+          <City>Нанкин</City>
+          <State>Провинция Цзянсу</State>
+        </Location>
+        <Credit>
+          <Level>18</Level>
+          <Score>2372106</Score>
+          <TotalFeedbacks>2372106</TotalFeedbacks>
+          <PositiveFeedbacks>2372106</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>牧之逸旗舰店</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>牧之逸旗舰店</Name>
+        <Sex>Male</Sex>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/T1qnnYFjBcXXb1upjX.jpg</PictureUrl>
+        <Location>
+          <City>Чанша</City>
+          <State>Хунань</State>
+        </Location>
+        <Credit>
+          <Level>16</Level>
+          <Score>672855</Score>
+          <TotalFeedbacks>672855</TotalFeedbacks>
+          <PositiveFeedbacks>672855</PositiveFeedbacks>
+        </Credit>
+      </Item>
+      <Item>
+        <Id>文刀仁义</Id>
+        <ProviderType>Taobao</ProviderType>
+        <Name>文刀仁义</Name>
+        <PictureUrl>http://img.taobaocdn.com/sns_logo/i2/T1GodoXjxtXXartXjX.gif</PictureUrl>
+        <Location>
+          <City>Чанчжоу</City>
+          <State>Провинция Цзянсу</State>
+        </Location>
+        <Credit>
+          <Level>18</Level>
+          <Score>3529182</Score>
+          <TotalFeedbacks>3567325</TotalFeedbacks>
+          <PositiveFeedbacks>3534859</PositiveFeedbacks>
+        </Credit>
+      </Item>
+    </Content>
+  </Result>
+</VendorInfoListAnswer>

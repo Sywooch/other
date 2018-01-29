@@ -1,0 +1,146 @@
+<h5><?=LangAdmin::get('vendors_set')?></h5>
+<!--Вывод подборки продавцов-->
+<ul id="sortable-items" class="list-type-none">
+    <? if($itemRatingTypeId == 'Best'){ ?>
+    <li class="ui-state-default" style="position: relative; min-height: 20px; text-align: center">
+        <form enctype="multipart/form-data" action="index.php?cmd=Set2&do=addToRatingList" class="ajax-form" method="post" onsuccess="refreshTab" onerror="refreshTab">
+            <table style="background: none; margin: 0">
+                <!-- Поле для Id продавца -->
+                <tr>
+                    <td style="background: none">
+                        <?=LangAdmin::get('adding_a_vendor_by_its_identifier')?>
+                    </td>
+                    <td style="background: none; text-align: right">
+                        <input type="text" name="ItemList" required style="width: 250px;" />
+                    </td>
+                </tr>
+                <!-- Поле для названия продавца -->
+                <tr>
+                    <td style="background: none">
+                        <?=LangAdmin::get('vendor_name')?>:
+                    </td>
+                    <td style="background: none; text-align: right">
+                        <input type="text" name="VendorName" style="width: 250px;"/>
+                    </td>
+                </tr>
+                <!-- Поле для изображения продавца -->
+                <tr>
+                    <td style="background: none; vertical-align: middle;"><?=LangAdmin::get('image')?> (<?=LangAdmin::get('optional')?>):</td>
+                    <td style="background: none; text-align: right">
+                        <input type="hidden" name="PictureUrl" value="" />
+                        <div id="image_upload">
+                            <div id="file_uploader"></div>
+                        </div>
+                    </td>
+                </tr>
+                <?=Plugins::invokeEvent('onRenderAddBestItemsForm')?>
+                <tr>
+                    <td style="background: none"></td>
+                    <td style="background: none; text-align: right">
+                        <input type="submit" value="<?=LangAdmin::get('add_vendor_to_favorites')?>"/>
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" name="contentType" value="Vendor" />
+            <input type="hidden" name="currentCategory" value="<?=$activeCategory?>" />
+        </form>
+    </li>
+    <? } ?>
+<script type="text/javascript">
+function createUploader() {
+        var uploader = new qq.FileUploader({
+            element:document.getElementById('file_uploader'),
+            action:'utils/Upload.php?resize=1',
+            debug:true,
+            template:'<div class="qq-uploader">' +
+                '<div class="qq-upload-drop-area"><span></span></div>' +
+                '<div class="qq-upload-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" style="height:23px;padding-top:7px">&nbsp;&nbsp;&nbsp;<?=LangAdmin::get('select_a_picture')?>&nbsp;&nbsp;&nbsp;</div>' +
+                '<ul class="qq-upload-list"></ul>' +
+                '</div>',
+            onComplete:function (id, fileName, responseJSON) {
+                if(typeof responseJSON.url !== 'undefined'){
+                    $('.qq-upload-list').empty().append($('<li></li>').append($('<img />').attr('src', responseJSON.url + '?' + Math.random())));
+                    $('[name="PictureUrl"]').val(responseJSON.url);
+                }
+            }
+        });
+    }
+    $(function(){
+        createUploader();
+    });
+</script>
+<!-- .Вывод списка продавцов -->
+<?foreach($items as $item){?>
+        <li class="ui-state-default" id="item-<?=$item['id']?>" style="position: relative; min-height: 70px">
+            <div class="inline-block float-left w80">
+                <a href="../index.php?p=search&search=&v=<?=$item['id'];?>" target="_blank">
+                    <img src="<?=$item['pictureurl'];?>" class="is80" />
+                </a>
+            </div>
+            <div class="inline-block float-left w500 ml10 justify">
+                <?=$item['Id'];?>
+            </div>
+            <div class="inline-block float-left w500 ml10 justify"><?=$item['VendorName'];?>
+            </div>
+            <div class="inline-block float-right">
+                <a href="#" class="delete-from-item-set" itemid="<?=$item['id']?>" itemratingtypeid="<?=$itemRatingTypeId?>" contenttype="Vendor" categoryid="<?=$activeCategory?>"  >
+                    <img src="css/i/Delete.ico" width="20" />
+                </a>
+            </div>
+            <div style="position: absolute; right: 5px; bottom: 5px;">
+                <a href="#" class="edit-vendor-set" itemid="<?=$item['id']?>" categoryid="<?=$activeCategory?>" picurl="<?$item['pictureurl']?>" >
+                    <img src="css/i/Edit.ico" width="20"/>
+                </a>
+            </div>
+            <div class="clear"></div>
+        </li>
+  <?}?>
+ <!-- /Вывод списка продавцов -->
+</ul>
+<!-- .Форма редактирования данных о продавце -->
+<form id="vendor-edit-form" class="hidden" action="index.php?cmd=Set2&do=saveVendorInfo" method="POST">
+ <input type="hidden" name="Id" value="" />
+ <label ><?=LangAdmin::get('vendor_name')?>:</label>
+        <input type="text" name="VendorName" value="">
+		<input  type="hidden" name="PictureUrl" value="" />
+		<div id="vendor_img">
+			<img src="" class="is80"  name="PictureUrl"  />
+		</div>
+    <div class="mb10">
+        <tr>
+            <td style="background: none; vertical-align: middle;"><?=LangAdmin::get('image')?> (<?=LangAdmin::get('optional')?>):</td>
+            <td style="background: none; text-align: right">
+                <div id="image_upload">
+                    <div id="file_uploader1"></div>
+                </div>
+            </td>
+        </tr>
+        <?=Plugins::invokeEvent('onRenderAddBestItemsForm')?>
+    </div>
+</form>
+<!-- /Форма редактирования данных о продавце -->
+<script type="text/javascript">
+    function createUploader1() {
+        var uploader = new qq.FileUploader({
+            element:document.getElementById('file_uploader1'),
+            action:'utils/Upload.php?resize=1',
+            debug:true,
+            template:'<div class="qq-uploader">' +
+                '<div class="qq-upload-drop-area"><span></span></div>' +
+                '<div class="qq-upload-button ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" style="height:23px;padding-top:7px">&nbsp;&nbsp;&nbsp;<?=LangAdmin::get('select_a_picture')?>&nbsp;&nbsp;&nbsp;</div>' +
+                '<ul class="qq-upload-list"></ul>' +
+                '</div>',
+            onComplete:function (id, fileName, responseJSON) {
+                if(typeof responseJSON.url !== 'undefined'){
+                    $('.qq-upload-list').empty().append($('<li></li>').append($('<img />').attr('src', responseJSON.url + '?' + Math.random())));
+                    $('[name="PictureUrl"]').val(responseJSON.url);
+                }
+            }
+        });
+    }
+    $(function(){
+        createUploader1();
+    });
+</script>
+<script type="text/javascript" src="js/set/categories.js"></script>
+<script type="text/javascript" src="js/set/edit.vendors.js"></script>

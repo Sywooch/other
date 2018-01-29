@@ -1,0 +1,76 @@
+<? require TPL_ABSOLUTE_PATH . 'site_config/inc/tabs.php'; ?>
+
+<script>
+    InlineFields = new Backbone.Collection;
+</script>
+<? XEditableFields::Init('system', $PageUrl); ?>
+
+<h1><a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'default')?>" class="muted"><?=LangAdmin::get('Configuration')?></a>
+    / <a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'system')?>"><?=LangAdmin::get('system')?></a>
+    / <?=LangAdmin::get('general')?>
+</h1>
+
+<!-- ot-sub-sub-nav -->
+<div class="tabbable ot_sub_sub_nav">
+    <ul class="nav nav-pills">
+        <li <? if($PageUrl->GetAction() == 'system'){ ?>class="active"<?} ?>>
+            <a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'system')?>">
+                <i class="icon-sitemap"></i>
+                <span><?=LangAdmin::get('General')?></span>
+            </a>
+        </li>
+        <li <? if($PageUrl->GetCmd() == 'Update'){ ?>class="active"<?} ?>>
+            <a href="<?=$PageUrl->AssignCmdAndDo('Update', 'default')?>">
+                <i class="icon-refresh"></i>
+                <span><?=LangAdmin::get('Update')?></span>
+            </a>
+        </li>
+    </ul>
+</div><!-- /ot-sub-sub-nav -->
+
+
+<!-- caching configuration -->
+<div class="box corner-all">
+    <div class="box-body">
+
+        <form class="form-horizontal inline_editable_form ot_form">
+            <div class="row-fluid">
+
+
+                <fieldset class="span6">
+
+                    <div data-field="show_debug"></div>
+                    <? XEditableFields::Register('show_debug', $Config->Get('show_debug')); ?>
+
+                    <div data-field="site_temporary_unavailable"></div>
+                    <? XEditableFields::Register('site_temporary_unavailable', $Config->Get('site_temporary_unavailable')); ?>
+
+                    <div data-field="auth_to_private_office"></div>
+                    <? XEditableFields::Register('auth_to_private_office', $Config->Get('auth_to_private_office')); ?>
+
+                </fieldset>
+
+
+                <fieldset class="span6">
+
+                    <h3><?=LangAdmin::get('Item_comments')?></h3>
+
+                    <div data-field="site_admin_email"></div>
+                    <? XEditableFields::Register('site_admin_email', $Config->Get('site_admin_email')); ?>
+
+                    <div data-field="site_email"></div>
+                    <? XEditableFields::Register('site_email', $Config->Get('site_email')); ?>
+                </fieldset>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<script>
+    InlineFields.add(<?=json_encode(XEditableFields::GetFields())?>);
+</script>
+<? ScriptIncluder::AddCustomScript('js/ot-render-template.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-inline.editable.init.js'); ?>

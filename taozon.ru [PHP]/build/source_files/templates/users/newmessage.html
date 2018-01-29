@@ -1,0 +1,48 @@
+<div class="userform newmessage">
+    <form action="index.php?p=support&mode=new" method="post">
+        <? if($success){ ?>
+        <div class="success">
+            <?=$success?>
+        </div>
+        <? } ?>
+        <? if($error){ ?>
+        <div class="error">
+            <?=$error?>
+        </div>
+        <? } ?>
+        
+        <div class="form-row">
+            <label for="Subject"><?=Lang::get('subject')?></label>
+            <span class="input"><input id="Subject" type="text" name="Subject" value="<?=$subject?>" /></span>
+        </div>
+		
+        <div class="form-row">
+            <label for="SalesId"><?=Lang::get('order_number')?></label>
+            <span class="input"><select id="SalesId" name="SalesId">
+                <option value=""><?=Lang::get('click_order')?></option>
+                <? foreach($orders as $c){ ?>
+                <option value="<?=$c['Id']?>" <? if ($orderId==$c['Id']) {?> selected <?} ?>><?=$c['Id']?></option>
+                <? } ?>
+            </select></span>
+        </div>
+        
+        <div class="form-row">
+            <label for="CategoryId"><?=Lang::get('category')?></label>
+            <span class="input"><select id="CategoryId" name="CategoryId">
+                <option value=""><?=Lang::get('select_category')?></option>
+                <? foreach($cats as $c){ ?>
+                <option value="<?=$c['CategoryId']?>" <? if ($categoryId==$c['CategoryId']) {?> selected <?} ?>><?=$c['Name']?></option>
+                <? } ?>
+            </select></span>
+        </div>
+        
+        <div class="form-row">
+            <label for="Text"><?=Lang::get('message_text')?>:</label>
+            <span class="input"><textarea id="Text" name="Text"><?=htmlspecialchars($_POST['Text'])?></textarea></span>
+        </div>
+   
+        <div class="form-row send">
+            <input type="submit" name="send" value="<?=Lang::get('send_message')?>" class="btn_office" />
+        </div>
+    </form>
+</div>

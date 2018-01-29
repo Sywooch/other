@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabs>
+    <tab title="Site_construction" action="default" cmd="SiteConfiguration">
+        <page data-action="default" data-cmd="siteconfiguration" />
+        <page data-action="default" data-cmd="" />
+    </tab>
+    <tab title="Orders" action="orders" cmd="SiteConfiguration">
+        <page data-action="orders" data-cmd="siteconfiguration" />
+        <page data-action="bank" data-cmd="siteconfiguration" />
+    </tab>
+    <tab title="Shipment" action="internal" cmd="Shipment">
+        <page data-action="internal" data-cmd="shipment" />
+        <page data-action="tariffs" data-cmd="shipment" />
+        <page data-action="default" data-cmd="shipment" />
+        <page data-action="editDelivery" data-cmd="shipment" />
+        <page data-action="editdelivery" data-cmd="shipment" />
+        <page data-action="editTariff" data-cmd="shipment" />
+        <page data-action="addTariff" data-cmd="shipment" />
+    </tab>
+    <tab title="Languages" action="default" cmd="MultilingualSettings">
+        <page data-action="default" data-cmd="multilingualsettings" />
+        <page data-action="default" data-cmd="translations" />
+        <page data-action="edit" data-cmd="translations" />
+    </tab>
+    <tab title="System" action="system" cmd="SiteConfiguration">
+        <page data-action="system" data-cmd="siteconfiguration" />
+        <page data-action="default" data-cmd="cachesettings" />
+        <page data-action="default" data-cmd="update" />
+    </tab>
+    <tab title="IpAccess" action="default" cmd="IpAccess">
+        <page data-action="default" data-cmd="ipaccess"/>
+    </tab>
+</tabs>

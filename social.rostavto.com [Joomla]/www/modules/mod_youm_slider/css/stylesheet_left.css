@@ -1,0 +1,138 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Youjoomla LLC 
+|| # ---------------------------------------------------------------- # ||
+|| # Copyright (C)2006-2009 Youjoomla LLC. All Rights Reserved.         ||
+|| # This file may not be redistributed in whole or significant part. # ||
+|| # ---------------- THIS IS NOT FREE SOFTWARE ----------------      # ||
+|| # http://www.youjoomla.com | http://www.youjoomla.com/license.html # ||
+|| #################################################################### ||
+\*======================================================================*/
+/* news item holder*/
+#YJT_container {
+	display:block;
+	position:relative;
+	margin:0px auto 0px;
+	background-color:#202020;
+}
+/* navigator styling */
+#navigator_outer {
+	display:block;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:100;
+	overflow:hidden;
+}
+#navigator {
+	display:block;
+	position:relative;
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+/* default navigator element */
+#navigator li.element {
+	display:block;
+	position:relative;
+	clear:both;
+	margin:0px;
+	padding:0px;
+	cursor:pointer;
+	background:#ececec url(../images/nav_bg.png) repeat-x left bottom;
+}
+/* selected navigator element */
+#navigator li.selected_left {
+	background:#fff;
+	border:0;
+}
+/* default instance inner navigator element styling */
+#navigator li.element div.inner {
+	display:block;
+	position:relative;
+	clear:both;
+	/*background:#ececec url(../images/nav_bg.png) repeat-x left bottom;*/
+overflow:hidden;
+}
+#navigator li.element div.inner_over {
+	display:block;
+	position:relative;
+	clear:both;
+	overflow:hidden;
+}
+#navigator li.element div.inner img {
+	float:left;
+	margin:12px 5px 0 5px;
+	border:1px #dad4ba solid;
+	background:#FFFFFF;
+	padding:3px;
+}
+#navigator li.element div.inner span.title {
+	display:block;
+	position:relative;
+	color:#171717;
+	font-size:12px;
+	font-weight:bold;
+	margin:8px 0 0 5px !Important;
+	padding:0px 0 0 5px;
+	text-shadow:1px 1px #fff;
+}
+#navigator li.element div.inner p.desc {
+	display:block;
+	position:relative;
+	height:auto;
+	overflow:hidden;
+	font-size:11px;
+	color:#343434;
+	float:right;
+	margin:0;
+	padding:0px 0 0 0px;
+	text-shadow:1px 1px #fff
+}
+/* we set the selected inner elements as descendents of li.selected_left to affect all inner elements for selected offer */
+#navigator li.selected_left div.inner {
+	color:#343434;
+	background:#fff url(../images/nav_bg.png) repeat-x left bottom;
+}
+#navigator li.selected_left div.inner span.title {
+	color:#343434;
+}
+#navigator li.selected_left div.inner img {
+	border:1px #ccc solid;
+	background:#efefef;
+}
+#navigator li.selected_left div.inner p.desc {
+	color:#343434;
+}
+/* end of navigation styling, starting slides */
+#slides {
+	display:block;
+	position:relative;
+	margin-left:auto;
+	overflow:hidden;
+	background:#202020 url(../images/loader.gif) no-repeat center center;
+}
+#slides div.slide {
+	display:block;
+	position:relative;
+	overflow:hidden;
+}
+#slides div.slide div.long_desc {
+	display:block;
+	position:absolute;
+	right:0px; /*right*/
+	bottom:0px;
+	font-size:11px;
+	color:#FFFFFF;
+	padding:5px 20px;
+	text-align:justify;
+	z-index:80;
+	background:url(../images/desc_bg.png);
+}
+#slides div.slide div.long_desc h1 {
+	color:#fff;
+	font-size:18px;
+	background:none;
+	border:none;
+	letter-spacing:normal;
+}

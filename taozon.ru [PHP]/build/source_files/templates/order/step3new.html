@@ -1,0 +1,142 @@
+<script type="text/javascript" src="js/order_delivery.js"></script>
+
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+
+<div class="bigtitle"><div class="wrap clrfix">
+        <h1><?=Lang::get('delivery')?></h1>
+</div></div>	
+
+<!-- .main -->
+<div class="main"><div class="wrap clrfix">
+    <div class="bproduct">
+        <!--h2 class="mb10"><span><?=Lang::get('delivery')?></span></h2-->
+        <? if(isset($_GET['error'])) {?>
+            <span style="color:red; font-weight: bold"><?=$_GET['error'];?></span>
+        <br/>
+        <br/>
+        <? } ?>
+            <span class="red"><?=Lang::get('stars_inputs')?></span>
+        <br/>
+        <form action="index.php?p=userorder&step4" method="post">
+            <fieldset>
+                <div class="field dib" id="RecipientLastName-parent">
+                        <label for="LastName"><?=Lang::get('last_name')?><span class="red">*</span>:</label>
+                        <input type="text" name="user[RecipientLastName]" value="<?=$RecipientLastName;?>" id="LastName">
+                </div>
+                <div class="field dib" id="RecipientFirstName-parent">
+                        <label for="FirstName"><?=Lang::get('name')?><span class="red">*</span>:</label>
+                        <input type="text" name="user[RecipientFirstName]" value="<?=$RecipientFirstName;?>" id="FirstName">
+                </div>
+                <div class="field dib" id="RecipientMiddleName-parent">
+                        <label for="middleName"><?=Lang::get('middle_name')?><span class="red">*</span>:</label>
+                        <input type="text" name="user[RecipientMiddleName]" value="<?=$RecipientMiddleName;?>" id="middleName">
+                </div>	
+            </fieldset>
+            <fieldset>
+            <div class="field dib" id="Country-parent">
+                    <label for="country"><?=Lang::get('country')?></label>
+                    <select name="user[Country]" id="country">
+                        <? foreach($countries as $item) { ?>
+                        <option code="<?=$item['Id']?>" value="<?=$item['Id']?>" <? if($Country==$item['Name']) print 'selected'; ?>> <?=$item['Name']?></option>
+                        <? } ?>
+                    </select>
+            </div>
+                <div class="field dib" id="PostalCode-parent">
+                        <label for="PostalCode"><?=Lang::get('post_code')?><span class="red">*</span>:</label>
+                        <input type="text" name="user[PostalCode]" value="<?=$PostalCode;?>" id="PostalCode">
+                </div>
+                <div class="field dib" id="Region-parent">
+                        <label for="Region"><?=Lang::get('region')?>:</label>
+                        <input type="text" name="user[Region]" value="<?=$Region;?>" id="Region">
+                </div>
+                <div class="field dib" id="City-parent">
+                        <label for="City"><?=Lang::get('city')?><span class="red">*</span>:</label>
+                        <input type="text" name="user[City]" value="<?=$City;?>" id="City">
+                </div>
+                <div class="field dib" id="Address-parent">
+                        <label for="Address"><?=Lang::get('address_full')?><span class="red">*</span>:</label>
+                        <input type="text" name="user[Address]" value="<?=$Address;?>" id="Address">
+                </div>
+                <div class="field dib" id="Phone-parent">
+                        <label for="Phone" style="text-transform: capitalize"><?=Lang::get('phone')?><span class="red">*</span>:</label>
+                        <input type="text" name="user[Phone]" value="<?=$Phone;?>" id="Phone">
+                </div>
+            </fieldset>
+
+
+            <input type="hidden" name="user[FirstName]" value="<?=$FirstName;?>"/>
+            <input type="hidden" name="user[LastName]" value="<?=$LastName;?>"/>
+            <input type="hidden" name="user[MiddleName]" value="<?=$MiddleName;?>"/>
+            <input type="hidden" name="user[Email]" value="<?=$Email;?>"/>
+            <input type="hidden" name="user[Sex]" value="<?=$Sex;?>"/>
+			
+            
+            <? if (!General::getSiteConfig('hide_step_delivery_order')) { ?>
+            <h3 class="mt15"><?=Lang::get('delivery_method')?></h3>
+            <strong><?=Lang::get('total_weight')?>:</strong> <?=$weight;?> <?=Lang::get('kg')?>
+            <table class="notepad mt10" id="deliveries-list">
+                <thead>
+                    <tr>
+                                    <td width="5%"></td>
+                                    <td width="60%"><?=Lang::get('delivery_options')?></td>
+                                    <td><?=Lang::get('delivery_cost')?></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <? $i=0; if(is_array($models)) foreach ($models as $model){?>
+                        <? $checked = ($i==0) ? 'checked="checked"' : ''; ?>
+                        <? $i++;?>
+                        <tr>
+                            <? $model['description'] = preg_replace("/\[([^\]]+)\]/", "<a href='$1'>$1</a>", $model['description']); ?>
+                            <? $model['description'] = str_replace("\n", "<br>", $model['description']); ?>
+                            <td width="5%"><input type="radio" name="model" value="<?=$model['id'];?>" <?=$checked;?> /></td>
+                            <td><strong><?=$model['name'];?></strong><br/><?=$model['description'];?></td>
+                            <td><b><? echo round((float)$model['price'], 2).' '.(string)$model['currencysign'];?> </b></td>
+                        </tr>
+                    <? } ?>
+                </tbody>
+            </table>
+            <? }	?>
+            <? if(isset($_GET['weight']) && $_GET['weight']==0) { ?>
+                <font color="#ff0000"><br/><?=Lang::get('desc_weight_0')?></font>
+            <? } ?>
+            <input type="hidden" name="total_weight" value="<?=$weight;?>"/>
+            <input type="hidden" name="order" value="<?=$order;?>"/>
+            <div class="bgr-panel mt20">
+                <? $params .= (isset($_GET['weight'])) ? '&weight='.$_GET['weight'] : '';?>
+                <a href="index.php?p=userorder&step2<?=$params?>" class="btn-apper fll"><span style="background:none"><?=Lang::get('back')?></span></a>
+                <input class="btn flr" type="submit" value="<?=Lang::get('make_order')?>" id="nextstep">
+            </div>
+            <? if(count($models)>0) { ?>
+            <? } else { ?>
+                <h3><?=Lang::get('empty_deliveries')?></h3>
+            <? } ?>
+        </form>
+
+    </div>
+</div></div>
+<!-- /.main -->
+<script type="text/javascript">
+    function checkinputstep3()
+    {
+        var f = true;
+        if ($('#LastName').val() == '' && $('#LastName:visible').length) f = false;
+        if ($('#FirstName').val() == '' && $('#FirstName:visible').length) f = false;
+        if ($('#PostalCode').val() == '' && $('#PostalCode:visible').length) f = false;
+        if ($('#City').val() == '' && $('#City:visible').length) f = false;
+        if ($('#Address').val() == '' && $('#Address:visible').length) f = false;
+        if ($('#Phone').val() == '' && $('#Phone:visible').length) f = false;
+        if (!f) $('#nextstep').hide();
+        if (f) $('#nextstep').show();
+    }
+    $(function()
+    {
+        $('#LastName, #FirstName, #middleName, #PostalCode, #City, #Address, #Phone').keyup(function () {
+            checkinputstep3();
+        });
+        $('#LastName, #FirstName, #middleName, #PostalCode, #City, #Address, #Phone').change(function () {
+            checkinputstep3();
+        });
+        setInterval(checkinputstep3, 300);
+    });
+</script>

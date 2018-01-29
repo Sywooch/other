@@ -1,0 +1,39 @@
+<?php if (count($orders) > 0) { ?>
+
+    <table class="table table-not-hover">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Номер<br> заказа</th>
+            <th>Время<br> создания</th>
+            <th>Статус<br> заказа</th>
+            <th>Сумма<br> <span class="font-11">(Оплачено)</span></th>
+            <th>Покупатель/ <br><span class="font-11">Баланс</span></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <? foreach ($orders as $order) { ?>
+            <tr>
+                <td><input type="radio" id="<?=$order['id']?>" name="order"></td>
+                <td><?=OrdersProxy::normalizeOrderId($order['id'])?></td>
+                <td><?=date('d.m.y', strtotime($order['createddatetime']))?><br> <span class="muted font-11">(<?=date('H:i:s', strtotime($order['createddatetime']))?>)</span></td>
+                <td><?=$order['statusname']?></td>
+                <td><nobr><?=round((float)$order['totalamount'], 2) . ' ' . $order['currencysign']; ?></nobr> <br>(<nobr><?=round((float)$order['totalamount'] - (float)$order['remainamount'], 2) . ' ' . $order['currencysign']; ?></nobr>)</td>
+                <td>
+                    <? if (Permission::show_order_field('link_to_user')) {  ?>
+                        <a target="_blank" href="<?=$PageUrl->generate(array('cmd'=>'users', 'do'=>'profile', 'id'=>$order['custid']))?>" title="Профиль пользователя"><?=$this->escape($order['custname'])?></a>
+                    <? } else { ?>
+                        <?=$this->escape($order['custname'])?>
+                    <? } ?>
+                    <br/> <?=$order['useraccountavailableamount'] . $order['currencysign']; ?>                
+                </td>
+            </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+    
+<?php } else { ?>
+    <?=LangAdmin::get('No_orders_for_merge')?>
+<?php } ?>
+         

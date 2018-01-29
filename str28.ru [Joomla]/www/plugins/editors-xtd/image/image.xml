@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="editors-xtd">
+	<name>plg_editors-xtd_image</name>
+	<author>Retina Project</author>
+	<creationDate>August 2004</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license></license>
+	<authorEmail>admin@retina.org</authorEmail>
+	<authorUrl>www.retina-studio.ru</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_IMAGE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="image">image.php</filename>
+		<filename>index.html</filename>	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_editors-xtd_image.ini</language>
+		<language tag="en-GB">en-GB.plg_editors-xtd_image.sys.ini</language>
+	</languages>
+</extension>

@@ -1,0 +1,152 @@
+<? 	
+                            	$min_rating = 0;
+                            	if (@$_GET['rating']['from']) {
+                             	  $min_rating = (int)@$_GET['rating']['from'];
+                                } else {
+                                  if (General::getSiteConfig('min_rating_goods')) {
+                                    $min_rating = General::getSiteConfig('min_rating_goods');
+                                  }                                 
+                                }
+                                $min_cost = 0;
+                                $max_cost = 0;
+                                if (@General::getSiteConfig('min_cost_goods') > @$_GET['cost']['from'] ) {
+                                    $min_cost = @General::getSiteConfig('min_cost_goods');
+                                } else {
+                                	$min_cost = @$_GET['cost']['from'];
+                                }
+                                if (@$_GET['cost']['to']!=0) {
+                                	if (@$_GET['cost']['to']<@General::getSiteConfig('min_cost_goods'))  {
+                                    	$max_cost = General::getSiteConfig('min_cost_goods');
+                                	} else {
+                                		$max_cost = @$_GET['cost']['to'];
+                                	}
+                                }
+                                
+                                
+                                
+                                                         
+                            
+?>
+<form method="get" id="filterform" action="<?=current(explode('?', $_SERVER['REQUEST_URI']))?>">
+    <?
+    if(is_array($_GET['ignorefilters']))
+    foreach($_GET['ignorefilters'] as $v){
+        ?>
+            <input type="hidden" name="ignorefilters[]" value="<?=$v?>" />
+        <?
+    }
+    ?>
+
+    <input type="hidden" name="p" value="<?= @$_GET['p'] ?>"/>
+    <? if(!in_array('Seo2', General::$enabledFeatures)){ ?>
+    <? if (isset($_GET['cid'])) { ?><input type="hidden" name="cid" value="<?=RequestWrapper::getValueSafe('cid')?>"/><? } ?>
+    <? } ?>
+
+    <? if (isset($_GET['cid'])) { ?><input type="hidden" name="cid" value="<?=RequestWrapper::getValueSafe('cid')?>"/><? } ?>
+    <? if (isset($_GET['brand'])) { ?><input type="hidden" name="brand" value="<?=RequestWrapper::getValueSafe('brand')?>"/><? } ?>
+    <? if (isset($_GET['id'])) { ?><input type="hidden" name="id" value="<?=RequestWrapper::getValueSafe('id')?>"/><? } ?>
+    <? if (isset($_GET['search'])) { ?><input type="hidden" name="search" value="<?=RequestWrapper::getValueSafe('search')?>"/><? } ?>
+    <? if (isset($_GET['sort_by'])) { ?><input type="hidden" name="sort_by" value="<?= @$_GET['sort_by'] ?>"/><? } ?>
+    <? if (isset($_GET['per_page'])) { ?><input type="hidden" name="per_page" value="<?= @$_GET['per_page'] ?>"/><? } ?>
+    <? if (isset($_GET['tmall'])) { ?><input type="hidden" name="tmall" value="<?= @$_GET['tmall'] ?>"/><? } ?>
+
+                                        
+        <? //if ($searchprops){ ?>
+        <div class="titlecat"><?=Lang::get('filters')?></div>
+    <div class="opened">
+            <a href="#" class="ftitle" onclick="return false"><i class="i additem mdl"></i><?=Lang::get('search_conditions')?></a>
+            <div class="fbody">
+
+                    <h5><?=Lang::get('price_simple')?></h5>
+
+                    <table class="trange mt5">
+                            <tbody><tr>
+                                    <td><input type="text" name="cost[from]" id="" class="w70" value="<?=(float)$min_cost?>"></td>
+                                    <td><?=$currency['Sign']?> —</td>
+                                    <td><input type="text" name="cost[to]" id="" class="w70" value="<?=(float)$max_cost?>"></td>
+                                    <td><?=$currency['Sign']?></td>
+                            </tr>
+                    </tbody></table>
+
+                    <h5><?=Lang::get('purchases_count')?></h5>
+
+                    <table class="trange mt5">
+                            <tbody><tr>
+                                    <td><input type="text" name="count[from]" id="" class="w70" value="<?=(int)@$_GET['count']['from']?>"></td>
+                                    <td><?=Lang::get('pcs')?> —</td>
+                                    <td><input type="text" name="count[to]" id="" class="w70" value="<?=(int)@$_GET['count']['to']?>"></td>
+                                    <td><?=Lang::get('pcs')?></td>
+                            </tr>
+                    </tbody></table>
+                <div class="fbut clrfix">
+                    <a href="#" class="btn-small" onclick="document.getElementById('filterform').submit(); return false;"><span><?=Lang::get('select')?></span></a>
+                    <a href="<?=$_SERVER['REQUEST_URI'].'&amp;clear'?>" class="dotted"><span><?=Lang::get('reset')?></span></a>
+                </div>
+            </div>
+    </div>
+        <ul class="listitem filters">
+            <? if($searchprops)
+                foreach ($searchprops as $pid => $pvalue) {
+                    if(@in_array($pid, $_GET['ignorefilters'])){
+                        continue;
+                    }
+                $curvalues = array();
+                ?>
+
+                <li class="opening">
+                    <a href="#" class="opening-a"><i class="i operation"></i> <?= $pvalue['name'] ?> </a> 
+                    <? if(@$_GET['filters'][$pid]){ ?>
+                    <a class="i delete" href="<?=$_SERVER['REQUEST_URI']?>" fid="<?=$pid?>"></a>
+                    <? } ?>
+                    <ul class="innerlist">   
+                        <?
+                        $pvalue_sort = array();
+
+                        foreach ($pvalue['Values'] as $value) {
+                            if ($_GET['filters'][$pid][$value['id']] == $value['id']) {
+                                $pvalue_sort[$value['id']] = $value;
+                            }
+                        }
+
+                        foreach ($pvalue['Values'] as $value) {
+                            if (!isset($pvalue_sort[$value['id']])) {
+                                $pvalue_sort[$value['id']] = $value;
+                            }
+                        }
+
+                        $pvalue['Values'] = $pvalue_sort;
+
+                        if (count($pvalue['Values']) <= 10) {
+                            ?>
+                            <?
+                            foreach ($pvalue['Values'] as $value) {
+                                $curvalues[] = $value['id'];
+                                ?>
+                                <li><label for="ch<?= $value['id'] ?>"><input type="radio" id="ch<?= $value['id'] ?>" name="filters[<?= $pvalue['Id'] ?>]" value="<?= $value['id'] ?>"<? if ($_GET['filters'][$pvalue['Id']] == $value['id']) { ?> checked="checked"<? } ?>/><?= $value['name'] ?></label></li>
+                            <? } ?>
+                        <? } else { ?>
+                            <?
+                            $pvalues = array_slice($pvalue['Values'], 0, 6);
+                            foreach ($pvalues as $value) {
+                                $curvalues[] = $value['id'];
+                                ?>
+                                <li><label for="ch<?= $value['id'] ?>"><input type="radio" id="ch<?= $value['id'] ?>" name="filters[<?= $pvalue['Id'] ?>]" value="<?= $value['id'] ?>"<? if ($_GET['filters'][$pvalue['Id']] == $value['id']) { ?> checked="checked"<? } ?>/><?= $value['name'] ?></label></li>
+                                <? } ?>
+                            <div id="pp<?= $pid ?>" style="display:none">
+                                <?
+                                $pvalues = array_slice($pvalue['Values'], 6, 100000);
+                                foreach ($pvalues as $value) {
+                                    $curvalues[] = $value['id'];
+                                    ?>
+                                    <li><label for="ch<?= $value['id'] ?>"><input type="radio" id="ch<?= $value['id'] ?>" name="filters[<?= $pvalue['Id'] ?>]" value="<?= $value['id'] ?>"<? if ($_GET['filters'][$pvalue['Id']] == $value['id']) { ?> checked="checked"<? } ?>/><?= $value['name'] ?></label></li>
+                            <? } ?>
+                            </div>
+                            <li><a href="#" class="all dotted show show-prop"><i class="i arrowright"></i><span><?=Lang::get('more_options')?></span></a></li>
+        <? } ?>
+                        <li class="dropterms clrfix"><a href="#" class="btn-small fll smt"><span><?=Lang::get('apply')?></span></a></li>
+                    </ul>
+                </li>
+
+    <? } ?>  </ul> 
+        <? //} ?>
+</form>

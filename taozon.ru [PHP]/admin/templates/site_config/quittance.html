@@ -1,0 +1,74 @@
+<?=$Header?>
+<div class="col700">
+    <div class="tuning">
+        <div style="margin: 0 0 10px 0;">
+            <h2 class="mt30"><?=LangAdmin::get('quittance_config')?></h2>
+            <form id="quittance_config" action="<?=BASE_DIR;?>index.php?do=saveQuittance&amp;cmd=quittance" method="post">
+
+                <label style="width: 200px; display: inline-block"><?=LangAdmin::get('name_of_payee')?></label>
+                <input style="width: 500px;" type="text" name="name_of_payee" value="<?=@$siteConfig[1]['name_of_payee']?>">
+                <br /><br />
+                <label style="width: 200px; display: inline-block"><?=LangAdmin::get('INN_of_payee')?></label>
+                <input style="width: 500px;" type="text" name="INN_of_payee" value="<?=@$siteConfig[1]['INN_of_payee']?>">
+                <br /><br />
+
+				<label style="width: 200px; display: inline-block"><?=LangAdmin::get('account_number_of_payee')?></label>
+				<input style="width: 500px;" type="text" name="account_number_of_payee" value="<?=@$siteConfig[1]['account_number_of_payee']?>" />
+				<br /><br />
+				<label style="width: 200px; display: inline-block"><?=LangAdmin::get('bank_name_of_payee')?></label>
+				<input style="width: 500px;" type="text" name="bank_name_of_payee" value="<?=@$siteConfig[1]['bank_name_of_payee']?>" />
+				<br /><br />
+				<label style="width: 200px; display: inline-block"><?=LangAdmin::get('bank_identification_code')?></label>
+				<input style="width: 500px;" type="text" name="bank_identification_code" value="<?=@$siteConfig[1]['bank_identification_code']?>" />
+				<br /><br />
+				<label style="width: 200px; display: inline-block"><?=LangAdmin::get('correspondent_bank_account')?></label>
+				<input style="width: 500px;" type="text" name="correspondent_bank_account" value="<?=@$siteConfig[1]['correspondent_bank_account']?>" />
+				<br /><br />
+				<label style="width: 200px; display: inline-block"><?=LangAdmin::get('description_of_payment')?></label>
+				<input style="width: 500px;" type="text" name="description_of_payment" value="<?=@$siteConfig[1]['description_of_payment']?>" />
+				<br /><br />
+
+                <input type="submit" value="<?=LangAdmin::get('save')?>">
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	$().ready(function() {
+		$('#quittance_config').submit(function() {
+//			$('#err_mes').text("");
+//			var have_err=false;
+//			var err_mes='';
+//			var err_elem=false;
+//			var err_elem_name=false;
+//			var i=0;
+//			for (var key in reqFiels)
+//			{
+//				var val = reqFiels[key];
+//				err_elem=true;
+//				$('[name^="'+val.name+'"]').each(function(index) {
+//					if($(this).val())
+//						err_elem=false;
+//				});
+//				if(err_elem)
+//				{
+//					have_err=true;
+//					err_mes=err_mes+" "+val.caption+",";
+//					$('[name="'+val.name+'[0]"]').addClass('red_req');
+//					if(i==0)
+//						err_elem=val.name;
+//					i++;
+//				}
+//			}
+//			if(have_err)
+//			{
+//				$('#err_mes').text('Поля '+err_mes.slice(0,-1)+' обязательны для заполнения.');
+//				var position = $('[name="'+val.name+'[0]"]').position();
+//				$("html").scrollTop(position.top);
+//				return false;
+//			}
+		});
+	});
+</script>
+
+<?=$Footer?>

@@ -1,0 +1,80 @@
+<h5><?=Lang::get('item_set_list')?></h5>
+
+<!--Вывод подборки товаров-->
+<ul id="sortable-items" class="list-type-none">
+    <? if($itemRatingTypeId == 'Best'){ ?>
+    <li class="ui-state-default" style="position: relative; min-height: 20px; text-align: center">
+        <form action="index.php?cmd=Set2&do=addToRatingList" class="ajax-form" method="post" onSuccess="refreshTab"
+              onError="refreshTab">
+            <table style="background: none; margin: 0">
+                <tr>
+                    <td style="background: none">
+                        <?=Lang::get('paste_name_of_vendor_or_link')?><br />
+                        (<?=Lang::get('for_example')?>:
+                        http://<?=$_SERVER['HTTP_HOST']?>/<?=UrlGenerator::generateVendorUrl('veromoda官方旗舰店')?>)
+                    </td>
+                    <td style="background: none; text-align: right">
+                        <input type="text" name="ItemList" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background: none; padding: 5px 0;">
+                        <?=Lang::get('vendor_name')?>
+                    </td>
+                    <td style="background: none; text-align: right; padding: 5px 0;">
+                        <input type="text" name="VendorName" />
+                    </td>
+                </tr>
+                <?=Plugins::invokeEvent('onRenderAddBestItemsForm')?>
+                <tr>
+                    <td style="background: none"></td>
+                    <td style="background: none; text-align: right">
+                        <input type="submit" value="<?=Lang::get('add_vendor')?>" />
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" name="contentType" value="Vendor" />
+            <input type="hidden" name="currentCategory" value="<?=$activeCategory?>" />
+        </form>
+    </li>
+    <? } ?>
+    <?foreach($items as $k=>$item){?>
+        <li class="ui-state-default" id="item-<?=$k?>" style="position: relative; min-height: 70px">
+            <div class="inline-block float-left w80">
+                <a href="../index.php?p=vendor&id=<?=$item['Id'];?>" target="_blank">
+                    <img src="<?=$item['PictureUrl'];?>_80x80.jpg" class="is80" />
+                </a>
+            </div>
+            <div class="inline-block float-left w500 ml10 justify">
+                <?=$item['Id']?>
+                <div class="clear"></div>
+            </div>
+            <div class="inline-block float-right">
+                <a href="#" class="delete-from-item-set" itemId="<?=$item['Id']?>"
+                   itemRatingTypeId="<?=$itemRatingTypeId?>" contentType="Vendor" categoryId="<?=$activeCategory?>">
+                    <img src="css/i/Delete.ico" width="20" />
+                </a>
+            </div>
+            <div style="position: absolute; right: 5px; bottom: 5px;">
+                <a href="#" class="edit-vendor-set" itemId="<?=$item['Id']?>" categoryId="<?=$activeCategory?>">
+                    <img src="css/i/Edit.ico" width="20" />
+                </a>
+            </div>
+            <div class="clear"></div>
+        </li>
+    <?}?>
+</ul>
+
+<form id="vendor-edit-form" class="hidden" action="index.php?cmd=Set2&do=saveVendorInfo" method="POST">
+    <input type="hidden" name="Id" value="" />
+    <div class="mb10">
+        <label class="mr10"><?=Lang::get('item_title')?></label>
+        <input type="text" name="Title" value="">
+    </div>
+</form>
+<script type="text/javascript">
+    categories = <?=json_encode($categories)?>;
+    activeCategory = '<?=$activeCategory?>';
+</script>
+<script type="text/javascript" src="js/set/categories.js"></script>
+<script type="text/javascript" src="js/set/edit.vendors.js"></script>

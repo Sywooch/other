@@ -1,0 +1,12 @@
+<% if (noDelete != 'true') { %>
+    <%= trans.get(msg) %>
+<% } else { %>
+    Пользователя <b> <%= item %> </b> нельзя удалить. Перенести его в другую категорию?
+    
+    <select class="input-medium" id="toCategory">
+    <% $.each(categories, function(key, val) { %>
+		<option value="<%= val['Id'] %>"><%= escapeData(val['Name']) %></option>	            
+	<% }); %>
+    </select>        
+    
+<% } %>

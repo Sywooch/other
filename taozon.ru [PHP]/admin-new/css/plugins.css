@@ -1,0 +1,163 @@
+
+
+/* ==========================================================================
+   Plugins custom styles
+   ========================================================================== */
+
+
+/* box */
+/* box default */
+.box{
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 40px;
+    /*    border: 1px solid #CDCDCD;*/
+    }
+
+.box > .box-header{
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #CDCDCD;
+    font-weight: 400;
+    font-size: 1.2em;
+    display: block;
+    /* for default font color for header box, you can set this with helper color (see stilear-helper.css) */
+    /* for default background color for header box, you can set this with helper background color or helper gradient color (see stilear-helper.css) */
+    }
+
+.box > .box-header > .header-control{
+    float: right;
+    margin-right: -5px;
+    }
+.box > .box-header > .header-control a,
+.box-tab > .box-header > .header-control a{
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 14px;
+    }
+
+.box > .box-body{
+    display: block;
+    border: 1px solid #CDCDCD;
+    border-top: none;
+    position: relative;
+    padding: 10px 20px 10px 20px;
+    background: #FFFFFF url('../img/design/bg4.png');
+    }
+.box > .box-body  form  .form-actions{
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -30px;
+    }
+
+.box > .box-body .ace-editor{
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: -10px -10px -10px -20px;
+    min-height: 480px;
+    }
+/* end box default */
+
+
+/* draggable lists */
+body.dragging, body.dragging * {
+    cursor: move !important;
+    }
+.dragged {
+    position: absolute;
+    opacity: 0.7;
+    z-index: 2000;
+    }
+.ot_sortable_list li {
+    margin: 7px 0;
+    }
+.ot_sortable_list li .badge{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 5px 25px 5px 6px
+    }
+.ot_sortable_list li .icon-move{
+    font-size: 13px;
+    color: #ccc;
+    cursor: move;
+    }
+.ot_sortable_list li:hover .icon-move{
+    color: #fff;
+    }
+.ot_sortable_list li .icon-remove {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5px; top: 5px;
+    color: #595959;
+    padding: 1px 3px;
+    }
+    .ot_sortable_list li:hover .icon-remove{
+        display: block;
+        }
+        .ot_sortable_list .icon-remove:hover{
+            right: 4px; top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            color: #ccc;
+
+            }
+.ot_sortable_list li.placeholder {
+    position: relative;
+    padding: 10px 0;
+    background: #ddd;
+    border: 1px dashed #444;
+    border-radius: 7px;
+    }
+
+
+div.dataTables_filter label {text-align: right;}
+.dataTables_filter input {float: right;}
+
+/* bootstrap-lightbox */
+
+.lightbox-content .lightbox-caption {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    left: 1px;
+    padding: 2% 2% 0 2%;
+    font-size: 14px;
+    line-height: 18px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 -1px 0 #000000;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    background: #000;
+    background: rgba(0, 0, 0, 0.6);
+    }
+
+.lightbox-header .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+/*    margin-top: -16px;
+    margin-right: -16px;*/
+    font-size: 2em;
+    color: #000;
+/*
+    border: 1px solid #fff;
+    border-radius: 10px;
+*/
+    opacity: .8;
+    filter: alpha(opacity=80);
+    }
+
+.lightbox-header .close:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    }

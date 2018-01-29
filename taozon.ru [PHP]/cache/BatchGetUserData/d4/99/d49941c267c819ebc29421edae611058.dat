@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BatchUserDataAnswer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://services.opentao.net">
+  <ErrorCode>Ok</ErrorCode>
+  <SubErrorCode/>
+  <RequestTimeStatistic>50.450 = {OtapiService} Service call (overhead: 0.126)
+ 0.116 = |-{Otapi} Create core
+ 0.089 = |-{Otapi} AccumulateCallCount (overhead: 0.044)
+ 0.002 = |-|-{Otapi} Create dependency Counter
+ 0.044 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+ 0.055 = |-{Otapi} AccumulateCallCount (overhead: 0.018)
+ 0.037 = |-|-[3 ***] {BufferedCounter} Get counter data from Buffer
+50.064 = |-{Batch} Run tasks (overhead: 0.056)
+33.316 = |-|-{Batch} Get BasketSummary block (overhead: 0.753)
+ 1.445 = |-|-|-{Service client call} PublicAccountManager.GetUserKeyBySessionId (overhead: 1.416)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.028 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.018)
+ 0.010 = |-|-|-|-|-{Logic} Create core
+ 1.150 = |-|-|-{Service client call} ItemsCollector.GetCollection (overhead: 1.127)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.023 = |-|-|-|-{ItemsCollectorService} Service call
+ 0.004 = |-|-|-{Otapi} Create dependency MoneyChanger
+ 1.964 = |-|-|-{Service client call} MoneyChanger.GetCurrencies (overhead: 1.906)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+ 0.058 = |-|-|-|-{MoneyChangerService} Service call
+ 0.004 = |-|-|-{Otapi} Create dependency SettingsManager
+ 2.832 = |-|-|-{Service client call} SettingsManager.GetPriceFormationGroupListByCategoryIdList (overhead: 2.603)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.229 = |-|-|-|-{SettingsManagerService} Service call
+ 1.467 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.289)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.178 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.071)
+ 0.011 = |-|-|-|-|-{Logic} Create core
+ 0.096 = |-|-|-|-|-{Logic} Check session
+         |-|-|-{Otapi} Warning: user is not authenticated
+ 0.004 = |-|-|-{Otapi} Create dependency PriceFormation
+ 1.326 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.168)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.158 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.066)
+ 0.008 = |-|-|-|-|-{Logic} Create core
+ 0.085 = |-|-|-|-|-{Logic} Check session
+         |-|-|-{Otapi} Warning: user is not authenticated
+ 1.444 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.287)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.157 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.065)
+ 0.009 = |-|-|-|-|-{Logic} Create core
+ 0.083 = |-|-|-|-|-{Logic} Check session
+         |-|-|-{Otapi} Warning: user is not authenticated
+ 1.351 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.209)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.142 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.055)
+ 0.011 = |-|-|-|-|-{Logic} Create core
+ 0.076 = |-|-|-|-|-{Logic} Check session
+         |-|-|-{Otapi} Warning: user is not authenticated
+ 1.354 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.205)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.149 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.053)
+ 0.007 = |-|-|-|-|-{Logic} Create core
+ 0.090 = |-|-|-|-|-{Logic} Check session
+         |-|-|-{Otapi} Warning: user is not authenticated
+ 1.580 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.448)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.132 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.050)
+ 0.007 = |-|-|-|-|-{Logic} Create core
+ 0.075 = |-|-|-|-|-{Logic} Check session
+         |-|-|-{Otapi} Warning: user is not authenticated
+ 1.314 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.191)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.123 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.055)
+ 0.007 = |-|-|-|-|-{Logic} Create core
+ 0.061 = |-|-|-|-|-{Logic} Check session
+         |-|-|-{Otapi} Warning: user is not authenticated
+ 1.560 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.417)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.143 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.054)
+ 0.009 = |-|-|-|-|-{Logic} Create core
+ 0.080 = |-|-|-|-|-{Logic} Check session
+         |-|-|-{Otapi} Warning: user is not authenticated
+ 1.236 = |-|-|-{Service client call} PublicAccountManager.GetAuthenticatedUserId (overhead: 1.123)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.114 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.044)
+ 0.007 = |-|-|-|-|-{Logic} Create core
+ 0.063 = |-|-|-|-|-{Logic} Check session
+         |-|-|-{Otapi} Warning: user is not authenticated
+ 1.597 = |-|-|-{Service client call} MoneyChanger.ConvertMoneyListToDisplayedList (overhead: 1.532)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'DataContract'
+ 0.066 = |-|-|-|-{MoneyChangerService} Service call (overhead: 0.053)
+ 0.013 = |-|-|-|-|-{MoneyChangeBuilder} DoBuild ListDictionary
+ 1.671 = |-|-|-{Service client call} SettingsManager.GetPriceFormationSettings (overhead: 1.551)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.119 = |-|-|-|-{SettingsManagerService} Service call
+ 1.855 = |-|-|-{Service client call} SettingsManager.GetCollectionPriceFormationGroup (overhead: 1.666)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.189 = |-|-|-|-{SettingsManagerService} Service call
+ 0.005 = |-|-|-{Otapi} Create dependency ProvidersDirector
+ 3.820 = |-|-|-{Service client call} ProvidersDirector.GetProviderInfo (overhead: 2.048)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 1.772 = |-|-|-|-{ProvidersDirectorService} Service call (overhead: 0.104)
+ 0.001 = |-|-|-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+ 0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+         |-|-|-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+ 0.004 = |-|-|-|-|-{ProvidersDirector} Create dependency Goblin
+ 1.659 = |-|-|-|-|-{Data translate} Value provider is ProviderInfoContextedValueProvider (overhead: 0.042)
+ 1.618 = |-|-|-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.335)
+         |-|-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.283 = |-|-|-|-|-|-|-{GoblinService} Service call (overhead: 0.149)
+         |-|-|-|-|-|-|-|-{For Counter} Goblin:Input text length:6
+         |-|-|-|-|-|-|-|-{Goblin Say} langFrom en, langTo ru
+ 0.008 = |-|-|-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+ 0.105 = |-|-|-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.019)
+ 0.050 = |-|-|-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+ 0.004 = |-|-|-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+ 0.024 = |-|-|-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+ 0.007 = |-|-|-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+ 0.017 = |-|-|-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.014)
+ 0.003 = |-|-|-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 0)
+ 0.004 = |-|-|-|-|-|-|-|-{Goblin} TranslateHtml
+         |-|-|-|-|-|-|-|-{Goblin Say} Found Translates in DB: 1 / 1
+ 3.582 = |-|-|-{Service client call} ProvidersDirector.GetCategoryInfoList (overhead: 1.923)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 1.660 = |-|-|-|-{ProvidersDirectorService} Service call (overhead: 0.329)
+ 0.001 = |-|-|-|-|-{ProvidersDirector} Create dependency CreateCategoriesRepository
+ 0.010 = |-|-|-|-|-{ORM} Get categories by local ids (result size = 1)
+ 0.004 = |-|-|-|-|-{ProvidersDirector} Create dependency Goblin
+ 0.003 = |-|-|-|-|-{ProvidersDirector} Create dependency TopapiAdapter
+         |-|-|-|-|-{Info} Select 'TaobaoItemProvider' by type 'Taobao' and wrap in 'ReplaceIdSingleItemProvider'
+ 1.313 = |-|-|-|-|-{Data translate} Value provider is ListContextedValueProvider&lt;OtapiCategory&gt; (overhead: 0.041)
+ 1.271 = |-|-|-|-|-|-{Service client call} Goblin.TranslateTextPackageByKeys (overhead: 1.054)
+         |-|-|-|-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.217 = |-|-|-|-|-|-|-{GoblinService} Service call (overhead: 0.124)
+         |-|-|-|-|-|-|-|-{For Counter} Goblin:Input text length:32
+         |-|-|-|-|-|-|-|-{Goblin Say} langFrom zh-chs, langTo ru
+ 0.005 = |-|-|-|-|-|-|-|-{Goblin} FixTranslatesWithoutContextKeyId
+ 0.078 = |-|-|-|-|-|-|-|-{Goblin} TranslateByGoblin (overhead: 0.028)
+ 0.018 = |-|-|-|-|-|-|-|-|-{Logic} Get ContextIds from WorkItemCollection
+ 0.004 = |-|-|-|-|-|-|-|-|-{Logic} Get IdInContexts from WorkItemCollection
+ 0.026 = |-|-|-|-|-|-|-|-|-{GoblinCacheRepository} GetDictionaryTranslatesByIds
+ 0.003 = |-|-|-|-|-|-|-|-|-{Logic} UpdateFindedTranslateById
+ 0.008 = |-|-|-|-|-|-|-|-{Goblin} TranslateByExternalTranlator (overhead: 0.006)
+ 0.002 = |-|-|-|-|-|-|-|-|-{ORM} Get workItems that need to be translated (result size = 0)
+ 0.003 = |-|-|-|-|-|-|-|-{Goblin} TranslateHtml
+         |-|-|-|-|-|-|-|-{Goblin Say} Found Translates in DB: 1 / 1
+ 3.330 = |-|-{Batch} Get NoteSummary block (overhead: 0.060)
+ 0.004 = |-|-|-{Otapi} Create dependency ItemsCollector
+ 1.329 = |-|-|-{Service client call} PublicAccountManager.GetUserKeyBySessionId (overhead: 1.294)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.035 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.018)
+ 0.017 = |-|-|-|-|-{Logic} Create core
+ 1.937 = |-|-|-{Service client call} ItemsCollector.GetCollection (overhead: 1.918)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.019 = |-|-|-|-{ItemsCollectorService} Service call
+13.362 = |-|-{Batch} Get UserStatus block (overhead: 0.029)
+ 0.003 = |-|-|-{Otapi} Create dependency PublicAccountManager
+13.330 = |-|-|-{Service client call} PublicAccountManager.GetUserStatusInfo (overhead: 13.147)
+         |-|-|-|-{Service info} Protocol: 'http'. Serializer: 'Proto'
+ 0.183 = |-|-|-|-{PublicAccountManagerService} Service call (overhead: 0.061)
+ 0.010 = |-|-|-|-|-{Logic} Create core
+ 0.112 = |-|-|-|-|-{Logic} Check session
+Time distribution: database = 0.016 (0.0%), interservice = 45.854 (90.9%), logic = 1.020 (2.0%), other = 3.561 (7.1%), Otapi = 1.307 (2.6%), PublicAccountManager = 1.543 (3.1%), ItemsCollector = 0.042 (0.1%), MoneyChanger = 0.123 (0.2%), SettingsManager = 0.537 (1.1%), ProvidersDirector = 0.543 (1.1%), Goblin = 0.500 (1.0%)
+Debug info process time: 0.791
+</RequestTimeStatistic>
+  <Result>
+    <Status>
+      <IsSessionExpired>true</IsSessionExpired>
+    </Status>
+    <NoteSummary>
+      <TotalCount>0</TotalCount>
+    </NoteSummary>
+    <BasketSummary>
+      <TotalCount>1</TotalCount>
+      <TotalPrice>
+        <OriginalPrice>5.00</OriginalPrice>
+        <MarginPrice>22.4</MarginPrice>
+        <ConvertedPriceList>
+          <Internal Sign="руб." Code="RUB">167.3</Internal>
+          <DisplayedMoneys>
+            <Money Sign="руб." Code="RUB">167.3</Money>
+          </DisplayedMoneys>
+        </ConvertedPriceList>
+      </TotalPrice>
+    </BasketSummary>
+  </Result>
+</BatchUserDataAnswer>

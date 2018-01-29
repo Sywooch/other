@@ -1,0 +1,132 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('SiteConfiguration', 'default')?>"><?=LangAdmin::get('Configuration')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignDo('orders')?>" class="muted"><?=LangAdmin::get('orders')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('general')?></li>
+</ul><!--/.breadcrumb-->
+
+<? require TPL_ABSOLUTE_PATH . 'site_config/inc/tabs.php'; ?>
+
+<? XEditableFields::Init('order', $PageUrl); ?>
+
+<!-- ot-sub-sub-nav -->
+<div class="tabbable ot_sub_sub_nav">
+
+    <ul class="nav nav-pills">
+        <li <? if($PageUrl->GetAction() == 'orders'){ ?>class="active"<?} ?>><a href="<?=$PageUrl->AssignDo('orders')?>"><?=LangAdmin::get('General')?></a></li>
+        <li <? if($PageUrl->GetAction() == 'bank'){ ?>class="active"<?} ?>><a href="<?=$PageUrl->AssignDo('bank')?>"><?=LangAdmin::get('Quittance_to_bank')?></a></li>
+    </ul>
+
+</div><!-- /ot-sub-sub-nav -->
+
+<div class="row-fluid">
+
+    <div class="span10">
+        <h1><?=LangAdmin::get('general')?></h1>
+    </div>
+
+    <div class="span2 offset-top1">
+        <div id="activeLanguagesContainer"></div>
+    </div>
+
+</div>
+
+<!-- configuration -->
+<div class="well">
+
+        <form class="form-horizontal inline_editable_form ot_form">
+
+            <fieldset>
+
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div data-field="hide_middle_name"></div>
+                        <? XEditableFields::Register('hide_middle_name', $config->get('hide_middle_name')); ?>
+                    
+                        <div data-field="payment_in_cash"></div>
+                        <? XEditableFields::Register('payment_in_cash', $config->get('payment_in_cash')); ?>
+
+                        <div data-field="open_payment_in_new_window"></div>
+                        <? XEditableFields::Register('open_payment_in_new_window', $config->get('open_payment_in_new_window')); ?>
+
+                        <div data-field="CFG_PREFIX_REPLACE_USR"></div>
+                        <? XEditableFields::Register('CFG_PREFIX_REPLACE_USR', $config->get('CFG_PREFIX_REPLACE_USR'), array('placeholder' => LangAdmin::get('For_example', array('example' => 'Ivanov')))); ?>
+
+                        <div data-field="CFG_PREFIX_REPLACE_ORD"></div>
+                        <? XEditableFields::Register('CFG_PREFIX_REPLACE_ORD', $config->get('CFG_PREFIX_REPLACE_ORD'), array('placeholder' => LangAdmin::get('For_example', array('example' => 'ABC')))); ?>
+
+                        <div data-field="origin_package"></div>
+                        <? XEditableFields::Register('origin_package', $config->get('origin_package')); ?>
+
+                        <div data-field="is_postal_code_required"></div>
+                        <? XEditableFields::Register('is_postal_code_required', $config->get('is_postal_code_required')); ?>
+
+                        <div data-field="order_insurance_percent"></div>
+                        <? XEditableFields::Register('order_insurance_percent', $config->get('order_insurance_percent'), array('placeholder' => LangAdmin::get('Enter_procent_as_a_number'),'inputClass' => 'price')); ?>
+
+                        <? if($OrderSettings !== false){ ?>
+                            <div data-field="MinOrderCost"></div>
+                            <? XEditableFields::Register('MinOrderCost', (int)$OrderSettings->Result->MinOrderCost, array('placeholder' => LangAdmin::get('For_example', array('example' => '10 000')), 'inputClass' => 'numeric')); ?>
+
+                            <div data-field="MaxNoteItemsCount"></div>
+                            <? XEditableFields::Register('MaxNoteItemsCount', $OrderSettings->Result->MaxNoteItemsCount, array('inputClass' => 'numeric')); ?>
+
+                            <div data-field="MaxCartItemsCount"></div>
+                            <? XEditableFields::Register('MaxCartItemsCount', $OrderSettings->Result->MaxCartItemsCount, array('inputClass' => 'numeric')); ?>
+                            
+                            
+                        <? } ?>
+                        
+
+                    </div>
+                    <div class="span6">
+
+                        <legend class="legend-mini"><?=LangAdmin::get('Sales_types')?></legend>
+
+                        <div data-field="IsAuctionTypeItemSellAllowed"></div>
+                        <? XEditableFields::Register('IsAuctionTypeItemSellAllowed', (string)$Showcase->Settings->IsAuctionTypeItemSellAllowed); ?>
+
+                        <div data-field="IsNotDeliverableItemSellAllowed"></div>
+                        <? XEditableFields::Register('IsNotDeliverableItemSellAllowed', (string)$Showcase->Settings->IsNotDeliverableItemSellAllowed); ?>
+
+                        <div data-field="IsSecondhandItemSellAllowed"></div>
+                        <? XEditableFields::Register('IsSecondhandItemSellAllowed', (string)$Showcase->Settings->IsSecondhandItemSellAllowed); ?>
+
+                        <div data-field="IsHasntShowcaseItemSellAllowed"></div>
+                        <? XEditableFields::Register('IsHasntShowcaseItemSellAllowed', (string)$Showcase->Settings->IsHasntShowcaseItemSellAllowed); ?>
+
+                        <div data-field="IsInStockItemSellAllowed"></div>
+                        <? XEditableFields::Register('IsInStockItemSellAllowed', (string)$Showcase->Settings->IsInStockItemSellAllowed); ?>
+
+                        <div data-field="IsFilteredItemsSellAllowed"></div>
+                        <? XEditableFields::Register('IsFilteredItemsSellAllowed', (string)$Showcase->Settings->IsFilteredItemsSellAllowed); ?>
+
+                        <div data-field="hide_item_for_restrictions"></div>
+                        <? XEditableFields::Register('hide_item_for_restrictions', $config->get('hide_item_for_restrictions')); ?>
+
+                        <legend class="legend-mini"><?=LangAdmin::get('Notifications')?></legend>
+
+                        <div data-field="notification_email"></div>
+                        <? XEditableFields::Register('notification_email', $config->get('notification_email'), array('placeholder' => 'example@domain.tld')); ?>
+
+                        <div data-field="notification_send_from"></div>
+                        <? XEditableFields::Register('notification_send_from', $config->get('notification_send_from'), array('placeholder' => 'example@domain.tld')); ?>
+
+                        <div data-field="notification_send_from_name"></div>
+                        <? XEditableFields::Register('notification_send_from_name', $config->get('notification_send_from_name'), array('placeholder' => LangAdmin::get('notification_send_from_name_hint'))); ?>
+
+                        <div data-field="admin_letter_lang"></div>
+                        <? XEditableFields::Register('admin_letter_lang', $config->get('admin_letter_lang'), array(), $langCodes); ?>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+    </div>
+
+<script>
+    InlineFields = new Backbone.Collection;
+    InlineFields.add(<?=json_encode(XEditableFields::GetFields())?>);
+</script>
+<? ScriptIncluder::AddCustomScript('js/ot-render-template.js'); ?>
+<? ScriptIncluder::AddCustomScript('js/ot-inline.editable.init.js'); ?>

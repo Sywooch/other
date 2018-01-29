@@ -1,0 +1,193 @@
+<!-- User's info -->
+
+<? if (! $user->isEmpty()) { ?>
+    <dl class="dl-horizontal dl-ot-horizontal offset-top01 offset-bottom05">
+        <p>
+            <strong>
+                <i class="icon-user"></i>
+                <? if (RightsManager::isAvailableCmd('users')) { ?>
+                <a  href="<?=$PageUrl->generate(array('cmd'=>'users','do'=>'profile', 'id'=>$user['id']))?>"
+                    title="Профиль пользователя" target="_blank"
+                >
+                <? } ?>
+                    <?=$this->escape($user->getDisplayName())?>
+                <? if (RightsManager::isAvailableCmd('users')) { ?>
+                </a>
+                <? } ?>
+            </strong>
+        </p>
+        <dt><?=LangAdmin::get('Account_number')?></dt>
+        <dd><?=$user->account->id?></dd>
+
+        <dt>Баланс</dt>
+        <dd>
+
+            <span id="accountAvailableAmount" class="inline-block label weight-normal font-12">
+                <?=TextHelper::formatPrice($user->account->AvailableCust, $user->account->CurrencySignCust)?>
+            </span>
+
+            <? $showPaymentReserveBtn = ((float)$user->account->availablecust > 0); ?>
+            <? if ($showPaymentReserveBtn || RightsManager::isAvailableCmd('users')) { ?>
+            <div class="btn-group">
+                <div class="btn-group pull-right">
+                    <button data-toggle="dropdown" class="btn btn-mini dropdown-toggle" title="Действия с покупателем"><i class="icon-cog"></i> <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <? if (RightsManager::isAvailableCmd('users')) { ?>
+                            <li><a id="toggleEnrollForm" href="javascript:void(0)" data-toggle="collapse" data-target=".credit-user-account-form" title="<?=LangAdmin::get('Recharge_user_account')?>"><i class="icon-plus-sign"></i> <span class="font-12"><?=LangAdmin::get('Enroll')?></span></a></li>
+                            <li><a id="toggleWithdrawForm" href="javascript:void(0)" data-toggle="collapse" data-target=".debit-user-account-form" title="<?=LangAdmin::get('Withdraw_funds_from_the_user_account')?>"><i class="icon-minus-sign"></i> <span class="font-12"><?=LangAdmin::get('Withdraw')?></span></a></li>
+                            <li class="divider"></li>
+                        <? } ?>
+                        <li class="paymentReserve" style="<?=! $showPaymentReserveBtn ? 'display:none' : ''?>">
+                            <a  id="paymentReserveBtn" href="javascript:void(0)" title="Оплатить заказ пользователя"
+                                    data-action="<?=$PageUrl->assignDo('paymentReserve')?>"
+                            >
+                                <i class="icon-ok"></i> <span class="font-12">Оплатить заказ</span>
+                            </a>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+            <? } ?>
+
+        </dd>
+
+        <!--credit-user-account-form-->
+        <div class="collapse credit-user-account-form font-12">
+            <form class="form-horizontal" onsubmit="$(this).find('button:first').trigger('click'); return false;">
+                <h4 class="font-13"><?=LangAdmin::get('Enrolling_funds')?></h4>
+                <dl>
+                    <dt class="text-success"><?=LangAdmin::get('Amount')?></dt>
+                    <dd><input name="amount" type="text" class="input-mini price"></dd>
+                    <dt class="text-success"><?=LangAdmin::get('Notice')?></dt>
+                    <dd><textarea name="comment" class="input-medium" rows="2"></textarea></dd>
+                    <dd>
+                        <div class="offset-top05">
+                            <button id="enrollMoneyBtn" autocomplete="off" data-loading-text="<?=LangAdmin::get('Enroll')?>" class="btn btn-mini btn-primary btn_preloader" type="button"><?=LangAdmin::get('Enroll')?></button>
+                            <button class="btn btn-mini" type="button" data-toggle="collapse" data-target=".credit-user-account-form"><?=LangAdmin::get('Cancel')?></button>
+                        </div>
+                    </dd>
+                </dl>
+                <input name="isDebit" type="hidden" value="true"/>
+            </form>
+        </div>
+
+        <!--debit-user-account-form-->
+        <div class="collapse debit-user-account-form font-12">
+            <form class="form-horizontal offset-top1 offset-bottom2"
+                onsubmit="$(this).find('button:first').trigger('click'); return false;">
+                <h4 class="font-13"><?=LangAdmin::get('Withdrawing_funds')?></h4>
+                <dl>
+                <dt class="text-error"><?=LangAdmin::get('Amount')?></dt>
+                <dd><input name="amount" type="text" class="input-mini price"></dd>
+                <dt class="text-error"><?=LangAdmin::get('Notice')?></dt>
+                <dd><textarea name="comment" class="input-medium" rows="2"></textarea></dd>
+                <dd>
+                    <div class="offset-top05">
+                        <button id="withdrawMoneyBtn" autocomplete="off" data-loading-text="<?=LangAdmin::get('Withdraw')?>" class="btn btn-mini btn-primary btn_preloader" type="button"><?=LangAdmin::get('Withdraw')?></button>
+                        <button class="btn btn-mini" type="button" data-toggle="collapse" data-target=".debit-user-account-form"><?=LangAdmin::get('Cancel')?></button>
+                    </div>
+                </dd>
+                </dl>
+                <input name="isDebit" type="hidden" value="false"/>
+            </form>
+        </div>
+
+        <dt><?=LangAdmin::get('Phone')?></dt>
+        <dd><?=$this->escape($user->phone)?>&nbsp;</dd>
+        <dt><?=LangAdmin::get('Email')?></dt>
+        <dd><a href="mailto:<?=$user->email?>"><?=$this->escape($user->email)?></a></dd>
+
+    </dl>
+
+    <div class="well well-small well-transp offset-vertical-none inset-bottom0">
+        <h4 class="offset-top0">Адрес доставки</h4>
+        <ul class="unstyled">
+            <li><?=$this->escape($user->RecipientFirstName)?> <?=$this->escape($user->RecipientLastName)?></li>
+            <li><?=$this->escape($user->country)?></li>
+            <li><?=$this->escape($user->city)?> <?=$this->escape($user->address)?></li>
+        </ul>
+
+        <?php if (count($order->packages) > 0) {
+            $packs = array();
+        ?>
+            <h4 class="offset-top0">Адреса доставки <span class="muted">по посылкам</span></h4>
+            <? foreach ($order->packages as $pack) {
+                if (! array_key_exists($pack->id, $packs)) { ?>
+                    <p>
+                        <span class="ot-spoiler ot-spoiler-iconed blink opened" data-toggle="collapse" data-target=".ot-package-<?=$pack->id?>">
+                            <i class="icon-caret-right color-blue font-12"></i>
+                            № <?=$pack->id?>
+                        </span>
+
+                        <div class="ot-package-<?=$pack->id?> collapse" style="height: 0px;">
+                            <div class="well well-small well-white inset-bottom0 offset-bottom1">
+                                <ul class="unstyled">
+                                    <li><strong><?=$pack->getRecipientName()?></strong></li>
+                                    <?php
+                                    $addr = $pack->getDeliveryAddress(false, true);
+                                    foreach ($addr as $addrRow) { ?>
+                                        <li><?=$addrRow?></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </p>
+                <?php   $packs[$pack->id] = 1;
+                }
+                ?>
+        <?  }    ?>
+    <? } ?>
+    </div>
+
+    <!-- other  user's active orders-->
+    <h5 class="offset-bottom0">Другие активные заказы</h5>
+
+    <? if ($user->orders && ! $user->orders->isEmpty()) { ?>
+        <? foreach ($user->orders as $otherOrder) {
+            if ($otherOrder['id'] == $order['id']) {
+                continue;
+            }
+        ?>
+        <div class="box box-blinked box-closed offset-top01 offset-bottom0">
+
+            <div class="box-header corner-top">
+                <i class="icon-caret-right color-blue font-12"></i>
+                <a href="#" data-box="collapse" data-target=".other-active-order-<?=$otherOrder->id?>" class="font-12 blink">
+                    <?=OrdersProxy::normalizeOrderId($otherOrder->id)?>
+                </a>
+            </div>
+
+            <div class="box-body inset-horizontal-none .other-active-otherOrder-<?=$otherOrder->id?>">
+                <div class="well">
+                    <dl class="dl-horizontal dl-ot-horizontal offset-vertical-none">
+                        <dt>Номер заказа</dt>
+                        <dd>
+                            <a href="<?=$PageUrl->generate(array('do'=>'view', 'id'=>$otherOrder->id))?>">
+                                <?=OrdersProxy::normalizeOrderId($otherOrder->id)?>
+                            </a>
+                        </dd>
+                        <dt>Статус заказа</dt>
+                        <dd><?=$otherOrder->StatusName?></dd>
+                        <dt>Дата создания</dt>
+                        <dd><?=date('d.m.y', strtotime($otherOrder['createddatetime']))?> <span class="muted font-11">(<?=date('H:i:s', strtotime($otherOrder['createddatetime']))?>)</span></dd>
+                        <dt>Стоимость заказа</dt>
+                        <dd><?=$otherOrder->getFormattedTotalAmount()?></dd>
+                        <dt>Оплачено / осталось</dt>
+                        <dd>
+                            <?=$otherOrder->getPaidAmount()?> /
+                            <?=TextHelper::formatPrice($otherOrder->remainamount, $otherOrder->currencysign)?>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <? } ?>
+    <? } else { ?>
+
+    <p><i class="icon-info-sign"></i> Других текущих заказов у пользователя нет.</p>
+
+    <? } ?>
+
+<? } else { ?>
+    <p><i class="icon-info-sign"></i> Информация о покупателе не найдена.</p>
+<? } ?>

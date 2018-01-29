@@ -1,0 +1,190 @@
+<ul class="breadcrumb">
+    <li><a href="/admin-new/"><i class="icon-home"></i></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignDo('default')?>" class="muted"><?=LangAdmin::get('Catalog')?></a> <span class="divider">›</span></li>
+    <li><a href="<?=$PageUrl->AssignCmdAndDo('sets', 'default')?>" class="muted"><?=LangAdmin::get('Sets')?></a> <span class="divider">›</span></li>
+    <li class="active"><?=LangAdmin::get('Recommended_products')?></li>
+</ul><!--/.breadcrumb-->
+
+<?=TabsGenerator::GetTabs('templates/catalog/navigation/tabs.xml', $PageUrl)?>
+
+<?=TabsGenerator::GetSubTabs('templates/sets/navigation/tabs.xml', $PageUrl)?>
+
+<h1><?=LangAdmin::get('Recommended_products')?></h1>
+
+<div class="sets_wrapper">
+<div class="row-fluid offset-bottom1">
+
+    <div class="span4">
+
+        <strong class="offset-right05"><?=LangAdmin::get('Add')?></strong>
+
+        <strong data-target=".ot_add_recommended_from_file" data-toggle="collapse" class="blink blink-iconed"><i class="icon-file"></i><?=LangAdmin::get('from_file')?></strong> <?=LangAdmin::get('or')?>
+        <span class="offset-left05"><strong data-target=".ot_add_recommended_from_link" data-toggle="collapse" class="blink blink-iconed"><i class="icon-link"></i><?=LangAdmin::get('by_link')?></strong></span>
+
+    </div>
+
+    <div class="span4">
+        <button id="save-order" itemType="Best" itemContentType="Item" class="btn btn-tiny disabled" data-loading-text="<i class='icon-sort-by-attributes-alt icon-rotate-270'></i> <?=LangAdmin::get('Saving_order')?>" title="<?=LangAdmin::get('Save_order')?>"><i class="icon-sort-by-attributes-alt icon-rotate-270 font-14"></i> <?=LangAdmin::get('Save_order')?></button>
+    </div>
+    
+    <div class="span2">
+
+        <!-- site language -->
+        <div class="btn-group pull-right">
+            <a class="btn dropdown-toggle offset-top05" data-toggle="dropdown" href="#" title="<?=LangAdmin::get('Choose_lang_to_edit')?>">
+                <?=$currentLang?>
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">                
+                <? foreach ($languages as $code => $lang) { ?>
+                    <li><a href="<?=$PageUrl->AssignDo('recommended')?>&language=<?=$code?>"><?=$lang?></a></li>                    
+                <? } ?>
+            </ul>
+        </div>
+        <!-- /site language -->
+    </div>
+
+</div>
+
+
+<!--<div class="row-fluid offset-bottom1">
+
+    <div class="span4">
+
+        <strong data-target=".ot_add_recommended_to_selection" data-toggle="collapse" class="blink blink-iconed"><i class="icon-plus"></i>Добавить</strong>
+
+    </div>
+
+    <div class="span8">
+
+
+
+    </div>
+
+</div>-->
+
+
+<div class="ot_add_recommended_from_file collapse">
+    <form class="" action="<?=$PageUrl->AssignCmdAndDo('sets', 'addSetsItemsFile')?>" method="post" enctype="multipart/form-data">
+    <div class="well inline-block">
+        <div class="fileupload fileupload-new" data-provides="fileupload">
+            <?=LangAdmin::get('From_file')?> <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-placement="right" data-content="<?=LangAdmin::get('Select_text_file_with_product_links')?>"></i>
+            <div class="input-append">
+                <div class="uneditable-input span4">
+                    <i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span>
+                </div>  
+                <span class="btn btn-success btn-file">
+                    <span class="fileupload-new">
+                        <i class="icon-upload-alt"></i> <?=LangAdmin::get('Select_file_to_import')?></span>
+                    <span class="fileupload-exists"><?=LangAdmin::get('Change')?></span>
+                    <input type="file" id="itemsFile" name="itemsFile"/>
+                </span>
+                <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><?=LangAdmin::get('Delete')?></a>
+            </div>
+        </div>
+
+        <button id="upload-btn" type="button" class="btn btn-primary btn_preloader" data-loading-text="<?=LangAdmin::get('Add')?>"><?=LangAdmin::get('Add')?></button>
+        <button type="button" class="btn offset-left05 cancel-btn" data-target=".ot_add_recommended_from_file" data-toggle="collapse" title="<?=LangAdmin::get('Cancel_hide_form')?>"><?=LangAdmin::get('Cancel')?></button>
+    </div>
+    </form>
+</div>
+
+
+<div class="ot_add_recommended_from_link collapse">
+
+    <form class="form-inline well inline-block" action="<?=$PageUrl->AssignCmdAndDo('sets', 'addSetsItem')?>" method="post">
+
+        <?=LangAdmin::get('Link')?> 
+        <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-placement="right" data-content="<?=LangAdmin::get('Addition_product_by_link')?>"></i>
+
+        <input type="text" id="urlId" name="urlId">
+        <input type="hidden" id="type" name="Best">
+
+        <button type="button" class="btn btn-primary btn_preloader" data-loading-text="<?=LangAdmin::get('Add')?>"><?=LangAdmin::get('Add')?></button>
+        <button type="button" class="btn offset-left05 cancel-btn" data-target=".ot_add_recommended_from_link" data-toggle="collapse" title="<?=LangAdmin::get('Cancel_hide_form')?>"><?=LangAdmin::get('Cancel')?></button>
+
+    </form>
+</div>
+
+
+<ul class="thumbnails ot_sortable_cols ot_sortable_items">
+
+    <div class="ot-item-template" style="display: none;">
+    <li id="itemId" type="Best" >
+        <div class="thumbnail">
+            <header>
+                <span class="sortable_handler" title="<?=LangAdmin::get('Change_order')?>"><i class="icon-move"></i></span>
+                <span class="pull-right">
+                    <button class="btn btn-mini ot_show_edit_selections_product_window ot_show_edit_selections_product_window" title="<?=LangAdmin::get('Edit')?>"><i class="icon-pencil"></i></button>
+                    <button class="btn btn-mini ot_show_deletion_dialog_modal" title="<?=LangAdmin::get('Delete')?>"><i class="icon-remove"></i></button>
+                </span>
+            </header>
+            <a href="#" title="<?=LangAdmin::get('To_product_page')?>" class="img_preview"><img src="itemPictureUrl" alt=""></a>
+            <h3 title="itemTitle">itemTitle</h3>
+        </div>
+    </li>
+    </div>
+
+
+    <?php foreach ($items as $i => $item) {  ?>
+    <li id="<?=$item['id']?>" type="Best" > 
+        <div class="thumbnail">
+            <header>
+                <span class="sortable_handler" title="<?=LangAdmin::get('Change_order')?>"><i class="icon-move"></i></span>
+                <span class="pull-right">
+                    <button class="btn btn-mini ot_show_edit_selections_product_window ot_show_edit_selections_product_window" title="<?=LangAdmin::get('Edit')?>"><i class="icon-pencil"></i></button>
+                    <button class="btn btn-mini ot_show_deletion_dialog_modal" title="<?=LangAdmin::get('Delete')?>"><i class="icon-remove"></i></button>
+                </span>
+            </header>
+            <a href="#" title="<?=LangAdmin::get('To_product_page')?>" class="img_preview"><img src="<?=$item['mainpictureurl']?>" alt=""></a>
+            <h3 title="<?=$item['title']?>"><?=$item['title']?></h3>
+        </div>
+    </li>
+    <?php } ?>
+
+</ul>
+
+
+<!-- edit item window -->
+<div class="modal hide fade ot_edit_selections_product_dialog_window">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3><?=LangAdmin::get('Edit_product')?></h3>
+    </div>
+
+    <div class="modal-body">
+        <div class="editableform-loading" ></div>
+        <form class="form-vertical ot_form " action="<?=$PageUrl->AssignCmdAndDo('sets', 'updateSetsItem')?>"  method="post">
+            <input type="hidden" id="itemId" name="itemId">
+            <input type="hidden" name="type" value="Best">
+            <input type="hidden" name="language" id="currentLang" value="<?=$currentLang?>" data-lang="<?=$currentLang?>">
+            <div class="control-group">
+                <label class="control-label"><?=LangAdmin::get('Display_product_name')?> <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-placement="bottom" data-content=""></i></label>
+                <div class="controls">
+                    <input class="input-block-level" type="text" name="displayName" id="displayName" value="">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label"><?=LangAdmin::get('Product_description')?> <i class="icon-question-sign ot_inline_help" data-toggle="popover" data-placement="bottom" data-content=""></i></label>
+                <div class="controls">
+                    <textarea rows="10" class="input-block-level" id="description" name="description"></textarea>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary pull-left btn_preloader" autocomplete="off" data-loading-text="<?=LangAdmin::get('Saving')?>"><?=LangAdmin::get('Save')?></button>
+        <button type="button" class="btn pull-right" data-dismiss="modal"><?=LangAdmin::get('Cancel')?></button>
+    </div>
+
+</div><!-- /edit item window -->
+</div>
+
+<? ScriptIncluder::AddCustomScript('js/ot-sets.js'); ?>
+<? ScriptIncluder::AddCustomScript('/js/vendor/jquery.form.js'); ?>
+<? ScriptIncluder::AddCustomScript('/js/tiny_mce/tiny_mce.js'); ?>

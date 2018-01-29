@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="user">
+	<name>plg_user_retina</name>
+	<author>Retina Project</author>
+	<creationDate>December 2006</creationDate>
+	<copyright>(C) 2005 - 2009 Open Source Matters. All rights reserved.</copyright>
+	<license></license>
+	<authorEmail>admin@retina.org</authorEmail>
+	<authorUrl>www.retina-studio.ru</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_USER_retina_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="retina">retina.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_user_retina.ini</language>
+		<language tag="en-GB">en-GB.plg_user_retina.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="autoregister" type="radio"
+					default="1"
+					description="PLG_USER_retina_FIELD_AUTOREGISTER_DESC"
+					label="PLG_USER_retina_FIELD_AUTOREGISTER_LABEL"
+				>
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				
+				<field
+					name="mail_to_user"
+					type="radio"
+					default="1"
+					label="PLG_USER_retina_FIELD_MAILTOUSER_LABEL"
+					description="PLG_USER_retina_FIELD_MAILTOUSER_DESC">
+					<option
+						value="0">RNO</option>
+					<option
+						value="1">RYES</option>
+				</field>
+				
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

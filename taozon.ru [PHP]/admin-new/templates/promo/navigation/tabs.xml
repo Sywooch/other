@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabs>
+    <tab title="search_optimization" action="default" cmd="Promo">
+        <page data-action="default" data-cmd="promo" />
+    </tab>
+    <tab title="social" action="social" cmd="Promo">
+        <page data-action="social" data-cmd="promo" />
+    </tab>
+    <tab title="referals" action="default" cmd="referral" feature="ReferralProgram">
+        <page data-action="default" data-cmd="referral" />
+		<page data-action="addGroupForm" data-cmd="referral" />
+		<page data-action="editGroupForm" data-cmd="referral" />
+		<page data-action="viewGroup" data-cmd="referral" />
+    </tab>
+    <tab title="mailing" action="default" feature="Newsletter" cmd="Newsletters">
+        <page data-action="*" data-cmd="newsletters" />
+        <page data-action="*" data-cmd="subscribers" />
+    </tab>
+</tabs>

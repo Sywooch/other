@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="search" method="upgrade">
+	<name>Search - Easy Blog Comment</name>
+	<author>StackIdeas Private Limited</author>
+	<creationDate>21/06/2010</creationDate>
+	<copyright>Copyright (C) 2009 - 2010 StackIdeas Private Limited. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@stackideas.com</authorEmail>
+	<authorUrl>stackideas.com</authorUrl>
+	<version>3.9.1</version>
+	<description>Allows user to search for EasyBlog's comments entries</description>
+	<files>
+		<filename plugin="easyblogcomment">easyblogcomment.php</filename>
+	</files>
+	<params>
+		<param name="link" type="list" default="1" label="Link" description="Select to the link of the result to the first page of the comment or the exact comment page (Note: If the exact commpent Page is selected, it might slow down the search time if there is a lot of comments).">
+			<option value="0">First Comment Page</option>
+			<option value="1">Exact Comment Page</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+	</params>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field 
+					name="link" 
+					type="list"
+					default="1"
+					label="Link"
+					description="Select to the link of the result to the first page of the comment or the exact comment page (Note: If the exact commpent Page is selected, it might slow down the search time if there is a lot of comments).">
+					<option value="0">First Comment Page</option>
+					<option value="1">Exact Comment Page</option>					
+				</field>
+			</fieldset>
+		</fields>
+	</config>		
+</extension>
