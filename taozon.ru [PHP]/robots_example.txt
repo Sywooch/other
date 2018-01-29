@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /index.php?p=item
+Disallow: /item
+Disallow: /index.php?p=category
+Disallow: /category
+Disallow: /index.php?p=subcategory
+Disallow: /subcategory

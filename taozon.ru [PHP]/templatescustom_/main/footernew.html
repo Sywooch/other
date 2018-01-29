@@ -1,0 +1,111 @@
+<? $customFooter = Plugins::invokeEvent('onFooterCustom'); ?>
+<?if($customFooter){?>
+    <?=$customFooter?>
+<?}else{?>
+    <? if(General::getConfigValue('footer_text') && SCRIPT_NAME == 'index'){ ?>
+        <div class="wrap clrfix">
+            <?=General::getConfigValue('footer_text')?>
+        </div>
+    <? } ?>
+    <div class="footer"><div class="wrap clrfix">
+            <a href="#" class="up" onClick="scroll(0,0); return false;"></a>
+            <div class="fll col240">
+                <div class="f12">&copy; 2011&ndash;<? echo date('Y');?> <b><?=General::getConfigValue('site_name')?></b></div>
+                <p class="f11 mt5">Powered by &copy; Opentao platform <a href="http://opentao.net" target="_blank" alt="opentao.net" title="opentao.net">opentao.net</a></p>
+            </div>
+            <div class="flr col690">
+                <ul class="fmenu flin clrfix">
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('main_user_agreement')?>" alt="<?=Lang::get('user_agreement1')?>" title="<?=Lang::get('user_agreement1')?>"><?=Lang::get('user_agreement1')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('policy')?>" alt="<?=Lang::get('security_policy')?>" title="<?=Lang::get('security_policy')?>"><?=Lang::get('security_policy')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('about_us')?>" alt="<?=Lang::get('about_us')?>" title="<?=Lang::get('about_us')?>"><?=Lang::get('about_us')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('contacts')?>" alt="<?=Lang::get('contacts')?>" title="<?=Lang::get('contacts')?>"><?=Lang::get('contacts')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('help')?>" alt="<?=Lang::get('help')?>" title="<?=Lang::get('help')?>"><?=Lang::get('help')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('sitemap')?>" alt="<?=Lang::get('sitemap')?>" title="<?=Lang::get('sitemap')?>"><?=Lang::get('sitemap')?></a></li>
+                    <?  if(General::getConfigValue('counter')){ ?>
+                    <li>
+                        <?=General::getConfigValue('counter')?>
+                    </li>
+                    <? }  ?>
+                </ul>
+                <script type="text/javascript">
+				function tick(){
+					var ms = new Date();
+					var msk = ms.getUTCHours()+4;
+					if (msk>23) {msk=24-msk}
+					var min_r = 50;
+					var max_r = 80;
+					
+					if (msk>1 && msk<=10) {min_r = 20; max_r = 35}
+					if (msk>10 && msk<18) {min_r = 35; ma_r = 50}
+					
+					var now = document.getElementById('count_online').innerHTML;
+					if ($.cookie("f_count")){
+						var f_count = $.cookie("f_count");
+						var old_time = $.cookie("f_time");
+						
+						
+						var new_time = ms.getTime();
+						
+						
+						if (new_time-old_time <= 120000){
+							$('#count_online').text(f_count);
+							console.log('not_update');
+						}
+						else{
+							var new_count = Math.floor(Math.random() * (max_r - min_r) + min_r);
+							$('#count_online').text(new_count);
+							$.cookie("f_count",new_count);
+							$.cookie("f_time",ms.getTime());
+							
+						}
+					}
+					else{
+						
+						var msk = ms.getUTCHours()+4;
+						if (msk>23) {msk=24-msk}
+						
+						var new_count2 = Math.floor(Math.random() * (max_r - min_r) + min_r);
+						$('#count_online').text(new_count2);
+						$.cookie("f_count",new_count2);
+						$.cookie("f_time",ms.getTime());
+					}				
+					
+					window.setTimeout('tick()',122000);
+				}
+				
+				$(document).ready(
+					function(){
+						tick();
+					}
+				);
+				
+				</script>
+                <div class="pay mt15">
+                    <? if(General::getConfigValue('payment_image')){ ?>
+                        <img src="<?=General::getConfigValue('payment_image')?>" />
+                    <? } else { ?>
+                        <img src="p/pay.png" />
+                    <? } ?>
+                </div>
+            </div>
+        </div></div>
+
+<?if(file_exists(CFG_APP_ROOT.'/js/jsfinalcustom.js')){?>
+    <script type="text/javascript" src="js/jsfinalcustom.js"></script>
+<?}?>
+
+<? print (General::getConfigValue('html_for_footet')) ? General::getConfigValue('html_for_footet') : ''; ?>
+
+
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = '86864';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
+
+
+
+
+</body>
+</html>
+<? } ?>

@@ -1,0 +1,11 @@
+<?=Lang::get('Hi_user', array('username' => $username))?>
+
+<?=Lang::get('order_was_sent', array(
+    'orderid' =>$orderid,
+))?>
+
+<?=Lang::get('link_to_order_info', array(
+    'link' => UrlGenerator::generatePrivateOfficeUrl(array('p' => 'orderdetails','orderid' => $orderid), true)
+))?>
+
+<?=Lang::get('with_respect_site_administration', array('site_name' => $_SERVER['SERVER_NAME']))?>

@@ -1,0 +1,6 @@
+<?=Lang::get('hello')?><br />
+<?=Lang::get('new_reorder_entered')?>: <?=$orderId?> <br />
+<? if ($with_order) { ?>
+    Необходимо объединить заказ № <?=$with_order?> с заказом № <?=$orderId?> <br />
+<? } ?>
+<?=Lang::get('enter_to_admin_panel')?> <a href="http://<?=$_SERVER['HTTP_HOST'].'/admin/index.php?cmd=orders&do=orderinfo&id='.$url?>"><?='http://'.$_SERVER['HTTP_HOST'].'/admin/index.php?cmd=orders&do=orderinfo&id='.$url?></a>

@@ -1,0 +1,126 @@
+ <?=$HeaderNew?>
+
+<div class="main indexnew">
+    <div class="wrap clrfix">
+
+        <div class="fll col240">
+            <div class="dropdown dropdown-main">
+                <?=$MenuShortNew;?>
+                <div class="b-link__dropdown-all">
+                    <a class="b-link" href="<?=General::generateUrl('allcats', array() )?>"><i class="i-new i-arrow-right i arrowright"></i><span><?=Lang::get('all_goods_categories')?></span></a>
+                </div>
+            </div>
+
+            <? if(@General::$siteConf['banner_widget']){ ?>
+                <?=@General::$siteConf['banner_widget']?>
+            <? }else{?>
+                <a href="index.php?p=help"><img src="p/banner.png"></a>
+            <? } ?>
+        </div>
+
+        <div class="flr col690">
+            <?=$Banners?>
+
+            <div class="socblocks mb20 clrfix">
+                <? if(!@General::$siteConf['hide_social']){?>
+                <div class="fll col55w">
+                    <div class="title"><?=Lang::get('share_with_friends')?>:</div>
+                    <table>
+                        <?if(@General::$siteConf['vkLikeWidget']){?>
+                        <tr>
+                            <td class="vk">
+                                <?if(@General::$siteConf['vkLikeWidget']){?>
+                                <script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
+
+                                <!--noindex-->
+                                <script type="text/javascript">
+                                    VK.init({
+                                        apiId: <?=@General::$siteConf['vkLikeWidget']?>,
+                                        onlyWidgets: true
+                                    });
+                                </script>
+                                <!-- Put this div tag to the place, where the Like block will be -->
+                                <div id="vk_like"></div>
+                                <script type="text/javascript">
+                                    VK.Widgets.Like("vk_like", {type: "full", height: 18});
+                                </script>
+                                <!--/noindex-->
+                                <?}?>
+                            </td>
+                        </tr>
+                        <?}?>
+                        <?if(@General::$siteConf['fbLikeWidget']){?>
+                        <tr>
+                            <td class="fb">
+                                <?=stripslashes(@General::$siteConf['fbLikeWidget'])?>
+                            </td>
+                        </tr>
+                        <?}?>
+                        <?if(@General::$siteConf['twitWidget']){?>
+                        <tr>
+                            <td class="tw">
+                                <?=stripslashes(@General::$siteConf['twitWidget'])?>
+                            </td>
+                        </tr>
+                        <?}?>
+                        <?if(@General::$siteConf['okWidget']){?>
+                        <tr>
+                            <td class="tw">
+                                <?=stripslashes(@General::$siteConf['okWidget'])?>
+                            </td>
+                        </tr>
+                        <?}?>
+                    </table>
+                </div>
+                <div class="fll col50w social-links">
+                    <div class="title"><?=Lang::get('follow_news')?>:</div>
+                    <p>
+                        <?if(!@General::$siteConf['hide_vk_link']){?>
+                        <a href="<?=@General::$siteConf['vk_link']?@General::$siteConf['vk_link']:'http://vk.com/opentao'?>" target="_blank" class="vk-link">
+                            <img src="p/vk.jpg" alt="vk" class="vk-img" />
+                        </a>
+                        <?}?>
+                        <?if(!@General::$siteConf['hide_fb_link']){?>
+                        <a href="<?=@General::$siteConf['fb_link']?@General::$siteConf['fb_link']:'http://www.facebook.com/pages/%D0%9E%D0%BF%D0%B5%D0%BD%D1%82%D0%B0%D0%BE%D0%A0%D1%83/252116681541607'?>" target="_blank" class="fb-link">
+                            <img src="p/fb.jpg" alt="fb" class="fb-img" />
+                        </a>
+                        <?}?>
+                        <?if(!@General::$siteConf['hide_tw_link']){?>
+                        <a href="<?=@General::$siteConf['tw_link']?@General::$siteConf['tw_link']:'https://twitter.com/#!/Opentao'?>" target="_blank" class="tw-link">
+                            <img src="p/tw.jpg" alt="tw" class="tw-img" />
+                        </a>
+                        <?}?>
+                    </p>
+                </div>
+                <? } ?>
+            </div>
+            <? if(defined('CFG_USE_CURRENCIES_RECOUNT') && CFG_USE_CURRENCIES_RECOUNT){ ?>
+            <div class="clearfix recount-prices">
+                <a href="index.php?p=set_currency&c=UAH" class="btn-small fll"><span>Показать стоимость в гривне</span></a>
+                <a href="index.php?p=set_currency&c=RUB" class="btn-small fll"><span>Показать стоимость в рублях</span></a>
+                <a href="index.php?p=set_currency&c=USD" class="btn-small fll"><span>Показать стоимость в долларах</span></a>
+            </div>
+            <? } ?>
+             <script src="js/GeoLocatet.js?<?=CFG_SITE_VERSION;?>"></script>
+            <link rel="stylesheet" href="css/GeoLocatet.css?<?=CFG_SITE_VERSION;?>" />
+            <form  method="post" id="GeoCurr">
+                         <input type='hidden' name='c' id="c">
+             </form>
+            <div style="position:relative;">
+                <?=Plugins::invokeEvent('ShowGeoLocate',array('LocalVal'=>@$_SESSION['CountryISO'])) ?>
+             </div>
+            <?=$NewsBlock?>
+            <? if(CMS::IsFeatureEnabled('Digest')) { ?>
+                <?=$DigestBlock?>
+            <? } ?>
+
+            <?=$ItemSetsNew?>
+            <div style="display:none" data-info="index-sets-loaded"></div>
+            <? if(CMS::IsFeatureEnabled('ShopComments')) { ?>
+                <?=$ShopreviewsBlock?>
+            <? } ?>
+        </div>
+    </div>
+</div>
+<div style="display:none" data-info="index-footer-loaded"></div>
+<?=$FooterNew?>

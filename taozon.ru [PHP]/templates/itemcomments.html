@@ -1,0 +1,48 @@
+<? if (empty($reviews)): ?>
+    <?if ( Session::checkErrors()) {?>
+        <h3><?=Session::getErrorDescription()?></h3>
+    <?}?>
+    <? if (Session::isAuthenticated()){?>
+        <h3><?=Lang::get('new_item_comment_txt')?></h3>
+    <? }else{ ?>
+        <h3><?=Lang::get('no_comments_to_good')?> — <a href="<?=@UrlGenerator::generateContentUrl('login')?>"><?=Lang::get('do_auth_now')?></a>, <?=Lang::get('post_comment_now')?>!</h3>
+    <? } ?>
+<? else: ?>
+<?if (! Session::isAuthenticated()) {?>
+    <h3><a href="<?=@UrlGenerator::generateContentUrl('login')?>"><?=Lang::get('do_auth_now')?></a>, <?=Lang::get('post_comment_now')?>!</h3>
+<?}?>
+<ul class="paymshipReviews">
+    <? foreach ($reviews as $review): ?>   
+    <? if (!trim($review['text'])) : ?>
+        <? continue; ?>
+    <? endif; ?>  
+    
+    <li class="paymshipReviewsItem">
+        <span class="paymshipReviewsInformation">
+            <span class="date"><?=$review['created']?></span>
+            <span class="author"><? echo empty($review['name']) ? Lang::get('no_name') : $review['name']; ?></span>
+        </span>
+        <p class="paymshipReviewsPost"><?= htmlspecialchars($review['text']) ?></p>
+    </li>
+
+    <? endforeach; ?>
+</ul>
+<? endif; ?>
+
+<?if(Session::isAuthenticated()){?>
+<div class="mt30 userform" style="padding: 20px 0;">    
+    <form method="post" action="<?=($itemcid == 'pristroy') ? UrlGenerator::generatePristroyItemUrl($itemid) : UrlGenerator::generateItemUrl($itemid)?>">
+        <input type="hidden" name="review[item_id]" value="<?= $itemid ?>"/>
+        <input type="hidden" name="review[item_cid]" value="<?= $itemcid ?>"/>
+        <input type="hidden" name="review[item_url]" value="<?= $itemurl ?>"/>
+
+        <div class="form-row">
+            <label><?=Lang::get('your_comment')?></label>
+            <textarea required rows="5" cols="30" name="review[text]" class="form-field form-field__textarea"></textarea>
+        </div>
+        <div class="form-row enter">
+            <input type="submit" class="btn_office" value="<?=Lang::get('send')?>" name="">
+        </div>
+    </form>
+</div>
+<?}?>

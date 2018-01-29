@@ -1,0 +1,96 @@
+<div class="path"><div class="canvas clrfix">
+
+        <ul class="flin">
+
+        <li class="active"><a href="index.php?p=privateoffice">Мои заказы</a></li>
+        </ul>
+
+</div></div>
+
+<div class="main"><div class="canvas clrfix">
+<h2><?=$message?></h2>
+        
+<? if ($order) { ?>
+<h2>Заказ  <span style="color:Red"># <?=$order['id']?></span></h2>
+<h2>Статус: <span style="color:Red"><?=$order['status']?></span></h2>
+<br>
+
+<p style="color:#F15A24"><b>Стоимость: <?=$order['cost']?></b></p>
+
+<br>
+		<table class="notepad">
+			<thead>
+				<tr>
+					<td class="td1">Товар</td>
+					<td></td>
+					<!--<td>Оригинал</td>
+					<td class="td4">Продавец</td>-->
+					<td>Цена</td>
+					<td><nobr>Кол-во</nobr></td>
+					<td>Стоимость</td>
+					<td>Вес</td>
+					<td>Статус</td>
+				</tr>
+			</thead>
+
+			<tbody>
+            <? foreach($order['items'] as $item){ ?>
+				<tr>
+					<td class="td1">
+						<ul class="i40 flin"><li><a href="index.php?p=item&id=<?=$item['ItemId'];?>"><img src="<?=$item['PictureURL'];?>_40x40.jpg" alt="" width="100%" height="100%"/></a></li></ul>
+					</td>
+					<td>
+                        <h3><?=$item['ItemId'];?></h3>
+						<a href="index.php?p=item&id=<?=$item['ItemId'];?>"><?=$item['ItemTitle'];?> </a>
+						<ul class="flin coptions">
+                        <? if (isset($item['ItemConfiguration'])) foreach($item['ItemConfiguration'] as $itemconf) {?>
+							<li><?=$itemconf['Property'];?>: <span><?=$itemconf['Value'];?></span></li>
+                        <? } ?>
+						</ul> 
+					</td>
+					<!--<td><a target="blank" href="<?=$item['ExternalURL'];?>"><?=$item['ItemId'];?></a></td> 
+					<td class="td4"><a href="index.php?p=vendor&id=<?=$item['VendorId'];?>"><?=$item['VendorId'];?></a></td>-->
+					<td><span class="pr"><nobr><?=$item['cost']?></nobr></span></td>
+					<td><nobr> x <?=$item['count']?> = </nobr></td>
+					<td><span class="pr"><nobr><?=($item['cost']*$item['count'])?></nobr></span></td>
+					<td><nobr><?=$item['weight']?> г.</nobr></td>
+					<td><nobr><?=$item['status']?></nobr></td>
+				</tr>
+            <?  }  ?>
+			</tbody>
+		</table>
+        <br>
+        <h2>История</h2>
+        <br>
+		<table class="notepad">
+			<thead>
+				<tr>
+					<td class="td1">Дата и время</td>
+					<td>Операция</td>
+					<td>Новое значение</td>
+				</tr>
+			</thead>
+
+			<tbody>
+            <? foreach($order['history']['line'] as $line){ ?>
+				<tr>
+					<td><?=$line->datetime?></td>
+					<td><b><?=$line->operation?></b></td>
+					<td><span class="pr"><?=$line->value?></span></td>
+				</tr>
+            <?  }  ?>
+			</tbody>
+		</table>        
+        
+<? }else{ ?>
+    <form method="post">
+    <table class="notepad">
+    <tr><td>Номер заказа: <td><input name="id" value="<?=@$id?>">
+    <tr><td>Пароль: <td><input name="pass">
+    <tr><td>&nbsp;<td><input type="submit" value="  Проверить  ">
+    </table>
+    <form>
+<? } ?>
+
+</div></div>
+

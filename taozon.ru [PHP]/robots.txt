@@ -1,0 +1,1 @@
+User-agent: *Disallow: index.php?p=itemDisallow: index.php?p=categoryDisallow: index.php?p=subcategory

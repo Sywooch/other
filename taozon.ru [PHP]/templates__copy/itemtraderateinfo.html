@@ -1,0 +1,9 @@
+<table class="tinfo itemdesc">
+<? if(is_array($itemdescription['Content'])) foreach($itemdescription['Content'] as $item){ ?>
+<tr><td>
+    <? echo '<b>'.Lang::get('author').':'.$item['UserNick'].'</b><br/>';?>
+    <? echo '<b>'.Lang::get('date').':'.date('Y-m-d H:i',strtotime((string)$item['CreatedDate'])).'</b><br/>';?>
+    <? echo $item['Content'].'<br/><br/>';?>
+</td></tr>
+<? } ?>
+</table>

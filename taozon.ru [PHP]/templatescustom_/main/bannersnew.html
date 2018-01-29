@@ -1,0 +1,60 @@
+<? if(isset($banners) && count($banners)>0){?>
+<style type="text/css">
+.agile_carousel .control_set{
+	right:1px;
+	bottom:5px;
+}
+.agile_carousel .numbered_button{
+    background: none repeat scroll 0 0 #D4D4D4;
+    border: 2px solid #FFFFFF;
+    float: left;
+    height: 15px;
+    margin-right: 4px;
+    width: 15px;
+	color: #D4D4D4;
+}
+.agile_carousel .ac_selected{
+	background:#ed1c24;
+	color:#ed1c24;
+}
+</style>
+<div class="col col690 bannersnew">
+<div class="bdwhite brwhite">
+	<div class="new_slider"></div>
+</div>
+    </div>
+<?}?>
+
+<!-- test agile carusel -->
+<script type="text/javascript">
+$(document).ready(function(){
+
+			data = [
+<?
+$b_max = count($banners);
+foreach($banners as $cell=>$banner){
+ $b_source = $banner['source'];
+ $b_url = $banner['url'];
+ $b_name = $banner['name'];
+?>
+{
+      "content": "<div class='slide_inner'><a class='photo_link' href='<?=$b_url?>'><img class='photo' src='<?=$b_source?>' alt='<?=$b_name?>' title='<?=$b_name?>'></a></div>"
+}
+<?
+if ($cell<$b_max-1) echo ",";
+}?>
+			];
+            $(".new_slider").agile_carousel({
+                carousel_data: data,
+                carousel_outer_height: 330,
+                carousel_height: 330,
+                slide_height: 330,
+                carousel_outer_width: 685,
+                slide_width: 693,
+                transition_time: 400,
+                timer: 5000,
+                continuous_scrolling: true,
+                control_set_1: "numbered_buttons"
+            });
+        });
+</script>

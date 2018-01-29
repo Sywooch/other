@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controller>
+
+<script name='imagesearch'> <!-- адрес сайта /my_alias будет обработан этим блоком -->
+<template name='imagesearch' /> <!-- шаблон страницы должен лежать в файле templates/my_template.html -->
+<blocks>
+<block name='HeaderNew' />
+<block name='FooterNew' />
+<block name='ImageSearchLocal' /> <!-- Блок с php кодом должен находится в blocks/MyBlock.class.php -->
+</blocks>
+</script>
+
+</controller>

@@ -1,0 +1,11 @@
+
+AddHandler cgi-script .pl
+Options +ExecCGI
+
+DirectoryIndex awstats.pl
+
+RewriteEngine On
+RewriteBase /awstats/
+
+RewriteCond %{QUERY_STRING} !config=
+RewriteRule awstats.pl ?config=techno-mir.net [QSA]

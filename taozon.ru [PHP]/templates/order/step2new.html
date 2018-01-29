@@ -1,0 +1,64 @@
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+
+<div class="bigtitle"><div class="wrap clrfix">
+        <h1><?=Lang::get('reg_order')?>: <?=Lang::get('choice_order')?></h1>
+</div></div>
+
+<!-- .main -->
+<div class="main"><div class="wrap clrfix">
+    <div class="bproduct">
+    <form action="index.php?p=userorder&step3&type=<?=$type?>" method="post" id="formsumit">
+    <? if(defined('CFG_DISCOUNTER_REORDER')) { ?>
+        <table class="notepad" width="100%">
+            <tr>
+                <td colspan="2">
+                    <label><input type="radio" name="order" value="new" checked="checked"> <span style="font-size:16px"><b>Создать ОТДЕЛЬНЫЙ заказ</b></span></label>
+                </td>
+            <? if(is_array($orders)) {?><tr><td colspan="2"> <span style="font-size:16px;line-height:120%"><b>ПРИСОЕДИНИТЬ к существующему заказу:<br>
+                (Оформляемый Вами заказ будет упакован и отправлен совместно с основным заказом. Внимание! Время обработки основного заказа увеличится на 7-14 рабочих дней)</b></span>
+                </td></tr>
+            <? foreach($orders as $order) {?>
+            <tr>
+                <td width="5%"><input type="radio" name="order" value="<?=$order['id'];?>"/> </td>
+                <td>
+                    <strong><?=Lang::get('number')?>: </strong><a href="index.php?p=orderdetails&orderid=<?=$order['id'];?>" target="_blank" style="text-decoration: underline;"><?=OrdersProxy::normalizeOrderId((string)$order['id']);;?></a><br/>
+                    <strong><?=Lang::get('creation_date')?>: </strong><?=$order['createddatetime'];?><br/>
+                    <strong><?=Lang::get('quantity')?> товаров: </strong><?=(string)$order['itemscount'];?><br/>
+                </td>
+            </tr>
+            <? } ?>
+            <? } ?>
+        </table>
+    <? }else{?>
+        <table class="notepad" width="100%">
+            <tr>
+                <td colspan="2">
+                    <input type="radio" name="order" value="new" checked="checked"> <?=Lang::get('create_new_order')?>
+                </td>
+            <? if(is_array($orders)) {?><tr><td colspan="2"> <?=Lang::get('select_from_exists')?>:</td></tr>
+            <? foreach($orders as $order) {?>
+            <tr>
+                <td width="5%"><input type="radio" name="order" value="<?=$order['id'];?>"/> </td>
+                <td>
+                    <strong><?=Lang::get('number')?>: </strong><a href="index.php?p=orderdetails&orderid=<?=$order['id'];?>" target="_blank" style="text-decoration: underline;"><?=OrdersProxy::normalizeOrderId((string)$order['id']);;?></a><br/>
+                    <strong><?=Lang::get('creation_date')?>: </strong><?=$order['createddatetime'];?><br/>
+                    <strong><?=Lang::get('quantity')?>: </strong><?=(string)$order['itemscount'];?><br/>
+                    <strong><?=Lang::get('cost_with_delivery')?>: </strong><span class="pr"><?=number_format((float)$order['totalamount'], (int)General::$siteConf['price_round_decimals'], '.', ' ').' '.$order['currencycode']?>               </span><br/>
+                </td>
+            </tr>
+            <? } ?>
+            <? } ?>
+        </table>
+    <? }?>
+
+        <div class="b-pager mt10">
+            <? $params .= (isset($_GET['weight'])) ? '&weight='.$_GET['weight'] : '';?>
+            <a href="<?=General::getConfigValue('hide_step_weight_order') ?  "index.php?p=basket" : "index.php?p=userorder&step1&type=".$type?>" class="btn btn-apper b-first-page"><?=Lang::get('back')?></a>
+            <input class="btn btn-apper b-last-page" type="button" value="<?=Lang::get('continue')?>" onclick="DisableSubmit('nextstep','formsumit');" id="nextstep">
+        </div>
+        <input type="hidden" name="total_weight" value="<?=$weight;?>"/>
+        <input type="hidden" name="type" value="<?=$type;?>"/>
+    </form>
+
+    </div>
+</div></div>

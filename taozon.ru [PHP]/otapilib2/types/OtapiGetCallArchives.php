@@ -1,0 +1,20 @@
+<?php
+
+class OtapiGetCallArchives extends BaseOtapiType{
+    /**
+     * @return string
+     */
+    public function GetInstanceKey(){
+        $value = isset($this->xmlData->instanceKey) ? (string)$this->xmlData->instanceKey : false;
+        $propertyType = 'string';
+        return $propertyType == 'boolean' ? $value == 'true' : $value;
+    }
+    /**
+     * @return string
+     */
+    public function GetXmlSearchSettings(){
+        $value = isset($this->xmlData->xmlSearchSettings) ? (string)$this->xmlData->xmlSearchSettings : false;
+        $propertyType = 'string';
+        return $propertyType == 'boolean' ? $value == 'true' : $value;
+    }
+}

@@ -1,0 +1,152 @@
+@media screen and (max-width: 960px)
+{  
+	.zen-container
+	{  width: 90% !important }
+	
+}
+
+@media (min-width:768px) and (max-width:979px){ 
+
+	#breadcrumb {
+		margin-top: 10px;
+	}
+
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+		.zen-container.panel-padding {
+			padding-right: 100px;
+		}
+}
+
+@media (min-width: 320px) and (max-width: 699px) {
+		#topwrap {
+			
+			.zen-container.panel-padding {
+				padding-right: 0;
+			}
+		}
+}
+
+@media (min-width: 320px) and (max-width: @navbarCollapseWidth) {
+
+	html > body {
+		margin:0;
+		padding:0;
+		width:100%
+	}
+	
+	#mainWrap .zen-container {
+		padding-top: 0;
+	}
+	
+	#topwrap .zen-container{
+		padding: 0;
+
+	}
+	#top4 ul {
+		float: left;
+		margin-top: 10px;
+	}
+	
+	
+	
+	
+	
+	#tabwrap .nav-tabs li {
+				width:101%;
+				margin:0;
+				
+				&.active a {
+					margin:0 2px
+				}
+	
+			}
+			
+			
+	#mainWrap {
+
+		
+		.sidebar {
+			background: none;padding: 0;
+		}
+
+	}
+	
+	
+	#paneltrigger {
+		top: -18px;
+		left:auto;
+		right: 0px;
+		z-index: 1000;
+		font-size: 1.4em;
+		width: auto;
+		
+		
+		a {
+			.border-radius(100px);
+			
+			
+			background: none;
+			
+			color: @togglemenubuttoncolor;
+	
+			display:inline-block;
+			
+			&:hover {
+				border-bottom-color: darken(@primary, 20%);
+				background:none;
+				color: @linkColorHover;
+				text-decoration: none;
+			}
+			
+			&:active,
+			&:focus {
+				background: none;
+				outline: none;
+				color: @togglemenubuttoncolor;
+			}
+			
+	
+		}
+		
+		
+	}
+	
+	#tabwrap {
+		
+		ul.nav-tabs {
+		
+			border: 0;
+		
+			li {
+			
+				a {
+				
+					.border-radius(0);
+					border: 1px solid @minorborderColor;
+					margin: 4px 0;
+				
+					&:hover {
+						background:@primary;
+						color: #fff;
+						border: 1px solid @minorborderColor;
+					}
+				}
+				
+				&.active a {
+					border: 1px solid @minorborderColor;
+					margin: 4px 0;
+					background: #fff;
+				}
+			}
+		}
+	}
+	
+
+}
+
+@media (min-width: 320px) and (max-width: 620px) {
+	.zen-container {width: 98%}
+
+}

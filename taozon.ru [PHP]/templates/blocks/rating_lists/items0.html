@@ -1,0 +1,32 @@
+<? if (isset($list[0])) { ?>
+<div class="bproduct <?=$type?>-rating-list">
+    <h2 class="mb25"><span><?=Lang::get($type)?></span></h2>
+    <ul class="lproduct flin w700 w160li <? if($displayAsCarousel){ ?> jcarousel-skin <? } ?> clrfix">
+        <? foreach ($list as $item) { ?>
+        <li title="<?= $item['Title'] ?>" style="position:relative;">
+            <a class="pic" href="<?=UrlGenerator::generateItemUrl($item['Id'])?>">
+                <i><img src="<?= $item['MainPictureUrl'] ?>_160x160.jpg"></i>
+                <ins></ins>
+            </a>
+            <div class="price" name="price_tmp8">
+                <div class="line"></div>
+                <a href="<?=UrlGenerator::generateItemUrl($item['Id'])?>">
+                    <span><?=General::getCurrencyPrice($item)?></span>
+                </a>
+                <a href="<?=UrlGenerator::generateItemUrl($item['Id'])?>">
+                    <ins class="name"><?= $item['Title'] ?></ins>
+                    <span class="glow"></span>
+                </a>
+
+            </div>
+            <? if ((count($item['PromotionPrice'])>0) and (!General::getConfigValue('hide_discont_lists'))) { ?>
+                <div align="center" class="wrapper_sale_item">
+                    <span class="old_price"><?=General::getCurrencyPrice($item)?></span><br>
+                    <span class="new_price"><?=General::getCurrencyPromoPrice($item)?></span>
+                </div>
+                <? } ?>
+        </li>
+        <? } ?>
+    </ul>
+</div>
+<? } ?>

@@ -1,0 +1,12 @@
+AddDefaultCharset utf-8
+
+RewriteEngine on
+RewriteBase /new-admin-proto
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $1 !index.php$
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+#RewriteCond %{DOCUMENT_ROOT}/files/%{REQUEST_URI} !-f
+#RewriteCond %{DOCUMENT_ROOT}/files/%{REQUEST_URI} -f
+#RewriteRule ^(.*)$ files/$1 [L,QSA]
+

@@ -1,0 +1,9 @@
+<phpunit>
+    <testsuites>
+        <testsuite name="OpentaoBox">
+            <file>UserRepositoryTest.php</file>
+            <file>OrderRepositoryTest.php</file>
+            <file>PresentsRepositoryTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>

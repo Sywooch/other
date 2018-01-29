@@ -1,0 +1,108 @@
+2014-11-25 8:35:27 - DEBUG --> createCategoryAction - Start
+2014-11-25 8:35:27 - DEBUG --> createCategoryActionParams
+2014-11-25 8:35:35 - DEBUG --> createCategoryActionAnswer - newId: otc-8404
+2014-11-25 8:40:53 - DEBUG --> createCategoryAction - Start
+2014-11-25 8:40:53 - DEBUG --> createCategoryActionParams
+2014-11-25 8:40:54 - DEBUG --> createCategoryActionAnswer - newId: otc-8405
+2014-11-25 8:43:57 - DEBUG --> createCategoryAction - Start
+2014-11-25 8:43:57 - DEBUG --> createCategoryActionParams
+2014-11-25 8:43:58 - DEBUG --> createCategoryActionAnswer - newId: otc-8406
+2014-11-25 8:49:58 - DEBUG --> createCategoryAction - Start
+2014-11-25 8:49:58 - DEBUG --> createCategoryActionParams
+2014-11-25 8:50:00 - DEBUG --> createCategoryActionAnswer - newId: otc-8407
+2014-11-25 8:54:35 - DEBUG --> createCategoryAction - Start
+2014-11-25 8:54:35 - DEBUG --> createCategoryActionParams
+2014-11-25 8:54:36 - DEBUG --> createCategoryActionAnswer - newId: otc-8408
+2014-11-25 8:55:46 - DEBUG --> updateCategoryAction - Start
+2014-11-25 8:55:46 - DEBUG --> updateCategoryActionParams
+2014-11-25 8:55:47 - DEBUG --> updateCategoryActionAnswer - result: otc-8408
+2014-11-25 8:57:06 - DEBUG --> createCategoryAction - Start
+2014-11-25 8:57:06 - DEBUG --> createCategoryActionParams
+2014-11-25 8:57:09 - DEBUG --> createCategoryActionAnswer - newId: otc-8409
+2014-11-25 9:01:12 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:01:12 - DEBUG --> createCategoryActionParams
+2014-11-25 9:01:13 - DEBUG --> createCategoryActionAnswer - newId: otc-8410
+2014-11-25 9:04:46 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:04:46 - DEBUG --> createCategoryActionParams
+2014-11-25 9:04:48 - DEBUG --> createCategoryActionAnswer - newId: otc-8411
+2014-11-25 9:05:05 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:05:05 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:05:06 - DEBUG --> updateCategoryActionAnswer - result: otc-8410
+2014-11-25 9:05:14 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:05:14 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:05:14 - DEBUG --> updateCategoryActionError
+2014-11-25 9:05:22 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:05:22 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:05:23 - DEBUG --> updateCategoryActionAnswer - result: otc-8409
+2014-11-25 9:07:45 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:07:45 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:07:46 - DEBUG --> updateCategoryActionAnswer - result: otc-8411
+2014-11-25 9:08:37 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:08:37 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:08:38 - DEBUG --> updateCategoryActionAnswer - result: otc-8411
+2014-11-25 9:09:46 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:09:46 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:09:47 - DEBUG --> updateCategoryActionAnswer - result: otc-8411
+2014-11-25 9:10:17 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:10:17 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:10:18 - DEBUG --> updateCategoryActionAnswer - result: otc-8408
+2014-11-25 9:12:31 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:12:31 - DEBUG --> createCategoryActionParams
+2014-11-25 9:12:32 - DEBUG --> createCategoryActionAnswer - newId: otc-8412
+2014-11-25 9:14:01 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:14:01 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:14:03 - DEBUG --> updateCategoryActionAnswer - result: otc-8412
+2014-11-25 9:15:56 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:15:56 - DEBUG --> createCategoryActionParams
+2014-11-25 9:15:57 - DEBUG --> createCategoryActionAnswer - newId: otc-8413
+2014-11-25 9:16:41 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:16:41 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:16:42 - DEBUG --> updateCategoryActionAnswer - result: otc-8413
+2014-11-25 9:19:09 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:19:09 - DEBUG --> createCategoryActionParams
+2014-11-25 9:19:10 - DEBUG --> createCategoryActionAnswer - newId: otc-8414
+2014-11-25 9:19:25 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:19:25 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:19:25 - DEBUG --> updateCategoryActionAnswer - result: otc-8414
+2014-11-25 9:19:33 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:19:33 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:19:34 - DEBUG --> updateCategoryActionAnswer - result: otc-8413
+2014-11-25 9:19:39 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:19:39 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:19:40 - DEBUG --> updateCategoryActionAnswer - result: otc-8412
+2014-11-25 9:19:46 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:19:46 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:19:47 - DEBUG --> updateCategoryActionAnswer - result: otc-8411
+2014-11-25 9:19:55 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:19:55 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:19:56 - DEBUG --> updateCategoryActionAnswer - result: otc-8410
+2014-11-25 9:21:03 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:21:03 - DEBUG --> createCategoryActionParams
+2014-11-25 9:21:04 - DEBUG --> createCategoryActionAnswer - newId: otc-8415
+2014-11-25 9:22:09 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:22:09 - DEBUG --> createCategoryActionParams
+2014-11-25 9:22:11 - DEBUG --> createCategoryActionAnswer - newId: otc-8416
+2014-11-25 9:23:13 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:23:13 - DEBUG --> createCategoryActionParams
+2014-11-25 9:23:14 - DEBUG --> createCategoryActionAnswer - newId: otc-8417
+2014-11-25 9:24:01 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:24:01 - DEBUG --> createCategoryActionParams
+2014-11-25 9:24:03 - DEBUG --> createCategoryActionAnswer - newId: otc-8418
+2014-11-25 9:27:24 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:27:24 - DEBUG --> createCategoryActionParams
+2014-11-25 9:27:25 - DEBUG --> createCategoryActionAnswer - newId: otc-8419
+2014-11-25 9:29:59 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:29:59 - DEBUG --> createCategoryActionParams
+2014-11-25 9:30:00 - DEBUG --> createCategoryActionAnswer - newId: otc-8420
+2014-11-25 9:30:43 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:30:43 - DEBUG --> createCategoryActionParams
+2014-11-25 9:30:45 - DEBUG --> createCategoryActionAnswer - newId: otc-8421
+2014-11-25 9:41:53 - DEBUG --> createCategoryAction - Start
+2014-11-25 9:41:53 - DEBUG --> createCategoryActionParams
+2014-11-25 9:41:55 - DEBUG --> createCategoryActionAnswer - newId: otc-8422
+2014-11-25 9:45:37 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:45:37 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:45:39 - DEBUG --> updateCategoryActionAnswer - result: otc-8422
+2014-11-25 9:47:08 - DEBUG --> updateCategoryAction - Start
+2014-11-25 9:47:08 - DEBUG --> updateCategoryActionParams
+2014-11-25 9:47:09 - DEBUG --> updateCategoryActionAnswer - result: otc-8422

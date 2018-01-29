@@ -1,0 +1,45 @@
+/* Tags for J3.1
+-----------------------------------------------------------------------------*/
+
+.tags {
+
+	margin: 0 0 10px;
+	font-size: 90%;
+	
+	a {color: #fff;
+	
+		&:hover {color:#fff}
+	
+	}
+	
+	span {
+	
+		background: @primary;
+		color: #fff;
+		padding: 3px 6px;
+		.border-radius(4px);
+		&:before {
+			 font-family: 'FontAwesome';
+			content:"\f02b";
+		}
+	}
+	
+	span:hover {
+		background: @secondary;	
+	
+	}
+}
+
+.tag-category {
+	ul.category,
+	.thumbnails {
+	
+		margin: 0;
+		li {
+			list-style-type: none;
+			margin: 0;
+			background: @dividerimage;
+			padding: 20px 0;
+		}
+	}
+}

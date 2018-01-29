@@ -1,0 +1,30 @@
+<? if (isset($vendors[0])) { ?>
+<div class="brands">
+    <div class="wrap clrfix">
+        <div class="bproduct <?=$type?>-rating-list">
+            <h2 class="mb25"><span><?=Lang::get($type)?></span></h2>
+            <ul class="lproduct flin w976 w100li clrfix">
+                <? foreach($vendors as $item) { ?>
+                <li title="<?= $item['Name'] ?>">
+                    <a class="pic" href="<?=UrlGenerator::generateVendorUrl($item['id'])?>">
+                        <i><img width="100" src="<?= $item['image_path'] ? $item['image_path'] : $item['PictureUrl'].'_100x100.jpg' ?>"></i><ins></ins>
+                    </a>
+
+                    <div class="price">
+                        <div class="line"></div>
+                        <a href="<?=UrlGenerator::generateVendorUrl($item['id'])?>">
+                            <ins class="name"><?= $item['vendor_name'] ?></ins><span class="glow"></span>
+                        </a>
+                    </div>
+                </li>
+                <? } ?>
+            </ul>
+            <div class="mt15">
+                <a href="<?=UrlGenerator::generateVendorsUrl()?>" class="all">
+                    <i class="i arrowright"></i><span><?=Lang::get('all_vendors')?></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<? } ?>

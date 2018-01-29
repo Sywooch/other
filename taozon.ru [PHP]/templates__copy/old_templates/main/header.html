@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="styles.css"/>
+        <link type="text/css" href="css/redmond/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+	<title><?=CFG_SITE_NAME?></title>
+    <script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://mavrin.github.com/maskInput/jquery.numberMask.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28910198-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script  type="text/javascript">
+$(function(){
+    var cid = '<?=$cid;?>';
+    var cname = '<?=$cat_name;?>';
+    if(cid){
+        if($('[name="cid"] option[value="ic:'+cid+'"]').length){
+            
+        }
+        else{
+            $('[name="cid"]').prepend('<option value="ic:'+cid+'">'+cname+'</option>');
+        }
+        $('[name="cid"] option').removeAttr('selected');
+        $('[name="cid"] option[value="ic:'+cid+'"]').attr('selected', 'selected');
+    }
+});
+</script>
+</head>
+<body>
+    <div id="error_msg">
+    <center>
+    <div>
+    <span style="float:right;cursor:pointer" onclick='document.getElementById("error_msg").style.display = "none"'>Закрыть</span>
+    <center><b>При выполнении запроса произошла <span id="error_type">ошибка!</span></b>
+        <span style="cursor:pointer" onclick='document.getElementById("error_msg_text").style.display = "block"'>Подробнее>></span> <br/>
+        <span style="cursor:pointer" onclick='send_email();'><strong>Сообщить об ошибке на email</strong></span>
+        <span id="error_email" style="overflow:auto;font-family:'Courier New';"></span>
+        <span id="error_msg_text" style="overflow:auto;font-family:'Courier New';text-align: left;"></span>
+    </center><br>
+    </div></center>
+    </div>
+
+	<div class="header"><div class="canvas clrfix">
+		<!-- .col240 -->
+		<div class="col240">
+			<a href="index.php" class="logo"><?=CFG_SITE_NAME?></a>
+		</div>
+		<!-- /.col240 -->
+		<!-- .col700 -->
+		<div class="col700">
+			
+			<ul class="mmenu flin">
+				<li <?php if ($script_name == 'index') { ?>class="active"<?php } ?>><a href="index.php">Демонстрация</a></li>
+				<li <?php if ($script_name == 'docs') { ?>class="active"<?php } ?>><a href="index.php?p=docs">Документация</a></li>
+				<li <?php if ($script_name == 'download') { ?>class="active"<?php } ?>><a href="index.php?p=download">Файлы</a></li>
+				<li><a href="/admin/" target="_blank">Управление</a></li>
+			</ul>
+			
+			<div style="display: block; clear: both; width: 100%"></div>
+		</div>
+		<!-- /.col700 -->
+	</div></div><!-- /.header -->
+<!--noindex-->
+<script type="text/javascript">
+document.onkeydown = key_down;
+function key_down(e) {
+    if (e.keyCode == 27)
+        document.getElementById("error_msg").style.display = "none";
+} 
+
+function send_email(){
+    document.getElementById("error_email").style.display = "block";
+    var e_message = get_error_message();
+    var e_file = get_file_with_error();
+    var e_otapi = get_otapi_url();
+    var e_code = get_error_code();
+    $.post( 
+        'index.php?p=sendemail',
+        {m: e_message, f: e_file, o: e_otapi, e: e_code},
+        function(data) {
+            $('#error_email').html(data);
+        }
+    );
+}
+
+</script>
+<!--/noindex-->
+<?php if ($show_search) { ?>
+    <div class="sumenu">
+	<div class="canvas clrfix">
+            <table>
+                <tr>
+                    <td rowspan="2">
+                        <ul>
+                            <?if($script_name != 'basket') {?><li class="active"><a href="index.php?p=basket">Корзина</a></li> <? } ?>
+                            <?if($script_name != 'supportlist') {?><li class="active"><a href="index.php?p=supportlist">Избранное</a></li><? } ?>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="msearch nofloat">
+                                    <form>
+                                        <input type="text" name="search" value="<?=$search?>"/>
+                                        <input type="hidden" name="p" value="search"/>
+
+                                        <select name="cid" id="" >
+                                            <option value="">Все категории</option>
+                                            <? if (is_array($searchcats)) foreach($searchcats as $cat) { ?>
+                                                <? if ($cat['ishidden'] == 'false' && (string)$cat['parentid'] == '0') { ?>
+                                                    <? if (empty($cat['externalid'])) { ?>
+                                                        <option disabled="disabled" style="background-color:#ddd;color:#000;"><?=$cat['name']?></option>
+                                                    <? } else { ?>
+                                                        <option value="<?=$cat['id']?>"<? if (@$_GET['cid'] == $cat['id']) {?> selected="selected"<?}?>><?=$cat['name']?></option>
+                                                    <? } ?>
+                                                    <? foreach($searchcats as $cat2) { ?>
+                                                        <? if ($cat2['ishidden'] == 'false' && (string)$cat2['parentid'] == (string)$cat['id']) { ?>
+                                                            <? if (empty($cat2['externalid'])) { ?>
+                                                                <option disabled="disabled" style="background-color:#ddd;color:#000;">&nbsp;&nbsp;&nbsp;<?=$cat2['name']?></option>
+                                                            <? } else { ?>
+                                                                <option value="<?=$cat2['id']?>"<? if (@$_GET['cid'] == $cat2['id']) {?> selected="selected"<?}?>>&nbsp;&nbsp;&nbsp;<?=$cat2['name']?></option>
+                                                            <? } ?>
+                                                            <? foreach($searchcats as $cat3) { ?>
+                                                                <? if ($cat3['ishidden'] == 'false' && (string)$cat3['parentid'] == (string)$cat2['id']) { ?>
+                                                                    <? if (empty($cat3['externalid'])) { ?>
+                                                                        <option disabled="disabled" style="background-color:#ddd;color:#000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?=$cat3['name']?></option>
+                                                                    <? } else { ?>
+                                                                        <option value="<?=$cat3['id']?>"<? if (@$_GET['cid'] == $cat3['id']) {?> selected="selected"<?}?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?=$cat3['name']?></option>
+                                                                    <? } ?>
+                                                                <? } ?>
+                                                            <? } ?>
+                                                        <? } ?>
+                                                    <? } ?>
+                                                <? } ?>
+                                            <? } ?>
+                                            </select>
+
+                                        <input type="submit" class="isearch" value=""/>
+                                    </form>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="auth">
+                            <? if(!$IsAuthenticated){ ?>
+                            <a class="login" href="index.php?p=login">Вход</a>
+                            <a class="reg" href="index.php?p=register">Регистрация</a>
+                            <? } else { ?>
+                            <a href="index.php?p=privateoffice" class="username">Личный кабинет</a>
+                            <a href="index.php?p=profile" class="username"><?=Session::getUserDataByKey('username')?></a>
+                            <span class="balance"><?=$deposit?></span>
+                            <a class="logout" href="index.php?p=logout">Выход</a>
+                            <? } ?>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div> 
+    </div>
+<?php } ?>

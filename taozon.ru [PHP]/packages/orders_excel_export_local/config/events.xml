@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+    <event name="onRenderAdminOrdersList" pakage_path="orders_excel_export_local" class_name="ExportOrderLocal"></event>
+    <event name="onExportOrder" pakage_path="orders_excel_export_local" class_name="ExportOrderLocal"></event>
+</events>

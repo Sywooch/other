@@ -1,0 +1,1 @@
+<?try{    $file = 'log.txt';    $fh = fopen($file, "rt") or die("Can't open file!");    $log = fread($fh, filesize($file));    fclose($fh);    unlink($file);    echo $log;} catch (Exception $e){    echo 'Error';}?>

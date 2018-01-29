@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js ie ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html lang="ru-RU" class="no-js" <? if(General::getConfigValue('rtl')){ ?> dir = "rtl" <?}?>>
+<head>
+    <? if(in_array('Seo2', General::$enabledFeatures)){?>
+    <base href="<?=defined('CFG_BASE_HREF')?CFG_BASE_HREF:'http://'.$_SERVER['HTTP_HOST']?>" />
+    <?} ?>
+
+    <?= (string) General::getConfigValue('meta_tags'); ?>
+
+    <? if(SCRIPT_NAME == 'index'){ ?>
+    <title>
+        <? $titleItems = array(Lang::get('home'), General::getConfigValue('site_name', CFG_SITE_NAME)); ?>
+        <?=$this->escape(General::getConfigValue('title_for_home',  $this->generatePageTitle($titleItems)));?>
+    </title>
+    <? $metaTagsCustom = Plugins::invokeEvent('onChangeMetaTags');
+        if ($metaTagsCustom) {
+            print $metaTagsCustom;
+        } else { ?>
+            <meta name="description" content="<?=$this->escape(General::getConfigValue('description_for_home', $GLOBALS['page']['seo_description']));?>" />
+            <meta name="keywords" content="<?=$this->escape(General::getConfigValue('keywords_for_home', $GLOBALS['page']['seo_keywords'])); ?>" />
+        <? } ?>
+    <? } elseif (! empty($GLOBALS['page'])) { ?>
+    <title>
+        <? $titleItems = array($GLOBALS['page']['pagetitle'], General::getConfigValue('site_name', CFG_SITE_NAME)); ?>
+        <?=$this->escape($this->generatePageTitle($titleItems));?>
+    </title>
+    <? $metaTagsCustom = Plugins::invokeEvent('onChangeMetaTags');
+        if ($metaTagsCustom) {
+            print $metaTagsCustom;
+        } else { ?>
+            <meta name="description" content="<?=$this->escape($GLOBALS['page']['seo_description'])?>" />
+            <meta name="keywords" content="<?=$this->escape($GLOBALS['page']['seo_keywords'])?>" />
+        <? } ?>    
+    <? } elseif(@$GLOBALS['category']) { ?>
+    <title><?
+        $prefix = General::getConfigValue('category_prefix');
+        $suffix = General::getConfigValue('category_suffix');
+        if(@$GLOBALS['category']['seo_title'])
+            list($prefix, $suffix) = explode('||', $GLOBALS['category']['seo_title']);
+        print $this->escape($prefix); ?> <?=$this->escape(@$GLOBALS['category']['pagetitle']?@$GLOBALS['category']['pagetitle']:@$GLOBALS['pagetitle'])?> <?=$this->escape($suffix)?></title>
+        
+        <? $metaTagsCustom = Plugins::invokeEvent('onChangeMetaTags');
+        if ($metaTagsCustom) {
+            print $metaTagsCustom;
+        } else { ?>
+            <meta name="description" content="<?=$this->escape(@$GLOBALS['category']['seo_description']?$GLOBALS['category']['seo_description']:@$GLOBALS['pagetitle'])?>" />
+            <meta name="keywords" content="<?=$this->escape(@$GLOBALS['category']['seo_keywords']?$GLOBALS['category']['seo_keywords']:@$GLOBALS['pagetitle'])?>" />
+        <? } ?> 
+        <? if (General::getConfigValue('no_index_itemlists')) { ?>
+            <meta name="robots" content="noindex, follow">
+        <? } ?>
+    <? } elseif (! empty($GLOBALS['brands_seo'])) { ?>
+    <title><?
+        $prefix = General::getConfigValue('category_prefix');
+        $suffix = General::getConfigValue('category_suffix');
+        if(@$GLOBALS['brands_seo']['seo_title'])
+            list($prefix, $suffix) = explode('||', $GLOBALS['brands_seo']['seo_title']);
+        elseif(General::getConfigValue('site_name'))
+            $prefix = General::getConfigValue('site_name');
+        print $this->escape($prefix); ?> <?=$this->escape(@$GLOBALS['brands_seo']['pagetitle']?@$GLOBALS['brands_seo']['pagetitle']:@$GLOBALS['pagetitle'])?> <?=$this->escape($suffix)?></title>
+        
+        <? $metaTagsCustom = Plugins::invokeEvent('onChangeMetaTags');
+        if ($metaTagsCustom) {
+            print $metaTagsCustom;
+        } else { ?>
+            <meta name="description" content="<?=$this->escape(@$GLOBALS['brands_seo']['seo_description']?$GLOBALS['brands_seo']['seo_description']:@$GLOBALS['pagetitle'])?>" />
+            <meta name="keywords" content="<?=$this->escape(@$GLOBALS['brands_seo']['seo_keywords']?$GLOBALS['brands_seo']['seo_keywords']:@$GLOBALS['pagetitle'])?>" />
+        <? } ?>
+    <? } elseif (! empty($GLOBALS['recom_seo'])) { ?>
+    <title><?
+        $prefix = General::getConfigValue('category_prefix');
+        $suffix = General::getConfigValue('category_suffix');
+        if(@$GLOBALS['recom_seo']['title']) {
+            print  $this->escape($prefix." ".@$GLOBALS['recom_seo']['title']." ".$suffix);
+        } else {
+            print Lang::get('recommendations');
+        }    ?>
+       </title>
+       
+        <? $metaTagsCustom = Plugins::invokeEvent('onChangeMetaTags');
+        if ($metaTagsCustom) {
+            print $metaTagsCustom;
+        } else { ?>
+            <meta name="description" content="<?=$this->escape(@$GLOBALS['recom_seo']['meta_description'])?>" />
+            <meta name="keywords" content="<?=$this->escape(@$GLOBALS['recom_seo']['meta_keywords'])?>" />
+        <? } ?> 
+    
+
+    <? } elseif(@$_GET['cid']) {
+    $prefix = General::getConfigValue('category_prefix');
+        $suffix = General::getConfigValue('category_suffix');
+    ?>
+    <title><?=$this->escape($prefix . ' ' . $GLOBALS['pagetitle'] . ' ' . $suffix)?></title>
+    
+        <? $metaTagsCustom = Plugins::invokeEvent('onChangeMetaTags');
+        if ($metaTagsCustom) {
+            print $metaTagsCustom;
+        } else { ?>
+            <meta name="description" content="<?=$this->escape(@$GLOBALS['pagetitle'])?>" />
+            <meta name="keywords" content="<?=$this->escape(@$GLOBALS['pagetitle'])?>" />
+        <? } ?> 
+        <? if (General::getConfigValue('no_index_itemlists')) { ?>
+            <meta name="robots" content="noindex, follow">
+        <? } ?>
+    <? } elseif(@$_GET['p']=='news' || @$_GET['p']=='allnews') { ?>
+        <title>
+            <? $titleItems = array(Lang::get('news'), General::getConfigValue('site_name', CFG_SITE_NAME)); ?>
+            <?=$this->escape($this->generatePageTitle($titleItems));?>
+        </title>
+        <? $metaTagsCustom = Plugins::invokeEvent('onChangeMetaTags');
+        if ($metaTagsCustom) {
+            print $metaTagsCustom;
+        } ?> 
+    <? } elseif(in_array(@$_GET['p'], array('calculator', 'sitemap', 'brands'))) { ?>
+        <title>
+            <? $titleItems = array(Lang::get(@$_GET['p']), General::getConfigValue('site_name', CFG_SITE_NAME)); ?>
+            <?=$this->escape($this->generatePageTitle($titleItems));?>
+        </title>
+        <? $metaTagsCustom = Plugins::invokeEvent('onChangeMetaTags');
+        if ($metaTagsCustom) {
+            print $metaTagsCustom;
+        } ?> 
+    <? } elseif(@$_GET['p'] == 'vendor') { ?>
+        <title>
+            <? $titleItems = array(General::getConfigValue('site_name', CFG_SITE_NAME) , @$_GET['id']); ?>
+            <?=$this->escape($this->generatePageTitle($titleItems));?>
+        </title>
+        <? $metaTagsCustom = Plugins::invokeEvent('onChangeMetaTags');
+        if ($metaTagsCustom) {
+            print $metaTagsCustom;
+        } ?> 
+    <? } else { ?>
+        <title>
+            <? $titleItems = array(@$GLOBALS['pagetitle'], General::getConfigValue('site_name', CFG_SITE_NAME)); ?>
+            <?=$this->escape($this->generatePageTitle($titleItems));?>
+        </title>
+        <? $metaTagsCustom = Plugins::invokeEvent('onChangeMetaTags');
+        if ($metaTagsCustom) {
+            print $metaTagsCustom;
+        } else { ?>
+            <meta name="description" content="<?=(empty($GLOBALS['seo_description'])) ? $this->escape(@$GLOBALS['pagetitle']) : $GLOBALS['seo_description']?>" />
+            <meta name="keywords" content="<?=(empty($GLOBALS['seo_keywords'])) ? $this->escape(@$GLOBALS['pagetitle']) : $GLOBALS['seo_keywords']?>" />
+        <? } ?>    
+    <? } ?>
+    <? if ((@$_GET['p'] == 'item') && (General::getConfigValue('no_index_iteminfo'))) { ?>
+        <meta name="robots" content="noindex, follow">
+    <? } ?>
+    <? if ((! empty($_GET['brand'])) && (General::getConfigValue('no_index_brand_itemlists'))) { ?>
+        <meta name="robots" content="noindex, follow">
+    <? } ?>
+    <meta charset="utf-8">
+    
+    <?php if (! $isCustomTheme) { ?>
+        <link rel="stylesheet" href="css/style.css?<?=CFG_SITE_VERSION;?>" />
+
+        <?php if (General::getConfigValue('current_site_theme')) { ?>
+            <link rel="stylesheet" href="css/theme/<?=General::getConfigValue('current_site_theme')?>/<?=General::getConfigValue('current_site_theme')?>.css?<?=CFG_SITE_VERSION;?>" />
+        <?php } ?>
+        
+        <? if (file_exists(CFG_APP_ROOT.'/css/custom.css')) { ?>
+            <link rel="stylesheet" href="css/style/paginator.css?<?=CFG_SITE_VERSION;?>"/>
+            <link rel="stylesheet" href="css/custom.css?<?=CFG_SITE_VERSION;?>"/>
+        <? } else { ?>
+            <link rel="stylesheet" href="css/custom.new.css?<?=CFG_SITE_VERSION;?>" />
+        <? } ?>
+
+        <? if(in_array(SCRIPT_NAME, array('shopreviews', 'index'))) { ?>
+            <link rel="stylesheet" href="css/style/shopreviews.css?<?=CFG_SITE_VERSION;?>" />
+        <? } ?>
+    <?php } else { ?>
+        <?php foreach ($listOfStyles as $css) { ?>
+            <link rel="stylesheet" href="<?=$css?>?<?=CFG_SITE_VERSION;?>" />
+        <?php }  ?>
+    <?php }  ?>
+    
+    
+
+    
+
+    <script src="js/libs/jquery/jquery.min.js?<?=CFG_SITE_VERSION;?>"></script>
+    <script src="js/libs/jquery/jquery.ui/jquery-ui.min.js?<?=CFG_SITE_VERSION;?>"></script>
+    <script src="js/libs/jquery/jquery.ui/jquery.ui.core.js?<?=CFG_SITE_VERSION;?>"></script>
+    <script src="js/libs/jquery/jquery.ui/jquery.ui.widget.js?<?=CFG_SITE_VERSION;?>"></script>
+    <script src="js/libs/jquery/jquery.ui/jquery.ui.datepicker.js?<?=CFG_SITE_VERSION;?>"></script>
+    <script src="js/libs/jquery/jquery.carousel/jquery.jcarousel.min.js?<?=CFG_SITE_VERSION;?>"></script>
+    <script src="js/libs/jquery/jquery.colorbox/jquery.colorbox-min.js?<?=CFG_SITE_VERSION;?>"></script>
+    
+
+    <script src="js/vendor/jquery.alphanumeric.js?<?=CFG_SITE_VERSION;?>"></script>
+    <script src="js/vendor/jquery.livequery.min.js?<?=CFG_SITE_VERSION;?>"></script>
+    
+    <script src="js/vendor/jquery.toastmessage.js?<?=CFG_SITE_VERSION;?>"></script>
+    <link rel="stylesheet" href="css/libs/jquery/jquery.toastmessage/jquery.toastmessage.css?<?=CFG_SITE_VERSION;?>" />
+    
+    <script src="js/general.js?<?=CFG_SITE_VERSION;?>"></script>
+
+    <? if (General::getConfigValue('google_commerce_account')) { ?>
+        <!--noindex-->
+        <script type="text/javascript">
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <!--/noindex-->
+    <?}?>
+
+    <? if(SCRIPT_NAME == 'basket' || SCRIPT_NAME == 'userorder'){ ?>
+    <script type="text/javascript" src="js/cart.js?<?=CFG_SITE_VERSION;?>"></script>
+    <? } ?>
+
+    <? if(SCRIPT_NAME == 'supportlist'){ ?>
+    <script src="js/favourites.js?<?=CFG_SITE_VERSION;?>"></script>
+    <? } ?>
+
+    <? if(SCRIPT_NAME != 'index'){ ?>
+    <script src="js/inner.js?<?=CFG_SITE_VERSION;?>"></script>
+    <? } ?>
+
+    <? if(SCRIPT_NAME == 'index'){ ?>
+    <script src="js/main.js?<?=CFG_SITE_VERSION;?>"></script>
+    <? } ?>
+
+    <!--noindex-->
+    <script type="text/javascript">
+        NotAvailableError = "<?=Lang::get('NotAvailable')?>";
+        $(function(){
+            url_gen_privateoffice = "<?=@UrlGenerator::generateContentUrl('privateoffice')?>";
+            lang_privateoffice = "<?=Lang::get('private_office')?>";
+
+            url_gen_profile = "<?=@UrlGenerator::generateContentUrl('profile')?>";
+                  url_gen_deposit = "<?=@UrlGenerator::generateContentUrl('moneyinfo')?>";
+
+            url_gen_logout = "<?=@UrlGenerator::generateContentUrl('logout')?>";
+            lang_logout = "<?=Lang::get('logout')?>";
+
+            url_gen_login = "<?=@UrlGenerator::generateContentUrl('login')?>";
+            lang_login = "<?=Lang::get('login')?>";
+
+            url_gen_register = "<?=@UrlGenerator::generateContentUrl('register')?>";
+            lang_register = "<?=Lang::get('registration_tab')?>";
+            $("#usermenu_ajax").prepend('<li id="loading_userdat" class="item"><img src="/css/i/ajax-loader.gif" width="16" height="16" /></li>');
+            $.ajax({
+                url: "index_ajax.php?p=get_user_data_summary",
+                cache: false,
+                dataType : "json",
+                success: function(json){
+                    $("#fav_ajax").html(json.favourites).show();
+                    $("#basket_ajax").html(json.basket).show();
+                    $("#loading_userdat").hide();
+                    if (json.IsAuthenticated) {
+                        $("#usermenu_ajax").prepend('<li class="item"><a href=' + url_gen_privateoffice +'>' + lang_privateoffice + '</a></li><li class="item"><a href='+ url_gen_profile +'>' + escapeData(json.username) + ' </a><a href=' + url_gen_deposit +' id="availableamount" class="ltr-for-rtl">('+json.deposit+') </a></li><li class="item"><a href='+ url_gen_logout +'>'+ lang_logout +'</a></li>');
+                        //$("#usermenu_ajax").prepend('Вошел');
+                    } else {
+                        $("#usermenu_ajax").prepend('<li class="item"><a href='+ url_gen_login +'>'+ lang_login +'</a></li><li class="item"><a href='+ url_gen_register +'>'+ lang_register +'</a></li>');
+                        //$("#usermenu_ajax").prepend('Надо зайти');
+                    }
+                },
+                error: function(xhr, ajaxOptions, thrownError){
+                    if (thrownError == 'SessionExpired') {
+                        document.location.href = url_gen_logout; return false;
+                    }
+                    if (window.console && console.log) {
+                        if (xhr.responseText) {
+                            console.log(xhr.responseText);
+                        } else {
+                            console.log('ajax error');
+                        }
+                    }
+                    $("#usermenu_ajax").prepend('<li><a href='+ url_gen_logout +'>'+ lang_logout +'</a></li>');
+                }
+            });
+        });
+    </script>
+    <!--/noindex-->
+
+    <? if (General::getConfigValue('google_commerce_account')) { ?>
+    <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '<?=General::getConfigValue('google_commerce_account')?>']);
+        _gaq.push(['_trackPageview']);
+    </script>
+    <?}?>
+
+    <?= (string) General::getConfigValue('custom_head_code'); ?>
+    <? Plugins::invokeEvent('onHeadRendered'); ?>
+</head>
+<body class="<?=General::getConfigValue('current_site_theme')?><? if(General::getConfigValue('rtl')){ ?> rtl <?}?>" >
+
+<form action="index.php?p=setlang" method="post">
+    <input type="hidden" name="lang" id="lang" />
+    <input type="hidden" name="from" value="<?=htmlspecialchars($_SERVER['REQUEST_URI'])?>" />
+</form>
+
+<div id="error-dialog" style="display: none" title="<?=ucfirst(Lang::get('error'))?>"></div>
+
+<div id="dialog-error" title="<?=ucfirst(Lang::get('error'))?>">
+    <span class="error"></span>
+</div>
+
+<? $customHeader = Plugins::invokeEvent('onHeaderBlockRender'); ?>
+<?if($customHeader){?>
+    <?=$customHeader?>
+    <?}else{?>
+<div class="header">
+    <? if (strpos($_SERVER['HTTP_HOST'], 'taobao') !== false) { ?>
+    <div class="wrap clrfix mb20">
+        <strong style="color:red; font-size:18px; padding-left:30px;"><?=Lang::get('warning_taobao')?></strong>
+    </div>
+    <? } ?>
+    <div class="wrap clrfix">
+        <?=Plugins::invokeEvent('GetGeoLocate',array('localip'=>$_SERVER['REMOTE_ADDR'])) ?>
+        <div class="col col240 mr30">
+            <a href="/" class="logo">
+                <img src="<?=(General::getConfigValue('logo', '/i/logo.png', false));?>" alt="<?=(General::getConfigValue('title_for_home', CFG_SITE_NAME . ' - ' . Lang::get('home'), false)); ?>" title="<?=(General::getConfigValue('title_for_home', CFG_SITE_NAME . ' - ' . Lang::get('home'), false)); ?>" />
+            </a>
+        </div>
+
+        <div class="col col690">
+            <ul class="hblocks">
+                <li class="name">
+                    <? print (General::getConfigValue('header_text')) ? General::getConfigValue('header_text') : Lang::get('header_text'); ?>
+                    <? if(defined('CFG_USE_CLOCK') && CFG_USE_CLOCK){ ?>
+                    <br />
+                    <a href="http://time.is/China" id="time_is_link" style="font-size:15px">Время в Китае:</a>
+                    <span id="China_z40f" style="font-size:15px"></span>
+                    <!--noindex-->
+                    <script src="http://widget.time.is/t.js?<?=CFG_SITE_VERSION;?>"></script>
+                    <script>
+                        time_is_widget.init({China_z40f:{}});
+                    </script>
+                    <!--/noindex-->
+                    <? } ?>
+                </li>
+                <? if (General::getConfigValue('phone') || General::getConfigValue('work_shedule')) { ?>
+                <li class="phone mr20">
+                    <div class="bgr">
+                        <? if (General::getConfigValue('phone')) { ?>
+                        <strong><?=General::getConfigValue('phone')?></strong>
+                        <? } ?>
+                        <? if (General::getConfigValue('work_shedule') && !General::getConfigValue('hide_work_shedule')) { ?>
+                            <?=General::getConfigValue('work_shedule')?>
+                        <? } ?>
+                    </div>
+                </li>
+                <? } ?>
+                <? if (!General::getConfigValue('hide_operator')) { ?>
+                <li class="operator">
+                    <div class="bgr">
+                        <a href="javascript:;"><?=Lang::get('online_chat')?></a>
+                    </div>
+                </li>
+                <? } ?>
+                <? print (General::getConfigValue('online_chat_code')) ? General::getConfigValue('online_chat_code') : ''; ?>
+            </ul>
+        </div>
+    </div>
+</div>
+    <?}?>
+
+<div class="spacer"><div class="wrap clrfix"></div></div>
+
+<div class="navigation">
+    <div class="wrap clrfix">
+        <ul class="fll menu menu-top menu-navigation">
+            <? if ($menu) { ?>
+            <li class="item"><a href="/" <? if(!@$_GET['p']){ ?> class="active" <? } ?>><?=Lang::get('home')?></a></li>
+            <? foreach ($menu as $m) { 
+                if (!$m) {
+					continue;
+				}
+            ?>
+            <li class="item"><a href="<?=@UrlGenerator::generateContentUrl($m['alias'])?>" <? if(@$_GET['p'] == $m['alias']){ ?> class="active" <? } ?>><?=$m['title']?></a></li>
+            <? } ?>
+        <? } else { ?>
+        <li class="item"><a href="/" <? if(!@$_GET['p']){ ?> class="active" <? } ?>><?=Lang::get('home')?></a></li>
+        <li class="item"><a href="<?=@UrlGenerator::generateContentUrl('how_to_order')?>" <? if(@$_GET['p'] == 'how_to_order'){ ?> class="active" <? } ?>><?=Lang::get('how_to_order')?></a></li>
+        <li class="item"><a href="<?=@UrlGenerator::generateContentUrl('help')?>" <? if(@$_GET['p'] == 'help'){ ?> class="active" <? } ?>><?=Lang::get('help')?></a></li>
+        <? } ?>
+        <? if (Plugins::invokeEvent('onHierarchyRender')) { ?>
+        <li class="item"><a href="<?=@UrlGenerator::generateContentUrl('recommendations')?>" <? if(@$_GET['p'] == 'recommendations'){ ?> class="active" <? } ?>><?=Lang::get('recommendations')?></a></li>
+        <? } ?>
+        <? Plugins::invokeEvent('onTopMenuRender') ?>
+        </ul>
+
+        <ul class="flr sblocks menu-top menu-user" id="usermenu_ajax">
+
+        <? if (!isset($userdata_ajax)) { ?>
+        <? } ?>
+            <? if($langs && count($langs)>1){ ?>
+            <? $cms = new CMS(); ?>
+            <li class="item">
+                <a href="#" class="lang arrow"><span><i class="<?=@$_SESSION['active_lang']?>"><?=Lang::get('lang_name')?></i></span></a>
+                <ul class="menu-lang">
+                    <? foreach($langs as $l){ ?>
+                    <li class="item"><a href="#" class="lang"><i class="<?=$l['name']?>"></i><span class="lang-name ltr-for-rtl"><?=$cms->getLangDescrByCode($l['name'])?></span></a></li>
+                    <? } ?>
+                </ul>
+            </li>
+            <? } ?>
+        </ul>
+
+        <form id="login_register">
+            <input type="hidden" name="from" value="<?=$_SERVER['REQUEST_URI']?>" />
+        </form>
+    </div>
+</div>
+
+<div class="userbar"><div class="wrap">
+    <ul class="uluserbar">
+        <li class="col col255 cats itemmenu">
+            <a href="#" onClick="return false" class="category <? if(SCRIPT_NAME=='index'){ ?>active<? } ?>"><span><?=Lang::get('by_categories')?></span></a>
+            <? if (! General::getConfigValue('hide_brands_url') && ! General::getConfigValue('limit_items_by_catalog')) { ?>
+                <a href="<?=General::generateUrl('brands', 0 )?>" class="brand"><span><?=Lang::get('by_brands')?></span></a>
+            <? } ?>
+        </li>
+        <li class="col col435 itemmenu">            
+            <form action="<?=UrlGenerator::generateSearchUrl(false,true)?>" method="post" class="search" id="full_search_form" onSubmit="CheckSearch(); return false;">
+                <div class="field">
+                    <div class="in search-floating">
+                        <a href="#" class="selection allplace"><span title="<?=! General::getConfigValue('restriction_of_search') ? Lang::get('everywhere') : Lang::get('no_category_selected')?>"><?=! General::getConfigValue('restriction_of_search') ? Lang::get('everywhere') : Lang::get('no_category_selected')?></span></a>
+                        <input type="text" name="search" id="full_search" value="<?=RequestWrapper::getValueSafe('search')?>" placeholder="<?=Lang::get('default_search_text')?>">
+
+                    </div>
+                    <input name="cid" id="searchCid" type="hidden" />
+                    <? if (RequestWrapper::getValueSafe('Provider')) { ?>
+                       <input type="hidden" name="Provider" value="<?=RequestWrapper::getValueSafe('Provider')?>">
+                    <? } ?>
+                    <? if (RequestWrapper::getValueSafe('SearchMethod')) { ?>
+                        <input type="hidden" name="SearchMethod" value="<?=RequestWrapper::getValueSafe('SearchMethod')?>">
+                    <? } ?>
+                    <div class="dropdown dropdown-search" id="searchcatsajax"><?=$SearchCategories?></div>
+                </div>
+                <input type="submit" value="<?=Lang::get('find')?>" class="btn fll" />
+            </form>
+        </li>
+        <li class="col col150 itemmenu item-menu-top menu-item-user">
+            <a href="<?=@UrlGenerator::generateContentUrl('supportlist')?>" class="mydata favorites">
+                <span class="itemmenu-inner"><i class="i rounder" id="fav_ajax"></i><?=Lang::get('favourites')?></span>
+            </a>
+        </li>
+        <li class="col col120 itemmenu item-menu-top">
+            <a href="<?=@UrlGenerator::generateContentUrl('basket')?>" class="mydata basket">
+               <span class="itemmenu-inner"><i class="i rounder" id="basket_ajax"> </i> <?= Lang::get('cart') ?></span>
+            </a>
+        </li>
+
+    </ul>
+
+    <? if(SCRIPT_NAME!='index'){ ?>
+    <div class="dropdown dropdown-inner">
+        <div class="b-link__dropdown-all">
+            <a href="<?=General::generateUrl('allcats', array() )?>" class="b-link"><i class="i-new i-arrow-right i arrowright"></i><span><?=Lang::get('all_categories')?></span></a>
+        </div>
+        <?=$MenuShortNew?>
+        <div class="b-link__dropdown-all">
+            <a href="<?=General::generateUrl('allcats', array() )?>" class="b-link"><i class="i-new i-arrow-right i arrowright"></i><span><?=Lang::get('all_categories')?></span></a>
+        </div>
+    </div>
+    <? } ?>
+</div></div>

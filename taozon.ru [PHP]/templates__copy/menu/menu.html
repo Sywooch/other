@@ -1,0 +1,113 @@
+<? if (!isset($notAuth))  { ?>
+
+<? if($_GET['p']=='privateoffice' || $_GET['mode']=='reg_success' || $_GET['p']=='referral' || $_GET['p']=='outputofmoney' || $_GET['p']=='userreferal' || $_GET['p']=='moneyinfo' || $_GET['p']=='pay') {
+    $checked = 0;
+    if($_GET['p']=='privateoffice') $checked = 1;
+    if($_GET['p']=='privateoffice' && isset($_GET['orderstate'])) $checked = 2;    
+    if($_GET['p']=='moneyinfo') $checked = 3;
+    if($_GET['p']=='support') $checked = 5;
+    if($_GET['p']=='referral') $checked = 6;
+    if($_GET['p']=='outputofmoney') $checked = 7;
+    if($_GET['p']=='userreferal') $checked = 8;
+
+    ?>
+    <ul class="mcats">
+        <li class="mcats_item"><a href="index.php?p=privateoffice" <? if($checked==1){ ?>class="active"<? } ?>><?=Lang::get('general_information')?></a></li>
+        <li class="mcats_item"><a href="index.php?p=privateoffice&orderstate=1" <? if($checked==2){ ?>class="active"<? } ?>><?=Lang::get('orders')?></a></li>
+        <li class="mcats_item"><a href="index.php?p=moneyinfo" <? if($checked==3){ ?>class="active"<? } ?>><?=Lang::get('status_account')?></a></li>
+        <li class="mcats_item"><a href="index.php?p=profile" ><?=Lang::get('personal_data')?></a>        
+            <? if($_GET['p']=='profile') { ?>
+            <ul>
+                <li><a href="index.php?p=profile&mode=account" <? if(($_GET['p']=='profile') && ($_GET['mode'] != 'delivery' && ! isset($_GET['new_profile']))) {?> class="active"<?}?>><?=Lang::get('account')?></a></li>
+                <li><a href="index.php?p=profile&mode=delivery" <? if ($_GET['mode']=='delivery' || isset($_GET['new_profile'])){?> class="active" <?}?>><?=Lang::get('delivery')?></a></li>
+            </ul>
+            <? } ?>
+        </li>
+
+        
+        <li class="mcats_item"><a href="index.php?p=support" <? if($checked==5){ ?>class="active"<? } ?>>
+            <?=Lang::get('support_service')?>
+            <? if ($unreadCount) { ?>
+                <span style="color:red">(<?= $unreadCount ?>)</span>
+            <? } ?>
+        </a></li>
+        
+		<? if (defined('KEY_REFERRAL_SYSTEM')) :?>
+        <li class="mcats_item"><a href="index.php?p=referral" <? if($checked==6){ ?>class="active"<? } ?>>Бизнес с VeliChina</a></li>
+		<? endif; ?>
+		<? if (!General::getConfigValue('hide_money_output')) :?>
+        <li class="mcats_item"><a href="index.php?p=outputofmoney" <? if($checked==7){ ?>class="active"<? } ?>><?=Lang::get('withdraw_funds')?></a></li>
+		<? endif; ?>
+        <? if (CMS::IsFeatureEnabled('ReferralProgram')) :?>
+        <li class="mcats_item"><a href="index.php?p=userreferal" <? if($checked==8){ ?>class="active"<? } ?>><?=Lang::get('user_referal')?></a></li>
+        <? endif; ?>
+    </ul>
+<? } ?>
+
+
+<? if($_GET['p']=='profile'){ ?>
+    <ul class="mcats">
+        <li class="mcats_item"><a href="index.php?p=privateoffice" <? if($_get['p']=='privateoffice'){ ?>class="active"<? } ?>><?=Lang::get('general_information')?></a></li>
+        <li class="mcats_item"><a href="index.php?p=privateoffice&orderstate=1"><?=Lang::get('orders')?></a></li>
+        <li class="mcats_item"><a href="index.php?p=moneyinfo"><?=Lang::get('account_info')?></a></li>
+        <li class="mcats_item open">
+            <a href="index.php?p=profile"><?=Lang::get('profile')?></a>
+            <ul>
+                <li><a href="index.php?p=profile&mode=account" <? if($_GET['mode']=='account' || (empty($_GET['mode']) && !isset($_GET['new_profile']))){?> class="active" <?}?>><?=Lang::get('account')?></a></li>
+                <li><a href="index.php?p=profile&mode=delivery" <? if($_GET['mode']=='delivery' || isset($_GET['new_profile'])){?> class="active" <?}?>><?=Lang::get('delivery')?></a></li>
+            </ul>
+        </li>
+        <li class="mcats_item"><a href="index.php?p=support" <? if($checked==5){ ?>class="active"<? } ?>>
+            <?=Lang::get('support_service')?>
+            <? if ($unreadCount) { ?>
+                <span style="color:red">(<?= $unreadCount ?>)</span>
+            <? } ?>
+        </a></li>
+        <? if (defined('KEY_REFERRAL_SYSTEM')) :?>
+        <li class="mcats_item"><a href="index.php?p=referral">Бизнес с VeliChina</a></li>
+        <? endif; ?>
+        <? if (!General::getConfigValue('hide_money_output')) :?>
+        <li class="mcats_item"><a href="index.php?p=outputofmoney" <? if($checked==7){ ?>class="active"<? } ?>><?=Lang::get('withdraw_funds')?></a></li>
+        <? endif; ?>
+        <? if (CMS::IsFeatureEnabled('ReferralProgram')) :?>
+        <li class="mcats_item"><a href="index.php?p=userreferal" <? if($checked==8){ ?>class="active"<? } ?>><?=Lang::get('user_referal')?></a></li>
+        <? endif; ?>
+    </ul>
+<? } ?>
+
+<? if($_GET['p']=='support'){ ?>
+	<ul class="mcats">
+		<li class="mcats_item"><a href="index.php?p=privateoffice" <? if($_get['p']=='privateoffice'){ ?>class="active"<? } ?>><?=Lang::get('general_information')?></a></li>
+		<li class="mcats_item"><a href="index.php?p=privateoffice&orderstate=1"><?=Lang::get('orders')?></a></li>
+		<li class="mcats_item"><a href="index.php?p=moneyinfo"><?=Lang::get('account_info')?></a></li>
+		<li class="mcats_item"><a href="index.php?p=profile"><?=Lang::get('profile')?></a></li>
+		<li class="mcats_item open">
+            <a href="index.php?p=support">
+                <?=Lang::get('support_service')?>
+                <? if ($unreadCount) { ?>
+                    <span style="color:red">(<?= $unreadCount ?>)</span>
+                <? } ?>
+            </a>
+			<ul>
+				<li><a href="index.php?p=support&mode=new" <? if($_GET['p']=='support' && $_GET['mode']=='new'){?> class="active" <?}?>><?=Lang::get('new_message2')?></a></li>
+				<li><a href="index.php?p=support&mode=view" <? if($_GET['p']=='support' && $_GET['mode']=='view'){?> class="active" <?}?>>
+                    <?=Lang::get('list_references')?>
+                    <? if ($unreadCount) { ?>
+                        <span style="color:red">(<?= $unreadCount ?>)</span>
+                    <? } ?>
+                    </a></li>
+			</ul>
+		</li>
+		<? if (defined('KEY_REFERRAL_SYSTEM')) :?>
+        <li class="mcats_item"><a href="index.php?p=referral">Бизнес с VeliChina</a></li>
+		<? endif; ?>
+		<? if (!General::getConfigValue('hide_money_output')) :?>
+        <li class="mcats_item"><a href="index.php?p=outputofmoney" <? if($checked==7){ ?>class="active"<? } ?>><?=Lang::get('withdraw_funds')?></a></li>
+		<? endif; ?>
+        <? if (CMS::IsFeatureEnabled('ReferralProgram')) :?>
+        <li class="mcats_item"><a href="index.php?p=userreferal" <? if($checked==8){ ?>class="active"<? } ?>><?=Lang::get('user_referal')?></a></li>
+        <? endif; ?>
+	</ul>
+<? } ?>
+
+<? } ?>

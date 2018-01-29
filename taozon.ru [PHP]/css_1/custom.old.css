@@ -1,0 +1,277 @@
+/* fix old */
+
+.uluserbar a.mydata
+{
+  position: relative;
+  display: block;
+  height: 34px;
+  margin: 15px 0 0 15px;
+  padding: 0 0 0 40px;
+  background: url('i/i.png');
+  font: bold 14px/34px Arial, Helvetica, sans-serif;
+  color: #4D4D4D;
+  text-decoration: none;
+}
+
+
+.uluserbar .item-menu-top
+{
+  vertical-align: top;
+}
+
+.uluserbar a.mydata i.rounder{
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  margin: 0;
+  text-align: center;
+  font: bold 10px/18px Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.i.rounder
+{
+  height: 19px;
+  width: 18px;
+  background-position: 0 -411px;
+}
+
+/*========================  РњРµРЅСЋ - СЃС‚Р°РЅР»Р°СЂС‚  ========================*/
+
+.menu-dropdown-1 ul{
+  display: inline-block;
+}
+
+#menu-short-complete1 h3{
+  display: inline-block;
+}
+
+#menu-short-complete1 .clrfix ul {
+  list-style: none;
+}
+
+#menu-short-complete1 .clrfix ul li {
+  margin: 0 5px 0 0;
+  display: inline-block;
+  vertical-align: top;
+}
+#menu-short-complete1 .clrfix ul li a {
+  display: inline-block;
+  zoom: 1;
+  position: relative;
+  padding-left: 10px;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+#menu-short-complete1 .clrfix ul li a:before,
+#menu-short-complete1 .clrfix ul small.before{
+  position: absolute;
+  left: 0;
+  top: -4px;
+  content: '\2022';
+  font-size: 18px;
+  color: #8bc53e;
+}
+
+/*   ======================================================   */
+/*========================  РњРµРЅСЋ - РІС‹РїР°РґР°СЋС‰РµРµ  ========================*/
+
+#menu-short-complete2 ul{
+  display: none;
+  padding:5px;
+  width: 220px;
+  z-index: 999;
+}
+#menu-short-complete2 .clrfix ul {
+  position: absolute;
+  left: 240px;
+  margin-top: -30px;
+}
+#menu-short-complete2 .clrfix:hover > ul {
+  display: block;
+  background-color: #e6e6e6;
+  outline: 1px solid #000;
+}
+#menu-short-complete2 .clrfix:hover {
+  background-color:#999;
+  border-bottom:  none;
+
+}
+#menu-short-complete2 .clrfix:hover h3 > a {
+  color: #fff;
+}
+
+#menu-short-complete2 .clrfix:hover > ul {
+  color: #fff;
+  background-repeat: no-repeat;
+}
+
+#menu-short-complete2 .clrfix ul li {
+  padding:10px;
+
+}
+#menu-short-complete2 .clrfix ul li:hover  {
+  background-color: #999;
+}
+
+
+#menu-short-complete2 .clrfix ul li:hover > a {
+  background-color: #999;
+  display: block;
+  border: none;
+  color:#FFF;
+}
+
+
+
+/*   ======================================================   */
+
+
+/*========================  РњРµРЅСЋ - РІС‹РїР°РґР°СЋС‰РµРµ c РїРѕРєР°С‚РµРіРѕСЂРёСЏРјРё  ========================*/
+
+#menu-short-complete3 ul{
+  display: none;
+  padding:5px;
+  width: 220px;
+  z-index: 999;
+}
+#menu-short-complete3 .clrfix ul {
+  position: absolute;
+  left: 240px;
+  margin-top: -30px;
+}
+#menu-short-complete3 .clrfix:hover > ul {
+  display: block;
+  background-color: #e6e6e6;
+  border: 1px solid #000;
+}
+#menu-short-complete3 .clrfix:hover {
+  background-color:#999;
+  border-bottom:  none;
+}
+
+#menu-short-complete3 .clrfix:hover h3 > a {
+  color: #fff;
+}
+
+#menu-short-complete3 .clrfix:hover > ul {
+  color: #fff;
+  background-repeat: no-repeat;
+}
+
+
+#menu-short-complete3 .clrfix ul li {
+  padding:10px;
+  position:relative;
+}
+#menu-short-complete3 .clrfix ul li:hover  {
+  background-color: #999;
+}
+#menu-short-complete3 .clrfix ul li ul  {
+  position: absolute;
+  left: 220px;
+  margin-top: -30px;
+}
+#menu-short-complete3 .clrfix ul li:hover ul  {
+  display: block;
+  background-color: #e6e6e6;
+  outline: 1px solid #000;
+}
+
+
+#menu-short-complete3 .clrfix ul li:hover > a {
+  background-color: #999;
+  display: block;
+  border: none;
+  color:#FFF;
+}
+
+
+.indexnew .dropdown-main
+{ display: block }
+
+.menu-dropdown-3 .b-list__category .b-link
+{ padding-left: 0 }
+
+.menu-dropdown-3 .b-list__category .b-link:before
+{ display: none }
+
+.crumbs .wrap a,
+.crumbs .wrap span {
+  padding-left: 10px;
+  background: url('i/i.png') no-repeat 0 -546px;
+  margin-right: 5px;
+}
+
+.opened .ftitle .additem
+{ background-position: -36px -411px; }
+
+.closed .ftitle .additem
+{ background-position: -18px -411px }
+
+.fbut a,
+.fbut input
+{
+  margin-right: 10px!important;
+  float: none!important;
+}
+
+.userform .btn_office{
+  padding: 8px 0 12px;
+  border: 0px;
+  cursor: pointer;
+  font: bold 14px/18px Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.userform .btn_office{
+  background-color: transparent;
+  background-image: url(i/btn_office.png);
+}
+
+.userform .register .btn_office{
+  background-position: 0 0;
+  width: 169px;
+}
+
+.userform .register .btn_office:hover{
+  background-position: 0 -36px;
+}
+
+.userform .register .btn_office_disabled{
+  background-image: url(i/btn_office_disabled.png);
+}
+
+.userform .enter .btn_office{
+  background-position: 0 -72px;
+  width: 95px;
+}
+
+.userform .enter .btn_office:hover{
+  background-position: 0 -108px;
+}
+
+.userform .enter .btn_office_disabled{
+  background-image: url(i/btn_office_disabled.png);
+}
+
+.userform .recovery .btn_office{
+  background-position: 0 0;
+  width: 169px;
+}
+
+.userform .recovery .btn_office:hover{
+  background-position: 0 -36px;
+}
+
+.userform .send .btn_office{
+  background-position: 0 -144px;
+  width: 183px;
+}
+
+.userform .send .btn_office:hover{
+  background-position: 0 -180px;
+}

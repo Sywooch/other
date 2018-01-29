@@ -1,0 +1,28 @@
+<?php
+
+class OtapiClearOrdersHistory extends BaseOtapiType{
+    /**
+     * @return string
+     */
+    public function GetInstanceKey(){
+        $value = isset($this->xmlData->instanceKey) ? (string)$this->xmlData->instanceKey : false;
+        $propertyType = 'string';
+        return $propertyType == 'boolean' ? $value == 'true' : $value;
+    }
+    /**
+     * @return string
+     */
+    public function GetSessionId(){
+        $value = isset($this->xmlData->sessionId) ? (string)$this->xmlData->sessionId : false;
+        $propertyType = 'string';
+        return $propertyType == 'boolean' ? $value == 'true' : $value;
+    }
+    /**
+     * @return string
+     */
+    public function GetOrdersHistoryItemIds(){
+        $value = isset($this->xmlData->ordersHistoryItemIds) ? (string)$this->xmlData->ordersHistoryItemIds : false;
+        $propertyType = 'string';
+        return $propertyType == 'boolean' ? $value == 'true' : $value;
+    }
+}

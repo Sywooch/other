@@ -1,0 +1,96 @@
+/* pager (begin) */
+
+  .b-pager
+  {
+    position: relative;
+    height: 30px;
+
+    background-color: #F1F1F1;
+
+    border-radius: 5px;
+
+    font-size: 0;
+  }
+
+  .b-pager .b-first-page,
+  .b-pager .b-last-page
+  {
+    position: absolute;
+    top: 0;
+    margin: 0;
+  }
+
+  .b-pager .b-first-page
+  {
+    left: 0;
+
+    border-radius: 5px 0 0 5px
+  }
+
+  .b-pager .b-last-page
+  {
+    right: 0;
+
+    border-radius: 0 5px 5px 0;
+  }
+
+  .b-list-page
+  {
+    width: 100%;
+
+    border-radius: 5px;
+
+    font-size: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .b-list-page .b-item
+  {
+    display: inline-block;
+    height: 30px;
+
+    border-left: 1px solid #E6E6E6;
+
+    font-size: 13px;
+    vertical-align: top;
+  }
+
+  .b-list-page .b-item:last-child
+  { border-right: 1px solid #e6e6e6 }
+
+  .b-list-page .b-item.active
+  {
+    position: relative;
+    margin: 0 -1px 0 0;
+
+    background-color: #8cc63f;
+
+    border-left: 0px;
+
+    color: #fff;
+  }
+
+  .b-list-page .i-link
+  {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+
+    color: #4d4d4d;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .b-list-page .i-link:hover
+  { color: #ed1c24 }
+
+  .b-list-page .b-item.active .i-link,
+  .b-list-page .b-item.active .i-link:hover
+  { color: #fff }
+
+  .b-list-page .b-item.dotted
+  { padding: 0 6px }
+
+/* pager (end) */

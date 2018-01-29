@@ -1,0 +1,74 @@
+.userform input, .userform .input {
+    width: 166px;
+}
+.userform .btn_office {
+	padding-bottom:10px;
+}
+
+
+.estimateBlock a{
+	text-decoration:none;
+}
+.estimateButton.negative{
+    background: url("/vote_down.png") center top no-repeat;
+    display: block;
+    float: left;
+    height: 15px;
+    margin-right: 5px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 15px;
+}
+.estimateRate{
+    display: block;
+    float: left;
+    height: 15px;
+    margin-right: 5px;
+    width: 15px;
+	font-weight:bold;
+	text-align:center;
+}
+.estimateButton.positive{
+    background: url("/vote_up.png") center top no-repeat;
+    border-bottom: medium none;
+    display: block;
+    float: left;
+    height: 15px;
+    width: 15px;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+.reviewsCommentText.author{
+	clear:both;
+}
+
+.paginationNav.solidLink.back{
+	width:15px;
+	margin-right:5px;
+	height:20px;
+	display:block;
+	float:left;
+	text-decoration:none;
+}
+.paginationNav.solidLink.forward{
+	width:15px;
+	margin-left:5px;
+	height:20px;
+	display:block;
+	float:left;
+	text-decoration:none;
+}
+.paginationNumbersItem{
+	width:20px;
+	float:left;
+	text-align:center;
+}
+.paginationNumbersItem a{
+	text-decoration:none;
+}
+.paginationNumbersItem.active a{
+	font-weight:bold;
+}
+.commentAdding{
+	clear:both;
+} 

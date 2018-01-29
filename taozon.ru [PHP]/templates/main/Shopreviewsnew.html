@@ -1,0 +1,84 @@
+<div class="bigtitle"><div class="wrap clrfix">
+        <h1><?=Lang::get('shopreviews')?></h1>
+    </div></div>	
+
+<!-- .main -->
+<div class="main"><div class="wrap clrfix">
+		<? if ($add) { 
+        	echo Lang::get('shop_comment_add').".<br><br>";
+         } ?>
+		<? if(is_array($shopreviews)) { 
+        	foreach ($shopreviews as $post) { ?>		
+				<div class="comment" style="width:100%; border-bottom: #CCC 1px solid; margin-bottom:10px; position:relative;">
+                
+                <div style="margin: 5px; float: right; position:absolute; left:900px; top:0px;">
+                <? 
+                $color = 'gray';
+                if ($post['rating']>0) $color = 'green';
+                if ($post['rating']<0) $color = 'red';
+                ?>
+                	<div align="center" style=" background:url(../../css/rating-<?=$color?>-bg.gif) no-repeat; width:50px; height:20px" title="Rank"><?=$post['rating']?></div>
+                	<? if (isset($userinfo)) { ?>  
+                    <? if(!@in_array ($post['review_id'], $_SESSION['shop_rating'])) { ?>   
+                    	<a href="index.php?p=shopreviews&to=<?=$post['review_id']?>&calc=minus"><img src="../../css/rating-cell-minus.gif" width="23"  border="0" align="absmiddle"></a>
+                		<a href="index.php?p=shopreviews&to=<?=$post['review_id']?>&calc=plus"><img src="../../css/rating-cell-plus.gif" width="23"  border="0" align="absmiddle"></a>
+                    <? } ?>
+                    <? } ?>
+                </div>
+                
+					<p><?=$post['created']?> - <?=$post['name']?></p>			
+            		<div style="font-style:italic; color:#666; margin:5px; width:98%; background:#D5FFD0; padding:10px;"><?=$post['text']?></div>
+            		<div style="font-style:italic; color:#666; font-size:12px; padding-left:15px;margin:5px;"><?=$post['answer']?></div>            
+        		</div>
+			<? } ?>
+            <? if (isset($userinfo)) { ?>
+            	<div id="set_answer">
+  <form action="<?=$pageurl?>" method="post">
+    <label><?=Lang::get('your_review')?>:</label><br>
+    <textarea name="txt" cols="60" rows="4"></textarea><br>
+    <input name="name" id="name" type="hidden" value="<?=$userinfo['lastname']?> <?=$userinfo['firstname']?>" />
+    <input name="" type="submit" value="<?=Lang::get('save')?>" />    
+  </form>
+</div>
+            <? } ?>
+            
+            
+            <?if ($count!=0):?>
+	<div class="bgr-panel">
+		<? $curpage=floor($from/$perpage)+1 ?>
+		<? $maxpage=ceil($count/$perpage) ?>        
+		<? if ($maxpage>1 && !($curpage>=$maxpage)) { ?>
+		<a href="<?=$pageurl?>&from=<?=$from+$perpage?>" class="btn flr"><span><?=Lang::get('next_page')?></span></a>
+		<? }  elseif($curpage > $maxpage) { ?>
+		<? }?>
+
+		<ul class="flin pager clrfix">
+			<? if ($curpage>3) { ?>
+			<li><a href="<?=$pageurl?>&from=0">1</a></li>
+			<? } ?>
+			<? if ($curpage>4) { ?>
+			<li>...</li>
+			<? } ?>
+			<? for ($i=max(1, $curpage-2);$i<=min($maxpage, $curpage+2);$i++) { ?>
+			<? if ($curpage == $i) { ?>
+				<li class="active"><a href="<?=$pageurl?>&from=<?=(($i-1)*$perpage)?>"><?=$i?></a></li>
+				<? }else{ ?>
+				<li><a href="<?=$pageurl?>&from=<?=(($i-1)*$perpage)?>"><?=$i?></a></li>
+				<? } ?>
+			<? } ?>
+			<? if ($curpage<$maxpage-3) { ?>
+			<li><span>...</span></li>
+			<? } ?>
+			<? if ($curpage<$maxpage-2) { ?>
+			<li><a href="<?=$pageurl?>&from=<?=(($maxpage-1)*$perpage)?>"><?=$maxpage?></a></li>
+			<? } ?>
+		</ul>
+	</div>
+    <?endif;?>
+            
+            
+            <? } else { ?>
+		<span><?=Lang::get('no_posts')?></span>
+		<? } ?>
+</div></div>
+<!-- /.main -->

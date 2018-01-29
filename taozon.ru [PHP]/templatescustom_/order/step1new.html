@@ -1,0 +1,299 @@
+<!-- calculator -->
+<style type="text/css">
+.for_modal_calculator{
+    display: none;
+    left: 50%;
+    margin-left: -331px;
+    margin-top: -150px;
+    position: fixed;
+    top: 50%;
+    z-index: 1000;
+}
+.for_modal_calculator .close{
+	position:absolute;
+	background:url("/fancy_close.png") no-repeat;
+	width:30px;
+	height:30px;
+	top:0px;
+	right:0px;
+	cursor:pointer;
+}
+.over {
+    background: none repeat scroll 0 0 #333333;
+    display: none;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    z-index: 900;
+}
+</style>
+
+
+<script type="text/javascript">
+$(function(){
+
+	//pop-up
+	var ua = navigator.userAgent.toLowerCase();
+	var isOpera = (ua.indexOf('opera')  > -1);
+	var isIE = (!isOpera && ua.indexOf('msie') > -1);
+
+	function getDocumentHeight() {
+	  return Math.max(document.compatMode != 'CSS1Compat' ? document.body.scrollHeight : document.documentElement.scrollHeight, getViewportHeight());
+	}
+
+	function getViewportHeight() {
+	  return ((document.compatMode || isIE) && !isOpera) ? (document.compatMode == 'CSS1Compat') ? document.documentElement.clientHeight : document.body.clientHeight : (document.parentWindow || document.defaultView).innerHeight;
+	}
+	$(".over, .for_modal_calculator .close").click(function(){
+							$('.over').hide();
+							$('.for_modal_calculator').hide();
+						  });
+						  
+						  
+	$(".show_calc").click(
+					function(){
+						h = getDocumentHeight();
+						$('.over').height(h).fadeIn();
+						
+						$('.for_modal_calculator').show(); 
+						
+						return false;
+					}
+	);
+
+    $('.calculate').button().click(function() {
+        var weight = setVal($('input[name=mass]').val());
+        var price_good  = setVal($('input[name=price]').val());
+        var country  = $('#country option:selected').val();
+        var currency = $('#currency option:selected').val();
+    
+        if(!price || !weight || !country) {
+            deliveryCost = 0;
+        };
+        
+        $.ajax({
+            url:'index.php?p=get_delivery&code=' + country + '&weight=' + weight/1000,
+            success:function (data) {
+                data = $.parseJSON(data);
+                
+                var html = '';
+                
+                if (data.success) {
+                    var flag = 0;
+                    
+                    $.each(data.data, function(i, delivery) {
+                        html += '<tr>';
+                        html += '<td><strong>' + delivery['name'] + '</strong></td>';
+
+                        var prices = delivery['FullPrice']['ConvertedPriceList']['DisplayedMoneys'];
+                        $.each(prices, function(i, price) {
+                            $.each(price, function(j, elem) {
+                                if (elem['Code']) {
+                                    if (elem['Code'] == currency) {
+                                        flag = 1;
+                                        var all_price = parseFloat(price_good) + parseFloat(price['price']);
+                                        html += '<td align="center">' + price['price'] + ' ' + elem['Sign'] + '</td>';
+                                        html += '<td align="center">' + all_price.toFixed(2) + ' ' + elem['Sign'] + '</td>';
+                                    }
+                                }
+                            });
+                        });
+                        
+                        html += '</tr>';
+                    });
+                    
+                    $('#delivery_result thead').show();
+                    if (flag == 0) {
+                        $('#delivery_result thead').hide();
+                        html = '<tr><td colspan="3" style="padding-left:100px;"><?=Lang::get("delivery_not_found_in_this_currency")?></td></tr>';
+                    }
+                    
+                    $('#delivery_result tbody').html(html);
+                    $('#delivery_result tbody').show();
+                } else {
+                    html += '<tr><td colspan="3" style="padding-left:100px;"><?=Lang::get("delivery_not_found")?></td></tr>';
+                    $('#delivery_result tbody').html(html);
+                    
+                    $('#delivery_result thead').hide();
+                    $('#delivery_result tbody').show();
+                }
+            },
+            error:function () {
+            }
+        });
+        
+    });
+    
+    
+    var setVal = function(val) {
+        var tmp = (!val) ? '' : val;
+        tmp = parseFloat(tmp.replace(',', '.'), 10);
+        return isNaN(tmp) ? 0 : tmp;
+    }
+});
+</script>
+<div class="for_modal_calculator">
+	<div class="close"></div>
+    <div class="calc-form">
+        <div class="line-form">
+            <label><?=Lang::get('ProductPrice')?>:<sup>*</sup></label>
+            <div class="for-input">
+                <input type="text" name="price" id="price" value="">
+                            <select name="currency" id="currency" style="width:80px;">
+                                                            <option value="RUB">руб.</option>
+                                                    </select>
+            </div>
+        </div>
+        <div class="line-form">
+            <label><?=Lang::get('country')?>:<sup>*</sup></label>
+            <div class="for-input">
+                <select class="custom-select" id="country" name="country">
+                                                            <option value="RU">Россия</option>
+                                                            <option value="UA">Украина</option>
+                            			</select>
+            </div>
+        </div>
+        <div class="line-form">
+            <label><?=Lang::get('weightgrams')?>:<sup>*</sup></label>
+            <div class="for-input">
+                <input type="text" name="mass" id="mass" value="" />
+            </div>
+        </div>
+        
+            <div class="line-form" style="padding-left:260px;">
+            <button class="calculate"><?=Lang::get('calculate')?></button>
+        </div>
+        
+        <div class="line-form"  style="padding-left: 30px;">
+                <table id="delivery_result" style="padding-left: 10px;">
+                    <thead style="display: none;">
+                        <tr>
+                            <th><?=Lang::get('delivery')?><br/></th>
+                            <th><?=Lang::get('delivery_cost')?><br/></th>
+                            <th><?=Lang::get('total_cost')?><br/></th>
+                        </tr>
+                    </thead>
+                    <tbody style="display: none;">
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+<!-- /calculator -->
+
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+
+<div class="bigtitle"><div class="wrap clrfix">
+        <h1><?=Lang::get('reg_order')?>: <?=Lang::get('weight_calc')?></h1>
+    </div></div>
+
+<div class="basket_info wrap" style="margin-top:-16px; margin-bottom:10px;">
+При оформлении заказа обратите особое внимание на вес товара, от веса напрямую зависит стоимость доставки. Таблица примерного веса поможет Вам рассчитать общую стоимость заказа при его оформлении. Рассчитать доставку прямо сейчас в <a href="#" class="show_calc">«Калькуляторе доставки»</a>
+</div>  
+    
+
+<div id="dialog" title="<?=Lang::get('warning')?>" style="display:none;">
+  <?=Lang::get('weight_is_not_correct')?>
+</div>
+
+<!-- .main -->
+<div class="main"><div class="wrap clrfix">
+        <div class="bproduct" id="overlay-wrapper">
+            <div id="overlay"></div>
+            <h2 class="mb10"><span><?=Lang::get('goods_list')?></span></h2>
+
+            <? if(count($list)) {?>
+                    <div id="sign" style="display: none"><?=Lang::get('kg').'.'?></div>
+                    <table class="basket tsimple notepad">
+                        <thead>
+                            <tr>
+                                <td class="w80"><?=Lang::get('good')?></td>
+                                <td width="40%"><?=Lang::get('original')?></td>
+                                <td width="12%"><?=Lang::get('configuration')?></td>
+                                <td class="td4" width="10%"><?=Lang::get('unit_weight')?></td>
+                                <td align="center" width="10%"><?=Lang::get('quantity')?></td>
+                                <td width="15%"><?=Lang::get('total_weight')?></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                <? $total_w = 0; ?>
+                            <? $sign = ''; ?>
+                            <? $sign = ' '.Lang::get('kg').'.'; ?>
+                            <? foreach ($list as $item) { ?>
+                            <?
+                            foreach($item['Fields'] as $field){
+                                $paramName = (string)$field['Name'];
+                                $item[$paramName] = (string)$field['Value'];
+                            }
+                            ?>
+                            <? $total_w += $item['Quantity']*$item['Weight'];?>
+                            <tr id="item<?=$item['ItemId']?>">
+                                <td>
+                                    <ul class="lproduct w80li">
+                                        <li>
+                                            <a href="index.php?p=item&id=<?=$item['ItemId'];?>" class="pic" title="<?=$this->escape($item['ItemTitle']);?>" alt="<?=$this->escape($item['ItemTitle']);?>">
+                                                <i><img width="70" height="70" src="<?=ProductsHelper::getImage($item, 100);?>"></i>
+                                                <ins></ins>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <p class="mb5 lblue"><a title="<?=$this->escape($item['ItemTitle']);?>" alt="<?=$this->escape($item['ItemTitle']);?>" href="index.php?p=item&id=<?=$item['ItemId'];?>"><b><?=$this->escape($item['ItemTitle']);?> </b></a></p>
+                                    <p class="mb5"><span class="lgray"><?=Lang::get('vendor')?></span> <a href="index.php?p=vendor&id=<?=$item['VendorId'];?>" title="<?=$item['VendorId'];?>" alt="<?=$item['VendorId'];?>"><b><?=$item['VendorId'];?></b></a></p>
+                                    <p class="mb5"><span class="lgray"><?=Lang::get('category')?></span> <a href="index.php?p=category&cid=<?=$item['CategoryId']?>" alt="<?=$item['CategoryName']?>" title="<?=$item['CategoryName']?>"><b><?=$item['CategoryName']?></b></a></p>
+                                </td>
+                                <td>
+                                    <table class="info infoitem">
+                                        <? if (isset($item['ItemConfiguration'])) { ?>
+                                            <? foreach(explode(';', $item['ItemConfiguration']) as $cfg){ ?>
+                                                <? if($cfg) {?>
+                                                <tr>
+                                                    <? $configArray = explode(':',$cfg); ?>
+                                                    <td class="lgray"><?= current($configArray); ?>:</td>
+                                                    <td><b class="ltr-for-rtl"><?= end($configArray); ?></b></td>
+                                                </tr>
+                                                <? } ?>
+                                            <? } ?>
+                                        <? } ?>
+                                    </table>
+                                </td>
+                                <td class="tagc"><input type="text" size="5" class="change-weight input_numeric_float" itemid="<?=$item['Id'];?>" value="<?=$item['Weight']?>"></td>
+                                <td class="tagc"><?=$item['Quantity']?></td>
+                                <td class="row-weight" itemid="<?=$item['Id'];?>"><? echo round($item['Quantity']*$item['Weight'],2).' '.$sign; ?></td>
+                            </tr>
+                            <? } ?>
+                            <tr class="bdb0">
+                                <td colspan="5"></td>
+                                <td>
+                                    <strong><?=Lang::get('total')?>:&nbsp;</strong><span id="total_w"><? echo ' '.round($total_w, 2).' '.$sign;?></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bgr-panel mt20">
+                        <a href="<?=@UrlGenerator::generateContentUrl('basket')?>" class="btn-apper fll"><?=Lang::get('back')?></a>
+                        <a href="index.php?p=userorder&step2&type=<?=$type?>" id="next" class="btn flr"><?=Lang::get('continue')?></a>
+                    </div>
+            <? } else { ?>
+                <h3> <?=Lang::get('empty_cart')?> </h3>
+            <? } ?>
+        </div>
+    </div></div>
+<!-- /.main -->
+
+<script language="JavaScript">
+$(function()
+{
+    $("#dialog:ui-dialog").dialog( "destroy" );
+    $("#dialog").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons : {
+            "<?=Lang::get('ok')?>" : function() {
+                $(this).dialog("close");
+            }
+        }
+    });
+});
+</script>

@@ -1,0 +1,38 @@
+/* Tabs
+-----------------------------------------------------------------------------*/
+
+#tabwrap {
+	
+	ul.nav-tabs {
+	
+		border-color: @borderColor;
+	
+		li {
+		
+			a {
+			
+			
+			
+				&:hover {
+					border-color:@borderColor
+				}
+			}
+			
+			&.active a {
+				border-top-color:@borderColor;
+				border-left-color: @borderColor;
+				border-right-color: @borderColor;
+				border-bottom: 1px solid @mainContainerBG;
+				
+				&:hover {
+					background:#fff;
+					color:@primary
+				}
+			}
+		}
+	}
+	
+	.tab-content {
+		padding-top: 20px;
+	}
+}

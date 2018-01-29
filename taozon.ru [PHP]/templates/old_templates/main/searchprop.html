@@ -1,0 +1,166 @@
+<form method="get" id="filterform">
+<input type="hidden" name="p" value="<?=@$_GET['p']?>"/>
+<? if (isset($_GET['cid'])) {?><input type="hidden" name="cid" value="<?=@$_GET['cid']?>"/><?}?>
+<? if (isset($_GET['brand'])) {?><input type="hidden" name="brand" value="<?=@$_GET['brand']?>"/><?}?>
+<? if (isset($_GET['id'])) {?><input type="hidden" name="id" value="<?=@$_GET['id']?>"/><?}?>
+<? if (isset($_GET['search'])) {?><input type="hidden" name="search" value="<?=@$_GET['search']?>"/><?}?>
+<? if (isset($_GET['sort_by'])) {?><input type="hidden" name="sort_by" value="<?=@$_GET['sort_by']?>"/><?}?>
+<? if (isset($_GET['per_page'])) {?><input type="hidden" name="per_page" value="<?=@$_GET['per_page']?>"/><?}?>
+<? if (isset($_GET['tmall'])) {?><input type="hidden" name="tmall" value="<?=@$_GET['tmall']?>"/><?}?>
+			<div class="opened">
+				<a href="#" class="ftitle" onclick="return false">Условия поиска</a>
+				<div class="fbody">
+
+					<h5>Цена</h5>
+					
+					<table class="trange mt5">
+						<tr>
+							<td><input type="text" name="cost[from]" id="" class="w70" value="<?=@$_GET['cost']['from']?>"/></td>
+							<td>元 —</td>
+							<td><input type="text" name="cost[to]" id="" class="w70" value="<?=@$_GET['cost']['to']?>"/></td>
+							<td>元</td>
+						</tr>
+					</table>
+					
+					<h5>Количество покупок</h5>
+					
+					<table class="trange mt5">
+						<tr>
+							<td><input type="text" name="count[from]" id="" class="w70" value="<?=@$_GET['count']['from']?>"/></td>
+							<td>шт. —</td>
+							<td><input type="text" name="count[to]" id="" class="w70" value="<?=@$_GET['count']['to']?>"/></td>
+							<td>шт.</td>
+						</tr>
+					</table>
+					
+					<h5>Рейтинг продавца</h5>
+
+                <div class="rating-slider-block" >
+                    <div class="slider-min-indicator" ><span class="from" >от</span>
+                        <span class="from-value" ><img src="i/hearts/level_<?=(!empty($_GET['rating']['from'])?@$_GET['rating']['from']:'0')?>.gif" id="min_rate"></span>
+                    </div>
+                    <input type="text" name="rating[from]" value="<?=(!empty($_GET['rating']['from'])?@$_GET['rating']['from']:'0')?>" class="slider-input" id="rating-min-input" />
+                    <div class="slider" id="rating-slider-min" ></div>
+                </div>
+                <div class="rating-slider-block" >
+                    <div class="slider-max-indicator" ><span class="till" >до</span>
+                        <span class="till-value" ><img src="i/hearts/level_<?=(!empty($_GET['rating']['to'])?@$_GET['rating']['to']:'20')?>.gif" id="max_rate"></span>
+                    </div>
+                    <input type="text" name="rating[to]" value="<?=(!empty($_GET['rating']['to'])?@$_GET['rating']['to']:'20')?>" class="slider-input" id="rating-max-input" />
+                    <div class="slider" id="rating-slider-max" ></div>
+                </div>
+
+<!--noindex-->
+<script type="text/javascript">
+var cval = new Array();
+var rate_min_val = '<?=(!empty($_GET['rating']['from'])?@$_GET['rating']['from']:'0')?>';
+var rate_max_val = '<?=(!empty($_GET['rating']['to'])?@$_GET['rating']['to']:'20')?>';
+var path = ''
+
+$('#rating-slider-min').slider({
+    range: "min",
+    value: rate_min_val,
+    min: 0,
+    max: 20,
+    slide: function( event, ui ) {
+        $('#min_rate').attr('src', path+'i/hearts/level_'+ui.value+'.gif');
+        $( "#rating-min-input" ).val( ui.value );
+    }
+});
+
+$('#rating-slider-max').slider({
+    range: "min",
+    value: rate_max_val,
+    min: 0,
+    max: 20,
+    slide: function( event, ui ) {
+         $('#max_rate').attr('src', path+'i/hearts/level_'+ui.value+'.gif');
+        $( "#rating-max-input" ).val( ui.value );
+    }
+});
+
+</script>
+<!--/noindex-->
+                    <!--
+                    <table class="trange mt5">
+						<tr>
+							<td><input type="text" name="rating[from]" id="" class="w40" value="<?=@$_GET['rating']['from']?>"/></td>
+							<td>единиц —</td>
+							<td><input type="text" name="rating[to]" id="" class="w40" value="<?=@$_GET['rating']['to']?>"/></td>
+							<td>единиц</td>
+						</tr>
+					</table>
+                    -->
+                    
+					<div class="fbut clrfix">
+						<a href="#" class="b23" onclick="document.getElementById('filterform').submit();"><span>Выбрать</span></a>
+						<a href="#" class="bdash" onclick="location.href=location.href+'&clear'"><span>Сбросить</span></a>
+					</div>
+
+				</div>
+			</div>
+            <? if ($searchprops) foreach($searchprops as $pid => $pvalue) { $curvalues = array(); ?>
+			<div class="<?if (isset($_GET['filters'][$pid]) && !empty($_GET['filters'][$pid])){?>opened<?}else{?>closed<?}?>" id="p<?=$pid?>">
+				<a href="#" class="ftitle" onclick="sh('p<?=$pid?>');return false"><?=$pvalue['name']?></a>
+				<div class="fbody">
+					<ul class="checks">   
+                   <?  
+                    
+                    $pvalue_sort = array();
+
+                    foreach($pvalue['values'] as $value) { 
+                        if ($_GET['filters'][$pid][$value['id']] == $value['id']){
+                            $pvalue_sort[$value['id']] = $value;  
+                        }   
+                    }
+
+                   foreach($pvalue['values'] as $value) {
+                      if(!isset($pvalue_sort[$value['id']])){
+                          $pvalue_sort[$value['id']] = $value;
+                      }
+                   }
+
+                   $pvalue['values'] = $pvalue_sort;
+                    
+                     if (count($pvalue['values'])<=10) { ?>
+                        <? foreach($pvalue['values'] as $value) { $curvalues[] = $value['id']; ?>
+						<li><input type="radio" id="ch<?=$value['id']?>" name="filters[<?=$pid?>]" value="<?=$value['id']?>"<?if ($_GET['filters'][$pid] == $value['id']){?> checked="checked"<?}?>/><label for="ch<?=$value['id']?>"><?=$value['name']?></label></li>
+                        <? } ?>
+                    <? } else { ?>
+                        <? $pvalues = array_slice($pvalue['values'], 0, 6); foreach($pvalues as $value) { $curvalues[] = $value['id']; ?>
+						<li><input type="radio" id="ch<?=$value['id']?>" name="filters[<?=$pid?>]" value="<?=$value['id']?>"<?if ($_GET['filters'][$pid] == $value['id']){?> checked="checked"<?}?>/><label for="ch<?=$value['id']?>"><?=$value['name']?></label></li>
+                        <? } ?>
+						<div id="pp<?=$pid?>" style="display:none">
+                            <? $pvalues = array_slice($pvalue['values'], 6, 100000); foreach($pvalues as $value) { $curvalues[] = $value['id']; ?>
+                            <li><input type="radio" id="ch<?=$value['id']?>" name="filters[<?=$pid?>]" value="<?=$value['id']?>"<?if ($_GET['filters'][$pid] == $value['id']){?> checked="checked"<?}?>/><label for="ch<?=$value['id']?>"><?=$value['name']?></label></li>
+                            <? } ?>
+                            <li class="fmore"><a href="#" class="bdash" onclick="sh2('pp<?=$pid?>');return false"><span>Скрыть варианты</span></a></li>
+						</div>
+						<li class="fmore" id="pp<?=$pid?>p" style="display:block"><a href="#" class="bdash" onclick="sh2('pp<?=$pid?>');return false"><span>Еще варианты</span></a></li>
+                    <? } ?>
+					</ul>
+					<div class="fbut clrfix">
+						<a href="#" class="b23" onclick="document.getElementById('filterform').submit();"><span>Выбрать</span></a>
+                        <a href="#" class="bdash" onclick="clearf('filters[<?=$pid?>]',cval['<?=$pid?>']);$('#filterform').submit()"><span>Сбросить</span></a>
+                        </div>
+				</div>
+			</div>
+            <? } ?>
+</form>
+<!--noindex-->
+<script type="text/javascript">
+function sh(elm)
+{
+    $('#'+elm).toggleClass('opened closed');
+}
+function sh2(elm)
+{
+    $('#'+elm).toggle();
+    $('#'+elm+'p').toggle();
+}
+function clearf(name, cvals)
+{
+    $('input[name="'+name+'"]').val('');
+}
+</script>
+<!--/noindex-->

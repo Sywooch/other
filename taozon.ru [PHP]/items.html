@@ -1,0 +1,130 @@
+<? if (isset($list[0])) { ?>
+<style type="text/css">
+.w160li li {
+	width: 195px;
+	margin: 0 0 18px 18px;
+}
+.w160li .pic {
+    height: 185px;
+}
+.w160li .pic i {
+	width: 200px;
+	height:210px;
+	display:block;
+	position:relative;
+}
+.w160li .pic i .discount{
+	position: absolute;
+    right: -62px;
+    top: -3px;
+    z-index: 2;
+	background:url("/skidka_red.png") no-repeat;
+	
+	font-family:"Trebuchet MS","Helvetica CY",sans-serif;
+	color: #FFFFFF;
+    font-size: 25px;
+    height: 53px;
+    text-shadow: 1px 1px 1px #750C91;
+    width: 65px;
+	padding-top:20px;
+}
+
+.w160li .pic ins {
+	display:none;
+}
+
+.wrapper_sale_item {
+    font-weight: bold;
+    height: 14px;
+    left: 67px;
+    top: 162px;
+}
+
+.wrapper_sale_item .old_price {
+	font-size:15px;
+	position:relative;
+	top:-3px;	
+}
+  
+/* h1 */
+.wrap.clrfix h1{
+	margin-bottom: 2px;
+    margin-top: -17px;
+} 
+
+.lproduct .price {
+    background-color: #F2F2F2;
+    border-radius: 0 0 3px 3px;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    width: 200px;
+}
+
+.jcarousel-skin .jcarousel-clip-horizontal {
+    height: 220px;
+    width: 100%;
+}
+.jcarousel-skin .jcarousel-item {
+    height: 209px;
+    overflow: hidden;
+    width: 195px;
+}
+.jcarousel-skin .jcarousel-item-horizontal {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 12px;
+	overflow: visible;
+}
+</style>
+
+
+<div class="bproduct <?=$type?>-rating-list">
+    <h2 class="mb25"><span><?=Lang::get($type)?></span></h2>
+    <ul class="lproduct flin w700 w160li <? if($displayAsCarousel){ ?> jcarousel-skin <? } ?> clrfix">
+        <? foreach ($list as $item) { ?>
+        <li>
+            <a class="pic" href="<?=UrlGenerator::generateItemUrl($item['Id'])?>">
+                <i>
+                	<img src="<?= ProductsHelper::getImage($item, 200) ?>">
+                    <? if ((count($item['PromotionPrice'])>0) and (!General::getConfigValue('hide_discont_lists'))) { 
+                        $old_price = $item['Price']['ConvertedPriceList'][0]['Val'];
+                        $new_price = $item['PromotionPrice'][0]['Val'];
+                        $discount = floor((($old_price - $new_price)/$old_price)*100);
+                        
+                        if ($discount){
+                    ?>
+                        <div class="discount">
+                            -<? echo $discount; ?>%
+                        </div>
+                    <? 	}
+                     } ?>
+                </i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <a href="<?=UrlGenerator::generateItemUrl($item['Id'])?>">
+                    <? if (count($item['PromotionPrice'])>0) { ?>
+                        <span><?=General::getCurrencyPromoPrice($item)?></span>
+                    <? }else{ ?>
+                        <span><?=General::getCurrencyPrice($item)?></span>
+                    <? } ?>
+                </a>
+                <a href="<?=UrlGenerator::generateItemUrl($item['Id'])?>">
+                    <ins class="name"><?= $this->escape($item['Title']) ?></ins>
+                    <span class="glow"></span>
+                </a>
+
+            </div>
+            <? if (count($item['PromotionPrice'])>0) { ?>
+                <div align="center" class="wrapper_sale_item">
+                    <span class="old_price"><?=General::getCurrencyPrice($item)?></span>
+                </div>
+                <? } ?>
+        </li>
+        <? } ?>
+    </ul>
+</div>
+<? } ?>

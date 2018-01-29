@@ -1,0 +1,98 @@
+.dropdown-main {
+	z-index: 2;
+}
+
+.dropdown h3 {
+	margin: 0;
+	font-weight: normal;
+	text-shadow: 0 1px 0 #fff;
+}
+	
+.dropdown-inner .bitem,
+.dropdown-main .bitem {
+	padding: 0;
+	position: relative;
+	z-index: 10;
+}
+
+.dropdown-inner.bitem  > h3,
+.dropdown-main.bitem  > h3 {
+	margin: 0;
+}
+
+.dropdown-inner .bitem  > h3 a,
+.dropdown-main .bitem  > h3 a {
+	/*background: url('custom_image/menu_arrow.png') no-repeat 97% 50%;*/
+	color: #000;
+	display: block;
+	padding: 5px 5px 5px 7px;
+}
+
+.dropdown-inner .bitem:hover h3 a,
+.dropdown-main .bitem:hover h3 a,
+.dropdown-inner .bitem  > h3 a:hover,
+.dropdown-main .bitem  > h3 a:hover {
+	/*background: #ff656b;*/
+	background: #A3D6F5;
+	color: #000;
+	text-shadow: none;
+}
+
+.dropdown-inner .bitem:hover > .lcategory,
+.dropdown-main .bitem:hover > .lcategory{
+	display: block;
+	z-index: 10;
+}
+
+.dropdown-inner .lcategory li:hover .lcategory,
+.dropdown-main .lcategory li:hover .lcategory {
+	display: block;
+	z-index: 11;
+}
+
+
+.dropdown-inner .bitem .lcategory,
+.dropdown-main .bitem .lcategory {
+	/*background: #ff656b;*/
+	background: #A3D6F5;
+	box-shadow: 6px 2px 5px rgba(80,0,15,.2);
+	display: none;
+	left: 100%;
+
+	position: absolute;
+	top: 0;
+	width: 240px;
+}
+
+.dropdown-inner .bitem .lcategory li,
+.dropdown-main .bitem .lcategory li {
+	margin: 0;
+}
+
+.dropdown-inner .bitem .lcategory li,
+.dropdown-main .bitem .lcategory li,
+.dropdown-inner .bitem .lcategory li a,
+.dropdown-main .bitem .lcategory li a {
+	display: block;
+	position: relative;
+	z-index: 10;
+}
+
+.dropdown-inner .bitem .lcategory li a,
+.dropdown-main .bitem .lcategory li a {
+	color: #000;
+	padding: 5px;
+}
+
+.dropdown-inner .bitem .lcategory li a:hover,
+.dropdown-main .bitem .lcategory li a:hover {
+	background: #FFF;
+	color: #ed1c24;
+}
+
+.dropdown-inner .bitem .lcategory li a:before,
+.dropdown-main .bitem .lcategory li a:before,
+.dropdown-inner .bitem .lcategory li small.before > li:before,
+.dropdown-main .bitem .lcategory li small.before > li:before {
+	content:"";
+}

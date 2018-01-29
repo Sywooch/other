@@ -1,0 +1,539 @@
+<script src="/js/libs/jquery/jquery.ba-bbq.js?<?=CFG_SITE_VERSION;?>"></script>
+
+
+<div class="bigtitle"><div class="wrap clrfix">
+        <h1><?=Lang::get('cart')?></h1>
+    </div></div>
+
+<div id="dialog-confirm" title="<?=Lang::get('need_confirm')?>" style="display:none;">
+    <span id="sure_delete"><?=Lang::get('sure_delete')?></span>
+    <span id="itemid" style="display:none;"></span>
+</div>
+
+<input type="hidden" id="good_added_to_fav" value="<?=Lang::get('good_added_to_fav')?>" />
+<input type="hidden" id="comment_saved" value="<?=Lang::get('all_changes_saved')?>" />
+<input type="hidden" id="close" value="<?=Lang::get('close')?>" />
+
+<div style="display:none;" class="addform" id="dialog-form" title="<?=Lang::get('saving')?>">
+    <span id="message" ></span>
+</div>
+
+<div id="change-window" title="<?=Lang::get('need_confirm')?>" style="display:none;">
+    <span id="change-window-content">
+        <form action="index.php?p=basket" method="post" id="changeform">
+                                <input name="setconfig" id="setconfig" type="hidden" value="" />
+                                <input name="action" type="hidden" value="changeConfig" />
+                                <input name="newconfig" id="newconfig" type="hidden" value="" />
+                                <input name="item_id"  id="item_id" type="hidden"  value=""/>
+                                <input name="quantity"  id="quantity" type="hidden" value="" />
+                                <input name="itemTitle"  id="itemTitle" type="hidden" value="" />
+                                <input name="promoId"  id="promoId" type="hidden" value="" />
+                                <input name="categoryId"  id="categoryId" type="hidden" value="" />
+                                <input name="categoryName"  id="categoryName" type="hidden" value="" />
+                                <input name="currencyName"  id="currencyName" type="hidden" value="" />
+                                <input name="externalURL"  id="externalURL" type="hidden" value="" />
+                                <input name="pictureURL"  id="pictureURL" type="hidden" value="" />
+                                <input name="vendorId"  id="vendorId" type="hidden" value="" />
+                                <input name="weight"  id="weight" type="hidden" value="" />
+                                <input name="price"  id="price" type="hidden" value="" />
+                                <input name="itemConfiguration"  id="itemConfiguration" type="hidden" value="" />
+                                <input name="itemConfigurationChina"  id="itemConfigurationChina" type="hidden" value="" />
+                                <div id="ch_con"> </div>
+                                </form>
+
+                                <br><br>
+                                <span style="color:red; font-size:10px;" class="alert-change-form"><?=Lang::get('attention_price')?></span><br>
+    </span>
+</div>
+
+<!-- .main -->
+<div class="main"><div class="wrap clrfix">
+<div class="bproduct" id="overlay-wrapper">
+<div id="overlay"></div>
+<h2 class="mb10"><span><?=Lang::get('goods_list')?></span></h2>
+
+<? if(Session::checkErrors()){ ?>
+    <div class="error-message"><?=Session::getErrorDescription()?></div>
+<? } ?>
+
+<? if ($basket->count()) { ?>
+
+    <div class="bgr-panel mb20">
+        <ul class="tableList">
+            <li><?=Lang::get('items_rus')?>: <b><?=$basket->count()?></b></li>
+            <li <?=empty($taobaoItems) ? 'style="display: none;"' : '';?> class="taoStats">
+                <?=Lang::get('shown')?>:
+                <? if (empty($taobaoItems)) { ?>
+                    <b> 0 </b>
+                <? } else { ?>
+                    <?=Lang::get('from')?>
+                    <b><? if ($from < $perpage){ echo 1; } else {echo ($from + 1); }?></b> <?=Lang::get('to')?>
+                    <b><? if ($from + $perpage < $basket->getTaoItemsCount()) print $from + $perpage; else print $basket->getTaoItemsCount(); ?></b> <?=Lang::get('from2')?>
+                    <b><?=$basket->getTaoItemsCount()?></b>
+                <? } ?>
+            </li>
+            <li style="display: none;" <?=empty($whItems) ? 'style="display: none;"' : '';?> class="whStats">
+                <?=Lang::get('shown')?>:
+                <? if (empty($whItems)) { ?>
+                    <b> 0 </b>
+                <? } else { ?>
+                    <?=Lang::get('from')?> <b><? if ($from < $perpage){ echo 1; } else {echo ($from + 1); }?></b> <?=Lang::get('to')?>
+                    <b><? if ($from + $perpage < $basket->getWhItemsCount()) print $from + $perpage; else print $basket->getWhItemsCount(); ?></b> <?=Lang::get('from2')?>
+                    <b><?=$basket->getWhItemsCount()?></b>
+                <? } ?>
+            </li>
+            <li style="width:50%">&nbsp;<br/></li>
+            <li>
+                <form method="post" id="perpage">
+                    <?=Lang::get('output_to')?>
+                    <select name="perpage" onchange="$(this).parent().submit();">
+                        <option value="16" <?if ($perpage == '16') { ?>selected<? }?>>16</option>
+                        <option value="64" <?if ($perpage == '64') { ?>selected<? }?>>64</option>
+                        <option value="128" <?if ($perpage == '128') { ?>selected<? }?>>128</option>
+                    </select>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <!-- /panel-search -->
+
+    <div class="bgr clrfix">
+        <ul class="tabs clrfix">
+            <li <?=(! empty($taobaoItems) || !CMS::IsFeatureEnabled('Warehouse') ? 'class="active"' : '');?> tab="taobaoItems"><a href="#" ><span><?=Lang::get('Taobao_goods')?> (<?=$basket->getTaoItemsCount()?>)</span><i></i></a></li>
+            <?php if (CMS::IsFeatureEnabled('Warehouse')) { ?>
+                <li <?=(empty($taobaoItems) ? 'class="active"' : '');?> tab="whItems"><a href="#"><span><?=Lang::get('Warehouse_goods')?> (<?=$basket->getWhItemsCount()?>)</span><i></i></a></li>
+            <?php } ?>
+        </ul>
+    </div>
+    <div class="tabs-content">
+
+    <div <?=(! empty($taobaoItems) ? 'style="display: block;"' : '');?> class="tab" id="taobaoItems">
+        <? if (! empty($taobaoItems)) { ?>
+            <?php
+            $elementsTotalCost = 0;
+
+            $additionalPriceSum = 0;
+            foreach ($GLOBALS['Basket']['CollectionSummaries']['Taobao']['AdditionalPriceInfoList']['Elements'] as $item) {
+                $additionalPriceSum += $item['Price']['ConvertedPriceList']['Internal'][0];
+                $additionalSignSum = $item['Price']['ConvertedPriceList']['Internal']['Sign'];
+            }
+
+            $itemsByVendors = array();
+            foreach ($taobaoItems as $idx => $item) {
+                if (!isset($itemsByVendors[$item['VendorId']])) {
+                    $itemsByVendors[$item['VendorId']] = array();
+                }
+                $itemsByVendors[$item['VendorId']][] = $item;
+                $sign = $item['CurrencySign'];
+            }
+            ?>
+            <table class="basket tsimple">
+                <? foreach ($itemsByVendors as $vendor => $vendorItems) { ?>
+                    <tr>
+                        <td colspan="5" style="border-radius: 5px; background-color: #ec1c23">
+                            <span style="font-size: 14px; font-weight: bold; color: #fff"><?=Lang::get('Vendor_name', array('vendor' => $item['VendorId']))?></span>
+                            <span style="float: right; font-size: 14px; font-weight: bold; color: #fff">
+                                <?=Lang::get('Internal_delivery_price', array(
+                                    'price' => TextHelper::formatPrice(
+                                        $GLOBALS['Basket']['CollectionSummaries']['Taobao']['AdditionalPriceInfoList']['Elements'][$vendor]['Price']['ConvertedPriceList']['Internal'][0],
+                                        $GLOBALS['Basket']['CollectionSummaries']['Taobao']['AdditionalPriceInfoList']['Elements'][$vendor]['Price']['ConvertedPriceList']['Internal']['Sign']
+                                    ),
+                                    'currency' => ''
+                                ))?>
+                            </span>
+                        </td>
+                    </tr>
+                    <? foreach ($vendorItems as $item) { ?>
+                        <? $elementsTotalCost += $item['Cost']; ?>
+                        <? $elementsCurrencySign = $item['CurrencySign']; ?>
+                        <tr class="del-item-1" id="item<?= $item['ItemId'] ?>">
+                            <td class="w80">
+                                <ul class="lproduct w80li">
+                                    <li>
+                                        <a href="index.php?p=item&id=<?= $item['ItemId']; ?>" class="pic">
+                                            <i><img width="70" height="70" src="<?=ProductsHelper::getImage(array_merge((array)$item, array('MainPictureUrl' => $item['PictureURL'])), 100)?>"></i>
+                                            <ins></ins>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td width="230">
+                                <p class="mb5"><span class="lgray"><?=Lang::get('good_code')?></span> <b><?= $item['ItemId']; ?></b></p>
+                                <p class="mb5"><span class="lgray"><?=Lang::get('vendor')?></span> <b><?= $item['VendorId'];?></b></p>
+                                <p class="mb5"><span class="lgray"><?=Lang::get('category')?></span> <a href="index.php?p=category&cid=<?=$item['CategoryId']?>"><b><?=$this->escape($item['CategoryName'])?></b></a></p>
+                                <!--p class="lblue"><a href="index.php?p=item&id=<?= $item['ItemId']; ?>"><b class="item-title" itemid="<?=$item['Id'];?>"><?=$this->escape($item['ItemTitle']);?></b></a></p--->
+                            </td>
+                            <td>
+                                <table class="info infoitem">
+                                    <? if (isset($item['ItemConfiguration'])) { ?>
+                                        <? foreach(explode(';', $item['ItemConfiguration']) as $cfg){ ?>
+                                            <? if($cfg) {?>
+                                                <tr><? $tmp_var = explode(':',$cfg);?>
+                                                    <td class="lgray"><?= current($tmp_var); ?>:</td>
+                                                    <td><b><?=end($tmp_var);?></b></td>
+                                                </tr>
+                                            <? } ?>
+                                        <? } ?>
+                                    <? } ?>
+                                    <tr>
+                                        <td><div class="clrfix"><a class="btn-small fll change-config" itemid="<?=$item['ItemId'];?>" basketid="<?=$item['Id'];?>"><span><?=Lang::get('change_config')?></span></a></div></td>
+                                        <input name="<?=$item['Id'];?>_id"  id="<?=$item['Id'];?>_id" type="hidden" value="<?=$item['ItemId']?>" />
+                                        <input name="<?=$item['Id'];?>_quantity"  id="<?=$item['Id'];?>_quantity" type="hidden" value="<?=$item['Quantity']?>" />
+                                        <input name="<?=$item['Id'];?>_itemTitle"  id="<?=$item['Id'];?>_itemTitle" type="hidden" value="<?=$this->escape($item['ItemTitle'])?>" />
+                                        <input name="<?=$item['Id'];?>_promoId"  id="<?=$item['Id'];?>_promoId" type="hidden" value="<?=$item['PromoId']?>" />
+                                        <input name="<?=$item['Id'];?>_categoryId"  id="<?=$item['Id'];?>_categoryId" type="hidden" value="<?=$item['CategoryId']?>" />
+                                        <input name="<?=$item['Id'];?>_categoryName"  id="<?=$item['Id'];?>_categoryName" type="hidden" value="<?=$this->escape($item['CategoryName'])?>" />
+                                        <input name="<?=$item['Id'];?>_currencyName"  id="<?=$item['Id'];?>_currencyName" type="hidden" value="<?=$item['CurrencySign']?>" />
+                                        <input name="<?=$item['Id'];?>_externalURL"  id="<?=$item['Id'];?>_externalURL" type="hidden" value="<?=$item['ExternalURL']?>" />
+                                        <input name="<?=$item['Id'];?>_pictureURL"  id="<?=$item['Id'];?>_pictureURL" type="hidden" value="<?=$item['PictureURL']?>" />
+                                        <input name="<?=$item['Id'];?>_vendorId"  id="<?=$item['Id'];?>_vendorId" type="hidden" value="<?=$item['VendorId']?>" />
+                                        <input name="<?=$item['Id'];?>_weight"  id="<?=$item['Id'];?>_weight" type="hidden" value="<?=$item['Weight']?>" />
+                                        <input name="<?=$item['Id'];?>_ConfigurationId"  id="<?=$item['Id'];?>_ConfigurationId" type="hidden" value="<?=$item['ConfigurationId']?>" />
+                                    </tr>
+                                    <tr>
+                                        <td class="lgray"><nobr><?=Lang::get('price')?>:</nobr></td>
+                                        <td>
+                                            <b><span id="price-1-<?=$item['Id']?>" class="ltr-for-rtl">
+                                        <?=TextHelper::formatPrice($item['Price'], $item['CurrencySign'])?>
+                                        </span></b>
+                                        </td>
+                                    </tr>
+
+                                    <? if(isset($userdiscount)){  ?>
+                                        <tr>
+                                            <td class="lgray"><nobr><?=Lang::get('discount')?>:</nobr></td>
+                                            <td><b><?=$userdiscount['Discount']?> % </b>
+                                            </td>
+                                        </tr>
+
+                                    <? } ?>
+                                </table>
+                            </td>
+                            <td>
+                                <div class="calc">
+                                    <span class="lgray mr10"><?=Lang::get('quantity')?>:</span>
+                                    <b>
+                                        <input type="text" value="<?=$item['Quantity']?>" class="w20 tar quantity" id="count-<?= $item['Id'] ?>" itemid="<?=$item['Id'];?>" />
+                                    </b>
+                                <span class="num-controls">
+                                    <span class="plus unselectable" rel="count-<?= $item['Id'] ?>" itemid="<?=$item['Id'];?>">+</span>
+                                    <span class="minus unselectable" rel="count-<?= $item['Id'] ?>" itemid="<?=$item['Id'];?>">-</span>
+                                </span>
+                                <span class="total bbprice ltr-for-rtl" id="total-price-<?=$item['Id'];?>">
+                                    <?=TextHelper::formatPrice($item['Cost'], $item['CurrencySign'])?>
+                                </span>
+                                </div>
+                                <div class="mess_oper">
+                                    <label for="message" class="lgray"><?=Lang::get('comments_for_operator')?>:</label>
+                                    <textarea name="" class="fs11 comment-area" itemid="<?=$item['Id'];?>"><?=$item['Comment']?></textarea>
+                                    <i class="i copy" id="copy_<?=$item['Id'];?>" is-change-comment="false" itemid="<?=$item['Id'];?>"></i>
+                                </div>
+                            </td>
+                            <td class="w168 pr0">
+                                <? $id = $item["Id"]; ?>
+                                <div class="clrfix mb10"><a class="btn-small btn-delete-item fll" href="#" item="item-1" onclick="confirm('<?= $id; ?>'); return false;"><span><?=Lang::get('drop_item')?></span></a></div>
+                                <div class="clrfix"><a class="btn-small btn-add fll add-to-favourites" href="<?=General::generateUrl('basket', array('action' => 'move_to_favourites','id' => $id))?>" itemid="<?=$id;?>"><span><?=Lang::get('to_favourites')?></span></a></div>
+                            </td>
+                        </tr>
+                    <? } ?>
+                <? } ?>
+
+                <div class="clrfix mb10"><a class="btn-small btn-delete-item fll" href="#" item="item-1" onclick="confirm('clear'); return false;"><span><?=Lang::get('clear_cart')?></span></a></div>
+                <tr class="bdb0">
+                    <td class="w80"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="bproduct">
+                        <h2>
+                            <span><?=Lang::get('Total_items')?>:</span>
+                            <span id="items-cost" sign="<?= $elementsCurrencySign ?>">
+                                <?=TextHelper::formatPrice(
+                                    $elementsTotalCost,
+                                    $elementsCurrencySign
+                                )?>
+                            </span>
+                        </h2>
+                    </td>
+                    <td class="bproduct">
+                        <h2>
+                            <span><?=Lang::get('Total_delivery')?>:</span>
+                            <span sign="<?=$additionalSignSum ?>">
+                                <?=TextHelper::formatPrice(
+                                    $additionalPriceSum,
+                                    $additionalSignSum
+                                )?>
+                            </span>
+                        </h2>
+                    </td>
+                </tr>
+                <tr class="bdb0">
+                    <td class="w80"></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <div class="bigTotal bbprice ltr-for-rtl" style="width:270px;">
+                            <span><?=Lang::get('total')?>:</span>
+                                <span class="totalPrice" sign="<?= (string)$GLOBALS['Basket']['CollectionSummaries']['Taobao']['TotalCost']['ConvertedPriceList']['Internal']['Sign'] ?>">
+                                    <?=TextHelper::formatPrice(
+                                        $GLOBALS['Basket']['CollectionSummaries']['Taobao']['TotalCost']['ConvertedPriceList']['Internal'][0],
+                                        $GLOBALS['Basket']['CollectionSummaries']['Taobao']['TotalCost']['ConvertedPriceList']['Internal']['Sign']
+                                    )?>
+                                </span>
+                        </div>
+                    </td>
+                    <td class="w168 pr0"></td>
+                </tr>
+            </table>
+        <? } else { ?>
+            <h3 class="lgray tagc"> <?=Lang::get('empty_cart')?>! </h3>
+        <? } ?>
+
+        <?=$paginatorTao->display();?>
+        <div class="clearfix"></div>
+    </div>
+
+    <?php if (CMS::IsFeatureEnabled('Warehouse')) { ?>
+        <div <?=(empty($taobaoItems) ? 'style="display: block;"' : '');?> class="tab" id="whItems">
+            <? if (! empty($whItems)) { ?>
+                <table class="basket tsimple">
+                    <? foreach ($whItems as $item) {
+                        $sign = $item['CurrencySign'];
+                        ?>
+
+                        <tr class="del-item-1" id="item<?= $item['ItemId'] ?>">
+                            <td class="w80">
+                                <ul class="lproduct w80li">
+                                    <li>
+                                        <a href="index.php?p=item&id=<?= $item['ItemId']; ?>" class="pic">
+                                            <i><img width="70" height="70" src="<?=ProductsHelper::getImage(array_merge((array)$item, array('MainPictureUrl' => $item['PictureURL'])), 100)?>"></i>
+                                            <ins></ins>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </td>
+                            <td width="230">
+                                <p class="mb5"><span class="lgray"><?=Lang::get('good_code')?></span> <b><?= $item['ItemId']; ?></b></p>
+                                <p class="mb5"><span class="lgray"><?=Lang::get('vendor')?></span> <b><?= $item['VendorId'] ?></b></p>
+                                <p class="mb5"><span class="lgray"><?=Lang::get('category')?></span> <a href="index.php?p=category&cid=<?=$item['CategoryId']?>"><b><?=$this->escape($item['CategoryName'])?></b></a></p>
+                                <!--p class="lblue"><a href="index.php?p=item&id=<?= $item['ItemId']; ?>"><b class="item-title" itemid="<?=$item['Id'];?>"><?=$this->escape($item['ItemTitle']);?></b></a></p-->
+                            </td>
+                            <td>
+                                <table class="info infoitem">
+                                    <? if (! empty($item['ItemConfiguration'])) { ?>
+                                        <? foreach(explode(';', $item['ItemConfiguration']) as $cfg){ ?>
+                                            <? if($cfg) {?>
+                                                <tr><? $tmp_var = explode(':',$cfg);?>
+                                                    <td class="lgray"><?= current($tmp_var); ?>:</td>
+                                                    <td><b><?=end($tmp_var);?></b></td>
+                                                </tr>
+                                            <? } ?>
+                                        <? } ?>
+                                    <? } ?>
+                                    <tr>
+                                        <td>
+                                            <? if (! empty($item['ItemConfiguration'])) { ?>
+                                                <div class="clrfix"><a class="btn-small fll change-config" itemid="<?=$item['ItemId'];?>" basketid="<?=$item['Id'];?>"><span><?=Lang::get('change_config')?></span></a></div>
+                                            <? } ?>
+                                        </td>
+                                        <input name="<?=$item['Id'];?>_id"  id="<?=$item['Id'];?>_id" type="hidden" value="<?=$item['ItemId']?>" />
+                                        <input name="<?=$item['Id'];?>_quantity"  id="<?=$item['Id'];?>_quantity" type="hidden" value="<?=$item['Quantity']?>" />
+                                        <input name="<?=$item['Id'];?>_itemTitle"  id="<?=$item['Id'];?>_itemTitle" type="hidden" value="<?=$this->escape($item['ItemTitle'])?>" />
+                                        <input name="<?=$item['Id'];?>_promoId"  id="<?=$item['Id'];?>_promoId" type="hidden" value="<?=$item['PromoId']?>" />
+                                        <input name="<?=$item['Id'];?>_categoryId"  id="<?=$item['Id'];?>_categoryId" type="hidden" value="<?=$item['CategoryId']?>" />
+                                        <input name="<?=$item['Id'];?>_categoryName"  id="<?=$item['Id'];?>_categoryName" type="hidden" value="<?=$this->escape($item['CategoryName'])?>" />
+                                        <input name="<?=$item['Id'];?>_currencyName"  id="<?=$item['Id'];?>_currencyName" type="hidden" value="<?=$item['CurrencySign']?>" />
+                                        <input name="<?=$item['Id'];?>_externalURL"  id="<?=$item['Id'];?>_externalURL" type="hidden" value="<?=$item['ExternalURL']?>" />
+                                        <input name="<?=$item['Id'];?>_pictureURL"  id="<?=$item['Id'];?>_pictureURL" type="hidden" value="<?=$item['PictureURL']?>" />
+                                        <input name="<?=$item['Id'];?>_vendorId"  id="<?=$item['Id'];?>_vendorId" type="hidden" value="<?=$item['VendorId']?>" />
+                                        <input name="<?=$item['Id'];?>_weight"  id="<?=$item['Id'];?>_weight" type="hidden" value="<?=$item['Weight']?>" />
+                                    </tr>
+                                    <tr>
+                                        <td class="lgray"><nobr><?=Lang::get('price')?>:</nobr></td>
+                                        <td><b class="ltr-for-rtl"><span id="price-1-<?=$item['Id']?>">
+                                        <?=TextHelper::formatPrice($item['Price'], $item['CurrencySign'])?>
+                                            </b>
+                                        </td>
+                                    </tr>
+
+                                    <? if(isset($userdiscount)){  ?>
+                                        <tr>
+                                            <td class="lgray"><nobr><?=Lang::get('discount')?>:</nobr></td>
+                                            <td><b class="ltr-for-rtl"><?=$userdiscount['Discount']?> % </b>
+                                            </td>
+                                        </tr>
+
+                                    <? } ?>
+                                </table>
+                            </td>
+                            <td>
+                                <div class="calc">
+                                    <span class="lgray mr10"><?=Lang::get('quantity')?>:</span>
+                                    <b>
+                                        <input type="text" value="<?=$item['Quantity']?>" class="w20 tar quantity" id="count-<?= $item['Id'] ?>" itemid="<?=$item['Id'];?>" />
+                                    </b>
+                                <span class="num-controls">
+                                    <span class="plus unselectable" rel="count-<?= $item['Id'] ?>" itemid="<?=$item['Id'];?>">+</span>
+                                    <span class="minus unselectable" rel="count-<?= $item['Id'] ?>" itemid="<?=$item['Id'];?>">-</span>
+                                </span>
+                                <span class="total bbprice ltr-for-rtl" id="total-price-<?=$item['Id'];?>">
+                                    <?=TextHelper::formatPrice($item['Cost'], $item['CurrencySign'])?>
+                                </span>
+                                </div>
+                                <div class="mess_oper">
+                                    <label for="message" class="lgray"><?=Lang::get('comments_for_operator')?>:</label>
+                                    <textarea name="" class="fs11 comment-area" itemid="<?=$item['Id'];?>"><?=$item['Comment']?></textarea>
+                                    <i class="i copy" id="copy_<?=$item['Id'];?>" is-change-comment="false" itemid="<?=$item['Id'];?>"></i>
+                                </div>
+                            </td>
+                            <td class="w168 pr0">
+                                <? $id = $item["Id"]; ?>
+                                <div class="clrfix mb10"><a class="btn-small btn-delete-item fll" href="#" item="item-1" onclick="confirm('<?= $id; ?>'); return false;"><span><?=Lang::get('drop_item')?></span></a></div>
+                                <div class="clrfix"><a class="btn-small btn-add fll add-to-favourites" href="<?=General::generateUrl('basket', array('action' => 'move_to_favourites','id' => $id))?>" itemid="<?=$id;?>"><span><?=Lang::get('to_favourites')?></span></a></div>
+                            </td>
+                        </tr>
+                    <? } ?>
+
+                    <div class="clrfix mb10"><a class="btn-small btn-delete-item fll" href="#" item="item-1" onclick="confirm('clear'); return false;"><span><?=Lang::get('clear_cart')?></span></a></div>
+                    <tr class="bdb0">
+                        <td class="w80"></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <div class="bigTotal bbprice ltr-for-rtl" style="width:270px;">
+                                <span><?=Lang::get('total')?>:</span>
+
+                                <span class="totalPrice" sign="<?= (string)$GLOBALS['Basket']['CollectionSummaries']['Warehouse']['TotalCost']['ConvertedPriceList']['Internal']['Sign'] ?>">
+                                    <?=TextHelper::formatPrice(
+                                        $GLOBALS['Basket']['CollectionSummaries']['Warehouse']['TotalCost']['ConvertedPriceList']['Internal'][0],
+                                        $GLOBALS['Basket']['CollectionSummaries']['Warehouse']['TotalCost']['ConvertedPriceList']['Internal']['Sign']
+                                    )?>
+                                </span>
+                            </div>
+                        </td>
+                        <td class="w168 pr0"></td>
+                    </tr>
+                </table>
+            <? } else { ?>
+                <h3 class="lgray tagc"> <?=Lang::get('empty_cart')?>! </h3>
+            <? } ?>
+
+            <?=$paginatorWh->display();?>
+            <div class="clearfix"></div>
+        </div>
+    <?php } ?>
+    </div>
+    <!-- Если есть минимальный заказ --->
+    <? if (General::getConfigValue('min_order_cost')) { ?>
+        <div style="display:block; width:100%; height:30px; background:#CCC; border:#900 1px solid; padding:10px;">
+            <?=Lang::get('min_cost')?>
+            <b>
+                <?=TextHelper::formatPrice(
+                    General::getConfigValue('min_order_cost'),
+                    $sign
+                )?>
+            </b>
+            <br>
+        </div>
+    <? } ?>
+    <? $tot=$basket->getTaoItemsTotalCost() + $basket->getWhItemsTotalCost() + $total_GlobalDelivery; ?>
+
+    <div class="bgr-panel mt5">
+        <? if (isset(General::$siteConf['min_order_cost'])) { ?>
+            <? if ($tot > General::$siteConf['min_order_cost']){ ?>
+                <? if ($loggedIn || General::getConfigValue('simplified_registration')) { ?>
+                    <a id="makeOrderBtn" href="index.php?p=userorder&step1" class="btn flr tostep1"><?=Lang::get('make_order')?></a>
+                <? }else{ ?>
+                    <a href="index.php?p=login" class="btn flr"><?=Lang::get('site_login')?></a>
+                <? } ?>
+            <? } ?>
+        <? } else { ?>
+            <? if ($loggedIn || General::getConfigValue('simplified_registration')) { ?>
+                <a id="makeOrderBtn" href="index.php?p=userorder&step1" class="btn flr tostep1"><?=Lang::get('make_order')?></a>
+            <? }else{ ?>
+                <a href="index.php?p=login" class="btn flr"><?=Lang::get('site_login')?></a>
+            <? } ?>
+        <? } ?>
+
+    </div>
+<? } else { ?>
+    <h3 class="lgray tagc"> <?=Lang::get('empty_cart')?>! </h3>
+<? } ?>
+
+<!-- /.basket -->
+
+</div>
+
+</div></div>
+
+<?=Plugins::invokeEvent('onUserCartStatistics', array('basket' => $taobaoItems))?>
+
+<!-- /.main -->
+<?=Lang::loadJSTranslation(array('loading', 'change_options_gods','saving'))?>
+<!--noindex-->
+<script type="text/javascript">
+
+    var item_id = 0;
+    var price_round_decimals = <?=(int)General::$siteConf['price_round_decimals']?>;
+
+    $(function(){
+        $("#dialog-confirm:ui-dialog").dialog("destroy");
+        $("#dialog-confirm").dialog({
+            autoOpen: false,
+            modal: true,
+            buttons : {
+                "<?=Lang::get('yes')?>" : function() {
+                    $(".ui-dialog-buttonpane button").attr("disabled", true).addClass("ui-state-disabled");
+                    if (item_id=="clear") {
+                        document.location.href = 'index.php?p=delete_all_from_basket';
+                    } else {
+                        document.location.href = 'index.php?p=delete_from_basket&del=' + item_id;
+                    }
+                },
+                "<?=Lang::get('no')?>" : function() {
+                    $(this).dialog("close");
+                }
+            }
+        });
+
+        $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+        $( "#dialog-form" ).dialog({
+            autoOpen: false,
+            width:210,
+            height:160,
+            modal: true,
+            buttons: {
+                "<?=Lang::get('close')?>": function() {
+                    $( this ).dialog( "close" );
+                }
+            }
+        });
+        
+        $("#change-window").dialog({
+            autoOpen: false,
+            modal: true,
+            buttons : {
+                "<?=Lang::get('save')?>" : function() {
+                    saveNewConfig();
+                },
+                "<?=Lang::get('cancel')?>" : function() {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    });
+
+    function confirm(id) {
+        item_id = id;
+        if(id == 'clear'){
+            $('#sure_delete').text('<?=Lang::get('sure_delete_all')?>');
+        }
+        else{
+            $('#sure_delete').text('<?=Lang::get('sure_delete')?>');
+        }
+        $("#dialog-confirm").dialog("open");
+        return false;
+    }
+
+</script>
+<!--/noindex-->

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controller>
+	<alias>
+		<data name='alias'>main_user_agreement</data>
+        <data name='lang'>ru</data>
+		<data name='title'>Пользовательское соглашение</data>
+        <data name='block_id'>Пользовательское соглашение</data>
+    </alias>
+	<alias>
+		<data name='alias'>policy</data>
+        <data name='lang'>ru</data>
+		<data name='title'>Политика безопасности</data>
+        <data name='block_id'>Политика безопасности</data>
+    </alias>
+	<alias>
+		<data name='alias'>about_us</data>
+        <data name='lang'>ru</data>
+		<data name='title'>О нас</data>
+        <data name='block_id'>О нас</data>
+    </alias>
+	<alias>
+		<data name='alias'>contacts</data>
+        <data name='lang'>ru</data>
+		<data name='title'>Контакты</data>
+        <data name='block_id'>Контакты</data>
+    </alias>
+	<alias>
+		<data name='alias'>help</data>
+        <data name='lang'>ru</data>
+		<data name='title'>Помощь</data>
+        <data name='block_id'>Помощь</data>
+    </alias>
+	<alias>
+		<data name='alias'>main_user_agreement</data>
+        <data name='lang'>en</data>
+		<data name='title'>User agreement</data>
+        <data name='block_id'>User agreement</data>
+    </alias>
+	<alias>
+		<data name='alias'>policy</data>
+        <data name='lang'>en</data>
+		<data name='title'>Security policy</data>
+        <data name='block_id'>Security policy</data>
+    </alias>
+	<alias>
+		<data name='alias'>about_us</data>
+        <data name='lang'>en</data>
+		<data name='title'>About us</data>
+        <data name='block_id'>About us</data>
+    </alias>
+	<alias>
+		<data name='alias'>contacts</data>
+        <data name='lang'>en</data>
+		<data name='title'>Contacts</data>
+        <data name='block_id'>Contacts</data>
+    </alias>
+	<alias>
+		<data name='alias'>help</data>
+        <data name='lang'>en</data>
+		<data name='title'>Help</data>
+        <data name='block_id'>Help</data>
+    </alias>
+	<alias>
+		<data name='alias'>404</data>
+        <data name='lang'>en</data>
+		<data name='title'>404 Not Found</data>
+        <data name='block_id'>404 Not Found</data>
+    </alias>
+	<alias>
+		<data name='alias'>404</data>
+        <data name='lang'>ru</data>
+		<data name='title'>404 Страница не найдена</data>
+        <data name='block_id'>404 Страница не найдена</data>
+    </alias>
+</controller>

@@ -1,0 +1,75 @@
+<style type="text/css">
+	.no_discount{
+		width:10px;
+		height:185px;
+		background:#FFFFFF;
+		
+		position:absolute;
+		z-index:10;
+		top:0px;
+		right:-10px;
+	}
+	.yes_discount{
+		background: url("/skidka_red3.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+		color: #FFFFFF;
+		font-size: 15px;
+		font-weight: bold;
+		height: 155px;
+		padding-top: 30px;
+		position: absolute;
+		right: -10px;
+		top: 0;
+		width: 50px;
+		z-index: 10;
+	}
+</style>
+<? if (isset($list[0])) { ?>
+<div class="bproduct <?=$type?>-rating-list">
+    <h2 class="mb25"><span><?=Lang::get($type)?></span></h2>
+    <ul class="lproduct flin w700 w160li <? if($displayAsCarousel){ ?> jcarousel-skin <? } ?> clrfix">
+        <? foreach ($list as $item) { ?>
+        <li title="<?= $item['Title'] ?>" style="position:relative; overflow:visible">
+            <a class="pic" href="<?=UrlGenerator::generateItemUrl($item['Id'])?>">
+                <i>
+                	<img src="<?= $item['MainPictureUrl'] ?>_160x160.jpg">
+                    <? if ((count($item['PromotionPrice'])>0) and (!General::getConfigValue('hide_discont_lists'))) { 
+                    	$old_price = $item['Price']['ConvertedPriceList'][0]['Val'];
+                        $new_price = $item['PromotionPrice'][0]['Val'];
+                        $discount = floor((($old_price - $new_price)/$old_price)*100);
+                        
+                        if ($discount){
+                    ?>
+                    <div class="yes_discount">-<?=$discount?>%</div>
+                    <? }} else{ ?>
+                	<div class="no_discount"></div>
+                    <? } ?>
+                </i>
+                <ins></ins>
+            </a>
+            <div class="price">
+                <div class="line"></div>
+                <? if ((count($item['PromotionPrice'])>0) and (!General::getConfigValue('hide_discont_lists'))) { ?>
+                <a href="<?=UrlGenerator::generateItemUrl($item['Id'])?>">
+                    <span><?=General::getCurrencyPromoPrice($item)?></span>
+                </a>
+                <? } else{?>
+                <a href="<?=UrlGenerator::generateItemUrl($item['Id'])?>">
+                    <span><?=General::getCurrencyPrice($item)?></span>
+                </a>
+                <? } ?>
+                <a href="<?=UrlGenerator::generateItemUrl($item['Id'])?>">
+                    <ins class="name"><?= $item['Title'] ?></ins>
+                    <span class="glow"></span>
+                </a>
+
+            </div>
+            <? if ((count($item['PromotionPrice'])>0) and (!General::getConfigValue('hide_discont_lists'))) { ?>
+                <div align="center" class="wrapper_sale_item" style="height:14px; top:137px">
+                    <span class="old_price"><?=General::getCurrencyPrice($item)?></span>
+                </div>
+                <? } ?>
+        </li>
+        <? } ?>
+    </ul>
+</div>
+<? } ?>

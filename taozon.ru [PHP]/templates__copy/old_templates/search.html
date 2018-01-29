@@ -1,0 +1,27 @@
+<?=$Header?>
+<?=$Crumbs?>
+    <div class="main"><div class="canvas clrfix">
+	<!-- .col240 -->
+	<div class="col240">
+        <? if(isset($GLOBALS['cats']) && count($GLOBALS['cats']) > 0) { ?> 
+        <small> Товар найден в категориях: </small>
+        <ul class="mcats">
+            <? $cid = $_GET['cid']; ?>
+            <? foreach($GLOBALS['cats'] as $category) { ?>
+            <? $class = ($_GET['cid'] == $category['id'])?'red':''; ?>
+            <li <?=($cat['id'] == $cid?'class="active"':'')?>><a href="<?=$GLOBALS['url'];?>&cid=<?=$category['id'];?>"> <?=$category['name'];?> (<?=$category['itemcount']?>)</a></li>
+            <? } ?>
+        </ul> 
+        <? } ?>
+        
+        <?=$SearchProp?>
+	</div>
+	<!-- /.col240 -->
+
+	<!-- .col700 -->
+    <div class="col700 clrfix avisited">
+            <?=$Search?>
+	</div>
+		<!-- /.col700 -->
+    </div></div><!-- /.main -->
+<?=$Footer?>

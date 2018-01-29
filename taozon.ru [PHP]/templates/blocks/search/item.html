@@ -1,0 +1,15 @@
+
+<li class="product">
+    <a class="pic" href="#" onClick="return false;">
+        <i>
+            <div>
+                <? if ($item['ErrorCode'] == 'NotFound') { ?>
+                    <?=Lang::get('ItemNotAvailable')?>
+                <? } else { ?>
+                    <?=$item['ErrorCode']?>
+                <? } ?>
+            </div>
+        </i>
+        <ins></ins>
+    </a>
+</li>

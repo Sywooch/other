@@ -1,0 +1,51 @@
+<div class="tabs-content">
+    <form action="index.php?p=recovery" class="form" method="post">
+        <div id="recover" class="userform">
+            
+            <? if($error_recovery){ ?>
+            <div class="error">
+                <?=$error_recovery?>
+            </div>
+            <? } ?>
+            <? if($success_recovery){ ?>
+            <div class="success">
+                <?=$success_recovery?>
+            </div>
+            <? } ?>
+            
+            <div class="form-row form-margin">
+                <label for="userid" class="long_label"><?=Lang::get('login_or_email')?></label>
+				<input id="userid" type="text" name="userid" class="form-field" />
+            </div>
+			
+            <div class="form-row recovery enter">
+                <label class="long_label">&nbsp;</label>
+                <input type="hidden" name="recovery" value="<?=Lang::get('recover')?>" />
+                <input type="submit" id="submitb" value="<?=Lang::get('recover')?>" class="btn_office">
+            </div>
+        </div>
+    </form>
+</div>
+<!--noindex-->
+<script type="text/javascript">
+$(function() 
+{
+    function checkrecovery()
+    {
+        var f = true;
+        if ($('#userid').val() == '') f = false;
+        if (!f) {
+            $('#submitb').attr('disabled', 'disabled');
+            $('#submitb').addClass('btn_office_disabled');
+        } else {
+            $('#submitb').removeAttr('disabled');
+            $('#submitb').removeClass('btn_office_disabled');
+        }
+    }
+    $('#userid').keyup(function () {
+        checkrecovery();
+    });
+    checkrecovery();
+});
+</script>
+<!--/noindex-->

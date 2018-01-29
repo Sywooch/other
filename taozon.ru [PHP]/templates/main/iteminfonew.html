@@ -1,0 +1,755 @@
+<style type="text/css">
+
+.discount{
+    position: absolute;
+    right: -13px;
+    top: -3px;
+    z-index: 2;
+    background:url("/skidka_red.png") no-repeat;
+    
+    font-family:"Trebuchet MS","Helvetica CY",sans-serif;
+    color: #FFFFFF;
+    font-size: 25px;
+    height: 53px;
+    text-shadow: 1px 1px 1px #750C91;
+    width: 65px;
+    padding-top:20px;
+}
+
+
+#addToBasket .i.rounder{
+    background-position:-20px -411px !important;
+}
+
+</style>
+
+
+<!-- Вставлем в просмотренные-->
+<?
+if (! General::getConfigValue('show_user_history_views')) {
+    if (Session::isAuthenticated()) {
+        Plugins::invokeEvent('AddItemHistory',array('nme'=>$iteminfo['title'],'id'=>$iteminfo['id'],'price'=>General::getCurrencyPrice($iteminfo),'pic'=>$iteminfo['mainpictureurl'],'promo_price'=>General::getCurrencyPromoPrice($iteminfo)));
+    }
+}
+?>
+<!-- Вставили  -->
+
+<div class="spacer mb20"><div class="wrap clrfix"></div></div>
+
+<div class="bigtitle"><div class="wrap clrfix">
+    <h1><?=$this->escape($iteminfo['title'])?></h1>
+
+</div></div>
+
+<!-- .main -->
+<div class="main"><div class="wrap clrfix">
+<div class="fll col690" id="overlay-wrapper">
+<div id="overlay"></div>
+
+<div class="bproduct clrfix">
+
+    <h2 class="mb25"><span><?=Lang::get('product_info')?></span></h2>
+</div>
+<div class="fll col330">
+    <div class="bprd">
+        <ul class="lproduct flin w310li clrfix">
+            <li>
+                <a href="<?= $iteminfo['mainpictureurl'] ?>" class="pic cboxElement pictures" id="main-image-href" alt="<?=$this->escape($iteminfo['title'])?>" title="<?=$this->escape($iteminfo['title'])?>">
+                    <i>
+
+                        <img id="main-image" src="<?= ProductsHelper::getImage($iteminfo, 310) ?>" default="css/i/default-image.gif" alt="" width="310" />
+
+
+                    <? if ((count($iteminfo['PromotionPrice'])>0) and (!General::getConfigValue('hide_discont_lists'))) { 
+                            $old_price = $iteminfo['Price']['ConvertedPriceList'][0]['Val'];
+                            $new_price = $iteminfo['PromotionPrice'][0]['Val'];
+                            $discount = floor((($old_price - $new_price)/$old_price)*100);
+                            
+                            if ($discount){
+                        ?>
+                            <div class="discount">
+                                -<? echo $discount; ?>%
+                            </div>
+                        <?  }
+                        } ?>
+
+                    </i>
+                    <ins></ins>
+                </a>
+            </li>
+        </ul>
+        <ul class="lproduct flin w320 w70li clrfix">
+            <? if (is_array($iteminfo['pictures'])) foreach ($iteminfo['pictures'] as $item) { ?>
+            <li>
+                <a href="<?= ProductsHelper::getImage($item) ?>" class="pic switch cboxElement pictures" mainpic="<?=$item['url']?>" mini-pic="<?= ProductsHelper::getImage($item, 310) ?>">
+                    <i><img src="<?= ProductsHelper::getImage($item, 70) ?>" alt="" width="70" /></i>
+                    <ins></ins>
+                </a>
+            </li>
+            <? } ?>
+        </ul>
+    </div>
+    <div class="share_social">
+<? if (! General::getConfigValue('share_social_code')) { ?>
+        <div class="share42init" data-path="/i/"></div>
+        <script type="text/javascript" src="js/share42.js?<?=CFG_SITE_VERSION;?>"></script>
+<? } elseif (General::getConfigValue('share_social_code') == 'none') { ?>
+<? } else {
+    echo General::getConfigValue('share_social_code');
+} ?>
+    </div>
+</div>
+<div class="flr col340">
+<div class="btitle f11 mb10 clrfix">
+
+    <div class="fll"><?=Lang::get('good_code')?> <b><?= $iteminfo['id'] ?></b></div>
+    <? if (! General::getConfigValue('hide_taobao_link') && empty($isWarehouseProduct) && !$isFromExtendedSearch) { ?>
+    <div class="flr"><a target="_blank" rel="nofollow" href="<?= $iteminfo['taobaoitemurl'] ?>" alt="<?=Lang::get('this_product_at')?> Taobao.com" title="<?=Lang::get('this_product_at')?> Taobao.com"><?=Lang::get('this_product_at')?> Taobao.com</a></div>
+    <? } ?>
+</div>
+<div class="bgr-block bx5">
+    <? if($iteminfo['configurations']){ ?>
+    <div class="titlecat"><?=Lang::get('select_configuration')?>:</div>
+    <? } ?>
+
+
+    <table class="info infoitem f11">
+        <!--noindex-->
+        <script type="text/javascript">
+            configurations = {};
+        </script>
+        <!--/noindex-->
+        <? if(is_array($iteminfo['configurations'])) { ?>
+        <? foreach ($iteminfo['configurations'] as $configuration) { ?>
+            <!--noindex-->
+            <script type="text/javascript">
+                configurations['<?= $configuration['id'] ?>'] = {
+                    cname: '<?= $configuration['name'] ?>',
+                    val: {}
+                };
+            </script>
+            <!--/noindex-->
+        <? } ?>
+        <? foreach ($iteminfo['configurations'] as $configuration) { ?>
+            
+            <tr class="item-configuration">
+                <td class="w100" id="cname<?= $configuration['id'] ?>" config_chy="<?= $configuration['name_cny'] ?>:">
+                    <?= $configuration['name'] ?>:
+                </td>
+                <td>
+                    <? $f = false;
+                       foreach ($configuration['values'] as $value) {
+                           if (@$value['miniimageurl']) $f = true;
+                       }
+                       if (isset($iteminfo['HasHierarchicalConfigurators'])) {
+                            $checkHierarchy = ($iteminfo['HasHierarchicalConfigurators'] == 'false') ? true : false;
+                       } else {
+                            $checkHierarchy = true;
+                       }
+                       if(in_array('ConfigurationItemImages', General::$enabledFeatures) && $f && $checkHierarchy) { ?>
+                        <ul class="list_minipic clearfix" id="list_<?=$configuration['id']?>">
+                            <? $i = 0; ?>
+                            <? foreach ($configuration['values'] as $value) { ?>
+                            <? $name = (!empty($value['alias'])) ? $value['alias'] : $value['name']; ?>
+                            <? $class_image = (!$i) ? 'list_minipic_selected' : ''; ?>
+                                <? if (@$value['miniimageurl']) { ?>
+                                <li title="<?=$name?>" class="<?=$class_image?>">
+                                    <a style="background:url(<?=$value['miniimageurl']?>) center no-repeat;" href="#">
+                                        <span><?=$name?></span>
+                                    </a>
+                                    <i>&nbsp;</i>
+                                </li>
+                                <? } else { ?>
+                                    <li class="txt_view" title="<?=$name?>">
+                                        <a href="#">
+                                        <span><?=$name?></span>
+                                        </a>
+                                        <i>&nbsp;</i>
+                                    </li>
+                                <? } ?>
+                                <? $i++; ?>
+                            <? } ?>
+                        </ul>
+                       <!--noindex-->
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                var items = $('ul#list_<?= $configuration["id"]?>.list_minipic li a');
+                                items.click(function(){
+                                    $('ul#list_<?= $configuration["id"]?>.list_minipic li').removeClass('list_minipic_selected');
+                                    $(this).parent().addClass('list_minipic_selected');
+                                    //Выводим большую картинку картинку
+                                    var pattern = /url\(|\)|"|'/g;                                    
+                                    var sm_pic = $(this).css('backgroundImage').replace(pattern,"").replace("_30x30.jpg","");
+                                    if (sm_pic != 'none') {
+                                        $('#main-image').attr('src', $('#main-image').attr('default'));
+                                        $('#main-image').attr('src', sm_pic+'_310x310.jpg');
+                                        $('#main-image-href').attr('href', sm_pic);                                        
+                                        $('#configPicture').val(sm_pic);
+                                        $('#configPictureFav').val(sm_pic);
+                                    }
+                                    //==============================
+                                    var span_text = $(this).find('span').text();
+                                    $("select#<?= $configuration['id']?> option")
+                                        .each(function() {
+                                            this.selected = (this.text == span_text);
+                                        });
+                                    $("select#<?= $configuration['id'] ?>").change();
+                                    return false;
+                                });
+                            });
+                        </script>
+                        <!--/noindex-->
+                        <select style="display:none;" name="<?= $configuration['id'] ?>" id="<?= $configuration['id'] ?>" onchange="changeconfig()" class="w200">
+                            <? foreach ($configuration['values'] as $value) { ?>
+                            <!--noindex-->
+                            <script type="text/javascript">
+                                configurations['<?= $configuration['id'] ?>']['val']['<?= $value['id'] ?>'] =
+                                        '<?= $value['alias'] ? $value['alias'] : $value['name'] ?>';
+                            </script>
+                            <!--/noindex-->
+                            <option value="<?= $value['id'] ?>" id="val<?= $value['id'] ?>"
+                                    config_chy="<? if (!empty($value['alias_cny'])) { ?><?= $value['alias_cny'] ?><? } else { ?><?= $value['name_cny'] ?><? } ?>"
+                                    >
+                                <? if (!empty($value['alias'])) { ?><?= $value['alias'] ?><? } else { ?><?= $value['name'] ?><? } ?>
+                            </option>
+                            <? } ?>
+                        </select>
+                    <? } else { ?>
+                        <select name="<?= $configuration['id'] ?>" id="<?= $configuration['id'] ?>" onchange="changeconfig()" class="w200">
+                            <? foreach ($configuration['values'] as $value) { ?>
+                            <!--noindex-->
+                            <script type="text/javascript">
+                                configurations['<?= $configuration['id'] ?>']['val']['<?= $value['id'] ?>'] =
+                                        '<?= $value['alias'] ? $value['alias'] : $value['name'] ?>';
+                            </script>
+                            <!--/noindex-->
+                            <option value="<?= $value['id'] ?>" id="val<?= $value['id'] ?>"
+                                    config_chy="<? if (!empty($value['alias_cny'])) { ?><?= $value['alias_cny'] ?><? } else { ?><?= $value['name_cny'] ?><? } ?>"
+                                    >
+                                <? if (!empty($value['alias'])) { ?><?= $value['alias'] ?><? } else { ?><?= $value['name'] ?><? } ?>
+                            </option>
+                            <? } ?>
+                        </select>
+                    <? } ?>
+                </td>
+            </tr>
+        <? }} ?>
+
+        <tr class="item-status" <? if (General::getConfigValue('hide_item_info_status')) { ?> style="display: none;"<? } ?>>
+            <td class="w100"><?=Lang::get('status')?>:</td>
+            <td><b><?=Lang::get('status'.$iteminfo['StuffStatus'])?></b></td>
+        </tr>
+        <tr class="item-all-quantity" <? if (General::getConfigValue('hide_item_info_in_existence')) { ?> style="display: none;"<? } ?>>
+            <td class="w100"><?=Lang::get('in_existence')?>:</td>
+            <td><b id="c_count"><?= $iteminfo['masterquantity'] ?> <?=Lang::get('pcs')?></b></td>
+        </tr>
+        <? if($iteminfo['ApproxWeight']){ ?>
+        <tr class="item-approx-weight" <? if (General::getConfigValue('hide_item_info_weight')) { ?> style="display: none;"<? } ?>>
+            <td class="w100"><?=Lang::get('approximate_weight')?>:</td>
+            <td><?=$iteminfo['ApproxWeight']?> <?=Lang::get('kg')?></td>
+        </tr>
+        <? } ?>
+        <? if($iteminfo['RealWeight']){ ?>
+        <tr class="item-real-weight" <? if (General::getConfigValue('hide_item_info_weight')) { ?> style="display: none;"<? } ?>>
+            <td class="w100"><?=Lang::get('real_weight')?>:</td>
+            <td><?=$iteminfo['RealWeight']?> <?=Lang::get('kg')?></td>
+        </tr>
+        <? } ?>
+        <? if($iteminfo['FeaturedValues']['SalesInLast30Days']){ ?>
+        <tr class="item-sales-volume" <? if (General::getConfigValue('hide_item_info_sales_last30day')) { ?> style="display: none;"<? } ?>>
+            <td class="w100"><?=Lang::get('sales_volume1')?>:</td>
+            <td><?=$iteminfo['FeaturedValues']['SalesInLast30Days']?></td>
+        </tr>
+        <? } ?>
+        <tr class="item-price" <? if (General::getConfigValue('hide_item_info_price1')) { ?> style="display: none;"<? } ?>>
+            <td class="w100"><?=Lang::get('price')?>:</td>
+            <td><b id="c_cost" class="ltr-for-rtl"></b> <b id="c_promo_cost"></b></td>
+        </tr>
+        <? if(isset($iteminfo['deliveryinfo']) && count($iteminfo['deliveryinfo'])) { ?>
+        <tr class="item-local-delivery" id="local_delivery"<? if (General::getConfigValue('hide_item_info_price_local_delivery')) { ?> style="display: none;"<? } ?>>
+            <td class="td1"><?=Lang::get('local_delivery')?>:</td>
+            <td class="td2" id="local_delivery_prices">
+                <? foreach($iteminfo['deliveryinfo'] as $delivery){ ?>
+                <? foreach($delivery['DisplayedMoneys'] as $i=>$p) {?>
+                    <div style="display: block">
+                        <?=Lang::get($delivery['mode'].'_delivery')== $delivery['mode'].'_delivery' ? $delivery['mode'] : Lang::get($delivery['mode'].'_delivery')?>:
+                        <?=$p['Val']." ".$p['Sign']?>
+                    </div>
+                    <? } ?>
+                <? } ?>
+            </td>
+        </tr>
+        <? } ?>
+
+        <tr class="item-quantity-edit" >
+            <td class="w100"><?=Lang::get('quantity')?>:</td>
+            <td>
+                <!-- <input type="hidden" name="configurationId" id="confid" value=""/>
+           <input type="hidden" name="itemConfiguration" id="confitem" value=""/> -->
+                <b><input type="text" value="1" class="w20 tar input_numeric_only" name="quantity" id="quantity" max="<?= $iteminfo['masterquantity'] ?>" price="<?= $iteminfo['ConvertedPriceWithoutSign'] ?>" /></b>
+                                    <span class="num-controls">
+                                        <span class="plus">+</span>
+                                        <span class="minus">-</span>
+                                    </span>
+            </td>
+        </tr>
+
+        <? if($iteminfo['configurations']){ ?>
+        <tr class="item-selected-configuration" id="c_cur_row">
+            <td class="td1"><?=Lang::get('selected_conf')?>:</td>
+            <td class="td2" id="c_cur">...</td>
+        </tr>
+        <? } ?>
+        <? if(@$iteminfo['Features'] && is_array($iteminfo['Features'])){ ?>
+        <tr class="item-features" <? if (General::getConfigValue('hide_item_info_features')) { ?> style="display: none;"<? } ?>>
+            <td class="td1"><nobr><?=Lang::get('features')?>:</nobr></td>
+            <td class="td2">
+                <?=implode(', ', $iteminfo['Features'])?>
+            </td>
+        </tr>
+        <? } ?>
+        <?=    Plugins::invokeEvent('ShowGeoLocateAtItemInfo',array('LocalVal'=>@$_SESSION['CountryISO'])) ?>
+
+        <tr class="total">
+            <td><?=Lang::get('total')?>:</td>
+            <td style="vertical-align: middle;"><span style="display: block" class="dl mr15 ltr-for-rtl" id="total"><img src="i/ajax-loader-transparent.gif" /></span></td>
+        </tr>
+        <tr class="addcart">
+            <td colspan="2">
+                <?
+                $lexicons = array('translation_loading',
+                    'add_to_cart','drop_from_cart',
+                    'pcs','responses_loading',
+                    'item_not_exist','good_added_to_cart',
+                    'delete_from_cart','good_not_added',
+                    'good_deleted_from_basket','add_to_cart',
+                    'product_not_removed'
+                );
+                foreach($lexicons as $l){
+                    ?>
+                    <div id="<?=$l?>" style="display: none"><?=Lang::get($l)?></div>
+                    <?
+                }
+                ?>
+
+                <? if($iteminfo['IsSellAllowed'] == 'true'){ ?>
+
+                <form action="index.php" id="addToBasket">
+
+
+                    <a href="javascript:;" class="button button-big addbasket icon remove-action remove_from_basket" id="basket-action" title="<?=Lang::get('drop_from_cart')?>" alt="<?=Lang::get('drop_from_cart')?>"><span><i class="i rounder item-remove"></i><?=Lang::get('drop_from_cart')?></span></a>
+                    <a href="javascript:;" class="button button-big addbasket icon add-action add_to_basket" style="display: none" id="basket-action" title="<?=Lang::get('add_to_cart')?>" alt="<?=Lang::get('add_to_cart')?>"><span><i class="i rounder item-add"></i><?=Lang::get('add_to_cart')?></span></a>
+
+                    <?
+                    $cat = @end($GLOBALS['itempath']);
+
+                    ?>
+                    <input type="hidden" name="itemTitle" value="<?=$this->escape($iteminfo['title'])?>" />
+                    <input type="hidden" name="price" value="<?=$iteminfo['convertedpricewithoutsign']?>" />
+                    <input type="hidden" name="currencyName" value="<?=$iteminfo['currencyname']?>" />
+                    <input type="hidden" name="externalURL" value="<?=$iteminfo['taobaoitemurl']?>" />
+                    <input type="hidden" id="configPicture" name="pictureURL" value="<?=$iteminfo['mainpictureurl']?>" />
+                    <input type="hidden" name="vendorId" value="<?=$iteminfo['vendorid']?>" />
+                    <input type="hidden" name="categoryName" value="<?=$this->escape(@$cat['Name'])?>" />
+                    <input type="hidden" name="categoryId" value="<?=@$cat['Id']?>" />
+                    <input type="hidden" name="id" value="<?=$iteminfo['id']?>" />
+                    <input type="hidden" name="weight" value="<?=@(float)$iteminfo['ApproxWeight']?>" />
+                    <input type="hidden" name="comment" value="" />
+                </form>
+
+                <p class="mt15 clrfix">
+
+                    <a class="btn-small btn-remove fll remove_from_note" id="note-action" href="#"><span><?=Lang::get('drop_from_fav')?></span></a>
+                    <a class="btn-small btn-add fll add_to_note" id="note-action" href="#"><span><?=Lang::get('add_to_fav')?></span></a>
+
+                <form action="index.php" id="addToFavourites">
+                    <input type="hidden" name="itemTitle" value="<?=$this->escape($iteminfo['title'])?>" />
+                    <input type="hidden" name="price" value="<?=$iteminfo['convertedpricewithoutsign']?>" />
+                    <input type="hidden" name="currencyName" value="<?=$iteminfo['currencyname']?>" />
+                    <input type="hidden" name="externalURL" value="<?=$iteminfo['taobaoitemurl']?>" />
+                    <input type="hidden" id="configPictureFav" name="pictureURL" value="<?=$iteminfo['mainpictureurl']?>" />
+                    <input type="hidden" name="vendorId" value="<?=$iteminfo['vendorid']?>" />
+                    <input type="hidden" name="categoryName" value="<?=$this->escape(@$cat['Name'])?>" />
+                    <input type="hidden" name="categoryId" value="<?=@$cat['Id']?>" />
+                    <input type="hidden" name="weight" value="<?=@(float)$iteminfo['ApproxWeight']?>" />
+                    <input type="hidden" name="id" value="<?=$iteminfo['id']?>" />
+                    <input type="hidden" name="comment" value="" />
+                </form>
+                </p>
+
+                <? } else { ?>
+                <h3><?=Lang::get('item_not_allowed')?></h3>
+                <h3><?=Lang::get($iteminfo['SellDisallowReason'])?></h3>
+                <? } ?>
+            </td>
+        </tr>
+    </table>
+</div>
+<? if(defined('CFG_SHOW_SOCIAL_BLOCK')) if(CFG_SHOW_SOCIAL_BLOCK) { ?>
+<div class="socblocks mb20 clrfix">
+    <? if(!General::getConfigValue('iteminfo_hide_social')){ ?>
+    <div class="fll col55w">
+        <div class="title"><?=Lang::get('share_with_friends')?>:</div>
+        <table>
+            <?if(General::getConfigValue('vkLikeWidget')){?>
+            <tr>
+                <td class="vk">
+                    <?if(General::getConfigValue('vkLikeWidget')){?>
+                    <!--noindex-->
+                    <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?52"></script>
+
+                    <script type="text/javascript">
+                            VK.init({apiId: <?=General::getConfigValue('vkLikeWidget')?>, onlyWidgets: true});
+                    </script>
+
+                    <!-- Put this div tag to the place, where the Like block will be -->
+                    <div id="vk_like"></div>
+                    <script type="text/javascript">
+                            VK.Widgets.Like("vk_like", {type: "full", height: 18});
+                    </script>
+                    <!--/noindex-->
+                    <?}?>
+                </td>
+            </tr>
+            <?}?>
+            <?if(General::getConfigValue('fbLikeWidget')){?>
+            <tr>
+                <td class="fb">
+                        <?=stripslashes(General::getConfigValue('fbLikeWidget'))?>
+                </td>
+            </tr>
+            <?}?>
+            <?if(General::getConfigValue('twitWidget')){?>
+            <tr>
+                <td class="tw">
+                        <?=stripslashes(General::getConfigValue('twitWidget'))?>
+                </td>
+            </tr>
+            <?}?>
+            <?if(General::getConfigValue('okWidget')){?>
+            <tr>
+                <td class="tw">
+                        <?=stripslashes(General::getConfigValue('okWidget'))?>
+                </td>
+            </tr>
+            <?}?>
+        </table>
+    </div>
+    <div class="fll col50w social-links">
+        <div class="title"><?=Lang::get('follow_news')?>:</div>
+        <p>
+            <?if(!General::getConfigValue('hide_vk_link')){?>
+            <a href="<?=General::getConfigValue('vk_link')?General::getConfigValue('vk_link'):'http://vk.com/opentao'?>" target="_blank">
+                <img src="p/vk.jpg" />
+            </a>
+            <?}?>
+            <?if(!General::getConfigValue('hide_fb_link')){?>
+            <a href="<?=General::getConfigValue('fb_link')?General::getConfigValue('fb_link'):'http://www.facebook.com/pages/%D0%9E%D0%BF%D0%B5%D0%BD%D1%82%D0%B0%D0%BE%D0%A0%D1%83/252116681541607'?>" target="_blank">
+                <img src="p/fb.jpg" />
+            </a>
+            <?}?>
+            <?if(!General::getConfigValue('hide_tw_link')){?>
+            <a href="<?=General::getConfigValue('tw_link')?General::getConfigValue('tw_link'):'https://twitter.com/#!/Opentao'?>" target="_blank">
+                <img src="p/tw.jpg" />
+            </a>
+            <?}?>
+        </p>
+    </div>
+    <? } ?>
+</div>
+    <? } ?>
+</div>
+</div>
+
+<div class="flr col240">
+    <? if(!empty($vendorInfo)){ ?>
+    <div class="bproduct mb15">
+        <h2 class="mb25"><span><?=Lang::get('about_vendor')?></span></h2>
+        <div class="bgr-block">
+            <table class="info f11">
+                <? if(!General::getConfigValue('hide_vendor_info_name')) { ?>
+                <tr>
+                    <td><?=Lang::get('name')?>:</td>
+                    <td><b><?= $this->escape($iteminfo['vendorname']) ?></b></td>
+                </tr>
+                <? } ?>
+                <tr>
+                    <td><?=Lang::get('placed_in')?>:</td>
+                    <td><b><?= $iteminfo['location']['city'] ?> (<?= $iteminfo['location']['state'] ?>)</b></td>
+                </tr>
+                <tr>
+                    <td><?=Lang::get('responses')?>:</td>
+                    <td><b><?= $vendorInfo['credit']['TotalFeedbacks'] ?></b></td>
+                </tr>
+                <tr>
+                    <td><?=Lang::get('positive')?>:</td>
+                    <td>
+                        <b>
+                            <?
+                            $positive = $vendorInfo['credit']['PositiveFeedbacks'];
+                            $total = $vendorInfo['credit']['TotalFeedbacks'];
+
+                            $positivePersent = $positive>0 ? number_format(($positive/$total)*100, 2, '.', '') : 0;
+                            ?>
+                            <?=$positivePersent?>%
+                        </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: right">
+                        <a href="#" id="add-vendor-to-favourites" style="<?= $vendorInfo['favoriteItemId'] ? 'display:none;' : ''?>" vendorid="<?= $this->escape($iteminfo['vendorname']) ?>" class="btn-small btn-add fll">
+                            <span><?=Lang::get('add_vendor_to_favourites')?></span>
+                        </a>
+                        <a href="#" id="vendor-added-to-favourites" style="<?= $vendorInfo['favoriteItemId'] ? '' : 'display:none;'?>" vendorid="<?= $this->escape($iteminfo['vendorname']) ?>" class="btn-small btn-add fll btn-remove btn-delete-item " itemid="<?=$vendorInfo['favoriteItemId']?>">
+                            <span><?=Lang::get('drop_vendor_from_fav')?></span>
+                        </a>
+                        <!--span class="fll" id="vendor-added-to-favourites" style="display:none;"><span><?=Lang::get('drop_from_fav')?></span-->
+                    </td>
+                </tr>
+                <? if ($vendorInfo['credit']['level']) { ?>
+                <tr class="infoblock__last">
+                    <td><?=Lang::get('rating')?>:</td>
+                    <td>
+                        <? if (!General::getConfigValue('vendor_rating_view_as_number')) { ?>
+                            <span class="raiting">
+                                <i class="i-raiting raiting_<?= $vendorInfo['credit']['level'] ?>"></i>
+                            </span>
+                        <? } else { ?>
+                            <span class="raiting">
+                                <span class="rating_number raiting_<?=$vendorInfo['credit']['level']?>">
+                                    <?=$vendorInfo['credit']['level']?>
+                                </span>
+                            </span>
+                        <? } ?>
+                        <? if(isset(General::$showVendorSalesVolume) && General::$showVendorSalesVolume){ ?>
+                        <span class="info-product__col-sell">
+                            <?=@Lang::get('vendor_rating_'.$vendorInfo['credit']['level'])?>
+                        </span>
+                        <? } ?>
+                    </td>
+                </tr>
+                <? } ?>
+            </table>
+        </div>
+    </div>
+    <? } ?>
+
+    <? if(in_array('Seo2', General::$enabledFeatures)){
+            $url = 'item?';
+            $urlv = 'vendor?';
+        } else {
+            $url = 'index.php?p=item&';
+            $urlv = 'index.php?p=vendor&';
+        }
+    ?>
+    <div class="bproduct">
+        <? if (!empty($vendorItems)) { ?>
+            <h2 class="mb25"><span><?=Lang::get('other_goods')?></span></h2>
+            <ul class="lproduct flin w240 w70li clrfix">
+                <? foreach ($vendorItems as $item) { ?>
+                <li>
+                    <a href="<?=$url?>id=<?= $item['id'] ?>" class="pic">
+                        <i><img width="70" height="70" src="<?= ProductsHelper::getImage($item, 100) ?>" alt=""></i>
+                        <ins></ins>
+                    </a>
+                </li>
+                <? } ?>
+            </ul>
+            <? if (! (General::getConfigValue('limit_items_by_catalog') && $cid == '')) { ?>
+                <? $categoryId = (General::getConfigValue('limit_items_by_catalog')) ? $cid : ''; ?>
+                <p class="mt5">
+                    <a href="<?=UrlGenerator::generateVendorUrl($iteminfo['vendorid'], false, $categoryId)?>" class="f11">
+                        <?=Lang::get('all_goods_from_seller')?>
+                    </a>
+                </p>
+            <? } ?>
+        <? } ?>
+    </div>
+</div>
+
+</div></div>
+
+<div class="btabs mt15"><div class="wrap clrfix">
+    <div class="bgr clrfix">
+        <ul id="product-tabs" class="tabs clrfix">
+            <?php if (empty($isWarehouseProduct)) { ?>
+            <li tab="properties" class="active">
+                <a href="#"><span><?=Lang::get('prod_char')?></span><i></i></a>
+            </li>
+            <?php } ?>
+            <li tab="photos" class="">
+                <a href="#" attr="tab2"><span><?=Lang::get('photo_descr')?></span><i></i></a>
+            </li>
+            <? if(CMS::IsFeatureEnabled('ProductComments') && !General::getConfigValue('hide_item_site_responses')){ ?>
+            <li tab="paymship" item_id="<?= $iteminfo["id"] ?>"  class="">
+
+                <a href="#" attr="tab3"><span><?=Lang::get('user_responses')?></span><i></i></a>
+
+            </li>
+            <? } ?>
+        </ul>
+    </div>
+    <div class="tabs-content">
+        <?php if (empty($isWarehouseProduct)) { ?>
+        <!-- properties -->
+        <div id="properties" class="tab" style="display: block;">
+            <table class="itcharac">
+                <tbody>
+                <? if (is_array($iteminfo['propertiesEdited'])) {
+                    foreach ($iteminfo['propertiesEdited'] as $property) { 
+                    ?>                   
+                    <tr>
+                        <td class="td1"><?= $property['name'] ?>:</td>
+                        <td class="td2"><?= $property['value']?>
+                        
+                        </td>
+                    </tr>
+                    
+                    <? } ?>
+                <? } ?>
+                </tbody>
+            </table>
+        </div>
+        <!-- /properties -->
+        <?php } ?>
+        <!-- photos -->
+        <div id="photos" class="tab">
+            <?php if (empty($isWarehouseProduct)) { ?>
+                <a href="#" class="__addbasket __icon" onclick="tr_desc(this);return false;"><span class="other"><?=Lang::get('translate_descr')?></span></a>
+                <br />
+                <br />
+            <?php } ?>
+            <div id="photos-inner">
+            </div>
+        </div>
+        <!-- /photos -->
+        <div id="paymship" class="tab"></div>
+        <? if ( /*! General::getConfigValue('hide_taobao_responses') && empty($isWarehouseProduct)*/ false) { ?>
+            <div id="TAOBAOcomments" class="tab"></div>
+        <? } ?>
+        <div id="addinfo" class="tab"></div>
+    </div>
+</div></div>
+
+<!--noindex-->
+<script type="text/javascript">
+
+    var itempath = <?=json_encode($GLOBALS['itempath'])?>;
+
+    <? if(defined('CFG_LOAD_ITEM_VIA_AJAX') && CFG_LOAD_ITEM_VIA_AJAX){ ?>
+    $.each(itempath, function(k, v){
+        var virt = '';
+        if(v.IsVirtual[0] == 'true'){
+            virt = '&virt';
+        }
+        $('.crumbs .wrap').append(
+            $('<a></a>')
+                .attr({
+                    href: 'index.php?p=subcategory&cid='+ v.id + virt
+                })
+                .text(v.Name)
+        );
+    });
+        <? } ?>
+
+
+    iteminfo = {
+        id: '<?= $iteminfo['id'] ?>',
+        debug: '<?=isset($_GET['debug'])?>',
+        confid: 0,
+        confitem: '',
+        weight: '<?=@(float)$iteminfo['ApproxWeight']?>',
+        //isvalidpromotions: '<?= $iteminfo['IsValidPromotions'] ?>',
+        isvalidpromotions: 'false',
+        promoid: '<?=$iteminfo["Promotions"]["Id"]?>',
+        count: 1,
+        maxcount: '<?= $iteminfo['masterquantity'] ?>',
+        //addedToCartId: <?=$inCart?>,
+        //addedToNoteId: <?=$inNote?>,
+        addedToCartId: 0,
+        addedToNoteId: 0,
+
+        addedToCart: <?=json_encode($inCart)?>,
+        addedToNote: <?=json_encode($inNote)?>,
+        
+        price_without_config: <?=json_encode($iteminfo["Price"])?>,
+        promo: [],
+        promo_static: <?=count($iteminfo["Promotions"]["ConfiguredItems"])==0 ? json_encode($iteminfo["Promotions"]) : json_encode($iteminfo["Promotions"]["ConfiguredItems"])?>,
+        price: <?=json_encode($iteminfo["Price"])?>,
+        item_with_config: <?=json_encode($iteminfo["item_with_config"])?>,
+        configurations: <?=count($iteminfo['configurations']) ? json_encode($iteminfo['configurations']) : 0?>,
+        CFG_NO_DELIVERY_IN_PRICE: '<?=(int)(defined('CFG_NO_DELIVERY_IN_PRICE')&&CFG_NO_DELIVERY_IN_PRICE)?>',
+        CFG_ROUND_DECIMALS: <?=(int)General::getConfigValue('price_round_decimals')?>
+    };
+
+    langs = {
+        good_added_to_fav: '<?=Lang::get('good_added_to_fav')?>!',
+        delete_from_fav: '<?=Lang::get('delete_from_fav')?>',
+        good_not_added: '<?=Lang::get('good_not_added')?>',
+        good_removed_from_fav: '<?=Lang::get('good_removed_from_fav')?>!',
+        add_to_fav: '<?=Lang::get('add_to_fav')?>',
+        product_not_removed: '<?=Lang::get('product_not_removed')?>',
+        pcs: '<?=Lang::get('pcs')?>',
+        vendor_added_to_favourites: '<?=Lang::get('vendor_added_to_favourites')?>',
+        warning: '<?=Lang::get('warning')?>',
+        sell_not_allowed_without_config: '<?=Lang::get('sell_not_allowed_without_config')?>',
+        vendor_removed_from_favourites: '<?=Lang::get('vendor_removed_from_favourites')?>'        		
+    };
+
+    <? if(CMS::IsFeatureEnabled('ProductComments') && !General::getConfigValue('hide_item_site_responses')){ ?>
+    $(function(){
+        $('[attr="tab3"]').click(function(){
+            $('#paymship').html('<div class="spinner"></div>');
+            $.get('index.php',{
+                p: 'itemcomments',
+                itemid: "<?=RequestWrapper::getValueSafe('id')?>",
+                itemcid: "<?=$iteminfo['categoryid']?>",
+                itemurl: '<?=$_SERVER['REQUEST_URI']?>'
+            }, function(data){
+                $('#paymship').html(data);
+            });
+            return false;
+        });
+    });
+        <? } ?>
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".pictures").colorbox({rel:'group1'});
+<?
+if (General::getConfigValue('product_tabs'))
+switch (General::getConfigValue('product_tabs')) {
+    case '2': {
+?>
+    $('#product-tabs li[tab="photos"] a').click();
+<?
+        } break;
+    case '3': {
+?>
+    $('#product-tabs li[tab="paymship"] a').click();
+<?
+        } break;
+    case '4': {
+?>
+    //$('#product-tabs li[tab="TAOBAOcomments"] a').click();
+<?
+        } break;
+    default: {
+    } break;
+}
+?>
+
+<? if ($show_review !== false) { ?>
+    $('#product-tabs li[tab="paymship"] a').click();
+<? } ?>
+
+});
+</script>
+<!--/noindex-->
+
+<script type="text/javascript" src="js/item.js?<?=CFG_SITE_VERSION;?>"></script>
+<?=Plugins::invokeEvent('onRenderItemPage', array('id' => RequestWrapper::getValueSafe('id')))?>
+<?=Plugins::invokeEvent('onItemInfoStatistics', array('itemInfo' => $iteminfo, 'category' => @end($GLOBALS['itempath'])))?>
+
+<div id="item-debug"></div>

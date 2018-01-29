@@ -1,0 +1,109 @@
+{
+    "users": [
+        {"user_id": -100, "login": "testReferral1", "parent_id": 0, "status": 1, "expected_status": 1, "balance": 10.0, "awaiting_money": 5.0},
+
+        {"user_id": -101, "login": "testReferral2", "parent_id": 1, "status": 0, "expected_status": 0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": -102, "login": "testReferral3", "parent_id": 1, "status": 0, "expected_status": 0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": -103, "login": "testReferral4", "parent_id": 1, "status": 2, "expected_status": 2, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": -104, "login": "testReferral5", "parent_id": 1, "status": 1, "expected_status": 1, "balance": 0.0, "awaiting_money": 1.0},
+        {"user_id": -105, "login": "testReferral6", "parent_id": 1, "status": 1, "expected_status": 1, "balance": 0.0, "awaiting_money": 0.0},
+
+        {"user_id": -103, "login": "testReferral7", "parent_id": 4, "status": 1, "expected_status": 1, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": -104, "login": "testReferral8", "parent_id": 4, "status": 1, "expected_status": 1, "balance": 1.0, "awaiting_money": 1.0},
+        {"user_id": -105, "login": "testReferral9", "parent_id": 4, "status": 2, "expected_status": 2, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": -106, "login": "testReferral10", "parent_id": 4, "status": 1, "expected_status": 1, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": -107, "login": "testReferral11", "parent_id": 4, "status": 1, "expected_status": 1, "balance": 0.0, "awaiting_money": 0.0},
+
+        {"user_id": -108, "login": "testReferral12", "parent_id": 9, "status": 1, "expected_status": 1, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": -109, "login": "testReferral13", "parent_id": 9, "status": 1, "expected_status": 1, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": -110, "login": "testReferral14", "parent_id": 9, "status": 1, "expected_status": 1, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": -111, "login": "testReferral15", "parent_id": 9, "status": 1, "expected_status": 1, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": -112, "login": "testReferral16", "parent_id": 9, "status": 1, "expected_status": 1, "balance": 0.0, "awaiting_money": 0.0},
+
+        {"user_id": 1114, "login": "KAP", "parent_id": 0, "status": 0, "expected_status": 3,
+            "order": "ORD-0000001", "purchase": 40.0, "presents": 4, "balance": 0.0, "awaiting_money": 0.0},
+
+        {"user_id": 1147, "login": "Tkhenn", "parent_id": 17, "status": 0, "expected_status": 2,
+            "order": "ORD-0000002", "purchase": 40.0, "presents": 5, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 1182, "login": "siD", "parent_id": 17, "presents": 5, "status": 0, "expected_status": 2,
+            "order": "ORD-0000003", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 1183, "login": "siD2", "parent_id": 17, "presents": 5, "status": 0, "expected_status": 2,
+            "order": "ORD-0000004", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 1217, "login": "test", "parent_id": 17, "presents": 5, "status": 0, "expected_status": 2,
+            "order": "ORD-0000005", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 1453, "login": "batkaevruslan", "parent_id": 17, "presents": 4, "status": 0, "expected_status": 2,
+            "order": "ORD-0000006", "purchase": 4.0, "balance": 0.0, "awaiting_money": 0.0},
+
+        {"user_id": 1826, "login": "marinast", "parent_id": 18, "status": 0, "expected_status": 1,
+            "order": "ORD-0000007", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 2179, "login": "armastab", "parent_id": 18, "status": 0, "expected_status": 1,
+            "order": "ORD-0000008", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 2663, "login": "esc", "parent_id": 18, "status": 0, "expected_status": 1,
+            "order": "ORD-0000009", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 2831, "login": "rusakov", "parent_id": 18, "status": 0, "expected_status": 1,
+            "order": "ORD-0000010", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 3330, "login": "mm182", "parent_id": 18, "status": 0, "expected_status": 1,
+            "order": "ORD-0000011", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+
+        {"user_id": 10001, "login": "siD_1", "parent_id": 19, "status": 0, "expected_status": 1,
+            "order": "ORD-0000012", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10002, "login": "siD_2", "parent_id": 19, "status": 0, "expected_status": 1,
+            "order": "ORD-0000013", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10003, "login": "siD_3", "parent_id": 19, "status": 0, "expected_status": 1,
+            "order": "ORD-0000014", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10004, "login": "siD_4", "parent_id": 19, "status": 0, "expected_status": 1,
+            "order": "ORD-0000015", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10005, "login": "siD_5", "parent_id": 19, "status": 0, "expected_status": 1,
+            "order": "ORD-0000016", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+
+        {"user_id": 10006, "login": "siD2_1", "parent_id": 20, "status": 0, "expected_status": 1,
+            "order": "ORD-0000017", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10007, "login": "siD2_2", "parent_id": 20, "status": 0, "expected_status": 1,
+            "order": "ORD-0000018", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10008, "login": "siD2_3", "parent_id": 20, "status": 0, "expected_status": 1,
+            "order": "ORD-0000019", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10009, "login": "siD2_4", "parent_id": 20, "status": 0, "expected_status": 1,
+            "order": "ORD-0000020", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10010, "login": "siD2_5", "parent_id": 20, "status": 0, "expected_status": 1,
+            "order": "ORD-0000021", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+
+        {"user_id": 10011, "login": "test_1", "parent_id": 21, "status": 0, "expected_status": 1,
+            "order": "ORD-0000022", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10012, "login": "test_2", "parent_id": 21, "status": 0, "expected_status": 1,
+            "order": "ORD-0000023", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10013, "login": "test_3", "parent_id": 21, "status": 0, "expected_status": 1,
+            "order": "ORD-0000024", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10014, "login": "test_4", "parent_id": 21, "status": 0, "expected_status": 1,
+            "order": "ORD-0000025", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10015, "login": "test_5", "parent_id": 21, "status": 0, "expected_status": 1,
+            "order": "ORD-0000026", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+
+        {"user_id": 10016, "login": "rb_1", "parent_id": 22, "status": 0, "expected_status": 1,
+            "order": "ORD-0000027", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10017, "login": "rb_2", "parent_id": 22, "status": 0, "expected_status": 1,
+            "order": "ORD-0000028", "purchase": 4.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10018, "login": "rb_3", "parent_id": 22, "status": 0, "expected_status": 1,
+            "order": "ORD-0000029", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10019, "login": "rb_4", "parent_id": 22, "status": 0, "expected_status": 1,
+            "order": "ORD-0000030", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0},
+        {"user_id": 10020, "login": "rb_5", "parent_id": 22, "status": 0, "expected_status": 1,
+            "order": "ORD-0000031", "purchase": 40.0, "balance": 0.0, "awaiting_money": 0.0}
+    ],
+    "orders": [
+        {"referral_id": 1, "order_id": 1, "purchase": 30}
+        ,{"referral_id": 4, "order_id": 4, "purchase": 30}
+        ,{"referral_id": 5, "order_id": 5, "purchase": 30}
+        ,{"referral_id": 6, "order_id": 6, "purchase": 30}
+        ,{"referral_id": 7, "order_id": 7, "purchase": 30}
+        ,{"referral_id": 8, "order_id": 8, "purchase": 30}
+        ,{"referral_id": 9, "order_id": 9, "purchase": 30}
+        ,{"referral_id": 10, "order_id": 10, "purchase": 30}
+        ,{"referral_id": 11, "order_id": 11, "purchase": 30}
+        ,{"referral_id": 12, "order_id": 12, "purchase": 30}
+        ,{"referral_id": 13, "order_id": 13, "purchase": 30}
+        ,{"referral_id": 14, "order_id": 14, "purchase": 30}
+        ,{"referral_id": 15, "order_id": 15, "purchase": 30}
+        ,{"referral_id": 16, "order_id": 16, "purchase": 30}
+    ],
+    "presents": []
+}

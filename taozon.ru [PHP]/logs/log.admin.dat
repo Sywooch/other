@@ -1,0 +1,9 @@
+{"0":0.064266204833984,"1":null,"2":"\/?sid=&do=pricing&group=&gid=4518","calls":[]}
+{"0":0.10027194023132,"1":null,"2":"\/?sid=&cmd=users","calls":[]}
+{"0":1.01571393013,"1":null,"2":"\/?","calls":[]}
+{"0":1.883092880249,"1":null,"2":"\/?sid=&cmd=orders","calls":[]}
+{"0":0.53913116455078,"1":"1","2":"\/?filter%5Bnumber%5D=&filter%5Bclient_surname%5D=&filter%5Bfromdate%5D=&filter%5Btodate%5D=&filter%5Bphone%5D=&filter%5Bstatus%5D%5B10%5D=10&filter%5Bstatus%5D%5B20%5D=20&filter%5Bstatus%5D%5B30%5D=30&filter%5Bstatus%5D%5B31%5D=31&filter%5Bstatus%5D%5B32%5D=32&filter%5Bstatus%5D%5B37%5D=37&filter%5Bstatus%5D%5B38%5D=38&filter%5Bstatus%5D%5B39%5D=39&filter%5Bclient_id%5D=&cmd=orders&p=1&ps=20","calls":[]}
+{"0":1.0393319129944,"1":null,"2":"\/?sid=&cmd=orders&do=orderinfo&id=ORD-0000001044","calls":[]}
+{"0":0.53435087203979,"1":"1","2":"\/?filter%5Bnumber%5D=&filter%5Bclient_surname%5D=&filter%5Bfromdate%5D=&filter%5Btodate%5D=&filter%5Bphone%5D=&filter%5Bstatus%5D%5B10%5D=10&filter%5Bstatus%5D%5B20%5D=20&filter%5Bstatus%5D%5B30%5D=30&filter%5Bstatus%5D%5B31%5D=31&filter%5Bstatus%5D%5B32%5D=32&filter%5Bstatus%5D%5B37%5D=37&filter%5Bstatus%5D%5B38%5D=38&filter%5Bstatus%5D%5B39%5D=39&filter%5Bclient_id%5D=&cmd=orders&p=1&ps=20","calls":[]}
+{"0":0.16198801994324,"1":null,"2":"\/?sid=&cmd=users","calls":[]}
+{"0":0.17077898979187,"1":"128","2":"\/?sid=&cmd=users&p=128","calls":[]}

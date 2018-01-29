@@ -1,0 +1,62 @@
+
+<div class="main">
+    <div class="wrap clrfix">
+        <div class="bproduct">
+            <h2 class="mb25"><span><?=Lang::get('pristroy_goods')?></span></h2>
+
+            <div class="fll col240">
+                <div class="bgr-block mb20">
+                    <? if (General::getConfigValue('banner_widget')) { ?>
+                    <?=General::getConfigValue('banner_widget')?>
+                    <? } else { ?>
+                    <a href="index.php?p=help"><img src="p/banner.png"/></a>
+                    <? } ?>
+                </div>
+            </div>
+
+            <div class="flr col690 bproduct">
+
+                <? if (! empty($list)) { ?>
+                <!-- .product -->
+                <ul class="lproduct flin w700 w160li clrfix">
+
+                    <? foreach ($list as $item) { ?>
+                    <li class="product" id="product<?=$item['id']?>" title="<?=$this->escape($item['title'])?>">
+                        <a class="pic" href="<?=UrlGenerator::generatePristroyItemUrl($item['id'])?>"
+                           title="<?=TextHelper::wrapWordsInText($item['description'])?>">
+                            <i><img src="<?=ProductsHelper::getPristroyImage($item, 160);?>"></i>
+                            <ins></ins>
+                        </a>
+
+                        <div class="price" name="price_tmp27">
+                            <div class="line"></div>
+                            <a href="<?=UrlGenerator::generatePristroyItemUrl($item['id'])?>"
+                               title="<?=$this->escape($item['price'])?>">
+                                <span><?=$item['display_price']?></span>
+                            </a>
+
+                            <a href="<?=UrlGenerator::generatePristroyItemUrl($item['id'])?>"
+                               title="<?=TextHelper::wrapWordsInText($item['description'])?>">
+                                <ins class="name" pid="<?=$item['id']?>"><?=$this->escape($item['title'])?></ins>
+                                <span class="glow"></span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <?php if ($idx % 4 == 3) { ?>
+                    <div style="clear: both; background-color:red;"></div>
+                    <? } ?>
+                    <? } ?>
+                </ul>
+                <? } else { ?>
+                <h2><?=Lang::get('nothing_found')?></h2>
+                <? } ?>
+
+                <div>
+                    <? $paginator->display(); ?>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

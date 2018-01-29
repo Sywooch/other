@@ -1,0 +1,81 @@
+﻿/* stylesheet for demo and examples */
+
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700italic,700);
+
+
+/*public*/
+.price_block_1{
+	width:100%; padding:0; border:0; margin:0;	
+}
+
+.price_block_2{
+	width:550px; padding:10px; border:2px transparent solid;
+	color:#2699c8;
+}
+
+.price_block_2 h1{
+	color:#1ab86b;
+	
+}
+
+.price_block_2 p{
+	color:#2699c8;
+	font-weight:bold;
+}
+
+.price_block_2 .price{
+	color:#e05443;
+}
+
+#itogo{
+	color:#e05443;
+}
+
+
+/*admin*/
+.head_price{
+	width:100%; height:200px; 
+	background:transparent url(/images/head_bg.png) repeat-x scroll 0 0;
+	padding-top:20px;
+}
+
+.block_price_admin{
+	width:100%; padding:0; border:0; margin:0;
+}
+
+#price-list{
+	width:800px; padding:10px; border:2px #269acd solid;	
+}
+
+#price-list h1{
+	color:#1ab86b;
+}
+
+#price-list p{
+	color:#2699c8;
+	font-weight:bold;
+}
+
+#price-list .price{
+	color:#e05443;
+}
+
+#price-list input{
+	background-color:#269acd !important;
+	border:2px #1ab86b solid !important;
+	color:white;
+	font-weight:bold;
+}
+
+.insert_buttons{
+	width:100%; height:70px; margin-top:20px;				
+} 
+
+.insert_buttons input{
+	background-color:#269acd !important;
+	border:2px #1ab86b solid !important;
+	color:white;
+	font-weight:bold;
+
+}
+ 

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6.0" client="site" type="module" method="upgrade">
+    <name>Быстрая форма связи</name>
+    <author>forma-obratnoj-svjazi-joomla.ru</author>
+    <creationDate>September 2013</creationDate>
+    <copyright>Copyright (C) 2009-2011 Christopher Mavros.</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>form-joomla@ya.ru</authorEmail>
+    <authorUrl>http://forma-obratnoj-svjazi-joomla.ru/</authorUrl>
+    <version>2.0</version>
+    <description>Быстрая форма. Легкий, быстрый и простой модуль. Настройка контактной формы никогда не была удовольствия раньше.</description>
+    <files>
+        <filename module="mod_rapid_contact">mod_rapid_contact.php</filename>
+    </files>
+    <config><fields name="params"><fieldset name="basic">
+        <field name="spacert1" type="spacer" class="text" label="&lt;strong&gt;Параметры&lt;/strong&gt;"/> 
+        <field name="email_recipient"
+        type="text"
+        default="email@email.com"
+        label="E-mail получателя"        
+        description="Почта, на которую будут приходить письма" />         
+        <field name="from_name"
+        type="text"
+        default="forma-obratnoj-svjazi-joomla.ru"
+        label="Имя отправителя"
+        description="Имя отправителя" />
+        <field name="from_email"
+        type="text"
+        default="rapid_contact@yoursite.com"
+        label="Почта отправителя"
+        description="Почта отправителя" />          
+
+        <field name="spacer1" type="spacer" hr="true"/>
+        <field name="spacert2" type="spacer" class="text" label="&lt;strong&gt;Параметры текста&lt;/strong&gt;"/>  
+        <field name="email_label"
+        type="text"
+        default="Email:"
+        label="Поле Email"
+        description="Надпись около поля Email" />        
+        <field name="subject_label"
+        type="text"
+        default="Тема:"
+        label="Поле Тема письма"
+        description="Надпись около Поля Тема письма" />
+        <field name="message_label"
+        type="text"
+        default="Текст:"
+        label="Поле сообщение"
+        description="Надпись около поля для ввода текста сообщения" />  
+        <field name="button_text"
+        type="text"
+        default="Отправить сообщение"
+        label="Кнопка отправки"
+        description="Текст на кнопке" /> 
+        <field name="page_text"
+        type="text"
+        default="Спасибо за проявленный интерес."
+        label="Спасибо за связь - текст"
+        description="Текст, отображаемый для пользователя, когда он отправил сообщение" /> 
+        <field name="error_text"
+        type="text"
+        default="Ваше сообщение не может быть отправлено. Пожалуйста, попробуйте еще раз."
+        label="Текст страницы ошибки"
+        description="Текст, который отображается пользователю, если не удается отправить сообщение." />           
+        <field name="no_email"
+        type="text"
+        default="Пожалуйста укажите вашу почту"
+        label="Ошибка поля email"
+        description="Сообщение об ошибке, когда пользователь не написал свой email" />
+        <field name="invalid_email"
+        type="text"
+        default="Пожалуйста, напишите действительный адрес электронной почты"
+        label="Ошибка некорректный адрес почты"
+        description="Сообщение об ошибке, когда пользователь пишет Неправильный адрес" />
+        <field name="wrong_antispam"
+        type="text"
+        default="Неправильный ответ"
+        label="Неправильный Анти-Спам текст"
+        description="Текст, который показывается пользователю, если он не правильно ввел ответ на Анти-спам."/>
+        <field name="pre_text"
+        type="text"
+        default=""
+        label="Текст выше формы"
+        description="Небольшой текст, показанный ранее (выше) формы сообщения. HTML поддерживается." />        
+        
+        <field name="spacer2" type="spacer" hr="true"/>
+        <field name="spacert3" type="spacer" class="text" label="&lt;strong&gt;Размер и цвет&lt;/strong&gt;"/>
+        <field name="thank_text_color"
+        type="text"
+        default="#FF0000"
+        label="Цвет текста"
+        description="Цвет текста после отправки (где благодарим за связь)." />  
+        <field name="error_text_color"
+        type="text"
+        default="#FF0000"
+        label="Цвет Текст сообщения об ошибке"
+        description="Цвет Текст сообщения об ошибке" />          
+        <field name="email_width"
+        type="text"
+        default="15"
+        label="Email ширина"
+        description="Ширина поля для ввода Email" />         
+        <field name="subject_width"
+        type="text"
+        default="15"
+        label="Тема письма ширина"
+        description="Ширина поля для ввода темы письма" />
+        <field name="message_width"
+        type="text"
+        default="13"
+        label="Ширина сообщения"
+        description="Ширина поля для ввода сообщения" />        
+        <field name="button_width"
+        type="text"
+        default="100"
+        label="Размер кнопки отправки"
+        description="Ширина кнопки отправки сообщения" />     
+        <field name="label_pos"
+        type="radio" default="0"
+        label="Положение текста"
+        description="Положение текста относительно полей для ввода">
+          <option value="0">Слева</option>
+          <option value="1">Сверху</option>
+        </field>
+        <field name="addcss"
+        type="text"
+        default="div.rapid_contact tr, div.rapid_contact td { border: none; padding: 3px; }"
+        label="Custom CSS"
+        description="Custom CSS for the form." />          
+        
+        <field name="spacer3" type="spacer" hr="true"/>
+        <field name="spacert4" type="spacer" class="text" label="&lt;strong&gt;URL Parameters&lt;/strong&gt;"/>
+        <field name="exact_url"
+        type="radio"
+        default="1"
+        label="Exact URL"
+        description="This is an advanced option about the url retrieval way. If your site is http and your server/host supports https this should be No.">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>     
+        <field name="disable_https"
+        type="radio"
+        default="1"
+        label="Disable HTTPS"
+        description="This is an advanced option about the url retrieval way. Please enable it if Rapid Contact posts in https and your site is http.">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>       
+        <field name="fixed_url"
+        type="radio"
+        default="0"
+        label="Fixed URL"
+        description="A simple solution to people that want to use Rapid Contact in an exact page. Change this to Yes and write the URL of Rapid Contact in the Fixed URL Address parameter">
+            <option value="0">No</option>
+            <option value="1">Yes</option>        
+        </field>        
+        <field name="fixed_url_address"
+        type="text"
+        default=""
+        label="Fixed URL Address"
+        description="If fixed url is true, this address is used for Rapid Contact to post itself."/>   
+        
+        <field name="spacer4" type="spacer" hr="true"/>
+        <field name="spacert5" type="spacer" class="text" label="&lt;strong&gt;Настройка анти-спама&lt;/strong&gt;"/>   
+        <field name="enable_anti_spam"
+        type="radio"
+        default="1"
+        label="Включить анти-спам?"
+        description="Enable this to use the anti-spam question for anti-spam control">
+            <option value="0">Нет</option>
+            <option value="1">Да</option>
+        </field>          
+        <field name="anti_spam_q"
+               type="text"
+               default="Как называется наша планета?"
+               label="Вопрос для анти-спама?"
+               description="Текст вопроса" />
+        <field name="anti_spam_a"
+               type="text"
+               default="Земля"
+               label="Ответ"
+               description="Правильный ответ на анти-спам вопрос" />    
+        <field name="anti_spam_position"
+        type="radio"
+        default="0"
+        label="Позиция анти-спама"
+        description="Позиция формы антиспама относительно формы связи">
+            <option value="0">Перед</option>
+            <option value="1">После</option>        
+        </field>                   
+               
+        <field name="spacer5" type="spacer" hr="true"/> 
+        <field name="spacert6" type="spacer" class="text" label="&lt;strong&gt;Module Class Suffix Parameter&lt;/strong&gt;"/>
+        <field name="moduleclass_sfx"
+        type="text"
+        default=""
+        label="Module Class Suffix"
+        description="If you want to apply a custom style, change this class suffix." />                  
+    </fieldset>
+		<fieldset name="advanced">
+		  <field name="cache" type="list"
+		  default="1" label="Caching"
+		  description="Select whether to cache the content of this module">
+		    <option value="1">Use global</option>
+		    <option value="0">No caching</option>
+		  </field>
+		  <field name="cache_time" type="text"
+		  default="900" label="Cache Time"
+		  description="The time before the module is recached" />
+		</fieldset></fields></config>     
+</extension>

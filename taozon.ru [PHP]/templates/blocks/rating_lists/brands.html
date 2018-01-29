@@ -1,0 +1,37 @@
+<? if (! General::getConfigValue('limit_items_by_catalog')) { ?>
+<? if (isset($list[0])) { ?>
+
+<div class="brands">
+    <div class="wrap clrfix">
+        <div class="bproduct <?=$type?>-rating-list">
+            <h2 class="mb25"><span><?=Lang::get($type)?></span></h2>
+
+            <ul class="lproduct flin w976 w100li clrfix">
+                <? foreach($list as $item) { ?>
+                <li title="<?= $this->escape($item['Name']) ?>">
+                    <a class="pic" href="<?=UrlGenerator::generateBrandUrl($item['Id'])?>">
+                        <i><img src="<?= $item['PictureUrl'] ?>"></i>
+                        <ins></ins>
+                    </a>
+
+                    <div class="price" name="price_tmp15">
+                        <div class="line"></div>
+                        <a href="<?=UrlGenerator::generateBrandUrl($item['Id'])?>">
+                            <ins class="name"><?= $this->escape($item['Name']) ?></ins>
+                            <span class="glow"></span>
+                        </a>
+                    </div>
+                </li>
+                <? } ?>
+            </ul>
+            <div class="mt15">
+                <a href="<?=UrlGenerator::generateBrandsUrl(false)?>" class="all">
+                    <i class="i-new i-arrow-right i arrowright"></i><span><?=Lang::get('all_brands')?></span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<? } ?>
+<? } ?>

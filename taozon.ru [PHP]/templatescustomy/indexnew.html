@@ -1,0 +1,128 @@
+ <?=$HeaderNew?>
+
+<!-- .main -->
+<div class="main indexnew"><div class="wrap clrfix">
+
+	<div class="fll col240">
+		<!-- IF MAIN_PAGE MENU  -->
+		<div class="dropdown dropdown-main" style="display: block;">
+			<?=$MenuShortNew;?>
+			<div class="pda10">
+				<a href="<?=General::generateUrl('allcats', array() )?>" class="all"><i class="i arrowright"></i><span><?=Lang::get('all_goods_categories')?></span></a>
+			</div>
+		</div>
+		<!-- END MAIN_PAGE MENU  -->
+
+		<? if(@General::$siteConf['banner_widget']){ ?>
+			<?=@General::$siteConf['banner_widget']?>
+		<? }else{?>
+			<a href="index.php?p=help"><img src="p/banner.png"></a>
+		<? } ?>
+        <!-- INFORMERS  -->
+        <div class="informers">
+<div style="min-width:100px;padding-top:10px;background:#FFF;"><div style="font-size:14px;padding:10px 5px;border:2px solid #DDD"><div style="margin-top:-20px;"><span style="background:#FFF;font-size:100%;color:#000;padding:0 4px;">Мы принимаем к оплате:</span></div><div style="overflow:hidden;padding-top:5px"><a target="_blank" title="Sberbank" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/sberbank.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="VISA credit cards" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/visa.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="MasterCard credit cards" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/mastercard.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="QIWI" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/qiwi.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="E-port" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/e-port.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="Elecsnet" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/elecsnet.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="Euroset" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/euroset.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="Unikassa" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/unikassa.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="Novoplat" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/novoplat.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="ComePay" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/comepay.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="Money-Money" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/moneymoney.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="FreeCash" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/freecash.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="QuickPay" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/quickpay.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="Privatbank" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/privatbank_terminals.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="Post Offices of Russia" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/russianpost.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="City-Pay" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/city-pay.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="EasySoft" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/easysoft.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="RegulPay" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/regulpay.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="OSMP" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/osmp.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="i-Box" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/i-box.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="MTS" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/mts.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="Wallet One" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/walletone.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="Ukash" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/ukash.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="MoneyMail" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/moneymail.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="RBK Money" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/rbkmoney.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" title="Z-Payment" href="http://merchant.w1.ru/checkout/site/payments/" style="background:url(http://merchant.w1.ru/checkout/site/develope/informer/img/zpayment.gif) no-repeat center center;float:left;height:32px;width:32px;"></a><a target="_blank" style="font-size:85%;padding:7px;float:left;" href="http://merchant.w1.ru/checkout/site/payments/">другие...</a></div></div><div style="text-align:right;margin-top:5px;"><a style="font-size:85%;color:#999;" target="_blank" href="http://merchant.w1.ru/checkout/site/customer/manual/">Как платить?</a></div></div>        
+        </div>
+        <!-- INFORMERS  -->
+        
+	</div>
+
+	<div class="flr col690">
+		<?=$Banners?>
+
+		<div class="socblocks mb20 clrfix">
+			<? if(!@General::$siteConf['hide_social']){ ?>
+			<div class="fll col55w">
+				<div class="title"><?=Lang::get('share_with_friends')?>:</div>
+				<table>
+					<?if(@General::$siteConf['vkLikeWidget']){?>
+					<tr>
+						<td class="vk">
+							<?if(@General::$siteConf['vkLikeWidget']){?>
+							<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?52"></script>
+
+							<script type="text/javascript">
+								VK.init({apiId: <?=@General::$siteConf['vkLikeWidget']?>, onlyWidgets: true});
+							</script>
+
+							<!-- Put this div tag to the place, where the Like block will be -->
+							<div id="vk_like"></div>
+							<script type="text/javascript">
+								VK.Widgets.Like("vk_like", {type: "full", height: 18});
+							</script>
+							<?}?>
+						</td>
+					</tr>
+					<?}?>
+					<?if(@General::$siteConf['fbLikeWidget']){?>
+					<tr>
+						<td class="fb">
+							<?=stripslashes(@General::$siteConf['fbLikeWidget'])?>
+						</td>
+					</tr>
+					<?}?>
+					<?if(@General::$siteConf['twitWidget']){?>
+					<tr>
+						<td class="tw">
+							<?=stripslashes(@General::$siteConf['twitWidget'])?>
+						</td>
+					</tr>
+					<?}?>
+					<?if(@General::$siteConf['okWidget']){?>
+					<tr>
+						<td class="tw">
+							<?=stripslashes(@General::$siteConf['okWidget'])?>
+						</td>
+					</tr>
+					<?}?>
+				</table>
+			</div>
+                        <div class="fll col50w social-links">
+                            <div class="title"><?=Lang::get('follow_news')?>:</div>
+                            <p>
+                                <?if(!@General::$siteConf['hide_vk_link']){?>
+                                <a href="<?=@General::$siteConf['vk_link']?@General::$siteConf['vk_link']:'http://vk.com/opentao'?>" target="_blank" class="vk-link">
+                                    <img src="p/vk.jpg" alt="vk" class="vk-img" />
+                                </a>
+                                <?}?>
+                                <?if(!@General::$siteConf['hide_fb_link']){?>
+                                <a href="<?=@General::$siteConf['fb_link']?@General::$siteConf['fb_link']:'http://www.facebook.com/pages/%D0%9E%D0%BF%D0%B5%D0%BD%D1%82%D0%B0%D0%BE%D0%A0%D1%83/252116681541607'?>" target="_blank" class="fb-link">
+                                    <img src="p/fb.jpg" alt="fb" class="fb-img" />
+                                </a>
+                                <?}?>
+                                <?if(!@General::$siteConf['hide_tw_link']){?>
+                                <a href="<?=@General::$siteConf['tw_link']?@General::$siteConf['tw_link']:'https://twitter.com/#!/Opentao'?>" target="_blank" class="tw-link">
+                                    <img src="p/tw.jpg" alt="tw" class="tw-img" />
+                                </a>
+                                <?}?>
+                            </p>
+                        </div>
+			<? } ?>
+		</div>
+        <? if(defined('CFG_USE_CURRENCIES_RECOUNT') && CFG_USE_CURRENCIES_RECOUNT){ ?>
+		<div class="clearfix recount-prices">
+			<a href="index.php?p=set_currency&c=UAH" class="btn-small fll"><span>Показать стоимость в гривне</span></a>
+			<a href="index.php?p=set_currency&c=RUB" class="btn-small fll"><span>Показать стоимость в рублях</span></a>
+			<a href="index.php?p=set_currency&c=USD" class="btn-small fll"><span>Показать стоимость в долларах</span></a>
+		</div>
+		<? } ?>
+		 <script src="js/GeoLocatet.js"></script>
+        <link rel="stylesheet" href="css/GeoLocatet.css" />
+        <form  method="post" id="GeoCurr">                        
+                     <input type='hidden' name='c' id="c">
+         </form>
+        <div style="position:relative;">
+            <?=    Plugins::invokeEvent('ShowGeoLocate',array('LocalVal'=>@$_SESSION['CountryISO'])) ?>
+              
+                </div>
+		<?=$NewsBlock?>
+        <? if(CMS::IsFeatureEnabled('Digest')) { ?>
+        	<?=$DigestBlock?>
+        <? } ?>
+        
+		<?=$ItemSetsNew?>
+        <? if(defined('CFG_SHOPREVIEW')) { ?> 
+        	<?=$ShopreviewsBlock?>
+        <? } ?>
+	</div>
+</div></div>
+<?=$FooterNew?>

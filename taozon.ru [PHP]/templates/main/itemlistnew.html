@@ -1,0 +1,1044 @@
+<?=Plugins::invokeEvent('onItemListRenderStatistics', array('categoryName' => $this->escape($GLOBALS['categoryInfo']['Name'])))?> 
+
+
+<script type="text/javascript">
+    $(document).ready(
+        function(){
+            $(".w160li li").hover(
+                function(){
+                    $(this).css('box-shadow','7px 2px 5px 0 rgba(0, 0, 0, 0.50)');
+                },
+                function(){
+                    $(this).css('box-shadow','none');
+                }
+            );
+        }
+    );
+</script>
+
+<style type="text/css">
+.w160li li {
+    width: 215px;
+    margin: 0 0 18px 18px;
+}
+.w160i li:hover{
+    box-shadow:1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.w160li .pic {
+    height: 220px;
+}
+.w160li .pic i {
+    width: 215px;
+    height:220px;
+    display:block;
+    position:relative;
+}
+.w160li .pic i .discount{
+    position: absolute;
+    right: -13px;
+    top: -3px;
+    z-index: 2;
+    background:url("/skidka_red.png") no-repeat;
+    
+    font-family:"Trebuchet MS","Helvetica CY",sans-serif;
+    color: #FFFFFF;
+    font-size: 25px;
+    height: 53px;
+    text-shadow: 1px 1px 1px #750C91;
+    width: 65px;
+    padding-top:20px;
+}
+
+.w160li .pic ins {
+    display:none;
+}
+
+.wrapper_sale_item {
+    top: 197px;
+    left:90px;
+    height:14px;
+    font-weight:bold;
+}
+.wrapper_sale_item .old_price {
+    font-size:15px;
+    position:relative;
+    top:-3px;   
+}
+  
+/* h1 */
+.wrap.clrfix h1{
+    margin-bottom: 2px;
+    margin-top: -17px;
+}   
+</style>
+
+
+<!--noindex-->
+<script type="text/javascript">
+    var overid = 0;
+    langs = {
+        vendor_added_to_favourites: '<?=Lang::get('vendor_added_to_favourites')?>'
+    };
+
+
+
+
+
+    function gettitle(lid) {
+        if (lid != overid) return;
+        var obj = $('#' + lid + ' ins.name');
+        var li = obj.closest('li');
+        if (li.data('title-loaded') || li.data('title-loading')) {
+            return;
+        }
+
+        li.data('title-loading', true);
+        $.ajax({
+            url:'index.php?p=itemtitle&itemid=' + obj.attr('pid'),
+            success:function (data) {
+                li.data('title-loading', false);
+                if (data && data.toString().length) {
+                    obj.html(data);
+                    obj.parent().attr('title', data);
+                    li.find('.pic').attr('title', data);
+                    li.data('title-loaded', true);
+                }
+            },
+            error:function (jqXHR, textStatus, errorThrown) {
+                obj.html('');
+            }
+        });
+    }
+
+    $(function () {
+
+        $('.product').mouseover(function () {
+            if (overid != $(this).attr('id')) {
+                overid = $(this).attr('id');
+                setTimeout('gettitle("' + overid + '")', 1000);
+            }
+        });
+        $('.product').mouseout(function () {
+            overid = 0;
+        });
+
+        $("#dialog-form").dialog({
+        autoOpen: false,
+        modal: true,
+        buttons : {
+            "Ок" : function() {
+                $("#dialog-form").dialog("close");
+            }
+        }
+        });
+    });
+
+    function showOverlay(){
+        var h = $('#overlay').parent().height();
+        $('#overlay').css({
+            height: h+'px',
+            display: 'block'
+        });
+    }
+    function hideOverlay(){
+        $('#overlay').hide();
+    }
+</script>
+<!--/noindex-->
+
+<div id="dialog-form" title="<?=Lang::get('message')?>">
+    <span id="basketinfo"></span>
+</div>
+
+<? if (isset($hintcats) && count($hintcats) > 0) { ?>
+<div class="samecat">
+    <div class="wrap clrfix">
+        <div class="bproduct">
+            <h2 class="mb20"><span><?=Lang::get('suitable_category')?></span></h2>
+            <ul class="lcategory clrfix flin">
+                <?
+                $cid = RequestWrapper::getValueSafe('cid');
+                $hasHidden = false;
+                ?>
+                <? foreach ($hintcats as $k => $category) { ?>
+                <? if ($k < 10) { ?>
+                    <li class="item" <?=($cat['id'] == $cid ? 'class="active"' : '')?>>
+                        <a href="<?=General::generateUrl('subcategory', $category)?>"><?=$this->escape($category['name']);?></a>
+                    </li>
+                    <?
+                } else {
+                    $hasHidden = true;
+                    ?>
+                    <li class="fast-category-hidden">
+                        <a href="index.php?p=category&cid=<?=$category['id'];?>"> <?=$this->escape($category['name']);?></a>
+                    </li>
+                    <? } ?>
+                <? } ?>
+                <? if ($hasHidden) { ?>
+                    <li class="item last">
+                        <a href="#" class="dotted" onclick="$('.fast-category-hidden').show();$(this).remove();return false;">
+                            <i class="i-new i-arrow-down i arrowdown"></i><span>Еще категории</span>
+                        </a>
+                    </li>
+                <? } ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<? } ?>
+
+
+<!-- raiting -->
+<script type="text/javascript">
+    $(document).ready(
+        function(){
+            
+            $(".show_rating").click(
+                function(){
+                        $.colorbox({
+                                inline:true,
+                                html: true,
+                                width:'70%',
+                                maxWidth:'750px',
+                                height:'615px',
+                                maxHeight:'615px',
+                                open:false,
+                                returnFocus:false,
+                                fixed: true,
+                                title: false,
+                                href:'.about_rating',
+                                opacity:'0.7',
+                                fixed:true
+                        }); 
+                        return false;           
+                }
+            );
+            
+        }
+    );
+</script>
+
+<div style="display:none">
+<div id="content_area" class="about_rating">
+    <h1>Рейтинг продавца</h1>
+    <p><span style="font-family: arial,helvetica,sans-serif; font-size: small;">Формирование рейтинга продавца - <strong>важный показатель</strong>, помогающий определить, <strong>степень надежности продавца.</strong> <strong>Расчет рейтинга происходит исходя из количества успешных сделок.</strong> Высокий рейтинг продавца также говорит и о качестве предлагаемой им продукции, точности ее описания, отсутствии задержек при поставке товара. Для того, чтобы Вы могли быть уверены в качестве приобретаемых товаров, мы рекомендуем выбирать продавцов с высоким рейтингом, а также продавцов с рейтингом <img alt="" src="/i/hearts_gif/level_21_tmall.gif">.</span></p>
+    <p><span style="font-family: arial,helvetica,sans-serif; font-size: small;"><strong>Логотип Tmall означает, что продавцом выступает официальный представитель, напрямую работающий с производителями.</strong> Все продавцы Tmall, а также представляемые ими товары, проходят тщательную проверку, что гарантирует высокое качество продукции.</span></p>
+    <p>&nbsp;</p>
+    <table border="0" rules="all" frame="void" style="width: 100%;">
+    <tbody>
+    <tr><th>Низкий рейтинг</th><th>Количество сделок</th><th>Средний рейтинг</th><th>Количество сделок</th></tr>
+    <tr>
+    <td><img alt="" src="/i/hearts_gif/level_1.gif"></td>
+    <td>от 4 до 10</td>
+    <td><img alt="" src="/i/hearts_gif/level_6.gif"></td>
+    <td>от 251 до 500</td>
+    </tr>
+    <tr>
+    <td><img alt="" src="/i/hearts_gif/level_2.gif"></td>
+    <td>от 11 до 40</td>
+    <td><img alt="" src="/i/hearts_gif/level_7.gif"></td>
+    <td>от 501 до 1 тыс.</td>
+    </tr>
+    <tr>
+    <td><img alt="" src="/i/hearts_gif/level_3.gif"></td>
+    <td>от 41 до 90</td>
+    <td><img alt="" src="/i/hearts_gif/level_8.gif"></td>
+    <td>от 1 до 2 тыс.</td>
+    </tr>
+    <tr>
+    <td><img alt="" src="/i/hearts_gif/level_4.gif"></td>
+    <td>от 91 до 150</td>
+    <td><img alt="" src="/i/hearts_gif/level_9.gif"></td>
+    <td>от 2 до 5 тыс.</td>
+    </tr>
+    <tr>
+    <td><img alt="" src="/i/hearts_gif/level_5.gif"></td>
+    <td>от 151 до 250</td>
+    <td><img alt="" src="/i/hearts_gif/level_10.gif"></td>
+    <td>от 5 до 10 тыс.</td>
+    </tr>
+    <tr><th>Высокий рейтинг</th><th>Количество сделок</th><th>Очень высокий рейтинг</th><th>Количество сделок</th></tr>
+    <tr>
+    <td><img alt="" src="/i/hearts_gif/level_11.gif"></td>
+    <td>от 10 до 20 тыс.</td>
+    <td><img alt="" src="/i/hearts_gif/level_16.gif"></td>
+    <td>от 500 тыс. до 1 млн.</td>
+    </tr>
+    <tr>
+    <td><img alt="" src="/i/hearts_gif/level_12.gif"></td>
+    <td>от 20 до 50 тыс.</td>
+    <td><img alt="" src="/i/hearts_gif/level_17.gif"></td>
+    <td>от 1 до 2 млн.</td>
+    </tr>
+    <tr>
+    <td><img alt="" src="/i/hearts_gif/level_13.gif"></td>
+    <td>от 50 до 100 тыс.</td>
+    <td><img alt="" src="/i/hearts_gif/level_18.gif"></td>
+    <td>от 2 до 5 млн.</td>
+    </tr>
+    <tr>
+    <td><img alt="" src="/i/hearts_gif/level_14.gif"></td>
+    <td>от 100 до 200 тыс.</td>
+    <td><img alt="" src="/i/hearts_gif/level_19.gif"></td>
+    <td>от 5 до 10 млн.</td>
+    </tr>
+    <tr>
+    <td><img alt="" src="/i/hearts_gif/level_15.gif"></td>
+    <td>от 200 до 500 тыс.</td>
+    <td><img alt="" src="/i/hearts_gif/level_20.gif"></td>
+    <td>свыше 10 млн.</td>
+    </tr>
+    </tbody>
+    </table>
+    <p>&nbsp;</p>
+    <p><strong><span style="font-family: arial,helvetica,sans-serif; font-size: small;">Надеемся, информация оказалась полезной. Приятных покупок !</span></strong></p>
+</div>
+</div>
+<!-- /rating -->
+
+
+<!-- Вставили  -->
+<div id="dialog-form" title="<?=Lang::get('message')?>">
+    <span id="basketinfo"></span>
+</div>
+
+
+<? if (isset($hintcats) && count($hintcats) > 0) { ?>
+<div class="samecat">
+    <div class="wrap clrfix">
+        <div class="bproduct">
+            <h2 class="mb20"><span><?=Lang::get('suitable_category')?></span></h2>
+            <ul class="lcategory clrfix flin">
+                <?
+                $cid = RequestWrapper::getValueSafe('cid');
+                $hasHidden = false;
+                ?>
+                <? foreach ($hintcats as $k => $category) { ?>
+                <? if ($k < 10) { ?>
+                    <li <?=($cat['id'] == $cid ? 'class="active"' : '')?>><a
+                        href="<?=General::generateUrl('subcategory', $category)?>"
+                        > <?=$this->escape($category['name']);?></a></li>
+                    <?
+                } else {
+                    $hasHidden = true;
+                    ?>
+                    <li class="fast-category-hidden"><a
+                        href="index.php?p=category&cid=<?=$category['id'];?>"> <?=$this->escape($category['name']);?></a></li>
+                    <? } ?>
+                <? } ?>
+                <? if ($hasHidden) { ?>
+                    <li class="last"><a href="#" class="all dotted" onclick="$('.fast-category-hidden').show();$(this).remove();return false;"><i class="i arrowdown"></i><span>Еще категории</span></a></li>
+                <? } ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<? } ?>
+
+
+
+
+
+
+
+<!-- .main -->
+<div class="main">
+<div class="wrap clrfix">
+<div class="bproduct">
+
+<? if (!$no_search_request) { ?>
+
+<h2 class="mb25"><span><?=Lang::get('founded_goods')?></span></h2>
+
+<div class="fll col240">
+<div id="overlay"></div>
+    <? if ($vendorInfo) { ?>
+    <div class="bgr-block mb20">
+        <table class="info f11">
+            <tbody>
+            <? if(!General::getConfigValue('hide_vendor_info_name')) { ?>
+            <tr>
+                <td><?=Lang::get('name')?>:</td>
+                <td><b><?=$this->escape($vendorInfoFromDB['vendor_name'] ? $vendorInfoFromDB['vendor_name'] : $vendorInfo['name'])?></b></td>
+            </tr>
+            <? } ?>
+            <tr>
+                <td><?=Lang::get('placed_in')?>:</td>
+                <td><b><?=$vendorInfo['location']['city']?> (<?=$vendorInfo['location']['state']?>)</b></td>
+            </tr>
+
+            <tr>
+                <td><?=Lang::get('features')?>:</td>
+                <td><b><?=$vendorInfo['location']['city']?></b></td>
+            </tr>
+
+            <tr>
+                <td><?=Lang::get('responses')?>:</td>
+                <td><b><?=$vendorInfo['credit']['TotalFeedbacks']?></b></td>
+            </tr>
+            <tr>
+                <td><?=Lang::get('positive')?>:</td>
+                <td><b><?=$vendorInfo['credit']['PositiveFeedbacks']?></b></td>
+            </tr>
+            <? if ($vendorInfo['credit']['level']) { ?>
+            <tr>
+                <td><?=Lang::get('rating')?>:</td>
+                <td>
+                    <? if (!General::getConfigValue('vendor_rating_view_as_number')) { ?>
+                        <span class="raiting">
+                            <i class="i-raiting raiting_<?= $vendorInfo['credit']['level'] ?>"></i>
+                        </span>
+                    <? } else { ?>
+                        <span class="raiting">
+                            <span class="rating_number raiting_<?=$vendorInfo['credit']['level']?>">
+                                <?=$vendorInfo['credit']['level']?>
+                            </span>
+                        </span>
+                    <? } ?>
+                </td>
+            </tr>
+            <? } ?>
+            <tr>
+                <td colspan="2" style="text-align: right">
+                    <a href="#" id="add-vendor-to-favourites" vendorid="<?=$this->escape($vendorInfo['name']) ?>" class="btn-small btn-add fll">
+                        <span><?=Lang::get('add_vendor_to_favourites')?></span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <? } ?>
+    <? if (! (RequestWrapper::getValueSafe('search') && !RequestWrapper::getValueSafe('cid')) && ! $vendorInfo ) { ?>
+    <div class="bgr-block mb20" id="active-search-prop">
+    	<?php if (RequestWrapper::getValueSafe('id') || RequestWrapper::getValueSafe('vid')) { ?>
+        <div class="titlecat"><?=Lang::get('active_cond')?></div>
+        <?php } ?>
+        <ul class="listitem" id="clear-filter">
+            <?if(RequestWrapper::getValueSafe('cid')){?>
+            <!--<li class="item">
+                <? if (! empty($prevCategoryLink)) { ?>
+                    <a href="<?=$prevCategoryLink?>" class="i-new i-delete  i delete go"></a>
+                <? } ?>
+                <div class="cat"> <?=Lang::get('category')?> </div>
+                <div class="itemcat"><?=$this->escape($GLOBALS['categoryInfo']['Name'])?></div>
+            </li>-->
+            <?}?>
+            <?if(RequestWrapper::getValueSafe('id') || RequestWrapper::getValueSafe('vid')){?>
+                <li class="item">
+                    <a href="<?=$urlWithoutCategoryId?>" class="i-new i-delete i delete go"></a>
+                    <div class="cat"> <?=Lang::get('vendor')?> </div>
+                    <div class="itemcat"><?=$this->escape($vendorInfoFromDB['vendor_name'] ? $vendorInfoFromDB['vendor_name'] : $vendorInfo['Id'])?></div>
+                </li>
+            <?}?>
+            <?php 
+			if (RequestWrapper::getValueSafe('id') || RequestWrapper::getValueSafe('vid')) { ?>
+            <li class="item dropterms">
+                <a href="<?=$clearUrl?>" class="btn-small btn-delete"><span><?=Lang::get('reset_cond')?></span></a>
+            </li>
+            <?php } ?>
+        </ul>
+    </div>
+    <? } ?>
+
+    <?php
+    /**
+     * @var UrlWrapper $baseUrl
+     * @var string $CurrentSearchType
+     * @var bool $IsProvider
+     * @var array $cachedSearchTypesInfo
+     */
+
+    $pageUrl = clone $baseUrl;
+    $allSearchTypes = isset($SearchTypes) && is_array($SearchTypes) && SCRIPT_NAME != 'vendor' ? $SearchTypes : array();
+    $activeSearchTypes = array();
+    $isMultiSearch = General::getConfigValue('use_multi_search') && $CurrentSearchType != 'Warehouse_Default';    
+    if (! empty($сategoryInfo['SearchMethod'])) {
+        $isMultiSearch = false;
+    }
+    foreach ($allFeatures as $feature) {
+        $pageUrl->DeleteKey($feature);
+    }
+    if($isMultiSearch) {
+        $activeSearchTypes[] = array(
+            'url' => $pageUrl->DeleteKey('Provider')->DeleteKey('SearchMethod')->Get(),
+            'title' => Lang::get('multisearch'),
+            'active' => !($IsProvider == 'active'),
+            'totalCount' => false,
+            'offset' => 0
+        );
+    }
+    foreach($allSearchTypes as $order => $searchType) {
+        $searchTypeInfo = ! empty($cachedSearchTypesInfo[$searchType['Provider'].'_'.$searchType['SearchMethod']]) ?
+            $cachedSearchTypesInfo[$searchType['Provider'].'_'.$searchType['SearchMethod']] : false;
+        $searchTitleKey = $searchType['Provider'].'_'.$searchType['SearchMethod'].'_Flag';
+        $searchTitle = Lang::get($searchTitleKey);
+        if ($searchTitle == $searchTitleKey) {
+            $searchTitle = $searchType['DisplayName'];
+        }
+        $newSearchType = array(
+            'url' => $pageUrl->DeleteKey('Provider')->DeleteKey('SearchMethod')
+                ->Add('Provider', $searchType['Provider'])->Add('SearchMethod', $searchType['SearchMethod'])->Get(),
+            'title' => $searchTitle,
+            'active' => (($CurrentSearchType == $searchType['Provider'].'_'.$searchType['SearchMethod'])
+                        && !RequestWrapper::getValueSafe('Discount'))
+                        || ($order == 0 && !$isMultiSearch && !$CurrentSearchType),
+            'totalCount' => $searchTypeInfo ? $searchTypeInfo['totalcount'] : false,
+            'offset' => 0
+        );
+        if (($CurrentSearchType == 'Warehouse_Default') and ($searchType['Provider'].'_'.$searchType['SearchMethod'] != 'Warehouse_Default')) {
+            continue;
+        }
+        if (($newSearchType['totalCount'] === false && $searchType['Provider'].'_'.$searchType['SearchMethod'] != 'Warehouse_Default')
+            || $newSearchType['totalCount'] > 0) {
+            if (empty($сategoryInfo['SearchMethod']) || ($CurrentSearchType == $searchType['Provider'].'_'.$searchType['SearchMethod'])) {
+                $activeSearchTypes[] = $newSearchType;
+            }
+        }
+        if (! empty($searchType['Features'])) {
+            foreach($searchType['Features'] as $feature) {
+                if ($feature['CanBeTrue'] == 'true') {
+                    $plusText = $feature['CanBeFalse'] == 'true' ? ' +' : '';
+                    if (empty($сategoryInfo['SearchMethod']) || ($CurrentSearchType == $searchType['Provider'].'_'.$searchType['SearchMethod'])) {
+                        $activeSearchTypes[] = array(
+                            'url' => $pageUrl->Add($feature['Name'], 'true')->Get(),
+                            'urlWithoutFeature' => $pageUrl->DeleteKey($feature['Name'])->Get(),
+                            'title' => ! empty($feature['ForTrue']) ? $feature['ForTrue'] : $feature['DisplayName'] . $plusText,
+                            'active' => RequestWrapper::getValueSafe($feature['Name']),
+                            'totalCount' => false,
+                            'offset' => 1
+                        );
+                    }
+                }
+                if ($feature['CanBeFalse'] == 'true') {
+                    $plusText = $feature['CanBeTrue'] == 'true' ? ' -' : '';
+                    $activeSearchTypes[] = array(
+                        'url' => $pageUrl->Add($feature['Name'], 'false')->Get(),
+                        'urlWithoutFeature' => $pageUrl->DeleteKey($feature['Name'])->Get(),
+                        'title' => ! empty($feature['ForFalse']) ? $feature['ForFalse'] : $feature['DisplayName'] . $plusText,
+                        'active' => RequestWrapper::getValueSafe($feature['Name']),
+                        'totalCount' => false,
+                        'offset' => 1
+                    );
+                }
+            }
+        }
+    }
+    ?>
+    <? if(count($activeSearchTypes) > 0  && ! $vendorInfo ){ ?>
+    <div class="bgr-block mb20">
+        <div class="titlecat"><?=Lang::get('supplier_type')?></div>
+
+        <ul class="listitem">
+            <?php foreach($activeSearchTypes as $type) { ?>
+                <li class="item">
+                    <a class="<?=$type['active'] ? 'active' : ''?> <?=$type['offset']==1 ? 'isFeature' : 'noFeature';?>"  href="<?=$type['active'] ? $type['urlWithoutFeature'] : $type['url']?>">
+                        <?=$this->escape($type['title'])?>
+                        <? if ($type['totalCount'] !== false) { ?>
+                            (<span style="font-size:10px;">
+                                <?=$type['totalCount']?>
+                            </span>)
+                        <? } ?>
+                    </a>
+                    <? if (($type['offset']==1) && ($type['active'])) { ?>
+                        <a href="<?=$type['urlWithoutFeature']?>" class="i-new i-delete  i delete go"></a>
+                    <? } ?>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+    <? } ?>
+
+    <? if (isset($subCategories) && is_array($subCategories) && count($subCategories)) { ?>
+    <div class="bgr-block mb20">
+        <div class="titlecat"><?=Lang::get('prods_by_cats')?></div>
+        <ul class="listitem">
+            <?php if (! empty($prevCategoryLink)) { ?>
+            <li class="item"><a <?=(!isset($cid) || $cid == '' ? 'class="active"' : '')?>
+                    href="<?=$prevCategoryLink?>"><?=Lang::get('all_categories')?></a>
+            </li>
+            <?php } ?>
+            <?
+
+            if (SCRIPT_NAME == 'search' || SCRIPT_NAME == 'item_list_ajax') {
+
+                $cid = RequestWrapper::getValueSafe('cid');
+                $hasHidden = false;
+                foreach ($subCategories as $k => $category) {
+                    ?>
+                    <?
+                    if ($k < 10) {
+                    if (RequestWrapper::getValueSafe('Provider')) {
+                        $url = $baseUrl->DeleteKey('cid')->Add('Provider', RequestWrapper::getValueSafe('Provider'))->Add('SearchMethod', RequestWrapper::getValueSafe('SearchMethod'))->Get();
+                    } else {
+                        $url = $baseUrl->DeleteKey('Provider')->DeleteKey('SearchMethod')->DeleteKey('cid')->Get();
+                    }
+                        ?>
+                        <li class="item"><a
+                                href="<?=UrlGenerator::generateFullSearchUrl($url,$category['id'],$tmall,RequestWrapper::getValueSafe('Discount')); ?>" <?=($category['id'] == $cid ? 'class="active"' : '')?>> <?=$this->escape($category['name']);?> <? if ($category['itemcount']) { ?>
+                                    (<?= $category['itemcount'] ?>) <? } ?></a></li>
+                        <?
+                    } else {
+                        $hasHidden = true;
+                        ?>
+                        <li class="item left-category-hidden"><a <?=($category['id'] == $cid ? 'class="active"' : '')?>
+                            href="<?=UrlGenerator::generateFullSearchUrl($url,$category['id'],$tmall,RequestWrapper::getValueSafe('Discount')); ?>"> <?=$this->escape($category['name']);?> <? if ($category['itemcount']) { ?>
+                            (<?= $category['itemcount'] ?>) <? } ?></a></li>
+                        <? } ?>
+                    <? } ?>
+                <? if ($hasHidden) { ?>
+                    <li class="item last">
+                        <a href="#" class="dotted" onclick="$('.left-category-hidden').show();$(this).remove();return false;">
+                            <i class="i-new i-arrow-down i arrowdown"></i><span><?=Lang::get('other_cats')?></span>
+                        </a>
+                    </li>
+                    <? }
+            }?>
+            <?
+
+            if (SCRIPT_NAME == 'subcategory' || SCRIPT_NAME == 'category') {
+
+                $hasHidden = false;
+                foreach ($subCategories as $k => $cat) {
+                    ?>
+                    <? if ($k >= 10) {
+                        $classLink = 'class="item left-category-hidden"';
+                    }
+                    if (RequestWrapper::getValueSafe('Provider')) {
+                        $cat['Provider'] = RequestWrapper::getValueSafe('Provider');
+                        $cat['SearchMethod']= RequestWrapper::getValueSafe('SearchMethod');
+                    }
+                    if (!isset($cat['ishidden']) || $cat['ishidden'] == 'false') {
+                        ?>
+                        <? if (!isset($cat['isparent']) || $cat['isparent'] == 'false') { ?>
+                            <li <?=$classLink?>>
+                                <a href="<?=UrlGenerator::generateFullCatUrl('category',$cat,$tmall,RequestWrapper::getValueSafe('Discount'))?>"><?=$this->escape($cat['name'])?></a>
+                            </li>
+                            <? } else { ?>
+                            <li <?=$classLink?>>
+                                <a href="<?=UrlGenerator::generateFullCatUrl('subcategory',$cat,$tmall,RequestWrapper::getValueSafe('Discount'))?>"><?=$this->escape($cat['name'])?></a>
+                            </li>
+                            <? } ?>
+                        <? } ?>
+                    <? } ?>
+                <? if (count($subCategories) > 10) { ?>
+                    <li class="item last">
+                        <a href="#" class="dotted" onclick="$('.left-category-hidden').show();$(this).remove();return false;">
+                            <i class="i-new i-arrow-down i arrowdown"></i><span><?=Lang::get('other_cats')?></span>
+                        </a>
+                    </li>
+                <? } }?>
+        </ul>
+    </div>
+    <? } ?>
+
+    <div class="bgr-block mb20">
+        <?=$SearchProp?>
+    </div>
+</div>
+
+<div class="flr col690 bproduct">
+    <? if (@$GLOBALS['brandinfo']) { ?>
+    <div class="wrap clrfix" style="margin-bottom: 10px; width: 690px">
+        <img src="<?=$GLOBALS['brandinfo']['PictureUrl']?>" style="float:left; margin: 0 10px 10px 0"/>
+        <?=$GLOBALS['brandinfo']['Description']?>
+    </div>
+    <? } ?>
+    <div class="bgr-panel mb20">
+
+        <ul class="tableList">
+            <? if ($IsProvider) { ?>
+
+            <li><?=Lang::get('items_rus')?>: <b><?=$totalcount?></b></li>
+            <li><?=Lang::get('shown')?>: <?=Lang::get('from')?> <b><?=($count ? $from + 1 : 0)?></b> <?=Lang::get('to')?>
+                <b><? if ($from + $perpage < $count) print $from + $perpage; else print $count; ?></b>
+                    <?=Lang::get('from2')?>
+                    <b><?=$count?></b>
+
+            </li>
+            <? } ?>
+            <? if (isset($availableSorts) && ! empty($availableSorts)) { ?>
+            <li>
+                <form method="post" id="sort_form">
+                    <?=Lang::get('sort_by')?>
+
+                    <? if (! empty($availableSorts)) { ?>
+                    <select name="sort_by" onchange="document.getElementById('sort_form').submit();">
+                        <? foreach ($availableSorts as $sort) { ?>
+                        <option value="<?=$sort['OrderBy']?>" <?if ($_GET['sort_by'] == $sort['OrderBy']) { ?>selected<? }?>><?=$sort['DisplayName']?></option>
+                        <? } ?>
+                    </select>
+                    <? } ?>
+                </form>
+
+            </li>
+            <? } ?>
+            <? if ($IsProvider) { ?>
+            <li>
+                <?php
+                    if (! isset($pp)) {
+                        $pp = array(20, 40, 100);
+                    }
+                    $ppValue = $perpage;
+                    if (!in_array($ppValue, $pp)) {
+                        $pp[] = $ppValue;
+                        asort($pp);
+                    }
+                ?>
+                <form method="post" id="per_page">
+                    <select name="per_page" onchange="document.getElementById('per_page').submit();">
+                        <?php foreach ($pp as $key => $value) { ?>
+                            <option value="<?=$value?>" <?if ($perpage == $value){?>selected<?}?>><?=$value?></option>
+                        <?php } ?>
+                    </select>
+                </form>
+            </li>
+            <? } ?>
+        </ul>
+    </div>
+    
+    
+    <? if (! empty($itemlist)) { ?>    
+    <ul class="lproduct flin w700 w160li clrfix">
+
+        <? if (in_array('Seo2', General::$enabledFeatures)) {
+        $url = 'item?';
+        } else {
+            $url = 'index.php?p=item&';
+        } ?>
+        <? foreach ($itemlist as $idx => $item) { ?>
+
+            <? if ((General::getConfigValue('hide_item_for_restrictions')) && ($item['IsSellAllowed'] === 'false') && ($item['SellDisallowReason'] === 'IsFiltered')) { ?>
+                <?=View::fetchTemplate('item-replace-text', 'item_replace_text', '/blocks/search/', array('text' => Lang::get('IsFiltered')))?>
+            <? } elseif ($item['ErrorCode'] == 'Ok') { ?>
+            <li class="product<?if ($item['IsSellAllowed'] === 'false') { ?> is-sell-allowed-false<? } ?>" id="product<?=$idx?>" title="<?=$this->escape($item['title'])?>" style="position:relative;">
+                <a class="pic" href="<?=$url?>id=<?=$item['id']?>&vendorId=<?=$item['VendorId']?>" title="<?=$this->escape($item['VendorName'])?>">
+                    <?if (! empty($item['mainpictureurl'])) { ?>
+                    <i>
+                    <img src="<?= ProductsHelper::getImage($item, 220) ?>">
+
+                    <!--discount-->
+                    <? if ((count($item['PromotionPrice'])>0) and (!General::getConfigValue('hide_discont_lists'))) { 
+                            $old_price = $item['Price']['ConvertedPriceList'][0]['Val'];
+                            $new_price = $item['PromotionPrice'][0]['Val'];
+                            $discount = floor((($old_price - $new_price)/$old_price)*100);
+                            
+                            if ($discount){
+                        ?>
+                            <div class="discount" style="background-color:transparent;">
+                                -<? echo $discount; ?>%
+                            </div>
+                        <?  }
+                         } ?>
+                    <!--discount-->
+
+                    </i>
+                    <ins></ins>
+                    <?}?>
+                </a>
+                <? if (!General::getConfigValue('vendor_rating_view_as_number')) { ?>
+                    <!--<span class="raiting">
+                        <i class="i-raiting raiting_<?=$item['vendorscore']?>"></i>
+                    </span>-->
+                <? } else { ?>
+                    <!--<span class="raiting">
+                        <span class="rating_number raiting_<?=$item['vendorscore']?>">
+                            <?=Lang::get('rating')?>:&nbsp;<?=$item['vendorscore']?>
+                        </span>
+                    </span>-->
+                <? } ?>
+                
+
+
+
+                <div class="price" name="price_tmp18">
+                    <div class="line"></div>
+                    <a href="<?=$url?>id=<?=$item['id']?>&vendorId=<?=$item['VendorId']?>">
+                        <? if (count($item['PromotionPrice'])>0) { ?>
+                            <span><?=General::getCurrencyPromoPrice($item)?></span>
+                        <? }else{ ?>
+                            <span><?=General::getCurrencyPrice($item)?></span>
+                        <? } ?>
+                    </a>
+
+
+                    <a href="<?=$url?>id=<?=$item['id']?>&vendorId=<?=$item['VendorId']?>" class="show_rating">
+                        <ins class="nam" pid="<?=$item['id']?>">
+                            <? //$this->escape($item['VendorName'])?>
+                            <em class="raiting">
+                                <i class="i-raiting raiting_<?=$item['vendorscore']?>">рейтинг</i>
+                            </em>
+                        </ins>
+                        <span class="glow"></span></a>
+
+                    <a href="<?=$url?>id=<?=$item['id']?>&vendorId=<?=$item['VendorId']?>" title="<?=$this->escape($item['VendorName'])?>">
+                        <ins class="name" pid="<?=$item['id']?>"><?=$this->escape($item['VendorName'])?></ins>
+                        <span class="glow"></span></a>
+                </div>
+                <?
+                if (!defined('NO_DEBUG')) {
+                    print implode(', ', $item['Features']);
+                }
+                ?>
+                <? if (count($item['PromotionPrice'])>0) { ?>
+                    <div align="center" class="wrapper_sale_item">
+                        <span class="old_price"><?=General::getCurrencyPrice($item)?></span><br>
+                        <!--<span class="new_price"><?=General::getCurrencyPromoPrice($item)?></span>-->
+                    </div>
+                <? } ?>
+            </li>
+            <? } else { ?>
+                <?=View::fetchTemplate('item-error-code', 'item', '/blocks/search/', array('item' => $item))?>
+            <? } ?>
+            <? if ($idx % 3 == 3) { ?>
+                <div style="clear: both; background-color:yellow;"></div>
+            <? } ?>
+        <? } ?>
+    </ul>
+    <? } else if (!empty($itemlistMulti) && !RequestWrapper::getParamExists('SearchMethod')) { ?>
+
+            <? if (in_array('Seo2', General::$enabledFeatures)) {
+                $url = 'item?';
+            } else {
+                $url = 'index.php?p=item&';
+            } ?>
+
+
+    <? foreach ($itemlistMulti as $key=>$list) {
+        if (strpos($key, 'Extended') !== false) {
+            $key = str_replace('Extended', 'Other', $key);
+        }
+        if (strpos($key, 'Taobao') !== false) {
+            $key = str_replace('Taobao', 'China', $key);
+        }
+
+        ?>
+    <? if (count($list['Items'])) { ?>
+    <?
+    $SType = explode("_", $key);
+    ?>
+    <div class="multi">
+        <div class="top_line">
+
+            <div class="top_left">
+                <?=Lang::get($key.'_Flag')?>
+                <?if(isset($list['totalcount'])){?>
+                    <span class="totalcount">
+                        <?=$list['totalcount']?>&nbsp;
+                        <? if (Session::getActiveLang() == 'ru') { ?>
+                            <?=TextHelper::plural($list['totalcount'], Lang::get('items_1'), Lang::get('items_2'), Lang::get('items_5'))?>
+                        <? } else { ?>
+                            <?=Lang::get('items_rus')?>
+                        <? } ?>
+                    </span>
+                <?}?>
+            </div>
+            <div class="top_right">
+                <?
+                $viewAllUrl = $baseUrl->Add('Provider', $SType[0])->Add('SearchMethod', $SType[1]);
+                if(RequestWrapper::getValueSafe('cid'))
+                    $viewAllUrl->Add('cid', RequestWrapper::getValueSafe('cid'));
+                ?>
+                <a href="<?=$viewAllUrl->Get()?>" class="i-link"><?=Lang::get('multi_see_all')?> > </a>
+             </div>
+        </div>
+
+        <div class="item_block">
+            <ul class="lproduct flin w700 w160li clrfix">
+                <? foreach ($list['Items'] as $idx => $item) { ?>
+                    <? if ((General::getConfigValue('hide_item_for_restrictions')) && ($item['IsSellAllowed'] === 'false') && ($item['SellDisallowReason'] === 'IsFiltered')) { ?>
+                        <?=View::fetchTemplate('item-replace-text', 'item_replace_text', '/blocks/search/', array('text' => Lang::get('IsFiltered')))?>
+                    <? } elseif ($item['ErrorCode'] == 'Ok') { ?>
+                    <li class="product<?if ($item['IsSellAllowed'] === 'false') { ?> is-sell-allowed-false<? } ?>" id="product<?=$key?><?=$idx?>" title="<?=$this->escape($item['title'])?>" style="position:relative;">
+                        <a class="pic" href="<?=$url?>id=<?=$item['id']?>&vendorId=<?=$item['VendorId']?>" title="<?=$this->escape($item['VendorName'])?>">
+                            <?if (! empty($item['mainpictureurl'])) { ?>
+                            <i>
+                                <img src="<?= ProductsHelper::getImage($item, 220) ?>">
+                        
+
+                        <? if ((count($item['PromotionPrice'])>0) and (!General::getConfigValue('hide_discont_lists'))) { 
+                            $old_price = $item['Price']['ConvertedPriceList'][0]['Val'];
+                            $new_price = $item['PromotionPrice'][0]['Val'];
+                            $discount = floor((($old_price - $new_price)/$old_price)*100);
+                            
+                            if ($discount){
+                        ?>
+                            <div class="discount">
+                                -<? echo $discount; ?>%
+                            </div>
+                        <?  }
+                         } ?>
+
+
+                            </i>
+                            <ins></ins>
+                            <?}?>
+                        </a>
+                        <? if (!General::getConfigValue('vendor_rating_view_as_number')) { ?>
+                            <!--<span class="raiting">
+                                <i class="i-raiting raiting_<?=$item['vendorscore']?>"></i>
+                            </span>-->
+                        <? } else { ?>
+                            <!--<span class="raiting">
+                                <span class="rating_number raiting_<?=$item['vendorscore']?>">
+                                    <?=Lang::get('rating')?>:&nbsp;<?=$item['vendorscore']?>
+                                </span>
+                            </span>-->
+                        <? } ?>
+                        <div class="price" name="price_tmp19">
+                            <div class="line"></div>
+                            <a href="<?=$url?>id=<?=$item['id']?>&vendorId=<?=$item['VendorId']?>">
+                                <? if (count($item['PromotionPrice'])>0) { ?>
+                                    <span><?=General::getCurrencyPromoPrice($item)?></span>
+                                <? }else{ ?>
+                                    <span><?=General::getCurrencyPrice($item)?></span>
+                                <? } ?>
+                            </a>
+
+
+                        <a href="<?=$url?>id=<?=$item['id']?>&vendorId=<?=$item['VendorId']?>" class="show_rating">
+                        <ins class="nam" pid="<?=$item['id']?>">
+                            <? //$this->escape($item['VendorName'])?>
+                            <em class="raiting">
+                                <i class="i-raiting raiting_<?=$item['vendorscore']?>">рейтинг</i>
+                            </em>
+                        </ins>
+                        <span class="glow"></span></a>
+
+
+
+
+                            <!--noindex-->
+                                <a href="<?=$url?>id=<?=$item['id']?>&vendorId=<?=$item['VendorId']?>" title="<?=$this->escape($item['VendorName'])?>">
+                                    <ins class="name" pid="<?=$item['id']?>"><?=$this->escape($item['VendorName'])?></ins>
+                                    <span class="glow"></span>
+                                </a>
+                            <!--/noindex-->
+                        </div>
+                        <?
+                        if (!defined('NO_DEBUG')) {
+                            print implode(', ', $item['Features']);
+                        }
+                        ?>
+                        <? if (count($item['PromotionPrice'])>0) { ?>
+                            <div align="center" class="wrapper_sale_item">
+                                <span class="old_price"><?=General::getCurrencyPrice($item)?></span><br>
+                                <!--<span class="new_price"><?=General::getCurrencyPromoPrice($item)?></span>-->
+                            </div>
+                        <? } ?>
+                    </li>
+                    <? } else { ?>
+                        <?=View::fetchTemplate('item-error-code', 'item', '/blocks/search/', array('item' => $item))?>
+                    <? } ?>
+                    <? if ($idx % 3 == 3) { ?>
+                        <div style="clear: both; background-color:transparent;"></div>
+                    <? } ?>
+                <? } ?>
+            </ul>
+        </div>
+    </div>
+    <? } ?>
+    <? } ?>
+    
+    <? } else { ?>
+        <h2><span><?=Lang::get('nothing_found')?></span></h2>
+    <? } ?>
+    
+    
+    <? if(Session::checkErrors()){ ?>
+        <?
+        $errorCode = Session::getErrorCode();
+        $errorDescription = Session::getErrorDescription();
+        ?>
+        <? if(Lang::get('Search:'.$errorCode) == 'Search:'.$errorCode){ ?>
+            <h2><?=$errorCode?></h2>
+            <strong><?=$errorDescription?></strong>
+        <? }else{ ?>
+            <h2><?=Lang::get('Search:'.$errorCode)?></h2>
+        <? } ?>
+     <? } ?>
+
+    <? if (! $checkMultiSearch) { ?>
+    <div class="b-pager">
+        <?
+            $cid = RequestWrapper::getValueSafe('cid');
+            if($cid)
+               $baseUrl->Add('cid', $cid);
+            $baseUrl->DeleteKey('Provider')->DeleteKey('SearchMethod');
+            if (RequestWrapper::getValueSafe('Provider'))
+               $baseUrl->Add('Provider', RequestWrapper::getValueSafe('Provider'))->Add('SearchMethod', RequestWrapper::getValueSafe('SearchMethod'));
+            if (RequestWrapper::getValueSafe('Discount'))
+               $baseUrl->Add('Discount', 'true');
+        ?>
+        <? $page_count_print = General::getConfigValue('pager_count_print') ? General::getConfigValue('pager_count_print') : '2'; ?>
+        <? $curpage = floor($from / $perpage) + 1 ?>
+        <?
+        if (isset($lastSearchProvider) && $lastSearchProvider['totalCount'] >= 20) {
+            $maxpage = ceil($lastSearchProvider['totalCount'] / $perpage) > 40 ? 40 : ceil($lastSearchProvider['totalCount'] / $perpage);
+            $baseUrl->DeleteKey('Provider')->DeleteKey('SearchMethod');
+            $lastProvider = explode("_", $lastSearchProvider['key']);
+            $baseUrl->Add('Provider', $lastProvider[0])->Add('SearchMethod', $lastProvider[1]);
+        } else {
+            $maxpage = ceil($maxCountPagination / $perpage) > 40 ? 40 : ceil($maxCountPagination / $perpage);
+        }
+
+        ?>
+        <? if ($curpage != 1) {?>
+        <a href="<?=$baseUrl->DeleteKey('from')->Add('from',$from - $perpage)->Get()?>"
+           class="btn btn-apper b-first-page"><span><?=Lang::get('prev_page')?></span></a>
+        <? } ?>
+
+        <? if ($maxpage > 1 && !($curpage >= $maxpage)) { ?>
+        <a href="<?=$baseUrl->DeleteKey('from')->Add('from',$from + $perpage)->Get()?>"
+           class="btn btn-apper b-last-page"><span><?=Lang::get('next_page')?></span></a>
+        <? } elseif ($curpage > $maxpage) { ?>
+        <? } ?>
+        <? if ($maxpage > 1) { ?>
+        <ul class="b-list-page">
+            <? if ($curpage > ($page_count_print + 1)) { ?>
+            <li class="b-item"><a href="<?=$baseUrl->DeleteKey('from')->Add('from',0)->Get()?>" class="i-link">1</a></li>
+            <? } ?>
+            <? if ($curpage > ($page_count_print + 2)) { ?>
+            <li class="b-item dotted">...</li>
+            <? } ?>
+            <? for ($i = max(1, $curpage - $page_count_print); $i <= min($maxpage, $curpage + $page_count_print); $i++) { ?>
+            <? if ($curpage == $i) { ?>
+                <li class="b-item active"><a href="<?=$baseUrl->DeleteKey('from')->Add('from',($i - 1) * $perpage)->Get()?>" class="i-link"><?=$i?></a>
+                </li>
+                <? } else { ?>
+                <li class="b-item"><a href="<?=$baseUrl->DeleteKey('from')->Add('from',($i - 1) * $perpage)->Get()?>" class="i-link"><?=$i?></a></li>
+                <? } ?>
+            <? } ?>
+            <? if ($curpage < $maxpage - ($page_count_print + 1)) { ?>
+            <li class="b-item dotted">...</li>
+            <? } ?>
+            <? if ($curpage < $maxpage - $page_count_print) { ?>
+            <li class="b-item"><a href="<?=$baseUrl->DeleteKey('from')->Add('from',($maxpage - 1) * $perpage)->Get()?>" class="i-link"><?=$maxpage?></a></li>
+            <? } ?>
+        </ul>
+        <? } ?>
+
+    </div>
+    <? } ?>
+</div>
+
+    <? } else { ?>
+    <h2><span><?=Lang::get('No_search_reason_' . $no_search_request_reason)?></span></h2>
+    <?} ?>
+
+
+
+</div>
+</div>
+</div>
+<script src="js/itemListFilters.js?<?=CFG_SITE_VERSION;?>"></script>
+<?=Plugins::invokeEvent('onItemListCustom')?>
+<? if (isset ($_COOKIE['ftitle'])&&$_COOKIE['ftitle']=='closed'):?>
+<!--noindex-->
+<script>
+    $(function(){
+        $('.ftitle').click();
+    });
+</script>
+<!--/noindex-->
+<?endif;?>

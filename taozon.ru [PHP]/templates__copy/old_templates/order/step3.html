@@ -1,0 +1,104 @@
+<?
+$counries = array('Россия','Австрия','Азейбарджан','Азербайджан','Албания','Андорра','Аомэнь(Макао)','Армения','Беларусь',
+'Бельгия','Болгария','Босния','Ватикан','Великобритания','Венгрия',
+'Германия','Гибралтар','Гонконг','Гремания','Греция','Грузия','Дания','Израиль','Ирландия','Исландия',
+'Испания','Италия','Казахстан','Кипр','Кыргызстан','Латвия','Литва','Лихтенштейн','Люксембург',
+'Макао','Македония','Мальта','Молдова','Монако','Нидерланды','Норвегия','Польша','Португалия',
+'Румыния','Сан-Марино','Сербия','Словакия','Словения','Таджикистан','Тайвань','Туркменистан',
+'Турция','Узбекистан','Украина','Финляндия','Франция','Хорватия','Черногория','Чехия','Швейцария',
+'Швеция','Эстония','Япония');
+?>
+<div class="main"><div class="canvas clrfix">
+    <h2>Доставка</h2><br/><br/>
+    <? //var_dump($userinfo); ?>
+    <? //var_dump($models); ?>
+    <form action="index.php?p=userorder&step4" method="post">
+        <h3>ФИО и адрес доставки</h3>
+        <br/>
+        <? if(isset($_GET['error'])) {?>
+            <span style="color:red; font-weight: bold"><?=$_GET['error'];?></span>
+        <? } ?>
+        <br/>
+        <table class="user">
+            <tr>
+            <td>Фамилия:</td><td> <input type="text" name="user[RecipientLastName]" value="<?=$RecipientLastName;?>"/></td>
+            </tr>
+            <tr>
+            <td>Имя:</td><td> <input type="text" name="user[RecipientFirstName]" value="<?=$RecipientFirstName;?>"/></td>
+            </tr>
+            <tr>
+            <td>Отчество:</td><td> <input type="text" name="user[RecipientMiddleName]" value="<?=$RecipientMiddleName; ?>"/></td>
+            </tr>
+            <tr>
+            <td>Страна:</td>
+            <td> 
+                <select name="user[Country]">
+                    <? foreach($counries as $item) { ?>
+                    <option value="<?=$item?>" <? if($Country==$item) print 'selected'; ?>> <?=$item?></option>
+                    <? } ?>
+                </select>
+            </td>
+            </tr>
+            <tr>
+            <td>Индекс:</td><td> <input type="text" name="user[PostalCode]" value="<?=$PostalCode;?>"/><br/> </td>
+            </tr>
+            <tr>
+            <td>Регион:</td><td> <input type="text" name="user[Region]" value="<?=$Region;?>"/><br/> </td>
+            </tr>
+            <tr>
+            <td>Город:</td><td> <input type="text" name="user[City]" value="<?=$City;?>"/><br/>  </td>
+            </tr>
+            <tr>
+            <td>Адрес(улица, дом, квартира):</td><td> <input type="text" name="user[Address]" value="<?=$Address?>"/><br/>  </td>
+            </tr>
+            <tr>
+            <td>Телефон:</td><td><input type="text" name="user[Phone]" value="<?=$Phone;?>"/><br/> </td>
+            </tr>
+        </table>
+        <input type="hidden" name="user[FirstName]" value="<?=$FirstName;?>"/>
+        <input type="hidden" name="user[LastName]" value="<?=$LastName;?>"/>
+        <input type="hidden" name="user[MiddleName]" value="<?=$MiddleName;?>"/>
+        <input type="hidden" name="user[Email]" value="<?=$Email;?>"/>
+        <input type="hidden" name="user[Sex]" value="<?=$Sex;?>"/>
+        <br/><br/>
+        <? if(count($models)>0) { ?>
+            <h3>Способ доставки</h3>
+            <br/>
+            <strong>Общий вес:</strong> <?=$weight;?> кг.<br/><br/>
+            <table class="notepad" width="970px">
+                    <thead>
+                            <tr>
+                                    <td width="5%"></td>
+                                    <td width="60%">Варианты доставки</td>
+                                    <td>Стоимость доставки</td>
+                            </tr>
+                    </thead>
+                    <tbody>
+                        <? $i=0; foreach ($models as $model){?>
+                            <? $checked = ($i==0) ? 'checked="checked"' : ''; ?>
+                            <? $i++;?>
+                            <tr>
+                                <td width="5%"><input type="radio" name="model" value="<?=$model['id'];?>" <?=$checked;?> /></td>
+                                <td><strong><?=$model['name'];?></strong><br/><?=$model['description'];?></td>
+                                <td><span class="pr"><? echo round((float)$model['price'], 2).' '.(string)$model['currencysign'];?> </span></td>
+                            </tr>
+                        <? } ?>
+                    </tbody>
+            </table>
+
+            <div class="clrfix mt20">
+                <div style="float:left;cursor:pointer;background:none;background-color:#F15A24">
+                    <? $params .= (isset($_GET['weight'])) ? '&weight='.$_GET['weight'] : '';?>
+                    <a href="index.php?p=userorder&step2<?=$params?>" class="b30 fll"><span style="background:none">Назад</span></a>
+                </div>
+                <div>
+                    <input class="b30 fll" style="float:right;background:none;cursor:pointer;background-color:#F15A24" type="submit"  value="Продолжить"/>
+                </div>
+            </div>
+            <? } else { ?>
+                <h3>К сожалению, не найдено способов доставки! </h3>
+            <? } ?>
+    <input type="hidden" name="total_weight" value="<?=$weight;?>"/>
+    <input type="hidden" name="order" value="<?=$order;?>"/>
+    </form>
+</div></div>

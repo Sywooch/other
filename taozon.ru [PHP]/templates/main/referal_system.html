@@ -1,0 +1,60 @@
+<? if(!isset($RefSys)){ ?>
+    <div>
+        Нет данных
+    </div>
+<? }else{ ?>
+    <div id="support">
+        <div class="bproduct fs15 mb30">
+            <h2 class="mb20"><span><?=Lang::get('user_referal')?></span></h2>
+            <table class="notepad note_office">
+                <tbody>
+                <tr>
+                    <td class="f11 lgray"><?=Lang::get('referal_link')?>:</td>
+                    <td><b>http://<?=IDN::decodeIDN($_SERVER['HTTP_HOST'])."/register?refId=".$RefSys['login']?></b></td>
+                </tr>
+                <tr>
+                    <td class="f11 lgray"><?=Lang::get('balance')?>:</td>
+                    <td><b><?=$RefSys['balance']?></b></td>
+                </tr>
+                <tr>
+                    <td class="f11 lgray"><?=Lang::get('category')?>:</td>
+                    <td><b><?=$RefSys['category']?></b></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="support">
+        <div class="bproduct fs15 mb30">
+            <h2 class="mb20"><span><?=Lang::get('referal_new_user')?></span></h2>
+            <? if (!$nofoundusers) { ?>
+
+                <table class="notepad note_office">
+                    <tbody>
+                    <tr>
+                        <td class="f11 lgray"><b><?=Lang::get('user')?></b></td>
+                        <td><b><?=Lang::get('orders')?></b></td>
+                    </tr>
+
+                    <? foreach ($UsersFromRef as $user) { ?>
+                        <tr>
+                            <td class="f11 lgray"><?=$user['login']?></td>
+                            <td>
+                                <? if ($user['orders']) { ?>
+                                    <? foreach ($user['orders'] as $order) { ?>
+                                        <span><?=$order['date']?></span> - <?=Lang::get('summ_of_order')?> <?=$order['amount']?> <br>
+                                    <? } ?>
+                                <? } else { ?>
+                                    <?=Lang::get('notfoundreforders')?>
+                                <? } ?>
+                            </td>
+                        </tr>
+                    <? } ?>
+
+                    </tbody>
+                </table>
+            <? } else { ?>
+                <?=Lang::get('notfondrefusers')?>
+            <? } ?>
+        </div>
+    </div>	<? } ?>

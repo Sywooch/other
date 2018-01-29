@@ -1,0 +1,124 @@
+<div class="main">
+    <div class="wrap clrfix">
+        <div class="bproduct">
+            <h1 class="mb25"><?=Lang::get('shopreviews')?></h1>
+
+    		<? if ($add == 1) {  ?>
+            	<span class="review-sented"><?=Lang::get('shop_comment_add')?></span>
+                <br><br>
+            <? } ?>
+
+            <? if ($add == 'error') {  ?>
+            	<?=Lang::get('shop_comment_error_add')?>
+                <br><br>
+            <? } ?>
+
+
+    		<? if(is_array($shopreviews)) { ?>
+                <div class="reviews shopReviews">
+                    <ul class="reviewsList">
+                        <? foreach ($shopreviews as $post) { ?>		
+                            <li class="reviewsItem">
+                                <div class="reviewsComment clrfix">
+                                    <div class="reviewsCommentInfo author">
+                                        <span class="reviewsAuthorName"><?=$post['name']?></span>
+                                        <span class="reviewsCommentDate"><?=$post['created']?></span>
+
+                                        <div class="estimateBlock noSelect">
+                                            <? $class = ((int)$post['rating'] < 0) ? 'negative' : 'positive'; ?>
+                                            
+                                            <? if (isset($userinfo)) { ?>
+                                            <? if (!@in_array ($post['review_id'], $_SESSION['shop_rating'])) { ?>
+                                                <a href="index.php?p=shopreviews&to=<?=$post['review_id']?>&calc=minus" style="border-bottom: none;"><span class="estimateButton negative">−</span></a>
+                                            
+                                            <span class="estimateRate <?=$class?>"><?=$post['rating']?></span>
+                                            
+                                                <a href="index.php?p=shopreviews&to=<?=$post['review_id']?>&calc=plus" style="border-bottom: none;">
+                                                <span class="estimateButton positive">+</span>
+                                                </a>
+                                            <? } else { ?>
+                                                <span class="estimateRate <?=$class?> voted"><?=$post['rating']?></span>
+                                            <? } ?>
+                                            <? } ?>
+                                        </div>
+                                    </div>
+                                    <p class="reviewsCommentText author"><?=$this->escape($post['text'])?></p>
+                                </div>
+
+                                <? if (! empty($post['answer'])) { ?>
+                                    <div class="reviewsAnswer clrfix">
+                                        <div class="reviewsCommentInfo author">
+                                            <span class="reviewsCommentDate admin">
+                                                <? if (isset($post['answer_date'])) { ?>
+                                                    <?=$post['answer_date']?>
+                                                <? } ?>
+                                            </span>
+                                        </div>
+                                        <p class="reviewsCommentText admin"><?=$post['answer']?></p>
+                                    </div>
+                                <? } ?>      
+                    		</li>
+                        <? } ?>
+                    </ul>
+                </div>
+
+                <? $curpage = floor($from/$perpage) + 1; ?>
+                <? $maxpage = ceil($count/$perpage); ?>
+
+                <? if (($count != 0) && (int)$maxpage > 1) { ?>
+                    <div class="pagination-shopreview">
+
+                        <? if ($curpage > 1) { ?>
+                        <a href="<?=$pageurl?>&from=<?=(($curpage-2) * $perpage)?>" class="paginationNav solidLink back"><span class="linkWrapper">&larr;</span></a>
+                        <? } ?>
+
+                        <ul class="paginationNumbers">
+                        <? if ($curpage > 3) { ?>
+                            <li class="paginationNumbersItem"><a href="<?=$pageurl?>&from=0" class="paginationNumbersLink solidLink"><span class="linkWrapper">1</span></a></li>
+                        <? } ?>
+                        <? if ($curpage > 4) { ?>
+                            <li class="paginationNumbersItem dotted">...</li>
+                        <? } ?>
+                        <? for ($i = max(1, $curpage - 2); $i <= min($maxpage, $curpage+2); $i++) { ?>
+                            <? if ($curpage == $i) { ?>
+                                <li class="paginationNumbersItem active"><a href="<?=$pageurl?>&from=<?=(($i-1)*$perpage)?>" class="paginationNumbersLink solidLink"><span class="linkWrapper"><span class="linkWrapper"><?=$i?></span></a></li>
+                            <? } else { ?>
+                                <li class="paginationNumbersItem"><a href="<?=$pageurl?>&from=<?=(($i-1)*$perpage)?>" class="paginationNumbersLink solidLink"><span class="linkWrapper"><?=$i?></span></a></li>
+                            <? } ?>
+                        <? } ?>
+                        <? if ($curpage < $maxpage - 3) { ?>
+                            <li class="paginationNumbersItem dotted">...</li>
+                        <? } ?>
+                        <? if ($curpage < $maxpage - 2) { ?>
+                            <li class="paginationNumbersItem"><a href="<?=$pageurl?>&from=<?=(($maxpage-1)*$perpage)?>" class="paginationNumbersLink solidLink">
+                                <span class="linkWrapper"><?=$maxpage?></span>
+                            </a></li>
+                        <? } ?>
+                        </ul>
+                        <? if ($curpage < $maxpage) { ?>
+                        <a href="<?=$pageurl?>&from=<?=($curpage * $perpage)?>" class="paginationNav solidLink forward" href="#"><span class="linkWrapper">&rarr;</span></a>
+                        <? } ?>
+                    </div>
+                <? } ?>
+                
+            <? } else { ?>
+    		    <span><?=Lang::get('no_posts')?></span>
+    		<? } ?>
+
+
+            <? if (isset($userinfo)) { ?>
+                <div id="set_answer" class="commentAdding">                
+                    <form action="<?=$pageurl?>" method="post" id="shopreviewCommentForm">
+                        <label class="commentAddingLabel" for="commentAddingField"><?=Lang::get('your_review')?>:</label>
+                        <div class="commentAddingWrapper">
+                        <textarea class="commentAddingField"  id="commentAddingField" name="txt" cols="60" rows="4"></textarea>
+                        <input name="name" id="name" type="hidden" value="<?=$userinfo['firstname']?$userinfo['lastname'].' '.$userinfo['firstname']:$userinfo['login']?>" />
+                        <input class="btn btnDefault btnGrey commentAddingButton" name="" type="submit" value="<?=Lang::get('save')?>" />
+                        </div>
+                    </form>
+                </div>
+             <? } ?>
+        </div>
+    </div>
+</div>
+

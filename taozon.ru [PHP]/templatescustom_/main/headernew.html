@@ -1,0 +1,415 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU" class="no-js" <? if(General::getConfigValue('rtl')){ ?> dir = "rtl" <?}?>>
+<head>
+    <? if(in_array('Seo2', General::$enabledFeatures)){?>
+    <base href="<?=defined('CFG_BASE_HREF')?CFG_BASE_HREF:'http://'.$_SERVER['HTTP_HOST']?>" />
+    <?} ?>
+
+    <? print (General::getConfigValue('meta_tags')) ? General::getConfigValue('meta_tags') : ''; ?>
+
+    <? if(SCRIPT_NAME == 'index'){ ?>
+    <title><?=$this->escape(General::getConfigValue('title_for_home', CFG_SITE_NAME . ' - ' . Lang::get('home')));?></title>
+    <meta name="description" content="<?=$this->escape(General::getConfigValue('description_for_home', $GLOBALS['page']['seo_description']));?>" />
+    <meta name="keywords" content="<?=$this->escape(General::getConfigValue('keywords_for_home', $GLOBALS['page']['seo_keywords'])); ?>" />
+    <? } elseif (! empty($GLOBALS['page'])) { ?>
+    <title><?=$this->escape(General::getConfigValue('site_name', CFG_SITE_NAME) . ' - ' . $GLOBALS['page']['pagetitle']);?></title>
+    <meta name="description" content="<?=$this->escape($GLOBALS['page']['seo_description'])?>" />
+    <meta name="keywords" content="<?=$this->escape($GLOBALS['page']['seo_keywords'])?>" />
+    <? } elseif(@$GLOBALS['category']) { ?>
+    <title><?
+        $prefix = General::getConfigValue('category_prefix');
+        $suffix = General::getConfigValue('category_suffix');
+        if(@$GLOBALS['category']['seo_title'])
+            list($prefix, $suffix) = explode('||', $GLOBALS['category']['seo_title']);
+        elseif(General::getConfigValue('site_name'))
+            $prefix = General::getConfigValue('site_name');
+        print $this->escape($prefix); ?> <?=$this->escape(@$GLOBALS['category']['pagetitle']?@$GLOBALS['category']['pagetitle']:@$GLOBALS['pagetitle'])?> <?=$this->escape($suffix)?></title>
+    <meta name="description" content="<?=$this->escape(@$GLOBALS['category']['seo_description']?$GLOBALS['category']['seo_description']:@$GLOBALS['pagetitle'])?>" />
+    <meta name="keywords" content="<?=$this->escape(@$GLOBALS['category']['seo_keywords']?$GLOBALS['category']['seo_keywords']:@$GLOBALS['pagetitle'])?>" />
+    <? } elseif (! empty($GLOBALS['brands_seo'])) { ?>
+    <title><?
+        $prefix = General::getConfigValue('category_prefix');
+        $suffix = General::getConfigValue('category_suffix');
+        if(@$GLOBALS['brands_seo']['seo_title'])
+            list($prefix, $suffix) = explode('||', $GLOBALS['brands_seo']['seo_title']);
+        elseif(General::getConfigValue('site_name'))
+            $prefix = General::getConfigValue('site_name');
+        print $this->escape($prefix); ?> <?=$this->escape(@$GLOBALS['brands_seo']['pagetitle']?@$GLOBALS['brands_seo']['pagetitle']:@$GLOBALS['pagetitle'])?> <?=$this->escape($suffix)?></title>
+    <meta name="description" content="<?=$this->escape(@$GLOBALS['brands_seo']['seo_description']?$GLOBALS['brands_seo']['seo_description']:@$GLOBALS['pagetitle'])?>" />
+    <meta name="keywords" content="<?=$this->escape(@$GLOBALS['brands_seo']['seo_keywords']?$GLOBALS['brands_seo']['seo_keywords']:@$GLOBALS['pagetitle'])?>" />
+
+    <? } elseif (! empty($GLOBALS['recom_seo'])) { ?>
+    <title><?
+        $prefix = General::getConfigValue('category_prefix');
+        $suffix = General::getConfigValue('category_suffix');
+        if(@$GLOBALS['recom_seo']['title']) {
+            print  $this->escape($prefix." ".@$GLOBALS['recom_seo']['title']." ".$suffix);
+        } else {
+            print Lang::get('recommendations');
+        }    ?>
+       </title>
+    <meta name="description" content="<?=$this->escape(@$GLOBALS['recom_seo']['meta_description'])?>" />
+    <meta name="keywords" content="<?=$this->escape(@$GLOBALS['recom_seo']['meta_keywords'])?>" />
+
+    <? } elseif(@$_GET['cid']) {
+    $prefix = General::getConfigValue('category_prefix');
+        $suffix = General::getConfigValue('category_suffix');
+    ?>
+    <title><?=$this->escape($prefix . ' ' . $GLOBALS['pagetitle'] . ' ' . $suffix)?></title>
+    <meta name="description" content="<?=$this->escape(@$GLOBALS['pagetitle'])?>" />
+    <meta name="keywords" content="<?=$this->escape(@$GLOBALS['pagetitle'])?>" />
+    <? } elseif(@$_GET['p']=='news' || @$_GET['p']=='allnews') { ?>
+    <title><? print (General::getConfigValue('site_name', CFG_SITE_NAME) . ' - ' . Lang::get('news'))?></title>
+    <? } else { ?>
+    <title><? print (General::getConfigValue('site_name', CFG_SITE_NAME)); ?> <? if(@$GLOBALS['pagetitle']){ ?> - <?=$this->escape($GLOBALS['pagetitle'])?> <? } ?></title>
+    <meta name="description" content="<?=$this->escape(@$GLOBALS['pagetitle'])?>" />
+    <meta name="keywords" content="<?=$this->escape(@$GLOBALS['pagetitle'])?>" />
+    <? } ?>
+
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="/js/carusel/agile_carousel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <?if(file_exists(CFG_APP_ROOT.'/css/custom.css')){?>
+    <link rel="stylesheet" href="css/custom.css"/>
+    <link rel="stylesheet" href="js/coin-slider-styles.css" />
+    <?}?>
+
+    <script src="js/libs/jquery/jquery.min.js"></script>
+    <script src="js/libs/jquery/jquery.ui/jquery-ui.min.js"></script>
+    <script src="js/libs/jquery/jquery.ui/jquery.ui.core.js"></script>
+    <script src="js/libs/jquery/jquery.ui/jquery.ui.widget.js"></script>
+    <script src="js/libs/jquery/jquery.ui/jquery.ui.datepicker.js"></script>
+    <script src="js/libs/jquery/jquery.carousel/jquery.jcarousel.min.js"></script>
+    <script src="js/libs/jquery/jquery.colorbox/jquery.colorbox-min.js"></script>
+
+	<script src="js/carusel/agile_carousel.alpha.js"></script>
+    <script src='js/jquery.zoom.js'></script>
+    <script src='js/jquery.cookie.js'></script>
+	
+    <script src="js/general.js"></script>
+
+    <? if(SCRIPT_NAME == 'basket' || SCRIPT_NAME == 'userorder'){ ?>
+    <script type="text/javascript" src="js/cart.js"></script>
+    <? } ?>
+
+    <? if(SCRIPT_NAME == 'supportlist'){ ?>
+    <script src="js/favourites.js"></script>
+    <? } ?>
+
+    <? if(SCRIPT_NAME != 'index'){ ?>
+    <script src="js/inner.js"></script>
+    <? } ?>
+
+    <? if(SCRIPT_NAME == 'index'){ ?>
+    <script src="js/main.js"></script>
+    <? } ?>
+
+    <script>
+        NotAvailableError = "<?=Lang::get('NotAvailable')?>";
+        $(function(){
+            url_gen_privateoffice = "<?=@UrlGenerator::generateContentUrl('privateoffice')?>";
+            lang_privateoffice = "<?=Lang::get('private_office')?>";
+
+            url_gen_profile = "<?=@UrlGenerator::generateContentUrl('profile')?>";
+
+            url_gen_logout = "<?=@UrlGenerator::generateContentUrl('logout')?>";
+            lang_logout = "<?=Lang::get('logout')?>";
+
+            url_gen_login = "<?=@UrlGenerator::generateContentUrl('login')?>";
+            lang_login = "<?=Lang::get('login')?>";
+
+            url_gen_register = "<?=@UrlGenerator::generateContentUrl('register')?>";
+            lang_register = "<?=Lang::get('registration')?>";
+            $("#usermenu_ajax").prepend('<li id="loading_userdat"><img src="/css/i/ajax-loader.gif" width="16" height="16" /></li>');
+            $.ajax({
+                url: "index_ajax.php?p=get_user_data_summary",
+                cache: false,
+                dataType : "json",
+                success: function(json){
+                    $("#fav_ajax").html(json.favourites);
+                    $("#basket_ajax").html(json.basket);
+                    $("#loading_userdat").hide();
+                    if (json.IsAuthenticated) {
+                        $("#usermenu_ajax").prepend('<li><a href=' + url_gen_privateoffice +'>' + lang_privateoffice + '</a></li><li><a class="cabinet" href='+ url_gen_profile +'>' + json.username + '</a></li><li><a href='+ url_gen_logout +'>'+ lang_logout +'</a></li>');
+						
+						$(".for_deposit").show();
+						$(".for_deposit .for_number span").html(json.deposit);
+                        //$("#usermenu_ajax").prepend('Вошел');
+                    } else {
+                        $("#usermenu_ajax").prepend('<li><a href='+ url_gen_login +'>'+ lang_login +'</a></li><li><a href='+ url_gen_register +'>'+ lang_register +'</a></li>');
+                        //$("#usermenu_ajax").prepend('Надо зайти');
+                    }
+                }
+            });
+        });
+
+
+$(document).ready(
+	function(){
+			 $(".to_top").hide();
+	
+	
+	$(window).scroll(function () {
+		if (100<$(document).scrollTop()){
+		  if ($(".to_top").css("display")=="none"){
+			$(".to_top").fadeIn("slow");
+		  }
+		}else{
+		  if ($(".to_top").css("display")=="block"){
+			$(".to_top").fadeOut("slow");
+		  }
+		}
+	  });
+	  
+	  	$(".to_top").click(
+			function(){
+				$('html, body').animate({ scrollTop: $("body").offset().top }, 500);
+			}
+		);
+	  
+	}
+);
+
+    </script>
+    
+<style type="text/css">
+.to_top{
+    background: url("/new_totop.png") no-repeat scroll 0 0 transparent;
+    bottom: 50px;
+    color: #666666;
+    cursor: pointer;
+    font-size: 24px;
+    height: 79px;
+    margin-right: -620px;
+    position: fixed;
+    right: 50%;
+    text-align: center;
+    bottom:20px;
+    width: 78px;
+    z-index: 55;
+	display:block;
+}
+</style>
+
+</head>
+<body name="body_top" <? if(General::getConfigValue('rtl')){ ?> class="rtl" <?}?>>
+<div class="to_top"></div>
+
+<div class="over"></div>
+<div style="display:none">
+<?
+$d = new DateTime("2013-10-9");
+$days = $d->diff( new DateTime(date("Y-m-j")) )->format("%d");
+$all_guests = 218993+$days*337;
+?>
+</div>
+
+<form action="index.php?p=setlang" method="post">
+    <input type="hidden" name="lang" id="lang" />
+    <input type="hidden" name="from" value="<?=$_SERVER['REQUEST_URI']?>" />
+</form>
+
+<div id="error-dialog" style="display: none" title="<?=ucfirst(Lang::get('error'))?>"></div>
+
+<? $customHeader = Plugins::invokeEvent('onHeaderBlockRender'); ?>
+<?if($customHeader){?>
+    <?=$customHeader?>
+    <?}else{?>
+<div class="header">
+    <? if (strpos($_SERVER['HTTP_HOST'], 'taobao') !== false) { ?>
+    <div class="wrap clrfix mb20">
+        <strong style="color:red; font-size:18px; padding-left:30px;"><?=Lang::get('warning_taobao')?></strong>
+    </div>
+    <? } ?>
+    <div class="wrap clrfix" style="position:relative">
+        <?=Plugins::invokeEvent('GetGeoLocate',array('localip'=>$_SERVER['REMOTE_ADDR'])) ?>
+        <div class="col col240 mr30">
+            <a href="index.php" class="logo">
+                <img src="<? print (General::getConfigValue('logo')) ? General::getConfigValue('logo') : 'i/logo.png'; ?>" alt="<? print (General::getConfigValue('title_for_home')) ? General::getConfigValue('title_for_home') : (CFG_SITE_NAME . ' - ' . Lang::get('home')); ?>" title="<? print (General::getConfigValue('title_for_home')) ? General::getConfigValue('title_for_home') : (CFG_SITE_NAME . ' - ' . Lang::get('home')); ?>" />
+            </a>
+        </div>
+
+        <div class="col col690">
+            <ul class="hblocks">
+                <li class="name">
+                    <? print (General::getConfigValue('header_text')) ? General::getConfigValue('header_text') : Lang::get('header_text'); ?>
+                    <? if(defined('CFG_USE_CLOCK') && CFG_USE_CLOCK){ ?>
+                    <br />
+                    <a href="http://time.is/China" id="time_is_link" style="font-size:15px">Время в Китае:</a>
+                    <span id="China_z40f" style="font-size:15px"></span>
+                    <script src="http://widget.time.is/t.js"></script>
+                    <script>
+                        time_is_widget.init({China_z40f:{}});
+                    </script>
+                    <? } ?>
+                </li>
+                <? if (General::getConfigValue('phone') || General::getConfigValue('work_shedule')) { ?>
+                <li class="phone mr20">
+                    <div class="bgr">
+                        <? if (General::getConfigValue('phone')) { ?>
+                        <strong><?=General::getConfigValue('phone')?></strong>
+                        <? } ?>
+                        <? if (General::getConfigValue('work_shedule')) { ?>
+                        <?=General::getConfigValue('work_shedule')?>
+                        <? } ?>
+                    </div>
+                </li>
+                <? } ?>
+                <? if (!General::getConfigValue('hide_operator')) { ?>
+                <li class="operator">
+                    <div class="bgr">
+                        <a href="javascript:void(0)"><?=Lang::get('online_chat')?></a>
+                    </div>
+                </li>
+                <? } ?>
+                <? /* print (General::getConfigValue('online_chat_code')) ? General::getConfigValue('online_chat_code') : '';  */ ?>
+                <li class="for_deposit" style="float: right; text-align: right; margin-top: 0px; width:300px; display:none;">
+                	<div><span style="padding-right: 112px; position:relative; top:9px">На вашем счету:</span></div>
+                    <div class="for_number" style="font-size:18px;"><span></span><a href="/index.php?p=pay&amp;deposit" style="position: relative; top: 8px; left:5px;"><img src="/new_refill_btn.png"></a></div>
+                </li>
+            </ul>
+        </div>
+        <div style="position: absolute; right: 277px; top: 9px;">
+			<div style="margin-bottom:3px">Всего гостей: <strong style="font: bold 14px/16px Arial,Helvetica,sans-serif; background-color: rgb(57, 116, 181); color: rgb(255, 255, 255); padding: 2px; border-radius: 3px 3px 3px 3px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);"><?=$all_guests?></strong></div>
+			<div><span style="position:relative; top:2px;">Сейчас на сайте:</span> <strong id="count_online" style="font: bold 14px/16px Arial,Helvetica,sans-serif; background-color: rgb(57, 116, 181); color: rgb(255, 255, 255); padding: 2px; border-radius: 3px 3px 3px 3px; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); float:right"></strong></div>
+            <div style="clear:both"></div>
+		</div>
+    </div>
+</div>
+    <?}?>
+
+<div class="spacer"><div class="wrap clrfix"></div></div>
+
+
+<!-- Dropdown Login form -->
+<script type="text/javascript">
+function dd_login_function(){
+			$(".dd_login_form").slideToggle();
+			$(".to_tab_index").focus();
+			return false;
+		}
+
+</script>
+<div class="dd_login_wrapper" style="display:none">
+ <div class="dd_login_form">
+    <div class="userform">
+            <form action="login" method="post">
+                <div class="form-row">
+                    <label for="username">Логин</label>
+                    <input class="to_tab_index" type="text" id="username" name="username">
+                </div>
+    
+                <div class="form-row">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password">
+                </div>
+    
+                <div class="form-row">
+                    <label for="remember" class="remeber" style="width:100px;">
+                        <input type="checkbox" class="checkbox" id="remember" name="remember" value="remember">
+                        Запомнить?
+                    </label>
+                </div>
+    
+                
+                <div class="form-row enter">
+                    <input type="submit" id="submitb" name="login" value="Вход" class="btn_office">
+                </div>
+            </form>
+        </div>
+    <div class="close" onClick="$(this).parent().slideUp()"></div>
+ </div>
+</div>
+
+<? $menu[2]['title']='Калькулятор доставки' ?>
+<div class="navigation"><div class="wrap clrfix">
+    <ul class="fll menu" style="width:650px;">
+        <? if($menu) { ?>
+        <li><a href="/" <? if(!@$_GET['p']){ ?> class="active" <? } ?>><?=Lang::get('home')?></a></li>
+        <? foreach($menu as $m){ ?>
+            <li><a href="<?=@UrlGenerator::generateContentUrl($m['alias'])?>" <? if(@$_GET['p'] == $m['alias']){ ?> class="active" <? } ?>><?=$m['title']?></a></li>
+            <? } ?>
+        <? } else { ?>
+        <li><a href="/" <? if(!@$_GET['p']){ ?> class="active" <? } ?>><?=Lang::get('home')?></a></li>
+        <li><a href="<?=@UrlGenerator::generateContentUrl('how_to_order')?>" <? if(@$_GET['p'] == 'how_to_order'){ ?> class="active" <? } ?>><?=Lang::get('how_to_order')?></a></li>
+        <li><a href="<?=@UrlGenerator::generateContentUrl('help')?>" <? if(@$_GET['p'] == 'help'){ ?> class="active" <? } ?>><?=Lang::get('help')?></a></li>
+        <? } ?>
+        <? if (Plugins::invokeEvent('onHierarchyRender')) { ?>
+        <li><a href="<?=@UrlGenerator::generateContentUrl('recommendations')?>" <? if(@$_GET['p'] == 'recommendations'){ ?> class="active" <? } ?>><?=Lang::get('recommendations')?></a></li>
+        <? } ?>
+        <? if (defined('CFG_SHOPREVIEW')) { ?>
+        <li><a href="<?=@UrlGenerator::generateContentUrl('shopreviews')?>" <? if(@$_GET['p'] == 'shopreviews'){ ?> class="active" <? } ?>><?=Lang::get('shopreviews')?></a></li>
+        <? } ?>
+    </ul>
+
+    <form id="login_register">
+        <input type="hidden" name="from" value="<?=$_SERVER['REQUEST_URI']?>" />
+    </form>
+
+    <ul class="flr sblocks" id="usermenu_ajax">
+
+        <? if (!isset($userdata_ajax)) { ?>
+        <? } ?>
+
+        <? if($langs && count($langs)>1){ ?>
+        <li>
+            <a href="#" class="lang arrow"><span><i class="<?=@$_SESSION['active_lang']?>"><?=Lang::get('lang_name')?></i></span></a>
+            <ul class="menu-lang">
+                <? foreach($langs as $l){ ?>
+                <li><a href="#" class="lang"><i class="<?=$l['name']?>"></i><span class="lang-name"><?=Lang::get('lang_name_'.$l['name'])?></span></a></li>
+                <? } ?>
+            </ul>
+        </li>
+        <? } ?>
+    </ul>
+</div></div>
+
+<div class="userbar"><div class="wrap clrfix">
+    <ul class="uluserbar">
+        <li class="col col255 cats itemmenu">
+            <a href="#" onClick="return false" class="category <? if(SCRIPT_NAME=='index'){ ?>active<? } ?>"><span><?=Lang::get('by_categories')?></span><i></i></a>
+            <? if (!General::getConfigValue('hide_brands_url')) { ?>
+                <a href="<?=General::generateUrl('brands', 0 )?>" class="brand"><span><?=Lang::get('by_brands')?></span></a>
+            <? } ?>
+        </li>
+        <li class="col col435 itemmenu">
+            <?
+            $url = new UrlWrapper();
+            $url->Set("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]")->ReplaceAction('search');
+            ?>
+            <form action="<?=$url->Get()?>" method="post" class="search" id="full_search_form" onSubmit="CheckSearch(); return false;">
+                <div class="field">
+                    <div class="in search-floating">
+                        <a href="#" class="selection allplace"><span><?=Lang::get('everywhere')?></span></a>
+                        <input type="text" name="search" id="full_search" value="<?=RequestWrapper::getValueSafe('search')?>" placeholder="<?=Lang::get('default_search_text')?>">
+                    </div>
+                    <input name="cid" type="hidden" />
+                    <div class="dropdown dropdown-search" id="searchcatsajax"><?=$SearchCategories?></div>
+                </div>
+                <input type="submit" value="<?=Lang::get('find')?>" class="btn fll" />
+            </form>
+        </li>
+
+        <li class="col col150 itemmenu">
+            <a href="<?=@UrlGenerator::generateContentUrl('supportlist')?>" class="mydata favorites"><i class="i rounder" id="fav_ajax"> </i><?=Lang::get('favourites')?></a>
+        </li>
+        <li class="col col120 itemmenu">
+            <a href="<?=@UrlGenerator::generateContentUrl('basket')?>" class="mydata basket"><i class="i rounder" id="basket_ajax"> </i> <?= Lang::get('cart') ?></a>
+        </li>
+
+    </ul>
+
+    <? if(SCRIPT_NAME!='index'){ ?>
+    <div class="dropdown dropdown-inner">
+        <div class="pda10" style="border-bottom: 1px solid #E6E6E6;">
+            <a href="<?=General::generateUrl('allcats', array() )?>" class="all"><i class="i arrowright"></i><span><?=Lang::get('all_categories')?></span></a>
+        </div>
+        <?=$MenuShortNew?>
+        <div class="pda10">
+            <a href="<?=General::generateUrl('allcats', array() )?>" class="all"><i class="i arrowright"></i><span><?=Lang::get('all_categories')?></span></a>
+        </div>
+    </div>
+    <? } ?>
+</div></div>

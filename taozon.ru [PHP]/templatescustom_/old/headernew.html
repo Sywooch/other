@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<head>
+    <? if(@$GLOBALS['page']){ ?>
+    <title><? print isset(General::$siteConf['site_name']) ? General::$siteConf['site_name'] : CFG_SITE_NAME; ?> - <?=$GLOBALS['page']['pagetitle']?></title>
+    <meta name="description" content="<?=$GLOBALS['page']['seo_description']?>" />
+    <meta name="keywords" content="<?=$GLOBALS['page']['seo_keywords']?>" />
+    <? } elseif(@$GLOBALS['category']) { ?>
+    <title><?
+        $prefix = @General::$siteConf['category_prefix'];
+        $suffix = @General::$siteConf['category_suffix'];
+        if(@$GLOBALS['category']['seo_title'])
+            list($prefix, $suffix) = explode('||', $GLOBALS['category']['seo_title']);
+        elseif(General::$siteConf['site_name'])
+            $prefix = General::$siteConf['site_name'];
+        print $prefix; ?> <?=@$GLOBALS['category']['pagetitle']?@$GLOBALS['category']['pagetitle']:@$GLOBALS['pagetitle']?> <?=$suffix?></title>
+    <meta name="description" content="<?=@$GLOBALS['category']['seo_description']?$GLOBALS['category']['seo_description']:@$GLOBALS['pagetitle']?>" />
+    <meta name="keywords" content="<?=@$GLOBALS['category']['seo_keywords']?$GLOBALS['category']['seo_keywords']:@$GLOBALS['pagetitle']?>" />
+    <? } elseif(@$_GET['cid']) {
+    $prefix = @General::$siteConf['category_prefix'];
+    $suffix = @General::$siteConf['category_suffix'];
+    ?>
+    <title><?=$prefix?> <?=$GLOBALS['pagetitle']?> <?=$suffix?></title>
+    <meta name="description" content="<?=@$GLOBALS['pagetitle']?>" />
+    <meta name="keywords" content="<?=@$GLOBALS['pagetitle']?>" />
+    <? } else { ?>
+    <title><? print isset(General::$siteConf['site_name']) ? General::$siteConf['site_name'] : CFG_SITE_NAME; ?> <? if(@$GLOBALS['pagetitle']){ ?> - <?=$GLOBALS['pagetitle']?> <? } ?></title>
+    <meta name="description" content="<?=@$GLOBALS['pagetitle']?>" />
+    <meta name="keywords" content="<?=@$GLOBALS['pagetitle']?>" />
+    <? } ?>
+
+    <? if (defined(CFG_BASE_HREF)) { ?>
+        <base href="<?=CFG_BASE_HREF?>" />
+    <? } ?>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- <link rel="stylesheet" href="css/custom.css"/> -->
+    <script src="http://yandex.st/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <link type="text/css" href="css/redmond/jquery-ui-1.8.18.custom.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="js/general.js"></script>
+    
+    <? if(SCRIPT_NAME == 'basket' || SCRIPT_NAME == 'userorder'){ ?>
+    <script type="text/javascript" src="js/cart.js"></script>
+    <? } ?>
+    
+    <? if(SCRIPT_NAME == 'supportlist'){ ?>
+    <script type="text/javascript" src="js/favourites.js"></script>
+    <? } ?>
+    
+    <? if(SCRIPT_NAME != 'index'){ ?>
+    <script type="text/javascript" src="js/inner.js"></script>
+    <link rel="stylesheet" href="css/inner.css" type="text/css" />    
+    <? } ?>
+    
+    <? if(SCRIPT_NAME == 'index'){ ?>
+    <!--Social-->
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/coin-slider.js"></script>
+    <link rel="stylesheet" href="js/coin-slider-styles.css" type="text/css" />    
+    <? } ?>
+</head>
+<body>
+    <form action="index.php?p=setlang" method="post">
+        <input type="hidden" name="lang" id="lang" />
+        <input type="hidden" name="from" value="<?=$_SERVER['REQUEST_URI']?>" />
+    </form>
+    
+    <div id="error-dialog" style="display: none"></div>
+    
+    <!-- .header -->
+    <div class="header"><div class="wrap clrfix">
+            <!-- .col240 -->
+            <div class="col col240 mr30">
+                <a href="index.php" class="logo"><?=CFG_SITE_NAME?></a>
+            </div>
+            <!-- /.col240 -->
+            <!-- .col690 -->
+            <div class="col col690">
+                <ul class="hblocks">
+                    <li class="name">
+                        <?=Lang::get('header_text')?>
+                        <? if(defined('CFG_USE_CLOCK') && CFG_USE_CLOCK){ ?>
+                        <br />
+                        <a href="http://time.is/China" id="time_is_link" style="font-size:15px">Время в Китае:</a>
+                        <span id="China_z40f" style="font-size:15px"></span>
+                        <script src="http://widget.time.is/t.js"></script>
+                        <script>
+                            time_is_widget.init({China_z40f:{}});
+                        </script>
+                        <? } ?>
+                    </li>
+                    <li class="phone mr20">
+                        <div class="bgr">
+                            <strong><?=@General::$siteConf['phone']?></strong>
+                            <?=Lang::get('work_shedule')?>
+                        </div>
+                    </li>
+                    <li class="operator">
+                        <div class="bgr">
+                            <a href="#"><?=Lang::get('online_chat')?></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        <!-- /.col690 -->
+        </div></div>
+    <!-- /.header -->
+    
+    <!-- .spacer -->
+    <div class="spacer"><div class="wrap clrfix"></div></div>
+    <!-- /.spacer -->
+    
+    <!-- .nav -->
+    <div class="navigation"><div class="wrap clrfix">
+            <ul class="fll menu">
+                <? if($menu){ ?>
+                    <li><a href="/" <? if(!@$_GET['p']){ ?> class="active" <? } ?>><?=Lang::get('home')?></a></li>
+                    <? foreach($menu as $m){ ?>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl($m['alias'])?>" <? if(@$_GET['p'] == $m['alias']){ ?> class="active" <? } ?>><?=$m['title']?></a></li>
+                    <? } ?>
+                <? } else { ?>
+                    <li><a href="/" <? if(!@$_GET['p']){ ?> class="active" <? } ?>><?=Lang::get('home')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('docs')?>" <? if(@$_GET['p'] == 'docs'){ ?> class="active" <? } ?>><?=Lang::get('documentation')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('how_to_order')?>" <? if(@$_GET['p'] == 'how_to_order'){ ?> class="active" <? } ?>><?=Lang::get('how_to_order')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('delivery')?>" <? if(@$_GET['p'] == 'delivery'){ ?> class="active" <? } ?>><?=Lang::get('delivery')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('payment')?>" <? if(@$_GET['p'] == 'payment'){ ?> class="active" <? } ?>><?=Lang::get('payment')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('contacts')?>" <? if(@$_GET['p'] == 'contacts'){ ?> class="active" <? } ?>><?=Lang::get('contacts')?></a></li>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('help')?>" <? if(@$_GET['p'] == 'help'){ ?> class="active" <? } ?>><?=Lang::get('help')?></a></li>
+                <? } ?>
+            </ul>	
+            
+            <form id="login_register">
+                <input type="hidden" name="from" value="<?=$_SERVER['REQUEST_URI']?>" />
+            </form>
+            
+            <ul class="flr sblocks">
+                
+                <? if(!$IsAuthenticated){ ?>
+                <li><a href="<?=@UrlGenerator::generateContentUrl('login')?>"><?=Lang::get('login')?></a></li>
+                <li><a href="<?=@UrlGenerator::generateContentUrl('register')?>"><?=Lang::get('registration')?></a></li>
+                <? } else { ?>
+                <li><a href="<?=@UrlGenerator::generateContentUrl('privateoffice')?>"><?=Lang::get('private_office')?></a></li>
+                <li><a href="<?=@UrlGenerator::generateContentUrl('profile')?>"><?=$_SESSION[CFG_SITE_NAME.'loginUserData']['username']?></a></li>
+                <li><?=$deposit?></li>
+                <li><a href="<?=@UrlGenerator::generateContentUrl('logout')?>"><?=Lang::get('logout')?></a></li>
+                <? } ?>
+                
+                <li>
+                    <? if($langs && count($langs)>1){ ?>
+                    <a href="#" onclick="return false" class="lang arrow"><span><i class="<?=@$_SESSION['active_lang']?>"><?=Lang::get('lang_name')?></i></span></a>
+                    <ul class="bgr-block bx5 menu-lang">
+                        <?
+                        foreach($langs as $l){
+                            ?>
+                                <li><a href="#" class="lang"><i class="<?=$l['name']?>"></i></a></li>
+                            <?
+                        }
+                        ?>
+                    </ul>
+                    <? } ?>
+                </li>
+            </ul>
+        </div></div>
+    <!-- /.nav -->
+    
+    <!-- .userbar -->
+    <div class="userbar"><div class="wrap clrfix">
+            <ul class="uluserbar">
+                <li class="col col255 cats itemmenu">
+                    <a href="#" onclick="return false" class="category <? if(SCRIPT_NAME=='index'){ ?>active<? } ?>"><span><?=Lang::get('by_categories')?></span><i></i></a>
+                    <a href="<?=General::generateUrl('brands', 0 )?>" class="brand"><span><?=Lang::get('by_brands')?></span></a>
+                </li>
+                <li class="col col435 itemmenu">
+                    <form action="<?=@UrlGenerator::generateSearchUrl()?>" method="get" class="search">
+                        <div class="field">
+                            <div class="in">
+                                <a href="#" class="arrow allplace"><span><?=Lang::get('everywhere')?></span></a>
+                                <input type="text" name="search" value="<?=@$_GET['search']?>" placeholder="<?=Lang::get('default_search_text')?>">
+                                <input type="hidden" name="brand" value="<?=@$_GET['brand']?>">
+                                <input type="hidden" name="cid" value="">
+                                <?if(!in_array('Seo2', General::$enabledFeatures)){?>
+                                <input type="hidden" name="p" value="search">
+                                <? } ?>
+                            </div>
+                            <div class="dropdown dropdown-search">
+                                <? $opened = false; ?>
+                                <? if (is_array($searchcats))
+                                {
+                                    $counter_top = 0;
+                                    foreach ($searchcats as $cat) 
+                                    {  
+                                        if ($cat['ishidden'] == 'false' && (string) $cat['isparent'] == 'true')
+                                        {
+                                            $counter_top++; if($counter_top>10) break; 
+                                            ?><div class="bitem clrfix"><?
+                                            $opened = true;
+                                            if (empty($cat['externalid'])) 
+                                            { 
+                                                ?><h3><?= $cat['name'] ?></h3><? 
+                                            } else { 
+                                                ?><h3><a cid="<?=$cat['id']?>" href="#" <? if (@$_GET['cid'] == $cat['id']) { ?> class="search-cat-active"<? } ?>><?= $cat['name'] ?></a></h3><?
+                                            } 
+                                            ?><ul class="lcategory"><?
+                                            $counter_in = 0;
+                                            foreach ($searchcats as $cat2)
+                                            { 
+                                                if ($cat2['ishidden'] == 'false' && (string) $cat2['parentid'] == (string) $cat['id'])
+                                                { 
+                                                    if (empty($cat2['externalid']))
+                                                    {
+                                                    } else {
+                                                        $counter_in++; if($counter_in>4) break; 
+                                                        ?><li><a href="#" cid="<?=$cat2['id']?>" <? if (@$_GET['cid'] == $cat2['id']) { ?> class="search-cat-active"<? } ?>><?= $cat2['name'] ?></a></li><?
+                                                    }
+                                                } 
+                                            } 
+                                            ?></ul></div><?
+                                        }
+                                    }
+                                } ?>
+                                <div class="pda10">
+                                    <a href="<?=General::generateUrl('allcats', array() )?>" class="all"><i class="i arrowright"></i><span><?=Lang::get('all_categories')?></span></a>
+                                </div>
+                            </div>
+                        </div>	
+                        <a href="#" id="search-submit" class="btn fll"><?=Lang::get('find')?></a>
+                    </form>
+                </li>
+                <li class="col col150 itemmenu">
+                    <a href="<?=@UrlGenerator::generateContentUrl('supportlist')?>" class="mydata favorites"><i class="i rounder"><?=$favourites?></i><?=Lang::get('favourites')?></a>
+                </li>
+                <li class="col col120 itemmenu">
+                    <a href="<?=@UrlGenerator::generateContentUrl('basket')?>" class="mydata basket"><i class="i rounder"><?=$basket?></i> <?= Lang::get('cart') ?></li></a>
+                </li>
+            </ul>
+
+            <? if(SCRIPT_NAME!='index'){ ?>
+		<div class="dropdown dropdown-inner">
+                    <?=$MenuShortNew?>
+                    <div class="pda10">
+                        <a href="<?=General::generateUrl('allcats', array() )?>" class="all"><i class="i arrowleft"></i><span><?=Lang::get('all_categories')?></span></a>
+                    </div>
+		</div>
+            <? } ?>
+        </div></div>
+    <!-- /.userbar -->

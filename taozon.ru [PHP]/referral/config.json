@@ -1,0 +1,32 @@
+{
+    "statuses": [
+        {
+            "status": 1,
+            "name": "Участник",
+            "need_children": 0,
+            "discount": 0,
+            "commission": 0
+        }
+        ,{
+            "status": 2,
+            "name": "Лидер",
+            "need_children": 5,
+            "discount": 3,
+            "commission": 10
+        }
+        ,{
+            "status": 3,
+            "name": "Босс",
+            "need_children": 5,
+            "discount": 7,
+            "commission": 7
+        }
+        ,{
+            "status": 4,
+            "name": "Президент",
+            "need_children": 5,
+            "discount": 10,
+            "commission": 3
+        }
+    ]
+}

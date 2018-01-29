@@ -1,0 +1,11 @@
+{"0":0.12250018119812,"1":"3","2":"\/?sid=&cmd=users&p=3","calls":[]}
+{"0":0.45002317428589,"1":null,"2":"\/?sid=&cmd=orders","calls":[]}
+{"0":6.0703520774841,"1":"1","2":"\/?filter%5Bnumber%5D=&filter%5Bclient_surname%5D=&filter%5Bfromdate%5D=&filter%5Btodate%5D=&filter%5Bphone%5D=&filter%5Bstatus%5D%5B10%5D=10&filter%5Bstatus%5D%5B20%5D=20&filter%5Bstatus%5D%5B30%5D=30&filter%5Bstatus%5D%5B31%5D=31&filter%5Bstatus%5D%5B32%5D=32&filter%5Bstatus%5D%5B37%5D=37&filter%5Bstatus%5D%5B38%5D=38&filter%5Bstatus%5D%5B39%5D=39&filter%5Bclient_id%5D=&cmd=orders&p=1&ps=20","calls":[]}
+{"0":0.023048162460327,"1":null,"2":"\/?expired=","calls":[]}
+{"0":0.022678136825562,"1":null,"2":"\/?cmd=login","calls":[]}
+{"0":0.82955598831177,"1":"1","2":"\/?filter%5Bnumber%5D=&filter%5Bclient_surname%5D=&filter%5Bfromdate%5D=&filter%5Btodate%5D=&filter%5Bphone%5D=&filter%5Bstatus%5D%5B10%5D=10&filter%5Bstatus%5D%5B20%5D=20&filter%5Bstatus%5D%5B30%5D=30&filter%5Bstatus%5D%5B31%5D=31&filter%5Bstatus%5D%5B32%5D=32&filter%5Bstatus%5D%5B37%5D=37&filter%5Bstatus%5D%5B38%5D=38&filter%5Bstatus%5D%5B39%5D=39&filter%5Bclient_id%5D=&cmd=orders&p=1&ps=20","calls":[]}
+{"0":0.18892598152161,"1":null,"2":"\/?sid=&cmd=reviews","calls":[]}
+{"0":0.36879682540894,"1":null,"2":"\/?sid=&cmd=shopreview","calls":[]}
+{"0":3.2676520347595,"1":null,"2":"\/?sid=&cmd=orders","calls":[]}
+{"0":0.064716100692749,"1":null,"2":"\/?do=pricing&tab=2&editgroup=&id=4518","calls":[]}
+{"0":0.046086072921753,"1":null,"2":"\/?sid=&do=pricing","calls":[]}

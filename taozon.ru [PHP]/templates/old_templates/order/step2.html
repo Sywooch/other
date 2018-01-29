@@ -1,0 +1,38 @@
+
+
+<div class="main">
+    <div class="canvas clrfix">
+    <h2>Оформление заказа: выбор заказа</h2><br/><br/>
+    <form action="index.php?p=userorder&step3" method="post">
+        <table class="notepad" width="100%">
+            <tr>
+                <td colspan="2">
+                    <input type="radio" name="order" value="new" checked="checked"> Создать новый заказ<br/><br/>
+                </td>
+            <? if(is_array($orders)) {?><tr><td colspan="2"> Выбрать из списка существующих:</td></tr><? } ?>
+            <? foreach($orders as $order) {?>
+            <tr>
+                <td width="5%"><input type="radio" name="order" value="<?=$order['id'];?>"/> </td>
+                <td>
+                    <strong>Номер: </strong><?=$order['id'];?><br/>
+                    <strong>Дата создания: </strong><?=$order['createddatetime'];?><br/>
+                    <strong>Количество: </strong><?=(string)$order['itemscount'];?><br/>
+                    <strong>Стоимость(с доставкой): </strong><span class="pr"><? echo (string)$order['totalamount'].' '.$order['currencycode'];?></span><br/>
+                </td>
+            </tr>
+            <? } ?>
+            
+        </table>    
+
+        <div  class="clrfix mt20">
+            <div style="float:left;cursor:pointer;background:none;background-color:#F15A24">
+                <a href="index.php?p=userorder&step1" class="b30 fll"><span style="background:none">Назад</span></a>
+            </div>
+            <div>
+                <input class="b30 fll" style="float:right;cursor:pointer;background:none;background-color:#F15A24" type="submit"  value="Продолжить"/>
+            </div>
+        </div>
+    <input type="hidden" name="total_weight" value="<?=$weight;?>"/>
+    </form>
+</div></div>
+

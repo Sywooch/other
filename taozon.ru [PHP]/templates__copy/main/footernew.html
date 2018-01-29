@@ -1,0 +1,58 @@
+<? $customFooter = Plugins::invokeEvent('onFooterCustom'); ?>
+<? if ($customFooter) { ?>
+    <?=$customFooter?>
+<? } else { ?>
+    <? if(General::getConfigValue('footer_text') && SCRIPT_NAME == 'index'){ ?>
+        <div class="wrap clrfix mt20">
+            <?=General::getConfigValue('footer_text')?>
+        </div>
+    <? } ?>
+    <div class="footer"><div class="wrap clrfix">
+            <a href="#" class="up" onclick="scroll(0,0); return false;"></a>
+            <div class="fll col240">
+                <div class="f12">&copy; 2011&ndash;<? echo date('Y');?> <b><?=General::getConfigValue('site_name')?></b></div>
+                <p class="f11 mt5">Powered by &copy; Opentao platform <a href="http://box.opentao.net" target="_blank" alt="opentao.net" title="opentao.net">opentao.net</a></p>
+            </div>
+            <div class="flr col690">
+                <ul class="fmenu flin clrfix">
+                    <? if ($menu) { ?>
+                    <? foreach ($menu as $m) {
+                        if (!$m) {
+                            continue;
+                        }
+                    ?>
+                    <li class="item"><a href="<?=@UrlGenerator::generateContentUrl($m['alias'])?>" <? if(@$_GET['p'] == $m['alias']){ ?> class="active" <? } ?>><?=$m['title']?></a></li>
+                    <? } } ?>
+                    <li><a href="<?=@UrlGenerator::generateContentUrl('sitemap')?>" alt="<?=Lang::get('sitemap')?>" title="<?=Lang::get('sitemap')?>"><?=Lang::get('sitemap')?></a></li>
+                </ul>
+                <ul class="fmenu flin clrfix">
+                    <? if (General::getConfigValue('counter')) { ?>
+                    <li>
+                        <!--noindex-->
+                            <?=General::getConfigValue('counter')?>
+                        <!--/noindex-->
+                    </li>
+                    <? } ?>
+                    
+                </ul>
+                <div class="pay mt15">
+                    <? if(General::getConfigValue('payment_image')){ ?>
+                        <img src="<?=General::getConfigValue('payment_image')?>" />
+                    <? } else { ?>
+                        <img src="p/pay.png" />
+                    <? } ?>
+                </div>
+            </div>
+        </div></div>
+
+<!--noindex-->
+<? if (file_exists(CFG_APP_ROOT.'/js/jsfinalcustom.js')) { ?>
+    <script type="text/javascript" src="js/jsfinalcustom.js?<?=CFG_SITE_VERSION;?>"></script>
+<? } ?>
+    <? Plugins::invokeEvent('onCrossIncludeInFooter') ?>
+<!--/noindex-->
+<? print (General::getConfigValue('html_for_footet')) ? General::getConfigValue('html_for_footet') : ''; ?>
+
+</body>
+</html>
+<? } ?>

@@ -1,0 +1,12 @@
+<h1><?=Lang::get('Confirm_email_fail')?></h1>
+
+<? if (Session::checkErrors()) { ?>
+    <div class="error">
+        <div class="error">
+             <?=Session::getErrorDescription()?>
+        </div>
+    </div>
+<? } ?>
+<p>
+    <?=Lang::get('Confirm_email_fail_text')?>
+</p>
