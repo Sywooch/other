@@ -1,0 +1,91 @@
+<?php
+require_once(__DIR__ . '/includes/Task1.php');
+require_once(__DIR__ . '/includes/Task2.php');
+?>
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auslogics - Test</title>
+<link href="/assets/css/bootstrap.css" rel="stylesheet">
+<link href="/assets/css/site.css" rel="stylesheet">
+<link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">      
+</head>
+<body>
+
+<div class="wrap">
+    <div class="container">
+    	<div class="site-index">
+
+		    <div class="jumbotron site-index__item site-index__item1">
+ 				<h3>Задание 1</h3>
+ 				<div>
+                	<a href="/files/myfile.exe" data-file="/file.exe">Link to File</a><br>
+					
+                </div>
+		    </div>
+
+		    <div class="jumbotron site-index__item site-index__item2">
+ 				<h3>Задание 2</h3>
+ 				<div>
+                	<?php
+                    	$M=generate(1,1000000,10000);
+                     
+                        $start = microtime(true); 
+                        $number=search($M);
+                       	echo "Повторяющееся число: ".$number."<br>Время выполнения: ".(microtime(true) - $start).' сек.';
+                    ?>
+                </div>
+		    </div>
+			<div class="jumbotron site-index__item site-index__item3">
+ 				<h3>Задание 3</h3>
+ 				<div>
+                	<a href="/frontend.html" target="_blank">Находится по этой ссылке</a>
+            	</div>
+		    </div>
+            
+			<div class="jumbotron site-index__item site-index__item4" ng-app="test-app">
+ 				<h3>Задание 4</h3>
+ 				<div>
+                	<div class="left_form">
+                        <form class="form-signin" role="form" ng-controller="ctrlForm1" name="form" ng-submit="submit()">
+                            <h4 class="form-signin-heading">Добавить e-mail и номер телефона</h4>
+                            <span ng-bind-html-unsafe="html">{{greeting1}}</span>
+                            <div ng-hide="h1">
+                            	<input type="email" class="form-control" placeholder="Email" autofocus ng-model="user.email" required>
+                            	<input type="phone" class="form-control" placeholder="Телефон" ng-model="user.phone" required>
+                            	<button class="btn btn-lg btn-primary btn-block" type="submit">Отправить</button>
+                            </div>
+                        </form>                                       	
+                    </div>
+                    <div class="right_form">
+                        <form class="form-signin" role="form" ng-controller="ctrlForm2" name="form" ng-submit="submit()">
+                            <h4 class="form-signin-heading">Получить номер телефона</h4>
+                            <span ng-bind-html-unsafe="html">{{greeting2}}</span>
+                            <div ng-hide="h1">
+                            	<input type="email" class="form-control" placeholder="Email" autofocus ng-model="user.email" required>
+                            	<button class="btn btn-lg btn-primary btn-block" type="submit">Отправить</button>
+                            </div>
+                        </form>                                       	
+                    </div>
+            	</div>
+		    </div>
+            
+		</div>
+    </div>
+</div>
+<?php
+
+//php_info();
+
+?>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+        
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
+</body>
+</html>

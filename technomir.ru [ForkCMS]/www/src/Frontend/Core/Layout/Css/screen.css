@@ -1,0 +1,341 @@
+﻿body header {
+    background: transparent url("/images/head_bg.png") repeat-x scroll 0 0;
+    border-bottom: medium none;
+    border-top: medium none;
+    color: #555;
+    height: 165px;
+}
+
+#logo {
+    display: block;
+    left: 0;
+    margin: 1% auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 371px;
+    z-index: 1;
+
+}
+.row-fluid:before, .row-fluid:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.row-fluid:after {
+    clear: both;
+}
+.row-fluid {
+    width: 100%;
+}
+img {
+    border: 0 none;
+    height: auto;
+}
+.row-fluid .span4 {
+    width: 31.1037% !important;
+}
+.row-fluid .span3 {
+    width: 22.4916% !important;
+}
+
+/* In Automatisation   */
+#roz, #opt {
+    cursor: pointer;
+}
+#roz > img {
+    padding-top: 8px;
+}
+.button {
+    border: 1px solid #d7d7d7;
+    color: #707070;
+    border-radius: 5px;
+    font: 17px Arial;
+    margin: 0 auto;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.warning {
+    border: 1px solid red;
+    border-radius: 10px;
+    color: #333;
+    font-size: 20px;
+    margin: 60px auto;
+    padding: 30px;
+    text-align: center;
+    width: 500px;
+}
+.button:hover {
+	background-color: #8869ca;
+    border: 1px solid #8869ca;
+    color: #ffffff;
+    border-radius: 5px;
+    font: 17px Arial;
+    margin: 0 auto;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.hover span{
+	 background-color: #8869ca;
+    border: 1px solid #8869ca;
+    color: #ffffff;
+    border-radius: 5px;
+    font: 17px Arial;
+    margin: 0 auto;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.leve2 {
+	margin-top: 20px;
+}
+.span6.mini {
+	width: 100%;
+	background: white;
+	text-align: center;
+	display: block;
+	position: relative;
+	text-align: center;
+	height: 100px !important;
+
+}
+.span3.mini {
+	width: 100%;
+	background: white;
+	border-radius: 10px;
+	text-align: center;
+	margin-bottom: 10px;
+	display: block;
+	position: relative;
+	text-align: center;
+	height: 100px !important;
+
+}
+
+.hide {
+	display: none;
+}
+
+.hide2 {
+	display: none;
+}
+
+.hide3 {
+	display: none;
+}
+
+.hide4 {
+	display: none;
+}
+
+.hide4_section4 {
+	display: none;
+}
+
+
+.hide5 {
+	display: none;
+}
+
+.one {
+	padding-top: 10px;
+}
+
+.two {
+	width: 100%;
+	background: white;
+	text-align: center;
+	display: block;
+	position: relative;
+	text-align: center;
+}
+.two:hover {
+	cursor: pointer;
+}
+.for {
+	width: 100%;
+	background: white;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	margin-top: 10px;
+	display: block;
+	position: relative;
+	text-align: center;
+}
+.four:hover {
+	cursor: pointer;
+
+}
+.five {
+	text-align: center;
+}
+.five img:hover {
+cursor: pointer;
+}
+.buh {
+	height: 350px;
+	background: white;
+	border-radius: 10px;
+	padding-top: 1px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.buh p {
+	height: 345px;
+}
+.buh:hover {
+
+	height: 350px;
+	display: block;
+
+}
+.buh img {
+	padding-top: 20px;
+	padding-left: 5px;
+}
+.buh.mini {
+	height: 100px !important;
+	overflow: hidden;
+
+}
+.buh.mini:hover {
+	padding-top: 0px;
+	border: 1px solid #ef8742;
+}
+.torg {
+	height: 350px;
+	background: white;
+	border-radius: 10px;
+	padding-top: 1px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.torg img {
+	padding-top: 20px;
+}
+.torg.mini {
+	overflow: hidden;
+	border: 1px solid #8869ca;
+	padding-top: 0px;
+}
+.zar {
+	height: 350px;
+	background: white;
+	border-radius: 10px;
+	padding-top: 1px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.zar img {
+	padding-top: 20px;
+}
+.zar p {
+	height: 345px;
+}
+.zar.mini {
+	height: 100px !important;
+	overflow: hidden;
+}
+.zar.mini:hover {
+	border: 1px solid #9cbf3e;
+	height: 350px;
+	padding-top: 0px;
+}
+/* Out Automatisation */
+
+/* In Web studio */
+.seo {
+	height: 350px;
+	background: white;
+	border-radius: 10px;
+	padding-top: 1px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.seo.mini2:hover {
+	border: 1px solid #1bb869;
+	padding-top: 0px;
+}
+.seo.mini3:hover {
+	border: 1px solid #1bb869;
+	padding-top: 0px;
+}
+.seo.mini2 {
+	height: 100px !important;
+	overflow: hidden;
+}
+.seo.mini3 {
+	height: 100px !important;
+	overflow: hidden;
+}
+.seo img {
+	padding-top: 20px;
+}
+.seo p {
+	height: 345px;
+}
+.creat {
+	height: 350px;
+	background: white;
+	border-radius: 10px;
+	text-align: center;
+	padding-top: 1px;
+	margin-bottom: 10px;
+}
+.creat.mini2:hover {
+	border: 1px solid #e05543;
+	padding-top: 0px;
+}
+.creat.mini3:hover {
+	border: 1px solid #e05543;
+	padding-top: 0px;
+}
+.creat.mini2 {
+	overflow: hidden;
+	border: 1px solid #e05543;
+	padding-top: 0px;
+}
+.creat.mini3 {
+	height: 100px !important;
+	overflow: hidden;
+	padding-top: 1px;
+}
+.creat img {
+	padding-top: 20px;
+}
+.design {
+	height: 350px;
+	background: white;
+	border-radius: 10px;
+	padding-top: 1px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.design.mini2:hover {
+	border: 1px solid #2799c9;
+	padding-top: 0px;
+}
+.design.mini3:hover {
+	border: 1px solid #2799c9;
+	padding-top: 1px;
+}
+.design.mini2 {
+	height: 100px !important;
+	overflow: hidden;
+}
+.design.mini3 {
+	height: 100px !important;
+	overflow: hidden;
+	border: 1px solid #2799c9;
+}
+.design img {
+	padding-top: 20px;
+}
+/* Out Web studio */

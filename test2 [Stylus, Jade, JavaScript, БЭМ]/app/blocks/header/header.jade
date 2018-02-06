@@ -1,0 +1,19 @@
+include ../image-header_left/image-header_left
+include ../image-header_right/image-header_right
+include ../image-header_center/image-header_center
+include ../dark/dark
+include ../title/title
+include ../description/description
+
+mixin header()
+	+b.header&attributes(attributes)
+		+image-header_left
+		+image-header_right
+		+image-header_center
+
+		//+e.title
+			+dark
+				+title
+		//+e.description
+			+description
+				| Шаблон проекта для быстрого старта

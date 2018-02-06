@@ -1,0 +1,70 @@
+include ../content/content
+include ../container/container
+include ../subtitle/subtitle
+include ../heading/heading
+include ../list/list
+include ../col/col
+include ../arrow/arrow
+//include ../fork/fork
+include ../tree/tree
+
+mixin index()
+	+b.index
+		+content()
+			.index__group
+				ul.list
+					li.list__item
+						span.left
+							Полное ФИО
+						span.right
+							Гладышев Сергей Юрьевич
+					li.list__item
+						span.left
+							Год рождения
+						span.right.
+							1992
+					li.list__item
+						span.left
+							Место жительства
+						span.right
+							г.Благовещенск, Амурская обл.
+					li.list__item
+						span.left
+							Скайп
+						span.right.
+							gsu_resident234
+					li.list__item
+						span.left
+							Почта
+						span.right.
+							gsu1234@mail.ru
+				//+subtitle()
+					//| ЧТО В КОРОБКЕ
+
+			+heading()
+				| Инструменты
+
+			.index__group
+				+list(getData('tools'))
+
+			.index__group
+				+subtitle()
+					| СТРУКТУРА ФАЙЛОВ
+
+			+container()
+				+col()
+					+heading()
+						| Исходники
+					+tree(getData('source-tree'))
+
+				+col()
+					.index__arrow
+						+arrow()
+							| Сборка
+
+				+col()
+					+heading()
+						| Готовые файлы
+					+tree(getData('build-tree'))
+
+			//+fork()
