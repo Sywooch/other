@@ -1,0 +1,1 @@
+<?$MESS ['IBLOCKCOPI_COPI_ELEM_STEP_2'] = "Скопированно элементов";$MESS ['IBLOCKCOPI_STEP_2_CAPTION'] = "Свойств - ";$MESS ['IBLOCKCOPI_STEP_2_ELEM'] = "Элементов - ";?>

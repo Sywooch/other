@@ -1,0 +1,81 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Диагностика", 
+		"/clinika/diagnostika/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Госпитализация", 
+		"/clinika/gospitalizaciya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Наркология и зависимости", 
+		"/clinika/narkologiya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Неврология", 
+		"/clinika/nevrologiya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Нейрохирургия", 
+		"/clinika/nejrohirurgiya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Реабилитация", 
+		"/clinika/reabilitaciya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Лечение стрессов и депрессии", 
+		"/clinika/lechenie-stressov-i-depressii/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Лаборатория сна", 
+		"/clinika/laboratoriya-sna/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Психиатрия", 
+		"/clinika/psihiatriya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Психотерапия", 
+		"/clinika/psihoterapiya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Сопутствующие заболевания", 
+		"/clinika/soputstvuyushchie-zabolevaniya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

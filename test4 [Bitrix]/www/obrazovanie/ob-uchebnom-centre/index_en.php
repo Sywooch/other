@@ -1,0 +1,14 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Об учебном центре");
+?> 
+<p class="NEW" style="text-align: justify; text-indent: 1.5em; font-family: Verdana; font-size: 11px; background-color: rgb(245, 240, 234);">Об учебном центре</p>
+
+<p class="NEW" style="text-align: justify; text-indent: 1.5em; font-family: Verdana; font-size: 11px; background-color: rgb(245, 240, 234);">Санкт-Петербургский научно-исследовательский психоневрологический институт им. В. М. Бехтерева является федеральным государственным бюджетным научным и лечебным учреждением, имеющим право на ведение образовательной деятельности в сфере основного и дополнительного профессионального образования на основании <a href="http://z203712.infobox.ru/content/34/lic.pdf" style="color: rgb(0, 0, 255); font-size: 1em;" >лицензии Минобразования России 90Л01 № 0512 от 24.01.2013 г. </a>и <a href="http://z203712.infobox.ru/content/34/svid.pdf" style="color: rgb(0, 0, 255); font-size: 1em;" >свидетельства о государственной аккредитации 90А01 № 0000506 от 04.04.2013г.</a></p>
+ 
+<p class="NEW" style="text-align: justify; text-indent: 1.5em; font-family: Verdana; font-size: 11px; background-color: rgb(245, 240, 234);"><a href="http://www.bekhterev.ru/index.php?cid=597&crt=34,1" title="Учебный центр " style="color: rgb(0, 0, 255); font-size: 1em;" >Учебный центр </a>&ndash; структурное подразделение института им В. М. Бехтерева, предназначенное для организации и проведения обучения программам основного и дополнительного профессионального образования. Образовательная деятельность в Институте им. В. М. Бехтерева осуществляется в очной и очно-заочной форме, на бюджетной и коммерческой основе.</p>
+ 
+<div> 
+  <br />
+ </div>
+ <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

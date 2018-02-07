@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Фонд имени В.М.Бехтерева", 
+		"/fonf_imeni_v_m_bextereva/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Образование", 
+		"/obrazovanie/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Наука", 
+		"/nauka/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Клиника", 
+		"/clinika/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Об Институте", 
+		"/ob_institute/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Главная", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

@@ -1,0 +1,1 @@
+<?$MESS ['IBLOCKCOPI_STEP_TIP'] = "Тип инфоблока";$MESS ['XLS_RESULT_COUNT_INSERT'] = "Created new:";$MESS ['XLS_RESULT_COUNT_UPDATE'] = "Updated old:";?>

@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001404130688';
+$dateexpire = '001404134288';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:3:{i:0;a:3:{s:4:"LINK";s:35:"/ob_institute/privetstvennoe_slovo/";s:5:"LINKS";a:1:{i:0;s:35:"/ob_institute/privetstvennoe_slovo/";}s:4:"PERM";s:1:"R";}i:1;a:3:{s:4:"LINK";s:36:"/ob_institute/nashi_cseli_i_zadachi/";s:5:"LINKS";a:1:{i:0;s:36:"/ob_institute/nashi_cseli_i_zadachi/";}s:4:"PERM";s:1:"R";}i:2;a:3:{s:4:"LINK";s:32:"/ob_institute/istorya_instituta/";s:5:"LINKS";a:1:{i:0;s:32:"/ob_institute/istorya_instituta/";}s:4:"PERM";s:1:"R";}}}';
+return true;
+?>

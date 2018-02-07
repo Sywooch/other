@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("J:/home/institut_bexterev/www/bitrix/js/main/core/css/core.css" => "14016774278960","J:/home/institut_bexterev/www/bitrix/js/main/core/css/core_popup.css" => "140167742715855",), 'CUR_SEL_CNT' => '176', 'CUR_IE_CNT' => '0'); ?>

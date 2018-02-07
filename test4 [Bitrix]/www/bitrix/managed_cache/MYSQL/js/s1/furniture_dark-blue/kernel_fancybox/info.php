@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("J:/home/institut_bexterev/www/bitrix/js/fancybox/jquery.fancybox-1.2.1.pack.js" => "14019573028303",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>

@@ -1,0 +1,1 @@
+<?define("softeffect_iblockcopy_TEMPORARY_CACHE", "cmABDXpkVVQ9UC1iADABcAUj");?>

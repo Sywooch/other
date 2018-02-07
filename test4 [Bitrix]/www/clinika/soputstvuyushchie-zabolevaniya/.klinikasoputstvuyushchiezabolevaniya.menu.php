@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Сотрудники", 
+		"/clinika/soputstvuyushchie-zabolevaniya/sotrudniki/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Консультация терапевта", 
+		"/clinika/soputstvuyushchie-zabolevaniya/konsultaciya-terapevta/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Стоматология", 
+		"/clinika/soputstvuyushchie-zabolevaniya/stomatologiya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Гинекология", 
+		"/clinika/soputstvuyushchie-zabolevaniya/ginekologiya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Офтальмология", 
+		"/clinika/soputstvuyushchie-zabolevaniya/oftalmologiya/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

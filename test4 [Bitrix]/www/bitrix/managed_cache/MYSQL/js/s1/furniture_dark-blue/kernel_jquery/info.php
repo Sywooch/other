@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("J:/home/institut_bexterev/www/bitrix/js/jquery/jquery-1.5.2.min.js" => "140195730285925",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>

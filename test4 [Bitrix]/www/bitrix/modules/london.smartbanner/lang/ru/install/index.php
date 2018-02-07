@@ -1,0 +1,31 @@
+<?
+$MESS["london.smartbanner_MODULE_NAME"] = "Умный баннер";
+$MESS["london.smartbanner_MODULE_DESC"] = "Модуль позволяет вывести баннер на целевой странице";
+$MESS["london.smartbanner_PARTNER_NAME"] = "London";
+$MESS["london.smartbanner_PARTNER_URI"] = "http://www.olondon.ru";
+$MESS["IBLOCK_TYPE_NAME"] = "Баннеры (London Web)";
+$MESS["IBLOCK_SECTION_NAME"] = "Тип баннера";
+$MESS["IBLOCK_ELEMENT_NAME"] = "Баннер";
+$MESS["IBLOCK_DESCRIPTION"] = "Инфоблок для модуля \\\'Умный баннер\\\'";
+$MESS["BANNER"] = "Баннер";
+$MESS["BANNERS"] = "Баннеры";
+$MESS["ELEMENT_ADD"] = "Добавить баннер";
+$MESS["ELEMENT_EDIT"] = "Изменить баннер";
+$MESS["ELEMENT_DELETE"] = "Удалить баннер";
+$MESS["SECTION_NAME"] = "Тип баннера";
+$MESS["SECTION_ADD"] = "Добавить тип баннера";
+$MESS["SECTION_EDIT"] = "Изменить тип баннера";
+$MESS["SECTION_DELETE"] = "Удалить тип баннера";
+$MESS["PROPERTY_REF"] = "Ссылка";
+$MESS["SHOW_IN_SUBSECTIONS"] = "Показывать в подразделах";
+$MESS["ADRESS_WITH_BANNER"] = "Адрес страницы с баннером";
+$MESS["ADRESS_EXCLUSION"] = "Страницы исключения";
+$MESS["FORM_NAME"] = "*Название";
+$MESS["FORM_PREVIEW_PICTURE"] = "Изображение баннера";
+$MESS["FORM_PROPERTY_REF"] = "Ссылка на баннере";
+$MESS["FORM_ADRESS_WITH_BANNER"] = "Адреса страниц с баннером";
+$MESS["FORM_SHOW_IN_SUBSECTIONS"] = "Показывать в подразделах";
+$MESS["FORM_PAGE_EXCLUSION"] = "Страницы исключения";
+$MESS["FORM_PREVIEW_TEXT"] = "Контент";
+$MESS["IBLOCK_ELEMENT_PROP_VALUE"] = "Место размещения";
+?>

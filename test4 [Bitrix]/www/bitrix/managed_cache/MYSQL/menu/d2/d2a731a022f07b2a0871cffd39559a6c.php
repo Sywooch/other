@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001404130688';
+$dateexpire = '001404134288';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:8:{i:0;a:3:{s:4:"LINK";s:41:"/obrazovanie/ob-uchebnom-centre/index.php";s:5:"LINKS";a:1:{i:0;s:41:"/obrazovanie/ob-uchebnom-centre/index.php";}s:4:"PERM";s:1:"R";}i:1;a:3:{s:4:"LINK";s:42:"/obrazovanie/nashi-prepodavateli/index.php";s:5:"LINKS";a:1:{i:0;s:42:"/obrazovanie/nashi-prepodavateli/index.php";}s:4:"PERM";s:1:"R";}i:2;a:3:{s:4:"LINK";s:41:"/obrazovanie/osnovnoe-obuchenie/index.php";s:5:"LINKS";a:1:{i:0;s:41:"/obrazovanie/osnovnoe-obuchenie/index.php";}s:4:"PERM";s:1:"R";}i:3;a:3:{s:4:"LINK";s:46:"/obrazovanie/dopolnitelnoe-obuchenie/index.php";s:5:"LINKS";a:1:{i:0;s:46:"/obrazovanie/dopolnitelnoe-obuchenie/index.php";}s:4:"PERM";s:1:"R";}i:4;a:3:{s:4:"LINK";s:57:"/obrazovanie/vyezdnoe-i-distancionnoe-obuchenie/index.php";s:5:"LINKS";a:1:{i:0;s:57:"/obrazovanie/vyezdnoe-i-distancionnoe-obuchenie/index.php";}s:4:"PERM";s:1:"R";}i:5;a:3:{s:4:"LINK";s:42:"/obrazovanie/usloviya-obucheniya/index.php";s:5:"LINKS";a:1:{i:0;s:42:"/obrazovanie/usloviya-obucheniya/index.php";}s:4:"PERM";s:1:"R";}i:6;a:3:{s:4:"LINK";s:45:"/obrazovanie/inostrannym-grazhdanam/index.php";s:5:"LINKS";a:1:{i:0;s:45:"/obrazovanie/inostrannym-grazhdanam/index.php";}s:4:"PERM";s:1:"R";}i:7;a:3:{s:4:"LINK";s:31:"/obrazovanie/kontakty/index.php";s:5:"LINKS";a:1:{i:0;s:31:"/obrazovanie/kontakty/index.php";}s:4:"PERM";s:1:"R";}}}';
+return true;
+?>

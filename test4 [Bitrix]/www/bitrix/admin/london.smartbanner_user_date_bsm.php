@@ -1,0 +1,1 @@
+<? require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/london.smartbanner/admin/user_date_bsm.php");?>
