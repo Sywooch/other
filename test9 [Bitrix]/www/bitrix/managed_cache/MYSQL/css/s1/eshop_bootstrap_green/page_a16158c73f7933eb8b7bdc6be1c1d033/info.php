@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/eshop_bootstrap_green/components/bitrix/sale.basket.basket/template1/style.css" => "146962302537007","/bitrix/templates/eshop_bootstrap_green/components/bitrix/sale.basket.basket/template1/themes/green/style.css" => "14696230257633",), 'CUR_SEL_CNT' => '219', 'CUR_IE_CNT' => '0'); ?>
