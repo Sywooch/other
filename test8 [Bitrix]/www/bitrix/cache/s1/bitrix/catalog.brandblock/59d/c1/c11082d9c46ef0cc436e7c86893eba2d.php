@@ -1,0 +1,25 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001475734426';
+$dateexpire = '001511734426';
+$ser_content = 'a:2:{s:7:"CONTENT";s:1777:"<div class="bx_item_detail_inc_two" id="bx_IblockBrand_xX7vlW"><div id="brand_19_BrandReference_3_xX7vlW" class="bx_item_detail_inc_one_container"><div class="wrapper">
+						<span class="bx_item_vidget"  style="background-image: url(/upload/uf/6bc/6bc4a66bc29a541e6d3cee339286dccc.png)">
+						</span></div></div><div id="brand_19_BrandReference_4_xX7vlW" class="bx_item_detail_inc_one_container"><div class="wrapper">
+						<span class="bx_item_vidget"  style="background-image: url(/upload/uf/ac7/ac714c737b90fe1f673e1c2a44108ca9.png)">
+						</span></div></div>			<div id="brand_19_BrandReference_5_xX7vlW" class="bx_item_detail_inc_one_container">
+				<div class="wrapper">
+					<span id="brand_19_BrandReference_5_xX7vlW_vidget" class="bx_item_vidget icon" style="background-image:url(/upload/resize_cache/uf/2b3/21_17_1/2b3e7bdd43da45b7ff82d1101fd9fde9.png);" >Бесплатная доставка по всей России</span>				</div>
+			</div>
+						<div id="brand_19_BrandReference_6_xX7vlW" class="bx_item_detail_inc_one_container">
+				<div class="wrapper">
+					<span id="brand_19_BrandReference_6_xX7vlW_vidget" class="bx_item_vidget icon" style="background-image:url(/upload/resize_cache/uf/862/21_17_1/8621aeda6087f5aff47d4bccb96de7e6.png);" >Примерка перед покупкой</span>				</div>
+			</div>
+						<div id="brand_19_BrandReference_7_xX7vlW" class="bx_item_detail_inc_one_container">
+				<div class="wrapper">
+					<span id="brand_19_BrandReference_7_xX7vlW_vidget" class="bx_item_vidget icon" style="background-image:url(/upload/resize_cache/uf/36b/21_17_1/36b5050b83f03b490c96f143528e7078.png);" >Круглосуточная служба поддержки</span>				</div>
+			</div>
+				</div>
+	<div style="clear: both;"></div>
+";s:4:"VARS";a:2:{s:8:"arResult";a:2:{s:2:"ID";i:19;s:12:"BRAND_BLOCKS";a:5:{s:16:"BrandReference_3";a:6:{s:4:"TYPE";s:8:"ONLY_PIC";s:4:"NAME";s:13:"Одежда+";s:4:"LINK";b:0;s:11:"DESCRIPTION";b:0;s:16:"FULL_DESCRIPTION";b:0;s:4:"PICT";a:15:{s:2:"ID";s:2:"25";s:11:"TIMESTAMP_X";s:19:"05.10.2016 20:00:21";s:9:"MODULE_ID";s:4:"main";s:6:"HEIGHT";i:50;s:5:"WIDTH";i:120;s:9:"FILE_SIZE";s:4:"2280";s:12:"CONTENT_TYPE";s:9:"image/png";s:6:"SUBDIR";s:6:"uf/6bc";s:9:"FILE_NAME";s:36:"6bc4a66bc29a541e6d3cee339286dccc.png";s:13:"ORIGINAL_NAME";s:12:"company3.png";s:11:"DESCRIPTION";s:0:"";s:10:"HANDLER_ID";N;s:11:"EXTERNAL_ID";s:32:"0163716a19e1f6b44e55bdd70f16224c";s:4:"~src";b:0;s:3:"SRC";s:51:"/upload/uf/6bc/6bc4a66bc29a541e6d3cee339286dccc.png";}}s:16:"BrandReference_4";a:6:{s:4:"TYPE";s:8:"ONLY_PIC";s:4:"NAME";s:23:"Мировая Мода";s:4:"LINK";b:0;s:11:"DESCRIPTION";b:0;s:16:"FULL_DESCRIPTION";b:0;s:4:"PICT";a:15:{s:2:"ID";s:2:"26";s:11:"TIMESTAMP_X";s:19:"05.10.2016 20:00:21";s:9:"MODULE_ID";s:4:"main";s:6:"HEIGHT";i:50;s:5:"WIDTH";i:120;s:9:"FILE_SIZE";s:4:"2718";s:12:"CONTENT_TYPE";s:9:"image/png";s:6:"SUBDIR";s:6:"uf/ac7";s:9:"FILE_NAME";s:36:"ac714c737b90fe1f673e1c2a44108ca9.png";s:13:"ORIGINAL_NAME";s:12:"company4.png";s:11:"DESCRIPTION";s:0:"";s:10:"HANDLER_ID";N;s:11:"EXTERNAL_ID";s:32:"1b00c693b7a79515533d718000de4c91";s:4:"~src";b:0;s:3:"SRC";s:51:"/upload/uf/ac7/ac714c737b90fe1f673e1c2a44108ca9.png";}}s:16:"BrandReference_5";a:6:{s:4:"TYPE";s:8:"PIC_TEXT";s:4:"NAME";s:16:"Доставка";s:4:"LINK";b:0;s:11:"DESCRIPTION";s:64:"Бесплатная доставка по всей России";s:16:"FULL_DESCRIPTION";b:0;s:4:"PICT";a:7:{s:3:"src";s:72:"/upload/resize_cache/uf/2b3/21_17_1/2b3e7bdd43da45b7ff82d1101fd9fde9.png";s:5:"width";i:17;s:6:"height";i:17;s:4:"size";i:455;s:3:"SRC";s:72:"/upload/resize_cache/uf/2b3/21_17_1/2b3e7bdd43da45b7ff82d1101fd9fde9.png";s:5:"WIDTH";i:17;s:6:"HEIGHT";i:17;}}s:16:"BrandReference_6";a:6:{s:4:"TYPE";s:8:"PIC_TEXT";s:4:"NAME";s:16:"Примерка";s:4:"LINK";b:0;s:11:"DESCRIPTION";s:44:"Примерка перед покупкой";s:16:"FULL_DESCRIPTION";b:0;s:4:"PICT";a:7:{s:3:"src";s:72:"/upload/resize_cache/uf/862/21_17_1/8621aeda6087f5aff47d4bccb96de7e6.png";s:5:"width";i:17;s:6:"height";i:17;s:4:"size";i:441;s:3:"SRC";s:72:"/upload/resize_cache/uf/862/21_17_1/8621aeda6087f5aff47d4bccb96de7e6.png";s:5:"WIDTH";i:17;s:6:"HEIGHT";i:17;}}s:16:"BrandReference_7";a:6:{s:4:"TYPE";s:8:"PIC_TEXT";s:4:"NAME";s:18:"Поддержка";s:4:"LINK";b:0;s:11:"DESCRIPTION";s:60:"Круглосуточная служба поддержки";s:16:"FULL_DESCRIPTION";b:0;s:4:"PICT";a:7:{s:3:"src";s:72:"/upload/resize_cache/uf/36b/21_17_1/36b5050b83f03b490c96f143528e7078.png";s:5:"width";i:17;s:6:"height";i:17;s:4:"size";i:540;s:3:"SRC";s:72:"/upload/resize_cache/uf/36b/21_17_1/36b5050b83f03b490c96f143528e7078.png";s:5:"WIDTH";i:17;s:6:"HEIGHT";i:17;}}}}s:18:"templateCachedData";a:3:{s:13:"additionalCSS";s:73:"/bitrix/components/bitrix/catalog.brandblock/templates/.default/style.css";s:12:"additionalJS";s:73:"/bitrix/components/bitrix/catalog.brandblock/templates/.default/script.js";s:9:"frameMode";b:1;}}}';
+return true;
+?>
