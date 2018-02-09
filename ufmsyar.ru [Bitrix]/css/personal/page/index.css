@@ -1,0 +1,365 @@
+/* <Content> */
+	#citizens
+	{
+		float: left;
+		width: 50%;
+		margin-right: -1px;
+		padding-top: 40px;
+	}
+
+	#foreigners
+	{
+		float: left;
+		width: 50%;
+		margin-right: -1px;
+		padding-top: 40px;
+	}
+
+	#foreigners h2,
+	#citizens h2
+	{
+		height: 23px;
+		width: 235px;
+		padding: 0;
+		margin: 0;
+		color: #cb3d21;
+		position: relative;
+		font: normal 18px "Lucida Sans Unicode", Tahoma, sans-serif;
+	}
+
+	#foreigners h2 span,
+	#citizens h2 span
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 23px;
+		width: 235px;
+		background: url(../../../image/gfx/main-sprite.png) 0 -319px no-repeat;
+	}
+
+	#foreigners h2 span
+	{
+		background-position: 0 -342px;
+	}
+
+	#foreigners ul,
+	#citizens ul
+	{
+		clear: both;
+		margin: 0;
+		padding: 5px 0;
+		list-style: none;
+	}
+
+	#foreigners ul li,
+	#citizens ul li
+	{
+		padding: 5px 5px 5px 15px;
+		background: url(../../../image/gfx/main-sprite.png) -497px -91px no-repeat;
+	}
+
+	#welcome
+	{
+		background: #f6f1e0 url(../../../image/bg/vertical-bg.png) -1000px 0 repeat-y;
+		color: #8b704e;
+		font-size: 15px;
+		padding: 10px 10px 10px 20px;
+	}
+
+	#helpline
+	{
+		background: #f1f7f8;
+		border: 1px solid #eceef0;
+		color: #1c506c;
+		font-size: 12px;
+		padding: 10px;
+	}
+
+	#helpline h2,
+	#helpline p
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	#helpline h2
+	{
+		font: bold 14px "Trebuchet MS", Tahoma, sans-serif;
+		color: #9e131b;
+	}
+
+	#helpline p
+	{
+		padding-top: 10px;
+	}
+
+	#warning
+	{
+		margin-top: 15px;
+		clear: both;
+		padding: 10px;
+		border: 2px solid #ffa800;
+	}
+
+	#warning strong
+	{
+		display: block;
+		text-transform: uppercase;
+		color: #fe0000;
+	}
+
+	#welcome p,
+	#warning p
+	{
+		padding: 0;
+		margin: 0;
+	}
+
+	#news-and-events
+	{
+		margin-top: 50px;
+	}
+
+	#index-news
+	{
+		float: left;
+		width: 100%;
+	}
+
+	#faq
+	{
+		margin: 30px 20px;
+	}
+
+	#feedback
+	{
+		margin: 20px 0;
+	}
+
+	#e-queue
+	{
+		margin: 20px 0;
+	}
+
+	#centritest
+	{
+		margin: 20px 0;
+	}
+
+	#payment
+	{
+		margin: 20px 0;
+	}
+
+	#service
+	{
+		margin: 20px 0;
+	}
+
+	#fms-rf
+	{
+		margin: 20px 0 0 0;
+	}
+
+	#vote
+	{
+		float: left;
+		padding: 0;
+		width: 190px;
+		margin: 20px 0 20px 20px;
+		background: #f4f7ee;
+		font: normal 11px "Trebuchet MS", Tahoma, sans-serif;
+		color: #737373;
+	}
+
+	#vote .top
+	{
+		height: 4px;
+		background: url(../../../image/bg/vote-bg.png) no-repeat;
+	}
+
+	#vote .bottom
+	{
+		height: 4px;
+		background: url(../../../image/bg/vote-bg.png) 0 -4px no-repeat;
+	}
+
+	#vote h2
+	{
+		clear: both;
+		height: 23px;
+		width: 175px;
+		padding: 0;
+		margin: 0;
+		color: #cb3d21;
+		position: relative;
+		font: bold 16px "Trebuchet MS", Tahoma, sans-serif;
+	}
+
+	#vote h2 span
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 23px;
+		width: 175px;
+		background: url(../../../image/gfx/main-sprite.png) 0 -434px no-repeat;
+	}
+
+	#vote p
+	{
+		margin: 0;
+		font-style: italic;
+	}
+
+	#vote p.question
+	{
+		margin-bottom: 10px;
+	}
+
+	#vote .content div
+	{
+		border-top: 1px solid #d1d8c5;
+		background: #fff;
+		height: 1px;
+	}
+
+	#vote .content
+	{
+		padding: 14px 7px;
+	}
+
+	#vote .content form
+	{
+		padding: 12px;
+	}
+
+	#vote ul
+	{
+		margin: 10px 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	#vote ul li
+	{
+		margin: 0;
+		padding: 3px 0;
+	}
+
+	#vote ul li span.line
+	{
+		height: 5px;
+		display: block;
+		background: #00749e url(../../../image/bg/vote-bg.png) 0 -13px no-repeat;
+	}
+
+	#vote ul li.leader span.line
+	{
+		background: #a0410d url(../../../image/bg/vote-bg.png) 0 -8px no-repeat;
+	}
+
+	#vote ul li span
+	{
+		color: #00749e;
+	}
+
+	#vote ul li.leader span
+	{
+		color: #a0410d;
+	}
+
+	#vote button
+	{
+		margin-top: 10px;
+	}
+
+
+	#recent-posts h2
+	{
+		height: 23px;
+		width: 210px;
+		padding: 0;
+		margin: 0;
+		color: #cb3d21;
+		position: relative;
+		font: normal 18px "Lucida Sans Unicode", Tahoma, sans-serif;
+	}
+
+	#recent-posts h2 span
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 23px;
+		width: 210px;
+		background: url(../../../image/gfx/main-sprite.png) 0 -411px no-repeat;
+	}
+
+	#recent-posts ul
+	{
+		clear: both;
+		margin: 0 20px 0 0;
+		padding: 5px 0;
+		list-style: none;
+	}
+
+	#recent-posts ul li
+	{
+		padding: 20px 5px 5px 20px;
+		background: url(../../../image/gfx/main-sprite.png) -497px -176px no-repeat;
+		position: relative;
+	}
+
+	#recent-posts ul li span
+	{
+		position: absolute;
+		top: 3px;
+		left: 2px;
+		font-weight: bold;
+		font: normal 11px "Trebuchet MS", Tahoma, sans-serif;
+		color: #252525;
+	}
+
+	#survey
+	{
+		margin-top: 10px;
+		border: 1px solid #c8d6db;
+		background: url(../../../image/gfx/survey.png) top left no-repeat;
+		padding: 13px 70px;
+		height: 62px;
+		max-height: 36px;
+	}
+
+	#compatriot
+	{
+		margin: 30px 20px;
+		display: block;
+		background: #fff;
+		border: 1px solid #e2e2e2;
+		border-left: 0;
+		padding: 0 0 0 80px;
+		width: 189px;
+		max-width: 109px;
+		font-size: 13px;
+		color: #000;
+		height: 74px;
+		position: relative;
+		text-decoration: none;
+	}
+
+	#compatriot span
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 190px;
+		height: 74px;
+		background: #fff url(../../../image/gfx/sootech.gif) no-repeat;
+	}
+/* </Content> */

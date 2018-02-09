@@ -1,0 +1,61 @@
+.paging
+{
+	padding: 20px 0;
+}
+
+.paging .title
+{
+	font-weight: bold;
+}
+
+.paging ul
+{
+	display: inline;
+	list-style: none;
+	padding: 0;
+}
+
+.paging ul li
+{
+	display: inline;
+	margin: 0 5px;
+}
+
+.gallery-item
+{
+	min-height: 165px;
+}
+
+.gallery-item .img
+{
+	float: left;
+	border: 2px solid #ededed;
+	margin: 0 15px 0 0;
+}
+
+.gallery-detailed
+{
+}
+.gallery-detailed .img-holder
+{
+	display: inline-block;
+	height: 165px;
+	padding: 0 20px 0 0;
+}
+
+.gallery-item .img img,
+.gallery-detailed .img img
+{
+	float: left;
+	border: 8px solid #f0f0f0;
+}
+
+.gallery-item .time
+{
+	color: #999;
+}
+
+.gallery-item h2
+{
+	margin-top: 0;
+}

@@ -1,0 +1,22 @@
+.paging
+{
+	padding: 20px 0;
+}
+
+.paging .title
+{
+	font-weight: bold;
+}
+
+.paging ul
+{
+	display: inline;
+	list-style: none;
+	padding: 0;
+}
+
+.paging ul li
+{
+	display: inline;
+	margin: 0 5px;
+}

@@ -1,0 +1,44 @@
+/* <Styles for the most ignorant browser in the world> */
+
+	#vote .top,
+	#vote .bottom
+	{
+		overflow: hidden;
+	}
+
+	#vote
+	{
+		display: inline;
+	}
+
+	#vote .content div
+	{
+		overflow: hidden;
+		height: 2px;
+	}
+
+	#faq,
+	#map,
+	#feedback
+	{
+		height: 74px;
+		width: 191px;
+	}
+
+	#index-news
+	{
+		float: none;
+	}
+
+	#foreigners,
+	#citizens
+	{
+		width: 27%;
+		margin-right: 0;
+	}
+
+	#vote ul li span.line
+	{
+		overflow: hidden;
+	}
+/* </Styles for the most ignorant browser in the world> */

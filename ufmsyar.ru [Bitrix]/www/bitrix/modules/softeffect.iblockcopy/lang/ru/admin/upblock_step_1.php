@@ -1,0 +1,1 @@
+<?$MESS ['IBLOCKCOPI_TITLE_STEP_1'] = "Настройка копирования ИБ";$MESS ['UPBLOCK_STEP_1'] = "Копировать информацию в новый инфоблок";$MESS ['IBLOCKCOPI_STEP_1_ADD'] = "Добавлять новые свойства";$MESS ['IBLOCKCOPI_STEP_1_COPI'] = "Куда копировать?";$MESS ['XLS_RESULT_COUNT_UPDATE'] = "Обновлено старых:";$MESS ['COPY_UPBLOCK_KAKOY'] = "Какой инфоблок копировать?";?>

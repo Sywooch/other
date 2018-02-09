@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1279367270 < time()) $expired = true; else{$expired = false; $value = 's:31:"93-181-223-78.adsl.yaroslavl.ru";';}?>

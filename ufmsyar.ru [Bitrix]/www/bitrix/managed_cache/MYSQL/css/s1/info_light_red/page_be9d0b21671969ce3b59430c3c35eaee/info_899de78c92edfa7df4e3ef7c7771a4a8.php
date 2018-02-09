@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/components/bitrix/voting.form/templates/with_description/style.css" => "1402044857498",), 'CUR_SEL_CNT' => '10', 'CUR_IE_CNT' => '0'); ?>

@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1279392816 < time()) $expired = true; else{$expired = false; $value = 's:34:"msnbot-207-46-12-26.search.msn.com";';}?>

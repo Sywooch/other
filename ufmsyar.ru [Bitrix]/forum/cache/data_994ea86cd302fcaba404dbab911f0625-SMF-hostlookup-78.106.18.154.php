@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1279785609 < time()) $expired = true; else{$expired = false; $value = 's:34:"78-106-18-154.broadband.corbina.ru";';}?>

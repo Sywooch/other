@@ -1,0 +1,124 @@
+/* <Survey> */
+	hr
+	{
+		height: 1px;
+		border-width: 0;
+		border-bottom-width: 1px;
+		margin: 0;
+	}
+
+	#content form
+	{
+		margin: 0 10px;
+		padding-bottom: 30px;
+	}
+
+	#content label
+	{
+		display: block;
+		margin-top: 20px;
+	}
+
+	#content span.label
+	{
+		margin-top: 20px;
+		display: block;
+		font-weight: bold;
+	}
+
+	#content label.radio-button
+	{
+		margin-right: 10px;
+	}
+
+	#content span.label strong
+	{
+		color: #f00;
+	}
+
+
+	#content label span
+	{
+		font-weight: bold;
+		display: block;
+	}
+
+	#content label.radio-button,
+	#content label.radio-button span
+	{
+		display: inline;
+		font-weight: normal;
+	}
+
+	#content label.checkbox-button
+	{
+		margin: 0;
+	}
+
+	#content label.checkbox-button span
+	{
+		display: inline;
+		font-weight: normal;
+	}
+
+	#content label.checkbox-button
+	{
+		margin-top: 5px;
+	}
+
+	#content label strong
+	{
+		color: #f00;
+	}
+
+	#content span.error
+	{
+		display: block;
+		clear: both;
+		color: #f00;
+	}
+
+	#content label textarea
+	{
+		display: block;
+		clear: both;
+		width: 510px;
+	}
+
+	#content label.textarea span.error
+	{
+		width: 350px;
+		margin-left: 0;
+	}
+
+	#content form .submit
+	{
+		clear: both;
+	}
+
+	#content label.error input,
+	#content label.error select,
+	#content label.error textarea
+	{
+		border: 1px solid red;
+		background: #fffafa;
+	}
+
+	#content label.random-image span
+	{
+		width: 350px;
+		display: block;
+		float: none;
+		clear: both;
+		margin-left: 0;
+	}
+
+	#content label.random-image input
+	{
+		width: 138px;
+		margin-right: 15px;
+		position: relative;
+		top: -10px;
+	}
+
+/* </Survey> */

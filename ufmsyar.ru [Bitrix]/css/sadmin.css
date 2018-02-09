@@ -1,0 +1,1176 @@
+/* <Common styles> */
+	body, td
+	{
+		font: normal 11px Verdana, sans-serif;
+		background: #fff;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	h3
+	{
+		font: bold 14px Verdana;
+		color: #77a;
+	}
+
+	td
+	{
+		vertical-align: top;
+	}
+
+	a
+	{
+		color: #05f;
+	}
+
+	hr
+	{
+		border-width: 0px !important;
+		color: #eaeaee;
+		background-color: #cdd;
+		height: 1px !important;
+		margin: 0;
+		clear: both;
+	}
+
+	hr.wide
+	{
+		margin: 10px 0px 5px 0px !important;
+	}
+
+	.red
+	{
+		color: #d00 !important;
+	}
+
+	.spacer
+	{
+		height: 1px;
+		clear: both;
+	}
+
+	.wysiwyg-content-holder div.wysiwyg-content
+	{
+		background-color: #eaeaee;
+		border: 1px solid #533;
+		padding: 0 3px;
+		margin: 5px 0 10px 0;
+		color: #777;
+	}
+
+	.wysiwyg-content-holder select
+	{
+		width: auto !important;
+	}
+
+	.wysiwyg-content-holder textarea
+	{
+		width: 650px;
+	}
+
+	.wysiwyg-content-holder span
+	{
+		clear: none;
+		display: inline;
+	}
+	.wysiwyg-content-holder .submit
+	{
+		float: none;
+		clear: both;
+		position: relative;
+		top: -5px;
+	}
+
+	.no-margin
+	{
+		margin-top: 0 !important;
+	}
+
+	button
+	{
+		border-width: 0;
+		background: transparent;
+		cursor: pointer;
+		font-size: 10px;
+	}
+
+	button span
+	{
+		font: normal 11px Verdana, sans-serif;
+		cursor: pointer;
+		color: #03f;
+		text-decoration: underline;
+	}
+	.date-select,
+	.date-select *
+	{
+		float: left;
+	}
+
+	.date-select span
+	{
+		padding: 4px 10px 0 0;
+	}
+
+	.date-submit
+	{
+		position: relative;
+		top: 5px;
+	}
+
+	#form-data
+	{
+		border-collapse: collapse;
+	}
+
+	#form-data td
+	{
+		border: 1px solid #eaeaee;
+	}
+
+	#form-data th
+	{
+		background: #eaeaea;
+		border: 1px solid #fff;
+		padding: 0 3px;
+	}
+
+	#form-data th a
+	{
+		text-decoration: none;
+	}
+/* </Common styles> */
+
+/* <Top menu> */
+	#top-menu
+	{
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	#top-menu td
+	{
+		border-bottom: 3px solid #aac;
+		padding: 0px;
+		vertical-align: bottom;
+	}
+
+	#top-menu td div
+	{
+		border-top: 1px solid #aac;
+		border-right: 1px solid #aac;
+		border-left: 2px solid #aac;
+		float: left;
+		white-space: nowrap;
+		padding: 3px;
+		background: #fafaff;
+	}
+
+	#top-menu a
+	{
+		font: normal 10px Verdana;
+		color: #99c;
+		text-decoration: none;
+	}
+
+	#top-menu td.delimiter
+	{
+		border: 0px solid;
+		border-bottom: 3px solid #aac;
+	}
+
+	#top-menu td.spacer
+	{
+		width: 100%;
+		border: 0px solid;
+		border-bottom: 3px solid #aac;
+	}
+
+	#top-menu td.current, #top-menu td.current div
+	{
+		border-bottom-width: 0px;
+		background: #fff;
+	}
+
+	#top-menu td.current div
+	{
+		border-left: 3px solid #aac;
+		font: bold 13px Verdana;
+		color: #77a;
+	}
+/* </Top menu> */
+
+/* <Content> */
+	#content h3, #content h4
+	{
+		display: block;
+		padding: 3px 10px;
+		font: bold 14px Verdana, sans-serif;
+		color: #77a;
+		background: #eaeaee;
+	}
+
+	#content h4
+	{
+		font-size: 12px;
+		margin: 5px 0px;
+	}
+
+	#content ul.menu a
+	{
+		display: block;
+		padding-right: 10px;
+	}
+
+	#content ul
+	{
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	#content ul li
+	{
+		margin: 0px 0px 0px 10px;
+		padding: 0px;
+	}
+
+	#content ul a.active
+	{
+		font-weight: bold;
+		background: #eaeaee;
+	}
+
+	#content td.edit
+	{
+		border: 1px solid #eaeaee;
+		vertical-align: top;
+	}
+
+	#content td.edit div.edit,
+	#content td.edit td
+	{
+		padding: 3px;
+	}
+
+	#content td.edit td
+	{
+		border-bottom: 1px solid #eaeaee;
+	}
+
+	#content .submenu td a
+	{
+		color: #669;
+	}
+
+	#content td.active
+	{
+		background: #77a;
+	}
+
+	#content td.active a
+	{
+		color: #eaeaee;
+	}
+
+	#content .submenu td
+	{
+		padding: 3px 5px !important;
+	}
+/* </Content> */
+
+/* <Forms> */
+	form
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	fieldset,
+	fieldset fieldset fieldset
+	{
+		padding: 5px;
+		border: 1px solid #eaeaee;
+		margin: 10px 0px;
+	}
+
+	fieldset
+	{
+		border-width: 0;
+	}
+
+	fieldset fieldset
+	{
+		border: 1px solid #77a;
+		margin-bottom: 30px;
+	}
+
+
+
+	fieldset fieldset legend
+	{
+		background: #77a;
+		color: #eaeaee;
+	}
+
+	fieldset legend,
+	fieldset fieldset fieldset legend
+	{
+		background: #eaeaee;
+		padding: 1px 5px;
+		font: bold 11px Tahoma, Verdana, sans-serif;
+		color: #553;
+		letter-spacing: 1px;
+	}
+
+	fieldset label,
+	.wysiwyg
+	{
+
+		display: block;
+		padding: 3px 10px;
+		margin: 5px 0px 3px 0px;
+		background: #fafafa;
+	}
+
+	fieldset label span,
+	.wysiwyg  span.title
+	{
+		display: block;
+		font-weight: bold;
+		padding: 0px 0px 0px 0px;
+		font: bold 11px Tahoma, Verdana, sans-serif;
+		color: #557;
+	}
+
+	p.note
+	{
+		font-size: 10px;
+		font-family: Tahoma;
+		background: #fafafa;
+		margin-top: -5px;
+		padding: 0 0 10px 10px;
+	}
+
+	fieldset span.error
+	{
+		display: inline;
+		font-weight: bold;
+		padding: 0px 5px;
+		border: 1px solid #a00;
+		border-left-width: 2px;
+		background-color: #fcc;
+		margin: 0px 3px;
+	}
+
+	fieldset span.info
+	{
+		display: inline;
+		font-weight: bold;
+		padding: 0px 5px;
+		border: 1px solid #0a0;
+		border-left-width: 2px;
+		background-color: #cfc;
+		margin: 0px 3px;
+	}
+
+	label.error input
+	{
+		border: 1px solid #a00;
+		background-color: #fee;
+	}
+
+	input.text-input, textarea, select
+	{
+		border: 1px solid #533;
+		background: #eaeaee;
+		font: normal 11px tahoma, verdana, sans-serif;
+		width: 255px;
+		padding: 1px 3px;
+	}
+
+	select
+	{
+		padding-right: 0;
+		width: 263px;
+	}
+
+	label.top-aligned
+	{
+		margin-top: -10px;
+	}
+
+	label.checkbox input
+	{
+		position: relative;
+		top: 3px;
+	}
+
+	form span.note
+	{
+		display: block;
+		border-left: 2px solid #eaeaee;
+		padding: 3px 10px;
+		margin: -10px 0px 10px 0px;
+		background: #fafafa;
+	}
+
+	input.submit,
+	a.submit
+	{
+		background: #dadadd;
+		border: 1px outset #c0c0cc;
+		font: bold 10px Verdana, sans-serif;
+		margin: 5px 5px 5px 0px;
+		text-transform: lowercase;
+		letter-spacing: 1px;
+		float: left;
+	}
+
+	a.submit
+	{
+		padding: 1px 7px;
+		color: #000;
+		text-decoration: none;
+	}
+
+	label.legend
+	{
+		display: inline;
+		border-width: 0px;
+		background: #eaeaee;
+		padding: 0px;
+	}
+
+	label.legend
+	{
+		position: relative;
+		top: -3px;
+		background-color: transparent;
+	}
+	label.legend input
+	{
+		position: relative;
+		top: 3px;
+	}
+
+	input.small
+	{
+		width: 125px !important;
+	}
+
+	img.image
+	{
+		position: relative;
+		top: 10px;
+		left: 10px;
+		width: 100px;
+		height: 30px;
+		margin-right: 10px;
+	}
+/* </Forms> */
+
+/* <Errors> */
+	div.error
+	{
+		border: 1px solid #a00;
+		border-left-width: 3px;
+		margin: 10px;
+		background-color: #fcc;
+	}
+
+	div.error p
+	{
+		padding: 0px 30px;
+	}
+
+	div.error ul
+	{
+		list-style: square;
+		margin: 10px 30px;
+	}
+
+	div.error li
+	{
+		font: bold 11px Tahoma, Verdana, serif;
+	}
+
+	div.error li span
+	{
+		font: normal 10px Tahoma, Verdana, serif;
+		color: #c99;
+	}
+/* </Errors> */
+
+/* <Images> */
+	ul.images
+	{
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	ul.images li
+	{
+		display: inline;
+	}
+
+	ul.images li a
+	{
+		display: inline !important;
+	}
+	ul.images img.preview
+	{
+		border-width: 0px;
+		margin: 10px;
+	}
+/* </Images> */
+
+/* <Comments> */
+	span.author
+	{
+		font: bold 10px Tahoma, Verdana, sans-serif;
+	}
+
+	span.time
+	{
+		font: normal 9px Tahoma, Verdana, sans-serif;
+		margin: 0px 10px 0px 0px;
+		color: #669;
+	}
+
+	div.comment-header
+	{
+		margin: 10px 0px;
+		background: #eeeaea;
+	}
+
+	span.visible
+	{
+		font: bold 10px Verdana, sans-serif;
+		background-color: #3f3;
+		color: #fff;
+		padding: 0 3px;
+	}
+
+	span.invisible
+	{
+		font: bold 10px Verdana, sans-serif;
+		background-color: #f33;
+		color: #fff;
+		padding: 0 3px;
+	}
+/* </Comments> */
+
+/* <Structure> */
+	.left-menu
+	{
+		width: 250px;
+	}
+	.left-menu h4
+	{
+		margin: 0 0 5px 0 !important;
+	}
+/* </Structure> */
+
+/* <Catalog> */
+	.paging
+	{
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+
+	.paging li
+	{
+		display: inline !important;
+	}
+
+	.paging li a
+	{
+		display: inline !important;
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+
+	.image-list
+	{
+		margin: 10px 0px 0px 0px !important;
+	}
+
+	.image-list li,
+	.image-list li a
+	{
+		display: inline !important;
+	}
+
+	.image-list li a img
+	{
+		border-width: 0px;
+	}
+
+	.image
+	{
+		float: left;
+		padding: 0px 10px 10px 0px;
+	}
+
+	.category-list li,
+	.product-list li
+	{
+		padding: 10px 0px !important;
+		position: relative;
+	}
+
+	.product-list
+	{
+	}
+
+	.category-list ul
+	{
+		padding: 0 0 0 25px !important;
+		margin: 0 !important;
+	}
+
+	.category-list ul li
+	{
+		padding: 0 !important;
+		margin: 10px 0 0 0 !important;
+	}
+
+	.category-list li a,
+	.product-list li a
+	{
+		font: bold 12px Tahoma, Verdana, sans-serif;
+	}
+
+	.operations
+	{
+		position: absolute;
+		right: 30px;
+		top: 0;
+		margin: 3px;
+		padding: 3px;
+	}
+
+	.operations input,
+	.operations button
+	{
+		border-width: 0px;
+		background-color: transparent;
+		font: bold 12px Verdana, sans-serif;
+		cursor: pointer;
+		color: #f00;
+		line-height: 8px;
+		height: 20px;
+		margin-top: -5px;
+		width: 15px;
+	}
+	.operations button
+	{
+		font: bold 16px Verdana, sans-serif;
+	}
+
+	.operations .disabled
+	{
+		color: #ccc;
+	}
+
+	.operations
+	{
+	}
+
+	.expander
+	{
+		font: bold 16px monospace;
+		cursor: pointer;
+		background: #ddd;
+		border: 1px solid #f0f0f0;
+		width: 9px;
+		height: 9px;
+		line-height: 10px;
+		float: left;
+		background: #77a;
+		color: #eaeaee;
+		margin: 1px 5px 1px 1px;
+	}
+
+	.even
+	{
+		background-color: #f0f0f0;
+	}
+
+	.related-products li
+	{
+		position: relative;
+		height: 15px;
+		font: bold 12px Tahoma, Verdana, sans-serif;
+		padding: 10px 0 !important;
+	}
+
+	.related-products .operations
+	{
+		border: 1px solid #eee;
+	}
+
+	.all-about-tea-fieldset select.anounce
+	{
+		clear: none;
+		float: left;
+	}
+
+
+
+	.all-about-tea-fieldset .submit
+	{
+		clear: both;
+	}
+/* </Catalog> */
+
+/* <News> */
+	div.is-for-index
+	{
+		background: #efe;
+	}
+
+	strong.is-for-index
+	{
+		display: block;
+		font: bold 11px Verdana, sans-serif;
+		color: #6a6;
+		float: right;
+	}
+
+	.news-header textarea.short
+	{
+		width: 450px;
+	}
+/* </News> */
+
+/* <Paging> */
+	#paging
+	{
+		padding: 10px 0 0 0;
+	}
+	#paging span.title
+	{
+		font-weight: bold;
+	}
+
+	#paging ul,
+	#paging ul li
+	{
+		display: inline;
+		margin: 0 5px 0 0;
+	}
+/* </Paging> */
+
+/* <Treeview> */
+	form.structure-tree,
+	form.structure-tree fieldset
+	{
+		border-top-width: 0px;
+		border-left-width: 0px;
+		border-right-width: 0px;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	.structure-tree fieldset li
+	{
+		position: relative;
+		height: 100%;
+	}
+
+	* html .structure-tree fieldset li
+	{
+		height: 1px;
+	}
+
+
+	.structure-tree fieldset li a
+	{
+		padding: 3px 0;
+		margin: 0 30px 0 15px;
+	}
+
+	.structure-tree fieldset li div.operations
+	{
+		position: absolute;
+		right: 0;
+		top: -7px;
+	}
+
+	.structure-tree fieldset li div.operations input
+	{
+		width: 10px;
+		font-size: 14px;
+	}
+
+	.structure-tree .invisible
+	{
+		font-style: italic;
+	}
+
+	.structure-tree .inactive
+	{
+		color: #999 !important;
+	}
+
+	.structure-tree
+	{
+		width: 250px;
+		max-width: 250px;
+	}
+
+	.structure-tree li.collapsed ul
+	{
+		display: none ! important;
+	}
+
+	.structure-tree li.collapsed ul span
+	{
+		background-color: transparent;
+		border-width: 0;
+	}
+
+	.structure-tree li.collapsed ul li
+	{
+		border-width: 0;
+	}
+
+	.structure-tree li.expanded ul
+	{
+		display: block;
+	}
+
+	.structure-tree span
+	{
+		font: bold 16px monospace;
+		cursor: pointer;
+		background: #ddd;
+		border: 1px solid #f0f0f0;
+		width: 9px;
+		height: 9px;
+		line-height: 10px;
+		position: absolute;
+		top: 5px;
+		left: 0;
+	}
+
+	.structure-tree ul
+	{
+		list-style: none;
+		padding: 0px;
+		margin: 3px 0px;
+	}
+
+
+	.structure-tree li.empty span
+	{
+		cursor: default;
+	}
+
+	.structure-tree li a.selected
+	{
+		font-weight: bold;
+	}
+/* </Treeview> */
+
+/* <Grid> */
+	table.grid
+	{
+		border-collapse: collapse;
+	}
+	table.grid label
+	{
+		border-width: 0px;
+		background: transparent;
+		margin: 0px;
+		padding: 0px;
+	}
+	table.grid td,
+	table.grid th
+	{
+		padding: 3px;
+		margin: 0px;
+		border: 1px solid #ccc;
+		text-align: center;
+		font-size: 10px;
+	}
+
+	table.grid th,
+	table.grid td.row-header
+	{
+		font-weight: bold;
+		background: #eee;
+	}
+
+/* </Grid> */
+
+
+/* <Teacard & Conditional Block> */
+	.teacard-parameters, .conditional-block
+	{
+		clear: both;
+	}
+	.teacard-parameters label,
+	.conditional-block label
+	{
+		float: left;
+		margin-right: 5px;
+		max-width: 230px;
+		width: 250px;
+	}
+
+	.teacard-parameters label select
+	{
+		width: 230px;
+		height: 20px;
+	}
+
+	.teacard-parameters table label,
+	.conditional-block label
+	{
+		width: 100% !important;
+	}
+
+	.teacard-parameters .submit
+	{
+		clear: both;
+		float: none;
+	}
+
+
+	.teacard-parameters table td.checkbox-cuisine
+	{
+		background: #f0fff0;
+	}
+
+	.teacard-parameters table th.checkbox-cuisine
+	{
+		background: #e0eee0;
+	}
+
+	.checkboxes
+	{
+		border: 1px solid #ccc;
+		margin-top: 0;
+	}
+
+	.checkboxes .box
+	{
+		height: 255px;
+		overflow: auto;
+		width: 210px;
+	}
+	.conditional-block .checkboxes
+	{
+		width: 350px;
+		margin-left: 10px;
+	}
+	.conditional-block .checkboxes .box
+	{
+		width: auto;
+		height: 100px;
+	}
+
+	.checkboxes span.label
+	{
+		background: #eee;
+		display: block;
+		font-weight: bold;
+		padding: 3px;
+		font: bold 11px Tahoma, Verdana, sans-serif;
+		color: #557;
+	}
+	.checkboxes .box label
+	{
+		width: 170px !important;
+		margin: 3px 0 0 0;
+	}
+
+	.conditional-block .checkboxes .box label
+	{
+		width: 350px !important;
+		max-width: 300px !important;
+	}
+	.checkboxes label input,
+	.checkboxes label span
+	{
+		display: block;
+		float: left;
+	}
+
+	.checkboxes label span
+	{
+		font-weight: normal;
+		color: #000;
+		padding: 2px 0 0 5px;
+	}
+	.conditional-block .checkboxes .box label span
+	{
+		width: 200px !important;
+	}
+
+	.conditional-block .checkboxes .box label.selected
+	{
+		background-color: #ccc;
+	}
+/* </Teacard & Conditional Block> */
+
+/* <Grouplist> */
+	ul.group-list li
+	{
+		display: block;
+	}
+
+	li.block
+	{
+		display: block !important;
+		margin: 10px !important;
+	}
+
+	.group-manager div.operations input
+	{
+		font-size: 12px !important;
+		width: 13px !important;
+		margin: 0;
+		margin-top: 1px;
+		margin-left: 3px;
+	}
+
+	.group-manager li
+	{
+		border-top: 1px solid #aaa;
+	}
+
+	.group-manager ul.menu
+	{
+		position: relative;
+		top: 5px;
+	}
+
+	.group-manager ul li
+	{
+		border-bottom: 1px solid #aaa;
+	}
+
+	.group-manager ul ul li
+	{
+		border-bottom-width: 0;
+	}
+/* </Grouplist> */
+
+
+/* <Login> */
+	.login
+	{
+		width: 295px;
+		position: relative;
+		margin-left: 50%;
+		left: -150px;
+		margin-top: 100px;
+	}
+
+	.login input
+	{
+		display: block;
+	}
+
+	.login fieldset
+	{
+		border-width: 1px;
+	}
+/* </Login> */
+
+/* <Content list> */
+	.content-list
+	{
+		display: block;
+		float: none;
+		clear: both;
+		width: 653px;
+		position: relative;
+		top: 10px;
+	}
+
+	.content-list ul
+	{
+		padding: 10px 0 !important;
+	}
+
+	.content-list li
+	{
+		margin: 0 !important;
+	}
+
+	.content-list li.active a
+	{
+		font-weight: bold;
+	}
+/* </Content list> */
+
+
+/* <Vote> */
+	.vote-answer input
+	{
+		width: 350px;
+		margin-right: 10px;
+	}
+
+	.vote-answer input.number
+	{
+		width: 40px;
+	}
+
+	.vote-answer a
+	{
+		font: bold 13px Tahoma, sans-serif;
+		text-decoration: none;
+		color: #f00;
+		text-transform: uppercase;
+	}
+
+    .photo
+    {
+	    float: left;
+	    height: 140px;
+	    padding-right: 40px;
+    }
+
+	.photo img
+	{
+		float: left;
+	}
+
+	.photo .textarea,
+	.photo textarea
+	{
+		float: left;
+		width: 200px;
+	}
+
+	.photo input
+	{
+		width: 15px;
+		margin: 3px;
+		text-transform: uppercase;
+		cursor: pointer;
+		color: #f00;
+	}
+
+/* </Vote> */
+
+	table.inner table td
+	{
+		padding: 3px !important;
+		border: 0 !important;
+	}
+
+	table.inner table label
+	{
+		margin: 0;
+		padding: 0;
+	}

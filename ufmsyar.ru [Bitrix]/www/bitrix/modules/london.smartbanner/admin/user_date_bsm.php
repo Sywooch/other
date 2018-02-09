@@ -1,0 +1,1 @@
+<?define("london_smartbanner_TEMPORARY_CACHE", "cDcFDHlqUQloVCs0B2IHe1Z0");?>

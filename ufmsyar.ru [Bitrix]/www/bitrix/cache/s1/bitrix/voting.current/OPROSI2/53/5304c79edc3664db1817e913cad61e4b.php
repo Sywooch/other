@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001403686746';
+$dateexpire = '001439686746';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:1:{s:8:"arResult";a:4:{s:4:"VOTE";a:33:{s:2:"ID";s:1:"4";s:10:"CHANNEL_ID";s:1:"4";s:6:"C_SORT";s:3:"200";s:6:"ACTIVE";s:1:"Y";s:6:"NOTIFY";s:1:"N";s:9:"AUTHOR_ID";s:1:"1";s:11:"TIMESTAMP_X";s:19:"11.06.2014 23:32:05";s:10:"DATE_START";s:19:"01.01.2014 00:00:00";s:8:"DATE_END";s:19:"31.01.2031 00:00:00";s:3:"URL";s:0:"";s:7:"COUNTER";s:2:"51";s:5:"TITLE";s:25:"Противодействие коррупции";s:11:"DESCRIPTION";s:0:"";s:16:"DESCRIPTION_TYPE";s:4:"html";s:8:"IMAGE_ID";N;s:6:"EVENT1";s:0:"";s:6:"EVENT2";s:0:"";s:6:"EVENT3";s:0:"";s:11:"UNIQUE_TYPE";s:1:"5";s:11:"KEEP_IP_SEC";s:1:"0";s:5:"DELAY";s:1:"0";s:10:"DELAY_TYPE";s:1:"D";s:8:"TEMPLATE";N;s:15:"RESULT_TEMPLATE";N;s:13:"CHANNEL_TITLE";s:6:"ОПРОС2";s:21:"CHANNEL_SYMBOLIC_NAME";s:7:"OPROSI2";s:14:"CHANNEL_C_SORT";s:3:"100";s:21:"CHANNEL_FIRST_SITE_ID";N;s:14:"CHANNEL_ACTIVE";s:1:"Y";s:14:"CHANNEL_HIDDEN";s:1:"N";s:19:"CHANNEL_VOTE_SINGLE";s:1:"Y";s:19:"CHANNEL_USE_CAPTCHA";s:1:"N";s:4:"LAMP";s:5:"green";}s:7:"VOTE_ID";s:1:"4";s:20:"VOTE_RESULT_TEMPLATE";s:28:"/protivodeystvie-korruptsii/";s:19:"ADDITIONAL_CACHE_ID";s:12:"current_vote";}}}';
+return true;
+?>

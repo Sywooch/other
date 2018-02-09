@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001403739427';
+$dateexpire = '001403743027';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:7:{i:0;a:3:{s:4:"LINK";s:44:"/gosudarstvennye-uslugi/migratsionnyy-uchet/";s:5:"LINKS";a:1:{i:0;s:44:"/gosudarstvennye-uslugi/migratsionnyy-uchet/";}s:4:"PERM";s:1:"R";}i:1;a:3:{s:4:"LINK";s:61:"/gosudarstvennye-uslugi/razreshenie-na-vremennoe-prozhivanie/";s:5:"LINKS";a:1:{i:0;s:61:"/gosudarstvennye-uslugi/razreshenie-na-vremennoe-prozhivanie/";}s:4:"PERM";s:1:"R";}i:2;a:3:{s:4:"LINK";s:42:"/gosudarstvennye-uslugi/vid-na-zhitelstvo/";s:5:"LINKS";a:1:{i:0;s:42:"/gosudarstvennye-uslugi/vid-na-zhitelstvo/";}s:4:"PERM";s:1:"R";}i:3;a:3:{s:4:"LINK";s:59:"/gosudarstvennye-uslugi/grazhdanstvo-rossiyskoy-federatsii/";s:5:"LINKS";a:1:{i:0;s:59:"/gosudarstvennye-uslugi/grazhdanstvo-rossiyskoy-federatsii/";}s:4:"PERM";s:1:"R";}i:4;a:3:{s:4:"LINK";s:22:"/trudovaya-migratsiya/";s:5:"LINKS";a:1:{i:0;s:22:"/trudovaya-migratsiya/";}s:4:"PERM";s:1:"R";}i:5;a:3:{s:4:"LINK";s:70:"/gosudarstvennye-uslugi/priglashenie-dlya-vezda-inostrannykh-grazhdan/";s:5:"LINKS";a:1:{i:0;s:70:"/gosudarstvennye-uslugi/priglashenie-dlya-vezda-inostrannykh-grazhdan/";}s:4:"PERM";s:1:"R";}i:6;a:3:{s:4:"LINK";s:69:"/gosudarstvennye-uslugi/gosudarstvennaya-programma-sootechestvenniki/";s:5:"LINKS";a:1:{i:0;s:69:"/gosudarstvennye-uslugi/gosudarstvennaya-programma-sootechestvenniki/";}s:4:"PERM";s:1:"R";}}}';
+return true;
+?>

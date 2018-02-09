@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1279817612 < time()) $expired = true; else{$expired = false; $value = 's:33:"109-161-64-222.pppoe.yaroslavl.ru";';}?>

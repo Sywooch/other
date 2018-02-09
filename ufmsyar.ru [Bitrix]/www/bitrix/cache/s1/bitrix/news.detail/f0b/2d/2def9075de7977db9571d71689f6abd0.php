@@ -1,0 +1,28 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001403695096';
+$dateexpire = '001439695096';
+$ser_content = 'a:2:{s:7:"CONTENT";s:1986:"<div class="news-detail">
+	
+			<h3>За 10 месяцев 2013 года УФМС России по Ярославской области оформило 62 332 заграничных паспорта</h3>
+			<span class="news-date-time">13.11.2013</span></br>
+					<h2 style="color: #464646; background-color: #ffffff;">
+<p>
+	 По состоянию на 1 ноября отдел оформления заграничных паспортов ярославской миграционной службы выдал 62&nbsp;332 заграничных паспорта, из них 52&nbsp;162 паспорта нового поколения (83,7% от общего количества) и 10&nbsp;170 паспортов старого образца. Среди ярославцев и жителей области растет популярность Единого портала госуслуг: с его помощью за 10 месяцев 2013 года оформили заграничные паспорта 11&nbsp;845 человек.
+</p>
+<p>
+	 21-22 ноября на IV Международном форуме «ИННОВАЦИИ. БИЗНЕС. ОБРАЗОВАНИЕ – 2013», который состоится в Ярославле в КЗЦ «Миллениум», специалисты УФМС России по Ярославской области дадут подробные консультации по вопросам оформления загранпаспортов. Они объяснят, как правильно воспользоваться Порталом государственных услуг, расскажут, что нужно учесть при подаче заявления на получение загранпаспорта, и прокомментируют наиболее распространенные ошибки.
+</p>
+<p>
+	 Кроме того, в отделе оформления загранпаспортов ярославской миграционной службы продолжается акция «ДЕНЬ ПРЕДПРИЯТИЯ». По заявке руководителя организации для сотрудников и членов их семей будет выделен отдельный день и час подачи документов, а также инспектор, который будет осуществлять их прием. При значительном количестве сотрудников, желающих оформить биометрические загранпаспорта, инспектора УФМС с мобильным фотокомплексом могут выехать непосредственно на предприятие.
+</p>
+<p>
+	<strong>Подать коллективную заявку&nbsp;</strong>на участие в акции «ДЕНЬ ПРЕДПРИЯТИЯ» можно<strong>&nbsp;</strong>по&nbsp;<strong>телефону (4852) 73-11-81&nbsp;или через форму обратной связи&nbsp;</strong>на официальном сайте УФМС России по Ярославской области.
+</p>
+<br>
+<br>
+</h2>		<div style="clear:both"></div>
+	<br />
+	</div>";s:4:"VARS";a:2:{s:8:"arResult";a:10:{s:2:"ID";s:3:"239";s:9:"IBLOCK_ID";s:2:"13";s:4:"NAME";s:95:"За 10 месяцев 2013 года УФМС России по Ярославской области оформило 62 332 заграничных паспорта";s:17:"IBLOCK_SECTION_ID";N;s:6:"IBLOCK";a:84:{s:2:"ID";s:2:"13";s:3:"~ID";s:2:"13";s:11:"TIMESTAMP_X";s:19:"22.05.2014 03:38:23";s:12:"~TIMESTAMP_X";s:19:"22.05.2014 03:38:23";s:14:"IBLOCK_TYPE_ID";s:4:"news";s:15:"~IBLOCK_TYPE_ID";s:4:"news";s:3:"LID";s:2:"s1";s:4:"~LID";s:2:"s1";s:4:"CODE";s:18:"infoportal_news_s1";s:5:"~CODE";s:18:"infoportal_news_s1";s:4:"NAME";s:13:"Пресс - центр";s:5:"~NAME";s:13:"Пресс - центр";s:6:"ACTIVE";s:1:"Y";s:7:"~ACTIVE";s:1:"Y";s:4:"SORT";s:3:"500";s:5:"~SORT";s:3:"500";s:13:"LIST_PAGE_URL";s:6:"/news/";s:14:"~LIST_PAGE_URL";s:6:"/news/";s:15:"DETAIL_PAGE_URL";s:29:"#SITE_DIR#/press-tsentr/#ID#/";s:16:"~DETAIL_PAGE_URL";s:29:"#SITE_DIR#/press-tsentr/#ID#/";s:16:"SECTION_PAGE_URL";s:31:"#SITE_DIR#/press-tsentr/#CODE#/";s:17:"~SECTION_PAGE_URL";s:31:"#SITE_DIR#/press-tsentr/#CODE#/";s:7:"PICTURE";N;s:8:"~PICTURE";N;s:11:"DESCRIPTION";s:0:"";s:12:"~DESCRIPTION";s:0:"";s:16:"DESCRIPTION_TYPE";s:4:"text";s:17:"~DESCRIPTION_TYPE";s:4:"text";s:7:"RSS_TTL";s:2:"24";s:8:"~RSS_TTL";s:2:"24";s:10:"RSS_ACTIVE";s:1:"Y";s:11:"~RSS_ACTIVE";s:1:"Y";s:15:"RSS_FILE_ACTIVE";s:1:"N";s:16:"~RSS_FILE_ACTIVE";s:1:"N";s:14:"RSS_FILE_LIMIT";s:1:"0";s:15:"~RSS_FILE_LIMIT";s:1:"0";s:13:"RSS_FILE_DAYS";s:1:"0";s:14:"~RSS_FILE_DAYS";s:1:"0";s:17:"RSS_YANDEX_ACTIVE";s:1:"N";s:18:"~RSS_YANDEX_ACTIVE";s:1:"N";s:6:"XML_ID";s:18:"infoportal_news_s1";s:7:"~XML_ID";s:18:"infoportal_news_s1";s:6:"TMP_ID";s:32:"aa9ed54e816e252c13f30f8fc2ea2b93";s:7:"~TMP_ID";s:32:"aa9ed54e816e252c13f30f8fc2ea2b93";s:13:"INDEX_ELEMENT";s:1:"Y";s:14:"~INDEX_ELEMENT";s:1:"Y";s:13:"INDEX_SECTION";s:1:"N";s:14:"~INDEX_SECTION";s:1:"N";s:8:"WORKFLOW";s:1:"N";s:9:"~WORKFLOW";s:1:"N";s:7:"BIZPROC";s:1:"N";s:8:"~BIZPROC";s:1:"N";s:15:"SECTION_CHOOSER";s:1:"L";s:16:"~SECTION_CHOOSER";s:1:"L";s:9:"LIST_MODE";s:0:"";s:10:"~LIST_MODE";s:0:"";s:11:"RIGHTS_MODE";s:1:"S";s:12:"~RIGHTS_MODE";s:1:"S";s:16:"SECTION_PROPERTY";s:1:"N";s:17:"~SECTION_PROPERTY";s:1:"N";s:7:"VERSION";s:1:"1";s:8:"~VERSION";s:1:"1";s:17:"LAST_CONV_ELEMENT";s:1:"0";s:18:"~LAST_CONV_ELEMENT";s:1:"0";s:15:"SOCNET_GROUP_ID";N;s:16:"~SOCNET_GROUP_ID";N;s:16:"EDIT_FILE_BEFORE";s:0:"";s:17:"~EDIT_FILE_BEFORE";s:0:"";s:15:"EDIT_FILE_AFTER";s:0:"";s:16:"~EDIT_FILE_AFTER";s:0:"";s:13:"SECTIONS_NAME";s:7:"Разделы";s:14:"~SECTIONS_NAME";s:7:"Разделы";s:12:"SECTION_NAME";s:6:"Раздел";s:13:"~SECTION_NAME";s:6:"Раздел";s:13:"ELEMENTS_NAME";s:7:"Новости";s:14:"~ELEMENTS_NAME";s:7:"Новости";s:12:"ELEMENT_NAME";s:7:"Новость";s:13:"~ELEMENT_NAME";s:7:"Новость";s:11:"EXTERNAL_ID";s:18:"infoportal_news_s1";s:12:"~EXTERNAL_ID";s:18:"infoportal_news_s1";s:8:"LANG_DIR";s:1:"/";s:9:"~LANG_DIR";s:1:"/";s:11:"SERVER_NAME";N;s:12:"~SERVER_NAME";N;}s:13:"LIST_PAGE_URL";s:14:"/press-tsentr/";s:14:"~LIST_PAGE_URL";s:14:"/press-tsentr/";s:11:"SECTION_URL";s:0:"";s:7:"SECTION";a:1:{s:4:"PATH";a:0:{}}s:16:"IPROPERTY_VALUES";a:0:{}}s:18:"templateCachedData";a:2:{s:13:"additionalCSS";s:97:"/bitrix/templates/.default/components/bitrix/news/template1/bitrix/news.detail/.default/style.css";s:8:"__NavNum";i:1;}}}';
+return true;
+?>

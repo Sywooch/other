@@ -1,0 +1,148 @@
+2014-05-11 04:34:48 - CRUPDCDF1 - Run updater '/bitrix/updates/update_m1399746887/energosoft.slider/updater1.0.1.php': CopyDirFiles(/bitrix/updates/update_m1399746887/energosoft.slider/install/components, /bitrix/components/energosoft)
+2014-05-11 04:34:48 - CRUPDCDF1 - Run updater '/bitrix/updates/update_m1399746887/energosoft.slider/updater1.0.1.php': CopyDirFiles(/bitrix/updates/update_m1399746887/energosoft.slider/install/js, /bitrix/js/energosoft)
+2014-05-11 04:34:51 - CRUPDCDF1 - Run updater '/bitrix/updates/update_m1399746891/energosoft.slider/updater1.0.2.php': CopyDirFiles(/bitrix/updates/update_m1399746891/energosoft.slider/install/components, /bitrix/components/energosoft)
+2014-05-11 04:34:51 - CRUPDCDF1 - Run updater '/bitrix/updates/update_m1399746891/energosoft.slider/updater1.0.2.php': CopyDirFiles(/bitrix/updates/update_m1399746891/energosoft.slider/install/js, /bitrix/js/energosoft)
+2014-05-11 04:34:54 - CRUPDCDF1 - Run updater '/bitrix/updates/update_m1399746894/energosoft.slider/updater1.0.3.php': CopyDirFiles(/bitrix/updates/update_m1399746894/energosoft.slider/install/components, /bitrix/components/energosoft)
+2014-05-11 04:34:54 - CRUPDCDF1 - Run updater '/bitrix/updates/update_m1399746894/energosoft.slider/updater1.0.3.php': CopyDirFiles(/bitrix/updates/update_m1399746894/energosoft.slider/install/js, /bitrix/js/energosoft)
+2014-06-04 18:29:27 -  - exec CUpdateClient::GetUpdatesList
+2014-06-04 18:29:27 -  - exec CUpdateClient::CollectRequestData
+2014-06-04 18:29:27 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=skoraya55.ru&CHHB=skoraya55.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-06-04 18:29:27 -  - exec CUpdateClient::GetHTTPPage
+2014-06-04 18:29:27 -  - TIME GetUpdatesList(request) 0.41 sec
+2014-06-04 18:29:27 -  - exec CUpdateClient::ParseServerData
+2014-06-04 19:57:47 -  - exec CUpdateClient::GetUpdatesList
+2014-06-04 19:57:47 -  - exec CUpdateClient::CollectRequestData
+2014-06-04 19:57:47 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=skoraya55.ru&CHHB=skoraya55.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-06-04 19:57:47 -  - exec CUpdateClient::GetHTTPPage
+2014-06-04 19:57:48 -  - TIME GetUpdatesList(request) 0.277 sec
+2014-06-04 19:57:48 -  - exec CUpdateClient::ParseServerData
+2014-06-04 20:11:45 -  - exec CUpdateClient::GetUpdatesList
+2014-06-04 20:11:45 -  - exec CUpdateClient::CollectRequestData
+2014-06-04 20:11:45 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=skoraya55.ru&CHHB=skoraya55.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-06-04 20:11:45 -  - exec CUpdateClient::GetHTTPPage
+2014-06-04 20:11:45 -  - TIME GetUpdatesList(request) 0.246 sec
+2014-06-04 20:11:45 -  - exec CUpdateClient::ParseServerData
+2014-06-04 23:34:54 -  - exec CUpdateClient::GetUpdatesList
+2014-06-04 23:34:54 -  - exec CUpdateClient::CollectRequestData
+2014-06-04 23:34:54 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=skoraya55.ru&CHHB=skoraya55.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-06-04 23:34:54 -  - exec CUpdateClient::GetHTTPPage
+2014-06-04 23:34:54 -  - TIME GetUpdatesList(request) 0.676 sec
+2014-06-04 23:34:54 -  - exec CUpdateClient::ParseServerData
+2014-06-04 23:38:28 -  - exec CUpdateClient::GetUpdatesList
+2014-06-04 23:38:28 -  - exec CUpdateClient::CollectRequestData
+2014-06-04 23:38:28 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=skoraya55.ru&CHHB=skoraya55.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-06-04 23:38:28 -  - exec CUpdateClient::GetHTTPPage
+2014-06-04 23:38:28 -  - TIME GetUpdatesList(request) 0.206 sec
+2014-06-04 23:38:28 -  - exec CUpdateClient::ParseServerData
+2014-06-08 17:47:15 -  - exec CUpdateClient::GetUpdatesList
+2014-06-08 17:47:15 -  - exec CUpdateClient::CollectRequestData
+2014-06-08 17:47:15 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-06-08 17:47:15 -  - exec CUpdateClient::GetHTTPPage
+2014-06-08 17:47:16 -  - TIME GetUpdatesList(request) 0.208 sec
+2014-06-08 17:47:16 -  - exec CUpdateClient::ParseServerData
+2014-06-25 10:55:34 -  - exec CUpdateClient::GetUpdatesList
+2014-06-25 10:55:34 -  - exec CUpdateClient::CollectRequestData
+2014-06-25 10:55:34 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=3&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-06-25 10:55:34 -  - exec CUpdateClient::GetHTTPPage
+2014-06-25 10:55:34 -  - TIME GetUpdatesList(request) 0.201 sec
+2014-06-25 10:55:34 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:30:23 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 00:30:23 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:30:23 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-06-26 00:30:23 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:30:24 -  - TIME GetUpdatesList(request) 0.332 sec
+2014-06-26 00:30:24 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:30:42 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 00:30:42 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:30:42 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU
+2014-06-26 00:30:42 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:30:42 -  - TIME GetUpdatesList(request) 0.253 sec
+2014-06-26 00:30:42 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:31:44 -  - exec CUpdateClient::UpdateUpdate
+2014-06-26 00:31:44 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:31:44 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.0&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&query_type=updateupdate
+2014-06-26 00:31:44 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:31:47 -  - TIME UpdateUpdate(request) 2.505 sec
+2014-06-26 00:31:47 -  - exec CUpdateClient::UnGzipArchive
+2014-06-26 00:31:47 -  - TIME UnGzipArchive 0.009 sec
+2014-06-26 00:31:47 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:31:47 - CURV - Update updated successfully!
+2014-06-26 00:31:47 - UPD_SUCCESS - Update system updated
+2014-06-26 00:31:47 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 00:31:47 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:31:47 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N
+2014-06-26 00:31:47 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:31:48 -  - TIME GetUpdatesList(request) 0.392 sec
+2014-06-26 00:31:48 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:39:26 -  - exec CUpdateClient::ActivateLicenseKey
+2014-06-26 00:39:26 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:39:26 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&query_type=activate
+2014-06-26 00:39:26 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:39:27 -  - TIME ActivateLicenseKey(request) 0.331 sec
+2014-06-26 00:39:27 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:39:27 - CUALK - [ERROR_WRONG_CODE] –абота системы обновлений заблокирована. ƒанна€ ситуаци€ могла произойти после восстановлени€ сайта из резервной копии, переносе сайта на другой хостинг, а также <a href="http://www.1c-bitrix.ru/support/faq/?ELEMENT_ID=289760" target="_blank">в некоторых других случа€х</a>.<br><a href="http://www.1c-bitrix.ru/support/index.php" target="_blank">–азблокировать</a>.. 
+2014-06-26 00:39:27 - UPD_ERROR - Error: [ERROR_WRONG_CODE] –абота системы обновлений заблокирована. ƒанна€ ситуаци€ могла произойти после восстановлени€ сайта из резервной копии, переносе сайта на другой хостинг, а также <a href="http://www.1c-bitrix.ru/support/faq/?ELEMENT_ID=289760" target="_blank">в некоторых других случа€х</a>.<br><a href="http://www.1c-bitrix.ru/support/index.php" target="_blank">–азблокировать</a>.. 
+2014-06-26 00:40:01 -  - exec CUpdateClient::ActivateLicenseKey
+2014-06-26 00:40:01 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:40:01 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&query_type=activate
+2014-06-26 00:40:01 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:40:01 -  - TIME ActivateLicenseKey(request) 0.326 sec
+2014-06-26 00:40:01 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:40:01 - CUALK - [ERROR_WRONG_CODE] –абота системы обновлений заблокирована. ƒанна€ ситуаци€ могла произойти после восстановлени€ сайта из резервной копии, переносе сайта на другой хостинг, а также <a href="http://www.1c-bitrix.ru/support/faq/?ELEMENT_ID=289760" target="_blank">в некоторых других случа€х</a>.<br><a href="http://www.1c-bitrix.ru/support/index.php" target="_blank">–азблокировать</a>.. 
+2014-06-26 00:40:01 - UPD_ERROR - Error: [ERROR_WRONG_CODE] –абота системы обновлений заблокирована. ƒанна€ ситуаци€ могла произойти после восстановлени€ сайта из резервной копии, переносе сайта на другой хостинг, а также <a href="http://www.1c-bitrix.ru/support/faq/?ELEMENT_ID=289760" target="_blank">в некоторых других случа€х</a>.<br><a href="http://www.1c-bitrix.ru/support/index.php" target="_blank">–азблокировать</a>.. 
+2014-06-26 00:49:32 -  - exec CUpdateClient::ActivateLicenseKey
+2014-06-26 00:49:32 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:49:32 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N&query_type=activate
+2014-06-26 00:49:32 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:49:32 -  - TIME ActivateLicenseKey(request) 0.256 sec
+2014-06-26 00:49:32 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:49:32 - CUALK - [ERROR_WRONG_CODE] –абота системы обновлений заблокирована. ƒанна€ ситуаци€ могла произойти после восстановлени€ сайта из резервной копии, переносе сайта на другой хостинг, а также <a href="http://www.1c-bitrix.ru/support/faq/?ELEMENT_ID=289760" target="_blank">в некоторых других случа€х</a>.<br><a href="http://www.1c-bitrix.ru/support/index.php" target="_blank">–азблокировать</a>.. 
+2014-06-26 00:49:32 - UPD_ERROR - Error: [ERROR_WRONG_CODE] –абота системы обновлений заблокирована. ƒанна€ ситуаци€ могла произойти после восстановлени€ сайта из резервной копии, переносе сайта на другой хостинг, а также <a href="http://www.1c-bitrix.ru/support/faq/?ELEMENT_ID=289760" target="_blank">в некоторых других случа€х</a>.<br><a href="http://www.1c-bitrix.ru/support/index.php" target="_blank">–азблокировать</a>.. 
+2014-06-26 00:50:54 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 00:50:54 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:50:54 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N
+2014-06-26 00:50:54 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:50:54 -  - TIME GetUpdatesList(request) 0.233 sec
+2014-06-26 00:50:54 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:53:48 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 00:53:48 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:53:48 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N
+2014-06-26 00:53:48 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:53:48 -  - TIME GetUpdatesList(request) 0.249 sec
+2014-06-26 00:53:48 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:54:13 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 00:54:13 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:54:13 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N
+2014-06-26 00:54:13 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:54:13 -  - TIME GetUpdatesList(request) 0.236 sec
+2014-06-26 00:54:13 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:55:03 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 00:55:03 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:55:03 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N
+2014-06-26 00:55:03 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:55:03 -  - TIME GetUpdatesList(request) 0.332 sec
+2014-06-26 00:55:03 -  - exec CUpdateClient::ParseServerData
+2014-06-26 00:55:13 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 00:55:13 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 00:55:13 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N
+2014-06-26 00:55:13 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 00:55:13 -  - TIME GetUpdatesList(request) 0.282 sec
+2014-06-26 00:55:13 -  - exec CUpdateClient::ParseServerData
+2014-06-26 01:04:19 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 01:04:19 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 01:04:19 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N
+2014-06-26 01:04:19 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 01:04:19 -  - TIME GetUpdatesList(request) 0.254 sec
+2014-06-26 01:04:19 -  - exec CUpdateClient::ParseServerData
+2014-06-26 01:04:45 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 01:04:45 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 01:04:45 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N
+2014-06-26 01:04:45 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 01:04:45 -  - TIME GetUpdatesList(request) 0.237 sec
+2014-06-26 01:04:45 -  - exec CUpdateClient::ParseServerData
+2014-06-26 01:04:49 -  - exec CUpdateClient::GetUpdatesList
+2014-06-26 01:04:49 -  - exec CUpdateClient::CollectRequestData
+2014-06-26 01:04:49 -  - LICENSE_KEY=X&lang=ru&SUPD_VER=14.5.1&VERSION=14.5.0&TYPENC=D&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=4&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=ufmsyar.ru&CHHB=ufmsyar.ru&CSAB=151.248.126.149&CANGZIP=Y&CLIENT_PHPVER=5.4.4-14%2Bdeb7u2&stable=Y&bitm_main=14.5.0&bitm_perfmon=14.0.1&bitm_vote=14.0.2&bitm_highloadblock=14.0.6&bitm_clouds=14.5.0&bitm_blog=14.5.0&bitm_compression=14.0.0&bitm_form=14.0.1&bitm_scale=14.5.0&bitm_forum=14.5.0&bitm_fileman=14.5.0&bitm_search=14.5.0&bitm_mobileapp=14.0.3&bitm_socialservices=14.0.4&bitm_photogallery=14.5.0&bitm_iblock=14.5.0&bitm_security=14.0.11&bitm_bitrixcloud=14.0.4&bitm_seo=14.0.6&bitm_subscribe=14.5.0&bitl_ru=&bitl_en=&bith_ru=&bith_en=&SUPD_SRS=RU&SUPD_CMP=N
+2014-06-26 01:04:49 -  - exec CUpdateClient::GetHTTPPage
+2014-06-26 01:04:49 -  - TIME GetUpdatesList(request) 0.245 sec
+2014-06-26 01:04:49 -  - exec CUpdateClient::ParseServerData

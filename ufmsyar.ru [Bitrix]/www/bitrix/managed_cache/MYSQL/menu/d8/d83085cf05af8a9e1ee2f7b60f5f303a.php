@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001403739427';
+$dateexpire = '001403743027';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:6:{i:0;a:3:{s:4:"LINK";s:66:"/gosudarstvennye-uslugi/pasport-grazhdanina-rossiyskoy-federatsii/";s:5:"LINKS";a:1:{i:0;s:66:"/gosudarstvennye-uslugi/pasport-grazhdanina-rossiyskoy-federatsii/";}s:4:"PERM";s:1:"R";}i:1;a:3:{s:4:"LINK";s:45:"/gosudarstvennye-uslugi/zagranichnyy-pasport/";s:5:"LINKS";a:1:{i:0;s:45:"/gosudarstvennye-uslugi/zagranichnyy-pasport/";}s:4:"PERM";s:1:"R";}i:2;a:3:{s:4:"LINK";s:47:"/gosudarstvennye-uslugi/registratsionnyy-uchet/";s:5:"LINKS";a:1:{i:0;s:47:"/gosudarstvennye-uslugi/registratsionnyy-uchet/";}s:4:"PERM";s:1:"R";}i:3;a:3:{s:4:"LINK";s:28:"/ufms/gosposhlina-i-shtrafy/";s:5:"LINKS";a:1:{i:0;s:28:"/ufms/gosposhlina-i-shtrafy/";}s:4:"PERM";s:1:"R";}i:4;a:3:{s:4:"LINK";s:69:"/gosudarstvennye-uslugi/gosudarstvennaya-programma-sootechestvenniki/";s:5:"LINKS";a:1:{i:0;s:69:"/gosudarstvennye-uslugi/gosudarstvennaya-programma-sootechestvenniki/";}s:4:"PERM";s:1:"R";}i:5;a:3:{s:4:"LINK";s:70:"/gosudarstvennye-uslugi/priglashenie-dlya-vezda-inostrannykh-grazhdan/";s:5:"LINKS";a:1:{i:0;s:70:"/gosudarstvennye-uslugi/priglashenie-dlya-vezda-inostrannykh-grazhdan/";}s:4:"PERM";s:1:"R";}}}';
+return true;
+?>

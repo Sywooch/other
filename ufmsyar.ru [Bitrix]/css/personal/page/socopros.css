@@ -1,0 +1,82 @@
+/* <Survey> */
+	hr
+	{
+		height: 1px;
+		border-width: 0;
+		border-bottom-width: 1px;
+		margin: 0;
+	}
+
+	#content form
+	{
+		margin: 0 10px;
+		padding-bottom: 30px;
+	}
+
+	#content label
+	{
+		display: block;
+		margin-top: 20px;
+	}
+
+	#content span.label
+	{
+		margin-top: 20px;
+		display: block;
+		font-weight: bold;
+	}
+
+	#content label.radio-button
+	{
+		margin: 5px 0 0 0;
+	}
+
+	#content label.radio-button input
+	{
+		width: auto;
+	}
+
+	#content span.label strong
+	{
+		color: #f00;
+	}
+
+
+	#content label span
+	{
+		font-weight: bold;
+		display: block;
+	}
+
+	#content label.radio-button span
+	{
+		display: inline;
+		float: none;
+		font-weight: normal;
+	}
+
+	#content label strong
+	{
+		color: #f00;
+	}
+
+	#content span.error
+	{
+		display: block;
+		color: #f00;
+	}
+
+	#content form button
+	{
+		margin-top: 25px;
+	}
+
+	#content label.error input,
+	#content label.error select,
+	#content label.error textarea
+	{
+		border: 1px solid red;
+		background: #fffafa;
+	}
+
+/* </Survey> */

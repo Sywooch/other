@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/components/itlogic/bxslider/css/jquery.bxslider.css" => "14020448493965",), 'CUR_SEL_CNT' => '32', 'CUR_IE_CNT' => '0'); ?>

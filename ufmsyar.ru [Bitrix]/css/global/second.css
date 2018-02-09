@@ -1,0 +1,135 @@
+/* <Breadcrumb> */
+	#breadcrumbs
+	{
+		height: 13px;
+		padding: 0 230px;
+		margin: 15px 0;
+		color: #00749e;
+	}
+
+	#breadcrumbs,
+	#breadcrumbs *
+	{
+		font: normal 11px Tahoms, sans-serif;
+	}
+
+	#breadcrumbs a
+	{
+		text-decoration: none;
+	}
+
+	#breadcrumbs a:hover
+	{
+		text-decoration: underline;
+	}
+
+	#breadcrumbs span
+	{
+		color: #959595;
+	}
+/* </Breadcrumb> */
+
+/* <Content> */
+	#content
+	{
+		margin-top: 0;
+		clear: both;
+		float: left;
+		width: 100%;
+	}
+
+	#faq,
+	#map,
+	#feedback
+	{
+		margin: 5px 20px;
+	}
+
+	#faq
+	{
+		margin-top: 30px;
+	}
+
+	#feedback
+	{
+		margin-bottom: 30px;
+	}
+
+	#middle h1
+	{
+		font: normal 18px "Lucida Sans Unicode", Tahoma, sans-serif;
+		margin: 0 0 20px 0;
+	}
+
+	#middle h2
+	{
+		font: normal 16px "Lucida Sans Unicode", Tahoma, sans-serif;
+	}
+
+	#middle h3
+	{
+		font: normal 14px "Trebuchet MS", Tahoma, sans-serif;
+		color: #9e131b;
+	}
+
+	iframe
+	{
+		border: 0;
+	}
+/* </Content> */
+
+
+.vote-form
+{}
+
+.vote-form h2
+{
+	height: 23px;
+	padding: 0;
+	margin: 0;
+	color: #cb3d21;
+	position: relative;
+	font: bold 16px "Trebuchet MS", Tahoma, sans-serif;
+}
+
+.vote-form ul
+{
+	margin: 10px 0;
+	padding: 0;
+	list-style: none;
+	width: 30%;
+}
+
+.vote-form ul li
+{
+	margin: 0;
+	padding: 3px 0;
+}
+
+.vote-form ul li span.line
+{
+	height: 5px;
+	display: block;
+	background: #00749e url(../../../image/bg/vote-bg.png) 0 -13px repeat-x;
+}
+
+.vote-form ul li.leader span.line
+{
+	background: #a0410d url(../../../image/bg/vote-bg.png) 0 -8px repeat-x;
+}
+
+.vote-form ul li span
+{
+	color: #00749e;
+}
+
+.vote-form ul li.leader span
+{
+	color: #a0410d;
+}
+
+.vote-form button
+{
+	margin-top: 10px;
+}
+

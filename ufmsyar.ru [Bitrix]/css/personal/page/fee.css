@@ -1,0 +1,102 @@
+.fee
+{
+	border: solid 1px #000;;
+	margin: 0 auto 12mm auto;
+	height: 145mm;
+	width: 180mm;
+}
+
+.fee.form
+{
+	border: solid 1px #000;;
+	margin: 0 0 10px 0;
+	height: 65mm;
+	width: 180mm;
+}
+
+.fee td
+{
+	padding: 0;
+}
+
+.fee .left
+{
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: "Times New Roman", serif;
+	padding: 7mm 0 7mm 0;
+	text-align: center;
+}
+
+.fee .cell
+{
+	font-family: Arial, sans-serif;
+	border-left: black 1px solid;
+	border-bottom: black 1px solid;
+	border-top: black 1px solid;
+	font-weight: bold;
+	font-size: 8pt;
+	line-height: 1.1;
+	height: 4mm;
+	vertical-align: bottom;
+	text-align: center;
+}
+
+.fee .cells
+{
+	border-right: black 1px solid;
+	width: 100%;
+}
+
+.fee .subscript
+{
+	font-size: 6pt;
+	font-family: "Times New Roman", serif;
+	line-height: 1;
+	vertical-align: top;
+	text-align: center;
+}
+
+.fee .string,
+.fee .blank
+{
+	font-weight: bold;
+	font-size: 8pt;
+	font-family: Arial, sans-serif;
+	border-bottom: black 1px solid;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.fee .blank
+{
+	font-size: 9pt;
+	letter-spacing: 1pt;
+}
+
+.fee .floor
+{
+	vertical-align: bottom;
+	padding-top: 0.5mm;
+}
+
+.fee .text
+{
+	font-size: 8.5pt;
+	font-family: "Times New Roman", serif;
+	vertical-align: bottom;
+}
+
+.fee .small
+{
+	font-size: 7.5pt;
+	font-family: "Times New Roman", serif;
+	vertical-align: bottom;
+}
+
+
+#type
+{
+	font-weight: normal;
+	font-size: 8px;
+}

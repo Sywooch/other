@@ -1,0 +1,1 @@
+<?php if (!defined('SMF')) die; if (1279744878 < time()) $expired = true; else{$expired = false; $value = 's:23:"hosted-by.altushost.com";';}?>

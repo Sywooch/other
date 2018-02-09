@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/components/itlogic/bxslider/js/jquery-1.11.0.min.js" => "140204484996381","/bitrix/components/itlogic/bxslider/js/jquery.bxslider.min.js" => "140204484919359",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>

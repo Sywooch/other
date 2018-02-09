@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/components/api/main.feedback/js/_fn.js" => "14020448586976","/bitrix/components/api/main.feedback/js/jquery.modal.js" => "14020448583577",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>

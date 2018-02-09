@@ -1,0 +1,68 @@
+<!--
+ * FCKeditor - The text editor for internet
+ * Copyright (C) 2003-2005 Frederico Caldeira Knabben
+ *
+ * Licensed under the terms of the GNU Lesser General Public License:
+ * 		http://www.opensource.org/licenses/lgpl-license.php
+ *
+ * For further information visit:
+ * 		http://www.fckeditor.net/
+ *
+ * "Support Open Source software. What about a donation today?"
+ *
+ * File Name: frmcreatefolder.html
+ * 	Page used to create new folders in the current folder.
+ *
+ * File Authors:
+ * 		Frederico Caldeira Knabben (fredck@fckeditor.net)
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<link href="browser.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="js/common.js"></script>
+		<script src="/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+		<script language="javascript">
+			function Delete()
+			{
+				var sPath = '', sPathConfirm = '';
+
+				$(window.parent.frames['frmResourcesList'].document).find("input:checkbox:checked").each(function()
+				{
+					if (sPath.length)
+					{
+						sPath += ';;;';
+						sPathConfirm += '\n';
+					}
+					sPath += $(this).val();
+					sPathConfirm += $(this).val();
+				});
+
+				if (sPath.length && confirm('Вы хотите удалить выделенные файлы/папки (это действие нельзя будет отменить)?'))
+				{
+					if (confirm('Вы удаляете следующие файлы и папки:\n\n' + sPathConfirm +  '\n\nНажмите кнопку подтверждения для их удаления.'))
+					{
+						oConnector.SendCommand( 'Delete', 'Path=' + escape(sPath) , DeleteCallBack );
+					}
+				}
+			}
+
+			function DeleteCallBack( fckXml )
+			{
+				if ( oConnector.CheckError( fckXml ) == 0 )
+					window.parent.frames['frmResourcesList'].Refresh() ;
+			}
+		</script>
+	</head>
+	<body bottomMargin="0" topMargin="0">
+		<table height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+			<tr>
+				<td>
+					<button onclick="Delete();">
+						<span class="delete-folder">Удалить папку или файл</span>
+					</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

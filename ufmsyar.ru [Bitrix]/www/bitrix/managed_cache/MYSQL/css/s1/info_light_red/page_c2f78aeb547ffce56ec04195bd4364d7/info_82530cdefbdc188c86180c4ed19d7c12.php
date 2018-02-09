@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/.default/components/nsandrey/sitemap/template1/style.css" => "1402044775391",), 'CUR_SEL_CNT' => '7', 'CUR_IE_CNT' => '0'); ?>

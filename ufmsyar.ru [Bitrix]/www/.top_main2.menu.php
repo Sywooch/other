@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"ÃËÀÂÍÀß ÑÒÐÀÍÈÖÀ", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ÔÌÑ ÐÎÑÑÈÈ", 
+		"/fms-rossii.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ÂÀÊÀÍÑÈÈ", 
+		"/vakansii.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ÊÀÐÒÀ ÑÀÉÒÀ", 
+		"/karta-sayta.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ÊÎÍÒÀÊÒÛ", 
+		"/kontakty.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

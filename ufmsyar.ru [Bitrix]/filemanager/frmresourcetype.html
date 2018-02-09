@@ -1,0 +1,59 @@
+<!--
+ * FCKeditor - The text editor for internet
+ * Copyright (C) 2003-2005 Frederico Caldeira Knabben
+ *
+ * Licensed under the terms of the GNU Lesser General Public License:
+ * 		http://www.opensource.org/licenses/lgpl-license.php
+ *
+ * For further information visit:
+ * 		http://www.fckeditor.net/
+ *
+ * "Support Open Source software. What about a donation today?"
+ *
+ * File Name: frmresourcetype.html
+ * 	This page shows the list of available resource types.
+ *
+ * File Authors:
+ * 		Frederico Caldeira Knabben (fredck@fckeditor.net)
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<link href="browser.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="js/common.js"></script>
+		<script language="javascript">
+			function SetResourceType( type )
+			{
+				window.parent.frames["frmFolders"].SetResourceType( type ) ;
+			}
+
+			var aTypes = [
+				['File','<img src="images/inbox-document-text.png" alt="Файлы" /> Файлы'],
+				['Image','<img src="images/inbox-image.png" alt="Изображения" /> Изображения'],
+				['Flash','Flash'],
+				['Media','Media']
+			] ;
+
+			window.onload = function()
+			{
+				for ( var i = 0 ; i < aTypes.length ; i++ )
+				{
+					if ( oConnector.ShowAllTypes || aTypes[i][0] == oConnector.ResourceType )
+					{
+						document.getElementById('cmbType').innerHTML = aTypes[i][1];
+						break;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body bottomMargin="0" topMargin="0">
+		<table height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+			<tr>
+				<td>
+					<strong class="header" id="cmbType"></strong>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

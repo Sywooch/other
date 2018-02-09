@@ -1,0 +1,30 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001403708232';
+$dateexpire = '001439708232';
+$ser_content = 'a:2:{s:7:"CONTENT";s:2671:"<div class="news-detail">
+	
+			<h3>В УФМС России по Ярославской области состоялось совещание по подготовке к выборам</h3>
+			<span class="news-date-time">24.10.2011</span></br>
+					<p style="color: #464646; background-color: #ffffff;">
+	 21 октября 2011 года в УФМС России по Ярославской области прошло совещание с представителями областной Избирательной комиссии, военного комиссариата и Ярославского зенитно-ракетного института ПВО по подготовке к выборам.
+</p>
+<p style="color: #464646; background-color: #ffffff;">
+	<img width="448" src="/content_images_press-tsentr/JPG/Zasedanie_s_IZBIRKOMOM.JPG" height="336" alt="">
+</p>
+<p style="color: #464646; background-color: #ffffff;">
+	 Подготовка к выборам – &nbsp;приоритетная задача для многих ведомств. В рамках взаимодействия в период подготовки к выборам в Государственную Думу Российской Федерации и выборам Президента России УФМС России по Ярославской области инициировало встречу заинтересованных организаций. В заседании приняли участие начальник УФМС России по Ярославской области Н.В.Степанова, начальник Избирательной комиссии Ярославской области С.А. Бабуркин, военком Кировского, Ленинского и Фрунзенского районов города Ярославля С.П.Долгов, доцент кафедры ЯЗРИ ПВО Н.В.Захаров, начальники отделов управления и структурных подразделений областной миграционной службы.
+</p>
+<p style="color: #464646; background-color: #ffffff;">
+	 Глава областного избиркома рассказал собравшимся об основных задачах, которые ставятся перед его ведомством в период подготовки к выборам. Одна из наиболее важных задач – это сверка и корректировка списков избирателей. И в этом вопросе Избирком работает в тесном взаимодействии с миграционной службой. Ответственность за составление списков избирателей возложена на глав районных администраций. Именно в их адрес сотрудники отдела паспортной и регистрационной работы УФМС еженедельно посылают обновленные сведения о выдаче и замене паспортов, постановке и снятии с регистрационного учета и т.д. И чем ближе срок выборов, тем чаше эти сведения будут обновляться. С.А.Бабуркин рассказал собравшимся, что в этом году на&nbsp; 47 избирательных участках в Ярославле и Рыбинске будет применяться система сканирования бюллетеней и автоматического подсчета голосов. Это нововведение полностью исключает «человеческий фактор» и возможность подтасовки результатов.
+</p>
+<p style="color: #464646; background-color: #ffffff;">
+	 С представителями военных ведомств были обсуждены проблемные вопросы, связанные с голосованием курсантов и призывников.
+</p>
+<p style="color: #464646; background-color: #ffffff;">
+	 &nbsp;
+</p>		<div style="clear:both"></div>
+	<br />
+	</div>";s:4:"VARS";a:2:{s:8:"arResult";a:10:{s:2:"ID";s:3:"572";s:9:"IBLOCK_ID";s:2:"13";s:4:"NAME";s:81:"В УФМС России по Ярославской области состоялось совещание по подготовке к выборам";s:17:"IBLOCK_SECTION_ID";N;s:6:"IBLOCK";a:84:{s:2:"ID";s:2:"13";s:3:"~ID";s:2:"13";s:11:"TIMESTAMP_X";s:19:"22.05.2014 03:38:23";s:12:"~TIMESTAMP_X";s:19:"22.05.2014 03:38:23";s:14:"IBLOCK_TYPE_ID";s:4:"news";s:15:"~IBLOCK_TYPE_ID";s:4:"news";s:3:"LID";s:2:"s1";s:4:"~LID";s:2:"s1";s:4:"CODE";s:18:"infoportal_news_s1";s:5:"~CODE";s:18:"infoportal_news_s1";s:4:"NAME";s:13:"Пресс - центр";s:5:"~NAME";s:13:"Пресс - центр";s:6:"ACTIVE";s:1:"Y";s:7:"~ACTIVE";s:1:"Y";s:4:"SORT";s:3:"500";s:5:"~SORT";s:3:"500";s:13:"LIST_PAGE_URL";s:6:"/news/";s:14:"~LIST_PAGE_URL";s:6:"/news/";s:15:"DETAIL_PAGE_URL";s:29:"#SITE_DIR#/press-tsentr/#ID#/";s:16:"~DETAIL_PAGE_URL";s:29:"#SITE_DIR#/press-tsentr/#ID#/";s:16:"SECTION_PAGE_URL";s:31:"#SITE_DIR#/press-tsentr/#CODE#/";s:17:"~SECTION_PAGE_URL";s:31:"#SITE_DIR#/press-tsentr/#CODE#/";s:7:"PICTURE";N;s:8:"~PICTURE";N;s:11:"DESCRIPTION";s:0:"";s:12:"~DESCRIPTION";s:0:"";s:16:"DESCRIPTION_TYPE";s:4:"text";s:17:"~DESCRIPTION_TYPE";s:4:"text";s:7:"RSS_TTL";s:2:"24";s:8:"~RSS_TTL";s:2:"24";s:10:"RSS_ACTIVE";s:1:"Y";s:11:"~RSS_ACTIVE";s:1:"Y";s:15:"RSS_FILE_ACTIVE";s:1:"N";s:16:"~RSS_FILE_ACTIVE";s:1:"N";s:14:"RSS_FILE_LIMIT";s:1:"0";s:15:"~RSS_FILE_LIMIT";s:1:"0";s:13:"RSS_FILE_DAYS";s:1:"0";s:14:"~RSS_FILE_DAYS";s:1:"0";s:17:"RSS_YANDEX_ACTIVE";s:1:"N";s:18:"~RSS_YANDEX_ACTIVE";s:1:"N";s:6:"XML_ID";s:18:"infoportal_news_s1";s:7:"~XML_ID";s:18:"infoportal_news_s1";s:6:"TMP_ID";s:32:"aa9ed54e816e252c13f30f8fc2ea2b93";s:7:"~TMP_ID";s:32:"aa9ed54e816e252c13f30f8fc2ea2b93";s:13:"INDEX_ELEMENT";s:1:"Y";s:14:"~INDEX_ELEMENT";s:1:"Y";s:13:"INDEX_SECTION";s:1:"N";s:14:"~INDEX_SECTION";s:1:"N";s:8:"WORKFLOW";s:1:"N";s:9:"~WORKFLOW";s:1:"N";s:7:"BIZPROC";s:1:"N";s:8:"~BIZPROC";s:1:"N";s:15:"SECTION_CHOOSER";s:1:"L";s:16:"~SECTION_CHOOSER";s:1:"L";s:9:"LIST_MODE";s:0:"";s:10:"~LIST_MODE";s:0:"";s:11:"RIGHTS_MODE";s:1:"S";s:12:"~RIGHTS_MODE";s:1:"S";s:16:"SECTION_PROPERTY";s:1:"N";s:17:"~SECTION_PROPERTY";s:1:"N";s:7:"VERSION";s:1:"1";s:8:"~VERSION";s:1:"1";s:17:"LAST_CONV_ELEMENT";s:1:"0";s:18:"~LAST_CONV_ELEMENT";s:1:"0";s:15:"SOCNET_GROUP_ID";N;s:16:"~SOCNET_GROUP_ID";N;s:16:"EDIT_FILE_BEFORE";s:0:"";s:17:"~EDIT_FILE_BEFORE";s:0:"";s:15:"EDIT_FILE_AFTER";s:0:"";s:16:"~EDIT_FILE_AFTER";s:0:"";s:13:"SECTIONS_NAME";s:7:"Разделы";s:14:"~SECTIONS_NAME";s:7:"Разделы";s:12:"SECTION_NAME";s:6:"Раздел";s:13:"~SECTION_NAME";s:6:"Раздел";s:13:"ELEMENTS_NAME";s:7:"Новости";s:14:"~ELEMENTS_NAME";s:7:"Новости";s:12:"ELEMENT_NAME";s:7:"Новость";s:13:"~ELEMENT_NAME";s:7:"Новость";s:11:"EXTERNAL_ID";s:18:"infoportal_news_s1";s:12:"~EXTERNAL_ID";s:18:"infoportal_news_s1";s:8:"LANG_DIR";s:1:"/";s:9:"~LANG_DIR";s:1:"/";s:11:"SERVER_NAME";N;s:12:"~SERVER_NAME";N;}s:13:"LIST_PAGE_URL";s:14:"/press-tsentr/";s:14:"~LIST_PAGE_URL";s:14:"/press-tsentr/";s:11:"SECTION_URL";s:0:"";s:7:"SECTION";a:1:{s:4:"PATH";a:0:{}}s:16:"IPROPERTY_VALUES";a:0:{}}s:18:"templateCachedData";a:2:{s:13:"additionalCSS";s:97:"/bitrix/templates/.default/components/bitrix/news/template1/bitrix/news.detail/.default/style.css";s:8:"__NavNum";i:1;}}}';
+return true;
+?>

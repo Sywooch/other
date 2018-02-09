@@ -1,0 +1,19 @@
+/* <Check passport> */
+	p.status
+	{
+		font: normal 18px "Trebuchet MS", Verdana, sans-serif;
+		background: #eeeddc;
+		padding: 10px 15px;
+		margin: 20px 0 0 0;
+		width: 462px;
+		max-width: 432px;
+	}
+
+	p.status p
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+
+/* </Check passport> */

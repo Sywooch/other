@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>    <title>Федеральная миграционная служба России - Документы - Проекты нормативных актов ФМС России</title>
+
+    <link rel="stylesheet" href="/bitrix/templates/fms/css/second_page.css?19" type="text/css"/>
+    <link rel="stylesheet" media="print" href="/bitrix/templates/fms/css/print.css?1" type="text/css" />
+    <link rel="stylesheet" href="/bitrix/templates/fms/css/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="/bitrix/templates/fms/js/jquery-1.4.3.min.js"></script>
+
+        <!-- widget start -->
+    <link rel="stylesheet" type="text/css" href="http://gosmonitor.ru/widget.css?id=175" />
+    <script type="text/javascript" src="http://gosmonitor.ru/widget.js?id=175"></script>
+    <!-- / widget end -->
+    
+    <script type="text/javascript" src="/bitrix/templates/fms/js/jquery.fancybox-1.3.4.pack.js"></script>
+    <link type="text/css" href="/bitrix/templates/fms/css/themes/base/ui.all.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<link href="/bitrix/js/main/core/css/core.css?1356780616" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/fms/components/bitrix/menu/top_main/style.css?1356781434" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/fms/components/bitrix/menu/top_red/style.css?1356781434" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/fms/components/bitrix/menu/menu_left_new/style.css?1356781434" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/fms/components/bitrix/menu/page_lang_menu/style.css?1356781433" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/fms/styles.css?1395862334" type="text/css" rel="stylesheet" />
+<link href="/bitrix/templates/fms/template_styles.css?1395862334" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?1356780614"></script>
+<script type="text/javascript">BX.message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','USER_ID':'','SERVER_TIME':'1397571992','SERVER_TZ_OFFSET':'14400','USER_TZ_OFFSET':'0','bitrix_sessid':'e3b6aa557767895eb13ba2798e290384','SITE_ID':'ru','JS_CORE_LOADING':'Загрузка...','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с'})</script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.js?1356780614"></script>
+<script type="text/javascript" src="/bitrix/js/main/session.js?1356780617"></script>
+<script type="text/javascript">
+bxSession.Expand(1440, 'e3b6aa557767895eb13ba2798e290384', false, '1a969e02ff9af39a222a1876b596046b');
+</script>
+    <!--[if lte IE 6]><link rel="stylesheet" href="/bitrix/templates/fms/css/ie6.css" type="text/css"/><![endif]-->
+    <!--[if lt IE 6]><link rel="stylesheet" href="/bitrix/templates/fms/css/ie5.css" type="text/css"/><![endif]-->
+    <style type="text/css">
+        #print-intro {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="/bitrix/templates/fms/js/print_preview.js"></script>
+    <link rel="alternate stylesheet" type="text/css" href="/bitrix/templates/fms/css/print-preview.css" media="screen" title="Print Preview" />
+
+    <script type="text/javascript" src="/bitrix/templates/fms/js/functions.js"></script>
+        <script type="text/javascript">
+    var mkgu_widget_param = { au:"13",color:"#009300"};
+    </script>
+    <script type="text/javascript" src="https://vashkontrol.ru/widget/mkgu_widget.js"></script>
+    
+    <script type="text/javascript">
+        $(function () {
+            var tab = 1;
+            $("#header a, .search_text, .search_submit").each(function(){
+                $(this).attr("tabindex", tab);
+                tab++;
+            });
+
+        });
+    </script>
+</head>
+<!-- Optimized for IE 5.0+/Firefox 1.0+/Opera 7.5+/Safari -->
+
+<body>
+<div id="panel" style="position: absolute; top: 0px; left: 0px; z-index: 100; width: 100%; opacity: 0.8;"></div>
+
+<div id="print-intro">
+    Информация с официального сайта ФМС России (<a href="http://fms.gov.ru">http://fms.gov.ru</a>)
+</div>
+
+<div class="bread_crumbs"><div><p><a href="/">Главная</a>   /   <a href="/documentation/">Документы</a>   /   <span>Проекты нормативных актов ФМС России</span></p></div></div>
+<div class="header-wrapper">
+    <div id="header">
+        <a href="/" id="logo"></a>
+        <div id="slogan">
+            <p>Официальный сайт ФМС России</p>
+        </div>
+        
+<ul id="menu_head">
+        <li><a href="/index.php">Главная страница</a></li>
+            <li><a href="/about/">ФМС России</a></li>
+            <li><a href="/press/contacts/">Пресс-центр</a></li>
+            <li><a href="/vacancy/">Вакансии</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+    </ul>
+        <form class="search" action="/search/">
+            <div>
+                <input type="text" name="q" id="q" class="search_text" value="Поиск по сайту" onblur="if(this.value == '') this.value = 'Поиск по сайту'" onfocus="if(this.value == 'Поиск по сайту') this.value = ''" />
+                <input type="submit" class="search_submit" value="" />
+                <p><a href="/document_search/">Расширенный поиск</a></p>
+            </div>
+        </form>
+        
+
+        <div id="sub_menu">
+        <div>
+            <ul>
+                <li><a href="/government_services/">Государственные услуги</a><span class="sub-line"></span><ul><li><a href="/government_services/passportrf/">Паспорт Гражданина Российской Федерации, удостоверяющий личность гражданина Российской Федерации на территории Российской Федерации</a></li><li><a href="/government_services/passport/">Паспорт гражданина Российской Федерации, удостоверяющий личность гражданина Российской Федерации за пределами Российской Федерации</a></li><li><a href="/government_services/regrf/">Регистрационный учет граждан Российской Федерации по месту пребывания и по месту жительства в пределах Российской Федераци</a></li><li><a href="/government_services/invitation/">Приглашения на въезд в Российскую Федерацию иностранных граждан и лиц без гражданства</a></li><li><a href="/government_services/temporary/">Разрешение на временное проживание в Российской Федерации</a></li><li><a href="/government_services/residence/">Вид на жительство в Российской Федерации</a></li><li><a href="/government_services/formvisa/">Оформление, выдача, продление срока действия, восстановление виз иностранным гражданам и лицам без гражданства</a></li><li><a href="/government_services/grazhdanstvo/">Гражданство Российской Федерации</a></li><li><a href="/government_services/asylum/">Предоставление убежища в Российской Федерации</a></li><li><a href="/government_services/roviding/">Предоставление статуса вынужденного переселенца и продление срока его действия</a></li><li><a href="/government_services/withoutvisa/">Выдача разрешений на привлечение и использование иностранных работников</a></li><li><a href="/government_services/patent/">Получение патента на осуществление трудовой деятельности иностранными гражданами</a></li><li><a href="/government_services/vks/">Получение Высококвалифицированным иностранным специалистом разрешения на работу</a></li><li><a href="/government_services/licence/">Лицензирование деятельности, связанной с оказанием услуг по трудоустройству граждан Российской Федерации за пределами территории Российской Федерации</a></li><li><a href="/government_services/migrate/">Миграционный учет иностранных граждан в Российской Федерации</a></li><li><a href="/programs/fmsuds/">Государственная программа по оказанию содействия добровольному переселению в Российскую Федерацию соотечественников, проживающих за рубежом</a></li><li><a href="/government_services/daktilo/">Дактилоскопическая регистрация граждан Российской Федерации</a></li><li><a href="/government_services/sprav/">Адресно-справочная работа</a></li><li><a href="/government_services/rezulta_monitor/">Результаты проведения мониторинга качества предоставления государственных услуг</a></li><li><a href="/government_services/postanovlenie1284/">Оценка гражданами эффективности деятельности руководителей территориальных органов ФМС России с учетом качества предоставления ими государственных услуг</a></li></ul></li><li class="ins"><em>Документы</em><span class="sub-line"></span><ul><li><a href="/documentation/860/">Федеральные законы Российской Федерации</a></li><li><a href="/documentation/861/">Указы Президента Российской Федерации</a></li><li><a href="/documentation/862/">Постановления Правительства Российской Федерации</a></li><li><a href="/documentation/863/">Распоряжения Правительства Российской Федерации</a></li><li><a href="/documentation/865/">Проекты нормативных актов ФМС России</a></li><li><a href="/documentation/864/">Приказы МВД России</a></li><li><a href="/documentation/866/">Приказы ФМС России</a></li><li><a href="/documentation/867/">Административные регламенты ФМС&nbsp;России</a></li><li><a href="/documentation/868/">Прочие документы</a></li><li><a href="/documentation/1131/">Международные договоры</a></li><li><a href="/documentation/1136/">Соглашения о взаимодействии федерального органа исполнительной власти с иными органами государственной власти РФ, общественными объединениями и другими организациями</a></li><li><a href="/documentation/koncep_mig_pol/">Концепция миграционной политики Российской Федерации до 2025 года и информация о ходе ее исполнения</a></li><li><a href="/documentation/admin_reform/">Реализация административной реформы</a></li><li><a href="/documentation/information_on_recognition/">Сведения о признании судом недействующими нормативных правовых актов ФМС России</a></li><li><a href="/documentation/discussion/">Общественное обсуждение законопроектов в сфере миграции</a></li></ul></li><li><a href="/russian_national/">Гражданам России</a><span class="sub-line"></span><ul><li><a href="/russian_national/dlya_zhiteley_kryma_i_sevastopolya/">Для жителей Крыма и Севастополя</a></li><li><a href="/russian_national/izmenzakon/">Изменения в законодательстве</a></li><li><a href="/russian_national/reg_y4et/">О регистрационном учете по месту жительства новорожденных детей – граждан Российской Федерации</a></li><li><a href="/government_services/passportrf/">Паспорт Гражданина Российской Федерации, удостоверяющий личность гражданина Российской Федерации на территории Российской Федерации</a></li><li><a href="/government_services/passport/">Паспорт гражданина Российской Федерации, удостоверяющий личность гражданина Российской Федерации за пределами Российской Федерации</a></li><li><a href="/government_services/regrf/">Регистрационный учет граждан Российской Федерации по месту пребывания и по месту жительства в пределах Российской Федерации</a></li><li><a href="/government_services/licence/">Лицензирование деятельности, связанной с оказанием услуг по трудоустройству граждан Российской Федерации за пределами территории Российской Федерации</a></li><li><a href="/russian_national/o-reg-grazhdan/">О регистрации граждан Российской Федерации по месту жительства  (по месту пребывания) в жилых строениях, расположенных на садовых и дачных земельных участках</a></li><li><a href="/government_services/daktilo/">Дактилоскопическая регистрация граждан Российской Федерации</a></li><li><a href="/government_services/sprav/">Адресно-справочная работа</a></li></ul></li><li><a href="/foreign_national/">Иностранным гражданам</a><span class="sub-line"></span><ul><li><a href="/foreign_national/izmenzakon/">Изменения в законодательстве</a></li><li><a href="/foreign_national/novisas/">Памятка иностранному гражданину</a></li><li><a href="/foreign_national/formvisa/">Порядок оформления и продления визы для въезда в Российскую Федерацию</a></li><li><a href="/foreign_national/inform/">Информация высококвалифицированному специалисту </a></li><li><a href="/foreign_national/pocket_guide/">Handbook for foreign citizens from visa entry countries </a></li><li><a href="/foreign_national/question/">Часто задаваемые вопросы и ответы, относящиеся к процедуре оформления высококвалифицированных специалистов и другим миграционным вопросам</a></li><li><a href="/foreign_national/workinstr/">Памятка для работодателей</a></li><li><a href="/government_services/migrant/">Миграционная карта</a></li><li><a href="/government_services/withoutvisa/">Выдача разрешений на привлечение и использование иностранных работников</a></li><li><a href="/government_services/formvisa/">Оформление, выдача, продление срока действия, восстановление виз иностранным гражданам и лицам без гражданства</a></li><li><a href="/government_services/temporary/">Разрешение на временное проживание в Российской Федерации</a></li><li><a href="/government_services/residence/">Вид на жительство в Российской Федерации</a></li><li><a href="/government_services/asylum/">Предоставление убежища в Российской Федерации</a></li><li><a href="/government_services/grazhdanstvo/">Гражданство Российской Федерации</a></li><li><a href="/government_services/invitation/">Приглашения на въезд в Российскую Федерацию иностранных граждан и лиц без гражданства</a></li><li><a href="/government_services/roviding/">Предоставление статуса вынужденного переселенца и продление срока его действия</a></li><li><a href="/government_services/patent/">Получение патента на осуществление трудовой деятельности иностранными гражданами, прибывшими в Российскую Федерацию в порядке, не требующем получения визы</a></li><li><a href="/government_services/migrate/">Миграционный учет иностранных граждан в Российской Федерации</a></li><li><a href="/programs/fmsuds/">Государственная программа по оказанию содействия добровольному переселению в Российскую Федерацию соотечественников, проживающих за рубежом</a></li><li><a href=""></a></li><li><a href="/government_services/vks/">Получение высококвалифицированным иностранным специалистом разрешения на работу</a></li><li><a href="/foreign_national/osob_osushch_trud_deyat_vto/">Особенности осуществления трудовой деятельности иностранными гражданами, направляемыми для работы в расположенные на территории Российской Федерации филиалы, представительства и дочерние организации иностранных коммерческих организаций, зарегистрированных на территориях государств - членов Всемирной торговой организации</a></li><li><a href="/foreign_national/osob_osushch_trud_deyat_studentov">Особенности осуществления трудовой деятельности отдельными категориями иностранных граждан, обучающихся в Российской Федерации по очной форме</a></li></ul></li><li><a href="/treatment/">Обращения граждан</a><span class="sub-line"></span><ul><li><a href="/treatment/rules/">Порядок приема обращений граждан</a></li><li><a href="/treatment/schedule/">График приема граждан</a></li><li><a href="/treatment/form/">Электронная форма приема обращений (Интернет-приемная)</a></li><li><a href="/treatment/review/">Часто задаваемые вопросы</a></li><li><a href="/treatment/legal/">Нормативная правовая информация</a></li><li><a href="/treatment/review_of_citizens/">Обзор обращений граждан</a></li></ul></li><li><a href="http://services.fms.gov.ru/">Информационные сервисы</a></li>            </ul>
+        </div>
+    </div>
+
+    </div>
+
+</div>
+
+<div id="wrap">
+
+            <div id="left">
+
+                            <div class="sidebar_menu">
+                    <div>
+                                                    <h4><img src="/bitrix/templates/fms/img/official/documents_h.gif" alt="" /></h4>
+                        
+                        
+    <ul>
+                    <li>
+                                    <a href="/documentation/860/">
+                        Федеральные законы Российской Федерации                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/861/">
+                        Указы Президента Российской Федерации                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/862/">
+                        Постановления Правительства Российской Федерации                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/863/">
+                        Распоряжения Правительства Российской Федерации                    </a>
+                            </li>
+                    <li class="ins">
+                                    Проекты нормативных актов ФМС России
+                                                                    </li>
+                    <li>
+                                    <a href="/documentation/864/">
+                        Приказы МВД России                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/866/">
+                        Приказы ФМС России                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/867/">
+                        Административные регламенты ФМС&nbsp;России                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/868/">
+                        Прочие документы                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/1131/">
+                        Международные договоры                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/1136/">
+                        Соглашения о взаимодействии федерального органа исполнительной власти с иными органами государственной власти РФ, общественными объединениями и другими организациями                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/koncep_mig_pol/">
+                        Концепция миграционной политики Российской Федерации до 2025 года и информация о ходе ее исполнения                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/admin_reform/">
+                        Реализация административной реформы                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/information_on_recognition/">
+                        Сведения о признании судом недействующими нормативных правовых актов ФМС России                    </a>
+                            </li>
+                    <li>
+                                    <a href="/documentation/discussion/">
+                        Общественное обсуждение законопроектов в сфере миграции                    </a>
+                            </li>
+            </ul>
+                    </div>
+                </div>
+            
+            
+            
+
+            
+            
+            
+                    </div>
+
+
+    <div id="secret-hidden-div" style="display: none;"></div>
+    <div id="right">
+        
+        
+    
+
+
+    <h2>Проекты нормативных актов ФМС России</h2>
+
+    <p>В соответствии с постановлением Правительства Российской Федерации от 25 августа 2012 г. № 851 федеральные органы исполнительной власти размещают информацию о подготовке проектов нормативных правовых актов и результатах их общественного обсуждения с 15 апреля 2013 г. на Едином портале раскрытия информации о подготовке федеральными органами исполнительной власти проектов нормативных правовых актов и результатах их общественного обсуждения <a href="http://regulation.gov.ru" target="_blank">regulation.gov.ru</a> в сети «Интернет».</p>
+
+
+<div class="all_ad"><div class="ad">
+    <ul class="doc_law">
+                            <li>
+                <p>
+                                        <strong>
+                                                                            от 06.03.2014                                            </strong>
+                                                            <a href="/documentation/865/details/81979/">О внесении изменений в приказ ФМС России
+и МВД России от 1 августа 2013 г. № 338/587 «Об утверждении Административного регламента исполнения Федеральной миграционной службой, ее территориальными органами и Министерством внутренних дел Российской Федерации, его территориальными органами государственной функции по контролю за соблюдением гражданами Российской Федерации и должностными лицами правил регистрации и снятия граждан Российской Федерации с регистрационного учета по месту пребывания и по месту жительства в пределах Российской Федерации»
+</a>
+                </p>
+                                    <div>
+                        <span>
+                                                            <a href="/upload/iblock/080/proekt_prikaza_338_587.pdf" class="pdf">290 Кб</a>
+                                                                                        <a href="/documentation/865/details/81979/" class="html">HTML</a>
+                                                    </span>
+                    </div>
+                            </li>
+                    <li>
+                <p>
+                                        <strong>
+                                                                            от 06.03.2014                                            </strong>
+                                                            <a href="/documentation/865/details/81978/">О внесении изменений в Административный регламент предоставления Федеральной миграционной службой государственной услуги по регистрационному учету граждан Российской Федерации по месту пребывания и по месту жительства в пределах Российской Федерации, утвержденный приказом ФМС России от 11 сентября 2012 г. № 288 </a>
+                </p>
+                                    <div>
+                        <span>
+                                                            <a href="/upload/iblock/1c9/proekt_prokaza_288.pdf" class="pdf">240 Кб</a>
+                                                                                        <a href="/documentation/865/details/81978/" class="html">HTML</a>
+                                                    </span>
+                    </div>
+                            </li>
+                    <li>
+                <p>
+                                        <strong>
+                                                                            от 28.02.2014                                            </strong>
+                                                            <a href="/documentation/865/details/81610/">О социальной и культурной адаптации и интеграции иностранных граждан в Российской Федерации</a>
+                </p>
+                                    <div>
+                        <span>
+                                                            <a href="/upload/iblock/965/proekt_fz_sockult.pdf" class="pdf">228 Кб</a>
+                                                                                        <a href="/documentation/865/details/81610/" class="html">HTML</a>
+                                                    </span>
+                    </div>
+                            </li>
+                    <li>
+                <p>
+                                        <strong>
+                                                                            от 22.01.2014                                            </strong>
+                                                            <a href="/documentation/865/details/79419/">Заключение на проект приказа ФМС России «О внесении изменений в
+Административный регламент предоставления Федеральной миграционной
+службой государственной услуги по предоставлению статуса вынужденного
+переселенца и продлению срока его действия, утвержденный приказом ФМС
+России от 29 июня 2012 г. № 218</a>
+                </p>
+                                    <div>
+                        <span>
+                                                            <a href="/upload/iblock/b8b/mineko218.pdf" class="pdf">36 Кб</a>
+                                                                                        <a href="/documentation/865/details/79419/" class="html">HTML</a>
+                                                    </span>
+                    </div>
+                            </li>
+                    <li>
+                <p>
+                                        <strong>
+                                                                            от 19.11.2013                                            </strong>
+                                                            <a href="/documentation/865/details/75600/">Об утверждении формы проездного документа для целей реадмиссии (в том числе реадмиссии по ускоренной процедуре) и порядка его оформления и выдачи</a>
+                </p>
+                                    <div>
+                        <span>
+                                                            <a href="/upload/iblock/9c9/prikaz_fms_i_fsb.doc" class="doc">280 Кб</a>
+                                                            <a href="/upload/iblock/6ad/prikaz_fms_i_fsb.pdf" class="pdf">346 Кб</a>
+                                                                                        <a href="/documentation/865/details/75600/" class="html">HTML</a>
+                                                    </span>
+                    </div>
+                            </li>
+                    <li>
+                <p>
+                                        <strong>
+                                                                            от 28.08.2013                                            </strong>
+                                                            <a href="/documentation/865/details/71328/">Заключение Министерства экономического развития Российской Федерации на проект приказа ФМС России «О внесении изменений в приказ ФМС России от 14 мая 2012 г. № 166 «Об утверждении Административного регламента предоставления Федеральной миграционной службой государственной услуги по оформлению, выдаче и замене свидетельства участника Государственной программы по оказанию содействия добровольному переселению в Российскую Федерацию соотечественников, проживающих за рубежом» </a>
+                </p>
+                                    <div>
+                        <span>
+                                                            <a href="/upload/iblock/986/zakluch_minekonom.pdf" class="pdf">94 Кб</a>
+                                                                                        <a href="/documentation/865/details/71328/" class="html">HTML</a>
+                                                    </span>
+                    </div>
+                            </li>
+                    <li>
+                <p>
+                                        <strong>
+                                                    № 288                                                                            от 05.07.2013                                            </strong>
+                                                            <a href="/documentation/865/details/68493/">О внесении изменений в Административный регламент предоставления Федеральной миграционной службой государственной услуги по регистрационному учету граждан Российской Федерации по месту пребывания и по месту жительства в пределах Российской Федерации, утвержденный приказом ФМС России          от 11 сентября 2012 г. № 288 </a>
+                </p>
+                                    <div>
+                        <span>
+                                                            <a href="/upload/iblock/37b/proekt_prikaza_288.pdf" class="pdf">138 Кб</a>
+                                                            <a href="/upload/iblock/ae3/proekt_prikaza288.doc" class="doc">34 Кб</a>
+                                                                                        <a href="/documentation/865/details/68493/" class="html">HTML</a>
+                                                    </span>
+                    </div>
+                            </li>
+                    <li>
+                <p>
+                                        <strong>
+                                                    № 320                                                                            от 20.06.2013                                            </strong>
+                                                            <a href="/documentation/865/details/67886/">О внесении изменений в Административный регламент предоставления Федеральной миграционной службой государственной услуги по оформлению и выдаче паспортов гражданина Российской Федерации, удостоверяющих личность гражданина Российской Федерации за пределами территории Российской Федерации, утвержденный приказом ФМС России от 15 октября 2012 г. № 320 </a>
+                </p>
+                                    <div>
+                        <span>
+                                                            <a href="/upload/iblock/8f5/proektprikaz_320.doc" class="doc">32 Кб</a>
+                                                            <a href="/upload/iblock/b65/proektprikaz_320.pdf" class="pdf">138 Кб</a>
+                                                                                        <a href="/documentation/865/details/67886/" class="html">HTML</a>
+                                                    </span>
+                    </div>
+                            </li>
+                    <li>
+                <p>
+                                        <strong>
+                                                    № 166                                                                            от 18.06.2013                                            </strong>
+                                                            <a href="/documentation/865/details/67491/">О внесении изменений в приказ 
+ФМС России от 14 мая 2012 г. № 166«Об утверждении Административного  регламента предоставления Федеральной миграционной службой государственной услуги по оформлению, выдаче и замене свидетельства участника Государственной программы по оказанию содействия добровольному переселению в Российскую Федерацию соотечественников, проживающих за рубежом»
+</a>
+                </p>
+                                    <div>
+                        <span>
+                                                            <a href="/upload/iblock/7ee/proektN166.pdf" class="pdf">485 Кб</a>
+                                                                                        <a href="/documentation/865/details/67491/" class="html">HTML</a>
+                                                    </span>
+                    </div>
+                            </li>
+                    <li class="last_d_l">
+                <p>
+                                        <strong>
+                                                                            от 23.05.2013                                            </strong>
+                                                            <a href="/documentation/865/details/65846/">Пояснительная записка к проекту приказа Федеральной миграционной службы «О внесении изменений в приказ ФМС России от 2 августа 2007 г. № 164»</a>
+                </p>
+                                    <div>
+                        <span>
+                                                            <a href="/upload/iblock/186/Zapicka.pdf" class="pdf">123 Кб</a>
+                                                                                        <a href="/documentation/865/details/65846/" class="html">HTML</a>
+                                                    </span>
+                    </div>
+                            </li>
+            </ul>
+</div></div>
+
+            
+<div class="lister">
+
+<!--ссылка "Предыдущая"-->
+    <span class="lister_prev">Предыдущая</span>
+
+<!--ссылка "Следующая"-->
+    <a data-page="2" class="lister_next" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=2">Следующая</a>
+
+<!--ссылки на страницы-->
+Страницы:
+<ul>
+            <li>1</li>
+                    <li><a data-page="2" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=2">2</a></li>
+                    <li><a data-page="3" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=3">3</a></li>
+                    <li><a data-page="4" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=4">4</a></li>
+                    <li><a data-page="5" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=5">5</a></li>
+                    <li><a data-page="6" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=6">6</a></li>
+                    <li><a data-page="7" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=7">7</a></li>
+                    <li><a data-page="8" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=8">8</a></li>
+                    <li><a data-page="9" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=9">9</a></li>
+                    <li><a data-page="10" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=10">10</a></li>
+                    <li><a data-page="11" href="/documentation/865/?SECTION_ID=865&amp;PAGEN_1=11">11</a></li>
+        </ul>
+
+
+
+</div>
+    
+
+    </div>
+    <div id="spacer"></div>
+    
+
+
+</div>
+    <div id="footer">
+        <div class="foot-inner">
+            <p class="copy">2014 &copy; Федеральная Миграционная Служба</p>
+        <div class="tech-support">
+                <a href="/contacts/support/">Техническая поддержка</a>
+        </div>
+            <a href="/sitemap/" class="foot-site-map">Карта сайта</a>
+
+
+<div class="analiticsC" >
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+<!-- begin of Top100 code -->
+
+<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2226201"></script>
+<noscript>
+<div>
+<a href="http://top100.rambler.ru/navi/2226201/">
+<img src="http://counter.rambler.ru/top100.cnt?2226201" alt="Rambler's Top100" style="border: 0px;" />
+</a>
+</div>
+
+</noscript>
+<!-- end of Top100 code --></div>
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-17449073-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+
+</div>
+</div>
+</body>
+</html> 

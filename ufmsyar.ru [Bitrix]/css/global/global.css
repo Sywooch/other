@@ -1,0 +1,524 @@
+/* <Global definitions> */
+	html, body
+	{
+		background-color: #fff;
+	}
+
+	body
+	{
+		margin: 0;
+		padding: 0;
+		background: #fff url(../../image/bg/body-bg.png) repeat-x;
+		min-width: 1000px;
+	}
+
+	body, td
+	{
+		font: normal 12px "Trebuchet MS", Tahoma, sans-serif;
+		color: #464646;
+	}
+
+	a
+	{
+		color: #00749e;
+	}
+
+	a:hover
+	{
+		text-decoration: underline !important;
+	}
+
+	form, fieldset
+	{
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+	.gray
+	{
+		color: #484848;
+	}
+
+	#body
+	{
+		min-width: 1000px;
+		position: relative;
+	}
+
+	/* min-width hacks for IE <= 6.0 */
+	* html #body div.body-mw
+	{
+		padding-left: 1000px;
+	}
+
+	* html #body div.body-mw-container
+	{
+		margin-left: -1000px;
+		position: relative;
+	}
+
+	/*\*/
+	* html #body div.body-mw,
+	* html #body div.body-mw-container,
+	* html #body,
+	* html #body div.body-mw-layout
+	{
+		height: 1px;
+	}
+	/**/
+
+/* </Global definitions> */
+
+/* <Header> */
+	#header
+	{
+		height: 149px;
+		background: url(../../image/bg/header-bottom-bg.png) bottom center no-repeat;
+	}
+
+	#header h1
+	{
+		display: inline;
+		margin: 24px 0 0 20px;
+		padding: 0;
+		float: left;
+		width: 479px;
+		height: 103px;
+		position: relative;
+	}
+
+	#header h1 a
+	{
+		display: block;
+		height: 103px;
+		padding: 0 0 0 190px;
+		font: normal 18px Tahoma, sans-serif;
+		color: #e4bc98;
+		text-decoration: none;
+	}
+
+	#header h1 a span
+	{
+		display: block;
+		width: 479px;
+		height: 103px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(../../image/gfx/main-sprite.png) 0 0 no-repeat;
+		cursor: pointer;
+	}
+
+	#header div
+	{
+		width: 370px;
+		float: right;
+		margin: 35px 20px 0 0;
+	}
+
+	#header div a
+	{
+		float: left;
+		width: 14px;
+		height: 14px;
+		margin: 0 30px 0 0;
+		color: #fff;
+		position: relative;
+		font: normal 11px Arial, sans-serif;
+		text-decoration: none;
+	}
+
+	#header div a span
+	{
+		display: block;
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(../../image/gfx/main-sprite.png) no-repeat;
+	}
+
+	#header div a.home span
+	{
+		background-position: -178px -103px;
+	}
+
+	#header div a.search span
+	{
+		background-position: -192px -103px;
+	}
+
+	#header div a.feedback span
+	{
+		background-position: -206px -103px;
+	}
+
+	#header form
+	{
+		clear: both;
+		padding: 10px 0 0 0;
+	}
+
+	#header form input
+	{
+		font: normal 12px Arial, sans-serif;
+		width: 300px;
+	}
+
+	#header form p
+	{
+		margin: 10px 0 0 0;
+		padding: 0;
+		font: normal 12px "Trebuchet MS", Tahoma, sans-serif;
+		color: #ffffd5;
+	}
+
+	#header form p span
+	{
+		text-decoration: underline;
+		color: #fefefe;
+	}
+/* </Header> */
+
+/* <Content> */
+	#content
+	{
+		margin-top: 43px;
+		clear: both;
+		float: left;
+		width: 100%;
+	}
+
+	#left
+	{
+		width: 210px;
+		float: left;
+		overflow: hidden;
+		margin-right: -210px;
+	}
+
+	#left ul
+	{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	#left ul li,
+	#left ul li li li
+	{
+		padding: 0 0 0 20px;
+	}
+
+	#left ul li li
+	{
+		padding: 0;
+	}
+
+
+	#left ul a
+	{
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	#left ul div
+	{
+		margin: 0 0 -1px 0;
+		padding: 6px 10px 6px 20px;
+		border-collapse: collapse;
+		border-bottom: 1px solid #d2dee3;
+	}
+
+	#left li.active div,
+	#left ul ul div
+	{
+		border-bottom: 0px;
+	}
+
+	#left li.active
+	{
+		background: #eef3f5 url(../../image/bg/vertical-bg.png) repeat-y;
+		border-top: 1px solid #d2dee3;
+		border-bottom: 1px solid #d2dee3;
+	}
+
+	#left li.active li
+	{
+		background: none;
+		border-top: 0;
+		border-bottom: 0;
+	}
+
+	#left li.active li div
+	{
+		padding-left: 0;
+	}
+
+	#left ul ul
+	{
+		padding: 6px 0 0 0;
+	}
+
+	#right
+	{
+		width: 210px;
+		float: right;
+		overflow: hidden;
+		margin-left: -210px;
+	}
+
+	#middle
+	{
+		margin: 0 230px 0 230px;
+	}
+
+	div.delimiter
+	{
+		float: left;
+		clear: both;
+		border-left: 88px solid #e3d8bd;
+		height: 3px;
+		background: #f6f1e0;
+		overflow: hidden;
+		width: 212px;
+		max-width: 124px;
+	}
+
+	#news-and-events
+	{
+		clear: both;
+		height: 23px;
+		width: 235px;
+		padding: 0;
+		margin: 0;
+		color: #cb3d21;
+		position: relative;
+		font: normal 18px "Lucida Sans Unicode", Tahoma, sans-serif;
+	}
+
+	#news-and-events span
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 23px;
+		width: 235px;
+		background: url(../../../image/gfx/main-sprite.png) 0 -365px no-repeat;
+	}
+
+	#news
+	{
+		padding: 15px 0 0 0;
+	}
+
+	#news span.time
+	{
+		float: left;
+		clear: both;
+		font-size: 10px;
+		color: #00749e;
+		background: #bfecf5;
+		padding: 1px 3px;
+	}
+
+	#news div
+	{
+		clear: both;
+		padding: 5px 0 10px 0;
+	}
+
+	#faq,
+	#map,
+	#feedback,
+	#passport-check,
+	#e-queue,
+	#centritest,
+	#payment,
+	#service,
+	#fms-rf
+	{
+		display: block;
+		background: #fff url(../../image/bg/vertical-bg.png) -500px 0 repeat-y;
+		border: 1px solid #e2e2e2;
+		border-left: 0;
+		padding: 0 0 0 80px;
+		width: 189px;
+		max-width: 109px;
+		font-size: 13px;
+		color: #000;
+		height: 72px;
+		position: relative;
+		text-decoration: none;
+	}
+
+	#passport-check
+	{
+		height: 92px;
+	}
+
+	#faq span,
+	#map span,
+	#feedback span,
+	#passport-check span,
+	#e-queue span,
+	#centritest span,
+	#payment span,
+	#service span,
+	#fms-rf span
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 11px;
+		width: 178px;
+		height: 72px;
+		background: url(../../image/gfx/main-sprite.png) no-repeat;
+	}
+
+	#faq span
+	{
+		background-position: 0 -103px;
+	}
+
+	#map span
+	{
+		background: url(../../image/gfx/button-map.png) no-repeat;
+/*		background-position: 0 -175px; */
+	}
+
+	#feedback span
+	{
+		background: url(../../image/gfx/button-feedback.png) no-repeat;
+/*		background-position: 0 -247px; */
+	}
+
+	#passport-check span
+	{
+		background: url(../../image/gfx/button-passport-check.png) no-repeat;
+		height: 92px;
+/*		background-position: 0 -247px; */
+	}
+
+	#e-queue span
+	{
+		background: url(../../image/gfx/button-e-queue.png) no-repeat;
+		height: 72px;
+	}
+
+	#service span
+	{
+		background: url(../../image/gfx/button-service.png) no-repeat;
+		height: 92px;
+/*		background-position: 0 -247px; */
+	}
+
+	#fms-rf span
+	{
+		background: url(../../image/gfx/button-fms.jpg) no-repeat;
+		height: 92px;
+/*		background-position: 0 -247px; */
+	}
+
+	#centritest,
+	#service,
+	#fms-rf
+	{
+		height: 92px;
+	}
+
+	#centritest span
+	{
+		background: url(../../image/gfx/rucenter.gif) no-repeat;
+		height: 92px;
+	}
+
+	#payment span
+	{
+		background: url(../../image/gfx/button-payment.png) no-repeat;
+	}
+
+	#content table
+	{
+	}
+/* </Content> */
+
+/* <Footer> */
+	#footer
+	{
+		clear: both;
+		margin-top: 50px;
+		border: 1px solid #e5e5e5;
+		border-bottom: 0;
+	}
+
+	#footer div
+	{
+		border: 1px solid #fff;
+		border-bottom: 0;
+		background: #f2f2f2;
+		padding: 20px 20px 10px 20px;
+		color: #8f8f8f;
+		font-size: 10px;
+	}
+
+/* </Footer> */
+
+/* <Contacts> */
+	#contacts,
+	#contacts *
+	{
+		line-height: 20px;
+		display: block;
+	}
+
+	#contacts strong
+	{
+		line-height: auto;
+		font: normal 24px Times, sans-serif;
+	}
+/* </Contacts> */
+
+/* <Map> */
+    #map-background
+    {
+	background-color: #000;
+        position: absolute;
+	display: none;
+        height: 100%;
+	top: 0;
+        left: 0;
+	min-height: 100%;
+	width: 100%;
+        z-index: 1000;
+    }
+
+
+
+    #interactive-map
+    {
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	display:none;
+	margin-left: -380px;
+	z-index: 1001;
+	padding: 20px 10px 10px 10px;
+	background: #fff;
+    }
+
+    #interactive-map a
+    {
+	float: right;
+	clear: both;
+	width: 58px;
+	height: 15px;
+	margin-top: -20px;
+	color: #434343;
+	background: url(../../image/gfx/main-sprite.png) -453px -345px no-repeat;
+	text-decoration: none;
+    }
+/* </Map> */
