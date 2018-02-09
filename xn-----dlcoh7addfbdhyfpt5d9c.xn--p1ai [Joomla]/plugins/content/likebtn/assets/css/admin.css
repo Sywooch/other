@@ -1,0 +1,19 @@
+.use_settings_from_container .nav-tabs > .active > a,
+.use_settings_from_container .nav-tabs > .active > a:hover,
+.use_settings_from_container .nav-tabs > .active > a:focus {
+    background-color: #F5F5F5;
+}
+.use_settings_from_container .nav-tabs {
+    margin-bottom: -1px;
+}
+.likebtn_select_category {
+    width: 400px;
+}
+.tabs-left .use_settings_from_container .tab-content {
+    overflow: visible;
+}
+#likebtnContentTypeButtonTabContent {
+    min-height:600px;
+    height:auto!important; /* Для всех браузеров кроме <IE6 */
+    height:600px;
+}

@@ -1,0 +1,26 @@
+/* Add to Cart Confirmation for OpenCart 1.5.3.1 by HARRYO */
+#opaclayer {width:100%;position:absolute;left:0;top:0;z-index:9000;background-color:#000000;display:none; box-sizing:content-box;}
+#cart-success {position:fixed;z-index:9998;}
+.cart-conf-popup {background:none repeat scroll 0 0 #FFFFFF;border:1px solid #FFD9FF;border-radius:10px 10px 10px 10px;box-shadow:-5px -5px 5px 5px #999999;height:200px;overflow:hidden;padding:10px;position:fixed;width:500px;z-index:9999;}
+
+.cart-box-img {clear:left;float:left;min-height:100px;min-width:100px;text-align:center; display:none}
+.cart-box-img > img{width:80px;height:80px;}
+.cart-box-succ-img {clear:right;float:right;height:40px;text-align:center;width:100%;}
+.cart-box-succ-det {clear:right;float:right;font-size:12px;margin-top:35px;width:100%; text-align:center}
+
+#cart-box-list {border:1px solid #CCCCCC;clear:both;float:left;margin-top:10px;max-height:210px;overflow:auto;width:400px; display:none}
+#cart-box-list table {width:100%;}
+#cart-box-list .total {text-align:right;}
+#cart-box-list .remove {display:none;}
+
+#cart-box-total {clear:both;float:right;overflow:hidden;text-align:right;width:400px;display:none}
+#cart-box-total table {border-collapse:collapse;display:inline-block;margin-bottom:5px;}
+#cart-box-total td {color:#000000;padding:4px;}
+
+.popup-buttons {bottom:10px;clear:both;float:left;margin:0 auto;overflow:hidden;position:absolute;width:500px;}
+.popup-buttons .left {float:left;text-align:left;width: 130px;margin-left:5px}
+.popup-buttons .center {float: left;text-align: center;width:140px;margin:0 0 0 35px}
+.popup-buttons .right {float:right;text-align:right;width:130px;margin-right:5px;}
+
+.compwish-success {width:170px;height:170px;position:fixed;left:50%;top:50%;margin-left:-85px;margin-top:-85px;z-index:9999;background:#FFF url("../image/success2.png"/*tpa=http://vstarcam.ru/catalog/view/theme/default/image/success2.png*/) top no-repeat; background-position: 50% 5px;border:1px solid #BBDF8D;-webkit-border-radius:10px 10px 10px 10px;-moz-border-radius:10px 10px 10px 10px;-khtml-border-radius:10px 10px 10px 10px;border-radius:10px 10px 10px 10px;padding:5px;}
+.compwish-success-details{margin-top:70px;}

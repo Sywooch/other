@@ -1,0 +1,35 @@
+﻿<DynamicWeb>
+
+<!--
+p=15 News
+p=25 About
+p=35 Folio
+p=45 Music
+p=55 Video
+p=65 Contact
+
+
+-->
+
+
+
+<Sections id="menu">
+		<Menu btnName="ФОТОГАЛЕРЕЯ" p="35" f="Folio" title="ФОТОГАЛЕРЕЯ" css="folio"></Menu>
+		<Menu btnName="НОВОСТИ" p="15" f="News" title="НОВОСТИ КОМПАНИИ" css="news" ></Menu>
+		<Menu btnName="ПЕРЕЙТИ НА ГЛАВНУЮ" p="25" f="About" title="ПЕРЕЙТИ НА ГЛАВНУЮ" css="about"></Menu>
+</Sections>
+
+<Sections id="logo">
+		<data>UniDvigatel</data>
+		<data>ВСЕ ДЛЯ СПЕЦТЕХНИКИ</data>
+</Sections>
+
+<Sections id="contact">
+		<data>Наименование контактная информация<br />  <br />  <br />Наименование компании<br /><a href="mailto:demo@demo.com">info@unidvigatel.com</a><br /><br /><br />+7 (4162) 555 - 555 <br />Loren Ipsum 33<br />111 11 Dolor Sit <br />Россия</data>
+</Sections>
+
+<Sections id="copy">
+		<data>(C) 2012. РУСИФИКАЦИЯ FLASH НА WWW.Alternativ-Dv.RU</data>
+</Sections>
+
+</DynamicWeb>

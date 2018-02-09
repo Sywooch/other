@@ -1,0 +1,85 @@
+.wpcc_form, .wpcc_result, .wpcc_mail {
+display:block;
+width:500px;
+padding:10px;
+margin-top:15px;
+background-image:url('images/bg.gif');
+border:1px #ccc solid;
+
+-moz-border-radius: 4px; 
+-webkit-border-radius: 4px; 
+-khtml-border-radius: 4px; 
+border-radius: 4px; 
+}
+.wpcc_description {
+color:#91908c;
+margin-top:10px;
+}
+.wpcc_radio {
+display:block;
+}
+.wpcc_submit, input[type="submit"].wpcc_submit, .wpcc_mail_send, input[type="submit"].wpcc_mail_send {
+display:block;
+margin-top:15px;
+padding:5px 10px 5px 10px;
+cursor:pointer;
+border:1px #ccc solid;
+background-image:url('images/submit.jpg');
+background-repeat:repeat-x;
+background-position:left top;
+background-color:#0090bf;
+color:#fff;
+-moz-border-radius: 4px; 
+-webkit-border-radius: 4px; 
+-khtml-border-radius: 4px; 
+border-radius: 4px; 
+}
+.wpcc_submit:hover, input[type="submit"]:hover.wpcc_submit, .wpcc_mail_send:hover, input[type="submit"]:hover.wpcc_mail_send {
+background-image:url('images/submit_hover.jpg');
+background-color:#01b8e2;
+}
+.wpcc_mail {}
+.wpcc_mail_info {
+display: block;
+width:500px;
+background-color: #FFFBCC;
+border: 1px solid #E6DB55;
+color: #555;
+padding:10px;
+margin:15px 0 15px 0;
+-moz-border-radius: 4px; 
+-webkit-border-radius: 4px; 
+-khtml-border-radius: 4px; 
+border-radius: 4px; 
+}
+.wpcc_mail_info ul {
+margin:0;
+padding:0;
+}
+.wpcc_mail_info li {
+list-style-type:none;
+list-style:none;
+display:block;
+margin:0;
+padding:0;
+}
+.wpcc_mail_text {margin-bottom:15px;}
+.wpcc_mail_row { display:block; margin-bottom:5px; clear:both;}
+.wpcc_mail_row b {
+font-weight:normal;
+display:block;
+float:left;
+width:150px;
+}
+.wpcc_mail_author, .wpcc_mail_email, .wpcc_mail_phone, .wpcc_mail_textarea, .wpcc_inputtext, .wpcc_select { width:250px; }
+
+.wpcc_loading {
+display:none;
+width:16px;
+height:16px;
+background-image:url("images/loading.gif");
+}
+
+.wpcc_widget .wpcc_form, .wpcc_widget .wpcc_mail_info, .wpcc_widget .wpcc_result, .wpcc_widget .wpcc_mail, .wpcc_widget .wpcc_mail_author, .wpcc_widget .wpcc_mail_email, .wpcc_widget .wpcc_mail_phone, .wpcc_widget .wpcc_mail_textarea, .wpcc_widget .wpcc_inputtext, .wpcc_widget .wpcc_select {
+width:150px;
+}

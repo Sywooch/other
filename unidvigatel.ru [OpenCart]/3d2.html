@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>3d Interactive gallery v1</title>
+<!-- SWFObject embed by Geoff Stearns geoff@deconcept.com http://blog.deconcept.com/ -->
+<script type="text/javascript" src="http://unidvigatel.com/js/swfobject.js"></script>
+<style type="text/css">
+	
+	html {
+		height: 100%;
+		overflow: hidden;
+	}
+	
+	#flashcontent {
+		height: 100%;
+	}
+
+	body {
+		color: #fff;
+		font-family: verdana,arial,sans-serif;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: #000;
+	}
+	
+	a, a:active {
+		color:#53A924;
+		}
+		a:hover {
+			color: #fff;
+			}
+		a:active {
+			color: #fff;
+			}
+			
+	#flashError {
+		padding: 20px;
+	}
+	
+
+</style>
+</head>
+<body>
+
+	<div id="flashcontent">
+		
+		<div id="flashError">
+			<h1>Необходимо обнавить Ваш Flash Player</h1>
+			<p>
+				Для просмотра данной страницы Вы дожны иметь обнавленный Flash Player 9, и включеные JavaScript. Пожалуста <a href="http://www.adobe.com/go/getflashplayer">обнавите ваш плеер</a> - это бесплатно, и займет пару минут. If you belive you <em>do</em> have Flash Player 9 installed, you may <a href="index.html?detectflash=false">bypass the detection</a> if you wish.
+			</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		// <![CDATA[
+		
+		var so = new SWFObject("http://unidvigatel.com/3d_art_gallery_2.swf", "albums", "100%", "100%", "9", "#000000");
+		so.addParam("scale", "noscale");
+		so.write("flashcontent");
+		
+		// ]]>
+	</script>
+	
+</body>
+
+</html>

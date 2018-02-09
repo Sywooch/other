@@ -1,0 +1,6 @@
+﻿<DynamicWeb>
+	<Sections head="SELECT BACKGROUND">
+		<data image="dat/Images/Bg/bg3.swf">DESIGN NAME</data>
+	</Sections>
+
+</DynamicWeb>

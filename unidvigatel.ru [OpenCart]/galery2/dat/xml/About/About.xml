@@ -1,0 +1,15 @@
+﻿<DynamicWeb>
+
+<Sections>
+	<data>
+		<btnName>ПЕРЕЙТИ НА ГЛАВНУЮ</btnName>
+		<tilte>ПЕРЕЙТИ НА ГЛАВНУЮ</tilte>
+		<img>dat/Images/About/img.jpg</img>
+		<imgB>dat/Images/Folio/Bimg.jpg</imgB>
+
+		<des><a href="http://unidvigatel.com/"> ВЕРУНТЬСЯ НА САЙТ</a></des>
+	</data>
+	
+</Sections>
+
+</DynamicWeb>

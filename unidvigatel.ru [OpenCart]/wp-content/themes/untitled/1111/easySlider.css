@@ -1,0 +1,50 @@
+
+/*** FRONT PAGE SLIDER ***/
+#slides_container{width:980px; position:relative; padding:0 0 0 0; clear:left; float:left;}
+/* Easy Slider */
+#slider{ position:relative;  margin:0 auto; width:980px; padding:0 0 0 0; color:#010101; height:400px; overflow:hidden;}
+#slider h2{color:#fff}
+#slider p{color:#fff; font-size:16px; line-height:23px; width:452px; padding-top:15px; padding-right:27px; float:left;}
+#slider img{padding-bottom:12px; float:left;}
+#slider span{padding-top:70px; float:left;}	
+#slider ul, #slider li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+#slider li{ 
+	/* 
+		define width and height of list item (slide)
+		entire slider area will adjust according to the parameters provided here
+	*/ 
+	width:980px;
+	height:390px;
+	overflow:hidden;
+	margin:0;
+	padding:10px 0 0 0;
+}
+#prevBtn {
+	background: url(slidearrows_bg.jpg) no-repeat 0 0;
+}
+	
+#prevBtn, #nextBtn{ 
+	display:block;
+	width:47px;
+	height:20px;
+	padding: 5px 0 0 15px;
+	position:absolute;
+	top:380px;
+}
+#prevBtn{left:450px;}	
+#nextBtn{left:470px;}														
+#prevBtn a, #nextBtn a{  
+	display:block;
+	width:11px;
+	height:11px;
+	background: url(sliderarrow_pre.jpg) no-repeat 0 0;
+	cursor:pointer;
+	}
+#nextBtn a{ 
+	background:url(sliderarrow_next.jpg) no-repeat 0 0;
+	}
+/*** END OF FRONT PAGE SLIDER ***/

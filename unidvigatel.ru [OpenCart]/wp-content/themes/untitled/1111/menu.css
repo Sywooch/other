@@ -1,0 +1,105 @@
+.menu {
+float: right;
+width: 980px;
+height: 72px;
+}
+.jqueryslidemenu{
+width: 100%;
+}
+
+.jqueryslidemenu ul{
+margin: 0 0 0 10px;
+padding: 21px 0 0 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li{
+position: relative;
+display: inline;
+float: left;
+z-index:100;
+font-size:12px;
+font-weight: bold;
+margin: 0 1px;
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li a{
+display: block;
+padding: 7px 13px;
+text-decoration: none;
+color: #fff;
+border: 1px solid #444E68;
+}
+
+
+.jqueryslidemenu ul li a.active:link, .jqueryslidemenu ul li a.active:visited {
+padding: 7px 13px;
+color: #fff;
+}
+
+.jqueryslidemenu ul li.home a{
+padding-left:0;
+}
+
+* html .jqueryslidemenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{
+color: #fff;
+border: 1px solid #444E68;
+}
+
+.jqueryslidemenu ul li a:hover, .jqueryslidemenu ul li a.selected, .jqueryslidemenu ul li a.sub_level_active {
+    background-color:#495472 !important;
+	color: #fff;
+	border: 1px solid #626D88;
+}
+.jqueryslidemenu ul li a.selected {
+    text-decoration: underline;
+}
+.jqueryslidemenu ul li a.first_level:hover, .jqueryslidemenu ul li a.active{
+    background: url(menu_hover.jpg) repeat-x left top;
+}
+
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul{
+position: absolute;
+left: -11px !important;
+top:26px !important;
+display: block;
+visibility: hidden;
+padding:6px 0 0 0 !important;
+}
+
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li{
+display: list-item;
+float:none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul{
+left: 155px !important;
+top: 0 !important;
+padding-top:0 !important;
+}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a{
+width: 140px; /*width of sub menus*/
+padding: 7px 12px;
+margin: 0;
+border: 1px solid #2F3040;
+font-weight: normal;
+border-top-width:0;
+background: #374464; /*background of tabs (default state)*/
+}
+
+.jqueryslidemenu ul li ul li a:hover{ /*sub menus hover style*/
+background-color:#fff;
+}
+

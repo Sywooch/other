@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Учебные заведения", 
+		"company/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Карта", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Кнопка", 
+		"services/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

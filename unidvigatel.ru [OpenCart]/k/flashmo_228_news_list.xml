@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+
+	<item>
+		<thumbnail>thumbnails/s_camera_focus.jpg</thumbnail>
+		<title>News Title One goes here</title>
+		<description>Vestibulum nisl mauris, malesuada nec, dictum in, molestie in, pede.</description>
+		
+		<content><![CDATA[<span class="title">News Title One goes here</span>
+<p align="justify">This HTML text is dynamically loaded from <span class="highlight">the external XML file</span>. Also, the text is formatted by <span class="highlight">the external CSS file</span>. You may download <a href="http://www.flashmo.com" target="_parent">free flash templates</a> and use them for your websites. Donec accumsan urna non elit tristique mattis. Vivamus fermentum orci viverra nisl. In nec magna id ipsum aliquam dictum. Donec euismod enim et risus.</p>
+<p align="justify">Donec rhoncus neque eu ligula egestas sed ultricies magna ultricies. Nam eu ante diam. Nam nec faucibus lacus. In dapibus lorem vitae libero convallis feugiat imperdiet ligula porttitor. Praesent pharetra, leo lacinia dapibus consequat, urna nibh sollicitudin quam, semper volutpat nunc tortor id odio. <span class="highlight">Aliquam tristique dolor ac odio.</span></p>
+<span class="subtitle">Maecenas convallis dui felis</span>
+<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque condimentum ultricies rutrum. Mauris vitae dolor a felis semper bibendum a vitae felis. <span class="highlight">Nam consequat, sapien a condimentum sagittis, metus velit cursus sapien, vitae tincidunt eros mi nec neque.</span> In varius, mi sit amet commodo accumsan, ligula orci aliquet sem, nec tempus dolor magna ac nulla. Duis euismod mattis mauris non semper.</p>
+<p align="justify">Quisque ornare velit erat, ultricies commodo risus. Vestibulum pellentesque, urna quis suscipit dapibus, ante lectus sodales risus, ut adipiscing nibh diam in nisl. <a href="http://www.flashmo.com" target="_parent">Vestibulum faucibus</a> pharetra lobortis. Phasellus lacus justo, viverra a scelerisque at, laoreet ut enim. Cras eget mollis quam.</p>
+<span class="subtitle">Quisque in arcu et ante adipiscing</span>
+<p align="justify">Quisque blandit eros et lorem. Etiam nec enim. Cras arcu. Integer molestie. Aliquam a dui. <a href="http://www.flashmo.com" target="_parent">Suspendisse ac magna</a> quis est eleifend dictum. In velit urna, convallis id, pharetra in, iaculis sit amet, mi. Praesent consectetur imperdiet mauris. Suspendisse at pede vel lorem pulvinar laoreet.</p>
+<p align="justify">Praesent tincidunt vulputate odio, at fermentum tellus porta sit amet. Vestibulum ac lacus sem, sed interdum diam. Pellentesque felis tortor, pellentesque nec scelerisque nec, rhoncus pharetra enim. Maecenas pellentesque augue non ligula luctus id aliquet ipsum aliquam.</p> ]]></content>
+	</item>
+	
+	<item>
+		<thumbnail>thumbnails/s_water_surface.jpg</thumbnail>
+		<title>News Title Two goes here</title>
+		<description>Nulla sed leo sed sapien sagittis aliquet. Vivamus vestibulum condimentum massa.</description>
+		
+		<content><![CDATA[<span class="title">News Title Two goes here</span>
+<a href="http://www.flashmo.com/preview/flashmo_218_s_shape" target="_parent" class="subtitle">Proin pretium velit in diam molestie</a>
+<img src="thumbnails/flashmo_218_s_shape.jpg" width="140" height="140" /><p align="justify">Donec scelerisque nisl faucibus est gravida ac pulvinar sapien porta. Mauris venenatis felis id sapien euismod sollicitudin. Morbi vestibulum feugiat massa at lobortis. Integer faucibus, arcu at vestibulum posuere, <a href="http://www.flashmo.com" target="_parent">lacus velit venenatis sem</a>, nec scelerisque lorem urna nec orci. Aenean id nisl nec tortor pellentesque lobortis. Nulla porta urna non arcu egestas cursus hendrerit lacus aliquet.
+<span class="highlight">Aliquam semper blandit nisi eu blandit. Aliquam auctor luctus malesuada. Integer quam leo, fringilla vel porta in, eleifend sed ligula. Phasellus tempus sagittis nisi, pretium dignissim elit mattis eu. Sed hendrerit nisl at mauris tincidunt iaculis. Sed blandit dignissim ligula ut interdum.</span></p>
+<a href="http://www.flashmo.com/preview/flashmo_217_v_shape" target="_parent" class="subtitle">Maecenas convallis dui felis</a>
+<img src="thumbnails/flashmo_217_v_shape.jpg" width="140" height="140" /><p align="justify">Nam ullamcorper molestie ipsum vitae consectetur. In condimentum cursus erat, a adipiscing magna suscipit id. Ut ut mi eget lacus porttitor semper. Donec vitae dolor non nunc laoreet tristique sit amet nec nisl. Maecenas sem libero, ornare ac pretium at, accumsan et massa. Nullam orci nibh, luctus in tincidunt non, lobortis ut velit. Phasellus sem odio, ultrices sit amet luctus ut, convallis a mauris.
+<span class="highlight">Proin risus metus, scelerisque id sollicitudin vel, bibendum sit amet magna. Maecenas tempor rutrum rutrum. In ornare massa at metus iaculis at molestie lectus consequat. Mauris nisi orci, condimentum at dignissim ac, scelerisque in felis.</span></p> ]]></content>
+	</item>
+	
+	<item>
+		<thumbnail>thumbnails/s_garden_scene.jpg</thumbnail>
+		<title>News Title Three goes here</title>
+		<description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</description>
+		
+		<content><![CDATA[<span class="title">News Title Three goes here</span>
+<a href="http://www.flashmo.com/preview/flashmo_211_horizon_gallery" target="_parent" class="subtitle">Integer nec est ut metus hendrerit cursus</a>
+<img src="thumbnails/flashmo_211_horizon_gallery.jpg" width="140" height="140" /><p align="justify">Quisque vel orci lacus. Vivamus elit arcu, lobortis et adipiscing sit amet, semper at sapien. Nunc aliquam blandit lacus, non suscipit nulla accumsan quis. <a href="http://www.flashmo.com" target="_parent">Pellentesque lacus est</a>, commodo et adipiscing quis, mollis vitae nulla. Fusce sit amet tellus vel nibh blandit cursus.
+<span class="note">Morbi dui ipsum, pharetra ut dignissim vitae, pretium molestie ligula. Integer dictum iaculis imperdiet. Aliquam nec vehicula turpis. Quisque placerat dignissim ornare. Mauris lacinia consectetur sapien eget dictum.</span></p>
+<a href="http://www.flashmo.com/preview/flashmo_210_carousel_gallery" target="_parent" class="subtitle">Aliquam iaculis iaculis dui et adipiscing</a>
+<img src="thumbnails/flashmo_210_carousel_gallery.jpg" width="140" height="140" /><p align="justify">Donec nunc neque, pulvinar a, vestibulum eget, luctus id, orci. Pellentesque elementum enim a augue. Donec in nisi. Etiam sit amet turpis. Duis nulla diam, posuere ac, varius id, ullamcorper sit amet, libero. Nam sodales, pede vel dapibus lobortis, ipsum diam molestie risus, a vulputate risus nisl pulvinar lacus.</p> ]]></content>
+	</item>
+	
+	<item>
+		<thumbnail>thumbnails/s_camera_focus.jpg</thumbnail>
+		<title>News Title Four goes here</title>
+		<description>Aenean cursus. Maecenas aliquam, ligula id egestas suscipit, ac urna in neque.</description>
+		
+		<content><![CDATA[<span class="title">News Title Four goes here</span>
+<a href="http://www.flashmo.com/preview/flashmo_208_horizontal" target="_parent" class="subtitle">Mauris in dolor in elit porttitor aliquam</a>
+<img src="thumbnails/flashmo_208_horizontal.jpg" width="140" height="140" /><p align="justify"><span class="highlight">Morbi dui ipsum, pharetra ut dignissim vitae, pretium molestie ligula. Integer dictum iaculis imperdiet.</span> Aliquam nec vehicula turpis. Quisque placerat dignissim ornare. Mauris lacinia consectetur sapien eget dictum. Nulla placerat mi vitae dolor mattis semper. In sit amet nisi justo. Aenean in mauris vitae nisi dignissim rhoncus. Nullam ultricies metus blandit ligula vulputate eget scelerisque est imperdiet.</p>
+<p align="justify">Vestibulum consectetur cursus massa vitae porttitor. Quisque vitae congue turpis. Donec molestie diam augue, eget bibendum velit. Vivamus cursus malesuada enim, id sagittis purus vehicula at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id volutpat dui. Nulla egestas ipsum ac quam dignissim congue. <span class="highlight">Duis commodo dignissim augue, in fringilla quam tristique in.</span></p>
+<p align="justify">Ut interdum dapibus tincidunt. Quisque vel orci lacus. Vivamus elit arcu, lobortis et adipiscing sit amet, semper at sapien. <a href="http://www.flashmo.com" target="_parent">Nunc aliquam blandit lacus</a>, non suscipit nulla accumsan quis. Pellentesque lacus est, commodo et adipiscing quis, mollis vitae nulla. Fusce sit amet tellus vel nibh blandit cursus. Integer nec est ut metus hendrerit cursus.</p>
+<span class="subtitle">Donec tincidunt massa in mauris vulputate</span>
+<p align="justify">Phasellus vehicula ipsum id felis porta nec rutrum arcu egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque venenatis interdum pellentesque. Vivamus semper, orci ut consectetur facilisis, tellus justo tristique nulla, sit amet vulputate sapien tellus sit amet purus. <span class="highlight">Etiam tincidunt tellus sed magna gravida aliquam.</span></p>]]></content>
+	</item>
+	
+	<item>
+		<thumbnail>thumbnails/s_water_surface.jpg</thumbnail>
+		<title>News Title Five goes here</title>
+		<description>Nulla tellus risus, tincidunt vitae, sagittis vel, interdum at, erat.</description>
+		
+		<content><![CDATA[<span class="title">News Title Five goes here</span>
+<a href="http://www.flashmo.com/preview/flashmo_205_stack_gallery" target="_parent" class="subtitle">Mauris vitae tempus diam</a>
+<img src="thumbnails/flashmo_205_stack_gallery.jpg" width="140" height="140" /><p align="justify">Phasellus vehicula ipsum id felis porta nec rutrum arcu egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque venenatis interdum pellentesque. Vivamus semper, orci ut consectetur facilisis, tellus justo tristique nulla, sit amet vulputate sapien tellus sit amet purus. Etiam tincidunt tellus sed magna gravida aliquam.
+<span class="note">Fusce libero ante, <a href="http://www.flashmo.com" target="_parent">lobortis vel mollis dapibus</a>, pulvinar faucibus leo. Mauris tempus, tellus in sagittis interdum, mi leo blandit lacus, sit amet vehicula eros tortor eget est. Mauris et nisi odio. Proin sodales urna in massa tincidunt tempus.</span></p>
+<p align="justify"><a href="http://www.flashmo.com" target="_parent">Donec scelerisque nisl</a> faucibus est gravida ac pulvinar sapien porta. Mauris venenatis felis id sapien euismod sollicitudin. Morbi vestibulum feugiat massa at lobortis. Integer faucibus, arcu at vestibulum posuere, lacus velit venenatis sem, nec scelerisque lorem urna nec orci. Suspendisse magna est, pretium sed sagittis rhoncus, commodo eget lacus.</p>
+<span class="subtitle">Morbi vestibulum feugiat massa at lobortis</span>
+<p align="justify">Maecenas convallis dui felis. Pellentesque elit augue, accumsan non sodales id, condimentum sit amet nunc. Nam ullamcorper molestie ipsum vitae consectetur. <a href="http://www.flashmo.com" target="_parent">In condimentum cursus erat</a>, a adipiscing magna suscipit id. Ut ut mi eget lacus porttitor semper. Donec vitae dolor non nunc laoreet tristique sit amet nec nisl. Phasellus sem odio, ultrices sit amet luctus ut, convallis a mauris.
+<span class="note">Nullam orci nibh, luctus in tincidunt non, lobortis ut velit.</span></p> ]]></content>
+	</item>
+	
+	<item>
+		<thumbnail>thumbnails/s_garden_scene.jpg</thumbnail>
+		<title>News Title Six goes here</title>
+		<description>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</description>
+		
+		<content><![CDATA[<span class="title">News Title Six goes here</span> 
+<p align="justify">Quisque at ante sit amet erat laoreet fermentum. Quisque nec nisl. Nam scelerisque cursus dolor. Integer vel sapien quis risus egestas suscipit. Nam lorem tortor, viverra gravida, egestas id, pellentesque in, mi. Maecenas sodales pede eu massa. Fusce lacinia orci at nisi. Suspendisse at nisi nec diam pretium tincidunt. Ut vitae felis eu lectus ultrices varius. Aliquam lacus turpis, dapibus eget, tincidunt eu, lobortis et, magna. Integer pellentesque dignissim diam. Quisque ornare pulvinar lorem.</p>
+<p align="justify">Phasellus ultrices justo non nibh. Sed a eros. Phasellus cursus lobortis arcu. Donec scelerisque. Integer ultrices. Donec hendrerit. Maecenas nisl ante, mollis et, tincidunt vitae, feugiat sit amet, mi. Vestibulum urna. Vivamus eu tortor. Phasellus tempus, justo et laoreet varius, odio mi ultrices libero, nec faucibus dui felis eu dui. Cras ac odio ac mi imperdiet sollicitudin. In hac habitasse platea dictumst. Curabitur euismod scelerisque lacus. Cras pretium sem sed odio. Vestibulum nisl mauris, malesuada nec, dictum in, molestie in, pede.</p>
+<p align="justify">Donec nunc neque, pulvinar a, vestibulum eget, luctus id, orci. Pellentesque elementum enim a augue. Donec in nisi. Etiam sit amet turpis. Duis nulla diam, posuere ac, varius id, ullamcorper sit amet, libero. Nam sodales, pede vel dapibus lobortis, ipsum diam molestie risus, a vulputate risus nisl pulvinar lacus.</p> ]]></content>
+	</item>
+	
+	<item>
+		<thumbnail>thumbnails/s_water_surface.jpg</thumbnail>
+		<title>News Title Seven goes here</title>
+		<description>Mauris pede nisl, placerat nec, lobortis vitae, dictum sed, neque.</description>
+		
+		<content><![CDATA[<span class="title">News Title Seven goes here</span>
+<p align="justify">This HTML text is dynamically loaded from <span class="highlight">the external XML file</span>. Also, the text is formatted by <span class="highlight">the external CSS file</span>. You may download <a href="http://www.flashmo.com" target="_parent">free flash templates</a> and use them for your websites. Donec accumsan urna non elit tristique mattis. Vivamus fermentum orci viverra nisl. In nec magna id ipsum aliquam dictum. Donec euismod enim et risus.</p>
+<span class="subtitle">Maecenas convallis dui felis</span>
+<p align="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque condimentum ultricies rutrum. Mauris vitae dolor a felis semper bibendum a vitae felis. <span class="highlight">Nam consequat, sapien a condimentum sagittis, metus velit cursus sapien, vitae tincidunt eros mi nec neque.</span> In varius, mi sit amet commodo accumsan, ligula orci aliquet sem, nec tempus dolor magna ac nulla. Duis euismod mattis mauris non semper.</p>
+<p align="justify">Vivamus laoreet pharetra eros. In quam nibh, placerat ac, porta ac, molestie non, purus. Curabitur sem ante, condimentum non, cursus quis, eleifend non, libero. Nunc a nulla. Suspendisse vitae orci a ligula egestas bibendum. Vestibulum ultrices. Pellentesque tempus sapien nec sem commodo ullamcorper. Aenean neque. Cras feugiat. In ut ante.</p> ]]></content>
+	</item>
+	
+	<item>
+		<thumbnail>thumbnails/s_camera_focus.jpg</thumbnail>
+		<title>News Title Eight goes here</title>
+		<description>Cras nisl eros, elementum eu, iaculis vitae, viverra ut, ligula.</description>
+		
+		<content><![CDATA[<span class="title">News Title Eight goes here</span>
+<a href="http://www.flashmo.com/preview/flashmo_218_s_shape" target="_parent" class="subtitle">Integer nec est ut metus hendrerit cursus</a>
+<p align="justify">Donec scelerisque nisl faucibus est gravida ac pulvinar sapien porta. Mauris venenatis felis id sapien euismod sollicitudin. Morbi vestibulum feugiat massa at lobortis. <a href="http://www.flashmo.com" target="_parent">Integer faucibus</a>, arcu at vestibulum posuere, lacus velit venenatis sem, nec scelerisque lorem urna nec orci. Aenean id nisl nec tortor pellentesque lobortis. Nulla porta urna non arcu egestas cursus hendrerit lacus aliquet. <span class="highlight">Aliquam semper blandit nisi eu blandit. Aliquam auctor luctus malesuada. Integer quam leo, fringilla vel porta in, eleifend sed ligula. Phasellus tempus sagittis nisi, pretium dignissim elit mattis eu.</span></p>
+<a href="http://www.flashmo.com/preview/flashmo_217_v_shape" target="_parent" class="subtitle">Aliquam iaculis iaculis dui et adipiscing</a>
+<p align="justify">Nam ullamcorper molestie ipsum vitae consectetur. In condimentum cursus erat, a adipiscing magna suscipit id. Ut ut mi eget lacus porttitor semper. Donec vitae dolor non nunc laoreet tristique sit amet nec nisl. Maecenas sem libero, ornare ac pretium at, accumsan et massa. Nullam orci nibh, luctus in tincidunt non, lobortis ut velit. <span class="highlight">Sed hendrerit nisl at mauris tincidunt iaculis. Sed blandit dignissim ligula ut interdum. Phasellus sem odio, ultrices sit amet luctus ut, convallis a mauris.</span></p> ]]></content>
+	</item>
+	
+</items>

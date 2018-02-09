@@ -1,0 +1,472 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Creator Calculator v3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-08 10:46+0600\n"
+"PO-Revision-Date: 2012-08-08 10:46+0600\n"
+"Last-Translator: ZetRider <zetrider@bk.ru>\n"
+"Language-Team: TTWeb <ZetRider@bk.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: Z:\\xampp\\htdocs\\12000.ru\\www\\wp-content\\plugins\\wp-creator-calculator\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: Z:\\xampp\\htdocs\\12000.ru\\www\\wp-content\\plugins\\wp-creator-calculator\n"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:149
+msgid "On your site found an older version of the database plug-in, which is not compatible with version 3.0."
+msgstr "На Вашем сайте обнаружена база данных старой версии плагина, которая не совместима с версиями 3.0."
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:149
+msgid "Show data from the old version of the plugin"
+msgstr "Показать данные из старой версии плагина"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:168
+msgid "I rewrote everything, you can delete the old version forever."
+msgstr "Я все переписал, можно удалять старую версию безвозвратно."
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:217
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:219
+msgid "Send"
+msgstr "Отправить"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:260
+msgid "Anonym"
+msgstr "Аноним"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:295
+msgid " from "
+msgstr " от "
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:297
+msgid "Calculating the cost of "
+msgstr "Расчет стоимости"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:314
+msgid "Calculating from the site:"
+msgstr "Расчет стоимости с сайта:"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:440
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1039
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/action/wpcc_text_formul.php:13
+msgid "Formula is empty"
+msgstr "Формула пуста"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:609
+msgid "You forgot to enter the name of the calculator"
+msgstr "Вы забыли указать имя калькулятора"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:611
+msgid "The name of the calculator can be used only: English characters, Russian characters, spaces and dashes"
+msgstr "В названии калькулятор может быть использованы только английские буквы, русские буквы, пробелы и тире"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:616
+msgid "Calculate"
+msgstr "Расчитать"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:617
+msgid "The result: "
+msgstr "Результат: "
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:618
+msgid " $"
+msgstr " руб."
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:626
+msgid "Calculation"
+msgstr "Расчет"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:627
+msgid "The calculation of the value of the site, information about the user:"
+msgstr "Расчет стоимости с сайта, информация о пользователе:"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:628
+msgid "Thank you! Your account sent! The site administration will contact you shortly."
+msgstr "Спасибо! Ваш расчет отправлен! Администрация сайта свяжется с Вами в ближайшее время."
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:629
+msgid "Send an application administrator?"
+msgstr "Отправить заявку администратору?"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:631
+msgid "Your Name and Surname"
+msgstr "Ваши Имя и Фамилия"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:632
+msgid "Your E-Mail"
+msgstr "Ваш E-Mail"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:633
+msgid "Your Phone"
+msgstr "Ваш Телефон"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:634
+msgid "Your comment"
+msgstr "Ваш комментарий"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:638
+msgid "You forgot to enter the First Name Last Name"
+msgstr "Вы забыли ввести Имя и Фамилию"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:639
+msgid "Too long name and surname! No more than 100 characters"
+msgstr "Слишком длинные Имя и Фамилия! Не более 100 символов"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:640
+msgid "Did you forget to include your E-Mail"
+msgstr "Вы забыли указать свой E-mail"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:641
+msgid "Incorrectly Set E-Mail. Example email: admin@zetrider.ru"
+msgstr "Неправильно указан E-Mail. Пример электронной почты: admin@zetrider.ru"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:642
+msgid "Erroneously listed phone number, you can use numbers, spaces, dashes and brackets"
+msgstr "Некорректно указан  номер телефона, вы можете использовать цифры, пробел, тире и скобки"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:643
+msgid "Phone is too long! No more than 35 characters."
+msgstr "Телефон слишком длинный! Не более 35 символов."
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:644
+msgid "Message is too long, not more than 2500 characters!"
+msgstr "Сообщение слишком длинное, не более 2500 символов!"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:646
+msgid "Calculator has been successfully created"
+msgstr "Калькулятор был успешно создан"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:646
+msgid "proceed to fill the"
+msgstr "перейти к наполнению"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:704
+msgid "Text block"
+msgstr "Текстовой блок"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:706
+msgid "Select list"
+msgstr "Список SELECT"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:708
+msgid "Checkbox"
+msgstr "Чекбокс"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:710
+msgid "Radio Button"
+msgstr "Радио Кнопки"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:712
+msgid "Input field text"
+msgstr "Текстовое поле"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:714
+msgid "Hidden field"
+msgstr "Скрытое поле"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:761
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1093
+msgid "Title"
+msgstr "Заголовок"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:762
+msgid "Sign to"
+msgstr "Знаки до"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:763
+msgid "Sign after"
+msgstr "Знаки после"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:764
+msgid "Default value"
+msgstr "Значение по умолчанию"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:765
+msgid "Price field"
+msgstr "Цена поля"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:766
+msgid "Action"
+msgstr "Действие с данными"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:767
+msgid "Text"
+msgstr "Текст"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:768
+msgid "List"
+msgstr "Список"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:769
+msgid "ID Calculator"
+msgstr "ID калькулятора"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:770
+msgid "ID field or the sum"
+msgstr "ID поля или sum"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:771
+msgid "ID field"
+msgstr "ID поля"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:783
+msgid "Your browser does not support JavaScript, plug-in will not work correctly."
+msgstr "Ваш браузер не поддерживает JavaScript, плагин не будет работать корректно."
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:791
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1101
+msgid "Select the calculator"
+msgstr "Выбрать калькулатор"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:792
+msgid "Add a new calculator"
+msgstr "Добавить новый калькулятор"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:806
+msgid "Calculator Menu"
+msgstr "Меню калькулятора"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:807
+msgid "Add a Text Block"
+msgstr "Добавить текстовой блок"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:808
+msgid "Add a Select List"
+msgstr "Добавить список SELECT"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:809
+msgid "Add Checkbox"
+msgstr "Добавить Чекбокс"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:810
+msgid "Add a Radio Button"
+msgstr "Добавить Radio кнопку"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:811
+msgid "Add a Input field text"
+msgstr "Добавить текстовое поле"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:812
+msgid "Add a Hidden field"
+msgstr "Добавить скрытое поле"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:813
+msgid "Add a $_SESSION field"
+msgstr "Добавить $_SESSION поле"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:814
+msgid "Add d jQuery field"
+msgstr "Добавить jQuery поле"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:815
+msgid "Customize Design"
+msgstr "Настройка дизайна"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:816
+msgid "Options Mail"
+msgstr "Настройка писем"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:817
+msgid "Options Calculator"
+msgstr "Настройка калькулятора"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:820
+msgid "Shortcode"
+msgstr "Шорткод"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:831
+msgid "Name"
+msgstr "Имя"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:832
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:849
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:856
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:863
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:870
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:877
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:884
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:891
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:898
+msgid "Add"
+msgstr "Добавить"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:907
+msgid "None design"
+msgstr "Без дизайна"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:908
+msgid "Sceleton"
+msgstr "Скелет"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:909
+msgid "Minimaism"
+msgstr "Минимализм"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:912
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:962
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1007
+msgid "Save"
+msgstr "Сохранить"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:938
+msgid "Enable sending emails?"
+msgstr "Включить отправку писем?"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:940
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:982
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:989
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:995
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1001
+msgid "Yes"
+msgstr "Да"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:941
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:983
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:990
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:996
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1002
+msgid "No"
+msgstr "Нет"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:944
+msgid "Subject"
+msgstr "Тема"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:945
+msgid "The text of the letter"
+msgstr "Текст в письме"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:946
+msgid "Text before sending the form"
+msgstr "Текст перед формой отправки"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:947
+msgid "The text successfully sent"
+msgstr "Сообщение об успешной отправке"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:948
+msgid "At what E-Mail to send a request"
+msgstr "На какой E-Mail отправлять письмо"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:949
+msgid "Field Name Last Name"
+msgstr "Поле Имя Фамилия"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:950
+msgid "Field Contact E-Mail"
+msgstr "Поле контактный E-Mail"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:951
+msgid "Field Contact Phone"
+msgstr "Поле контактный телефон"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:952
+msgid "Field Comment"
+msgstr "Поле комментарий"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:953
+msgid "Error: can not put a name"
+msgstr "Ошибка: Не ввели имя"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:954
+msgid "Error: The long name"
+msgstr "Ошибка: Длинное имя"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:955
+msgid "Error: not entered Email"
+msgstr "Ошибка: Не ввели Email"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:956
+msgid "Error: Incorrect Email"
+msgstr "Ошибка: Не корректный Email"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:957
+msgid "Error: Incorrect phone"
+msgstr "Ошибка: Не корректный телефон"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:958
+msgid "Error: The longest phone"
+msgstr "Ошибка: Длинный телефон"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:959
+msgid "Error: long comment"
+msgstr "Ошибка: Длинный комментарий"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:977
+msgid "The name of the button"
+msgstr "Название кнопки"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:978
+msgid "The text to the amount"
+msgstr "Текст перед суммой"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:979
+msgid "Text after the amount of"
+msgstr "Текст после суммы"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:980
+msgid "AJAX calculations?"
+msgstr "Включить AJAX калькулятор?"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:980
+msgid "without rebooting"
+msgstr "без перезагрузки страниц"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:986
+msgid "Action form"
+msgstr "Action формы"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:987
+msgid "Remember the selected data"
+msgstr "Запоминать выбранные данные в форме"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:993
+msgid "Connect Jquery"
+msgstr "Подключить jQuery"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:999
+msgid "Start $ _SESSION"
+msgstr "Стартовать $_SESSION"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1011
+msgid "Remove calculator"
+msgstr "Удалить калькулятор"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1018
+msgid "Added fields"
+msgstr "Добавленные поля"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1031
+msgid "Update"
+msgstr "Обновить"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1032
+msgid "Remove"
+msgstr "Удалить"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1044
+msgid "Text is the formula"
+msgstr "Текстовая формула"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1049
+msgid "Preview calculator"
+msgstr "Предпросмотр калькулятора"
+
+#: Z:\xampp\htdocs\12000.ru\www\wp-content\plugins\wp-creator-calculator/wp-creator-calculator.php:1099
+msgid "Calculator"
+msgstr "Калькулятор"
+
+#~ msgid "Author"
+#~ msgstr "Автор"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Phone"
+#~ msgstr "Телефон"
+
+#~ msgid "Comment"
+#~ msgstr "Комментарий"

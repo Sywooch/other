@@ -1,0 +1,15 @@
+.wpcc_form { margin:10px 0 10px 0; }
+.wpcc_description { margin:10px 0 0 0; }
+.wpcc_select, .wpcc_inputtext { width:150px; }
+.wpcc_radio { display:block; }
+.wpcc_submit { display:block; margin-top:15px; cursor:pointer; }
+.wpcc_result { display:block; margin-top:15px; }
+.wpcc_loading { display:none; width:16px; height:16px; background-image:url("images/loading.gif");}
+.wpcc_mail { margin:10px 0 10px 0; }
+.wpcc_mail_info { border:1px #ccc solid; padding:15px;}
+.wpcc_mail_info ul { margin:0; padding:0; }
+.wpcc_mail_info li { list-style-type:none; list-style:none; display:block; margin:0; padding:0; }
+.wpcc_mail_text {margin-bottom:15px;}
+.wpcc_mail_row { display:block; margin-bottom:5px; clear:both;}
+.wpcc_mail_row b { font-weight:normal; display:block; float:left; width:150px; }
+.wpcc_mail_send, .wpcc_mail_author, .wpcc_mail_email, .wpcc_mail_phone, .wpcc_mail_textarea {width:150px;}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flipBook>
+	<siteOptions>
+<pageSetup pageW="500" pageH="400" hardCover="false" pageClr="eeeeee" flipSound="true" reverseOrder="false" bgClr="ffffff" hStartClr="333333" hStartAlp="100" hEndClr="111111" hEndAlp="100" overLayClr="000000" overLayTrans="60" bgImage="true" bgUrl="http://unidvigatel.com/kat/images/bg.jpg" bgStyle="tile" autoPlayer="true" autoDur="4" preLoadTxt="Загрузка, ожидайте..."></pageSetup>
+<buttonSetup highlClr="858c1e" darkClr="5B5B13" rimClr="ffffff" iconClr="ffffff" buttonPack="http://unidvigatel.com/kat/buttonpack02"></buttonSetup>
+<logoSetup showLogo="true" logoUrl="http://unidvigatel.com/kat/images/logo.png" logoShade="false" logoBevel="false" logoGlow="false"></logoSetup>
+<helpSetup showMe="true" downPdfBut="Скачать PDF" printBut="Печать страницы" contactBut="Связаться с нами" listBut="Страницы" zoomBut="Увеличение" singleBut="Перейти на следующую страницу" allBut="В конец журнала" cornerHint="Удержывайте и переворачивайте страницы" lineClr="858c1e" overLayClr="000000" overLayTrans="60"></helpSetup>
+<pdfSetup showMe="true" pdfUrl="http://unidvigatel.com/kat/pdf/myPDF.pdf"></pdfSetup>
+<zoomSetup showMe="true" extendedZoom="true"><![CDATA[<dragMessage>Используйте мышь для передвижения по странице<br /><br />используйте колесико мышки для увеличени или уменьшения</dragMessage>]]></zoomSetup>
+		<printSetup showMe="true">
+<printHead><![CDATA[<headPrint>Настройки печати</headPrint>]]></printHead>
+			<printOne butTxt="печать"><![CDATA[<headPrint>Печать одной страницы</headPrint><br /><contPrint>Для распечатки одной страницы укажите в окне ее номер</contPrint>]]></printOne>
+			<printAll butTxt="печать"><![CDATA[<headPrint>Печать всех страниц</headPrint><br /><contPrint>Для печати всех страниц нажмите клавишу печати</contPrint>]]></printAll>			
+		</printSetup>
+		<contactSetup showMe="false" nameField="Name" mailField="Email" subjField="Subject" messageField="Message" errTxt1="Mandatory..." errTxt2="Not a valid format..." procTxt="Processing data..." sucMess="Your message has been send!">
+			<contactHead><![CDATA[<headPrint>Contact us</headPrint>]]></contactHead>
+			<contactTxt butTxt="SEND"><![CDATA[<contPrint>Fill out the form below. The fields marked with <b>*</b> are required!</contPrint>]]></contactTxt>
+		</contactSetup>
+		<listPages showMe="true"></listPages>
+		<mp3Setup useMp3="true" usePhp="false" autoStart="true" randomStart="true"></mp3Setup>
+	</siteOptions>
+	<bookPages>
+		<page src="http://unidvigatel.com/kat/pages/1.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/2.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/3.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/4.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/5.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/6.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/7.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/8.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/9.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/10.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/11.png"></page>
+		<page src="http://unidvigatel.com/kat/pages/12.png"></page>
+	</bookPages>	
+</flipBook>

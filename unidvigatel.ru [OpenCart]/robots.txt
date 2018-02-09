@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /zakaz/
+Disallow: /order/
+Sitemap: http://unidvigatel.com/sitemap.xml
+Host: unidvigatel.com

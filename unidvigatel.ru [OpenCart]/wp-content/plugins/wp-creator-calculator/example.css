@@ -1,0 +1,55 @@
+/*
+ID-calc - ID calculator
+ID-row - ID field
+*/
+
+/* Calculator Class */
+/* wpcc, wpcc_ID-calc */
+.wpcc {}
+/* wpcc_form, wpcc_ID-calc */
+.wpcc_form {}
+/* wpcc_description, wpcc_description_ID-row */
+.wpcc_description {}
+/* wpcc_text, wpcc_text_ID-row */
+.wpcc_text {}
+/* wpcc_select, wpcc_select_ID-row */
+.wpcc_select {}
+/* wpcc_checkbox, wpcc_checkbox_ID-row */
+.wpcc_checkbox {}
+/* wpcc_radio, wpcc_radio_ID-row */
+.wpcc_radio {}
+/* wpcc_inputtext, wpcc_inputtext_ID-row */
+.wpcc_inputtext {}
+/* wpcc_submit, wpcc_submit_ID-calc */
+.wpcc_submit {}
+/* wpcc_result_block, wpcc_result_block_ID-calc */
+.wpcc_result_block {}
+/* wpcc_result, wpcc_result_ID-calc */
+.wpcc_result {}
+
+/* Mail Class */
+/* wpcc_mail_info, wpcc_mail_info_ID-calc */
+.wpcc_mail_info {}
+/* wpcc_mail, wpcc_mail_ID-calc */
+.wpcc_mail {}
+/* wpcc_mail_form, wpcc_mail_form_ID-calc */
+.wpcc_mail_form {}
+/* wpcc_mail_sum, wpcc_mail_sum_ID-calc */
+.wpcc_mail_sum {}
+/* wpcc_mail_text */
+.wpcc_mail_text {}
+/* wpcc_mail_row */
+.wpcc_mail_row {}
+/* wpcc_mail_author */
+.wpcc_mail_author {}
+/* wpcc_mail_email */
+.wpcc_mail_email {}
+/* wpcc_mail_phone */
+.wpcc_mail_phone {}
+/* wpcc_mail_textarea */
+.wpcc_mail_textarea {}
+/* wpcc_mail_send */
+.wpcc_mail_send {}
+
+/* Widget class */
+.wpcc_widget, .wpcc_widget_ID-calc

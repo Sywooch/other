@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Главная", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Каталог", 
+		"/ip-kamery/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Уникальные сервисы P2P и PNP", 
+		"/p2p-pnp-service.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Поддержка  и гарантия", 
+		"/support-vstarcam/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Компания", 
+		"/company/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/kontakty/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

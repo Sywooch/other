@@ -1,0 +1,33 @@
+﻿<DynamicWeb>
+
+<!--
+p=15 News
+p=25 About
+p=35 Folio
+p=45 Music
+p=55 Video
+p=65 Contact
+
+
+-->
+
+
+
+<Sections id="menu">
+		<Menu btnName="ФОТОГАЛЕРЕЯ" p="35" f="Folio" title="ФОТОГАЛЕРЕЯ" css="folio"></Menu>
+</Sections>
+
+<Sections id="logo">
+		<data>UniDvigatel</data>
+		<data><a href="http://unidvigatel.com/">вернуться на главную</a></data>
+</Sections>
+
+<Sections id="contact">
+		<data>Наименование контактная информация<br />  <br />  <br />Наименование компании<br /><a href="mailto:demo@demo.com">info@unidvigatel.com</a><br /><br /><br />+7 (4162) 555 - 555 <br />Loren Ipsum 33<br />111 11 Dolor Sit <br />Россия</data>
+</Sections>
+
+<Sections id="copy">
+		<data>(C) 2012. <a href="http://unidvigatel.com/">info@unidvigatel.com</a>WWW.Alternativ-Dv.RU</data>
+</Sections>
+
+</DynamicWeb>

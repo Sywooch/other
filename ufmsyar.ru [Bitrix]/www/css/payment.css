@@ -1,0 +1,103 @@
+body.payment
+	{
+		padding: 4px;
+		margin: 0;
+		text-align: center;
+	}
+
+	table.receipt td
+	{
+		border-style: solid;
+		border-color: black;
+		font-size: 3mm;
+		margin: 0;
+		padding: 0 0 0 2mm;
+		border: 1px solid #000;
+	}
+
+	body.payment span
+	{
+		font-family: 'Courier New';
+	}
+
+	table.receipt
+	{
+		border-collapse: collapse;
+width:178mm;
+		height: 133px;
+		margin: auto;
+		padding: 0;
+	}
+
+	.content table.receipt
+	{
+		margin: 0;
+	}
+
+
+	table.receipt td.header
+	{
+		font-size: 10px;
+		text-align: right;
+		border: 0 !important;
+	}
+
+	table.receipt td.info
+	{
+		height: 61mm;
+
+		border-width: 1px;
+		text-align: center;
+	}
+	table.receipt td.info table
+	{
+		height: 61mm;
+font-size:10pt;
+	}
+	table.receipt td.info table td
+	{
+		font-size: 4mm;
+		border: 0;
+		text-align: center;
+	}
+	table.receipt td.payment
+	{
+		width: 123mm;
+		border-width: 1px 1px 1px 0;
+	}
+	table.receipt td.payer,
+	table.receipt tr.payer td
+	{
+		height: 4mm;
+		border-width: 0 1px 1px 0;
+	}
+
+	table.receipt .payer span
+	{
+		width: 120px;
+		display: inline-block;
+		font-weight: bold;
+		font-family: "Times New Roman", serif;
+	}
+
+	table.receipt .payer input
+	{
+		width: 300px;
+		margin: 3px;
+	}
+
+	table.receipt select
+	{
+		width: 123mm;
+	}
+
+
+	table.receipt .payer input.amount
+	{
+		width: 55px;
+	}
+
+	#receipt input[type='submit']
+	{
+		margin: 10px 0;
+	}

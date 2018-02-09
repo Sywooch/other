@@ -1,0 +1,85 @@
+.art-textblock > div {
+display : block;
+line-height : normal;
+}
+.art-hmenu > li, .art-hmenu > li > a {
+display : inline !important ;
+float : none !important ;
+vertical-align : top;
+}
+#art-hmenu-bg {
+display : none;
+}
+ul.art-hmenu > li:first-child {
+padding-right : 11px;
+}
+ul.art-hmenu > li > span.art-hmenu-separator {
+position : absolute;
+display : block;
+top : 0;
+left : -11px;
+width : 11px;
+height : 34px;
+background : url('images/menuseparator.png') center center no-repeat;
+}
+ul.art-hmenu > li:first-child > span.art-hmenu-separator {
+display : none;
+}
+.art-header {
+z-index : 1;
+}
+#art-header-bg {
+display : none;
+}
+.art-content-layout, .art-content-layout-row, .art-layout-cell {
+display : block;
+}
+.art-layout-cell {
+position : relative;
+float : left;
+clear : right;
+}
+input[type="text"] {
+margin : 0 0 0 -3px;
+}
+* html input[type="text"] {
+margin : 0;
+}
+form.art-search > input[type="text"] {
+margin : 0 0 0 -3px;
+}
+form.art-search div > input[type="text"] {
+width : 100%;
+}
+* html form.art-search > input[type="text"] {
+margin : 0;
+}
+.art-postcontent {
+height : 1%;
+}
+.close-alt, .arrow-right-alt, .arrow-left-alt {
+display : block !important ;
+}
+.cw, .ccw {
+display : none !important ;
+}
+.art-sidebar1 {
+background : none !important ;
+border : none !important ;
+}
+.art-sidebar1-bg {
+border-right : 1px dotted #A3B4C8;
+position : absolute;
+z-index : -2;
+direction : ltr;
+left : 0;
+bottom : 0;
+top : 0;
+width : 200px;
+overflow : hidden;
+display : block;
+}
+.art-content {
+width : auto;
+float : none;
+}

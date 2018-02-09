@@ -1,0 +1,9 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("");
+?><?$APPLICATION->IncludeComponent(
+	"custom:london.smartbanner",
+	"",
+	Array(
+	)
+);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

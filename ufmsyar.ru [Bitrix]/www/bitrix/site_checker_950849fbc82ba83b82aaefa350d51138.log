@@ -1,0 +1,166 @@
+2014-Jun-08 17:45:41 Наличие необходимых модулей php (check_php_modules): Ok
+Все необходимые модули установлены
+2014-Jun-08 17:45:41 Обязательные параметры PHP (check_php_settings): Ok
+Настройки правильные
+2014-Jun-08 17:45:42 Модули веб-сервера (check_security): Ok
+Конфликтов не выявлено
+2014-Jun-08 17:45:42 Значения переменных сервера (check_server_vars): Ok
+Корректные
+2014-Jun-08 17:45:42 Сохранение сессии (check_session): Ok
+50% done
+2014-Jun-08 17:45:43 Сохранение сессии (check_session): Ok
+Успешно
+2014-Jun-08 17:45:43 Параметры настройки UTF (mbstring и константа BX_UTF) (check_mbstring): Ok
+Правильные. Сайт работает в однобайтовой кодировке
+2014-Jun-08 17:45:44 Работа с сокетами (check_socket): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:44 Лишний вывод в файлах конфигурации (check_dbconn): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:45 Выполнение агентов на cron (check_bx_crontab): Ok
+Успешно
+2014-Jun-08 17:45:45 Сохранение сессии без UserAgent (check_session_ua): Ok
+50% done
+Connection to ufmsyar.ru:80	Success
+
+2014-Jun-08 17:45:46 Сохранение сессии без UserAgent (check_session_ua): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:47 Настройки сайтов (check_sites): Ok
+Правильные
+2014-Jun-08 17:45:48 Служебные скрипты в корне сайта (check_install_scripts): Ok
+Отсутствуют
+2014-Jun-08 17:45:48 Передача объектов по ссылке (check_clone): Ok
+Успешно
+2014-Jun-08 17:45:49 Размер стека и pcre.recursion_limit (check_pcre_recursion): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:49 Вызов method_exists на строке (check_method_exists): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:50 Загрузка файла (check_upload): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:50 Загрузка файла больше 4Мб (check_upload_big): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:51 Загрузка файла через php://input (check_upload_raw): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:51 Передача POST запроса с большим числом параметров (check_post): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:52 Отправка почты (check_mail): Ok
+Успешно
+2014-Jun-08 17:45:52 Отправка почтового сообщения больше 64Кб (check_mail_big): Ok
+Успешно
+2014-Jun-08 17:45:52 Проверка на наличие неотправленных сообщений (check_mail_b_event): Ok
+Успешно
+2014-Jun-08 17:45:53 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
+50% done
+Connection to ufmsyar.ru:80	Success
+
+2014-Jun-08 17:45:54 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:54 Фактическое ограничение памяти (check_memory_limit): Ok
+20% done
+Connection to ufmsyar.ru:80	Success
+
+2014-Jun-08 17:45:54 Фактическое ограничение памяти (check_memory_limit): Ok
+40% done
+Connection to ufmsyar.ru:80	Success
+
+2014-Jun-08 17:45:55 Фактическое ограничение памяти (check_memory_limit): Ok
+60% done
+Connection to ufmsyar.ru:80	Success
+
+2014-Jun-08 17:45:55 Фактическое ограничение памяти (check_memory_limit): Ok
+80% done
+Connection to ufmsyar.ru:80	Success
+
+2014-Jun-08 17:45:56 Фактическое ограничение памяти (check_memory_limit): Ok
+Connection to ufmsyar.ru:80	Success
+
+Не менее 256 М
+2014-Jun-08 17:45:56 Работа с файлами кеша (check_cache): Ok
+Успешно
+2014-Jun-08 17:45:57 Доступ к серверу обновлений (check_update): Ok
+Успешно
+2014-Jun-08 17:45:57 HTTP авторизация (check_http_auth): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:58 Создание и запуск файла (check_exec): Ok
+Connection to ufmsyar.ru:80	Success
+
+Успешно
+2014-Jun-08 17:45:58 Функция getimagesize для swf (check_getimagesize): Ok
+Успешно
+2014-Jun-08 17:45:58 Версия MySQL сервера (check_mysql_bug_version): Ok
+Успешно
+2014-Jun-08 17:46:00 Время на БД и веб сервере (check_mysql_time): Ok
+Успешно
+2014-Jun-08 17:46:00 Режим работы MySQL (check_mysql_mode): Ok
+Успешно
+2014-Jun-08 17:46:00 Кодировка соединения (check_mysql_connection_charset): Ok
+character_set_connection=cp1251, collation_connection=cp1251_general_ci, character_set_results=cp1251
+Успешно
+2014-Jun-08 17:46:01 Кодировка базы данных (check_mysql_db_charset): Ok
+CHARSET=cp1251, COLLATION=cp1251_general_ci
+Успешно
+2014-Jun-08 17:46:01 Кодировки таблиц в БД (check_mysql_table_charset): Ok
+Успешно
+2014-Jun-08 17:46:02 Структура базы данных (check_mysql_table_structure): Ok
+0% done
+2014-Jun-08 17:46:03 Структура базы данных (check_mysql_table_structure): Ok
+5% done
+2014-Jun-08 17:46:04 Структура базы данных (check_mysql_table_structure): Ok
+10% done
+2014-Jun-08 17:46:05 Структура базы данных (check_mysql_table_structure): Ok
+15% done
+2014-Jun-08 17:46:06 Структура базы данных (check_mysql_table_structure): Ok
+20% done
+2014-Jun-08 17:46:07 Структура базы данных (check_mysql_table_structure): Ok
+25% done
+2014-Jun-08 17:46:10 Структура базы данных (check_mysql_table_structure): Ok
+30% done
+2014-Jun-08 17:46:11 Структура базы данных (check_mysql_table_structure): Ok
+35% done
+2014-Jun-08 17:46:12 Структура базы данных (check_mysql_table_structure): Ok
+40% done
+2014-Jun-08 17:46:14 Структура базы данных (check_mysql_table_structure): Ok
+45% done
+2014-Jun-08 17:46:14 Структура базы данных (check_mysql_table_structure): Ok
+50% done
+2014-Jun-08 17:46:15 Структура базы данных (check_mysql_table_structure): Ok
+55% done
+2014-Jun-08 17:46:17 Структура базы данных (check_mysql_table_structure): Ok
+60% done
+2014-Jun-08 17:46:17 Структура базы данных (check_mysql_table_structure): Ok
+65% done
+2014-Jun-08 17:46:18 Структура базы данных (check_mysql_table_structure): Ok
+70% done
+2014-Jun-08 17:46:19 Структура базы данных (check_mysql_table_structure): Ok
+75% done
+2014-Jun-08 17:46:20 Структура базы данных (check_mysql_table_structure): Ok
+80% done
+2014-Jun-08 17:46:21 Структура базы данных (check_mysql_table_structure): Ok
+85% done
+2014-Jun-08 17:46:21 Структура базы данных (check_mysql_table_structure): Ok
+90% done
+2014-Jun-08 17:46:22 Структура базы данных (check_mysql_table_structure): Ok
+95% done
+2014-Jun-08 17:46:22 Структура базы данных (check_mysql_table_structure): Ok
+Успешно

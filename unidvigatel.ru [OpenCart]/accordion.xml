@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<options>
+<item link="http://www.unidvigatel.com" target="_self" jpg="image1.jpg" title="Первая причина" color="0x000000" alphaColor="0"><![CDATA[Всем <font color="#ff7700">Привет</font> Вот!]]></item>
+<item link="http://www.unidvigatel.com" target="_self" jpg="image2.jpg" title="Вторая причина" color="0x000000" alphaColor="0"><![CDATA[Просто красивая девушка]]></item>
+<item link="http://www.unidvigatel.com" target="_self" jpg="image3.jpg" title="Третья причина" color="0x000000" alphaColor="0"><![CDATA[Китайское такси в Нью Эйхэ]]></item>
+<item link="http://www.unidvigatel.com" target="_self" jpg="image4.jpg" title="Четвертая причина" color="0x000000" alphaColor="0"><![CDATA[Просто девушка]]></item>
+<item link="http://www.unidvigatel.com" target="_self" jpg="image5.jpg" title="Пятая причина" color="0x000000" alphaColor="0"><![CDATA[Мы тута типа]]></item>
+<item link="http://www.unidvigatel.com" target="_self" jpg="image6.jpg" title="Шестая причина" color="0x000000" alphaColor="0"><![CDATA[Я и индеец]]></item>
+		
+</options>

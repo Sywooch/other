@@ -1,0 +1,8 @@
+﻿<data head="ВЫБОР СТИЛЯ">
+	<interface id="grid" title="Grid"/>
+	<interface id="horizontal" title="Горизонтально"/>
+	<interface id="vertical" title="Вертикально"/>
+	<interface id="wave" title="Wave"/>
+	<interface id="circle" title="Circle"/>
+	<interface id="ring" title="Ring"/>
+</data>

@@ -1,0 +1,6 @@
+<content Delay="5000">
+<bg Image="backgrounds/image1.jpg"/>
+<bg Image="backgrounds/image2.jpg"/>
+<bg Image="backgrounds/image3.jpg"/>
+<bg Image="backgrounds/image4.jpg"/>
+</content>
