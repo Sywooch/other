@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/local/components/order/standard.elements.list/templates/.default/assets/css/common.css" => "147773237013363",), 'CUR_SEL_CNT' => '152', 'CUR_IE_CNT' => '0'); ?>
