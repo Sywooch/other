@@ -1,0 +1,19 @@
+.gitignore
+.DS_Store
+.bash_history
+Thumbs.db
+*.sql
+/.idea/
+web.config
+
+.htaccess
+
+# core
+test.php
+upload
+/upload
+/bitrix
+/upload/
+/bitrix/
+/upload/*
+/bitrix/*
