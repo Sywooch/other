@@ -1,0 +1,108 @@
+
+jsBackend.dashboard=
+{
+itemOnTheMove:null,
+	init:function()
+{
+		$editDashboard=$('#editDashboard');
+$doneEditingDashboard=$('#doneEditingDashboard');
+$editDashboardClose=$('.editDashboardClose');
+$editDashboard.on('click',jsBackend.dashboard.load);
+$doneEditingDashboard.on('click',jsBackend.dashboard.save);
+$editDashboardClose.on('click',jsBackend.dashboard.close)},
+close:function(e)
+{
+		e.preventDefault();
+		$widget=$(this).parents('.sortableWidget').eq(0);
+if($widget.hasClass('isRemoved'))$widget.find('.options, .footer, .dataGridHolder').show().removeClass('isRemoved');
+else $widget.find('.options, .footer, .dataGridHolder').hide().addClass('isRemoved')},
+load:function(e)
+{
+		e.preventDefault();
+		$editDashboardMessage=$('#editDashboardMessage');
+$editDashboardClose=$('.editDashboardClose');
+$sortableWidget=$('.sortableWidget');
+$column=$('.column');
+		$(window).on('beforeunload',function()
+{
+return jsBackend.locale.msg('ValuesAreChanged')});
+		$(this).hide();
+		$editDashboardMessage.slideDown();
+		$editDashboardClose.show();
+		$('.sortableWidget.isRemoved').show();
+$sortableWidget.each(function(){
+if($(this).find('.box').length==0)$(this).remove()})
+		$column.sortable(
+{
+connectWith:'.column',
+forceHelperSize:true,
+forcePlaceholderSize:true,
+placeholder:'dragAndDropPlaceholder',
+stop:function(e,ui)
+{
+					jsBackend.dashboard.itemOnTheMove.hide()}
+}
+);
+$sortableWidget.draggable(
+{
+cursor:'move',
+connectToSortable:'.column',
+helper:'clone',
+opacity:0.50,
+revert:'invalid',
+start:function(e,ui)
+{
+						$('.dragAndDropPlaceholder').css('height',$(this).height().toString()+'px');
+						jsBackend.dashboard.itemOnTheMove=$(this)}
+}
+);
+$sortableWidget.hover(
+function(){$(this).addClass('isDraggable');},
+function(){$(this).removeClass('isDraggable');}
+)},
+	save:function(e)
+{
+		e.preventDefault();
+		$editDashboard=$('#editDashboard');
+$editDashboardMessage=$('#editDashboardMessage');
+$editDashboardClose=$('.editDashboardClose');
+$column=$('.column');
+$sortableWidget=$('.sortableWidget');
+		$(window).off('beforeunload');
+		$editDashboard.show();
+		$editDashboardMessage.slideUp();
+		$editDashboardClose.hide();
+		$column.sortable('destroy');
+$sortableWidget.draggable('destroy').off('mouseenter mouseleave');
+		var newSequence=[];
+		$column.each(function(){
+var items=[];
+			$(this).find('.sortableWidget:visible').each(function()
+{
+				items.push({module:$(this).data('module'),widget:$(this).data('widget'),hidden:$(this).hasClass('isRemoved'),present:true})});
+			newSequence.push(items)});
+		$('.sortableWidget.isRemoved').hide();
+		$.ajax(
+{
+data:
+{
+fork:{action:'alter_sequence'},
+new_sequence:JSON.stringify(newSequence)
+},
+success:function(data,textStatus)
+{
+				if(data.code!=200)
+{
+					}
+				jsBackend.messages.add('success',data.message);
+if(data.data.reload)
+{
+setTimeout('window.location.reload(true)',2000)}
+},
+error:function(XMLHttpRequest,textStatus,errorThrown)
+{
+				jsBackend.messages.add('error','alter sequence failed.');
+												if(jsBackend.debug)alert(textStatus)}
+})}
+}
+$(jsBackend.dashboard.init);
